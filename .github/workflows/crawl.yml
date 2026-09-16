@@ -1,6 +1,11 @@
 name: Crawl MANGO products
 
 on:
+  push:
+    branches: ["main"]
+    paths-ignore:
+      - "data/products.json"
+      - "public/products.json"
   schedule:
     - cron: "0 19 * * *"
   workflow_dispatch:
