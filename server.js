@@ -120,17 +120,17 @@ async function crawl() {
         console.warn(`Skipping ${url}: ${error.message}`);
       }
     }
-    const allGroups = new Map();
-    for (const product of products) {
-      if (!allGroups.has(product.englishKey)) allGroups.set(product.englishKey, []);
-      allGroups.get(product.englishKey).push(product);
-    }
     const variationProductNumbers = new Set(products.flatMap((product) => product.variationProductNumbers));
-    const matched = products.filter((product) => {
-      const sameNameProducts = allGroups.get(product.englishKey) || [];
+    const eligibleProducts = products.filter((product) => !variationProductNumbers.has(product.productNumber));
+    const eligibleGroups = new Map();
+    for (const product of eligibleProducts) {
+      if (!eligibleGroups.has(product.englishKey)) eligibleGroups.set(product.englishKey, []);
+      eligibleGroups.get(product.englishKey).push(product);
+    }
+    const matched = eligibleProducts.filter((product) => {
+      const sameNameProducts = eligibleGroups.get(product.englishKey) || [];
       const hasSameRelated = product.relatedNames.some((related) => englishKey(related) === product.englishKey);
-      const isVariation = variationProductNumbers.has(product.productNumber);
-      return sameNameProducts.length > 1 && !hasSameRelated && !isVariation;
+      return sameNameProducts.length > 1 && !hasSameRelated;
     }).map(({ relatedNames, variationProductNumbers, ...product }) => product);
     const matchedGroups = new Map();
     for (const product of matched) {
