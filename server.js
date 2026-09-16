@@ -108,22 +108,22 @@ async function crawl() {
         console.warn(`Skipping ${url}: ${error.message}`);
       }
     }
-    const groups = new Map();
+    const allGroups = new Map();
     for (const product of products) {
-      if (!groups.has(product.englishKey)) groups.set(product.englishKey, []);
-      groups.get(product.englishKey).push(product);
+      if (!allGroups.has(product.englishKey)) allGroups.set(product.englishKey, []);
+      allGroups.get(product.englishKey).push(product);
     }
     const matched = products.filter((product) => {
-      const sameNameProducts = groups.get(product.englishKey) || [];
+      const sameNameProducts = allGroups.get(product.englishKey) || [];
       const hasSameRelated = product.relatedNames.some((related) => englishKey(related) === product.englishKey);
       return sameNameProducts.length > 1 && !hasSameRelated;
     }).map(({ relatedNames, ...product }) => product);
-    const groups = new Map();
+    const matchedGroups = new Map();
     for (const product of matched) {
-      if (!groups.has(product.englishKey)) groups.set(product.englishKey, []);
-      groups.get(product.englishKey).push(product);
+      if (!matchedGroups.has(product.englishKey)) matchedGroups.set(product.englishKey, []);
+      matchedGroups.get(product.englishKey).push(product);
     }
-    const displayGroups = [...groups.entries()].map(([englishKey, items]) => {
+    const displayGroups = [...matchedGroups.entries()].map(([englishKey, items]) => {
       const newItems = items.filter((item) => !previouslySeen.has(item.productNumber));
       if (!newItems.length) return null;
       const main = newItems[0];
