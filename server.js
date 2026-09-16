@@ -97,8 +97,7 @@ async function crawl() {
     const sitemap = await fetchText(SITEMAP);
     const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]).slice(0, CRAWL_LIMIT);
     const previous = await readProducts();
-    const previousIds = (previous.products || []).map((product) => product.url.match(/\/commodity\/[^/]+\/([^/]+)\/?$/i)?.[1] || product.productNumber);
-    const previouslySeen = new Set(previous.seenProductNumbers || previousIds);
+    const previouslySeen = new Set(previous.seenProductNumbers || []);
     const products = [];
     for (const url of urls) {
       try {
