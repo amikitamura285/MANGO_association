@@ -1,0 +1,13 @@
+{
+  "name": "mango-monitor",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MANGO Japan product monitor",
+  "scripts": {
+    "start": "node server.js",
+    "crawl": "node server.js --crawl"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

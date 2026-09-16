@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MANGO FINDER — 同名アイテムを見つける</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">MANGO <span>FINDER</span></a>
+    <div class="topbar-meta"><span class="status-dot"></span><span id="crawlStatus">毎朝 04:00 自動更新</span></div>
+  </header>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">DAILY PRODUCT WATCH</p>
+      <h1>同じ名前のアイテムを<br><em>見つける。</em></h1>
+      <p class="lead">MANGO公式オンラインストアを毎朝クロール。<br>英字の商品名が重複し、関連アイテムに同名がない商品だけを表示します。</p>
+      <button id="crawlButton" class="outline-button">今すぐクロール <span>→</span></button>
+    </section>
+    <section class="summary">
+      <div><span class="summary-label">MATCHED ITEMS</span><strong id="productCount">—</strong></div>
+      <div><span class="summary-label">LAST UPDATED</span><strong id="updatedAt">—</strong></div>
+      <div class="rule-note"><span class="rule-icon">◎</span><span>英字部分が同じ<br>関連アイテムに同名なし</span></div>
+    </section>
+    <section class="results-head"><div><p class="eyebrow">CURATED RESULTS</p><h2>今日のアイテム</h2></div><span id="scannedCount" class="muted"></span></section>
+    <section id="productGrid" class="product-grid"></section>
+    <div id="emptyState" class="empty" hidden><div class="empty-mark">M</div><h3>まだ結果がありません</h3><p>右上の「今すぐクロール」から最新データを取得してください。</p></div>
+  </main>
+  <footer><span>MANGO FINDER</span><span>DATA SOURCE: japan.mango.com</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
