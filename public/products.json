@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-16T11:34:12.433Z",
+  "updatedAt": "2026-09-16T11:43:46.845Z",
   "products": [
     {
       "name": "ショートパンツ .-- PARIS （グリーン）",
@@ -140,29 +140,10 @@
       "productNumber": "MA1658EW037238",
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW037238/",
       "englishKey": "CORFU"
-    },
-    {
-      "name": "パンツ .-- PALOMA （ホワイト）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW037357_1_l.jpg",
-      "productNumber": "MA1658EW037357",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW037357/",
-      "englishKey": "PALOMA"
     }
   ],
-  "groups": [
-    {
-      "englishKey": "PALOMA",
-      "main": {
-        "name": "パンツ .-- PALOMA （ホワイト）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW037357_1_l.jpg",
-        "productNumber": "MA1658EW037357",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW037357/",
-        "englishKey": "PALOMA"
-      },
-      "related": []
-    }
-  ],
-  "newCount": 1,
+  "groups": [],
+  "newCount": 0,
   "displayedMainProductNumbers": [
     "MA1658EW33440",
     "MA3878EC003099",
