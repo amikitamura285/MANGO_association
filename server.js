@@ -74,7 +74,8 @@ function parseProduct(url, html) {
   const image = typeof json.image === "string" ? json.image : Array.isArray(json.image) ? json.image[0] : firstMatch(html, [
     /<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)/i
   ]);
-  const productNumber = firstMatch(html, [
+  const urlProductNumber = url.match(/\/commodity\/[^/]+\/([^/]+)\/?$/i)?.[1] || "";
+  const productNumber = urlProductNumber || firstMatch(html, [
     /(?:商品番号|Product\s*(?:code|number)|Ref(?:erence)?)[^<:：]{0,30}[:：]?\s*([A-Z0-9-]{5,})/i
   ]) || url.match(/\/([^/]+)\/?$/)?.[1] || "";
   const relatedHtml = [...html.matchAll(/<(?:section|div|ul)[^>]*(?:related|recommend|おすすめ|関連)[^>]*>([\s\S]*?)<\/(?:section|div|ul)>/gi)]
@@ -95,6 +96,9 @@ async function crawl() {
   try {
     const sitemap = await fetchText(SITEMAP);
     const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]).slice(0, CRAWL_LIMIT);
+    const previous = await readProducts();
+    const previousIds = (previous.products || []).map((product) => product.url.match(/\/commodity\/[^/]+\/([^/]+)\/?$/i)?.[1] || product.productNumber);
+    const previouslySeen = new Set(previous.seenProductNumbers || previousIds);
     const products = [];
     for (const url of urls) {
       try {
@@ -114,7 +118,26 @@ async function crawl() {
       const hasSameRelated = product.relatedNames.some((related) => englishKey(related) === product.englishKey);
       return sameNameProducts.length > 1 && !hasSameRelated;
     }).map(({ relatedNames, ...product }) => product);
-    const result = { updatedAt: new Date().toISOString(), products: matched, scanned: products.length };
+    const groups = new Map();
+    for (const product of matched) {
+      if (!groups.has(product.englishKey)) groups.set(product.englishKey, []);
+      groups.get(product.englishKey).push(product);
+    }
+    const displayGroups = [...groups.entries()].map(([englishKey, items]) => {
+      const newItems = items.filter((item) => !previouslySeen.has(item.productNumber));
+      if (!newItems.length) return null;
+      const main = newItems[0];
+      return { englishKey, main, related: items.filter((item) => item !== main) };
+    }).filter(Boolean);
+    const seenProductNumbers = [...new Set([...previouslySeen, ...matched.map((product) => product.productNumber)])];
+    const result = {
+      updatedAt: new Date().toISOString(),
+      products: matched,
+      groups: displayGroups,
+      newCount: displayGroups.length,
+      seenProductNumbers,
+      scanned: products.length
+    };
     await writeProducts(result);
     await fs.writeFile(path.join(ROOT, "public", "products.json"), JSON.stringify(result, null, 2), "utf8");
     crawlState = { ...crawlState, status: "idle", finishedAt: new Date().toISOString(), count: matched.length };

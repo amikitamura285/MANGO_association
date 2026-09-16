@@ -13,17 +13,21 @@ function formatDate(value) {
 
 function render(data) {
   const products = data.products || [];
-  count.textContent = String(products.length).padStart(2, "0");
+  const groups = data.groups || [];
+  count.textContent = String(data.newCount ?? groups.length).padStart(2, "0");
   updated.textContent = formatDate(data.updatedAt);
   scanned.textContent = data.scanned ? `${data.scanned} PRODUCTS SCANNED` : "";
-  grid.innerHTML = products.map((product) => `
-    <article class="card">
-      <a class="card-link" href="${product.url}" target="_blank" rel="noreferrer">
-        <img class="card-image" src="${product.image || "https://placehold.co/600x800/e8e6e1/777?text=MANGO"}" alt="${product.name}">
-        <div class="card-info"><h3 class="card-name">${product.name}</h3><div class="card-number"><span>${product.productNumber || "PRODUCT"}</span><span>↗</span></div></div>
-      </a>
-    </article>`).join("");
-  empty.hidden = products.length !== 0;
+  const card = (product, small = false) => `
+    <a class="card-link${small ? " card-link-small" : ""}" href="${product.url}" target="_blank" rel="noreferrer">
+      <img class="${small ? "card-image-small" : "card-image"}" src="${product.image || "https://placehold.co/600x800/e8e6e1/777?text=MANGO"}" alt="${product.name}">
+      <div class="card-info"><h3 class="card-name">${product.name}</h3><div class="card-number"><span>${product.productNumber || "PRODUCT"}</span><span>↗</span></div></div>
+    </a>`;
+  grid.innerHTML = groups.map((group) => `
+    <section class="product-group">
+      <article class="card card-main">${card(group.main)}</article>
+      ${group.related.length ? `<div class="related-items">${group.related.map((product) => `<article class="card card-related">${card(product, true)}</article>`).join("")}</div>` : ""}
+    </section>`).join("");
+  empty.hidden = groups.length !== 0;
 }
 
 async function load() {
