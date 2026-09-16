@@ -1,5 +1,293 @@
 {
-  "updatedAt": null,
-  "scanned": 0,
-  "products": []
+  "updatedAt": "2026-09-16T10:26:54.549Z",
+  "products": [
+    {
+      "name": "ショートパンツ .-- PARIS （グリーン）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW33440_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW33440/",
+      "englishKey": "PARIS"
+    },
+    {
+      "name": "パンツ .-- VICKY （チャコール）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA3878EC003099_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA3878EC003099/",
+      "englishKey": "VICKY"
+    },
+    {
+      "name": "トップス .-- LINDA-H （ブラック）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW034931_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW034931/",
+      "englishKey": "LINDA H"
+    },
+    {
+      "name": "パンツ .-- PARIS （ブラック）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA3877EM002404_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA3877EM002404/",
+      "englishKey": "PARIS"
+    },
+    {
+      "name": "タンクトップ .-- LINDA-H （レッド）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW035225_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW035225/",
+      "englishKey": "LINDA H"
+    },
+    {
+      "name": "タイツ .-- CAMI （ゴールド）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW035234_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW035234/",
+      "englishKey": "CAMI"
+    },
+    {
+      "name": "タイツ .-- CAMI （シルバー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW035235_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW035235/",
+      "englishKey": "CAMI"
+    },
+    {
+      "name": "トップス .-- CALIPSO （ライトベージュ）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW035754_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW035754/",
+      "englishKey": "CALIPSO"
+    },
+    {
+      "name": "トップス .-- CALIPSO （ブラック）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW035755_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW035755/",
+      "englishKey": "CALIPSO"
+    },
+    {
+      "name": "ショートパンツ .-- BOSCO-H （ミディアムブルー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW035790_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW035790/",
+      "englishKey": "BOSCO H"
+    },
+    {
+      "name": "パンツ .-- VICKY （ネイビーブルー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW035848_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW035848/",
+      "englishKey": "VICKY"
+    },
+    {
+      "name": "ロングワンピース .-- BAMBOLEO （ベージュ-カーキ）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW035917_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW035917/",
+      "englishKey": "BAMBOLEO"
+    },
+    {
+      "name": "ショートパンツ .-- BOSCO-H （ライトベージュ）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW035955_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW035955/",
+      "englishKey": "BOSCO H"
+    },
+    {
+      "name": "セーター .-- BAMBOLEO （ベージュ-カーキ）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW036047_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW036047/",
+      "englishKey": "BAMBOLEO"
+    },
+    {
+      "name": "ベアトップ .-- JULITO （ダークレッド）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW036220_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW036220/",
+      "englishKey": "JULITO"
+    },
+    {
+      "name": "ベアトップ .-- JULITO （ブラック）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW036221_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW036221/",
+      "englishKey": "JULITO"
+    },
+    {
+      "name": "トップス .-- MADAME （ベージュ）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW036523_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW036523/",
+      "englishKey": "MADAME"
+    },
+    {
+      "name": "ジャケット .-- MADAME （ベージュ）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW036536_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW036536/",
+      "englishKey": "MADAME"
+    },
+    {
+      "name": "トップス .-- ZUNGA （ネイビーブルー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW036565_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW036565/",
+      "englishKey": "ZUNGA"
+    },
+    {
+      "name": "ミニワンピース .-- ZUNGA （ネイビーブルー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW036573_7_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW036573/",
+      "englishKey": "ZUNGA"
+    },
+    {
+      "name": "トップス .-- YENNY （ダークブラウン）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW036589_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW036589/",
+      "englishKey": "YENNY"
+    },
+    {
+      "name": "トップス .-- YENNY （ブライトピンク）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW036590_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW036590/",
+      "englishKey": "YENNY"
+    },
+    {
+      "name": "トップス .-- ADRIAN （ブラウン）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW036629_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW036629/",
+      "englishKey": "ADRIAN"
+    },
+    {
+      "name": "トップス .-- CRETA （オープンブルー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW036652_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW036652/",
+      "englishKey": "CRETA"
+    },
+    {
+      "name": "パンツ .-- ADRIAN （ブラウン）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW036667_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW036667/",
+      "englishKey": "ADRIAN"
+    },
+    {
+      "name": "ベスト .-- PERTH （ライトベージュ）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW037046_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW037046/",
+      "englishKey": "PERTH"
+    },
+    {
+      "name": "ロングワンピース .-- GONZALO （ミディアムブラウン）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW037072_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW037072/",
+      "englishKey": "GONZALO"
+    },
+    {
+      "name": "ロングワンピース .-- PUMPKIN （ホワイト）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW037073_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW037073/",
+      "englishKey": "PUMPKIN"
+    },
+    {
+      "name": "ロングワンピース .-- PUMPKIN （ブラック）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW037074_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW037074/",
+      "englishKey": "PUMPKIN"
+    },
+    {
+      "name": "トップス .-- CORFU （ダークブラウン）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW037076_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW037076/",
+      "englishKey": "CORFU"
+    },
+    {
+      "name": "トップス .-- FORAT （ブラック）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW037083_2_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW037083/",
+      "englishKey": "FORAT"
+    },
+    {
+      "name": "トップス .-- FORAT （ライトベージュ）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW037084_2_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW037084/",
+      "englishKey": "FORAT"
+    },
+    {
+      "name": "ロングスカート .-- PERTH （ライトベージュ）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW037119_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW037119/",
+      "englishKey": "PERTH"
+    },
+    {
+      "name": "トップス .-- CRETA （ブラック）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW037135_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW037135/",
+      "englishKey": "CRETA"
+    },
+    {
+      "name": "トップス .-- GONZALO （ナチュラルホワイト）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW037173_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW037173/",
+      "englishKey": "GONZALO"
+    },
+    {
+      "name": "ショートパンツ .-- CORFU （ダークブラウン）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW037238_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW037238/",
+      "englishKey": "CORFU"
+    },
+    {
+      "name": "ベスト .-- PALOMA （ダークブラウン）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW037284_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW037284/",
+      "englishKey": "PALOMA"
+    },
+    {
+      "name": "ベスト .-- PALOMA （ホワイト）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW037285_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW037285/",
+      "englishKey": "PALOMA"
+    },
+    {
+      "name": "トップス .-- KLING （ブラウン）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW037353_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW037353/",
+      "englishKey": "KLING"
+    },
+    {
+      "name": "トップス .-- KLING （ゴールド）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW037354_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW037354/",
+      "englishKey": "KLING"
+    },
+    {
+      "name": "パンツ .-- PALOMA （ホワイト）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW037357_1_l.jpg",
+      "productNumber": "https",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW037357/",
+      "englishKey": "PALOMA"
+    }
+  ],
+  "scanned": 200
 }
