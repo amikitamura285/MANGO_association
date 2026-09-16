@@ -97,7 +97,7 @@ async function crawl() {
     const sitemap = await fetchText(SITEMAP);
     const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]).slice(0, CRAWL_LIMIT);
     const previous = await readProducts();
-    const previouslySeen = new Set(previous.seenProductNumbers || []);
+    const previouslySeen = new Set(previous.displayedMainProductNumbers || []);
     const products = [];
     for (const url of urls) {
       try {
@@ -128,13 +128,16 @@ async function crawl() {
       const main = newItems[0];
       return { englishKey, main, related: items.filter((item) => item !== main) };
     }).filter(Boolean);
-    const seenProductNumbers = [...new Set([...previouslySeen, ...matched.map((product) => product.productNumber)])];
+    const displayedMainProductNumbers = [...new Set([
+      ...previouslySeen,
+      ...displayGroups.map((group) => group.main.productNumber)
+    ])];
     const result = {
       updatedAt: new Date().toISOString(),
       products: matched,
       groups: displayGroups,
       newCount: displayGroups.length,
-      seenProductNumbers,
+      displayedMainProductNumbers,
       scanned: products.length
     };
     await writeProducts(result);
