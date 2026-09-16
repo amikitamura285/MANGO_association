@@ -8,7 +8,8 @@ const DATA_FILE = path.join(ROOT, "data", "products.json");
 const PORT = Number(process.env.PORT || 3000);
 const SITEMAP = "https://japan.mango.com/sitemap_commodity.xml";
 const BASE = "https://japan.mango.com";
-const CRAWL_LIMIT = Number(process.env.CRAWL_LIMIT || 200);
+const CRAWL_LIMIT = Number(process.env.CRAWL_LIMIT || 0);
+const CRAWL_CONCURRENCY = Number(process.env.CRAWL_CONCURRENCY || 12);
 const headers = { "user-agent": process.env.CRAWLER_USER_AGENT || "MangoMonitor/1.0 (+local product monitor)" };
 let crawlState = { status: "idle", startedAt: null, finishedAt: null, count: 0, error: null };
 
@@ -102,24 +103,39 @@ async function fetchVariationProductNumbers(productNumber) {
   }
 }
 
+async function mapConcurrent(values, worker, concurrency) {
+  const results = new Array(values.length);
+  let nextIndex = 0;
+  async function consume() {
+    while (true) {
+      const index = nextIndex++;
+      if (index >= values.length) return;
+      results[index] = await worker(values[index]);
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(concurrency, values.length) }, consume));
+  return results;
+}
+
 async function crawl() {
   if (crawlState.status === "running") return;
   crawlState = { status: "running", startedAt: new Date().toISOString(), finishedAt: null, count: 0, error: null };
   try {
     const sitemap = await fetchText(SITEMAP);
-    const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]).slice(0, CRAWL_LIMIT);
+    const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
+    const urls = CRAWL_LIMIT > 0 ? sitemapUrls.slice(0, CRAWL_LIMIT) : sitemapUrls;
     const previous = await readProducts();
     const previouslySeen = new Set(previous.displayedMainProductNumbers || []);
-    const products = [];
-    for (const url of urls) {
+    const products = (await mapConcurrent(urls, async (url) => {
       try {
         const product = parseProduct(url, await fetchText(url));
         product.variationProductNumbers = await fetchVariationProductNumbers(product.productNumber);
-        if (product.name && product.englishKey) products.push(product);
+        return product.name && product.englishKey ? product : null;
       } catch (error) {
         console.warn(`Skipping ${url}: ${error.message}`);
+        return null;
       }
-    }
+    }, CRAWL_CONCURRENCY)).filter(Boolean);
     const variationProductNumbers = new Set(products.flatMap((product) => product.variationProductNumbers));
     const eligibleProducts = products.filter((product) => !variationProductNumbers.has(product.productNumber));
     const eligibleGroups = new Map();

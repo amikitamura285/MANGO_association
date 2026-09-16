@@ -18,7 +18,8 @@ npm start
 サーバーが起動している間、日本時間（JST）の毎朝4:00に実行します。実行マシンのタイムゾーンには依存しません。初回データの取得は `npm run crawl` でも実行できます。
 
 - 対象: `https://japan.mango.com/sitemap_commodity.xml`
-- 既定の取得上限: 200商品（`CRAWL_LIMIT` で変更可能）
+- 既定の取得上限: サイトマップ掲載の商品を全件（`CRAWL_LIMIT` を指定すると上限設定可能）
+- 既定の同時取得数: 12（`CRAWL_CONCURRENCY` で変更可能）
 - 保存先: `data/products.json`
 
 サイト側のHTML変更やアクセス制限で取得できない場合は、コンソールに対象URLとエラーを出し、取得できた商品のみで結果を更新します。利用規約・robots.txt・アクセス頻度を確認したうえで運用してください。
