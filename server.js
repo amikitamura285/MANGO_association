@@ -81,13 +81,25 @@ function parseProduct(url, html) {
   const relatedHtml = [...html.matchAll(/<(?:section|div|ul)[^>]*(?:related|recommend|おすすめ|関連)[^>]*>([\s\S]*?)<\/(?:section|div|ul)>/gi)]
     .map((match) => stripTags(match[1])).join(" ");
   const relatedNames = relatedHtml ? relatedHtml.split(/\s{2,}|(?=おすすめ|関連)/).map((value) => value.trim()).filter(Boolean) : [];
-  return { name, image, productNumber, url, englishKey: englishKey(name), relatedNames };
+  return { name, image, productNumber, url, englishKey: englishKey(name), relatedNames, variationProductNumbers: [] };
 }
 
 async function fetchText(url) {
   const response = await fetch(url, { headers, redirect: "follow" });
   if (!response.ok) throw new Error(`${response.status} ${response.statusText} (${url})`);
   return response.text();
+}
+
+async function fetchVariationProductNumbers(productNumber) {
+  try {
+    const response = JSON.parse(await fetchText(`${BASE}/commodity/${productNumber}/colors`));
+    return (response.relatedCommodityStocks || [])
+      .map((item) => item.commodityCode)
+      .filter((code) => code && code !== productNumber);
+  } catch (error) {
+    console.warn(`Variation lookup failed for ${productNumber}: ${error.message}`);
+    return [];
+  }
 }
 
 async function crawl() {
@@ -102,6 +114,7 @@ async function crawl() {
     for (const url of urls) {
       try {
         const product = parseProduct(url, await fetchText(url));
+        product.variationProductNumbers = await fetchVariationProductNumbers(product.productNumber);
         if (product.name && product.englishKey) products.push(product);
       } catch (error) {
         console.warn(`Skipping ${url}: ${error.message}`);
@@ -112,11 +125,13 @@ async function crawl() {
       if (!allGroups.has(product.englishKey)) allGroups.set(product.englishKey, []);
       allGroups.get(product.englishKey).push(product);
     }
+    const variationProductNumbers = new Set(products.flatMap((product) => product.variationProductNumbers));
     const matched = products.filter((product) => {
       const sameNameProducts = allGroups.get(product.englishKey) || [];
       const hasSameRelated = product.relatedNames.some((related) => englishKey(related) === product.englishKey);
-      return sameNameProducts.length > 1 && !hasSameRelated;
-    }).map(({ relatedNames, ...product }) => product);
+      const isVariation = variationProductNumbers.has(product.productNumber);
+      return sameNameProducts.length > 1 && !hasSameRelated && !isVariation;
+    }).map(({ relatedNames, variationProductNumbers, ...product }) => product);
     const matchedGroups = new Map();
     for (const product of matched) {
       if (!matchedGroups.has(product.englishKey)) matchedGroups.set(product.englishKey, []);
