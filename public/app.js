@@ -13,7 +13,7 @@ function formatDate(value) {
 
 function render(data) {
   const products = data.products || [];
-  const groups = data.groups || [];
+  const groups = data.groups && data.groups.length ? data.groups : buildGroups(products);
   count.textContent = String(data.newCount ?? groups.length).padStart(2, "0");
   updated.textContent = formatDate(data.updatedAt);
   scanned.textContent = data.scanned ? `${data.scanned} PRODUCTS SCANNED` : "";
@@ -30,8 +30,19 @@ function render(data) {
   empty.hidden = groups.length !== 0;
 }
 
+function buildGroups(products) {
+  const grouped = new Map();
+  products.forEach((product) => {
+    if (!grouped.has(product.englishKey)) grouped.set(product.englishKey, []);
+    grouped.get(product.englishKey).push(product);
+  });
+  return [...grouped.entries()]
+    .filter(([, items]) => items.length > 1)
+    .map(([englishKey, items]) => ({ englishKey, main: items[0], related: items.slice(1) }));
+}
+
 async function load() {
-  const response = await fetch("products.json");
+  const response = await fetch(`products.json?v=${Date.now()}`, { cache: "no-store" });
   render(await response.json());
 }
 
