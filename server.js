@@ -67,6 +67,13 @@ function parseJsonLd(html) {
 
 function parseProduct(url, html) {
   const json = parseJsonLd(html);
+  const brandCode = firstMatch(html, [
+    /<input[^>]+id=["']brandCode["'][^>]+value=["']([^"']+)/i
+  ]);
+  const brandName = firstMatch(html, [
+    /<input[^>]+id=["']searchBrandName["'][^>]+value=["']([^"']+)/i,
+    /<p[^>]+class=["']brandName["'][^>]*>([^<{]+)<\/p>/i
+  ]).toUpperCase();
   const name = stripTags(String(json.name || firstMatch(html, [
     /<meta[^>]+property=["']og:title["'][^>]+content=["']([^"']+)/i,
     /<h1[^>]*>([\s\S]*?)<\/h1>/i,
@@ -82,7 +89,7 @@ function parseProduct(url, html) {
   const relatedHtml = [...html.matchAll(/<(?:section|div|ul)[^>]*(?:related|recommend|おすすめ|関連)[^>]*>([\s\S]*?)<\/(?:section|div|ul)>/gi)]
     .map((match) => stripTags(match[1])).join(" ");
   const relatedNames = relatedHtml ? relatedHtml.split(/\s{2,}|(?=おすすめ|関連)/).map((value) => value.trim()).filter(Boolean) : [];
-  return { name, image, productNumber, url, englishKey: englishKey(name), relatedNames, variationProductNumbers: [] };
+  return { name, image, productNumber, url, brandCode, brandName, englishKey: englishKey(name), relatedNames, variationProductNumbers: [] };
 }
 
 async function fetchText(url) {
@@ -130,7 +137,8 @@ async function crawl() {
       try {
         const product = parseProduct(url, await fetchText(url));
         product.variationProductNumbers = await fetchVariationProductNumbers(product.productNumber);
-        return product.name && product.englishKey ? product : null;
+        const isMangoBrand = product.brandCode === "MA1658" && product.brandName === "MANGO";
+        return product.name && product.englishKey && isMangoBrand ? product : null;
       } catch (error) {
         console.warn(`Skipping ${url}: ${error.message}`);
         return null;
