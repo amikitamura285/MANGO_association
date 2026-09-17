@@ -46,6 +46,10 @@ function firstDigit(value) {
   return value.match(/\d/)?.[0] || "";
 }
 
+function displayGroupKey(product) {
+  return `${product.englishKey}\u0000${product.brandItemFirstDigit || product.productNumber}`;
+}
+
 function firstMatch(html, expressions) {
   for (const expression of expressions) {
     const match = html.match(expression);
@@ -168,18 +172,20 @@ async function crawl() {
     const eligibleProducts = products.filter((product) => !variationProductNumbers.has(product.productNumber));
     const eligibleGroups = new Map();
     for (const product of eligibleProducts) {
-      if (!eligibleGroups.has(product.englishKey)) eligibleGroups.set(product.englishKey, []);
-      eligibleGroups.get(product.englishKey).push(product);
+      const key = displayGroupKey(product);
+      if (!eligibleGroups.has(key)) eligibleGroups.set(key, []);
+      eligibleGroups.get(key).push(product);
     }
     const matchedCandidates = eligibleProducts.filter((product) => {
-      const sameNameProducts = eligibleGroups.get(product.englishKey) || [];
+      const sameNameProducts = eligibleGroups.get(displayGroupKey(product)) || [];
       const hasSameRelated = product.relatedNames.some((related) => englishKey(related) === product.englishKey);
       return sameNameProducts.length > 1 && !hasSameRelated;
     });
     const matchedGroups = new Map();
     for (const product of matchedCandidates) {
-      if (!matchedGroups.has(product.englishKey)) matchedGroups.set(product.englishKey, []);
-      matchedGroups.get(product.englishKey).push(product);
+      const key = displayGroupKey(product);
+      if (!matchedGroups.has(key)) matchedGroups.set(key, []);
+      matchedGroups.get(key).push(product);
     }
     const matched = [...matchedGroups.entries()]
       .filter(([, items]) => items.length > 1)
@@ -187,7 +193,7 @@ async function crawl() {
       .map(({ relatedNames, variationProductNumbers, ...product }) => product);
     const displayBuckets = new Map();
     for (const product of matched) {
-      const bucketKey = `${product.englishKey}\u0000${product.brandItemFirstDigit || product.productNumber}`;
+      const bucketKey = displayGroupKey(product);
       if (!displayBuckets.has(bucketKey)) displayBuckets.set(bucketKey, []);
       displayBuckets.get(bucketKey).push(product);
     }
