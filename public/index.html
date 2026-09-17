@@ -16,7 +16,10 @@
       <p class="eyebrow">DAILY PRODUCT WATCH</p>
       <h1>関連付け <em>チェック</em></h1>
       <p class="lead">表示されているアイテムは関連付け未対応アイテムです。<br>関連付け対応をお願いいたします。</p>
-      <button id="crawlButton" class="outline-button">今すぐクロール <span>→</span></button>
+      <div class="crawl-action">
+        <button id="crawlButton" class="outline-button">今すぐクロール <span>→</span></button>
+        <p id="crawlFeedback" class="crawl-feedback" aria-live="polite"></p>
+      </div>
     </section>
     <section class="summary">
       <div><span class="summary-label">MATCHED ITEMS</span><strong id="productCount">—</strong></div>

@@ -5,6 +5,7 @@ const updated = document.querySelector("#updatedAt");
 const scanned = document.querySelector("#scannedCount");
 const status = document.querySelector("#crawlStatus");
 const button = document.querySelector("#crawlButton");
+const crawlFeedback = document.querySelector("#crawlFeedback");
 const checkedStorageKey = "mango-finder-checked-main-products";
 let currentData;
 
@@ -85,7 +86,21 @@ async function refreshStatus() {
   try {
     const response = await fetch("/api/status");
     const data = await response.json();
-    status.textContent = data.status === "running" ? "クロール中…" : data.status === "error" ? "クロールエラー" : "毎朝 04:00 自動更新";
+    if (data.status === "running") {
+      status.textContent = "クロール中…";
+      crawlFeedback.textContent = "クロール中です。完了までお待ちください。";
+      button.textContent = "クロール中…";
+    } else if (data.status === "error") {
+      status.textContent = "クロールエラー";
+      crawlFeedback.textContent = "クロールに失敗しました。";
+      button.textContent = "今すぐクロール →";
+    } else {
+      status.textContent = "毎朝 04:00 自動更新";
+      if (data.finishedAt && crawlFeedback.textContent.includes("クロール中")) {
+        crawlFeedback.textContent = `クロール完了（${formatDate(data.finishedAt)}）`;
+      }
+      button.textContent = "今すぐクロール →";
+    }
     button.disabled = data.status === "running";
     button.style.opacity = data.status === "running" ? ".5" : "1";
     if (data.status === "running") setTimeout(refreshStatus, 2000);
@@ -95,13 +110,21 @@ async function refreshStatus() {
     button.disabled = true;
     button.title = "GitHub Actionsが毎朝自動更新します";
     button.style.opacity = ".5";
+    crawlFeedback.textContent = "公開ページでは手動クロールを実行できません。毎朝4時に自動更新されます。";
   }
 }
 
 button.addEventListener("click", async () => {
+  button.disabled = true;
+  button.textContent = "開始しています…";
+  crawlFeedback.textContent = "クロールを開始しました。";
   try {
-    await fetch("/api/crawl", { method: "POST" });
+    const response = await fetch("/api/crawl", { method: "POST" });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
   } catch {
+    crawlFeedback.textContent = "このページからは手動クロールを実行できません。毎朝4時に自動更新されます。";
+    button.textContent = "今すぐクロール →";
+    button.disabled = true;
     return;
   }
   refreshStatus();
