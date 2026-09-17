@@ -153,22 +153,28 @@ async function crawl() {
       if (!eligibleGroups.has(product.englishKey)) eligibleGroups.set(product.englishKey, []);
       eligibleGroups.get(product.englishKey).push(product);
     }
-    const matched = eligibleProducts.filter((product) => {
+    const matchedCandidates = eligibleProducts.filter((product) => {
       const sameNameProducts = eligibleGroups.get(product.englishKey) || [];
       const hasSameRelated = product.relatedNames.some((related) => englishKey(related) === product.englishKey);
       return sameNameProducts.length > 1 && !hasSameRelated;
-    }).map(({ relatedNames, variationProductNumbers, ...product }) => product);
+    });
     const matchedGroups = new Map();
-    for (const product of matched) {
+    for (const product of matchedCandidates) {
       if (!matchedGroups.has(product.englishKey)) matchedGroups.set(product.englishKey, []);
       matchedGroups.get(product.englishKey).push(product);
     }
-    const displayGroups = [...matchedGroups.entries()].map(([englishKey, items]) => {
-      const newItems = items.filter((item) => !previouslySeen.has(item.productNumber));
-      if (!newItems.length) return null;
-      const main = newItems[0];
-      return { englishKey, main, related: items.filter((item) => item !== main) };
-    }).filter(Boolean);
+    const matched = [...matchedGroups.entries()]
+      .filter(([, items]) => items.length > 1)
+      .flatMap(([, items]) => items)
+      .map(({ relatedNames, variationProductNumbers, ...product }) => product);
+    const displayGroups = [...matchedGroups.entries()]
+      .filter(([, items]) => items.length > 1)
+      .map(([englishKey, items]) => {
+        const newItems = items.filter((item) => !previouslySeen.has(item.productNumber));
+        if (!newItems.length) return null;
+        const main = newItems[0];
+        return { englishKey, main, related: items.filter((item) => item !== main) };
+      }).filter(Boolean);
     const displayedMainProductNumbers = [...new Set([
       ...previouslySeen,
       ...displayGroups.map((group) => group.main.productNumber)
