@@ -42,6 +42,10 @@ function englishKey(name) {
     .replace(/[^A-Za-z0-9]+/g, " ").trim().toUpperCase();
 }
 
+function firstDigit(value) {
+  return value.match(/\d/)?.[0] || "";
+}
+
 function firstMatch(html, expressions) {
   for (const expression of expressions) {
     const match = html.match(expression);
@@ -86,12 +90,26 @@ function parseProduct(url, html) {
   const productNumber = urlProductNumber || firstMatch(html, [
     /(?:商品番号|Product\s*(?:code|number)|Ref(?:erence)?)[^<:：]{0,30}[:：]?\s*([A-Z0-9-]{5,})/i
   ]) || url.match(/\/([^/]+)\/?$/)?.[1] || "";
+  const brandItemRow = html.match(/<tr[^>]*class=["'][^"']*-brandItemCode[^"']*["'][^>]*>([\s\S]*?)<\/tr>/i)?.[1] || "";
+  const brandItemNumber = stripTags(brandItemRow.replace(/<th[\s\S]*?<\/th>/i, "")).trim();
   const relatedSections = [...html.matchAll(/<section[^>]*(?:id=["']related_product["']|related|recommend|おすすめ|関連)[^>]*>([\s\S]*?)<\/section>/gi)]
     .map((match) => match[1]);
   const relatedNames = relatedSections.flatMap((section) => [
     ...section.matchAll(/<img[^>]+alt=["']([^"']+)["']/gi)
   ].map((match) => stripTags(match[1])));
-  return { name, image, productNumber, url, brandCode, brandName, englishKey: englishKey(name), relatedNames, variationProductNumbers: [] };
+  return {
+    name,
+    image,
+    productNumber,
+    brandItemNumber,
+    brandItemFirstDigit: firstDigit(brandItemNumber),
+    url,
+    brandCode,
+    brandName,
+    englishKey: englishKey(name),
+    relatedNames,
+    variationProductNumbers: []
+  };
 }
 
 async function fetchText(url) {
@@ -167,13 +185,18 @@ async function crawl() {
       .filter(([, items]) => items.length > 1)
       .flatMap(([, items]) => items)
       .map(({ relatedNames, variationProductNumbers, ...product }) => product);
-    const displayGroups = [...matchedGroups.entries()]
-      .filter(([, items]) => items.length > 1)
-      .map(([englishKey, items]) => {
+    const displayBuckets = new Map();
+    for (const product of matched) {
+      const bucketKey = `${product.englishKey}\u0000${product.brandItemFirstDigit || product.productNumber}`;
+      if (!displayBuckets.has(bucketKey)) displayBuckets.set(bucketKey, []);
+      displayBuckets.get(bucketKey).push(product);
+    }
+    const displayGroups = [...displayBuckets.entries()]
+      .map(([, items]) => {
         const newItems = items.filter((item) => !previouslySeen.has(item.productNumber));
         if (!newItems.length) return null;
         const main = newItems[0];
-        return { englishKey, main, related: items.filter((item) => item !== main) };
+        return { englishKey: main.englishKey, main, related: items.filter((item) => item !== main) };
       }).filter(Boolean);
     const displayedMainProductNumbers = [...new Set([
       ...previouslySeen,

@@ -33,12 +33,13 @@ function render(data) {
 function buildGroups(products) {
   const grouped = new Map();
   products.forEach((product) => {
-    if (!grouped.has(product.englishKey)) grouped.set(product.englishKey, []);
-    grouped.get(product.englishKey).push(product);
+    const firstDigit = (product.brandItemFirstDigit || product.brandItemNumber || "").match(/\d/)?.[0] || product.productNumber;
+    const key = `${product.englishKey}\u0000${firstDigit}`;
+    if (!grouped.has(key)) grouped.set(key, []);
+    grouped.get(key).push(product);
   });
   return [...grouped.entries()]
-    .filter(([, items]) => items.length > 1)
-    .map(([englishKey, items]) => ({ englishKey, main: items[0], related: items.slice(1) }));
+    .map(([key, items]) => ({ englishKey: key.split("\u0000")[0], main: items[0], related: items.slice(1) }));
 }
 
 async function load() {
