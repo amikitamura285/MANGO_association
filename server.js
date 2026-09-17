@@ -86,9 +86,11 @@ function parseProduct(url, html) {
   const productNumber = urlProductNumber || firstMatch(html, [
     /(?:商品番号|Product\s*(?:code|number)|Ref(?:erence)?)[^<:：]{0,30}[:：]?\s*([A-Z0-9-]{5,})/i
   ]) || url.match(/\/([^/]+)\/?$/)?.[1] || "";
-  const relatedHtml = [...html.matchAll(/<(?:section|div|ul)[^>]*(?:related|recommend|おすすめ|関連)[^>]*>([\s\S]*?)<\/(?:section|div|ul)>/gi)]
-    .map((match) => stripTags(match[1])).join(" ");
-  const relatedNames = relatedHtml ? relatedHtml.split(/\s{2,}|(?=おすすめ|関連)/).map((value) => value.trim()).filter(Boolean) : [];
+  const relatedSections = [...html.matchAll(/<section[^>]*(?:id=["']related_product["']|related|recommend|おすすめ|関連)[^>]*>([\s\S]*?)<\/section>/gi)]
+    .map((match) => match[1]);
+  const relatedNames = relatedSections.flatMap((section) => [
+    ...section.matchAll(/<img[^>]+alt=["']([^"']+)["']/gi)
+  ].map((match) => stripTags(match[1])));
   return { name, image, productNumber, url, brandCode, brandName, englishKey: englishKey(name), relatedNames, variationProductNumbers: [] };
 }
 
