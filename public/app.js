@@ -28,10 +28,9 @@ function render(data) {
   const products = data.products || [];
   const sourceGroups = data.groups && data.groups.length ? data.groups : buildGroups(products);
   const checkedProducts = readCheckedProducts();
-  const groups = [...sourceGroups].sort((left, right) =>
-    Number(checkedProducts.has(right.main.productNumber)) - Number(checkedProducts.has(left.main.productNumber))
-  );
-  count.textContent = String(data.newCount ?? groups.length).padStart(2, "0");
+  const groups = sourceGroups.filter((group) => !checkedProducts.has(group.main.productNumber));
+  const checkedGroups = sourceGroups.filter((group) => checkedProducts.has(group.main.productNumber));
+  count.textContent = String(groups.length).padStart(2, "0");
   updated.textContent = formatDate(data.updatedAt);
   scanned.textContent = data.scanned ? `${data.scanned} PRODUCTS SCANNED` : "";
   const card = (product, small = false) => `
@@ -39,7 +38,7 @@ function render(data) {
       <img class="${small ? "card-image-small" : "card-image"}" src="${product.image || "https://placehold.co/600x800/e8e6e1/777?text=MANGO"}" alt="${product.name}">
       <div class="card-info"><h3 class="card-name">${product.name}</h3><div class="card-number"><span>${product.productNumber || "PRODUCT"}</span><span>↗</span></div></div>
     </a>`;
-  grid.innerHTML = groups.map((group) => `
+  const groupMarkup = (group) => `
     <section class="product-group">
       <article class="card card-main">
         <label class="checked-toggle">
@@ -49,8 +48,11 @@ function render(data) {
         ${card(group.main)}
       </article>
       ${group.related.length ? `<div class="related-items">${group.related.map((product) => `<article class="card card-related">${card(product, true)}</article>`).join("")}</div>` : ""}
-    </section>`).join("");
-  empty.hidden = groups.length !== 0;
+    </section>`;
+  grid.innerHTML = `
+    ${groups.map(groupMarkup).join("")}
+    ${checkedGroups.length ? `<h2 class="group-title confirmed-title">確認済</h2>${checkedGroups.map(groupMarkup).join("")}` : ""}`;
+  empty.hidden = groups.length !== 0 || checkedGroups.length !== 0;
   grid.querySelectorAll(".checked-toggle input").forEach((checkbox) => {
     checkbox.addEventListener("change", () => {
       const nextCheckedProducts = readCheckedProducts();
