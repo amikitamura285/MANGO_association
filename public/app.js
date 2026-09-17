@@ -5,6 +5,18 @@ const updated = document.querySelector("#updatedAt");
 const scanned = document.querySelector("#scannedCount");
 const status = document.querySelector("#crawlStatus");
 const button = document.querySelector("#crawlButton");
+const checkedStorageKey = "mango-finder-checked-main-products";
+let currentData;
+
+function readCheckedProducts() {
+  const value = localStorage.getItem(checkedStorageKey);
+  const productNumbers = JSON.parse(value || "[]");
+  return new Set(Array.isArray(productNumbers) ? productNumbers : []);
+}
+
+function saveCheckedProducts(checkedProducts) {
+  localStorage.setItem(checkedStorageKey, JSON.stringify([...checkedProducts]));
+}
 
 function formatDate(value) {
   if (!value) return "—";
@@ -12,8 +24,13 @@ function formatDate(value) {
 }
 
 function render(data) {
+  currentData = data;
   const products = data.products || [];
-  const groups = data.groups && data.groups.length ? data.groups : buildGroups(products);
+  const sourceGroups = data.groups && data.groups.length ? data.groups : buildGroups(products);
+  const checkedProducts = readCheckedProducts();
+  const groups = [...sourceGroups].sort((left, right) =>
+    Number(checkedProducts.has(right.main.productNumber)) - Number(checkedProducts.has(left.main.productNumber))
+  );
   count.textContent = String(data.newCount ?? groups.length).padStart(2, "0");
   updated.textContent = formatDate(data.updatedAt);
   scanned.textContent = data.scanned ? `${data.scanned} PRODUCTS SCANNED` : "";
@@ -24,10 +41,25 @@ function render(data) {
     </a>`;
   grid.innerHTML = groups.map((group) => `
     <section class="product-group">
-      <article class="card card-main">${card(group.main)}</article>
+      <article class="card card-main">
+        <label class="checked-toggle">
+          <input type="checkbox" data-product-number="${group.main.productNumber}"${checkedProducts.has(group.main.productNumber) ? " checked" : ""}>
+          <span>確認済</span>
+        </label>
+        ${card(group.main)}
+      </article>
       ${group.related.length ? `<div class="related-items">${group.related.map((product) => `<article class="card card-related">${card(product, true)}</article>`).join("")}</div>` : ""}
     </section>`).join("");
   empty.hidden = groups.length !== 0;
+  grid.querySelectorAll(".checked-toggle input").forEach((checkbox) => {
+    checkbox.addEventListener("change", () => {
+      const nextCheckedProducts = readCheckedProducts();
+      if (checkbox.checked) nextCheckedProducts.add(checkbox.dataset.productNumber);
+      else nextCheckedProducts.delete(checkbox.dataset.productNumber);
+      saveCheckedProducts(nextCheckedProducts);
+      render(currentData);
+    });
+  });
 }
 
 function buildGroups(products) {
