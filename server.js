@@ -236,6 +236,14 @@ function extractGlobalRelatedProductNumbers(html, sourceUrl) {
   return products.slice(0, 24);
 }
 
+function extractGlobalProductNumbers(html) {
+  const numbers = new Set();
+  for (const match of html.matchAll(/\\?"productId\\?"\s*:\s*\\?"(\d{8})\\?"/gi)) {
+    numbers.add(match[1]);
+  }
+  return [...numbers];
+}
+
 function parseGlobalProduct(url, html) {
   const title = firstMatch(html, [
     /<meta[^>]+property=["']og:title["'][^>]+content=["']([^"']+)/i,
@@ -323,6 +331,24 @@ async function crawlGlobalProducts(japanProducts = []) {
           console.warn(`Skipping global product ${productUrl}: ${error.message}`);
         }
       }
+      if (source.includes("/new-now/")) {
+        for (const productNumber of extractGlobalProductNumbers(html)) {
+          if (products.length >= 100) break;
+          if ([...productByUrl.values()].some((product) => product.baseCode === productNumber)) continue;
+          try {
+            const apiProduct = await fetchGlobalApiProduct(productNumber);
+            if (!apiProduct || !apiProduct.url) continue;
+            const detailHtml = await fetchText(apiProduct.url);
+            const product = parseGlobalProduct(apiProduct.url, detailHtml) || apiProduct;
+            if (product && product.baseCode) {
+              products.push(product);
+              productByUrl.set(apiProduct.url, product);
+            }
+          } catch (error) {
+            console.warn(`Skipping global new-arrival product ${productNumber}: ${error.message}`);
+          }
+        }
+      }
     } catch (error) {
       console.warn(`Global catalog source failed: ${source} :: ${error.message}`);
     }
@@ -361,15 +387,22 @@ async function crawlGlobalProducts(japanProducts = []) {
       const sameEnglishKey = englishKey(item.name || "") && englishKey(globalProduct.name || "") && englishKey(item.name || "") === englishKey(globalProduct.name || "");
       return !sameName && !sameEnglishKey;
     });
+    const isAlreadyRegisteredInJapan = (candidate) => (japanProducts || []).some((item) =>
+      (item.relatedNames || []).some((name) =>
+        normalizeComparisonName(name) === normalizeComparisonName(candidate.name)
+      )
+    );
     const relatedGlobal = (globalProduct.relatedUrls || [])
       .map((url) => productByUrl.get(url))
       .filter(Boolean)
       .filter((candidate) => candidate.baseCode !== globalProduct.baseCode)
+      .filter((candidate) => !isAlreadyRegisteredInJapan(candidate))
       .map(({ relatedUrls, ...candidate }) => candidate);
     const apiRelatedGlobal = (globalProduct.relatedProductNumbers || [])
       .map((entry) => productByUrl.get(`api:${entry.productNumber}:${entry.colorId}`))
       .filter(Boolean)
       .filter((candidate) => candidate.baseCode !== globalProduct.baseCode || candidate.colorId !== globalProduct.colorId)
+      .filter((candidate) => !isAlreadyRegisteredInJapan(candidate))
       .map(({ relatedUrls, relatedProductNumbers, colorId, colorName, ...candidate }) => candidate);
     const uniqueRelatedGlobal = [...relatedGlobal, ...apiRelatedGlobal]
       .filter((candidate, index, candidates) => candidates.findIndex((entry) => entry.baseCode === candidate.baseCode) === index);
@@ -428,7 +461,7 @@ async function crawl() {
     const matched = [...matchedGroups.entries()]
       .filter(([, items]) => items.length > 1)
       .flatMap(([, items]) => items)
-      .map(({ relatedNames, variationProductNumbers, ...product }) => product);
+      .map(({ variationProductNumbers, ...product }) => product);
     const displayBuckets = new Map();
     for (const product of matched) {
       const bucketKey = displayGroupKey(product);
