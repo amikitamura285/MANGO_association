@@ -174,7 +174,10 @@ function extractGlobalProductUrls(html, sourceUrl = "") {
   const record = (value) => {
     if (!value || !/\/gb\/en\//.test(value)) return;
     const absolute = value.startsWith("http") ? value : `https://shop.mango.com${value.startsWith("/") ? value : `/${value}`}`;
-    const normalized = absolute.replace(/[#?].*$/, "").replace(/\/$/, "");
+    const normalized = absolute
+      .replace(/\\+$/g, "")
+      .replace(/[#?].*$/, "")
+      .replace(/\/$/, "");
     if (!/\/gb\/en\/p\//.test(normalized)) return;
     if (seen.has(normalized)) return;
     seen.add(normalized);
@@ -184,10 +187,15 @@ function extractGlobalProductUrls(html, sourceUrl = "") {
   for (const pattern of [
     /https?:\/\/shop\.mango\.com\/gb\/en\/p\/[^\s"'<>]+/gi,
     /\/gb\/en\/p\/[^\s"'<>]+/gi,
-    /(?:href|data-href|content|src|data-url)=["']([^"']+)["']/gi
+    /(?:href|data-href|content|src|data-url|product-url|productUrl)=["']([^"']+)["']/gi,
+    /https?:\\\/\\\/shop\\.mango\\.com\\\/gb\\\/en\\\/p\\\/[^"\\]+/gi,
+    /\\\/gb\\\/en\\\/p\\\/[^"\\]+/gi
   ]) {
     for (const match of html.matchAll(pattern)) {
-      const value = match[1] || match[0];
+      const value = (match[1] || match[0])
+        .replace(/\\\//g, "/")
+        .replace(/\\u002f/gi, "/")
+        .replace(/\\u003f/gi, "?");
       record(value.replace(/^"|^'|"$|'$/g, ""));
     }
   }
@@ -205,12 +213,28 @@ function extractGlobalProductUrls(html, sourceUrl = "") {
 }
 
 function extractGlobalRelatedUrls(html, sourceUrl) {
-  const marker = html.search(/see\s*look|you\s*may\s*also\s*like|complete\s*the\s*look|related\s*products?/i);
-  if (marker < 0) return [];
-  const sectionHtml = html.slice(marker, marker + 120000);
-  return extractGlobalProductUrls(sectionHtml)
-    .filter((url) => url !== sourceUrl)
-    .slice(0, 12);
+  const markers = [...html.matchAll(/see\s*look|you\s*may\s*also\s*like|complete\s*the\s*look|related\s*products?|shop\s*the\s*look/gi)];
+  const sections = markers.map((match) => html.slice(match.index, match.index + 120000));
+  const urls = new Set();
+  for (const sectionHtml of sections) {
+    for (const url of extractGlobalProductUrls(sectionHtml)) {
+      if (url !== sourceUrl) urls.add(url);
+    }
+  }
+  return [...urls].slice(0, 24);
+}
+
+function extractGlobalRelatedProductNumbers(html, sourceUrl) {
+  const sourceNumber = [...sourceUrl.matchAll(/\/(\d{8})\b/g)].at(-1)?.[1] || "";
+  const markers = [...html.matchAll(/see\s*look|you\s*may\s*also\s*like|complete\s*the\s*look|related\s*products?|shop\s*the\s*look/gi)];
+  const numbers = new Set();
+  for (const marker of markers) {
+    const sectionHtml = html.slice(marker.index, marker.index + 120000);
+    for (const match of sectionHtml.matchAll(/\b(\d{8})\b/g)) {
+      if (match[1] !== sourceNumber) numbers.add(match[1]);
+    }
+  }
+  return [...numbers].slice(0, 24);
 }
 
 function parseGlobalProduct(url, html) {
@@ -233,7 +257,29 @@ function parseGlobalProduct(url, html) {
     baseCode,
     globalCode: baseCode,
     url,
-    relatedUrls: extractGlobalRelatedUrls(html, url)
+    relatedUrls: extractGlobalRelatedUrls(html, url),
+    relatedProductNumbers: extractGlobalRelatedProductNumbers(html, url)
+  };
+}
+
+async function fetchGlobalApiProduct(productNumber) {
+  const apiUrl = `https://online-orchestrator.mango.com/v4/products?channelId=shop&countryIso=GB&languageIso=en&productId=${productNumber}`;
+  const data = JSON.parse(await fetchText(apiUrl));
+  const color = data.colors?.[0];
+  const colorId = color?.id || "99";
+  const lookImages = color?.looks?.["00"]?.images || {};
+  const imagePath = Object.values(lookImages).find((entry) => entry?.img)?.img;
+  const productPath = String(data.url || "").replace(/\/$/, "");
+  if (!data.reference || !productPath) return null;
+  return {
+    name: data.nameEn || data.name || `MANGO ${productNumber}`,
+    image: imagePath ? `${data.assetsDomain || "https://media.mango.com"}${imagePath}?wid=1024` : "",
+    productNumber: String(data.reference),
+    baseCode: String(data.reference),
+    globalCode: String(data.reference),
+    url: `https://shop.mango.com${productPath}/${colorId}/00`,
+    relatedUrls: [],
+    relatedProductNumbers: []
   };
 }
 
@@ -290,6 +336,16 @@ async function crawlGlobalProducts(japanProducts = []) {
         console.warn(`Skipping global related product ${relatedUrl}: ${error.message}`);
       }
     }
+    for (const relatedNumber of product.relatedProductNumbers || []) {
+      const relatedKey = `api:${relatedNumber}`;
+      if (productByUrl.has(relatedKey)) continue;
+      try {
+        const relatedProduct = await fetchGlobalApiProduct(relatedNumber);
+        if (relatedProduct && relatedProduct.baseCode) productByUrl.set(relatedKey, relatedProduct);
+      } catch (error) {
+        console.warn(`Skipping global SEE LOOK product ${relatedNumber}: ${error.message}`);
+      }
+    }
   }
 
   const matches = deduped.map((globalProduct) => {
@@ -306,7 +362,12 @@ async function crawlGlobalProducts(japanProducts = []) {
       .filter(Boolean)
       .filter((candidate) => candidate.baseCode !== globalProduct.baseCode)
       .map(({ relatedUrls, ...candidate }) => candidate);
-    return { main: globalProduct, related, relatedGlobal, baseCode };
+    const apiRelatedGlobal = (globalProduct.relatedProductNumbers || [])
+      .map((number) => productByUrl.get(`api:${number}`))
+      .filter(Boolean)
+      .filter((candidate) => candidate.baseCode !== globalProduct.baseCode)
+      .map(({ relatedUrls, relatedProductNumbers, ...candidate }) => candidate);
+    return { main: globalProduct, related, relatedGlobal: [...relatedGlobal, ...apiRelatedGlobal], baseCode };
   }).filter((entry) => entry.baseCode && (entry.related.length > 0 || entry.relatedGlobal.length > 0));
 
   const result = {
