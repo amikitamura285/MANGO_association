@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T07:49:05.882Z",
+  "updatedAt": "2026-09-18T08:09:54.630Z",
   "products": [
     {
       "name": "ロングワンピース .-- NICOLE （ホワイト）",
@@ -88,105 +88,6 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "DAVINA"
-    },
-    {
-      "name": "コート .-- DALI （グレー）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW038274_1_l.jpg",
-      "productNumber": "MA1658EW038274",
-      "brandItemNumber": "17015800 92 色 グレー（92）",
-      "brandItemFirstDigit": "1",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038274/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "DALI"
-    },
-    {
-      "name": "コート .-- DALI （ミディアムブラウン）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW038319_1_l.jpg",
-      "productNumber": "MA1658EW038319",
-      "brandItemNumber": "17015791 35 色 ミディアムブラウン（35）",
-      "brandItemFirstDigit": "1",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038319/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "DALI"
-    },
-    {
-      "name": "コート .-- DALI （ブラック）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW038373_1_l.jpg",
-      "productNumber": "MA1658EW038373",
-      "brandItemNumber": "17005797 99 色 ブラック（99）",
-      "brandItemFirstDigit": "1",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038373/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "DALI"
-    },
-    {
-      "name": "ジーンズ .-- PALOMA （ダークレッド）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW038339_1_l.jpg",
-      "productNumber": "MA1658EW038339",
-      "brandItemNumber": "17015810 77 色 ダークレッド（77）",
-      "brandItemFirstDigit": "1",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038339/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "PALOMA"
-    },
-    {
-      "name": "ジーンズ .-- PALOMA （ダークブラウン）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW038675_1_l.jpg",
-      "productNumber": "MA1658EW038675",
-      "brandItemNumber": "17067769 32 色 ダークブラウン（32）",
-      "brandItemFirstDigit": "1",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038675/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "PALOMA"
-    },
-    {
-      "name": "コート .-- GOYA （パステルグレー）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW038365_1_l.jpg",
-      "productNumber": "MA1658EW038365",
-      "brandItemNumber": "17025790 6 色 パステルグレー（6）",
-      "brandItemFirstDigit": "1",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038365/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "GOYA"
-    },
-    {
-      "name": "コート .-- GOYA （ブラック）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW038378_1_l.jpg",
-      "productNumber": "MA1658EW038378",
-      "brandItemNumber": "17005796 99 色 ブラック（99）",
-      "brandItemFirstDigit": "1",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038378/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "GOYA"
-    },
-    {
-      "name": "ロングワンピース .-- VALERIA （ブラック）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW038415_1_l.jpg",
-      "productNumber": "MA1658EW038415",
-      "brandItemNumber": "17015825 99 色 ブラック（99）",
-      "brandItemFirstDigit": "1",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038415/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "VALERIA"
-    },
-    {
-      "name": "ブラウス .-- VALERIA （ブラック）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW038454_1_l.jpg",
-      "productNumber": "MA1658EW038454",
-      "brandItemNumber": "17095813 99 色 ブラック（99）",
-      "brandItemFirstDigit": "1",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038454/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "VALERIA"
     },
     {
       "name": "セーター .-- LIBRA （ライトベージュ）",
