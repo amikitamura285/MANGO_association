@@ -76,12 +76,29 @@ document.querySelectorAll("[data-view]").forEach((tab) => tab.addEventListener("
   document.querySelectorAll("[data-view]").forEach((item) => item.classList.toggle("is-active", item === tab));
   document.querySelector("#accountView").hidden = tab.dataset.view !== "accountView";
   document.querySelector("#relationView").hidden = tab.dataset.view !== "relationView";
+  document.querySelector("#globalRelationView").hidden = tab.dataset.view !== "globalRelationView";
   if (tab.dataset.view === "relationView" && !window.relationLoaded) loadProducts();
+  if (tab.dataset.view === "globalRelationView" && !window.globalRelationLoaded) loadGlobalProducts();
 }));
 state.results = getFilteredResults();
 updateFemaleLabel();
 renderTargetProfile();
 render();
+
+function normalizeBrandBaseCode(value) {
+  if (!value) return "";
+  const digits = String(value).match(/\d{8}/);
+  return digits ? digits[0] : "";
+}
+
+function normalizeGlobalBaseCode(value) {
+  if (!value) return "";
+  const raw = String(value);
+  const direct = raw.match(/(\d{8})(?:\/\d{2}\/\d{2}|-\d{2}-\d{3})/);
+  if (direct) return direct[1];
+  const fallback = raw.match(/\d{8}/);
+  return fallback ? fallback[0] : "";
+}
 
 function buildProductGroups(products) {
   const grouped = new Map();
@@ -93,15 +110,74 @@ function buildProductGroups(products) {
   });
   return [...grouped.values()].map((items) => ({ main: items[0], related: items.slice(1) }));
 }
+
+function renderProductCards(containerSelector, groups, compact) {
+  const container = document.querySelector(containerSelector);
+  const image = (product, small) => `<a class="card-link" href="${product.url || product.globalUrl || "#"}" target="_blank" rel="noreferrer"><img class="${small ? "card-image-small" : "card-image"}" src="${product.image}" alt="${product.name}" loading="lazy"><div class="card-info"><h3 class="card-name">${product.name}</h3><div class="card-number"><span>${product.productNumber || product.baseCode || "PRODUCT"}</span><span>↗</span></div></div></a>`;
+  container.innerHTML = groups.map((group) => `<section class="product-group"><article class="card card-main">${image(group.main || group.japanese || group, false)}</article>${(group.related || []).length ? `<div class="related-items">${(group.related || []).map((product) => `<article class="card card-related">${image(product, true)}</article>`).join("")}</div>` : ""}</section>`).join("");
+  if (compact) {
+    container.innerHTML = groups.map((group) => {
+      const main = group.japanese || group.main || group;
+      const related = Array.isArray(group.global) ? group.global : [];
+      return `<section class="product-group"><article class="card card-main">${image(main, false)}</article>${related.length ? `<div class="related-items">${related.map((product) => `<article class="card card-related">${image(product, true)}</article>`).join("")}</div>` : ""}</section>`;
+    }).join("");
+  }
+}
+
 function loadProducts() {
   window.relationLoaded = true;
   fetch(`products.json?v=${Date.now()}`, { cache: "no-store" }).then((response) => response.json()).then((data) => {
-    const groups = buildProductGroups(data.products || []);
+    window.mangoProducts = data.products || [];
+    const groups = buildProductGroups(window.mangoProducts);
     $("#productCount").textContent = String(groups.length).padStart(2, "0");
     $("#updatedAt").textContent = data.updatedAt ? new Intl.DateTimeFormat("ja-JP", { month:"numeric", day:"numeric", hour:"2-digit", minute:"2-digit" }).format(new Date(data.updatedAt)) : "—";
     $("#scannedCount").textContent = data.scanned ? `${data.scanned} PRODUCTS SCANNED` : "";
-    const image = (product, small) => `<a class="card-link" href="${product.url}" target="_blank" rel="noreferrer"><img class="${small ? "card-image-small" : "card-image"}" src="${product.image}" alt="${product.name}" loading="lazy"><div class="card-info"><h3 class="card-name">${product.name}</h3><div class="card-number"><span>${product.productNumber || "PRODUCT"}</span><span>↗</span></div></div></a>`;
-    $("#productGrid").innerHTML = groups.map((group) => `<section class="product-group"><article class="card card-main">${image(group.main, false)}</article>${group.related.length ? `<div class="related-items">${group.related.map((product) => `<article class="card card-related">${image(product, true)}</article>`).join("")}</div>` : ""}</section>`).join("");
+    renderProductCards("#productGrid", groups, false);
     $("#productEmpty").hidden = groups.length > 0;
   }).catch(() => { $("#productEmpty").hidden = false; });
+}
+
+function loadGlobalProducts() {
+  window.globalRelationLoaded = true;
+  const loadData = (japanProducts) => fetch(`global-products.json?v=${Date.now()}`, { cache: "no-store" }).then((response) => response.json()).then((data) => {
+    const matches = Array.isArray(data.matches) && data.matches.length
+      ? data.matches
+      : (() => {
+          const globalProducts = data.products || [];
+          const globalIndex = new Map();
+          globalProducts.forEach((product) => {
+            const baseCode = normalizeGlobalBaseCode(product.url || product.globalCode || product.productNumber || product.baseCode);
+            if (!baseCode) return;
+            if (!globalIndex.has(baseCode)) globalIndex.set(baseCode, []);
+            globalIndex.get(baseCode).push(product);
+          });
+          return japanProducts
+            .map((item) => {
+              const baseCode = normalizeBrandBaseCode(item.brandItemNumber || item.brandItemFirstDigit || item.productNumber);
+              const filtered = (globalIndex.get(baseCode) || []).filter((candidate) => {
+                const sameName = String(item.name || "").toUpperCase().replace(/[^A-Z0-9]+/g, " ") === String(candidate.name || "").toUpperCase().replace(/[^A-Z0-9]+/g, " ");
+                return !sameName;
+              });
+              return { japanese: item, global: filtered, baseCode };
+            })
+            .filter((entry) => entry.baseCode && entry.global.length > 0)
+            .slice(0, 24);
+        })();
+
+    $("#globalProductCount").textContent = String(matches.length).padStart(2, "0");
+    $("#globalUpdatedAt").textContent = data.updatedAt ? new Intl.DateTimeFormat("ja-JP", { month:"numeric", day:"numeric", hour:"2-digit", minute:"2-digit" }).format(new Date(data.updatedAt)) : "—";
+    $("#globalScannedCount").textContent = (data.products || []).length ? `${(data.products || []).length} GLOBAL PRODUCTS` : "";
+    const rows = matches.map((entry) => ({ main: entry.japanese, related: entry.global }));
+    renderProductCards("#globalProductGrid", rows, true);
+    $("#globalProductEmpty").hidden = rows.length > 0;
+  }).catch(() => { $("#globalProductEmpty").hidden = false; });
+
+  const japanProducts = window.mangoProducts || [];
+  if (japanProducts.length) {
+    return loadData(japanProducts);
+  }
+  return fetch(`products.json?v=${Date.now()}`, { cache: "no-store" }).then((response) => response.json()).then((data) => {
+    window.mangoProducts = data.products || [];
+    return loadData(window.mangoProducts);
+  }).catch(() => { $("#globalProductEmpty").hidden = false; });
 }

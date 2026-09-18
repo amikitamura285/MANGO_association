@@ -5,9 +5,15 @@ const { URL } = require("node:url");
 
 const ROOT = __dirname;
 const DATA_FILE = path.join(ROOT, "data", "products.json");
+const GLOBAL_DATA_FILE = path.join(ROOT, "data", "global-products.json");
 const PORT = Number(process.env.PORT || 3000);
 const SITEMAP = "https://japan.mango.com/sitemap_commodity.xml";
 const BASE = "https://japan.mango.com";
+const GLOBAL_PRODUCT_SOURCES = [
+  "https://shop.mango.com/gb/en/search/women",
+  "https://shop.mango.com/gb/en/h/women",
+  "https://shop.mango.com/gb/en/c/women/new-now/56b5c5ed"
+];
 const CRAWL_LIMIT = Number(process.env.CRAWL_LIMIT || 0);
 const CRAWL_CONCURRENCY = Number(process.env.CRAWL_CONCURRENCY || 12);
 const headers = { "user-agent": process.env.CRAWLER_USER_AGENT || "MangoMonitor/1.0 (+local product monitor)" };
@@ -22,9 +28,23 @@ async function readProducts() {
   }
 }
 
+async function readGlobalProducts() {
+  try {
+    return JSON.parse(await fs.readFile(GLOBAL_DATA_FILE, "utf8"));
+  } catch (error) {
+    if (error.code === "ENOENT") return { updatedAt: null, products: [] };
+    throw error;
+  }
+}
+
 async function writeProducts(value) {
   await fs.mkdir(path.dirname(DATA_FILE), { recursive: true });
   await fs.writeFile(DATA_FILE, JSON.stringify(value, null, 2), "utf8");
+}
+
+async function writeGlobalProducts(value) {
+  await fs.mkdir(path.dirname(GLOBAL_DATA_FILE), { recursive: true });
+  await fs.writeFile(GLOBAL_DATA_FILE, JSON.stringify(value, null, 2), "utf8");
 }
 
 function decodeHtml(value) {
@@ -148,6 +168,131 @@ async function mapConcurrent(values, worker, concurrency) {
   return results;
 }
 
+function extractGlobalProductUrls(html, sourceUrl = "") {
+  const urls = new Set();
+  const seen = new Set();
+  const record = (value) => {
+    if (!value || !/\/gb\/en\//.test(value)) return;
+    const absolute = value.startsWith("http") ? value : `https://shop.mango.com${value.startsWith("/") ? value : `/${value}`}`;
+    const normalized = absolute.replace(/[#?].*$/, "").replace(/\/$/, "");
+    if (!/\/gb\/en\/p\//.test(normalized)) return;
+    if (seen.has(normalized)) return;
+    seen.add(normalized);
+    urls.add(normalized);
+  };
+
+  for (const pattern of [
+    /https?:\/\/shop\.mango\.com\/gb\/en\/p\/[^\s"'<>]+/gi,
+    /\/gb\/en\/p\/[^\s"'<>]+/gi,
+    /(?:href|data-href|content|src|data-url)=["']([^"']+)["']/gi,
+    /"url":"(https?:\\\/\\\/shop\\.mango\\.com\\/gb\\/en\\/p\\/[^"\\]+)"/gi,
+    /'url':'(https?:\\/\\/shop\\.mango\\.com\\/gb\\/en\\/p\\/[^'\\]+)'/gi
+  ]) {
+    for (const match of html.matchAll(pattern)) {
+      const value = match[1] || match[0];
+      record(value.replace(/^"|^'|"$|'$/g, ""));
+    }
+  }
+
+  if (sourceUrl && /\/gb\/en\/p\//.test(sourceUrl)) {
+    const sourceProductNumber = [...sourceUrl.matchAll(/\/(\d{8})\b/g)].at(-1)?.[1];
+    const sourceCode = sourceProductNumber || "";
+    if (sourceCode) {
+      const sourceCandidate = sourceUrl.replace(/\/(\d{8})\b/, `/${sourceCode}`);
+      record(sourceCandidate);
+    }
+  }
+
+  return [...urls];
+}
+
+function parseGlobalProduct(url, html) {
+  const title = firstMatch(html, [
+    /<meta[^>]+property=["']og:title["'][^>]+content=["']([^"']+)/i,
+    /<h1[^>]*>([\s\S]*?)<\/h1>/i,
+    /<title[^>]*>([\s\S]*?)<\/title>/i
+  ]);
+  const image = firstMatch(html, [
+    /<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)/i,
+    /<img[^>]+src=["']([^"']+)["'][^>]*>/i
+  ]);
+  const productNumber = [...url.matchAll(/\/(\d{8})\b/g)].at(-1)?.[1] || "";
+  const baseCode = productNumber.match(/\d{8}/)?.[0] || "";
+  if (!productNumber || !baseCode || !title) return null;
+  return {
+    name: stripTags(title).replace(/\s*\|\s*MANGO.*$/i, "").trim(),
+    image,
+    productNumber: productNumber,
+    baseCode,
+    globalCode: baseCode,
+    url
+  };
+}
+
+function normalizeComparisonName(value) {
+  if (!value) return "";
+  return String(value)
+    .toUpperCase()
+    .replace(/[^A-Z0-9]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function normalizeBrandBaseCode(value) {
+  if (!value) return "";
+  const match = String(value).match(/(\d{8})/);
+  return match ? match[1] : "";
+}
+
+async function crawlGlobalProducts(japanProducts = []) {
+  const products = [];
+  const visited = new Set();
+  for (const source of GLOBAL_PRODUCT_SOURCES) {
+    try {
+      const html = await fetchText(source);
+      const candidateUrls = extractGlobalProductUrls(html, source);
+      for (const productUrl of candidateUrls) {
+        if (visited.has(productUrl)) continue;
+        visited.add(productUrl);
+        try {
+          const detailHtml = await fetchText(productUrl);
+          const product = parseGlobalProduct(productUrl, detailHtml);
+          if (product && product.baseCode) products.push(product);
+        } catch (error) {
+          console.warn(`Skipping global product ${productUrl}: ${error.message}`);
+        }
+      }
+    } catch (error) {
+      console.warn(`Global catalog source failed: ${source} :: ${error.message}`);
+    }
+  }
+  const deduped = products.filter((product, index, array) => array.findIndex((entry) => entry.baseCode === product.baseCode) === index);
+  const globalIndex = new Map();
+  deduped.forEach((product) => {
+    if (!globalIndex.has(product.baseCode)) globalIndex.set(product.baseCode, []);
+    globalIndex.get(product.baseCode).push(product);
+  });
+
+  const matches = (japanProducts || []).map((item) => {
+    const baseCode = normalizeBrandBaseCode(item.brandItemNumber || item.brandItemFirstDigit || item.productNumber || "");
+    const filtered = (globalIndex.get(baseCode) || []).filter((candidate) => {
+      const sameName = normalizeComparisonName(item.name || "") === normalizeComparisonName(candidate.name || "");
+      const sameEnglishKey = englishKey(item.name || "") && englishKey(candidate.name || "") && englishKey(item.name || "") === englishKey(candidate.name || "");
+      return !sameName && !sameEnglishKey;
+    });
+    return { japanese: item, global: filtered, baseCode };
+  }).filter((entry) => entry.baseCode && entry.global.length > 0);
+
+  const result = {
+    updatedAt: new Date().toISOString(),
+    products: deduped.slice(0, 200),
+    matches
+  };
+  await writeGlobalProducts(result);
+  await fs.writeFile(path.join(ROOT, "public", "global-products.json"), JSON.stringify(result, null, 2), "utf8");
+  return result;
+}
+
 async function crawl() {
   if (crawlState.status === "running") return;
   crawlState = { status: "running", startedAt: new Date().toISOString(), finishedAt: null, count: 0, error: null };
@@ -218,6 +363,7 @@ async function crawl() {
     };
     await writeProducts(result);
     await fs.writeFile(path.join(ROOT, "public", "products.json"), JSON.stringify(result, null, 2), "utf8");
+    await crawlGlobalProducts(matched);
     crawlState = { ...crawlState, status: "idle", finishedAt: new Date().toISOString(), count: matched.length };
   } catch (error) {
     crawlState = { ...crawlState, status: "error", finishedAt: new Date().toISOString(), error: error.message };

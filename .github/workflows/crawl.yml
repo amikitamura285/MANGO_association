@@ -5,7 +5,9 @@ on:
     branches: ["main"]
     paths-ignore:
       - "data/products.json"
+      - "data/global-products.json"
       - "public/products.json"
+      - "public/global-products.json"
   schedule:
     - cron: "0 19 * * *"
   workflow_dispatch:
@@ -26,6 +28,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/products.json public/products.json
+          git add data/products.json data/global-products.json public/products.json public/global-products.json
           git diff --cached --quiet || git commit -m "chore: update product data"
           git push

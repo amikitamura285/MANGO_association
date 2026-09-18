@@ -1,0 +1,53 @@
+{
+  "updatedAt": "2026-09-18T11:30:00.000Z",
+  "products": [
+    {
+      "name": "ZUNGA blue knit top",
+      "image": "https://media.mango.com/is/image/punto/87017193-69-002?wid=1024",
+      "productNumber": "87017193",
+      "baseCode": "87017193",
+      "globalCode": "87017193",
+      "url": "https://shop.mango.com/gb/en/p/women/tops/zunga-blue-knit-top/87017193/69/00"
+    },
+    {
+      "name": "GONZALO medium brown dress",
+      "image": "https://media.mango.com/is/image/punto/17081181-35-002?wid=1024",
+      "productNumber": "17081181",
+      "baseCode": "17081181",
+      "globalCode": "17081181",
+      "url": "https://shop.mango.com/gb/en/p/women/dresses-and-jumpsuits/gonzalo-medium-brown-dress/17081181/35/00"
+    },
+    {
+      "name": "GONZALO natural white knit",
+      "image": "https://media.mango.com/is/image/punto/17091180-02-002?wid=1024",
+      "productNumber": "17091180",
+      "baseCode": "17091180",
+      "globalCode": "17091180",
+      "url": "https://shop.mango.com/gb/en/p/women/tops/gonzalo-natural-white-knit/17091180/02/00"
+    },
+    {
+      "name": "NICOLE white dress",
+      "image": "https://media.mango.com/is/image/punto/17001283-01-002?wid=1024",
+      "productNumber": "17001283",
+      "baseCode": "17001283",
+      "globalCode": "17001283",
+      "url": "https://shop.mango.com/gb/en/p/women/dresses-and-jumpsuits/nicole-white-dress/17001283/01/00"
+    },
+    {
+      "name": "RAMONA black coat",
+      "image": "https://media.mango.com/is/image/punto/17061154-99-002?wid=1024",
+      "productNumber": "17061154",
+      "baseCode": "17061154",
+      "globalCode": "17061154",
+      "url": "https://shop.mango.com/gb/en/p/women/coats/ramona-black-coat/17061154/99/00"
+    },
+    {
+      "name": "ALBERT dark red cardigan",
+      "image": "https://media.mango.com/is/image/punto/17047813-77-002?wid=1024",
+      "productNumber": "17047813",
+      "baseCode": "17047813",
+      "globalCode": "17047813",
+      "url": "https://shop.mango.com/gb/en/p/women/cardigans/albert-dark-red-cardigan/17047813/77/00"
+    }
+  ]
+}
