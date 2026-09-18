@@ -164,7 +164,14 @@ function loadGlobalProducts() {
     });
 }
 
-function switchTab(targetView) {
+function routeForView(targetView) {
+  const route = targetView === "globalRelationView" ? "global" : "relation";
+  const path = window.location.pathname;
+  const base = path.replace(/(?:relation|global)\/?$/, "").replace(/\/?$/, "/");
+  return `${base}${route}/`;
+}
+
+function switchTab(targetView, updateUrl = false) {
   document.querySelectorAll(".relation-view").forEach((view) => {
     view.hidden = true;
   });
@@ -178,10 +185,17 @@ function switchTab(targetView) {
     window.globalRelationLoaded = true;
     loadGlobalProducts();
   }
+  if (updateUrl && window.location.protocol !== "file:") {
+    window.history.pushState({ view: targetView }, "", routeForView(targetView));
+  }
 }
 
 document.querySelectorAll(".main-tab").forEach((button) => {
-  button.addEventListener("click", () => switchTab(button.dataset.view));
+  button.addEventListener("click", () => switchTab(button.dataset.view, true));
+});
+
+window.addEventListener("popstate", () => {
+  switchTab(window.location.pathname.includes("/global/") ? "globalRelationView" : "relationView");
 });
 
 window.addEventListener("DOMContentLoaded", () => {
