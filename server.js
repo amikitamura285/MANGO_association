@@ -424,17 +424,19 @@ async function crawlGlobalProducts(japanProducts = []) {
     const relatedGlobalWithJapanUrl = uniqueRelatedGlobal.map((candidate) => ({
       ...candidate,
       japanUrl: japanProductUrlForGlobal(candidate, japanProducts)
-    }));
+    })).filter((candidate) => candidate.japanUrl);
+    const japanUrl = japanProductUrlForGlobal(globalProduct, japanProducts);
     return {
       main: {
         ...globalProduct,
-        japanUrl: japanProductUrlForGlobal(globalProduct, japanProducts)
+        japanUrl
       },
       related,
       relatedGlobal: relatedGlobalWithJapanUrl,
-      baseCode
+      baseCode,
+      hasJapanRelations: Boolean(japanUrl && relatedGlobalWithJapanUrl.length)
     };
-  }).filter((entry) => entry.baseCode && (entry.related.length > 0 || entry.relatedGlobal.length > 0));
+  }).filter((entry) => entry.baseCode && entry.hasJapanRelations);
 
   const result = {
     updatedAt: new Date().toISOString(),
