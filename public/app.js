@@ -1,6 +1,7 @@
 ﻿const $ = (selector) => document.querySelector(selector);
 const state = {
   groups: [],
+  products: [],
   checked: new Set(JSON.parse(localStorage.getItem("mango-monitor-checked") || "[]"))
 };
 
@@ -126,6 +127,7 @@ function loadProducts() {
       const groups = Array.isArray(data.groups) && data.groups.length
         ? data.groups
         : buildProductGroups(data.products || []);
+      state.products = data.products || [];
       state.groups = groups;
       renderMainProducts();
       $("#updatedAt").textContent = data.updatedAt ? new Intl.DateTimeFormat("ja-JP", { month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit" }).format(new Date(data.updatedAt)) : "—";
@@ -140,7 +142,9 @@ function loadGlobalProducts() {
   fetch(`global-products.json?v=${Date.now()}`, { cache: "no-store" })
     .then((response) => response.json())
     .then((data) => {
-      const japanProducts = state.groups.flatMap((group) => [group.main, ...(group.related || [])]);
+      const japanProducts = state.products.length
+        ? state.products
+        : state.groups.flatMap((group) => [group.main, ...(group.related || [])]);
       let rows = [];
 
       if (Array.isArray(data.matches) && data.matches.length) {
