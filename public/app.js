@@ -45,9 +45,7 @@ function buildProductGroups(products) {
 }
 
 function getJapanUrl(product) {
-  if (product.japanUrl) return product.japanUrl;
-  const query = product.productNumber || product.baseCode || product.globalCode;
-  return query ? `https://japan.mango.com/search/?searchWord=${encodeURIComponent(query)}` : "";
+  return product.japanUrl || "";
 }
 
 function renderProductCards(containerSelector, groups, compact) {

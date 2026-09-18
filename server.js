@@ -309,6 +309,19 @@ function normalizeBrandBaseCode(value) {
   return match ? match[1] : "";
 }
 
+function japanProductUrlForGlobal(globalProduct, japanProducts) {
+  const globalCode = normalizeBrandBaseCode(globalProduct.baseCode || globalProduct.productNumber);
+  const globalColor = String(globalProduct.colorId || "").toUpperCase();
+  if (!globalCode || !globalColor) return "";
+  const match = (japanProducts || []).find((item) => {
+    const brandMatch = String(item.brandItemNumber || "").match(/(\d{8})\s+([A-Z0-9]+)/i);
+    return brandMatch
+      && brandMatch[1] === globalCode
+      && brandMatch[2].toUpperCase() === globalColor;
+  });
+  return match?.url || "";
+}
+
 async function crawlGlobalProducts(japanProducts = []) {
   const products = [];
   const visited = new Set();
@@ -406,7 +419,19 @@ async function crawlGlobalProducts(japanProducts = []) {
       .map(({ relatedUrls, relatedProductNumbers, colorId, colorName, ...candidate }) => candidate);
     const uniqueRelatedGlobal = [...relatedGlobal, ...apiRelatedGlobal]
       .filter((candidate, index, candidates) => candidates.findIndex((entry) => entry.baseCode === candidate.baseCode) === index);
-    return { main: globalProduct, related, relatedGlobal: uniqueRelatedGlobal, baseCode };
+    const relatedGlobalWithJapanUrl = uniqueRelatedGlobal.map((candidate) => ({
+      ...candidate,
+      japanUrl: japanProductUrlForGlobal(candidate, japanProducts)
+    }));
+    return {
+      main: {
+        ...globalProduct,
+        japanUrl: japanProductUrlForGlobal(globalProduct, japanProducts)
+      },
+      related,
+      relatedGlobal: relatedGlobalWithJapanUrl,
+      baseCode
+    };
   }).filter((entry) => entry.baseCode && (entry.related.length > 0 || entry.relatedGlobal.length > 0));
 
   const result = {
@@ -489,7 +514,7 @@ async function crawl() {
     };
     await writeProducts(result);
     await fs.writeFile(path.join(ROOT, "public", "products.json"), JSON.stringify(result, null, 2), "utf8");
-    await crawlGlobalProducts(matched);
+    await crawlGlobalProducts(eligibleProducts);
     crawlState = { ...crawlState, status: "idle", finishedAt: new Date().toISOString(), count: matched.length };
   } catch (error) {
     crawlState = { ...crawlState, status: "error", finishedAt: new Date().toISOString(), error: error.message };
