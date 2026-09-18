@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T09:08:25.974Z",
+  "updatedAt": "2026-09-18T09:44:16.947Z",
   "products": [
     {
       "name": "Shirt-collar jacket with belt - Women",
@@ -2002,6 +2002,135 @@
   "matches": [
     {
       "main": {
+        "name": "Shirt-collar jacket with belt - Women",
+        "image": "https://media.mango.com/is/image/punto/37096013-99-102?wid=1024",
+        "productNumber": "37096013",
+        "baseCode": "37096013",
+        "globalCode": "37096013",
+        "colorId": "99",
+        "url": "https://shop.mango.com/gb/en/p/women/jackets/shirt-collar-jacket-with-belt/37096013/99/01",
+        "relatedUrls": [],
+        "relatedProductNumbers": [],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043059/"
+      },
+      "related": [
+        {
+          "name": "ジャケット .-- PAPER （ブラック）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043059_1_l.jpg",
+          "productNumber": "MA1658EW043059",
+          "brandItemNumber": "37096013 99 色 ブラック（99）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043059/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "PAPER",
+          "relatedNames": [
+            "パンツ .-- PAPER （ブラック）"
+          ],
+          "variationProductNumbers": []
+        }
+      ],
+      "relatedGlobal": [],
+      "baseCode": "37096013"
+    },
+    {
+      "main": {
+        "name": "Skirt with slit and ruffle detail",
+        "image": "https://media.mango.com/is/image/punto/37036014-99-102?wid=1024",
+        "productNumber": "37036014",
+        "baseCode": "37036014",
+        "globalCode": "37036014",
+        "colorId": "99",
+        "url": "https://shop.mango.com/gb/en/p/women/skirts/long/skirt-with-slit-and-ruffle-detail/37036014/99/01",
+        "relatedUrls": [],
+        "relatedProductNumbers": [],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043069/"
+      },
+      "related": [
+        {
+          "name": "スカート .-- BINDER （ブラック）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043069_1_l.jpg",
+          "productNumber": "MA1658EW043069",
+          "brandItemNumber": "37036014 99 色 ブラック（99）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043069/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "BINDER",
+          "relatedNames": [],
+          "variationProductNumbers": []
+        }
+      ],
+      "relatedGlobal": [],
+      "baseCode": "37036014"
+    },
+    {
+      "main": {
+        "name": "Frog-button jacket with band collar - Women",
+        "image": "https://media.mango.com/is/image/punto/37035870-99-102?wid=1024",
+        "productNumber": "37035870",
+        "baseCode": "37035870",
+        "globalCode": "37035870",
+        "colorId": "99",
+        "url": "https://shop.mango.com/gb/en/p/women/jackets/frog-button-jacket-with-band-collar/37035870/99/01",
+        "relatedUrls": [],
+        "relatedProductNumbers": [],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042832/"
+      },
+      "related": [
+        {
+          "name": "ジャケット .-- GRACIA （ブラック）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042832_1_l.jpg",
+          "productNumber": "MA1658EW042832",
+          "brandItemNumber": "37035870 99 色 ブラック（99）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042832/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "GRACIA",
+          "relatedNames": [
+            "レザープレーンパンプス .-- ERGO （ダークレッド）",
+            "パンツ .-- GRACIA （ブラック）"
+          ],
+          "variationProductNumbers": []
+        }
+      ],
+      "relatedGlobal": [],
+      "baseCode": "37035870"
+    },
+    {
+      "main": {
+        "name": "Polo collar wool sweater - Women",
+        "image": "https://media.mango.com/is/image/punto/37066335-99-102?wid=1024",
+        "productNumber": "37066335",
+        "baseCode": "37066335",
+        "globalCode": "37066335",
+        "colorId": "99",
+        "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/polos/polo-collar-wool-sweater/37066335/99/01",
+        "relatedUrls": [],
+        "relatedProductNumbers": [],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043118/"
+      },
+      "related": [
+        {
+          "name": "セーター .--RUI （ブラック）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043118_1_l.jpg",
+          "productNumber": "MA1658EW043118",
+          "brandItemNumber": "37066335 99 色 ブラック（99）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043118/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "RUI",
+          "relatedNames": [],
+          "variationProductNumbers": []
+        }
+      ],
+      "relatedGlobal": [],
+      "baseCode": "37066335"
+    },
+    {
+      "main": {
         "name": "Double-breasted virgin wool coat",
         "image": "https://media.mango.com/is/image/punto/37016751-99-002?wid=1024",
         "productNumber": "37016751",
@@ -2023,9 +2152,24 @@
             "productNumber": "37001401",
             "colorId": "OR"
           }
-        ]
+        ],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043084/"
       },
-      "related": [],
+      "related": [
+        {
+          "name": "コート .-- MAS （ブラック）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043084_1_l.jpg",
+          "productNumber": "MA1658EW043084",
+          "brandItemNumber": "37016751 99 色 ブラック（99）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043084/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "MAS",
+          "relatedNames": [],
+          "variationProductNumbers": []
+        }
+      ],
       "relatedGlobal": [
         {
           "name": "Fitted high-neck T-shirt",
@@ -2033,7 +2177,8 @@
           "productNumber": "37035856",
           "baseCode": "37035856",
           "globalCode": "37035856",
-          "url": "https://shop.mango.com/gb/en/p/women/t-shirts/long-sleeve/fitted-high-neck-t-shirt/37035856/05/00"
+          "url": "https://shop.mango.com/gb/en/p/women/t-shirts/long-sleeve/fitted-high-neck-t-shirt/37035856/05/00",
+          "japanUrl": ""
         },
         {
           "name": "Square-toe leather-effect boots",
@@ -2041,7 +2186,8 @@
           "productNumber": "37005998",
           "baseCode": "37005998",
           "globalCode": "37005998",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/boots-and-ankle-boots/square-toe-leather-effect-boots/37005998/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/boots-and-ankle-boots/square-toe-leather-effect-boots/37005998/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Combined earring set",
@@ -2049,10 +2195,44 @@
           "productNumber": "37001401",
           "baseCode": "37001401",
           "globalCode": "37001401",
-          "url": "https://shop.mango.com/gb/en/p/women/jewellery/earrings/combined-earring-set/37001401/OR/00"
+          "url": "https://shop.mango.com/gb/en/p/women/jewellery/earrings/combined-earring-set/37001401/OR/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37016751"
+    },
+    {
+      "main": {
+        "name": "Low-rise straight-leg trousers - Women",
+        "image": "https://media.mango.com/is/image/punto/37056014-99-102?wid=1024",
+        "productNumber": "37056014",
+        "baseCode": "37056014",
+        "globalCode": "37056014",
+        "colorId": "99",
+        "url": "https://shop.mango.com/gb/en/p/women/trousers/skinny/low-rise-straight-leg-trousers/37056014/99/01",
+        "relatedUrls": [],
+        "relatedProductNumbers": [],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043076/"
+      },
+      "related": [
+        {
+          "name": "パンツ .-- PAPER （ブラック）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043076_1_l.jpg",
+          "productNumber": "MA1658EW043076",
+          "brandItemNumber": "37056014 99 色 ブラック（99）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043076/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "PAPER",
+          "relatedNames": [
+            "ジャケット .-- PAPER （ブラック）"
+          ],
+          "variationProductNumbers": []
+        }
+      ],
+      "relatedGlobal": [],
+      "baseCode": "37056014"
     },
     {
       "main": {
@@ -2081,9 +2261,27 @@
             "productNumber": "37024462",
             "colorId": "99"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
-      "related": [],
+      "related": [
+        {
+          "name": "パンツ .-- GRACIA （ブラック）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042752_1_l.jpg",
+          "productNumber": "MA1658EW042752",
+          "brandItemNumber": "37095869 99 色 ブラック（99）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042752/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "GRACIA",
+          "relatedNames": [
+            "レザープレーンパンプス .-- ERGO （ダークレッド）",
+            "ジャケット .-- GRACIA （ブラック）"
+          ],
+          "variationProductNumbers": []
+        }
+      ],
       "relatedGlobal": [
         {
           "name": "Frog-button jacket with band collar",
@@ -2091,7 +2289,8 @@
           "productNumber": "37035870",
           "baseCode": "37035870",
           "globalCode": "37035870",
-          "url": "https://shop.mango.com/gb/en/p/women/jackets/frog-button-jacket-with-band-collar/37035870/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/jackets/frog-button-jacket-with-band-collar/37035870/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Short-sleeve knitted t-shirt",
@@ -2099,7 +2298,8 @@
           "productNumber": "37041390",
           "baseCode": "37041390",
           "globalCode": "37041390",
-          "url": "https://shop.mango.com/gb/en/p/women/t-shirts/short-sleeve/short-sleeve-knitted-t-shirt/37041390/05/00"
+          "url": "https://shop.mango.com/gb/en/p/women/t-shirts/short-sleeve/short-sleeve-knitted-t-shirt/37041390/05/00",
+          "japanUrl": ""
         },
         {
           "name": "Kitten heel pointed toe shoe",
@@ -2107,7 +2307,8 @@
           "productNumber": "37084429",
           "baseCode": "37084429",
           "globalCode": "37084429",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/heeled-shoes/kitten-heel-pointed-toe-shoe/37084429/32/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/heeled-shoes/kitten-heel-pointed-toe-shoe/37084429/32/00",
+          "japanUrl": ""
         },
         {
           "name": "Faux-leather shoulder bag",
@@ -2115,7 +2316,8 @@
           "productNumber": "37024462",
           "baseCode": "37024462",
           "globalCode": "37024462",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/shoulder/faux-leather-shoulder-bag/37024462/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/bags/shoulder/faux-leather-shoulder-bag/37024462/99/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37095869"
@@ -2147,7 +2349,8 @@
             "productNumber": "37076360",
             "colorId": "99"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -2157,7 +2360,8 @@
           "productNumber": "37036365",
           "baseCode": "37036365",
           "globalCode": "37036365",
-          "url": "https://shop.mango.com/gb/en/p/women/trousers/balloon-trousers/balloon-trousers-with-decorative-seams/37036365/05/00"
+          "url": "https://shop.mango.com/gb/en/p/women/trousers/balloon-trousers/balloon-trousers-with-decorative-seams/37036365/05/00",
+          "japanUrl": ""
         },
         {
           "name": "Lace-up leather sneakers",
@@ -2165,7 +2369,8 @@
           "productNumber": "37046010",
           "baseCode": "37046010",
           "globalCode": "37046010",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/lace-up-leather-sneakers/37046010/05/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/lace-up-leather-sneakers/37046010/05/00",
+          "japanUrl": ""
         },
         {
           "name": "Medium shopper bag",
@@ -2173,7 +2378,8 @@
           "productNumber": "27041343",
           "baseCode": "27041343",
           "globalCode": "27041343",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/shoppers/medium-shopper-bag/27041343/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/bags/shoppers/medium-shopper-bag/27041343/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Oval buckle belt",
@@ -2181,10 +2387,42 @@
           "productNumber": "37076360",
           "baseCode": "37076360",
           "globalCode": "37076360",
-          "url": "https://shop.mango.com/gb/en/p/women/belts/basics/oval-buckle-belt/37076360/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/belts/basics/oval-buckle-belt/37076360/99/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37086334"
+    },
+    {
+      "main": {
+        "name": "Leather-effect shoulder bag with charm detail - Women",
+        "image": "https://media.mango.com/is/image/punto/37055998-99-052?wid=1024",
+        "productNumber": "37055998",
+        "baseCode": "37055998",
+        "globalCode": "37055998",
+        "colorId": "leather-effect-shoulder-bag-with-charm-detail",
+        "url": "https://shop.mango.com/gb/en/p/women/bags/crossbody/leather-effect-shoulder-bag-with-charm-detail/37055998",
+        "relatedUrls": [],
+        "relatedProductNumbers": [],
+        "japanUrl": ""
+      },
+      "related": [
+        {
+          "name": "ショルダーバッグ M-- PATTY （ブラック）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658AW043090_1_l.jpg",
+          "productNumber": "MA1658AW043090",
+          "brandItemNumber": "37055998 99 色 ブラック（99）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW043090/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "M PATTY",
+          "relatedNames": [],
+          "variationProductNumbers": []
+        }
+      ],
+      "relatedGlobal": [],
+      "baseCode": "37055998"
     },
     {
       "main": {
@@ -2209,7 +2447,8 @@
             "productNumber": "37094115",
             "colorId": "99"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -2219,7 +2458,8 @@
           "productNumber": "37086334",
           "baseCode": "37086334",
           "globalCode": "37086334",
-          "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/100-cashmere/100-cashmere-round-neck-sweater/37086334/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/100-cashmere/100-cashmere-round-neck-sweater/37086334/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Fitted high-neck T-shirt",
@@ -2227,7 +2467,8 @@
           "productNumber": "37035856",
           "baseCode": "37035856",
           "globalCode": "37035856",
-          "url": "https://shop.mango.com/gb/en/p/women/t-shirts/long-sleeve/fitted-high-neck-t-shirt/37035856/05/00"
+          "url": "https://shop.mango.com/gb/en/p/women/t-shirts/long-sleeve/fitted-high-neck-t-shirt/37035856/05/00",
+          "japanUrl": ""
         },
         {
           "name": "Capri trousers with openings",
@@ -2235,7 +2476,8 @@
           "productNumber": "37094115",
           "baseCode": "37094115",
           "globalCode": "37094115",
-          "url": "https://shop.mango.com/gb/en/p/women/trousers/casual/capri-trousers-with-openings/37094115/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/trousers/casual/capri-trousers-with-openings/37094115/99/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37046353"
@@ -2267,7 +2509,8 @@
             "productNumber": "37004454",
             "colorId": "OR"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -2277,7 +2520,8 @@
           "productNumber": "37084775",
           "baseCode": "37084775",
           "globalCode": "37084775",
-          "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/plus-sizes/v-neck-knit-sweater/37084775/32/00"
+          "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/plus-sizes/v-neck-knit-sweater/37084775/32/00",
+          "japanUrl": ""
         },
         {
           "name": "Suede driving shoes",
@@ -2285,7 +2529,8 @@
           "productNumber": "37061344",
           "baseCode": "37061344",
           "globalCode": "37061344",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/suede-driving-shoes/37061344/07/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/suede-driving-shoes/37061344/07/00",
+          "japanUrl": ""
         },
         {
           "name": "Small split leather bag",
@@ -2293,7 +2538,8 @@
           "productNumber": "37031350",
           "baseCode": "37031350",
           "globalCode": "37031350",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/small-split-leather-bag/37031350/32/00"
+          "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/small-split-leather-bag/37031350/32/00",
+          "japanUrl": ""
         },
         {
           "name": "Embossed semi-hoop earrings",
@@ -2301,7 +2547,8 @@
           "productNumber": "37004454",
           "baseCode": "37004454",
           "globalCode": "37004454",
-          "url": "https://shop.mango.com/gb/en/p/women/jewellery/earrings/embossed-semi-hoop-earrings/37004454/OR/00"
+          "url": "https://shop.mango.com/gb/en/p/women/jewellery/earrings/embossed-semi-hoop-earrings/37004454/OR/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37085988"
@@ -2333,7 +2580,8 @@
             "productNumber": "37031470",
             "colorId": "OR"
           }
-        ]
+        ],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043102/"
       },
       "related": [
         {
@@ -2346,7 +2594,8 @@
           "brandCode": "MA1658",
           "brandName": "MANGO",
           "englishKey": "LEA",
-          "relatedNames": []
+          "relatedNames": [],
+          "variationProductNumbers": []
         }
       ],
       "relatedGlobal": [
@@ -2356,7 +2605,8 @@
           "productNumber": "37094115",
           "baseCode": "37094115",
           "globalCode": "37094115",
-          "url": "https://shop.mango.com/gb/en/p/women/trousers/casual/capri-trousers-with-openings/37094115/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/trousers/casual/capri-trousers-with-openings/37094115/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Worn-effect heeled shoe",
@@ -2364,7 +2614,8 @@
           "productNumber": "37063876",
           "baseCode": "37063876",
           "globalCode": "37063876",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/heeled-shoes/worn-effect-heeled-shoe/37063876/32/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/heeled-shoes/worn-effect-heeled-shoe/37063876/32/00",
+          "japanUrl": ""
         },
         {
           "name": "Quilted shoulder bag",
@@ -2372,7 +2623,8 @@
           "productNumber": "37036367",
           "baseCode": "37036367",
           "globalCode": "37036367",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/shoulder/quilted-shoulder-bag/37036367/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/bags/shoulder/quilted-shoulder-bag/37036367/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Mixed bracelet set",
@@ -2380,7 +2632,8 @@
           "productNumber": "37031470",
           "baseCode": "37031470",
           "globalCode": "37031470",
-          "url": "https://shop.mango.com/gb/en/p/women/jewellery/bracelets/mixed-bracelet-set/37031470/OR/00"
+          "url": "https://shop.mango.com/gb/en/p/women/jewellery/bracelets/mixed-bracelet-set/37031470/OR/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37086733"
@@ -2408,7 +2661,8 @@
             "productNumber": "37095153",
             "colorId": "99"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -2418,7 +2672,8 @@
           "productNumber": "37086334",
           "baseCode": "37086334",
           "globalCode": "37086334",
-          "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/100-cashmere/100-cashmere-round-neck-sweater/37086334/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/100-cashmere/100-cashmere-round-neck-sweater/37086334/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Oval buckle belt",
@@ -2426,7 +2681,8 @@
           "productNumber": "37076360",
           "baseCode": "37076360",
           "globalCode": "37076360",
-          "url": "https://shop.mango.com/gb/en/p/women/belts/basics/oval-buckle-belt/37076360/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/belts/basics/oval-buckle-belt/37076360/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Fringed edge scarf",
@@ -2434,7 +2690,8 @@
           "productNumber": "37095153",
           "baseCode": "37095153",
           "globalCode": "37095153",
-          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/fringed-edge-scarf/37095153/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/fringed-edge-scarf/37095153/99/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37096012"
@@ -2466,7 +2723,8 @@
             "productNumber": "37065999",
             "colorId": "99"
           }
-        ]
+        ],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042607/"
       },
       "related": [
         {
@@ -2479,7 +2737,8 @@
           "brandCode": "MA1658",
           "brandName": "MANGO",
           "englishKey": "FLARE",
-          "relatedNames": []
+          "relatedNames": [],
+          "variationProductNumbers": []
         },
         {
           "name": "パンツ .-- FLARE （ミディアムブラウン）",
@@ -2491,7 +2750,8 @@
           "brandCode": "MA1658",
           "brandName": "MANGO",
           "englishKey": "FLARE",
-          "relatedNames": []
+          "relatedNames": [],
+          "variationProductNumbers": []
         }
       ],
       "relatedGlobal": [
@@ -2501,7 +2761,8 @@
           "productNumber": "37064776",
           "baseCode": "37064776",
           "globalCode": "37064776",
-          "url": "https://shop.mango.com/gb/en/p/women/jackets/cropped/lapels-leather-jacket/37064776/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/jackets/cropped/lapels-leather-jacket/37064776/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Ribbed V-neck T-shirt",
@@ -2509,7 +2770,8 @@
           "productNumber": "37054075",
           "baseCode": "37054075",
           "globalCode": "37054075",
-          "url": "https://shop.mango.com/gb/en/p/women/t-shirts/basics/ribbed-v-neck-t-shirt/37054075/92/00"
+          "url": "https://shop.mango.com/gb/en/p/women/t-shirts/basics/ribbed-v-neck-t-shirt/37054075/92/00",
+          "japanUrl": ""
         },
         {
           "name": "Kitten heel pointed toe shoe",
@@ -2517,7 +2779,8 @@
           "productNumber": "37044091",
           "baseCode": "37044091",
           "globalCode": "37044091",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/heeled-shoes/kitten-heel-pointed-toe-shoe/37044091/05/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/heeled-shoes/kitten-heel-pointed-toe-shoe/37044091/05/00",
+          "japanUrl": ""
         },
         {
           "name": "100% bovine leather bag",
@@ -2525,7 +2788,8 @@
           "productNumber": "37065999",
           "baseCode": "37065999",
           "globalCode": "37065999",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/crossbody/100-bovine-leather-bag/37065999/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/bags/crossbody/100-bovine-leather-bag/37065999/99/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37045993"
@@ -2557,7 +2821,8 @@
             "productNumber": "37014799",
             "colorId": "70"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -2567,7 +2832,8 @@
           "productNumber": "37085855",
           "baseCode": "37085855",
           "globalCode": "37085855",
-          "url": "https://shop.mango.com/gb/en/p/women/jackets/cropped/denim-funnel-neck-parka/37085855/37/00"
+          "url": "https://shop.mango.com/gb/en/p/women/jackets/cropped/denim-funnel-neck-parka/37085855/37/00",
+          "japanUrl": ""
         },
         {
           "name": "Check cotton shirt",
@@ -2575,7 +2841,8 @@
           "productNumber": "37072892",
           "baseCode": "37072892",
           "globalCode": "37072892",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/check-cotton-shirt/37072892/30/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/check-cotton-shirt/37072892/30/00",
+          "japanUrl": ""
         },
         {
           "name": "Kitten heel patent leather shoe",
@@ -2583,7 +2850,8 @@
           "productNumber": "37064784",
           "baseCode": "37064784",
           "globalCode": "37064784",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/heeled-shoes/kitten-heel-patent-leather-shoe/37064784/78/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/heeled-shoes/kitten-heel-patent-leather-shoe/37064784/78/00",
+          "japanUrl": ""
         },
         {
           "name": "Small leather chain shoulder bag",
@@ -2591,7 +2859,8 @@
           "productNumber": "37014799",
           "baseCode": "37014799",
           "globalCode": "37014799",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/small-leather-chain-shoulder-bag/37014799/70/00"
+          "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/small-leather-chain-shoulder-bag/37014799/70/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37076000"
@@ -2623,7 +2892,8 @@
             "productNumber": "37024462",
             "colorId": "99"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -2633,7 +2903,8 @@
           "productNumber": "37054416",
           "baseCode": "37054416",
           "globalCode": "37054416",
-          "url": "https://shop.mango.com/gb/en/p/women/jackets/cropped/faux-leather-zip-up-jacket/37054416/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/jackets/cropped/faux-leather-zip-up-jacket/37054416/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Lace lyocell top",
@@ -2641,7 +2912,8 @@
           "productNumber": "37072894",
           "baseCode": "37072894",
           "globalCode": "37072894",
-          "url": "https://shop.mango.com/gb/en/p/women/tops/knitwear/lace-lyocell-top/37072894/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/tops/knitwear/lace-lyocell-top/37072894/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Leather stiletto-heel boot",
@@ -2649,7 +2921,8 @@
           "productNumber": "37094798",
           "baseCode": "37094798",
           "globalCode": "37094798",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/boots-and-ankle-boots/leather-stiletto-heel-boot/37094798/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/boots-and-ankle-boots/leather-stiletto-heel-boot/37094798/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Faux-leather shoulder bag",
@@ -2657,10 +2930,42 @@
           "productNumber": "37024462",
           "baseCode": "37024462",
           "globalCode": "37024462",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/shoulder/faux-leather-shoulder-bag/37024462/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/bags/shoulder/faux-leather-shoulder-bag/37024462/99/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37045163"
+    },
+    {
+      "main": {
+        "name": "Balloon pleated trousers - Women",
+        "image": "https://media.mango.com/is/image/punto/37085992-99-030?wid=1024",
+        "productNumber": "37085992",
+        "baseCode": "37085992",
+        "globalCode": "37085992",
+        "colorId": "99",
+        "url": "https://shop.mango.com/gb/en/p/women/trousers/balloon-trousers/balloon-pleated-trousers/37085992/99/00",
+        "relatedUrls": [],
+        "relatedProductNumbers": [],
+        "japanUrl": ""
+      },
+      "related": [
+        {
+          "name": "パンツ .-- CELIA （ダークブラウン）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043060_1_l.jpg",
+          "productNumber": "MA1658EW043060",
+          "brandItemNumber": "37085992 32 色 ダークブラウン（32）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043060/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "CELIA",
+          "relatedNames": [],
+          "variationProductNumbers": []
+        }
+      ],
+      "relatedGlobal": [],
+      "baseCode": "37085992"
     },
     {
       "main": {
@@ -2693,7 +2998,8 @@
             "productNumber": "37005993",
             "colorId": "32"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -2703,7 +3009,8 @@
           "productNumber": "37035844",
           "baseCode": "37035844",
           "globalCode": "37035844",
-          "url": "https://shop.mango.com/gb/en/p/women/jackets/funnel-neck/leather-effect-jacket-with-collar/37035844/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/jackets/funnel-neck/leather-effect-jacket-with-collar/37035844/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Topstitched blazer with lapels",
@@ -2711,7 +3018,8 @@
           "productNumber": "27055992",
           "baseCode": "27055992",
           "globalCode": "27055992",
-          "url": "https://shop.mango.com/gb/en/p/women/blazers/topstitched-blazer-with-lapels/27055992/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/blazers/topstitched-blazer-with-lapels/27055992/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Fitted T-shirt with lace trim",
@@ -2719,7 +3027,8 @@
           "productNumber": "37045855",
           "baseCode": "37045855",
           "globalCode": "37045855",
-          "url": "https://shop.mango.com/gb/en/p/women/t-shirts/long-sleeve/fitted-t-shirt-with-lace-trim/37045855/30/00"
+          "url": "https://shop.mango.com/gb/en/p/women/t-shirts/long-sleeve/fitted-t-shirt-with-lace-trim/37045855/30/00",
+          "japanUrl": ""
         },
         {
           "name": "Large bucket bag buckle",
@@ -2727,7 +3036,8 @@
           "productNumber": "37023318",
           "baseCode": "37023318",
           "globalCode": "37023318",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/shoppers/large-bucket-bag-buckle/37023318/32/00"
+          "url": "https://shop.mango.com/gb/en/p/women/bags/shoppers/large-bucket-bag-buckle/37023318/32/00",
+          "japanUrl": ""
         },
         {
           "name": "Leather heeled ankle boot with square toe",
@@ -2735,7 +3045,8 @@
           "productNumber": "37005993",
           "baseCode": "37005993",
           "globalCode": "37005993",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/boots-and-ankle-boots/leather-heeled-ankle-boot-with-square-toe/37005993/32/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/boots-and-ankle-boots/leather-heeled-ankle-boot-with-square-toe/37005993/32/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37077807"
@@ -2763,7 +3074,8 @@
             "productNumber": "37036358",
             "colorId": "99"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -2773,7 +3085,8 @@
           "productNumber": "37035852",
           "baseCode": "37035852",
           "globalCode": "37035852",
-          "url": "https://shop.mango.com/gb/en/p/women/t-shirts/basics/ribbed-t-shirt-with-scalloped-trim/37035852/32/00"
+          "url": "https://shop.mango.com/gb/en/p/women/t-shirts/basics/ribbed-t-shirt-with-scalloped-trim/37035852/32/00",
+          "japanUrl": ""
         },
         {
           "name": "Stiletto heel shoe",
@@ -2781,7 +3094,8 @@
           "productNumber": "37063870",
           "baseCode": "37063870",
           "globalCode": "37063870",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/heeled-shoes/stiletto-heel-shoe/37063870/78/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/heeled-shoes/stiletto-heel-shoe/37063870/78/00",
+          "japanUrl": ""
         },
         {
           "name": "Crocodile-effect belt with metal buckle",
@@ -2789,7 +3103,8 @@
           "productNumber": "37036358",
           "baseCode": "37036358",
           "globalCode": "37036358",
-          "url": "https://shop.mango.com/gb/en/p/women/belts/basics/crocodile-effect-belt-with-metal-buckle/37036358/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/belts/basics/crocodile-effect-belt-with-metal-buckle/37036358/99/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37057795"
@@ -2821,7 +3136,8 @@
             "productNumber": "37023318",
             "colorId": "32"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -2831,7 +3147,8 @@
           "productNumber": "37086334",
           "baseCode": "37086334",
           "globalCode": "37086334",
-          "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/100-cashmere/100-cashmere-round-neck-sweater/37086334/91/00"
+          "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/100-cashmere/100-cashmere-round-neck-sweater/37086334/91/00",
+          "japanUrl": ""
         },
         {
           "name": "100% wool round-neck sweater",
@@ -2839,7 +3156,8 @@
           "productNumber": "37015843",
           "baseCode": "37015843",
           "globalCode": "37015843",
-          "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/sweaters/100-wool-round-neck-sweater/37015843/50/00"
+          "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/sweaters/100-wool-round-neck-sweater/37015843/50/00",
+          "japanUrl": ""
         },
         {
           "name": "Leather heeled ankle boot with square toe",
@@ -2847,7 +3165,8 @@
           "productNumber": "37005993",
           "baseCode": "37005993",
           "globalCode": "37005993",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/boots-and-ankle-boots/leather-heeled-ankle-boot-with-square-toe/37005993/32/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/boots-and-ankle-boots/leather-heeled-ankle-boot-with-square-toe/37005993/32/00",
+          "japanUrl": ""
         },
         {
           "name": "Large bucket bag buckle",
@@ -2855,7 +3174,8 @@
           "productNumber": "37023318",
           "baseCode": "37023318",
           "globalCode": "37023318",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/shoppers/large-bucket-bag-buckle/37023318/32/00"
+          "url": "https://shop.mango.com/gb/en/p/women/bags/shoppers/large-bucket-bag-buckle/37023318/32/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37077790"
@@ -2883,7 +3203,8 @@
             "productNumber": "37052536",
             "colorId": "99"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -2893,7 +3214,8 @@
           "productNumber": "37014078",
           "baseCode": "37014078",
           "globalCode": "37014078",
-          "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/sweaters/layered-knit-sweater/37014078/01/00"
+          "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/sweaters/layered-knit-sweater/37014078/01/00",
+          "japanUrl": ""
         },
         {
           "name": "Large large-buckle bucket bag",
@@ -2901,7 +3223,8 @@
           "productNumber": "37034460",
           "baseCode": "37034460",
           "globalCode": "37034460",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/shoppers/large-large-buckle-bucket-bag/37034460/92/00"
+          "url": "https://shop.mango.com/gb/en/p/women/bags/shoppers/large-large-buckle-bucket-bag/37034460/92/00",
+          "japanUrl": ""
         },
         {
           "name": "Oval acetate sunglasses",
@@ -2909,7 +3232,8 @@
           "productNumber": "37052536",
           "baseCode": "37052536",
           "globalCode": "37052536",
-          "url": "https://shop.mango.com/gb/en/p/women/sunglasses/oval-acetate-sunglasses/37052536/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/sunglasses/oval-acetate-sunglasses/37052536/99/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37095986"
@@ -2941,9 +3265,24 @@
             "productNumber": "37015876",
             "colorId": "32"
           }
-        ]
+        ],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043151/"
       },
-      "related": [],
+      "related": [
+        {
+          "name": "ジーンズ .--LETIZIA （オープンブルー）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043151_1_l.jpg",
+          "productNumber": "MA1658EW043151",
+          "brandItemNumber": "37075850 TO 色 オープンブルー（TO）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043151/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "LETIZIA",
+          "relatedNames": [],
+          "variationProductNumbers": []
+        }
+      ],
       "relatedGlobal": [
         {
           "name": "Wide leg stitched jeans",
@@ -2951,7 +3290,8 @@
           "productNumber": "37025855",
           "baseCode": "37025855",
           "globalCode": "37025855",
-          "url": "https://shop.mango.com/gb/en/p/teen/teen-girl/jeans/low-waist/wide-leg-stitched-jeans/37025855/02/00"
+          "url": "https://shop.mango.com/gb/en/p/teen/teen-girl/jeans/low-waist/wide-leg-stitched-jeans/37025855/02/00",
+          "japanUrl": ""
         },
         {
           "name": "Maternity balloon-fit jeans",
@@ -2959,7 +3299,8 @@
           "productNumber": "37015178",
           "baseCode": "37015178",
           "globalCode": "37015178",
-          "url": "https://shop.mango.com/gb/en/p/women/jeans/balloon/maternity-balloon-fit-jeans/37015178/TM/00"
+          "url": "https://shop.mango.com/gb/en/p/women/jeans/balloon/maternity-balloon-fit-jeans/37015178/TM/00",
+          "japanUrl": ""
         },
         {
           "name": "High waist straight jeans",
@@ -2967,7 +3308,8 @@
           "productNumber": "37045852",
           "baseCode": "37045852",
           "globalCode": "37045852",
-          "url": "https://shop.mango.com/gb/en/p/women/jeans/straight/high-waist-straight-jeans/37045852/TG/00"
+          "url": "https://shop.mango.com/gb/en/p/women/jeans/straight/high-waist-straight-jeans/37045852/TG/00",
+          "japanUrl": ""
         },
         {
           "name": "Sienna flared cropped jeans",
@@ -2975,7 +3317,8 @@
           "productNumber": "37015876",
           "baseCode": "37015876",
           "globalCode": "37015876",
-          "url": "https://shop.mango.com/gb/en/p/women/jeans/flare/sienna-flared-cropped-jeans/37015876/32/00"
+          "url": "https://shop.mango.com/gb/en/p/women/jeans/flare/sienna-flared-cropped-jeans/37015876/32/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37075850"
@@ -2999,7 +3342,8 @@
             "productNumber": "37072904",
             "colorId": "78"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -3009,7 +3353,8 @@
           "productNumber": "37014080",
           "baseCode": "37014080",
           "globalCode": "37014080",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/cotton-and-lyocell-blend-straight-shirt/37014080/02/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/cotton-and-lyocell-blend-straight-shirt/37014080/02/00",
+          "japanUrl": ""
         },
         {
           "name": "Kitten-heel patent leather shoes",
@@ -3017,7 +3362,8 @@
           "productNumber": "37072904",
           "baseCode": "37072904",
           "globalCode": "37072904",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/heeled-shoes/kitten-heel-patent-leather-shoes/37072904/78/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/heeled-shoes/kitten-heel-patent-leather-shoes/37072904/78/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37005888"
@@ -3049,7 +3395,8 @@
             "productNumber": "37094104",
             "colorId": "30"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -3059,7 +3406,8 @@
           "productNumber": "37072892",
           "baseCode": "37072892",
           "globalCode": "37072892",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/check-cotton-shirt/37072892/30/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/check-cotton-shirt/37072892/30/00",
+          "japanUrl": ""
         },
         {
           "name": "High block-heel boot",
@@ -3067,7 +3415,8 @@
           "productNumber": "37055985",
           "baseCode": "37055985",
           "globalCode": "37055985",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/boots-and-ankle-boots/high-block-heel-boot/37055985/78/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/boots-and-ankle-boots/high-block-heel-boot/37055985/78/00",
+          "japanUrl": ""
         },
         {
           "name": "Rounded buckle leather belt",
@@ -3075,7 +3424,8 @@
           "productNumber": "37072538",
           "baseCode": "37072538",
           "globalCode": "37072538",
-          "url": "https://shop.mango.com/gb/en/p/women/belts/leather/rounded-buckle-leather-belt/37072538/32/00"
+          "url": "https://shop.mango.com/gb/en/p/women/belts/leather/rounded-buckle-leather-belt/37072538/32/00",
+          "japanUrl": ""
         },
         {
           "name": "Shoulder bag with strap",
@@ -3083,7 +3433,8 @@
           "productNumber": "37094104",
           "baseCode": "37094104",
           "globalCode": "37094104",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/shoulder/shoulder-bag-with-strap/37094104/30/00"
+          "url": "https://shop.mango.com/gb/en/p/women/bags/shoulder/shoulder-bag-with-strap/37094104/30/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37015858"
@@ -3115,7 +3466,8 @@
             "productNumber": "37034418",
             "colorId": "TM"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -3125,7 +3477,8 @@
           "productNumber": "37094403",
           "baseCode": "37094403",
           "globalCode": "37094403",
-          "url": "https://shop.mango.com/gb/en/p/men/overshirts/denim/100-cotton-overshirt-with-pocket/37094403/30/00"
+          "url": "https://shop.mango.com/gb/en/p/men/overshirts/denim/100-cotton-overshirt-with-pocket/37094403/30/00",
+          "japanUrl": ""
         },
         {
           "name": "Regular fit cotton-linen overshirt",
@@ -3133,7 +3486,8 @@
           "productNumber": "37092888",
           "baseCode": "37092888",
           "globalCode": "37092888",
-          "url": "https://shop.mango.com/gb/en/p/men/overshirts/denim/regular-fit-cotton-linen-overshirt/37092888/87/00"
+          "url": "https://shop.mango.com/gb/en/p/men/overshirts/denim/regular-fit-cotton-linen-overshirt/37092888/87/00",
+          "japanUrl": ""
         },
         {
           "name": "Mid-rise straight jeans",
@@ -3141,7 +3495,8 @@
           "productNumber": "37075850",
           "baseCode": "37075850",
           "globalCode": "37075850",
-          "url": "https://shop.mango.com/gb/en/p/women/jeans/straight/mid-rise-straight-jeans/37075850/TO/00"
+          "url": "https://shop.mango.com/gb/en/p/women/jeans/straight/mid-rise-straight-jeans/37075850/TO/00",
+          "japanUrl": ""
         },
         {
           "name": "Regular fit denim shirt",
@@ -3149,7 +3504,8 @@
           "productNumber": "37034418",
           "baseCode": "37034418",
           "globalCode": "37034418",
-          "url": "https://shop.mango.com/gb/en/p/men/shirts/denim/regular-fit-denim-shirt/37034418/TM/00"
+          "url": "https://shop.mango.com/gb/en/p/men/shirts/denim/regular-fit-denim-shirt/37034418/TM/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37045851"
@@ -3169,7 +3525,8 @@
             "productNumber": "37023318",
             "colorId": "32"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -3179,7 +3536,8 @@
           "productNumber": "37023318",
           "baseCode": "37023318",
           "globalCode": "37023318",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/shoppers/large-bucket-bag-buckle/37023318/32/00"
+          "url": "https://shop.mango.com/gb/en/p/women/bags/shoppers/large-bucket-bag-buckle/37023318/32/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37027793"
@@ -3207,7 +3565,8 @@
             "productNumber": "27041343",
             "colorId": "99"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -3217,7 +3576,8 @@
           "productNumber": "37035847",
           "baseCode": "37035847",
           "globalCode": "37035847",
-          "url": "https://shop.mango.com/gb/en/p/women/coats/coats/double-breasted-wool-coat/37035847/06/00"
+          "url": "https://shop.mango.com/gb/en/p/women/coats/coats/double-breasted-wool-coat/37035847/06/00",
+          "japanUrl": ""
         },
         {
           "name": "Ballet pump with bow detail",
@@ -3225,7 +3585,8 @@
           "productNumber": "37084440",
           "baseCode": "37084440",
           "globalCode": "37084440",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/ballet-flats/ballet-pump-with-bow-detail/37084440/05/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/ballet-flats/ballet-pump-with-bow-detail/37084440/05/00",
+          "japanUrl": ""
         },
         {
           "name": "Medium shopper bag",
@@ -3233,7 +3594,8 @@
           "productNumber": "27041343",
           "baseCode": "27041343",
           "globalCode": "27041343",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/shoppers/medium-shopper-bag/27041343/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/bags/shoppers/medium-shopper-bag/27041343/99/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37017817"
@@ -3265,7 +3627,8 @@
             "productNumber": "37064414",
             "colorId": "32"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -3275,7 +3638,8 @@
           "productNumber": "37034111",
           "baseCode": "37034111",
           "globalCode": "37034111",
-          "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/sweaters/boat-neck-knitted-sweater/37034111/05/00"
+          "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/sweaters/boat-neck-knitted-sweater/37034111/05/00",
+          "japanUrl": ""
         },
         {
           "name": "Worn-effect heeled shoe",
@@ -3283,7 +3647,8 @@
           "productNumber": "37063876",
           "baseCode": "37063876",
           "globalCode": "37063876",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/heeled-shoes/worn-effect-heeled-shoe/37063876/32/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/heeled-shoes/worn-effect-heeled-shoe/37063876/32/00",
+          "japanUrl": ""
         },
         {
           "name": "Faux-leather shoulder bag",
@@ -3291,7 +3656,8 @@
           "productNumber": "37024462",
           "baseCode": "37024462",
           "globalCode": "37024462",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/shoulder/faux-leather-shoulder-bag/37024462/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/bags/shoulder/faux-leather-shoulder-bag/37024462/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Tortoiseshell frame sunglasses",
@@ -3299,7 +3665,8 @@
           "productNumber": "37064414",
           "baseCode": "37064414",
           "globalCode": "37064414",
-          "url": "https://shop.mango.com/gb/en/p/women/sunglasses/tortoiseshell-frame-sunglasses/37064414/32/00"
+          "url": "https://shop.mango.com/gb/en/p/women/sunglasses/tortoiseshell-frame-sunglasses/37064414/32/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37004092"
@@ -3331,7 +3698,8 @@
             "productNumber": "37084421",
             "colorId": "30"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -3341,7 +3709,8 @@
           "productNumber": "37065876",
           "baseCode": "37065876",
           "globalCode": "37065876",
-          "url": "https://shop.mango.com/gb/en/p/women/tops/knitwear/turtleneck-ribbed-gilet/37065876/05/00"
+          "url": "https://shop.mango.com/gb/en/p/women/tops/knitwear/turtleneck-ribbed-gilet/37065876/05/00",
+          "japanUrl": ""
         },
         {
           "name": "Backless suede loafer",
@@ -3349,7 +3718,8 @@
           "productNumber": "37034102",
           "baseCode": "37034102",
           "globalCode": "37034102",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/backless-suede-loafer/37034102/32/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/backless-suede-loafer/37034102/32/00",
+          "japanUrl": ""
         },
         {
           "name": "Studded crossbody bag",
@@ -3357,7 +3727,8 @@
           "productNumber": "37065865",
           "baseCode": "37065865",
           "globalCode": "37065865",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/crossbody/studded-crossbody-bag/37065865/32/00"
+          "url": "https://shop.mango.com/gb/en/p/women/bags/crossbody/studded-crossbody-bag/37065865/32/00",
+          "japanUrl": ""
         },
         {
           "name": "Engraved buckle leather belt",
@@ -3365,10 +3736,104 @@
           "productNumber": "37084421",
           "baseCode": "37084421",
           "globalCode": "37084421",
-          "url": "https://shop.mango.com/gb/en/p/women/belts/basics/engraved-buckle-leather-belt/37084421/30/00"
+          "url": "https://shop.mango.com/gb/en/p/women/belts/basics/engraved-buckle-leather-belt/37084421/30/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37015879"
+    },
+    {
+      "main": {
+        "name": "Shoulder bag with buckles - Women",
+        "image": "https://media.mango.com/is/image/punto/37044460-70-052?wid=1024",
+        "productNumber": "37044460",
+        "baseCode": "37044460",
+        "globalCode": "37044460",
+        "colorId": "70",
+        "url": "https://shop.mango.com/gb/en/p/women/bags/shoulder/shoulder-bag-with-buckles/37044460/70/00",
+        "relatedUrls": [],
+        "relatedProductNumbers": [],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW042689/"
+      },
+      "related": [
+        {
+          "name": "ショルダーバッグ M .-- LOTTA （レッド）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658AW042689_1_l.jpg",
+          "productNumber": "MA1658AW042689",
+          "brandItemNumber": "37044460 70 色 レッド（70）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW042689/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "M LOTTA",
+          "relatedNames": [],
+          "variationProductNumbers": []
+        }
+      ],
+      "relatedGlobal": [],
+      "baseCode": "37044460"
+    },
+    {
+      "main": {
+        "name": "Leather bucket bag - Women",
+        "image": "https://media.mango.com/is/image/punto/37044797-09-052?wid=1024",
+        "productNumber": "37044797",
+        "baseCode": "37044797",
+        "globalCode": "37044797",
+        "colorId": "09",
+        "url": "https://shop.mango.com/gb/en/p/women/bags/crossbody/leather-bucket-bag/37044797/09/00",
+        "relatedUrls": [],
+        "relatedProductNumbers": [],
+        "japanUrl": ""
+      },
+      "related": [
+        {
+          "name": "レザーバッグ .-- MCH MONTE （ライトベージュ）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658AW042945_1_l.jpg",
+          "productNumber": "MA1658AW042945",
+          "brandItemNumber": "37044797 9 色 ライトベージュ（9）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW042945/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "MCH MONTE",
+          "relatedNames": [],
+          "variationProductNumbers": []
+        }
+      ],
+      "relatedGlobal": [],
+      "baseCode": "37044797"
+    },
+    {
+      "main": {
+        "name": "Suede drawstring bag",
+        "image": "https://media.mango.com/is/image/punto/37075864-09-052?wid=1024",
+        "productNumber": "37075864",
+        "baseCode": "37075864",
+        "globalCode": "37075864",
+        "colorId": "09",
+        "url": "https://shop.mango.com/gb/en/p/women/bags/shoppers/suede-drawstring-bag/37075864/09/00",
+        "relatedUrls": [],
+        "relatedProductNumbers": [],
+        "japanUrl": ""
+      },
+      "related": [
+        {
+          "name": "レザーショルダーバッグ .-- BORJA （ライトベージュ）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658AW043066_1_l.jpg",
+          "productNumber": "MA1658AW043066",
+          "brandItemNumber": "37075864 9 色 ライトベージュ（9）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW043066/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "BORJA",
+          "relatedNames": [],
+          "variationProductNumbers": []
+        }
+      ],
+      "relatedGlobal": [],
+      "baseCode": "37075864"
     },
     {
       "main": {
@@ -3380,7 +3845,8 @@
         "colorId": "OR",
         "url": "https://shop.mango.com/gb/en/p/women/jewellery/earrings/combined-pearl-drop-earrings/37004448/OR/00",
         "relatedUrls": [],
-        "relatedProductNumbers": []
+        "relatedProductNumbers": [],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW042546/"
       },
       "related": [
         {
@@ -3393,11 +3859,105 @@
           "brandCode": "MA1658",
           "brandName": "MANGO",
           "englishKey": "LINA",
-          "relatedNames": []
+          "relatedNames": [],
+          "variationProductNumbers": []
         }
       ],
       "relatedGlobal": [],
       "baseCode": "37004448"
+    },
+    {
+      "main": {
+        "name": "Leather bucket bag with carabiner clip - Women",
+        "image": "https://media.mango.com/is/image/punto/37026002-09-052?wid=1024",
+        "productNumber": "37026002",
+        "baseCode": "37026002",
+        "globalCode": "37026002",
+        "colorId": "09",
+        "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/leather-bucket-bag-with-carabiner-clip/37026002/09/00",
+        "relatedUrls": [],
+        "relatedProductNumbers": [],
+        "japanUrl": ""
+      },
+      "related": [
+        {
+          "name": "レザーハンドバッグ .-- CHUS （ライトベージュ）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658AW043252_1_l.jpg",
+          "productNumber": "MA1658AW043252",
+          "brandItemNumber": "37026002 9 色 ライトベージュ（9）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW043252/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "CHUS",
+          "relatedNames": [],
+          "variationProductNumbers": []
+        }
+      ],
+      "relatedGlobal": [],
+      "baseCode": "37026002"
+    },
+    {
+      "main": {
+        "name": "Leather shoulder bag with chain - Women",
+        "image": "https://media.mango.com/is/image/punto/37024798-09-052?wid=1024",
+        "productNumber": "37024798",
+        "baseCode": "37024798",
+        "globalCode": "37024798",
+        "colorId": "09",
+        "url": "https://shop.mango.com/gb/en/p/women/bags/crossbody/leather-shoulder-bag-with-chain/37024798/09/00",
+        "relatedUrls": [],
+        "relatedProductNumbers": [],
+        "japanUrl": ""
+      },
+      "related": [
+        {
+          "name": "ショルダーバッグ M .-- MONTES （ライトベージュ）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658AW042639_1_l.jpg",
+          "productNumber": "MA1658AW042639",
+          "brandItemNumber": "37024798 9 色 ライトベージュ（9）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW042639/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "M MONTES",
+          "relatedNames": [],
+          "variationProductNumbers": []
+        }
+      ],
+      "relatedGlobal": [],
+      "baseCode": "37024798"
+    },
+    {
+      "main": {
+        "name": "Studded shoulder bag - Women",
+        "image": "https://media.mango.com/is/image/punto/37045866-32-052?wid=1024",
+        "productNumber": "37045866",
+        "baseCode": "37045866",
+        "globalCode": "37045866",
+        "colorId": "32",
+        "url": "https://shop.mango.com/gb/en/p/women/bags/crossbody/studded-shoulder-bag/37045866/32/00",
+        "relatedUrls": [],
+        "relatedProductNumbers": [],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW042901/"
+      },
+      "related": [
+        {
+          "name": "ショルダーバッグ .-- G-- MUMBAI （ダークブラウン）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658AW042901_1_l.jpg",
+          "productNumber": "MA1658AW042901",
+          "brandItemNumber": "37045866 32 色 ダークブラウン（32）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW042901/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "G MUMBAI",
+          "relatedNames": [],
+          "variationProductNumbers": []
+        }
+      ],
+      "relatedGlobal": [],
+      "baseCode": "37045866"
     },
     {
       "main": {
@@ -3409,7 +3969,8 @@
         "colorId": "01",
         "url": "https://shop.mango.com/gb/en/p/women/jewellery/necklaces/mixed-pearl-necklace/37094454/01/00",
         "relatedUrls": [],
-        "relatedProductNumbers": []
+        "relatedProductNumbers": [],
+        "japanUrl": ""
       },
       "related": [
         {
@@ -3422,7 +3983,8 @@
           "brandCode": "MA1658",
           "brandName": "MANGO",
           "englishKey": "LUCIANA",
-          "relatedNames": []
+          "relatedNames": [],
+          "variationProductNumbers": []
         }
       ],
       "relatedGlobal": [],
@@ -3455,7 +4017,8 @@
             "productNumber": "37066368",
             "colorId": "05"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -3465,7 +4028,8 @@
           "productNumber": "37046368",
           "baseCode": "37046368",
           "globalCode": "37046368",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-cotton-shirt/37046368/01/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-cotton-shirt/37046368/01/00",
+          "japanUrl": ""
         },
         {
           "name": "Lace-up leather sneakers",
@@ -3473,7 +4037,8 @@
           "productNumber": "37046010",
           "baseCode": "37046010",
           "globalCode": "37046010",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/lace-up-leather-sneakers/37046010/05/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/lace-up-leather-sneakers/37046010/05/00",
+          "japanUrl": ""
         },
         {
           "name": "Faux fur contrast scarf",
@@ -3481,7 +4046,8 @@
           "productNumber": "37086357",
           "baseCode": "37086357",
           "globalCode": "37086357",
-          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/faux-fur-contrast-scarf/37086357/08/00"
+          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/faux-fur-contrast-scarf/37086357/08/00",
+          "japanUrl": ""
         },
         {
           "name": "Ribbed wool blend socks",
@@ -3489,7 +4055,8 @@
           "productNumber": "37066368",
           "baseCode": "37066368",
           "globalCode": "37066368",
-          "url": "https://shop.mango.com/gb/en/p/women/other-accessories/socks/ribbed-wool-blend-socks/37066368/05/00"
+          "url": "https://shop.mango.com/gb/en/p/women/other-accessories/socks/ribbed-wool-blend-socks/37066368/05/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37066366"
@@ -3517,7 +4084,8 @@
             "productNumber": "37046010",
             "colorId": "05"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -3527,7 +4095,8 @@
           "productNumber": "37036368",
           "baseCode": "37036368",
           "globalCode": "37036368",
-          "url": "https://shop.mango.com/gb/en/p/women/blazers/fitted/double-breasted-wool-blazer/37036368/05/00"
+          "url": "https://shop.mango.com/gb/en/p/women/blazers/fitted/double-breasted-wool-blazer/37036368/05/00",
+          "japanUrl": ""
         },
         {
           "name": "Asymmetric high-neck blouse",
@@ -3535,7 +4104,8 @@
           "productNumber": "37056367",
           "baseCode": "37056367",
           "globalCode": "37056367",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/blouses/asymmetric-high-neck-blouse/37056367/02/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/blouses/asymmetric-high-neck-blouse/37056367/02/00",
+          "japanUrl": ""
         },
         {
           "name": "Lace-up leather sneakers",
@@ -3543,7 +4113,8 @@
           "productNumber": "37046010",
           "baseCode": "37046010",
           "globalCode": "37046010",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/lace-up-leather-sneakers/37046010/05/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/lace-up-leather-sneakers/37046010/05/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37036365"
@@ -3587,7 +4158,8 @@
             "productNumber": "37096360",
             "colorId": "PL"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -3597,7 +4169,8 @@
           "productNumber": "37036366",
           "baseCode": "37036366",
           "globalCode": "37036366",
-          "url": "https://shop.mango.com/gb/en/p/women/blazers/fitted/double-breasted-suit-jacket/37036366/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/blazers/fitted/double-breasted-suit-jacket/37036366/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Fitted cotton shirt",
@@ -3605,7 +4178,8 @@
           "productNumber": "37046368",
           "baseCode": "37046368",
           "globalCode": "37046368",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-cotton-shirt/37046368/01/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-cotton-shirt/37046368/01/00",
+          "japanUrl": ""
         },
         {
           "name": "Faux fur contrast scarf",
@@ -3613,7 +4187,8 @@
           "productNumber": "37086357",
           "baseCode": "37086357",
           "globalCode": "37086357",
-          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/faux-fur-contrast-scarf/37086357/08/00"
+          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/faux-fur-contrast-scarf/37086357/08/00",
+          "japanUrl": ""
         },
         {
           "name": "Knot choker necklace",
@@ -3621,7 +4196,8 @@
           "productNumber": "37076361",
           "baseCode": "37076361",
           "globalCode": "37076361",
-          "url": "https://shop.mango.com/gb/en/p/women/jewellery/necklaces/knot-choker-necklace/37076361/PL/00"
+          "url": "https://shop.mango.com/gb/en/p/women/jewellery/necklaces/knot-choker-necklace/37076361/PL/00",
+          "japanUrl": ""
         },
         {
           "name": "Rigid knot bangle",
@@ -3629,7 +4205,8 @@
           "productNumber": "37066361",
           "baseCode": "37066361",
           "globalCode": "37066361",
-          "url": "https://shop.mango.com/gb/en/p/women/jewellery/bracelets/rigid-knot-bangle/37066361/PL/00"
+          "url": "https://shop.mango.com/gb/en/p/women/jewellery/bracelets/rigid-knot-bangle/37066361/PL/00",
+          "japanUrl": ""
         },
         {
           "name": "Metal knot cufflinks",
@@ -3637,7 +4214,8 @@
           "productNumber": "37046362",
           "baseCode": "37046362",
           "globalCode": "37046362",
-          "url": "https://shop.mango.com/gb/en/p/women/jewellery/metal-knot-cufflinks/37046362/PL/00"
+          "url": "https://shop.mango.com/gb/en/p/women/jewellery/metal-knot-cufflinks/37046362/PL/00",
+          "japanUrl": ""
         },
         {
           "name": "Pack of 3 irregularly shaped rings",
@@ -3645,7 +4223,8 @@
           "productNumber": "37096360",
           "baseCode": "37096360",
           "globalCode": "37096360",
-          "url": "https://shop.mango.com/gb/en/p/women/jewellery/rings/pack-of-3-irregularly-shaped-rings/37096360/PL/00"
+          "url": "https://shop.mango.com/gb/en/p/women/jewellery/rings/pack-of-3-irregularly-shaped-rings/37096360/PL/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37016369"
@@ -3677,7 +4256,8 @@
             "productNumber": "37076355",
             "colorId": "99"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -3687,7 +4267,8 @@
           "productNumber": "37046364",
           "baseCode": "37046364",
           "globalCode": "37046364",
-          "url": "https://shop.mango.com/gb/en/p/women/coats/coats/woollen-coat-with-belt/37046364/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/coats/coats/woollen-coat-with-belt/37046364/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Fitted cotton shirt",
@@ -3695,7 +4276,8 @@
           "productNumber": "37046368",
           "baseCode": "37046368",
           "globalCode": "37046368",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-cotton-shirt/37046368/01/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-cotton-shirt/37046368/01/00",
+          "japanUrl": ""
         },
         {
           "name": "Wool trousers with slits at the hem",
@@ -3703,7 +4285,8 @@
           "productNumber": "37016367",
           "baseCode": "37016367",
           "globalCode": "37016367",
-          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/wool-trousers-with-slits-at-the-hem/37016367/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/wool-trousers-with-slits-at-the-hem/37016367/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Oval-frame sunglasses",
@@ -3711,7 +4294,8 @@
           "productNumber": "37076355",
           "baseCode": "37076355",
           "globalCode": "37076355",
-          "url": "https://shop.mango.com/gb/en/p/women/sunglasses/oval-frame-sunglasses/37076355/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/sunglasses/oval-frame-sunglasses/37076355/99/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37016365"
@@ -3747,9 +4331,24 @@
             "productNumber": "37076359",
             "colorId": "70"
           }
-        ]
+        ],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042894/"
       },
-      "related": [],
+      "related": [
+        {
+          "name": "ジャケット .-- OLIVA （ブラック）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042894_1_l.jpg",
+          "productNumber": "MA1658EW042894",
+          "brandItemNumber": "37056365 99 色 ブラック（99）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042894/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "OLIVA",
+          "relatedNames": [],
+          "variationProductNumbers": []
+        }
+      ],
       "relatedGlobal": [
         {
           "name": "Wool trousers with slits at the hem",
@@ -3757,7 +4356,8 @@
           "productNumber": "37016367",
           "baseCode": "37016367",
           "globalCode": "37016367",
-          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/wool-trousers-with-slits-at-the-hem/37016367/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/wool-trousers-with-slits-at-the-hem/37016367/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Lace-up leather sneakers",
@@ -3765,7 +4365,8 @@
           "productNumber": "37046010",
           "baseCode": "37046010",
           "globalCode": "37046010",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/lace-up-leather-sneakers/37046010/05/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/lace-up-leather-sneakers/37046010/05/00",
+          "japanUrl": ""
         },
         {
           "name": "Faux fur contrast scarf",
@@ -3773,7 +4374,8 @@
           "productNumber": "37086357",
           "baseCode": "37086357",
           "globalCode": "37086357",
-          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/faux-fur-contrast-scarf/37086357/08/00"
+          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/faux-fur-contrast-scarf/37086357/08/00",
+          "japanUrl": ""
         },
         {
           "name": "Oval buckle belt",
@@ -3781,7 +4383,8 @@
           "productNumber": "37076360",
           "baseCode": "37076360",
           "globalCode": "37076360",
-          "url": "https://shop.mango.com/gb/en/p/women/belts/basics/oval-buckle-belt/37076360/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/belts/basics/oval-buckle-belt/37076360/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Ribbed socks pack",
@@ -3789,7 +4392,8 @@
           "productNumber": "37076359",
           "baseCode": "37076359",
           "globalCode": "37076359",
-          "url": "https://shop.mango.com/gb/en/p/women/other-accessories/socks/ribbed-socks-pack/37076359/70/00"
+          "url": "https://shop.mango.com/gb/en/p/women/other-accessories/socks/ribbed-socks-pack/37076359/70/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37056365"
@@ -3817,7 +4421,8 @@
             "productNumber": "37056363",
             "colorId": "99"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -3827,7 +4432,8 @@
           "productNumber": "37046368",
           "baseCode": "37046368",
           "globalCode": "37046368",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-cotton-shirt/37046368/01/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-cotton-shirt/37046368/01/00",
+          "japanUrl": ""
         },
         {
           "name": "100% wool suit trousers",
@@ -3835,7 +4441,8 @@
           "productNumber": "37016368",
           "baseCode": "37016368",
           "globalCode": "37016368",
-          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/100-wool-suit-trousers/37016368/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/100-wool-suit-trousers/37016368/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Engraved buckle leather belt",
@@ -3843,7 +4450,8 @@
           "productNumber": "37056363",
           "baseCode": "37056363",
           "globalCode": "37056363",
-          "url": "https://shop.mango.com/gb/en/p/women/belts/leather/engraved-buckle-leather-belt/37056363/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/belts/leather/engraved-buckle-leather-belt/37056363/99/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37076363"
@@ -3879,9 +4487,24 @@
             "productNumber": "37046361",
             "colorId": "32"
           }
-        ]
+        ],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043078/"
       },
-      "related": [],
+      "related": [
+        {
+          "name": "シャツ .-- STEPH （レッド）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043078_1_l.jpg",
+          "productNumber": "MA1658EW043078",
+          "brandItemNumber": "37086366 70 色 レッド（70）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043078/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "STEPH",
+          "relatedNames": [],
+          "variationProductNumbers": []
+        }
+      ],
       "relatedGlobal": [
         {
           "name": "Wool suit blazer",
@@ -3889,7 +4512,8 @@
           "productNumber": "37056364",
           "baseCode": "37056364",
           "globalCode": "37056364",
-          "url": "https://shop.mango.com/gb/en/p/women/blazers/wool-suit-blazer/37056364/92/00"
+          "url": "https://shop.mango.com/gb/en/p/women/blazers/wool-suit-blazer/37056364/92/00",
+          "japanUrl": ""
         },
         {
           "name": "Wool suit trousers",
@@ -3897,7 +4521,8 @@
           "productNumber": "37026366",
           "baseCode": "37026366",
           "globalCode": "37026366",
-          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/wool-suit-trousers/37026366/92/00"
+          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/wool-suit-trousers/37026366/92/00",
+          "japanUrl": ""
         },
         {
           "name": "Lace-up leather sneakers",
@@ -3905,7 +4530,8 @@
           "productNumber": "37046010",
           "baseCode": "37046010",
           "globalCode": "37046010",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/lace-up-leather-sneakers/37046010/05/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/lace-up-leather-sneakers/37046010/05/00",
+          "japanUrl": ""
         },
         {
           "name": "Faux fur contrast scarf",
@@ -3913,7 +4539,8 @@
           "productNumber": "37086357",
           "baseCode": "37086357",
           "globalCode": "37086357",
-          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/faux-fur-contrast-scarf/37086357/08/00"
+          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/faux-fur-contrast-scarf/37086357/08/00",
+          "japanUrl": ""
         },
         {
           "name": "Engraved buckle leather belt",
@@ -3921,7 +4548,8 @@
           "productNumber": "37046361",
           "baseCode": "37046361",
           "globalCode": "37046361",
-          "url": "https://shop.mango.com/gb/en/p/women/belts/leather/engraved-buckle-leather-belt/37046361/32/00"
+          "url": "https://shop.mango.com/gb/en/p/women/belts/leather/engraved-buckle-leather-belt/37046361/32/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37086366"
@@ -3961,9 +4589,24 @@
             "productNumber": "37076355",
             "colorId": "99"
           }
-        ]
+        ],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043015/"
       },
-      "related": [],
+      "related": [
+        {
+          "name": "ジャケット .-- BASIL （ブラック）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043015_1_l.jpg",
+          "productNumber": "MA1658EW043015",
+          "brandItemNumber": "37066364 99 色 ブラック（99）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043015/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "BASIL",
+          "relatedNames": [],
+          "variationProductNumbers": []
+        }
+      ],
       "relatedGlobal": [
         {
           "name": "Fitted cotton shirt",
@@ -3971,7 +4614,8 @@
           "productNumber": "37046368",
           "baseCode": "37046368",
           "globalCode": "37046368",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-cotton-shirt/37046368/01/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-cotton-shirt/37046368/01/00",
+          "japanUrl": ""
         },
         {
           "name": "100% wool suit trousers",
@@ -3979,7 +4623,8 @@
           "productNumber": "37016368",
           "baseCode": "37016368",
           "globalCode": "37016368",
-          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/100-wool-suit-trousers/37016368/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/100-wool-suit-trousers/37016368/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Mid-rise balloon jeans",
@@ -3987,7 +4632,8 @@
           "productNumber": "37005894",
           "baseCode": "37005894",
           "globalCode": "37005894",
-          "url": "https://shop.mango.com/gb/en/p/women/jeans/balloon/mid-rise-balloon-jeans/37005894/DO/00"
+          "url": "https://shop.mango.com/gb/en/p/women/jeans/balloon/mid-rise-balloon-jeans/37005894/DO/00",
+          "japanUrl": ""
         },
         {
           "name": "Leather trainer with stitched sole",
@@ -3995,7 +4641,8 @@
           "productNumber": "37036012",
           "baseCode": "37036012",
           "globalCode": "37036012",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/leather-shoes/leather-trainer-with-stitched-sole/37036012/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/leather-shoes/leather-trainer-with-stitched-sole/37036012/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Fringed edge wool-blend scarf",
@@ -4003,7 +4650,8 @@
           "productNumber": "37036351",
           "baseCode": "37036351",
           "globalCode": "37036351",
-          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/fringed-edge-wool-blend-scarf/37036351/43/00"
+          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/fringed-edge-wool-blend-scarf/37036351/43/00",
+          "japanUrl": ""
         },
         {
           "name": "Oval-frame sunglasses",
@@ -4011,7 +4659,8 @@
           "productNumber": "37076355",
           "baseCode": "37076355",
           "globalCode": "37076355",
-          "url": "https://shop.mango.com/gb/en/p/women/sunglasses/oval-frame-sunglasses/37076355/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/sunglasses/oval-frame-sunglasses/37076355/99/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37066364"
@@ -4047,9 +4696,24 @@
             "productNumber": "37036351",
             "colorId": "43"
           }
-        ]
+        ],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043224/"
       },
-      "related": [],
+      "related": [
+        {
+          "name": "ジーンズ .--DANIELLE （オープンブルー）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043224_1_l.jpg",
+          "productNumber": "MA1658EW043224",
+          "brandItemNumber": "37005894 DO 色 オープンブルー（DO）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043224/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "DANIELLE",
+          "relatedNames": [],
+          "variationProductNumbers": []
+        }
+      ],
       "relatedGlobal": [
         {
           "name": "100% wool suit jacket with buttons",
@@ -4057,7 +4721,8 @@
           "productNumber": "37066364",
           "baseCode": "37066364",
           "globalCode": "37066364",
-          "url": "https://shop.mango.com/gb/en/p/women/blazers/fitted/100-wool-suit-jacket-with-buttons/37066364/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/blazers/fitted/100-wool-suit-jacket-with-buttons/37066364/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Fitted cotton shirt",
@@ -4065,7 +4730,8 @@
           "productNumber": "37046368",
           "baseCode": "37046368",
           "globalCode": "37046368",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-cotton-shirt/37046368/01/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-cotton-shirt/37046368/01/00",
+          "japanUrl": ""
         },
         {
           "name": "Leather trainer with stitched sole",
@@ -4073,7 +4739,8 @@
           "productNumber": "37036012",
           "baseCode": "37036012",
           "globalCode": "37036012",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/leather-shoes/leather-trainer-with-stitched-sole/37036012/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/leather-shoes/leather-trainer-with-stitched-sole/37036012/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Engraved buckle leather belt",
@@ -4081,7 +4748,8 @@
           "productNumber": "37056363",
           "baseCode": "37056363",
           "globalCode": "37056363",
-          "url": "https://shop.mango.com/gb/en/p/women/belts/leather/engraved-buckle-leather-belt/37056363/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/belts/leather/engraved-buckle-leather-belt/37056363/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Fringed edge wool-blend scarf",
@@ -4089,7 +4757,8 @@
           "productNumber": "37036351",
           "baseCode": "37036351",
           "globalCode": "37036351",
-          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/fringed-edge-wool-blend-scarf/37036351/43/00"
+          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/fringed-edge-wool-blend-scarf/37036351/43/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37005894"
@@ -4117,7 +4786,8 @@
             "productNumber": "37046010",
             "colorId": "05"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -4127,7 +4797,8 @@
           "productNumber": "37056367",
           "baseCode": "37056367",
           "globalCode": "37056367",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/blouses/asymmetric-high-neck-blouse/37056367/02/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/blouses/asymmetric-high-neck-blouse/37056367/02/00",
+          "japanUrl": ""
         },
         {
           "name": "Balloon trousers with decorative seams",
@@ -4135,7 +4806,8 @@
           "productNumber": "37036365",
           "baseCode": "37036365",
           "globalCode": "37036365",
-          "url": "https://shop.mango.com/gb/en/p/women/trousers/balloon-trousers/balloon-trousers-with-decorative-seams/37036365/05/00"
+          "url": "https://shop.mango.com/gb/en/p/women/trousers/balloon-trousers/balloon-trousers-with-decorative-seams/37036365/05/00",
+          "japanUrl": ""
         },
         {
           "name": "Lace-up leather sneakers",
@@ -4143,7 +4815,8 @@
           "productNumber": "37046010",
           "baseCode": "37046010",
           "globalCode": "37046010",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/lace-up-leather-sneakers/37046010/05/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/lace-up-leather-sneakers/37046010/05/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37036368"
@@ -4179,7 +4852,8 @@
             "productNumber": "37056350",
             "colorId": "92"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -4189,7 +4863,8 @@
           "productNumber": "37085878",
           "baseCode": "37085878",
           "globalCode": "37085878",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/denim-shirt-with-flap-pockets/37085878/TS/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/denim-shirt-with-flap-pockets/37085878/TS/00",
+          "japanUrl": ""
         },
         {
           "name": "Low-rise balloon jeans",
@@ -4197,7 +4872,8 @@
           "productNumber": "37005891",
           "baseCode": "37005891",
           "globalCode": "37005891",
-          "url": "https://shop.mango.com/gb/en/p/women/jeans/balloon/low-rise-balloon-jeans/37005891/TS/00"
+          "url": "https://shop.mango.com/gb/en/p/women/jeans/balloon/low-rise-balloon-jeans/37005891/TS/00",
+          "japanUrl": ""
         },
         {
           "name": "Leather bag with twin handles",
@@ -4205,7 +4881,8 @@
           "productNumber": "37016365",
           "baseCode": "37016365",
           "globalCode": "37016365",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/leather-bag-with-twin-handles/37016365/56/00"
+          "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/leather-bag-with-twin-handles/37016365/56/00",
+          "japanUrl": ""
         },
         {
           "name": "Fringed edge wool-blend scarf",
@@ -4213,7 +4890,8 @@
           "productNumber": "37036351",
           "baseCode": "37036351",
           "globalCode": "37036351",
-          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/fringed-edge-wool-blend-scarf/37036351/43/00"
+          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/fringed-edge-wool-blend-scarf/37036351/43/00",
+          "japanUrl": ""
         },
         {
           "name": "Woollen check scarf",
@@ -4221,7 +4899,8 @@
           "productNumber": "37056350",
           "baseCode": "37056350",
           "globalCode": "37056350",
-          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/woollen-check-scarf/37056350/92/00"
+          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/woollen-check-scarf/37056350/92/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37065872"
@@ -4249,7 +4928,8 @@
             "productNumber": "37016365",
             "colorId": "56"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -4259,7 +4939,8 @@
           "productNumber": "37045873",
           "baseCode": "37045873",
           "globalCode": "37045873",
-          "url": "https://shop.mango.com/gb/en/p/women/dresses-and-jumpsuits/dresses/knitted-dress-with-gathered-detail/37045873/70/00"
+          "url": "https://shop.mango.com/gb/en/p/women/dresses-and-jumpsuits/dresses/knitted-dress-with-gathered-detail/37045873/70/00",
+          "japanUrl": ""
         },
         {
           "name": "Leather trainer in leather with contrasting sole",
@@ -4267,7 +4948,8 @@
           "productNumber": "37046011",
           "baseCode": "37046011",
           "globalCode": "37046011",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/leather-shoes/leather-trainer-in-leather-with-contrasting-sole/37046011/01/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/leather-shoes/leather-trainer-in-leather-with-contrasting-sole/37046011/01/00",
+          "japanUrl": ""
         },
         {
           "name": "Leather bag with twin handles",
@@ -4275,7 +4957,8 @@
           "productNumber": "37016365",
           "baseCode": "37016365",
           "globalCode": "37016365",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/leather-bag-with-twin-handles/37016365/56/00"
+          "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/leather-bag-with-twin-handles/37016365/56/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37056350"
@@ -4303,7 +4986,8 @@
             "productNumber": "37046361",
             "colorId": "32"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -4313,7 +4997,8 @@
           "productNumber": "37016368",
           "baseCode": "37016368",
           "globalCode": "37016368",
-          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/100-wool-suit-trousers/37016368/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/100-wool-suit-trousers/37016368/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Lace-up leather sneakers",
@@ -4321,7 +5006,8 @@
           "productNumber": "37046010",
           "baseCode": "37046010",
           "globalCode": "37046010",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/lace-up-leather-sneakers/37046010/05/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/lace-up-leather-sneakers/37046010/05/00",
+          "japanUrl": ""
         },
         {
           "name": "Engraved buckle leather belt",
@@ -4329,7 +5015,8 @@
           "productNumber": "37046361",
           "baseCode": "37046361",
           "globalCode": "37046361",
-          "url": "https://shop.mango.com/gb/en/p/women/belts/leather/engraved-buckle-leather-belt/37046361/32/00"
+          "url": "https://shop.mango.com/gb/en/p/women/belts/leather/engraved-buckle-leather-belt/37046361/32/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37026364"
@@ -4365,7 +5052,8 @@
             "productNumber": "37076361",
             "colorId": "PL"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -4375,7 +5063,8 @@
           "productNumber": "37056365",
           "baseCode": "37056365",
           "globalCode": "37056365",
-          "url": "https://shop.mango.com/gb/en/p/women/blazers/fitted/fitted-wool-jacket/37056365/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/blazers/fitted/fitted-wool-jacket/37056365/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Fitted cotton shirt",
@@ -4383,7 +5072,8 @@
           "productNumber": "37046368",
           "baseCode": "37046368",
           "globalCode": "37046368",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-cotton-shirt/37046368/01/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-cotton-shirt/37046368/01/00",
+          "japanUrl": ""
         },
         {
           "name": "Wool trousers with slits at the hem",
@@ -4391,7 +5081,8 @@
           "productNumber": "37016367",
           "baseCode": "37016367",
           "globalCode": "37016367",
-          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/wool-trousers-with-slits-at-the-hem/37016367/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/wool-trousers-with-slits-at-the-hem/37016367/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Leather boots with kitten heels",
@@ -4399,7 +5090,8 @@
           "productNumber": "37065872",
           "baseCode": "37065872",
           "globalCode": "37065872",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/boots-and-ankle-boots/leather-boots-with-kitten-heels/37065872/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/boots-and-ankle-boots/leather-boots-with-kitten-heels/37065872/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Knot choker necklace",
@@ -4407,7 +5099,8 @@
           "productNumber": "37076361",
           "baseCode": "37076361",
           "globalCode": "37076361",
-          "url": "https://shop.mango.com/gb/en/p/women/jewellery/necklaces/knot-choker-necklace/37076361/PL/00"
+          "url": "https://shop.mango.com/gb/en/p/women/jewellery/necklaces/knot-choker-necklace/37076361/PL/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37056362"
@@ -4431,7 +5124,8 @@
             "productNumber": "37084421",
             "colorId": "30"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [
         {
@@ -4444,7 +5138,8 @@
           "brandCode": "MA1658",
           "brandName": "MANGO",
           "englishKey": "KAIRA",
-          "relatedNames": []
+          "relatedNames": [],
+          "variationProductNumbers": []
         }
       ],
       "relatedGlobal": [
@@ -4454,7 +5149,8 @@
           "productNumber": "37094799",
           "baseCode": "37094799",
           "globalCode": "37094799",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/blouses/blouse-with-floral-print-and-ruffles/37094799/81/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/blouses/blouse-with-floral-print-and-ruffles/37094799/81/00",
+          "japanUrl": ""
         },
         {
           "name": "Engraved buckle leather belt",
@@ -4462,7 +5158,8 @@
           "productNumber": "37084421",
           "baseCode": "37084421",
           "globalCode": "37084421",
-          "url": "https://shop.mango.com/gb/en/p/women/belts/basics/engraved-buckle-leather-belt/37084421/30/00"
+          "url": "https://shop.mango.com/gb/en/p/women/belts/basics/engraved-buckle-leather-belt/37084421/30/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37005891"
@@ -4498,7 +5195,8 @@
             "productNumber": "37076359",
             "colorId": "70"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -4508,7 +5206,8 @@
           "productNumber": "37066363",
           "baseCode": "37066363",
           "globalCode": "37066363",
-          "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/sweaters/wool-sweater-with-contrast-collar/37066363/02/00"
+          "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/sweaters/wool-sweater-with-contrast-collar/37066363/02/00",
+          "japanUrl": ""
         },
         {
           "name": "Croc-effect leather clutch bag",
@@ -4516,7 +5215,8 @@
           "productNumber": "37056362",
           "baseCode": "37056362",
           "globalCode": "37056362",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/croc-effect-leather-clutch-bag/37056362/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/croc-effect-leather-clutch-bag/37056362/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Leather moccasins with fur lining",
@@ -4524,7 +5224,8 @@
           "productNumber": "37056010",
           "baseCode": "37056010",
           "globalCode": "37056010",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/leather-moccasins-with-fur-lining/37056010/32/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/leather-moccasins-with-fur-lining/37056010/32/00",
+          "japanUrl": ""
         },
         {
           "name": "Faux fur contrast scarf",
@@ -4532,7 +5233,8 @@
           "productNumber": "37086357",
           "baseCode": "37086357",
           "globalCode": "37086357",
-          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/faux-fur-contrast-scarf/37086357/08/00"
+          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/faux-fur-contrast-scarf/37086357/08/00",
+          "japanUrl": ""
         },
         {
           "name": "Ribbed socks pack",
@@ -4540,7 +5242,8 @@
           "productNumber": "37076359",
           "baseCode": "37076359",
           "globalCode": "37076359",
-          "url": "https://shop.mango.com/gb/en/p/women/other-accessories/socks/ribbed-socks-pack/37076359/70/00"
+          "url": "https://shop.mango.com/gb/en/p/women/other-accessories/socks/ribbed-socks-pack/37076359/70/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37046365"
@@ -4568,7 +5271,8 @@
             "productNumber": "37046361",
             "colorId": "32"
           }
-        ]
+        ],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043083/"
       },
       "related": [
         {
@@ -4581,7 +5285,8 @@
           "brandCode": "MA1658",
           "brandName": "MANGO",
           "englishKey": "LIV",
-          "relatedNames": []
+          "relatedNames": [],
+          "variationProductNumbers": []
         }
       ],
       "relatedGlobal": [
@@ -4591,7 +5296,8 @@
           "productNumber": "37086347",
           "baseCode": "37086347",
           "globalCode": "37086347",
-          "url": "https://shop.mango.com/gb/en/p/women/trousers/casual/straight-fit-leather-trousers/37086347/77/00"
+          "url": "https://shop.mango.com/gb/en/p/women/trousers/casual/straight-fit-leather-trousers/37086347/77/00",
+          "japanUrl": ""
         },
         {
           "name": "Lace-up leather sneakers",
@@ -4599,7 +5305,8 @@
           "productNumber": "37046010",
           "baseCode": "37046010",
           "globalCode": "37046010",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/lace-up-leather-sneakers/37046010/05/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/lace-up-leather-sneakers/37046010/05/00",
+          "japanUrl": ""
         },
         {
           "name": "Engraved buckle leather belt",
@@ -4607,7 +5314,8 @@
           "productNumber": "37046361",
           "baseCode": "37046361",
           "globalCode": "37046361",
-          "url": "https://shop.mango.com/gb/en/p/women/belts/leather/engraved-buckle-leather-belt/37046361/32/00"
+          "url": "https://shop.mango.com/gb/en/p/women/belts/leather/engraved-buckle-leather-belt/37046361/32/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37036369"
@@ -4647,7 +5355,8 @@
             "productNumber": "37056350",
             "colorId": "92"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -4657,7 +5366,8 @@
           "productNumber": "37096362",
           "baseCode": "37096362",
           "globalCode": "37096362",
-          "url": "https://shop.mango.com/gb/en/p/women/jackets/leather/oversized-faux-fur-parka-with-pockets/37096362/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/jackets/leather/oversized-faux-fur-parka-with-pockets/37096362/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Wool trousers with slits at the hem",
@@ -4665,7 +5375,8 @@
           "productNumber": "37016367",
           "baseCode": "37016367",
           "globalCode": "37016367",
-          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/wool-trousers-with-slits-at-the-hem/37016367/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/wool-trousers-with-slits-at-the-hem/37016367/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Lyocell T-shirt with topstitch detail",
@@ -4673,7 +5384,8 @@
           "productNumber": "37026013",
           "baseCode": "37026013",
           "globalCode": "37026013",
-          "url": "https://shop.mango.com/gb/en/p/women/t-shirts/basics/lyocell-t-shirt-with-topstitch-detail/37026013/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/t-shirts/basics/lyocell-t-shirt-with-topstitch-detail/37026013/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Lace-up leather sneakers",
@@ -4681,7 +5393,8 @@
           "productNumber": "37046010",
           "baseCode": "37046010",
           "globalCode": "37046010",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/lace-up-leather-sneakers/37046010/05/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/lace-up-leather-sneakers/37046010/05/00",
+          "japanUrl": ""
         },
         {
           "name": "Croc-effect leather clutch bag",
@@ -4689,7 +5402,8 @@
           "productNumber": "37056362",
           "baseCode": "37056362",
           "globalCode": "37056362",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/croc-effect-leather-clutch-bag/37056362/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/croc-effect-leather-clutch-bag/37056362/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Woollen check scarf",
@@ -4697,7 +5411,8 @@
           "productNumber": "37056350",
           "baseCode": "37056350",
           "globalCode": "37056350",
-          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/woollen-check-scarf/37056350/92/00"
+          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/woollen-check-scarf/37056350/92/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37076359"
@@ -4733,7 +5448,8 @@
             "productNumber": "37094447",
             "colorId": "99"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -4743,7 +5459,8 @@
           "productNumber": "37004098",
           "baseCode": "37004098",
           "globalCode": "37004098",
-          "url": "https://shop.mango.com/gb/en/p/women/jeans/wide-leg/danila-high-waisted-wide-leg-jeans/37004098/05/00"
+          "url": "https://shop.mango.com/gb/en/p/women/jeans/wide-leg/danila-high-waisted-wide-leg-jeans/37004098/05/00",
+          "japanUrl": ""
         },
         {
           "name": "100% cotton round neck t-shirt",
@@ -4751,7 +5468,8 @@
           "productNumber": "37091331",
           "baseCode": "37091331",
           "globalCode": "37091331",
-          "url": "https://shop.mango.com/gb/en/p/women/t-shirts/basics/100-cotton-round-neck-t-shirt/37091331/01/00"
+          "url": "https://shop.mango.com/gb/en/p/women/t-shirts/basics/100-cotton-round-neck-t-shirt/37091331/01/00",
+          "japanUrl": ""
         },
         {
           "name": "Leather trainer with stitched sole",
@@ -4759,7 +5477,8 @@
           "productNumber": "37036012",
           "baseCode": "37036012",
           "globalCode": "37036012",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/leather-shoes/leather-trainer-with-stitched-sole/37036012/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/leather-shoes/leather-trainer-with-stitched-sole/37036012/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Buckle leather belt",
@@ -4767,7 +5486,8 @@
           "productNumber": "37094447",
           "baseCode": "37094447",
           "globalCode": "37094447",
-          "url": "https://shop.mango.com/gb/en/p/women/belts/basics/buckle-leather-belt/37094447/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/belts/basics/buckle-leather-belt/37094447/99/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37096362"
@@ -4799,7 +5519,8 @@
             "productNumber": "37076359",
             "colorId": "70"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -4809,7 +5530,8 @@
           "productNumber": "37056365",
           "baseCode": "37056365",
           "globalCode": "37056365",
-          "url": "https://shop.mango.com/gb/en/p/women/blazers/fitted/fitted-wool-jacket/37056365/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/blazers/fitted/fitted-wool-jacket/37056365/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Wool trousers with slits at the hem",
@@ -4817,7 +5539,8 @@
           "productNumber": "37016367",
           "baseCode": "37016367",
           "globalCode": "37016367",
-          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/wool-trousers-with-slits-at-the-hem/37016367/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/wool-trousers-with-slits-at-the-hem/37016367/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Lace-up leather sneakers",
@@ -4825,7 +5548,8 @@
           "productNumber": "37046010",
           "baseCode": "37046010",
           "globalCode": "37046010",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/lace-up-leather-sneakers/37046010/05/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/lace-up-leather-sneakers/37046010/05/00",
+          "japanUrl": ""
         },
         {
           "name": "Ribbed socks pack",
@@ -4833,7 +5557,8 @@
           "productNumber": "37076359",
           "baseCode": "37076359",
           "globalCode": "37076359",
-          "url": "https://shop.mango.com/gb/en/p/women/other-accessories/socks/ribbed-socks-pack/37076359/70/00"
+          "url": "https://shop.mango.com/gb/en/p/women/other-accessories/socks/ribbed-socks-pack/37076359/70/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37086357"
@@ -4865,7 +5590,8 @@
             "productNumber": "37036351",
             "colorId": "43"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -4875,7 +5601,8 @@
           "productNumber": "37036364",
           "baseCode": "37036364",
           "globalCode": "37036364",
-          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/satin-trousers-with-hem-slits/37036364/05/00"
+          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/satin-trousers-with-hem-slits/37036364/05/00",
+          "japanUrl": ""
         },
         {
           "name": "Lace-up leather sneakers",
@@ -4883,7 +5610,8 @@
           "productNumber": "37046010",
           "baseCode": "37046010",
           "globalCode": "37046010",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/lace-up-leather-sneakers/37046010/05/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/lace-up-leather-sneakers/37046010/05/00",
+          "japanUrl": ""
         },
         {
           "name": "Leather clutch bag",
@@ -4891,7 +5619,8 @@
           "productNumber": "37016366",
           "baseCode": "37016366",
           "globalCode": "37016366",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/leather-clutch-bag/37016366/70/00"
+          "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/leather-clutch-bag/37016366/70/00",
+          "japanUrl": ""
         },
         {
           "name": "Fringed edge wool-blend scarf",
@@ -4899,7 +5628,8 @@
           "productNumber": "37036351",
           "baseCode": "37036351",
           "globalCode": "37036351",
-          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/fringed-edge-wool-blend-scarf/37036351/43/00"
+          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/fringed-edge-wool-blend-scarf/37036351/43/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37066363"
@@ -4927,7 +5657,8 @@
             "productNumber": "37016366",
             "colorId": "70"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -4937,7 +5668,8 @@
           "productNumber": "37086347",
           "baseCode": "37086347",
           "globalCode": "37086347",
-          "url": "https://shop.mango.com/gb/en/p/women/trousers/casual/straight-fit-leather-trousers/37086347/77/00"
+          "url": "https://shop.mango.com/gb/en/p/women/trousers/casual/straight-fit-leather-trousers/37086347/77/00",
+          "japanUrl": ""
         },
         {
           "name": "Leather trainer in leather with contrasting sole",
@@ -4945,7 +5677,8 @@
           "productNumber": "37046011",
           "baseCode": "37046011",
           "globalCode": "37046011",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/leather-shoes/leather-trainer-in-leather-with-contrasting-sole/37046011/01/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/leather-shoes/leather-trainer-in-leather-with-contrasting-sole/37046011/01/00",
+          "japanUrl": ""
         },
         {
           "name": "Leather clutch bag",
@@ -4953,7 +5686,8 @@
           "productNumber": "37016366",
           "baseCode": "37016366",
           "globalCode": "37016366",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/leather-clutch-bag/37016366/70/00"
+          "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/leather-clutch-bag/37016366/70/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37046361"
@@ -4993,7 +5727,8 @@
             "productNumber": "37076358",
             "colorId": "30"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -5003,7 +5738,8 @@
           "productNumber": "37066366",
           "baseCode": "37066366",
           "globalCode": "37066366",
-          "url": "https://shop.mango.com/gb/en/p/women/coats/coats/double-breasted-virgin-wool-coat/37066366/69/00"
+          "url": "https://shop.mango.com/gb/en/p/women/coats/coats/double-breasted-virgin-wool-coat/37066366/69/00",
+          "japanUrl": ""
         },
         {
           "name": "Fitted cotton shirt",
@@ -5011,7 +5747,8 @@
           "productNumber": "37046368",
           "baseCode": "37046368",
           "globalCode": "37046368",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-cotton-shirt/37046368/01/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-cotton-shirt/37046368/01/00",
+          "japanUrl": ""
         },
         {
           "name": "Mid-rise balloon jeans",
@@ -5019,7 +5756,8 @@
           "productNumber": "37005894",
           "baseCode": "37005894",
           "globalCode": "37005894",
-          "url": "https://shop.mango.com/gb/en/p/women/jeans/balloon/mid-rise-balloon-jeans/37005894/DO/00"
+          "url": "https://shop.mango.com/gb/en/p/women/jeans/balloon/mid-rise-balloon-jeans/37005894/DO/00",
+          "japanUrl": ""
         },
         {
           "name": "Ribbed wool blend socks",
@@ -5027,7 +5765,8 @@
           "productNumber": "37066368",
           "baseCode": "37066368",
           "globalCode": "37066368",
-          "url": "https://shop.mango.com/gb/en/p/women/other-accessories/socks/ribbed-wool-blend-socks/37066368/05/00"
+          "url": "https://shop.mango.com/gb/en/p/women/other-accessories/socks/ribbed-wool-blend-socks/37066368/05/00",
+          "japanUrl": ""
         },
         {
           "name": "Croc-effect leather clutch bag",
@@ -5035,7 +5774,8 @@
           "productNumber": "37056362",
           "baseCode": "37056362",
           "globalCode": "37056362",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/croc-effect-leather-clutch-bag/37056362/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/croc-effect-leather-clutch-bag/37056362/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Faux-fur scarf",
@@ -5043,7 +5783,8 @@
           "productNumber": "37076358",
           "baseCode": "37076358",
           "globalCode": "37076358",
-          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/faux-fur-scarf/37076358/30/00"
+          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/faux-fur-scarf/37076358/30/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37046010"
@@ -5075,7 +5816,8 @@
             "productNumber": "37036360",
             "colorId": "43"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -5085,7 +5827,8 @@
           "productNumber": "37036363",
           "baseCode": "37036363",
           "globalCode": "37036363",
-          "url": "https://shop.mango.com/gb/en/p/women/coats/trench-coats/oversized-trench-coat-with-belt/37036363/37/00"
+          "url": "https://shop.mango.com/gb/en/p/women/coats/trench-coats/oversized-trench-coat-with-belt/37036363/37/00",
+          "japanUrl": ""
         },
         {
           "name": "Straight poplin shirt",
@@ -5093,7 +5836,8 @@
           "productNumber": "37046367",
           "baseCode": "37046367",
           "globalCode": "37046367",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/straight-poplin-shirt/37046367/50/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/straight-poplin-shirt/37046367/50/00",
+          "japanUrl": ""
         },
         {
           "name": "Leather moccasins with fur lining",
@@ -5101,7 +5845,8 @@
           "productNumber": "37056010",
           "baseCode": "37056010",
           "globalCode": "37056010",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/leather-moccasins-with-fur-lining/37056010/32/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/leather-moccasins-with-fur-lining/37056010/32/00",
+          "japanUrl": ""
         },
         {
           "name": "Wool-blend socks",
@@ -5109,7 +5854,8 @@
           "productNumber": "37036360",
           "baseCode": "37036360",
           "globalCode": "37036360",
-          "url": "https://shop.mango.com/gb/en/p/women/other-accessories/socks/wool-blend-socks/37036360/43/00"
+          "url": "https://shop.mango.com/gb/en/p/women/other-accessories/socks/wool-blend-socks/37036360/43/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37096366"
@@ -5149,9 +5895,26 @@
             "productNumber": "37086357",
             "colorId": "08"
           }
-        ]
+        ],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043055/"
       },
-      "related": [],
+      "related": [
+        {
+          "name": "パンツ .-- ALMOND （グレー）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043055_1_l.jpg",
+          "productNumber": "MA1658EW043055",
+          "brandItemNumber": "37026366 92 色 グレー（92）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043055/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "ALMOND",
+          "relatedNames": [
+            "ブレザー .-- ALMOND （グレー）"
+          ],
+          "variationProductNumbers": []
+        }
+      ],
       "relatedGlobal": [
         {
           "name": "Wool suit blazer",
@@ -5159,7 +5922,8 @@
           "productNumber": "37056364",
           "baseCode": "37056364",
           "globalCode": "37056364",
-          "url": "https://shop.mango.com/gb/en/p/women/blazers/wool-suit-blazer/37056364/92/00"
+          "url": "https://shop.mango.com/gb/en/p/women/blazers/wool-suit-blazer/37056364/92/00",
+          "japanUrl": ""
         },
         {
           "name": "Poplin shirt with pocket",
@@ -5167,7 +5931,8 @@
           "productNumber": "37086366",
           "baseCode": "37086366",
           "globalCode": "37086366",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/poplin-shirt-with-pocket/37086366/70/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/poplin-shirt-with-pocket/37086366/70/00",
+          "japanUrl": ""
         },
         {
           "name": "Lace-up leather sneakers",
@@ -5175,7 +5940,8 @@
           "productNumber": "37046010",
           "baseCode": "37046010",
           "globalCode": "37046010",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/lace-up-leather-sneakers/37046010/05/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/lace-up-leather-sneakers/37046010/05/00",
+          "japanUrl": ""
         },
         {
           "name": "Engraved buckle leather belt",
@@ -5183,7 +5949,8 @@
           "productNumber": "37046361",
           "baseCode": "37046361",
           "globalCode": "37046361",
-          "url": "https://shop.mango.com/gb/en/p/women/belts/leather/engraved-buckle-leather-belt/37046361/32/00"
+          "url": "https://shop.mango.com/gb/en/p/women/belts/leather/engraved-buckle-leather-belt/37046361/32/00",
+          "japanUrl": ""
         },
         {
           "name": "Oval-frame sunglasses",
@@ -5191,7 +5958,8 @@
           "productNumber": "37076355",
           "baseCode": "37076355",
           "globalCode": "37076355",
-          "url": "https://shop.mango.com/gb/en/p/women/sunglasses/oval-frame-sunglasses/37076355/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/sunglasses/oval-frame-sunglasses/37076355/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Faux fur contrast scarf",
@@ -5199,7 +5967,8 @@
           "productNumber": "37086357",
           "baseCode": "37086357",
           "globalCode": "37086357",
-          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/faux-fur-contrast-scarf/37086357/08/00"
+          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/faux-fur-contrast-scarf/37086357/08/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37026366"
@@ -5231,9 +6000,24 @@
             "productNumber": "37076355",
             "colorId": "99"
           }
-        ]
+        ],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043219/"
       },
-      "related": [],
+      "related": [
+        {
+          "name": "コート .--AZZE （ブラック）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043219_1_l.jpg",
+          "productNumber": "MA1658EW043219",
+          "brandItemNumber": "37046364 99 色 ブラック（99）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043219/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "AZZE",
+          "relatedNames": [],
+          "variationProductNumbers": []
+        }
+      ],
       "relatedGlobal": [
         {
           "name": "Fitted cotton shirt",
@@ -5241,7 +6025,8 @@
           "productNumber": "37046368",
           "baseCode": "37046368",
           "globalCode": "37046368",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-cotton-shirt/37046368/01/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-cotton-shirt/37046368/01/00",
+          "japanUrl": ""
         },
         {
           "name": "Wool trousers with slits at the hem",
@@ -5249,7 +6034,8 @@
           "productNumber": "37016367",
           "baseCode": "37016367",
           "globalCode": "37016367",
-          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/wool-trousers-with-slits-at-the-hem/37016367/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/wool-trousers-with-slits-at-the-hem/37016367/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Leather bag with twin handles",
@@ -5257,7 +6043,8 @@
           "productNumber": "37016365",
           "baseCode": "37016365",
           "globalCode": "37016365",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/leather-bag-with-twin-handles/37016365/56/00"
+          "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/leather-bag-with-twin-handles/37016365/56/00",
+          "japanUrl": ""
         },
         {
           "name": "Oval-frame sunglasses",
@@ -5265,7 +6052,8 @@
           "productNumber": "37076355",
           "baseCode": "37076355",
           "globalCode": "37076355",
-          "url": "https://shop.mango.com/gb/en/p/women/sunglasses/oval-frame-sunglasses/37076355/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/sunglasses/oval-frame-sunglasses/37076355/99/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37046364"
@@ -5297,7 +6085,8 @@
             "productNumber": "37096360",
             "colorId": "PL"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -5307,7 +6096,8 @@
           "productNumber": "37046363",
           "baseCode": "37046363",
           "globalCode": "37046363",
-          "url": "https://shop.mango.com/gb/en/p/women/dresses-and-jumpsuits/dresses/wool-dress-with-decorative-seams/37046363/92/00"
+          "url": "https://shop.mango.com/gb/en/p/women/dresses-and-jumpsuits/dresses/wool-dress-with-decorative-seams/37046363/92/00",
+          "japanUrl": ""
         },
         {
           "name": "Fringed edge wool-blend scarf",
@@ -5315,7 +6105,8 @@
           "productNumber": "37036351",
           "baseCode": "37036351",
           "globalCode": "37036351",
-          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/fringed-edge-wool-blend-scarf/37036351/43/00"
+          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/fringed-edge-wool-blend-scarf/37036351/43/00",
+          "japanUrl": ""
         },
         {
           "name": "Ribbed wool blend socks",
@@ -5323,7 +6114,8 @@
           "productNumber": "37066368",
           "baseCode": "37066368",
           "globalCode": "37066368",
-          "url": "https://shop.mango.com/gb/en/p/women/other-accessories/socks/ribbed-wool-blend-socks/37066368/96/00"
+          "url": "https://shop.mango.com/gb/en/p/women/other-accessories/socks/ribbed-wool-blend-socks/37066368/96/00",
+          "japanUrl": ""
         },
         {
           "name": "Pack of 3 irregularly shaped rings",
@@ -5331,7 +6123,8 @@
           "productNumber": "37096360",
           "baseCode": "37096360",
           "globalCode": "37096360",
-          "url": "https://shop.mango.com/gb/en/p/women/jewellery/rings/pack-of-3-irregularly-shaped-rings/37096360/PL/00"
+          "url": "https://shop.mango.com/gb/en/p/women/jewellery/rings/pack-of-3-irregularly-shaped-rings/37096360/PL/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37046011"
@@ -5371,7 +6164,8 @@
             "productNumber": "37076361",
             "colorId": "PL"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -5381,7 +6175,8 @@
           "productNumber": "37046367",
           "baseCode": "37046367",
           "globalCode": "37046367",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/straight-poplin-shirt/37046367/50/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/straight-poplin-shirt/37046367/50/00",
+          "japanUrl": ""
         },
         {
           "name": "Wool suit trousers",
@@ -5389,7 +6184,8 @@
           "productNumber": "37016370",
           "baseCode": "37016370",
           "globalCode": "37016370",
-          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/wool-suit-trousers/37016370/77/00"
+          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/wool-suit-trousers/37016370/77/00",
+          "japanUrl": ""
         },
         {
           "name": "Leather trainer in leather with contrasting sole",
@@ -5397,7 +6193,8 @@
           "productNumber": "37046011",
           "baseCode": "37046011",
           "globalCode": "37046011",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/leather-shoes/leather-trainer-in-leather-with-contrasting-sole/37046011/01/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/leather-shoes/leather-trainer-in-leather-with-contrasting-sole/37046011/01/00",
+          "japanUrl": ""
         },
         {
           "name": "Leather bag with twin handles",
@@ -5405,7 +6202,8 @@
           "productNumber": "37016365",
           "baseCode": "37016365",
           "globalCode": "37016365",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/leather-bag-with-twin-handles/37016365/56/00"
+          "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/leather-bag-with-twin-handles/37016365/56/00",
+          "japanUrl": ""
         },
         {
           "name": "Engraved buckle leather belt",
@@ -5413,7 +6211,8 @@
           "productNumber": "37056363",
           "baseCode": "37056363",
           "globalCode": "37056363",
-          "url": "https://shop.mango.com/gb/en/p/women/belts/leather/engraved-buckle-leather-belt/37056363/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/belts/leather/engraved-buckle-leather-belt/37056363/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Knot choker necklace",
@@ -5421,7 +6220,8 @@
           "productNumber": "37076361",
           "baseCode": "37076361",
           "globalCode": "37076361",
-          "url": "https://shop.mango.com/gb/en/p/women/jewellery/necklaces/knot-choker-necklace/37076361/PL/00"
+          "url": "https://shop.mango.com/gb/en/p/women/jewellery/necklaces/knot-choker-necklace/37076361/PL/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37026369"
@@ -5465,7 +6265,8 @@
             "productNumber": "37066368",
             "colorId": "05"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -5475,7 +6276,8 @@
           "productNumber": "37026369",
           "baseCode": "37026369",
           "globalCode": "37026369",
-          "url": "https://shop.mango.com/gb/en/p/women/blazers/wool-suit-blazer/37026369/77/00"
+          "url": "https://shop.mango.com/gb/en/p/women/blazers/wool-suit-blazer/37026369/77/00",
+          "japanUrl": ""
         },
         {
           "name": "Straight poplin shirt",
@@ -5483,7 +6285,8 @@
           "productNumber": "37046367",
           "baseCode": "37046367",
           "globalCode": "37046367",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/straight-poplin-shirt/37046367/50/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/straight-poplin-shirt/37046367/50/00",
+          "japanUrl": ""
         },
         {
           "name": "Leather bag with twin handles",
@@ -5491,7 +6294,8 @@
           "productNumber": "37016365",
           "baseCode": "37016365",
           "globalCode": "37016365",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/leather-bag-with-twin-handles/37016365/56/00"
+          "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/leather-bag-with-twin-handles/37016365/56/00",
+          "japanUrl": ""
         },
         {
           "name": "Lace-up leather sneakers",
@@ -5499,7 +6303,8 @@
           "productNumber": "37046010",
           "baseCode": "37046010",
           "globalCode": "37046010",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/lace-up-leather-sneakers/37046010/05/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/lace-up-leather-sneakers/37046010/05/00",
+          "japanUrl": ""
         },
         {
           "name": "Engraved buckle leather belt",
@@ -5507,7 +6312,8 @@
           "productNumber": "37056363",
           "baseCode": "37056363",
           "globalCode": "37056363",
-          "url": "https://shop.mango.com/gb/en/p/women/belts/leather/engraved-buckle-leather-belt/37056363/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/belts/leather/engraved-buckle-leather-belt/37056363/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Knot choker necklace",
@@ -5515,7 +6321,8 @@
           "productNumber": "37076361",
           "baseCode": "37076361",
           "globalCode": "37076361",
-          "url": "https://shop.mango.com/gb/en/p/women/jewellery/necklaces/knot-choker-necklace/37076361/PL/00"
+          "url": "https://shop.mango.com/gb/en/p/women/jewellery/necklaces/knot-choker-necklace/37076361/PL/00",
+          "japanUrl": ""
         },
         {
           "name": "Ribbed wool blend socks",
@@ -5523,7 +6330,8 @@
           "productNumber": "37066368",
           "baseCode": "37066368",
           "globalCode": "37066368",
-          "url": "https://shop.mango.com/gb/en/p/women/other-accessories/socks/ribbed-wool-blend-socks/37066368/05/00"
+          "url": "https://shop.mango.com/gb/en/p/women/other-accessories/socks/ribbed-wool-blend-socks/37066368/05/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37016370"
@@ -5559,7 +6367,8 @@
             "productNumber": "37036360",
             "colorId": "43"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -5569,7 +6378,8 @@
           "productNumber": "37066364",
           "baseCode": "37066364",
           "globalCode": "37066364",
-          "url": "https://shop.mango.com/gb/en/p/women/blazers/fitted/100-wool-suit-jacket-with-buttons/37066364/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/blazers/fitted/100-wool-suit-jacket-with-buttons/37066364/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Fitted cotton shirt",
@@ -5577,7 +6387,8 @@
           "productNumber": "37046368",
           "baseCode": "37046368",
           "globalCode": "37046368",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-cotton-shirt/37046368/01/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-cotton-shirt/37046368/01/00",
+          "japanUrl": ""
         },
         {
           "name": "Mid-rise balloon jeans",
@@ -5585,7 +6396,8 @@
           "productNumber": "37005894",
           "baseCode": "37005894",
           "globalCode": "37005894",
-          "url": "https://shop.mango.com/gb/en/p/women/jeans/balloon/mid-rise-balloon-jeans/37005894/DO/00"
+          "url": "https://shop.mango.com/gb/en/p/women/jeans/balloon/mid-rise-balloon-jeans/37005894/DO/00",
+          "japanUrl": ""
         },
         {
           "name": "Engraved buckle leather belt",
@@ -5593,7 +6405,8 @@
           "productNumber": "37056363",
           "baseCode": "37056363",
           "globalCode": "37056363",
-          "url": "https://shop.mango.com/gb/en/p/women/belts/leather/engraved-buckle-leather-belt/37056363/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/belts/leather/engraved-buckle-leather-belt/37056363/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Wool-blend socks",
@@ -5601,7 +6414,8 @@
           "productNumber": "37036360",
           "baseCode": "37036360",
           "globalCode": "37036360",
-          "url": "https://shop.mango.com/gb/en/p/women/other-accessories/socks/wool-blend-socks/37036360/43/00"
+          "url": "https://shop.mango.com/gb/en/p/women/other-accessories/socks/wool-blend-socks/37036360/43/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37036012"
@@ -5637,7 +6451,8 @@
             "productNumber": "37076355",
             "colorId": "99"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -5647,7 +6462,8 @@
           "productNumber": "37026370",
           "baseCode": "37026370",
           "globalCode": "37026370",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/cropped-poplin-shirt/37026370/01/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/cropped-poplin-shirt/37026370/01/00",
+          "japanUrl": ""
         },
         {
           "name": "Straight suit trousers",
@@ -5655,7 +6471,8 @@
           "productNumber": "37016369",
           "baseCode": "37016369",
           "globalCode": "37016369",
-          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/straight-suit-trousers/37016369/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/straight-suit-trousers/37016369/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Oval buckle belt",
@@ -5663,7 +6480,8 @@
           "productNumber": "37076360",
           "baseCode": "37076360",
           "globalCode": "37076360",
-          "url": "https://shop.mango.com/gb/en/p/women/belts/basics/oval-buckle-belt/37076360/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/belts/basics/oval-buckle-belt/37076360/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Leather clutch bag",
@@ -5671,7 +6489,8 @@
           "productNumber": "37016366",
           "baseCode": "37016366",
           "globalCode": "37016366",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/leather-clutch-bag/37016366/70/00"
+          "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/leather-clutch-bag/37016366/70/00",
+          "japanUrl": ""
         },
         {
           "name": "Oval-frame sunglasses",
@@ -5679,7 +6498,8 @@
           "productNumber": "37076355",
           "baseCode": "37076355",
           "globalCode": "37076355",
-          "url": "https://shop.mango.com/gb/en/p/women/sunglasses/oval-frame-sunglasses/37076355/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/sunglasses/oval-frame-sunglasses/37076355/99/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37036349"
@@ -5707,7 +6527,8 @@
             "productNumber": "37056363",
             "colorId": "99"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -5717,7 +6538,8 @@
           "productNumber": "37076363",
           "baseCode": "37076363",
           "globalCode": "37076363",
-          "url": "https://shop.mango.com/gb/en/p/women/jackets/wool-duffle-coat/37076363/69/00"
+          "url": "https://shop.mango.com/gb/en/p/women/jackets/wool-duffle-coat/37076363/69/00",
+          "japanUrl": ""
         },
         {
           "name": "Fitted cotton shirt",
@@ -5725,7 +6547,8 @@
           "productNumber": "37046368",
           "baseCode": "37046368",
           "globalCode": "37046368",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-cotton-shirt/37046368/01/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-cotton-shirt/37046368/01/00",
+          "japanUrl": ""
         },
         {
           "name": "Engraved buckle leather belt",
@@ -5733,7 +6556,8 @@
           "productNumber": "37056363",
           "baseCode": "37056363",
           "globalCode": "37056363",
-          "url": "https://shop.mango.com/gb/en/p/women/belts/leather/engraved-buckle-leather-belt/37056363/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/belts/leather/engraved-buckle-leather-belt/37056363/99/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37016368"
@@ -5769,7 +6593,8 @@
             "productNumber": "37076358",
             "colorId": "30"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -5779,7 +6604,8 @@
           "productNumber": "37046368",
           "baseCode": "37046368",
           "globalCode": "37046368",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-cotton-shirt/37046368/01/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-cotton-shirt/37046368/01/00",
+          "japanUrl": ""
         },
         {
           "name": "Lace-up leather sneakers",
@@ -5787,7 +6613,8 @@
           "productNumber": "37046010",
           "baseCode": "37046010",
           "globalCode": "37046010",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/lace-up-leather-sneakers/37046010/05/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/lace-up-leather-sneakers/37046010/05/00",
+          "japanUrl": ""
         },
         {
           "name": "Ribbed wool blend socks",
@@ -5795,7 +6622,8 @@
           "productNumber": "37066368",
           "baseCode": "37066368",
           "globalCode": "37066368",
-          "url": "https://shop.mango.com/gb/en/p/women/other-accessories/socks/ribbed-wool-blend-socks/37066368/96/00"
+          "url": "https://shop.mango.com/gb/en/p/women/other-accessories/socks/ribbed-wool-blend-socks/37066368/96/00",
+          "japanUrl": ""
         },
         {
           "name": "Natural fibre shopper bag with metallic detail",
@@ -5803,7 +6631,8 @@
           "productNumber": "27027137",
           "baseCode": "27027137",
           "globalCode": "27027137",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/shoppers/natural-fibre-shopper-bag-with-metallic-detail/27027137/32/00"
+          "url": "https://shop.mango.com/gb/en/p/women/bags/shoppers/natural-fibre-shopper-bag-with-metallic-detail/27027137/32/00",
+          "japanUrl": ""
         },
         {
           "name": "Faux-fur scarf",
@@ -5811,7 +6640,8 @@
           "productNumber": "37076358",
           "baseCode": "37076358",
           "globalCode": "37076358",
-          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/faux-fur-scarf/37076358/30/00"
+          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/faux-fur-scarf/37076358/30/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37096347"
@@ -5843,7 +6673,8 @@
             "productNumber": "37094447",
             "colorId": "99"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -5853,7 +6684,8 @@
           "productNumber": "37045867",
           "baseCode": "37045867",
           "globalCode": "37045867",
-          "url": "https://shop.mango.com/gb/en/p/women/dresses-and-jumpsuits/dresses/silk-v-neck-dress/37045867/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/dresses-and-jumpsuits/dresses/silk-v-neck-dress/37045867/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Leather boots with kitten heels",
@@ -5861,7 +6693,8 @@
           "productNumber": "37065872",
           "baseCode": "37065872",
           "globalCode": "37065872",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/boots-and-ankle-boots/leather-boots-with-kitten-heels/37065872/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/boots-and-ankle-boots/leather-boots-with-kitten-heels/37065872/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Medium shopper bag",
@@ -5869,7 +6702,8 @@
           "productNumber": "27041343",
           "baseCode": "27041343",
           "globalCode": "27041343",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/shoppers/medium-shopper-bag/27041343/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/bags/shoppers/medium-shopper-bag/27041343/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Buckle leather belt",
@@ -5877,7 +6711,8 @@
           "productNumber": "37094447",
           "baseCode": "37094447",
           "globalCode": "37094447",
-          "url": "https://shop.mango.com/gb/en/p/women/belts/basics/buckle-leather-belt/37094447/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/belts/basics/buckle-leather-belt/37094447/99/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37046348"
@@ -5917,7 +6752,8 @@
             "productNumber": "37076359",
             "colorId": "70"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -5927,7 +6763,8 @@
           "productNumber": "37096362",
           "baseCode": "37096362",
           "globalCode": "37096362",
-          "url": "https://shop.mango.com/gb/en/p/women/jackets/leather/oversized-faux-fur-parka-with-pockets/37096362/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/jackets/leather/oversized-faux-fur-parka-with-pockets/37096362/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Lyocell T-shirt with topstitch detail",
@@ -5935,7 +6772,8 @@
           "productNumber": "37026013",
           "baseCode": "37026013",
           "globalCode": "37026013",
-          "url": "https://shop.mango.com/gb/en/p/women/t-shirts/basics/lyocell-t-shirt-with-topstitch-detail/37026013/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/t-shirts/basics/lyocell-t-shirt-with-topstitch-detail/37026013/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Croc-effect leather clutch bag",
@@ -5943,7 +6781,8 @@
           "productNumber": "37056362",
           "baseCode": "37056362",
           "globalCode": "37056362",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/croc-effect-leather-clutch-bag/37056362/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/croc-effect-leather-clutch-bag/37056362/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Lace-up leather sneakers",
@@ -5951,7 +6790,8 @@
           "productNumber": "37046010",
           "baseCode": "37046010",
           "globalCode": "37046010",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/lace-up-leather-sneakers/37046010/05/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/lace-up-leather-sneakers/37046010/05/00",
+          "japanUrl": ""
         },
         {
           "name": "Woollen check scarf",
@@ -5959,7 +6799,8 @@
           "productNumber": "37056350",
           "baseCode": "37056350",
           "globalCode": "37056350",
-          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/woollen-check-scarf/37056350/92/00"
+          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/woollen-check-scarf/37056350/92/00",
+          "japanUrl": ""
         },
         {
           "name": "Ribbed socks pack",
@@ -5967,7 +6808,8 @@
           "productNumber": "37076359",
           "baseCode": "37076359",
           "globalCode": "37076359",
-          "url": "https://shop.mango.com/gb/en/p/women/other-accessories/socks/ribbed-socks-pack/37076359/70/00"
+          "url": "https://shop.mango.com/gb/en/p/women/other-accessories/socks/ribbed-socks-pack/37076359/70/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37016367"
@@ -6003,7 +6845,8 @@
             "productNumber": "37056362",
             "colorId": "99"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -6013,7 +6856,8 @@
           "productNumber": "37076363",
           "baseCode": "37076363",
           "globalCode": "37076363",
-          "url": "https://shop.mango.com/gb/en/p/women/jackets/wool-duffle-coat/37076363/69/00"
+          "url": "https://shop.mango.com/gb/en/p/women/jackets/wool-duffle-coat/37076363/69/00",
+          "japanUrl": ""
         },
         {
           "name": "Fitted cotton shirt",
@@ -6021,7 +6865,8 @@
           "productNumber": "37046368",
           "baseCode": "37046368",
           "globalCode": "37046368",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-cotton-shirt/37046368/01/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-cotton-shirt/37046368/01/00",
+          "japanUrl": ""
         },
         {
           "name": "100% wool suit trousers",
@@ -6029,7 +6874,8 @@
           "productNumber": "37016368",
           "baseCode": "37016368",
           "globalCode": "37016368",
-          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/100-wool-suit-trousers/37016368/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/100-wool-suit-trousers/37016368/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Leather boots with kitten heels",
@@ -6037,7 +6883,8 @@
           "productNumber": "37065872",
           "baseCode": "37065872",
           "globalCode": "37065872",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/boots-and-ankle-boots/leather-boots-with-kitten-heels/37065872/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/boots-and-ankle-boots/leather-boots-with-kitten-heels/37065872/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Croc-effect leather clutch bag",
@@ -6045,7 +6892,8 @@
           "productNumber": "37056362",
           "baseCode": "37056362",
           "globalCode": "37056362",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/croc-effect-leather-clutch-bag/37056362/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/croc-effect-leather-clutch-bag/37056362/99/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37056363"
@@ -6077,7 +6925,8 @@
             "productNumber": "37036360",
             "colorId": "43"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -6087,7 +6936,8 @@
           "productNumber": "37046367",
           "baseCode": "37046367",
           "globalCode": "37046367",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/straight-poplin-shirt/37046367/50/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/straight-poplin-shirt/37046367/50/00",
+          "japanUrl": ""
         },
         {
           "name": "Poplin skirt with asymmetrical hem",
@@ -6095,7 +6945,8 @@
           "productNumber": "37096366",
           "baseCode": "37096366",
           "globalCode": "37096366",
-          "url": "https://shop.mango.com/gb/en/p/women/skirts/short/poplin-skirt-with-asymmetrical-hem/37096366/50/00"
+          "url": "https://shop.mango.com/gb/en/p/women/skirts/short/poplin-skirt-with-asymmetrical-hem/37096366/50/00",
+          "japanUrl": ""
         },
         {
           "name": "Leather moccasins with fur lining",
@@ -6103,7 +6954,8 @@
           "productNumber": "37056010",
           "baseCode": "37056010",
           "globalCode": "37056010",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/leather-moccasins-with-fur-lining/37056010/32/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/leather-moccasins-with-fur-lining/37056010/32/00",
+          "japanUrl": ""
         },
         {
           "name": "Wool-blend socks",
@@ -6111,7 +6963,8 @@
           "productNumber": "37036360",
           "baseCode": "37036360",
           "globalCode": "37036360",
-          "url": "https://shop.mango.com/gb/en/p/women/other-accessories/socks/wool-blend-socks/37036360/43/00"
+          "url": "https://shop.mango.com/gb/en/p/women/other-accessories/socks/wool-blend-socks/37036360/43/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37036363"
@@ -6139,9 +6992,24 @@
             "productNumber": "37076358",
             "colorId": "30"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
-      "related": [],
+      "related": [
+        {
+          "name": "ジャケット .-- BERRYS （ナチュラルホワイト）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042993_1_l.jpg",
+          "productNumber": "MA1658EW042993",
+          "brandItemNumber": "37086363 5 色 ナチュラルホワイト（5）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042993/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "BERRYS",
+          "relatedNames": [],
+          "variationProductNumbers": []
+        }
+      ],
       "relatedGlobal": [
         {
           "name": "100% wool suit trousers",
@@ -6149,7 +7017,8 @@
           "productNumber": "37016368",
           "baseCode": "37016368",
           "globalCode": "37016368",
-          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/100-wool-suit-trousers/37016368/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/100-wool-suit-trousers/37016368/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Leather trainer in leather with contrasting sole",
@@ -6157,7 +7026,8 @@
           "productNumber": "37046011",
           "baseCode": "37046011",
           "globalCode": "37046011",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/leather-shoes/leather-trainer-in-leather-with-contrasting-sole/37046011/01/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/leather-shoes/leather-trainer-in-leather-with-contrasting-sole/37046011/01/00",
+          "japanUrl": ""
         },
         {
           "name": "Faux-fur scarf",
@@ -6165,7 +7035,8 @@
           "productNumber": "37076358",
           "baseCode": "37076358",
           "globalCode": "37076358",
-          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/faux-fur-scarf/37076358/30/00"
+          "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/scarves/faux-fur-scarf/37076358/30/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37086363"
@@ -6205,7 +7076,8 @@
             "productNumber": "37076355",
             "colorId": "99"
           }
-        ]
+        ],
+        "japanUrl": ""
       },
       "related": [],
       "relatedGlobal": [
@@ -6215,7 +7087,8 @@
           "productNumber": "37036349",
           "baseCode": "37036349",
           "globalCode": "37036349",
-          "url": "https://shop.mango.com/gb/en/p/women/jackets/cropped/leather-jacket-with-strap-collar/37036349/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/jackets/cropped/leather-jacket-with-strap-collar/37036349/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Fitted cotton shirt",
@@ -6223,7 +7096,8 @@
           "productNumber": "37046368",
           "baseCode": "37046368",
           "globalCode": "37046368",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-cotton-shirt/37046368/01/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-cotton-shirt/37046368/01/00",
+          "japanUrl": ""
         },
         {
           "name": "Wool trousers with slits at the hem",
@@ -6231,7 +7105,8 @@
           "productNumber": "37016367",
           "baseCode": "37016367",
           "globalCode": "37016367",
-          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/wool-trousers-with-slits-at-the-hem/37016367/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/wool-trousers-with-slits-at-the-hem/37016367/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Leather trainer with stitched sole",
@@ -6239,7 +7114,8 @@
           "productNumber": "37036012",
           "baseCode": "37036012",
           "globalCode": "37036012",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/leather-shoes/leather-trainer-with-stitched-sole/37036012/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/leather-shoes/leather-trainer-with-stitched-sole/37036012/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Oval buckle belt",
@@ -6247,7 +7123,8 @@
           "productNumber": "37076360",
           "baseCode": "37076360",
           "globalCode": "37076360",
-          "url": "https://shop.mango.com/gb/en/p/women/belts/basics/oval-buckle-belt/37076360/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/belts/basics/oval-buckle-belt/37076360/99/00",
+          "japanUrl": ""
         },
         {
           "name": "Oval-frame sunglasses",
@@ -6255,7 +7132,8 @@
           "productNumber": "37076355",
           "baseCode": "37076355",
           "globalCode": "37076355",
-          "url": "https://shop.mango.com/gb/en/p/women/sunglasses/oval-frame-sunglasses/37076355/99/00"
+          "url": "https://shop.mango.com/gb/en/p/women/sunglasses/oval-frame-sunglasses/37076355/99/00",
+          "japanUrl": ""
         }
       ],
       "baseCode": "37016366"
