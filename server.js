@@ -315,8 +315,10 @@ function japanProductUrlForGlobal(globalProduct, japanProducts) {
   if (!globalCode || !globalColor) return "";
   const match = (japanProducts || []).find((item) => {
     const brandMatch = String(item.brandItemNumber || "").match(/(\d{8})\s+([A-Z0-9]+)/i);
+    const itemCode = brandMatch?.[1] || "";
+    const sameCode = itemCode === globalCode || itemCode.slice(-7) === globalCode.slice(-7);
     return brandMatch
-      && brandMatch[1] === globalCode
+      && sameCode
       && brandMatch[2].toUpperCase() === globalColor;
   });
   return match?.url || "";
@@ -416,7 +418,7 @@ async function crawlGlobalProducts(japanProducts = []) {
       .filter(Boolean)
       .filter((candidate) => candidate.baseCode !== globalProduct.baseCode || candidate.colorId !== globalProduct.colorId)
       .filter((candidate) => !isAlreadyRegisteredInJapan(candidate))
-      .map(({ relatedUrls, relatedProductNumbers, colorId, colorName, ...candidate }) => candidate);
+      .map(({ relatedUrls, relatedProductNumbers, ...candidate }) => candidate);
     const uniqueRelatedGlobal = [...relatedGlobal, ...apiRelatedGlobal]
       .filter((candidate, index, candidates) => candidates.findIndex((entry) => entry.baseCode === candidate.baseCode) === index);
     const relatedGlobalWithJapanUrl = uniqueRelatedGlobal.map((candidate) => ({
