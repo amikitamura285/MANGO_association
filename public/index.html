@@ -1,9 +1,9 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ja">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MANGO FINDER — Instagram account search</title>
+  <title>MANGO FINDER</title>
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -11,81 +11,99 @@
   <header class="topbar">
     <a class="brand" href="./"><img src="logo.jpg" alt="MANGO"><span>FINDER</span></a>
     <nav class="main-tabs" aria-label="メインメニュー">
-      <button class="main-tab is-active" type="button" data-view="accountView">アカウント探す</button>
-      <button class="main-tab" type="button" data-view="relationView">関連付け</button>
+      <button class="main-tab is-active" type="button" data-view="relationView">関連付け</button>
       <button class="main-tab" type="button" data-view="globalRelationView">グローバル関連付け</button>
     </nav>
   </header>
 
   <main>
-    <div id="accountView">
-    <section class="hero">
-      <p class="eyebrow">CREATOR DISCOVERY / 02</p>
-      <h1>似ている<br><em>アカウント</em>を探す</h1>
-      <p class="lead">気になるInstagramアカウントを起点に、投稿内容や規模、<br class="desktop-only">反応率が近いコラボレーション候補を見つけます。</p>
-    </section>
-
-    <section class="search-panel" aria-labelledby="search-title">
-      <div class="panel-heading">
-        <div><p class="eyebrow">ANALYZE AN ACCOUNT</p><h2 id="search-title">起点アカウント</h2></div>
-        <button id="resetButton" class="text-button" type="button">条件をリセット ↗</button>
+    <section id="relationView" class="relation-view">
+      <div class="relation-hero">
+        <p class="eyebrow">DAILY PRODUCT WATCH</p>
+        <h1>関連付け <em>チェック</em></h1>
+        <p class="lead">表示されているアイテムは関連付け未対応アイテムです。<br>関連付け対応をお願いいたします。</p>
       </div>
-      <div class="target-search"><label for="targetHandle">Instagramユーザーネーム</label><div class="target-input"><span>@</span><input id="targetHandle" type="text" value="ayaka_style" placeholder="例：mango_japan" autocomplete="off"><button id="analyzeButton" type="button">分析する <span>→</span></button></div><p id="targetError" class="target-error" hidden>ユーザーネームを入力してください。</p></div>
-      <div id="targetProfile" class="target-profile"></div>
-      <div class="filters">
-        <label class="filter-item">
-          <span class="filter-label">フォロワー数</span>
-          <select id="followersFilter">
-            <option value="0">指定なし</option>
-            <option value="10000">1万人以上</option>
-            <option value="50000">5万人以上</option>
-            <option value="100000" selected>10万人以上</option>
-            <option value="500000">50万人以上</option>
-          </select>
-        </label>
-        <div class="filter-item">
-          <span class="filter-label">フォロワーの性別</span>
-          <div class="range-line"><input id="femaleFilter" type="range" min="0" max="90" step="5" value="60"><output id="femaleValue" for="femaleFilter">女性 60%以上</output></div>
+      <div class="relation-summary">
+        <div>
+          <span class="summary-label">MATCHED ITEMS</span>
+          <strong id="productCount">—</strong>
         </div>
-        <label class="filter-item">
-          <span class="filter-label">投稿ジャンル</span>
-          <select id="categoryFilter">
-            <option value="all" selected>すべてのジャンル</option>
-            <option value="fashion">ファッション</option>
-            <option value="beauty">ビューティー</option>
-            <option value="lifestyle">ライフスタイル</option>
-          </select>
-        </label>
-        <div class="filter-item">
-          <span class="filter-label">エンゲージメント</span>
-          <div class="check-row"><label><input id="commentsFilter" type="checkbox" checked> コメントが多い</label><label><input id="fashionFilter" type="checkbox"> ファッション投稿</label></div>
+        <div>
+          <span class="summary-label">LAST UPDATED</span>
+          <strong id="updatedAt">—</strong>
+        </div>
+        <div class="rule-note">
+          <span class="rule-icon">◎</span>
+          <span>英字部分が同じ<br>関連アイテムに同名なし</span>
         </div>
       </div>
-      <div class="panel-footer"><span class="filter-note">公開プロフィールの公開情報をもとにした推定値です</span><button id="searchButton" class="primary-button" type="button">似たアカウントを検索 <span>→</span></button></div>
-    </section>
+      <div class="relation-results-head">
+        <div>
+          <p class="eyebrow">CURATED RESULTS</p>
+          <h2>今日のアイテム</h2>
+        </div>
+        <span id="scannedCount" class="muted"></span>
+      </div>
+      <div id="productGrid" class="product-grid"></div>
+      <div id="productEmpty" class="empty" hidden>
+        <div class="empty-mark">M</div>
+        <h3>まだ結果がありません</h3>
+        <p>毎朝4:00に最新データへ更新されます。</p>
+      </div>
 
-    <section class="results-section">
-      <div class="results-head">      <div><p class="eyebrow">SIMILAR ACCOUNTS</p><h2>似ている候補</h2></div><div class="result-tools"><span id="resultCount">—件</span><select id="sortFilter" aria-label="並び替え"><option value="match">類似度順</option><option value="followers">フォロワー数順</option><option value="engagement">反応率順</option></select></div></div>
-      <div id="accountGrid" class="account-grid"></div>
-      <div id="emptyState" class="empty" hidden><div class="empty-mark">M</div><h3>条件に合うアカウントがありません</h3><p>条件をゆるめて、もう一度検索してみてください。</p></div>
-    </section>
-    </div>
-    <section id="relationView" class="relation-view" hidden>
-      <div class="relation-hero"><p class="eyebrow">DAILY PRODUCT WATCH</p><h1>関連付け <em>チェック</em></h1><p class="lead">表示されているアイテムは関連付け未対応アイテムです。<br>関連付け対応をお願いいたします。</p></div>
-      <div class="relation-summary"><div><span class="summary-label">MATCHED ITEMS</span><strong id="productCount">—</strong></div><div><span class="summary-label">LAST UPDATED</span><strong id="updatedAt">—</strong></div><div class="rule-note"><span class="rule-icon">◎</span><span>英字部分が同じ<br>関連アイテムに同名なし</span></div></div>
-      <div class="relation-results-head"><div><p class="eyebrow">CURATED RESULTS</p><h2>今日のアイテム</h2></div><span id="scannedCount" class="muted"></span></div>
-      <div id="productGrid" class="product-grid"></div><div id="productEmpty" class="empty" hidden><div class="empty-mark">M</div><h3>まだ結果がありません</h3><p>毎朝4:00に最新データへ更新されます。</p></div>
+      <div id="checkedSection" class="checked-section">
+        <div class="relation-results-head checked-head">
+          <div>
+            <p class="eyebrow">CHECKED OFF</p>
+            <h2>確認済</h2>
+          </div>
+        </div>
+        <div id="checkedProductGrid" class="product-grid"></div>
+        <p id="checkedEmpty" class="checked-empty">確認済にしたアイテムはありません。</p>
+      </div>
     </section>
 
     <section id="globalRelationView" class="relation-view" hidden>
-      <div class="relation-hero"><p class="eyebrow">GLOBAL PRODUCT MATCH</p><h1>グローバル関連付け <em>比較</em></h1><p class="lead">日本サイトのブランド商品番号と、グローバル MANGO の商品URLを比較して、同じベースコードを持つ候補を表示します。</p></div>
-      <div class="relation-summary"><div><span class="summary-label">MATCHED ITEMS</span><strong id="globalProductCount">—</strong></div><div><span class="summary-label">LAST UPDATED</span><strong id="globalUpdatedAt">—</strong></div><div class="rule-note"><span class="rule-icon">◎</span><span>ブランド商品番号の前8桁を比較<br>グローバルURLと照合</span></div></div>
-      <div class="relation-results-head"><div><p class="eyebrow">GLOBAL COMPARISON</p><h2>グローバル候補</h2></div><span id="globalScannedCount" class="muted"></span></div>
+      <div class="relation-hero">
+        <p class="eyebrow">GLOBAL PRODUCT MATCH</p>
+        <h1>グローバル関連付け <em>比較</em></h1>
+        <p class="lead">日本サイトのブランド商品番号と、グローバル MANGO の商品URLを比較して、同じベースコードを持つ候補を表示します。</p>
+      </div>
+      <div class="relation-summary">
+        <div>
+          <span class="summary-label">MATCHED ITEMS</span>
+          <strong id="globalProductCount">—</strong>
+        </div>
+        <div>
+          <span class="summary-label">LAST UPDATED</span>
+          <strong id="globalUpdatedAt">—</strong>
+        </div>
+        <div class="rule-note">
+          <span class="rule-icon">◎</span>
+          <span>ブランド商品番号の前8桁を比較<br>グローバルURLと照合</span>
+        </div>
+      </div>
+      <div class="relation-results-head">
+        <div>
+          <p class="eyebrow">GLOBAL COMPARISON</p>
+          <h2>グローバル候補</h2>
+        </div>
+        <span id="globalScannedCount" class="muted"></span>
+      </div>
       <div id="globalProductGrid" class="product-grid"></div>
-      <div id="globalProductEmpty" class="empty" hidden><div class="empty-mark">M</div><h3>比較候補がまだありません</h3><p>グローバル比較データが更新されるまで少しお待ちください。</p></div>
+      <div id="globalProductEmpty" class="empty" hidden>
+        <div class="empty-mark">M</div>
+        <h3>比較候補がまだありません</h3>
+        <p>グローバル比較データが更新されるまで少しお待ちください。</p>
+      </div>
     </section>
   </main>
-  <footer><span>MANGO FINDER</span><span>DATA SOURCE: INSTAGRAM PUBLIC DATA</span></footer>
-  <script src="app.js"></script>
+
+  <footer>
+    <span>MANGO FINDER</span>
+    <span>DATA SOURCE: MANGO JAPAN / GLOBAL PUBLIC PRODUCT PAGES</span>
+  </footer>
+
+  <script src="app.js?v=20260918"></script>
 </body>
 </html>

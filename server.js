@@ -273,15 +273,17 @@ async function crawlGlobalProducts(japanProducts = []) {
     globalIndex.get(product.baseCode).push(product);
   });
 
-  const matches = (japanProducts || []).map((item) => {
-    const baseCode = normalizeBrandBaseCode(item.brandItemNumber || item.brandItemFirstDigit || item.productNumber || "");
-    const filtered = (globalIndex.get(baseCode) || []).filter((candidate) => {
-      const sameName = normalizeComparisonName(item.name || "") === normalizeComparisonName(candidate.name || "");
-      const sameEnglishKey = englishKey(item.name || "") && englishKey(candidate.name || "") && englishKey(item.name || "") === englishKey(candidate.name || "");
+  const matches = deduped.map((globalProduct) => {
+    const baseCode = globalProduct.baseCode || normalizeBrandBaseCode(globalProduct.productNumber || globalProduct.url || "");
+    const related = (japanProducts || []).filter((item) => {
+      const itemBaseCode = normalizeBrandBaseCode(item.brandItemNumber || item.brandItemFirstDigit || item.productNumber || "");
+      if (itemBaseCode !== baseCode) return false;
+      const sameName = normalizeComparisonName(item.name || "") === normalizeComparisonName(globalProduct.name || "");
+      const sameEnglishKey = englishKey(item.name || "") && englishKey(globalProduct.name || "") && englishKey(item.name || "") === englishKey(globalProduct.name || "");
       return !sameName && !sameEnglishKey;
     });
-    return { japanese: item, global: filtered, baseCode };
-  }).filter((entry) => entry.baseCode && entry.global.length > 0);
+    return { main: globalProduct, related, baseCode };
+  }).filter((entry) => entry.baseCode && entry.related.length > 0);
 
   const result = {
     updatedAt: new Date().toISOString(),
