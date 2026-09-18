@@ -28,18 +28,6 @@ function firstDigit(value) {
   return String(value || "").match(/\d/)?.[0] || "";
 }
 
-function normalizeBrandBaseCode(value) {
-  const match = String(value || "").match(/(\d{8})/);
-  return match ? match[1] : "";
-}
-
-function normalizeGlobalBaseCode(value) {
-  if (!value) return "";
-  const text = String(value).replace(/.*\//, "");
-  const match = text.match(/(\d{8})/);
-  return match ? match[1] : normalizeBrandBaseCode(value);
-}
-
 function buildProductGroups(products) {
   const groups = new Map();
   for (const product of products || []) {
@@ -143,27 +131,14 @@ function loadGlobalProducts() {
   ready.then(() => fetch(`global-products.json?v=${Date.now()}`, { cache: "no-store" }))
     .then((response) => response.json())
     .then((data) => {
-      const japanProducts = state.products.length
-        ? state.products
-        : state.groups.flatMap((group) => [group.main, ...(group.related || [])]);
       let rows = [];
 
-      if (Array.isArray(data.matches) && data.matches.length) {
-        rows = data.matches.map((entry) => ({
+      rows = (Array.isArray(data.matches) ? data.matches : [])
+        .map((entry) => ({
           main: entry.main,
-          related: entry.relatedGlobal || entry.related || []
-        }));
-      } else {
-        rows = (data.products || []).map((globalProduct) => {
-          const baseCode = normalizeGlobalBaseCode(globalProduct.url || globalProduct.globalCode || globalProduct.productNumber || globalProduct.baseCode);
-          const related = japanProducts.filter((item) => {
-            const itemBaseCode = normalizeBrandBaseCode(item.brandItemNumber || item.brandItemFirstDigit || item.productNumber || "");
-            if (itemBaseCode !== baseCode) return false;
-            return normalizeName(item.name || "") !== normalizeName(globalProduct.name || "");
-          });
-          return { main: globalProduct, related };
-        });
-      }
+          related: entry.relatedGlobal || []
+        }))
+        .filter((entry) => entry.main && entry.related.length > 0);
 
       $("#globalProductCount").textContent = String(rows.length).padStart(2, "0");
       $("#globalUpdatedAt").textContent = data.updatedAt ? new Intl.DateTimeFormat("ja-JP", { month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit" }).format(new Date(data.updatedAt)) : "—";

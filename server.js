@@ -213,7 +213,7 @@ function extractGlobalProductUrls(html, sourceUrl = "") {
 }
 
 function extractGlobalRelatedUrls(html, sourceUrl) {
-  const markers = [...html.matchAll(/see\s*look|you\s*may\s*also\s*like|complete\s*the\s*look|related\s*products?|shop\s*the\s*look/gi)];
+  const markers = [...html.matchAll(/see\s*look/gi)];
   const sections = markers.map((match) => html.slice(match.index, match.index + 120000));
   const urls = new Set();
   for (const sectionHtml of sections) {
@@ -226,7 +226,7 @@ function extractGlobalRelatedUrls(html, sourceUrl) {
 
 function extractGlobalRelatedProductNumbers(html, sourceUrl) {
   const sourceNumber = [...sourceUrl.matchAll(/\/(\d{8})\b/g)].at(-1)?.[1] || "";
-  const markers = [...html.matchAll(/see\s*look|you\s*may\s*also\s*like|complete\s*the\s*look|related\s*products?|shop\s*the\s*look/gi)];
+  const markers = [...html.matchAll(/see\s*look/gi)];
   const numbers = new Set();
   for (const marker of markers) {
     const sectionHtml = html.slice(marker.index, marker.index + 120000);
@@ -367,7 +367,9 @@ async function crawlGlobalProducts(japanProducts = []) {
       .filter(Boolean)
       .filter((candidate) => candidate.baseCode !== globalProduct.baseCode)
       .map(({ relatedUrls, relatedProductNumbers, ...candidate }) => candidate);
-    return { main: globalProduct, related, relatedGlobal: [...relatedGlobal, ...apiRelatedGlobal], baseCode };
+    const uniqueRelatedGlobal = [...relatedGlobal, ...apiRelatedGlobal]
+      .filter((candidate, index, candidates) => candidates.findIndex((entry) => entry.baseCode === candidate.baseCode) === index);
+    return { main: globalProduct, related, relatedGlobal: uniqueRelatedGlobal, baseCode };
   }).filter((entry) => entry.baseCode && (entry.related.length > 0 || entry.relatedGlobal.length > 0));
 
   const result = {
