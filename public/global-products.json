@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T11:41:11.561Z",
+  "updatedAt": "2026-09-18T19:23:56.414Z",
   "products": [
     {
       "name": "Shirt-collar jacket with belt - Women",
@@ -22,7 +22,7 @@
       "relatedProductNumbers": []
     },
     {
-      "name": "Frog-button jacket with band collar",
+      "name": "Frog-button jacket with band collar - Women",
       "image": "https://media.mango.com/is/image/punto/37035870-99-102?wid=1024",
       "productNumber": "37035870",
       "baseCode": "37035870",
@@ -177,6 +177,10 @@
         },
         {
           "productNumber": "37094115",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37075872",
           "colorId": "99"
         }
       ]
@@ -656,7 +660,7 @@
       ]
     },
     {
-      "name": "Rigid knot necklace",
+      "name": "Rigid knot necklace - Women",
       "image": "https://media.mango.com/is/image/punto/37094458-OR-016?wid=1024",
       "productNumber": "37094458",
       "baseCode": "37094458",
@@ -902,6 +906,10 @@
         {
           "productNumber": "37046010",
           "colorId": "05"
+        },
+        {
+          "productNumber": "37076355",
+          "colorId": "30"
         }
       ]
     },
@@ -1123,7 +1131,7 @@
       ]
     },
     {
-      "name": "Double-breasted wool blazer",
+      "name": "Double-breasted wool blazer - Women",
       "image": "https://media.mango.com/is/image/punto/37036368-05-002?wid=1024",
       "productNumber": "37036368",
       "baseCode": "37036368",
@@ -1142,6 +1150,10 @@
         {
           "productNumber": "37046010",
           "colorId": "05"
+        },
+        {
+          "productNumber": "37076355",
+          "colorId": "30"
         }
       ]
     },
@@ -1200,7 +1212,7 @@
       ]
     },
     {
-      "name": "Wool jersey with contrast overlay - Women",
+      "name": "Wool jersey with contrast overlay",
       "image": "https://media.mango.com/is/image/punto/37026364-56-002?wid=1024",
       "productNumber": "37026364",
       "baseCode": "37026364",
@@ -1273,7 +1285,7 @@
       ]
     },
     {
-      "name": "Tailored wool coat - Women",
+      "name": "Tailored wool coat",
       "image": "https://media.mango.com/is/image/punto/37046365-92-002?wid=1024",
       "productNumber": "37046365",
       "baseCode": "37046365",
@@ -1532,6 +1544,41 @@
       ]
     },
     {
+      "name": "Pointed-toe leather heeled shoes - Women",
+      "image": "https://media.mango.com/is/image/punto/37075872-99-016?wid=1024",
+      "productNumber": "37075872",
+      "baseCode": "37075872",
+      "globalCode": "37075872",
+      "colorId": "99",
+      "url": "https://shop.mango.com/gb/en/p/women/shoes/heeled-shoes/pointed-toe-leather-heeled-shoes/37075872/99/00",
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37067773",
+          "colorId": "30"
+        },
+        {
+          "productNumber": "37056365",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37026370",
+          "colorId": "01"
+        },
+        {
+          "productNumber": "37016367",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37056362",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37076355",
+          "colorId": "99"
+        }
+      ]
+    },
+    {
       "name": "Wool suit trousers - Women",
       "image": "https://media.mango.com/is/image/punto/37026366-92-002?wid=1024",
       "productNumber": "37026366",
@@ -1736,7 +1783,7 @@
       ]
     },
     {
-      "name": "Leather jacket with strap collar - Women",
+      "name": "Leather jacket with strap collar",
       "image": "https://media.mango.com/is/image/punto/37036349-99-002?wid=1024",
       "productNumber": "37036349",
       "baseCode": "37036349",
@@ -1960,41 +2007,6 @@
         {
           "productNumber": "37076358",
           "colorId": "30"
-        }
-      ]
-    },
-    {
-      "name": "Leather clutch bag - Women",
-      "image": "https://media.mango.com/is/image/punto/37016366-70-052?wid=1024",
-      "productNumber": "37016366",
-      "baseCode": "37016366",
-      "globalCode": "37016366",
-      "colorId": "70",
-      "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/leather-clutch-bag/37016366/70/00",
-      "relatedProductNumbers": [
-        {
-          "productNumber": "37036349",
-          "colorId": "99"
-        },
-        {
-          "productNumber": "37046368",
-          "colorId": "01"
-        },
-        {
-          "productNumber": "37016367",
-          "colorId": "99"
-        },
-        {
-          "productNumber": "37036012",
-          "colorId": "99"
-        },
-        {
-          "productNumber": "37076360",
-          "colorId": "99"
-        },
-        {
-          "productNumber": "37076355",
-          "colorId": "99"
         }
       ]
     }
