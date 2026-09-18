@@ -44,12 +44,21 @@ function buildProductGroups(products) {
     }));
 }
 
+function getJapanUrl(product) {
+  if (product.japanUrl) return product.japanUrl;
+  const query = product.productNumber || product.baseCode || product.globalCode;
+  return query ? `https://japan.mango.com/search/?searchWord=${encodeURIComponent(query)}` : "";
+}
+
 function renderProductCards(containerSelector, groups, compact) {
   const container = $(containerSelector);
   if (!container) return;
 
-  const renderImage = (product, small) => `
-    <a class="card-link" href="${product.url || product.globalUrl || "#"}" target="_blank" rel="noreferrer">
+  const renderImage = (product, small) => {
+    const globalUrl = product.globalUrl || product.url || "";
+    const japanUrl = compact ? getJapanUrl(product) : "";
+    return `
+    <a class="card-link" href="${globalUrl || japanUrl || "#"}" target="_blank" rel="noreferrer">
       <img class="${small ? "card-image-small" : "card-image"}" src="${product.image || ""}" alt="${escapeHtml(product.name || "MANGO product")}" loading="lazy">
       <div class="card-info">
         <h3 class="card-name">${escapeHtml(product.name || "MANGO")}</h3>
@@ -59,7 +68,12 @@ function renderProductCards(containerSelector, groups, compact) {
         </div>
       </div>
     </a>
+    ${compact ? `<div class="card-destinations">
+      ${globalUrl ? `<a href="${globalUrl}" target="_blank" rel="noreferrer">GLOBAL ↗</a>` : ""}
+      ${japanUrl ? `<a href="${japanUrl}" target="_blank" rel="noreferrer">日本サイト ↗</a>` : ""}
+    </div>` : ""}
   `;
+  };
 
   container.innerHTML = groups.map((group) => {
     const main = group.main || group.japanese || group;

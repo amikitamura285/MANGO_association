@@ -235,6 +235,26 @@ main { min-height: calc(100vh - 120px); }
   padding: 18px 18px 14px;
 }
 
+.card-destinations {
+  display: flex;
+  gap: 8px;
+  padding: 0 18px 15px;
+}
+
+.card-destinations a {
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font: 10px 'DM Mono', monospace;
+  letter-spacing: .04em;
+  padding: 7px 8px;
+  text-decoration: none;
+}
+
+.card-destinations a:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
 .card-name {
   margin: 0;
   font-size: 16px;
