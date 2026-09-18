@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T06:54:44.997Z",
+  "updatedAt": "2026-09-18T07:25:13.452Z",
   "products": [
     {
       "name": "ロングワンピース .-- NICOLE （ホワイト）",
@@ -3654,6 +3654,17 @@
       "englishKey": "SIENNA"
     },
     {
+      "name": "ジーンズ .-- SIENNA （オープングレー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042343_1_l.jpg",
+      "productNumber": "MA1658EW042343",
+      "brandItemNumber": "37004095 TN 色 オープングレー（TN）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042343/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "SIENNA"
+    },
+    {
       "name": "ジーンズ .-- SIENNA （オープンブルー）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042356_1_l.jpg",
       "productNumber": "MA1658EW042356",
@@ -4226,6 +4237,28 @@
       "englishKey": "LIA"
     },
     {
+      "name": "スカート.-- MARTA （ナチュラルホワイト）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042296_1_l.jpg",
+      "productNumber": "MA1658EW042296",
+      "brandItemNumber": "37062531 2 色 ナチュラルホワイト（2）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042296/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "MARTA"
+    },
+    {
+      "name": "ワンピース .-- MARTA （ブラウン）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042952_1_l.jpg",
+      "productNumber": "MA1658EW042952",
+      "brandItemNumber": "37066011 30 色 ブラウン（30）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042952/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "MARTA"
+    },
+    {
       "name": "ジーンズ.-- CLOTILDE （ナチュラルホワイト）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042322_1_l.jpg",
       "productNumber": "MA1658EW042322",
@@ -4620,6 +4653,39 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "LUCIANA"
+    },
+    {
+      "name": "ピアス .-- LINA （ゴールド）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW042546_1_l.jpg",
+      "productNumber": "MA1658DW042546",
+      "brandItemNumber": "37004448 OR 色 ゴールド（OR）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW042546/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "LINA"
+    },
+    {
+      "name": "スカート .-- LINA （グレー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042964_1_l.jpg",
+      "productNumber": "MA1658EW042964",
+      "brandItemNumber": "37065854 92 色 グレー（92）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042964/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "LINA"
+    },
+    {
+      "name": "レザーショートブーツ .--LINA （ブラック）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658BW043297_1_l.jpg",
+      "productNumber": "MA1658BW043297",
+      "brandItemNumber": "37005997 99 色 ブラック（99）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW043297/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "LINA"
     },
     {
       "name": "ジャケット .-- CHARLIE （ナチュラルホワイト）",
@@ -5271,28 +5337,6 @@
       "englishKey": "MARCELA"
     },
     {
-      "name": "スカート .-- LINA （グレー）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042964_1_l.jpg",
-      "productNumber": "MA1658EW042964",
-      "brandItemNumber": "37065854 92 色 グレー（92）",
-      "brandItemFirstDigit": "3",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042964/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "LINA"
-    },
-    {
-      "name": "レザーショートブーツ .--LINA （ブラック）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658BW043297_1_l.jpg",
-      "productNumber": "MA1658BW043297",
-      "brandItemNumber": "37005997 99 色 ブラック（99）",
-      "brandItemFirstDigit": "3",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW043297/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "LINA"
-    },
-    {
       "name": "シャツ .-- PARTENOP （ホワイト）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042969_1_l.jpg",
       "productNumber": "MA1658EW042969",
@@ -5601,96 +5645,8 @@
       "englishKey": "DALI"
     }
   ],
-  "groups": [
-    {
-      "englishKey": "VIOLETA",
-      "main": {
-        "name": "ジーンズ .--VIOLETA （オープンブルー）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043210_1_l.jpg",
-        "productNumber": "MA1658EW043210",
-        "brandItemNumber": "37015862 TO 色 オープンブルー（TO）",
-        "brandItemFirstDigit": "3",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043210/",
-        "brandCode": "MA1658",
-        "brandName": "MANGO",
-        "englishKey": "VIOLETA"
-      },
-      "related": [
-        {
-          "name": "ジーンズ .-- VIOLETA （オープンブルー）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042458_1_l.jpg",
-          "productNumber": "MA1658EW042458",
-          "brandItemNumber": "37024078 TM 色 オープンブルー（TM）",
-          "brandItemFirstDigit": "3",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042458/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "VIOLETA"
-        },
-        {
-          "name": "スカーフ .--VIOLETA （ナチュラルホワイト）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW043146_1_l.jpg",
-          "productNumber": "MA1658DW043146",
-          "brandItemNumber": "37016002 5 色 ナチュラルホワイト（5）",
-          "brandItemFirstDigit": "3",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW043146/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "VIOLETA"
-        },
-        {
-          "name": "ジーンズ .--VIOLETA （ダークブラウン）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043208_1_l.jpg",
-          "productNumber": "MA1658EW043208",
-          "brandItemNumber": "37015864 32 色 ダークブラウン（32）",
-          "brandItemFirstDigit": "3",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043208/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "VIOLETA"
-        }
-      ]
-    },
-    {
-      "englishKey": "CHARLIE",
-      "main": {
-        "name": "ショルダーバッグ .-- CHARLIE （ブラック）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658AW043247_1_l.jpg",
-        "productNumber": "MA1658AW043247",
-        "brandItemNumber": "37026368 99 色 ブラック（99）",
-        "brandItemFirstDigit": "3",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW043247/",
-        "brandCode": "MA1658",
-        "brandName": "MANGO",
-        "englishKey": "CHARLIE"
-      },
-      "related": [
-        {
-          "name": "ジャケット .-- CHARLIE （ナチュラルホワイト）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042596_1_l.jpg",
-          "productNumber": "MA1658EW042596",
-          "brandItemNumber": "37004803 5 色 ナチュラルホワイト（5）",
-          "brandItemFirstDigit": "3",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042596/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "CHARLIE"
-        },
-        {
-          "name": "ショルダーバッグ .-- CHARLIE （ブラック）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658AW043120_1_l.jpg",
-          "productNumber": "MA1658AW043120",
-          "brandItemNumber": "37036367 99 色 ブラック（99）",
-          "brandItemFirstDigit": "3",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW043120/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "CHARLIE"
-        }
-      ]
-    }
-  ],
-  "newCount": 2,
+  "groups": [],
+  "newCount": 0,
   "displayedMainProductNumbers": [
     "MA1658EW33440",
     "MA3878EC003099",
@@ -6942,5 +6898,5 @@
     "MA1658EW043210",
     "MA1658AW043247"
   ],
-  "scanned": 4160
+  "scanned": 4170
 }
