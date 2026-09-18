@@ -226,15 +226,14 @@ function extractGlobalRelatedUrls(html, sourceUrl) {
 
 function extractGlobalRelatedProductNumbers(html, sourceUrl) {
   const sourceNumber = [...sourceUrl.matchAll(/\/(\d{8})\b/g)].at(-1)?.[1] || "";
-  const markers = [...html.matchAll(/see\s*look/gi)];
-  const numbers = new Set();
-  for (const marker of markers) {
-    const sectionHtml = html.slice(marker.index, marker.index + 120000);
-    for (const match of sectionHtml.matchAll(/\b(\d{8})\b/g)) {
-      if (match[1] !== sourceNumber) numbers.add(match[1]);
+  const totalLook = html.match(/\\?"totalLook\\?"\s*:\s*\[([\s\S]*?)\]/i)?.[1] || "";
+  const products = [];
+  for (const match of totalLook.matchAll(/\\?"productId\\?"\s*:\s*\\?"(\d{8})\\?"[\s\S]*?\\?"colorId\\?"\s*:\s*\\?"([^"\\]+)\\?"/gi)) {
+    if (match[1] !== sourceNumber) {
+      products.push({ productNumber: match[1], colorId: match[2] });
     }
   }
-  return [...numbers].slice(0, 24);
+  return products.slice(0, 24);
 }
 
 function parseGlobalProduct(url, html) {
@@ -248,6 +247,7 @@ function parseGlobalProduct(url, html) {
     /<img[^>]+src=["']([^"']+)["'][^>]*>/i
   ]);
   const productNumber = [...url.matchAll(/\/(\d{8})\b/g)].at(-1)?.[1] || "";
+  const colorId = [...url.matchAll(/\/([^/]+)\/[^/]+$/g)].at(-1)?.[1] || "";
   const baseCode = productNumber.match(/\d{8}/)?.[0] || "";
   if (!productNumber || !baseCode || !title) return null;
   return {
@@ -256,16 +256,17 @@ function parseGlobalProduct(url, html) {
     productNumber: productNumber,
     baseCode,
     globalCode: baseCode,
+    colorId,
     url,
-    relatedUrls: extractGlobalRelatedUrls(html, url),
+    relatedUrls: [],
     relatedProductNumbers: extractGlobalRelatedProductNumbers(html, url)
   };
 }
 
-async function fetchGlobalApiProduct(productNumber) {
+async function fetchGlobalApiProduct(productNumber, requestedColorId = "") {
   const apiUrl = `https://online-orchestrator.mango.com/v4/products?channelId=shop&countryIso=GB&languageIso=en&productId=${productNumber}`;
   const data = JSON.parse(await fetchText(apiUrl));
-  const color = data.colors?.[0];
+  const color = data.colors?.find((entry) => String(entry.id) === String(requestedColorId)) || data.colors?.[0];
   const colorId = color?.id || "99";
   const lookImages = color?.looks?.["00"]?.images || {};
   const imagePath = Object.values(lookImages).find((entry) => entry?.img)?.img;
@@ -277,6 +278,8 @@ async function fetchGlobalApiProduct(productNumber) {
     productNumber: String(data.reference),
     baseCode: String(data.reference),
     globalCode: String(data.reference),
+    colorId: String(colorId),
+    colorName: color?.nameEn || color?.name || "",
     url: `https://shop.mango.com${productPath}/${colorId}/00`,
     relatedUrls: [],
     relatedProductNumbers: []
@@ -336,12 +339,13 @@ async function crawlGlobalProducts(japanProducts = []) {
         console.warn(`Skipping global related product ${relatedUrl}: ${error.message}`);
       }
     }
-    for (const relatedNumber of product.relatedProductNumbers || []) {
-      const relatedKey = `api:${relatedNumber}`;
+    for (const relatedProduct of product.relatedProductNumbers || []) {
+      const relatedNumber = relatedProduct.productNumber;
+      const relatedKey = `api:${relatedNumber}:${relatedProduct.colorId}`;
       if (productByUrl.has(relatedKey)) continue;
       try {
-        const relatedProduct = await fetchGlobalApiProduct(relatedNumber);
-        if (relatedProduct && relatedProduct.baseCode) productByUrl.set(relatedKey, relatedProduct);
+        const candidate = await fetchGlobalApiProduct(relatedNumber, relatedProduct.colorId);
+        if (candidate && candidate.baseCode) productByUrl.set(relatedKey, candidate);
       } catch (error) {
         console.warn(`Skipping global SEE LOOK product ${relatedNumber}: ${error.message}`);
       }
@@ -363,10 +367,10 @@ async function crawlGlobalProducts(japanProducts = []) {
       .filter((candidate) => candidate.baseCode !== globalProduct.baseCode)
       .map(({ relatedUrls, ...candidate }) => candidate);
     const apiRelatedGlobal = (globalProduct.relatedProductNumbers || [])
-      .map((number) => productByUrl.get(`api:${number}`))
+      .map((entry) => productByUrl.get(`api:${entry.productNumber}:${entry.colorId}`))
       .filter(Boolean)
-      .filter((candidate) => candidate.baseCode !== globalProduct.baseCode)
-      .map(({ relatedUrls, relatedProductNumbers, ...candidate }) => candidate);
+      .filter((candidate) => candidate.baseCode !== globalProduct.baseCode || candidate.colorId !== globalProduct.colorId)
+      .map(({ relatedUrls, relatedProductNumbers, colorId, colorName, ...candidate }) => candidate);
     const uniqueRelatedGlobal = [...relatedGlobal, ...apiRelatedGlobal]
       .filter((candidate, index, candidates) => candidates.findIndex((entry) => entry.baseCode === candidate.baseCode) === index);
     return { main: globalProduct, related, relatedGlobal: uniqueRelatedGlobal, baseCode };
