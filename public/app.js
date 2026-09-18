@@ -70,7 +70,7 @@ function renderProductCards(containerSelector, groups, compact) {
     </a>
     ${compact ? `<div class="card-destinations">
       ${globalUrl ? `<a href="${globalUrl}" target="_blank" rel="noreferrer">GLOBAL ↗</a>` : ""}
-      ${japanUrl ? `<a href="${japanUrl}" target="_blank" rel="noreferrer">日本サイト ↗</a>` : ""}
+      ${japanUrl ? `<a href="${japanUrl}" target="_blank" rel="noreferrer">JP ↗</a>` : ""}
     </div>` : ""}
   `;
   };
