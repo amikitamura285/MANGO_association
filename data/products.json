@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T10:40:37.282Z",
+  "updatedAt": "2026-09-18T11:21:55.761Z",
   "products": [
     {
       "name": "ロングワンピース .-- NICOLE （ホワイト）",
@@ -3203,6 +3203,30 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "M BILMACHO",
+      "relatedNames": []
+    },
+    {
+      "name": "財布 P-- BILMACHO （ダークブラウン）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW040818_1_l.jpg",
+      "productNumber": "MA1658DW040818",
+      "brandItemNumber": "27056747 32 色 ダークブラウン（32）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW040818/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "P BILMACHO",
+      "relatedNames": []
+    },
+    {
+      "name": "ハンドバッグ P-- BILMACHO （ダークブラウン）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658AW040925_1_l.jpg",
+      "productNumber": "MA1658AW040925",
+      "brandItemNumber": "27035986 32 色 ダークブラウン（32）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW040925/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "P BILMACHO",
       "relatedNames": []
     },
     {
@@ -7368,5 +7392,5 @@
     "MA1658EW043210",
     "MA1658AW043247"
   ],
-  "scanned": 4168
+  "scanned": 4170
 }
