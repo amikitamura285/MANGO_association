@@ -125,9 +125,7 @@ function loadProducts() {
   productsReady = fetch(`products.json?v=${Date.now()}`, { cache: "no-store" })
     .then((response) => response.json())
     .then((data) => {
-      const groups = Array.isArray(data.groups) && data.groups.length
-        ? data.groups
-        : buildProductGroups(data.products || []);
+      const groups = buildProductGroups(data.products || []);
       state.products = data.products || [];
       state.groups = groups;
       renderMainProducts();
@@ -151,7 +149,10 @@ function loadGlobalProducts() {
       let rows = [];
 
       if (Array.isArray(data.matches) && data.matches.length) {
-        rows = data.matches.map((entry) => ({ main: entry.main, related: entry.related || [] }));
+        rows = data.matches.map((entry) => ({
+          main: entry.main,
+          related: entry.relatedGlobal || entry.related || []
+        }));
       } else {
         rows = (data.products || []).map((globalProduct) => {
           const baseCode = normalizeGlobalBaseCode(globalProduct.url || globalProduct.globalCode || globalProduct.productNumber || globalProduct.baseCode);

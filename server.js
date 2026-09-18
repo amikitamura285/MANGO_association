@@ -204,6 +204,15 @@ function extractGlobalProductUrls(html, sourceUrl = "") {
   return [...urls];
 }
 
+function extractGlobalRelatedUrls(html, sourceUrl) {
+  const marker = html.search(/see\s*look|you\s*may\s*also\s*like|complete\s*the\s*look|related\s*products?/i);
+  if (marker < 0) return [];
+  const sectionHtml = html.slice(marker, marker + 120000);
+  return extractGlobalProductUrls(sectionHtml)
+    .filter((url) => url !== sourceUrl)
+    .slice(0, 12);
+}
+
 function parseGlobalProduct(url, html) {
   const title = firstMatch(html, [
     /<meta[^>]+property=["']og:title["'][^>]+content=["']([^"']+)/i,
@@ -223,7 +232,8 @@ function parseGlobalProduct(url, html) {
     productNumber: productNumber,
     baseCode,
     globalCode: baseCode,
-    url
+    url,
+    relatedUrls: extractGlobalRelatedUrls(html, url)
   };
 }
 
@@ -245,6 +255,7 @@ function normalizeBrandBaseCode(value) {
 async function crawlGlobalProducts(japanProducts = []) {
   const products = [];
   const visited = new Set();
+  const productByUrl = new Map();
   for (const source of GLOBAL_PRODUCT_SOURCES) {
     try {
       const html = await fetchText(source);
@@ -255,7 +266,10 @@ async function crawlGlobalProducts(japanProducts = []) {
         try {
           const detailHtml = await fetchText(productUrl);
           const product = parseGlobalProduct(productUrl, detailHtml);
-          if (product && product.baseCode) products.push(product);
+          if (product && product.baseCode) {
+            products.push(product);
+            productByUrl.set(productUrl, product);
+          }
         } catch (error) {
           console.warn(`Skipping global product ${productUrl}: ${error.message}`);
         }
@@ -265,11 +279,18 @@ async function crawlGlobalProducts(japanProducts = []) {
     }
   }
   const deduped = products.filter((product, index, array) => array.findIndex((entry) => entry.baseCode === product.baseCode) === index);
-  const globalIndex = new Map();
-  deduped.forEach((product) => {
-    if (!globalIndex.has(product.baseCode)) globalIndex.set(product.baseCode, []);
-    globalIndex.get(product.baseCode).push(product);
-  });
+  for (const product of deduped) {
+    for (const relatedUrl of product.relatedUrls || []) {
+      if (productByUrl.has(relatedUrl)) continue;
+      try {
+        const relatedHtml = await fetchText(relatedUrl);
+        const relatedProduct = parseGlobalProduct(relatedUrl, relatedHtml);
+        if (relatedProduct && relatedProduct.baseCode) productByUrl.set(relatedUrl, relatedProduct);
+      } catch (error) {
+        console.warn(`Skipping global related product ${relatedUrl}: ${error.message}`);
+      }
+    }
+  }
 
   const matches = deduped.map((globalProduct) => {
     const baseCode = globalProduct.baseCode || normalizeBrandBaseCode(globalProduct.productNumber || globalProduct.url || "");
@@ -280,12 +301,17 @@ async function crawlGlobalProducts(japanProducts = []) {
       const sameEnglishKey = englishKey(item.name || "") && englishKey(globalProduct.name || "") && englishKey(item.name || "") === englishKey(globalProduct.name || "");
       return !sameName && !sameEnglishKey;
     });
-    return { main: globalProduct, related, baseCode };
-  }).filter((entry) => entry.baseCode && entry.related.length > 0);
+    const relatedGlobal = (globalProduct.relatedUrls || [])
+      .map((url) => productByUrl.get(url))
+      .filter(Boolean)
+      .filter((candidate) => candidate.baseCode !== globalProduct.baseCode)
+      .map(({ relatedUrls, ...candidate }) => candidate);
+    return { main: globalProduct, related, relatedGlobal, baseCode };
+  }).filter((entry) => entry.baseCode && (entry.related.length > 0 || entry.relatedGlobal.length > 0));
 
   const result = {
     updatedAt: new Date().toISOString(),
-    products: deduped.slice(0, 200),
+    products: deduped.map(({ relatedUrls, ...product }) => product).slice(0, 200),
     matches
   };
   await writeGlobalProducts(result);
