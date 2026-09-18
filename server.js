@@ -184,9 +184,7 @@ function extractGlobalProductUrls(html, sourceUrl = "") {
   for (const pattern of [
     /https?:\/\/shop\.mango\.com\/gb\/en\/p\/[^\s"'<>]+/gi,
     /\/gb\/en\/p\/[^\s"'<>]+/gi,
-    /(?:href|data-href|content|src|data-url)=["']([^"']+)["']/gi,
-    /"url":"(https?:\\\/\\\/shop\\.mango\\.com\\/gb\\/en\\/p\\/[^"\\]+)"/gi,
-    /'url':'(https?:\\/\\/shop\\.mango\\.com\\/gb\\/en\\/p\\/[^'\\]+)'/gi
+    /(?:href|data-href|content|src|data-url)=["']([^"']+)["']/gi
   ]) {
     for (const match of html.matchAll(pattern)) {
       const value = match[1] || match[0];
