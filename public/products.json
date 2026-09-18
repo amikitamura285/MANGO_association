@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T07:25:13.452Z",
+  "updatedAt": "2026-09-18T07:49:05.882Z",
   "products": [
     {
       "name": "ロングワンピース .-- NICOLE （ホワイト）",
@@ -5621,28 +5621,6 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "TRAVIATA"
-    },
-    {
-      "name": "コート .--DALI （パステルグレー）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043202_1_l.jpg",
-      "productNumber": "MA1658EW043202",
-      "brandItemNumber": "37035847 6 色 パステルグレー（6）",
-      "brandItemFirstDigit": "3",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043202/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "DALI"
-    },
-    {
-      "name": "コート .--DALI （ブラック）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043323_1_l.jpg",
-      "productNumber": "MA1658EW043323",
-      "brandItemNumber": "37045846 99 色 ブラック（99）",
-      "brandItemFirstDigit": "3",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043323/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "DALI"
     }
   ],
   "groups": [],
