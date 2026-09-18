@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T08:33:39.086Z",
+  "updatedAt": "2026-09-18T09:06:38.177Z",
   "products": [
     {
       "name": "ロングワンピース .-- NICOLE （ホワイト）",
@@ -10,7 +10,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW037134/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NICOLE"
+      "englishKey": "NICOLE",
+      "relatedNames": []
     },
     {
       "name": "ピアス .-- NICOLE （シルバー）",
@@ -21,7 +22,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW039085/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NICOLE"
+      "englishKey": "NICOLE",
+      "relatedNames": []
     },
     {
       "name": "ロングワンピース .-- RAMONA （ブラック）",
@@ -32,7 +34,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW037365/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "RAMONA"
+      "englishKey": "RAMONA",
+      "relatedNames": []
     },
     {
       "name": "コート .-- RAMONA （ナチュラルホワイト）",
@@ -43,7 +46,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038359/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "RAMONA"
+      "englishKey": "RAMONA",
+      "relatedNames": []
     },
     {
       "name": "トップス .-- ALBERT （ナチュラルホワイト）",
@@ -54,7 +58,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW037723/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ALBERT"
+      "englishKey": "ALBERT",
+      "relatedNames": []
     },
     {
       "name": "カーディガン .-- ALBERT （ダークレッド）",
@@ -65,7 +70,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038958/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ALBERT"
+      "englishKey": "ALBERT",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- DAVINA （オープンブルー）",
@@ -76,7 +82,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW037861/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "DAVINA"
+      "englishKey": "DAVINA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- DAVINA （ブラック）",
@@ -87,7 +94,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038705/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "DAVINA"
+      "englishKey": "DAVINA",
+      "relatedNames": []
     },
     {
       "name": "セーター .-- LIBRA （ライトベージュ）",
@@ -98,7 +106,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038493/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LIBRA"
+      "englishKey": "LIBRA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- LIBRA （オープングレー）",
@@ -109,7 +118,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039263/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LIBRA"
+      "englishKey": "LIBRA",
+      "relatedNames": []
     },
     {
       "name": "シャツ .-- JAGUAR （ブラウン）",
@@ -120,7 +130,11 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038587/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "JAGUAR"
+      "englishKey": "JAGUAR",
+      "relatedNames": [
+        "パンツ .-- XENPHANT （ブラウン）",
+        "スカート .-- MONI （ダークレッド）"
+      ]
     },
     {
       "name": "セーター .-- JAGUAR （ダークブラウン）",
@@ -131,7 +145,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038690/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "JAGUAR"
+      "englishKey": "JAGUAR",
+      "relatedNames": []
     },
     {
       "name": "コート .-- EYE （ブラック）",
@@ -142,7 +157,13 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038823/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "EYE"
+      "englishKey": "EYE",
+      "relatedNames": [
+        "セーター .-- TULIPA （ライトベージュ）",
+        "レザーショルダーバッグ M-- JUANA （ダークブラウン）",
+        "セーター .-- SALTY （ダークブラウン）",
+        "カーディガン .-- NEKKO （ミディアムブラウン）"
+      ]
     },
     {
       "name": "コート .-- EYE （カーキ）",
@@ -153,7 +174,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038834/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "EYE"
+      "englishKey": "EYE",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- NEWMACA （ダークブラウン）",
@@ -164,7 +186,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038835/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NEWMACA"
+      "englishKey": "NEWMACA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- NEWMACA （ダークレッド）",
@@ -175,7 +198,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038837/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NEWMACA"
+      "englishKey": "NEWMACA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- JOLENEP （ダークブラウン）",
@@ -186,7 +210,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038861/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "JOLENEP"
+      "englishKey": "JOLENEP",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- JOLENEP （ダークレッド）",
@@ -197,7 +222,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038890/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "JOLENEP"
+      "englishKey": "JOLENEP",
+      "relatedNames": []
     },
     {
       "name": "コート .-- DUNE （ミディアムブラウン）",
@@ -208,7 +234,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038963/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "DUNE"
+      "englishKey": "DUNE",
+      "relatedNames": []
     },
     {
       "name": "コート .-- DUNE （カーキ）",
@@ -219,7 +246,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039140/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "DUNE"
+      "englishKey": "DUNE",
+      "relatedNames": []
     },
     {
       "name": "スカート .-- MONI （ダークレッド）",
@@ -230,7 +258,10 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038974/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MONI"
+      "englishKey": "MONI",
+      "relatedNames": [
+        "シャツ .-- JAGUAR （ブラウン）"
+      ]
     },
     {
       "name": "カーディガン .-- MONI （グレー）",
@@ -241,7 +272,11 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039295/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MONI"
+      "englishKey": "MONI",
+      "relatedNames": [
+        "パンプス .-- COCO （ブラック）",
+        "パンツ .-- SAUVI （ブラック）"
+      ]
     },
     {
       "name": "ジーンズ .-- CARRIE （オープンブルー）",
@@ -252,7 +287,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039062/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CARRIE"
+      "englishKey": "CARRIE",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- CARRIE （ブラック）",
@@ -263,7 +299,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039093/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CARRIE"
+      "englishKey": "CARRIE",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- VIOLETAV （ブラック）",
@@ -274,7 +311,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039096/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "VIOLETAV"
+      "englishKey": "VIOLETAV",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- VIOLETAV （ダークブラウン）",
@@ -285,7 +323,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039139/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "VIOLETAV"
+      "englishKey": "VIOLETAV",
+      "relatedNames": []
     },
     {
       "name": "ロングワンピース .-- VENUS （ブラウン）",
@@ -296,7 +335,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039114/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "VENUS"
+      "englishKey": "VENUS",
+      "relatedNames": []
     },
     {
       "name": "トップス .-- VENUS （ブラウン）",
@@ -307,7 +347,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039268/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "VENUS"
+      "englishKey": "VENUS",
+      "relatedNames": []
     },
     {
       "name": "カーディガン .-- TOMATOE （レッド）",
@@ -318,7 +359,11 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039162/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "TOMATOE"
+      "englishKey": "TOMATOE",
+      "relatedNames": [
+        "ジーンズ .-- DAVINA （ブラック）",
+        "セーター .-- COLORIN （パステルブルー）"
+      ]
     },
     {
       "name": "セーター .-- TOMATOE （レッド）",
@@ -329,7 +374,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039171/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "TOMATOE"
+      "englishKey": "TOMATOE",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- SIRACUSA （ブラック）",
@@ -340,7 +386,12 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039180/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SIRACUSA"
+      "englishKey": "SIRACUSA",
+      "relatedNames": [
+        "ネックレス .-- TERESA （ゴールド）",
+        "ショートブーツ .-- NINO （ブラック）",
+        "シャツ .-- BASIC （ブラック）"
+      ]
     },
     {
       "name": "ジーンズ .-- SIRACUSA （ダークレッド）",
@@ -351,7 +402,11 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039185/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SIRACUSA"
+      "englishKey": "SIRACUSA",
+      "relatedNames": [
+        "ショートブーツ .-- NINO （ブラック）",
+        "セーター .-- MOCHA （ライトベージュ）"
+      ]
     },
     {
       "name": "セーター .-- PUNYITOS （ブラック）",
@@ -362,7 +417,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039294/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "PUNYITOS"
+      "englishKey": "PUNYITOS",
+      "relatedNames": []
     },
     {
       "name": "カーディガン .-- PUNYITOS （ブラック）",
@@ -373,7 +429,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039310/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "PUNYITOS"
+      "englishKey": "PUNYITOS",
+      "relatedNames": []
     },
     {
       "name": "シャツ .-- REGU （パステルブルー）",
@@ -384,7 +441,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039323/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "REGU"
+      "englishKey": "REGU",
+      "relatedNames": []
     },
     {
       "name": "シャツ .-- REGU （ナチュラルホワイト）",
@@ -395,7 +453,10 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039556/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "REGU"
+      "englishKey": "REGU",
+      "relatedNames": [
+        "トレンチコート .-- ANGELA （ライトベージュ）"
+      ]
     },
     {
       "name": "シャツ .-- REGU （ミディアムブルー）",
@@ -406,7 +467,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039964/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "REGU"
+      "englishKey": "REGU",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- SIENNA （ダークブラウン）",
@@ -417,7 +479,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039332/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SIENNA"
+      "englishKey": "SIENNA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- SIENNA （オープンブルー）",
@@ -428,7 +491,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039396/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SIENNA"
+      "englishKey": "SIENNA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- SIENNA （オープンブルー）",
@@ -439,7 +503,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039449/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SIENNA"
+      "englishKey": "SIENNA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- SIENNA （オープングレー）",
@@ -450,7 +515,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039661/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SIENNA"
+      "englishKey": "SIENNA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- SIENNA （オープンブルー）",
@@ -461,7 +527,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040014/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SIENNA"
+      "englishKey": "SIENNA",
+      "relatedNames": []
     },
     {
       "name": "ロングワンピース .-- SIENNA （ダークブラウン）",
@@ -472,7 +539,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040334/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SIENNA"
+      "englishKey": "SIENNA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- SIENNA （ホワイト）",
@@ -483,7 +551,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040777/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SIENNA"
+      "englishKey": "SIENNA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- SIENNA （ナチュラルホワイト）",
@@ -494,7 +563,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041061/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SIENNA"
+      "englishKey": "SIENNA",
+      "relatedNames": []
     },
     {
       "name": "ジャケット .-- SABI （ミディアムオレンジ）",
@@ -505,7 +575,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039348/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SABI"
+      "englishKey": "SABI",
+      "relatedNames": []
     },
     {
       "name": "ジャケット .-- SABI （ダークブラウン）",
@@ -516,7 +587,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039371/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SABI"
+      "englishKey": "SABI",
+      "relatedNames": []
     },
     {
       "name": "ジャケット .-- SABI （ダークグリーン）",
@@ -527,7 +599,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040259/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SABI"
+      "englishKey": "SABI",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- DANILA （オープンブルー）",
@@ -538,7 +611,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039353/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "DANILA"
+      "englishKey": "DANILA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- DANILA （オープンブルー）",
@@ -549,7 +623,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039367/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "DANILA"
+      "englishKey": "DANILA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- DANILA （オープングレー）",
@@ -560,7 +635,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039535/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "DANILA"
+      "englishKey": "DANILA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- DANILA （ダークブラウン）",
@@ -571,7 +647,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039758/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "DANILA"
+      "englishKey": "DANILA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- DANILA （オープンブルー）",
@@ -582,7 +659,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039899/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "DANILA"
+      "englishKey": "DANILA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- DANILA （ベージュ）",
@@ -593,7 +671,10 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039933/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "DANILA"
+      "englishKey": "DANILA",
+      "relatedNames": [
+        "ブラウス .-- CHOCO （ブラウン）"
+      ]
     },
     {
       "name": "ジーンズ .-- CATHERIN （ダークレッド）",
@@ -604,7 +685,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039357/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CATHERIN"
+      "englishKey": "CATHERIN",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- CATHERIN （オープンブルー）",
@@ -615,7 +697,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039372/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CATHERIN"
+      "englishKey": "CATHERIN",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- CATHERIN （オープンブルー）",
@@ -626,7 +709,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039480/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CATHERIN"
+      "englishKey": "CATHERIN",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- CATHERIN （オープンブルー）",
@@ -637,7 +721,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039493/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CATHERIN"
+      "englishKey": "CATHERIN",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- CATHERIN （オープングレー）",
@@ -648,7 +733,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039533/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CATHERIN"
+      "englishKey": "CATHERIN",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- CATHERIN （ダークブラウン）",
@@ -659,7 +745,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040076/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CATHERIN"
+      "englishKey": "CATHERIN",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- CATHERIN （ホワイト）",
@@ -670,7 +757,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040762/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CATHERIN"
+      "englishKey": "CATHERIN",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- CATHERIN （ライトベージュ）",
@@ -681,7 +769,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041118/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CATHERIN"
+      "englishKey": "CATHERIN",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- JESSIE （オープングレー）",
@@ -692,7 +781,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039368/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "JESSIE"
+      "englishKey": "JESSIE",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- JESSIE （オープンブルー）",
@@ -703,7 +793,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039376/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "JESSIE"
+      "englishKey": "JESSIE",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- JESSIE （カーキ）",
@@ -714,7 +805,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039438/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "JESSIE"
+      "englishKey": "JESSIE",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- JESSIE （ホワイト）",
@@ -725,7 +817,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039672/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "JESSIE"
+      "englishKey": "JESSIE",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- JESSIE （ダークブラウン）",
@@ -736,7 +829,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039753/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "JESSIE"
+      "englishKey": "JESSIE",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- JESSIE （オープンブルー）",
@@ -747,7 +841,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040686/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "JESSIE"
+      "englishKey": "JESSIE",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- JESSIE （ホワイト）",
@@ -758,7 +853,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040689/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "JESSIE"
+      "englishKey": "JESSIE",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- CAROL （ミディアムオレンジ）",
@@ -769,7 +865,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039370/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CAROL"
+      "englishKey": "CAROL",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- CAROL （オープングレー）",
@@ -780,7 +877,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039660/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CAROL"
+      "englishKey": "CAROL",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- NEWMOM （オープンブルー）",
@@ -791,7 +889,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039373/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NEWMOM"
+      "englishKey": "NEWMOM",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- NEWMOM （オープングレー）",
@@ -802,7 +901,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039474/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NEWMOM"
+      "englishKey": "NEWMOM",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- NEWMOM （オープンブルー）",
@@ -813,7 +913,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039850/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NEWMOM"
+      "englishKey": "NEWMOM",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- NEWMOM （オープンブルー）",
@@ -824,7 +925,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041070/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NEWMOM"
+      "englishKey": "NEWMOM",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- FIONA （オープングレー）",
@@ -835,7 +937,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039374/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "FIONA"
+      "englishKey": "FIONA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- FIONA （オープンブルー）",
@@ -846,7 +949,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039382/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "FIONA"
+      "englishKey": "FIONA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- FIONA （オープンブルー）",
@@ -857,7 +961,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039471/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "FIONA"
+      "englishKey": "FIONA",
+      "relatedNames": []
     },
     {
       "name": "スカーフ .-- FIONA （ブラウン）",
@@ -868,7 +973,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW040263/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "FIONA"
+      "englishKey": "FIONA",
+      "relatedNames": []
     },
     {
       "name": "スリングパンプス .-- SOL （ダークブラウン）",
@@ -879,7 +985,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW039377/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SOL"
+      "englishKey": "SOL",
+      "relatedNames": []
     },
     {
       "name": "ピアス .-- SOL （ゴールド）",
@@ -890,7 +997,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW039525/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SOL"
+      "englishKey": "SOL",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- ELISE （オープンブルー）",
@@ -901,7 +1009,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039392/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ELISE"
+      "englishKey": "ELISE",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- ELISE （オープンブルー）",
@@ -912,7 +1021,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039561/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ELISE"
+      "englishKey": "ELISE",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- ELISE （オープングレー）",
@@ -923,7 +1033,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039563/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ELISE"
+      "englishKey": "ELISE",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- ELISE （ダークブラウン）",
@@ -934,7 +1045,11 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040110/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ELISE"
+      "englishKey": "ELISE",
+      "relatedNames": [
+        "セーター .-- LUCCAMC （ネイビーブルー）",
+        "シャツ .-- PIPPA （オープンブルー）"
+      ]
     },
     {
       "name": "ジーンズ .-- ELISE （ダークレッド）",
@@ -945,7 +1060,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040162/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ELISE"
+      "englishKey": "ELISE",
+      "relatedNames": []
     },
     {
       "name": "ピアス .-- NOA （ゴールド）",
@@ -956,7 +1072,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW039408/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NOA"
+      "englishKey": "NOA",
+      "relatedNames": []
     },
     {
       "name": "トップス .-- NOA （ブラウン）",
@@ -967,7 +1084,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041490/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NOA"
+      "englishKey": "NOA",
+      "relatedNames": []
     },
     {
       "name": "ブレザー .-- MILA （ブラック）",
@@ -978,7 +1096,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039425/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MILA"
+      "englishKey": "MILA",
+      "relatedNames": []
     },
     {
       "name": "ブラウス .-- MILA （ブラック）",
@@ -989,7 +1108,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039621/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MILA"
+      "englishKey": "MILA",
+      "relatedNames": []
     },
     {
       "name": "パンツ .-- CINTU （カーキ）",
@@ -1000,7 +1120,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039428/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CINTU"
+      "englishKey": "CINTU",
+      "relatedNames": []
     },
     {
       "name": "ジャケット .-- CINTU （カーキ）",
@@ -1011,7 +1132,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039619/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CINTU"
+      "englishKey": "CINTU",
+      "relatedNames": []
     },
     {
       "name": "シャツ .-- SOFIA （ホワイト）",
@@ -1022,7 +1144,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039450/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SOFIA"
+      "englishKey": "SOFIA",
+      "relatedNames": []
     },
     {
       "name": "ロングワンピース .-- SOFIA （ミディアムオレンジ）",
@@ -1033,7 +1156,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041245/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SOFIA"
+      "englishKey": "SOFIA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- ANNIE （オープンブルー）",
@@ -1044,7 +1168,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039453/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ANNIE"
+      "englishKey": "ANNIE",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- ANNIE （オープンブルー）",
@@ -1055,7 +1180,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039565/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ANNIE"
+      "englishKey": "ANNIE",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- JOLENEP （ミディアムブラウン）",
@@ -1066,7 +1192,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039457/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "JOLENEP"
+      "englishKey": "JOLENEP",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- JOLENEP （ダークレッド）",
@@ -1077,7 +1204,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039527/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "JOLENEP"
+      "englishKey": "JOLENEP",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- JOLENEP （ダークブラウン）",
@@ -1088,7 +1216,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039555/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "JOLENEP"
+      "englishKey": "JOLENEP",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- VIOLETA （オープンブルー）",
@@ -1099,7 +1228,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039484/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "VIOLETA"
+      "englishKey": "VIOLETA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- VIOLETA （オープンブルー）",
@@ -1110,7 +1240,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039560/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "VIOLETA"
+      "englishKey": "VIOLETA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- VIOLETA （ダークブラウン）",
@@ -1121,7 +1252,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040245/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "VIOLETA"
+      "englishKey": "VIOLETA",
+      "relatedNames": []
     },
     {
       "name": "ジャケット .-- SABINA （グリーン）",
@@ -1132,7 +1264,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039503/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SABINA"
+      "englishKey": "SABINA",
+      "relatedNames": []
     },
     {
       "name": "ジャケット .-- SABINA （ダークレッド）",
@@ -1143,7 +1276,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040205/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SABINA"
+      "englishKey": "SABINA",
+      "relatedNames": []
     },
     {
       "name": "ピアス .-- LULU （ゴールド）",
@@ -1154,7 +1288,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW039528/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LULU"
+      "englishKey": "LULU",
+      "relatedNames": []
     },
     {
       "name": "パンツ .-- LULU （オープンブルー）",
@@ -1165,7 +1300,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039841/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LULU"
+      "englishKey": "LULU",
+      "relatedNames": []
     },
     {
       "name": "スカーフ .-- NIZA （ダークブラウン）",
@@ -1176,7 +1312,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW039549/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NIZA"
+      "englishKey": "NIZA",
+      "relatedNames": []
     },
     {
       "name": "ストラップサンダル .-- NIZA （ブラック）",
@@ -1187,7 +1324,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW041236/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NIZA"
+      "englishKey": "NIZA",
+      "relatedNames": []
     },
     {
       "name": "ロングスカート .-- MIMI （ブラック）",
@@ -1198,7 +1336,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039582/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MIMI"
+      "englishKey": "MIMI",
+      "relatedNames": []
     },
     {
       "name": "ヘアクリップ .-- MIMI （レッド）",
@@ -1209,7 +1348,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW040648/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MIMI"
+      "englishKey": "MIMI",
+      "relatedNames": []
     },
     {
       "name": "パンツ .-- MONA （オープンブルー）",
@@ -1220,7 +1360,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039597/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MONA"
+      "englishKey": "MONA",
+      "relatedNames": []
     },
     {
       "name": "スリングパンプス .-- MONA （ダークブラウン）",
@@ -1231,7 +1372,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW040411/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MONA"
+      "englishKey": "MONA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- NEWISA （オープンブルー）",
@@ -1242,7 +1384,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039604/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NEWISA"
+      "englishKey": "NEWISA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- NEWISA （オープングレー）",
@@ -1253,7 +1396,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039793/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NEWISA"
+      "englishKey": "NEWISA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- NEWISA （オープングレー）",
@@ -1264,7 +1408,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039855/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NEWISA"
+      "englishKey": "NEWISA",
+      "relatedNames": []
     },
     {
       "name": "タイツ .-- DOTS （ブラック）",
@@ -1275,7 +1420,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039608/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "DOTS"
+      "englishKey": "DOTS",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- DOTS （ダークブラウン）",
@@ -1286,7 +1432,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040344/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "DOTS"
+      "englishKey": "DOTS",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- CLAUDIA （オープンブルー）",
@@ -1297,7 +1444,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039614/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CLAUDIA"
+      "englishKey": "CLAUDIA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- CLAUDIA （オープングレー）",
@@ -1308,7 +1456,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039745/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CLAUDIA"
+      "englishKey": "CLAUDIA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- MOM2000 （オープンブルー）",
@@ -1319,7 +1468,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039650/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MOM2000"
+      "englishKey": "MOM2000",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- MOM2000 （オープンブルー）",
@@ -1330,7 +1480,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039651/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MOM2000"
+      "englishKey": "MOM2000",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- MOM2000 （オープングレー）",
@@ -1341,7 +1492,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039725/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MOM2000"
+      "englishKey": "MOM2000",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- LUCKY （カーキ）",
@@ -1352,7 +1504,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039653/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LUCKY"
+      "englishKey": "LUCKY",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- LUCKY （パステルブラウン）",
@@ -1363,7 +1516,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039654/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LUCKY"
+      "englishKey": "LUCKY",
+      "relatedNames": []
     },
     {
       "name": "ピアス .-- CAMERON （ゴールド）",
@@ -1374,7 +1528,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW039655/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CAMERON"
+      "englishKey": "CAMERON",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- CAMERON （ナチュラルホワイト）",
@@ -1385,7 +1540,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041083/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CAMERON"
+      "englishKey": "CAMERON",
+      "relatedNames": []
     },
     {
       "name": "パンツ .-- APPLE （ブラック）",
@@ -1396,7 +1552,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039659/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "APPLE"
+      "englishKey": "APPLE",
+      "relatedNames": []
     },
     {
       "name": "ロングワンピース .-- APPLE （ブラック）",
@@ -1407,7 +1564,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041217/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "APPLE"
+      "englishKey": "APPLE",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- MATILDA （オープングレー）",
@@ -1418,7 +1576,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039668/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MATILDA"
+      "englishKey": "MATILDA",
+      "relatedNames": []
     },
     {
       "name": "ブラウス .-- MATILDA （ミディアムオレンジ）",
@@ -1429,7 +1588,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039692/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MATILDA"
+      "englishKey": "MATILDA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- MATILDA （ダークブラウン）",
@@ -1440,7 +1600,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040463/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MATILDA"
+      "englishKey": "MATILDA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- MATILDA （オープンブルー）",
@@ -1451,7 +1612,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040631/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MATILDA"
+      "englishKey": "MATILDA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- TELMA （オープンブルー）",
@@ -1462,7 +1624,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039670/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "TELMA"
+      "englishKey": "TELMA",
+      "relatedNames": []
     },
     {
       "name": "トップス .-- TELMA （ライトベージュ）",
@@ -1473,7 +1636,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040603/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "TELMA"
+      "englishKey": "TELMA",
+      "relatedNames": []
     },
     {
       "name": "ロングジャンプスーツ .-- SALVIA （ブラウン）",
@@ -1484,7 +1648,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039720/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SALVIA"
+      "englishKey": "SALVIA",
+      "relatedNames": []
     },
     {
       "name": "パンツ .-- SALVIA （レッド）",
@@ -1495,7 +1660,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040440/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SALVIA"
+      "englishKey": "SALVIA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- VIOLETAV （ダークレッド）",
@@ -1506,7 +1672,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039723/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "VIOLETAV"
+      "englishKey": "VIOLETAV",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- VIOLETAV （ダークブラウン）",
@@ -1517,7 +1684,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039724/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "VIOLETAV"
+      "englishKey": "VIOLETAV",
+      "relatedNames": []
     },
     {
       "name": "セーター .-- LUCCA （ブラック）",
@@ -1528,7 +1696,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039742/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LUCCA"
+      "englishKey": "LUCCA",
+      "relatedNames": []
     },
     {
       "name": "セーター .-- LUCCA （パステルブルー）",
@@ -1539,7 +1708,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040295/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LUCCA"
+      "englishKey": "LUCCA",
+      "relatedNames": []
     },
     {
       "name": "ロングスカート .-- ARCHIE-H （ライトベージュ）",
@@ -1550,7 +1720,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039755/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ARCHIE H"
+      "englishKey": "ARCHIE H",
+      "relatedNames": []
     },
     {
       "name": "ロングワンピース .-- ARCHIE-H （ライトベージュ）",
@@ -1561,7 +1732,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039769/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ARCHIE H"
+      "englishKey": "ARCHIE H",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- NIKI （チャコール）",
@@ -1572,7 +1744,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039768/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NIKI"
+      "englishKey": "NIKI",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- NIKI （オープンブルー）",
@@ -1583,7 +1756,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040732/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NIKI"
+      "englishKey": "NIKI",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- NIKI （オープングレー）",
@@ -1594,7 +1768,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040750/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NIKI"
+      "englishKey": "NIKI",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- NIKI （ライトベージュ）",
@@ -1605,7 +1780,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041505/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NIKI"
+      "englishKey": "NIKI",
+      "relatedNames": []
     },
     {
       "name": "パンツ .-- FATIMA （ダークブラウン）",
@@ -1616,7 +1792,10 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039771/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "FATIMA"
+      "englishKey": "FATIMA",
+      "relatedNames": [
+        "セーター .-- ROGER （ライトベージュ）"
+      ]
     },
     {
       "name": "ピアス .-- FATIMA （ゴールド）",
@@ -1627,7 +1806,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW040223/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "FATIMA"
+      "englishKey": "FATIMA",
+      "relatedNames": []
     },
     {
       "name": "トップス .-- GARBANZO-H （ミディアムイエロー）",
@@ -1638,7 +1818,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039797/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "GARBANZO H"
+      "englishKey": "GARBANZO H",
+      "relatedNames": []
     },
     {
       "name": "ショートパンツ .-- GARBANZO-H （ミディアムイエロー）",
@@ -1649,7 +1830,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039806/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "GARBANZO H"
+      "englishKey": "GARBANZO H",
+      "relatedNames": []
     },
     {
       "name": "ピアス .-- LISA （ゴールド）",
@@ -1660,7 +1842,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW039825/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LISA"
+      "englishKey": "LISA",
+      "relatedNames": []
     },
     {
       "name": "ブレザー .-- LISA （グリーン）",
@@ -1671,7 +1854,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040596/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LISA"
+      "englishKey": "LISA",
+      "relatedNames": []
     },
     {
       "name": "バミューダショーツ .-- CAMILLA-W （オープンブルー）",
@@ -1682,7 +1866,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039833/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CAMILLA W"
+      "englishKey": "CAMILLA W",
+      "relatedNames": []
     },
     {
       "name": "バミューダショーツ .-- CAMILLA-W （オープンブルー）",
@@ -1693,7 +1878,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039918/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CAMILLA W"
+      "englishKey": "CAMILLA W",
+      "relatedNames": []
     },
     {
       "name": "ロングワンピース .-- ALEGRA （ダークレッド）",
@@ -1704,7 +1890,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039854/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ALEGRA"
+      "englishKey": "ALEGRA",
+      "relatedNames": []
     },
     {
       "name": "ロングワンピース .-- ALEGRA （ライラック）",
@@ -1715,7 +1902,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040679/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ALEGRA"
+      "englishKey": "ALEGRA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- EUGENIE （オープンブルー）",
@@ -1726,7 +1914,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039884/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "EUGENIE"
+      "englishKey": "EUGENIE",
+      "relatedNames": []
     },
     {
       "name": "ジャケット .-- EUGENIE （ライトベージュ）",
@@ -1737,7 +1926,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040556/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "EUGENIE"
+      "englishKey": "EUGENIE",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- EUGENIE （ライトベージュ）",
@@ -1748,7 +1938,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040628/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "EUGENIE"
+      "englishKey": "EUGENIE",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- PALOMA （ダークブラウン）",
@@ -1759,7 +1950,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039891/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "PALOMA"
+      "englishKey": "PALOMA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- PALOMA （オープンブルー）",
@@ -1770,7 +1962,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040007/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "PALOMA"
+      "englishKey": "PALOMA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- PALOMA （ダークレッド）",
@@ -1781,7 +1974,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040109/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "PALOMA"
+      "englishKey": "PALOMA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- PALOMA （ライトベージュ）",
@@ -1792,7 +1986,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040512/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "PALOMA"
+      "englishKey": "PALOMA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- PALOMA （ホワイト）",
@@ -1803,7 +1998,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040869/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "PALOMA"
+      "englishKey": "PALOMA",
+      "relatedNames": []
     },
     {
       "name": "スリングパンプス .-- POCKET （ナチュラルホワイト）",
@@ -1814,7 +2010,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW039919/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "POCKET"
+      "englishKey": "POCKET",
+      "relatedNames": []
     },
     {
       "name": "パンツ .-- POCKET （ブラウン）",
@@ -1825,7 +2022,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040070/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "POCKET"
+      "englishKey": "POCKET",
+      "relatedNames": []
     },
     {
       "name": "ピアス .-- ELIA （ゴールド）",
@@ -1836,7 +2034,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW039965/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ELIA"
+      "englishKey": "ELIA",
+      "relatedNames": []
     },
     {
       "name": "サングラス .-- ELIA （ブラウン）",
@@ -1847,7 +2046,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW040097/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ELIA"
+      "englishKey": "ELIA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- LIA （オープングレー）",
@@ -1858,7 +2058,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039973/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LIA"
+      "englishKey": "LIA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- LIA （オープンブルー）",
@@ -1869,7 +2070,10 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040021/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LIA"
+      "englishKey": "LIA",
+      "relatedNames": [
+        "シャツ .-- SOFIA （ブラウン）"
+      ]
     },
     {
       "name": "ロングワンピース .-- ARLET （ダークレッド）",
@@ -1880,7 +2084,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039985/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ARLET"
+      "englishKey": "ARLET",
+      "relatedNames": []
     },
     {
       "name": "トップス .-- ARLET （ダークレッド）",
@@ -1891,7 +2096,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039992/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ARLET"
+      "englishKey": "ARLET",
+      "relatedNames": []
     },
     {
       "name": "ロングスカート .-- ARLET （ダークレッド）",
@@ -1902,7 +2108,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040042/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ARLET"
+      "englishKey": "ARLET",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- NEWYORK （オープンブルー）",
@@ -1913,7 +2120,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040033/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NEWYORK"
+      "englishKey": "NEWYORK",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- NEWYORK （オープンブルー）",
@@ -1924,7 +2132,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040304/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NEWYORK"
+      "englishKey": "NEWYORK",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- NEWYORK （オープンブルー）",
@@ -1935,7 +2144,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040308/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NEWYORK"
+      "englishKey": "NEWYORK",
+      "relatedNames": []
     },
     {
       "name": "クロップドジャケット .-- NEWYORK （オープンブルー）",
@@ -1946,7 +2156,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040409/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NEWYORK"
+      "englishKey": "NEWYORK",
+      "relatedNames": []
     },
     {
       "name": "ブレザー .-- NEWYORK （ナチュラルホワイト）",
@@ -1957,7 +2168,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041240/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NEWYORK"
+      "englishKey": "NEWYORK",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- BET （ダークブラウン）",
@@ -1968,7 +2180,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040037/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BET"
+      "englishKey": "BET",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- BET （オープンブルー）",
@@ -1979,7 +2192,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040050/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BET"
+      "englishKey": "BET",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- BET （オープンブルー）",
@@ -1990,7 +2204,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040307/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BET"
+      "englishKey": "BET",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- BET （ピンク）",
@@ -2001,7 +2216,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040553/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BET"
+      "englishKey": "BET",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- BET （ナチュラルホワイト）",
@@ -2012,7 +2228,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040554/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BET"
+      "englishKey": "BET",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- RIVER （オープンブルー）",
@@ -2023,7 +2240,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040077/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "RIVER"
+      "englishKey": "RIVER",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- RIVER （オープンブルー）",
@@ -2034,7 +2252,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040130/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "RIVER"
+      "englishKey": "RIVER",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- RIVER （オープングレー）",
@@ -2045,7 +2264,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040131/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "RIVER"
+      "englishKey": "RIVER",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- BLANCA （オープンブルー）",
@@ -2056,7 +2276,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040089/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BLANCA"
+      "englishKey": "BLANCA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- BLANCA （ダークブラウン）",
@@ -2067,7 +2288,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040354/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BLANCA"
+      "englishKey": "BLANCA",
+      "relatedNames": []
     },
     {
       "name": "シャツ .-- BLANCA （ナチュラルホワイト）",
@@ -2078,7 +2300,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040759/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BLANCA"
+      "englishKey": "BLANCA",
+      "relatedNames": []
     },
     {
       "name": "パーカー .-- LENA （オープンブルー）",
@@ -2089,7 +2312,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040091/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LENA"
+      "englishKey": "LENA",
+      "relatedNames": []
     },
     {
       "name": "パンツ .-- LENA （ダークブラウン）",
@@ -2100,7 +2324,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041211/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LENA"
+      "englishKey": "LENA",
+      "relatedNames": []
     },
     {
       "name": "ロングワンピース .-- LENA （ホワイト）",
@@ -2111,7 +2336,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041345/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LENA"
+      "englishKey": "LENA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- IRIS （ライトベージュ）",
@@ -2122,7 +2348,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040154/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "IRIS"
+      "englishKey": "IRIS",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- IRIS （オープンブルー）",
@@ -2133,7 +2360,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040521/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "IRIS"
+      "englishKey": "IRIS",
+      "relatedNames": []
     },
     {
       "name": "ロングワンピース .-- MARIA （ダークレッド）",
@@ -2144,7 +2372,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040196/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MARIA"
+      "englishKey": "MARIA",
+      "relatedNames": []
     },
     {
       "name": "スカーフ .-- MARIA （ナチュラルホワイト）",
@@ -2155,7 +2384,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW040487/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MARIA"
+      "englishKey": "MARIA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- BLUES （ライトベージュ）",
@@ -2166,7 +2396,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040203/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BLUES"
+      "englishKey": "BLUES",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- BLUES （ダークレッド）",
@@ -2177,7 +2408,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040209/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BLUES"
+      "englishKey": "BLUES",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- BLUES （オープンブルー）",
@@ -2188,7 +2420,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040335/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BLUES"
+      "englishKey": "BLUES",
+      "relatedNames": []
     },
     {
       "name": "セーター .-- COPENH （ブラウン）",
@@ -2199,7 +2432,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040206/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "COPENH"
+      "englishKey": "COPENH",
+      "relatedNames": []
     },
     {
       "name": "カーディガン .-- COPENH （ブラウン）",
@@ -2210,7 +2444,11 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040265/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "COPENH"
+      "englishKey": "COPENH",
+      "relatedNames": [
+        "スカート .-- AURA （ダークブラウン）",
+        "シャツ .-- SOFIA （パステルブルー）"
+      ]
     },
     {
       "name": "パンツ .-- CLAUDIE （ブラウン）",
@@ -2221,7 +2459,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040220/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CLAUDIE"
+      "englishKey": "CLAUDIE",
+      "relatedNames": []
     },
     {
       "name": "ブラウス .-- CLAUDIE （ブラウン）",
@@ -2232,7 +2471,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040337/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CLAUDIE"
+      "englishKey": "CLAUDIE",
+      "relatedNames": []
     },
     {
       "name": "シャツ .-- PARTENOP （ライラック）",
@@ -2243,7 +2483,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040298/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "PARTENOP"
+      "englishKey": "PARTENOP",
+      "relatedNames": []
     },
     {
       "name": "シャツ .-- PARTENOP （ホワイト）",
@@ -2254,7 +2495,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040313/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "PARTENOP"
+      "englishKey": "PARTENOP",
+      "relatedNames": []
     },
     {
       "name": "ブレザー .-- KANSAS （レッド）",
@@ -2265,7 +2507,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040300/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "KANSAS"
+      "englishKey": "KANSAS",
+      "relatedNames": []
     },
     {
       "name": "ピアス .-- KANSAS （ゴールド）",
@@ -2276,7 +2519,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW040617/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "KANSAS"
+      "englishKey": "KANSAS",
+      "relatedNames": []
     },
     {
       "name": "パンツ .-- HELSINKI （ダークパープル）",
@@ -2287,7 +2531,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040320/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "HELSINKI"
+      "englishKey": "HELSINKI",
+      "relatedNames": []
     },
     {
       "name": "ブレザー .-- HELSINKI （ダークパープル）",
@@ -2298,7 +2543,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040330/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "HELSINKI"
+      "englishKey": "HELSINKI",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- STUDS （ダークブラウン）",
@@ -2309,7 +2555,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040355/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "STUDS"
+      "englishKey": "STUDS",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- STUDS （オープンブルー）",
@@ -2320,7 +2567,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041060/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "STUDS"
+      "englishKey": "STUDS",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- RACHEL （ダークブラウン）",
@@ -2331,7 +2579,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040381/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "RACHEL"
+      "englishKey": "RACHEL",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- RACHEL （パステルグレー）",
@@ -2342,7 +2591,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040515/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "RACHEL"
+      "englishKey": "RACHEL",
+      "relatedNames": []
     },
     {
       "name": "ジャケット .-- RACHEL （チャコール）",
@@ -2353,7 +2603,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040642/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "RACHEL"
+      "englishKey": "RACHEL",
+      "relatedNames": []
     },
     {
       "name": "ミニスカート .-- DOTY （ブラウン）",
@@ -2364,7 +2615,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040427/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "DOTY"
+      "englishKey": "DOTY",
+      "relatedNames": []
     },
     {
       "name": "ロングワンピース .-- DOTY （ブラック）",
@@ -2375,7 +2627,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040910/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "DOTY"
+      "englishKey": "DOTY",
+      "relatedNames": []
     },
     {
       "name": "セーター .-- ROSI （ピンク）",
@@ -2386,7 +2639,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040449/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ROSI"
+      "englishKey": "ROSI",
+      "relatedNames": []
     },
     {
       "name": "カーディガン .-- ROSI （グリーン）",
@@ -2397,7 +2651,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040495/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ROSI"
+      "englishKey": "ROSI",
+      "relatedNames": []
     },
     {
       "name": "ベルト .-- MARIAN （ライトベージュ）",
@@ -2408,7 +2663,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040460/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MARIAN"
+      "englishKey": "MARIAN",
+      "relatedNames": []
     },
     {
       "name": "サングラス .-- MARIAN （ダークブラウン）",
@@ -2419,7 +2675,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW040584/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MARIAN"
+      "englishKey": "MARIAN",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- CELIA （オープンブルー）",
@@ -2430,7 +2687,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040465/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CELIA"
+      "englishKey": "CELIA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- CELIA （オープンブルー）",
@@ -2441,7 +2699,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041074/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CELIA"
+      "englishKey": "CELIA",
+      "relatedNames": []
     },
     {
       "name": "スマホショルダー P-- BILMAC （ライトベージュ）",
@@ -2452,7 +2711,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW040494/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "P BILMAC"
+      "englishKey": "P BILMAC",
+      "relatedNames": []
     },
     {
       "name": "ハンドバッグ P-- BILMAC （ミディアムブラウン）",
@@ -2463,7 +2723,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW040812/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "P BILMAC"
+      "englishKey": "P BILMAC",
+      "relatedNames": []
     },
     {
       "name": "クロップドジャケット .-- AMELIA （ダークブラウン）",
@@ -2474,7 +2735,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040539/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "AMELIA"
+      "englishKey": "AMELIA",
+      "relatedNames": []
     },
     {
       "name": "ピアス .-- AMELIA （シルバー）",
@@ -2485,7 +2747,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW041284/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "AMELIA"
+      "englishKey": "AMELIA",
+      "relatedNames": []
     },
     {
       "name": "ブレザー .-- SYSTECK （ブラウン）",
@@ -2496,7 +2759,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040540/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SYSTECK"
+      "englishKey": "SYSTECK",
+      "relatedNames": []
     },
     {
       "name": "パンツ .-- SYSTECK （ブラウン）",
@@ -2507,7 +2771,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040688/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SYSTECK"
+      "englishKey": "SYSTECK",
+      "relatedNames": []
     },
     {
       "name": "トップス .-- MILENA （ブラウン）",
@@ -2518,7 +2783,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040557/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MILENA"
+      "englishKey": "MILENA",
+      "relatedNames": []
     },
     {
       "name": "ピアス .-- MILENA （ゴールド）",
@@ -2529,7 +2795,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW040624/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MILENA"
+      "englishKey": "MILENA",
+      "relatedNames": []
     },
     {
       "name": "ミニワンピース .-- MILENA （ブラウン）",
@@ -2540,7 +2807,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040666/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MILENA"
+      "englishKey": "MILENA",
+      "relatedNames": []
     },
     {
       "name": "シャツ .-- JUNO （ミディアムブルー）",
@@ -2551,7 +2819,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040568/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "JUNO"
+      "englishKey": "JUNO",
+      "relatedNames": []
     },
     {
       "name": "パンツ .-- JUNO （ミディアムブルー）",
@@ -2562,7 +2831,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040749/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "JUNO"
+      "englishKey": "JUNO",
+      "relatedNames": []
     },
     {
       "name": "トップス .-- IANA （ブラック）",
@@ -2573,7 +2843,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040571/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "IANA"
+      "englishKey": "IANA",
+      "relatedNames": []
     },
     {
       "name": "パンツ .-- IANA （ブラック）",
@@ -2584,7 +2855,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040636/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "IANA"
+      "englishKey": "IANA",
+      "relatedNames": []
     },
     {
       "name": "トレンチコート .-- NARCISO （ナチュラルホワイト）",
@@ -2595,7 +2867,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040592/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NARCISO"
+      "englishKey": "NARCISO",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- NARCISO （オープンブルー）",
@@ -2606,7 +2879,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040621/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NARCISO"
+      "englishKey": "NARCISO",
+      "relatedNames": []
     },
     {
       "name": "ロングワンピース .-- NEVADO （ホワイト）",
@@ -2617,7 +2891,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040595/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NEVADO"
+      "englishKey": "NEVADO",
+      "relatedNames": []
     },
     {
       "name": "ベスト .-- NEVADO （グレー）",
@@ -2628,7 +2903,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040861/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NEVADO"
+      "englishKey": "NEVADO",
+      "relatedNames": []
     },
     {
       "name": "パンツ .-- ALMA （ナチュラルホワイト）",
@@ -2639,7 +2915,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040597/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ALMA"
+      "englishKey": "ALMA",
+      "relatedNames": []
     },
     {
       "name": "ロングワンピース .-- ALMA （パステルブルー）",
@@ -2650,7 +2927,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040625/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ALMA"
+      "englishKey": "ALMA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- THEITA （ナチュラルホワイト）",
@@ -2661,7 +2939,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040669/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "THEITA"
+      "englishKey": "THEITA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- THEITA （オープンブルー）",
@@ -2672,7 +2951,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040674/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "THEITA"
+      "englishKey": "THEITA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- ROWAN （ブラック）",
@@ -2683,7 +2963,12 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040704/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ROWAN"
+      "englishKey": "ROWAN",
+      "relatedNames": [
+        "ハンドバッグ G-- BILMA （ミディアムブラウン）",
+        "セーター .-- SURIMI （ブラック）",
+        "ブレザー .-- IGUANA （ライトベージュ）"
+      ]
     },
     {
       "name": "ジーンズ .-- ROWAN （ホワイト）",
@@ -2694,7 +2979,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040713/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ROWAN"
+      "englishKey": "ROWAN",
+      "relatedNames": []
     },
     {
       "name": "バミューダショーツ .-- ROWAN （ナチュラルホワイト）",
@@ -2705,7 +2991,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040968/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ROWAN"
+      "englishKey": "ROWAN",
+      "relatedNames": []
     },
     {
       "name": "トップス .-- PARISO （ナチュラルホワイト）",
@@ -2716,7 +3003,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040734/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "PARISO"
+      "englishKey": "PARISO",
+      "relatedNames": []
     },
     {
       "name": "カーディガン .-- PARISO （ナチュラルホワイト）",
@@ -2727,7 +3015,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040752/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "PARISO"
+      "englishKey": "PARISO",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- BELLE （ナチュラルホワイト）",
@@ -2738,7 +3027,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040770/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BELLE"
+      "englishKey": "BELLE",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- BELLE （パステルブルー）",
@@ -2749,7 +3039,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041409/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BELLE"
+      "englishKey": "BELLE",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- BELLE （パステルピンク）",
@@ -2760,7 +3051,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041421/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BELLE"
+      "englishKey": "BELLE",
+      "relatedNames": []
     },
     {
       "name": "パンツ .-- MOJITO （ミディアムイエロー）",
@@ -2771,7 +3063,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040782/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MOJITO"
+      "englishKey": "MOJITO",
+      "relatedNames": []
     },
     {
       "name": "ジャケット .-- MOJITO （ブラウン）",
@@ -2782,7 +3075,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040917/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MOJITO"
+      "englishKey": "MOJITO",
+      "relatedNames": []
     },
     {
       "name": "パンツ .-- MALTA （ナチュラルホワイト）",
@@ -2793,7 +3087,11 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040805/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MALTA"
+      "englishKey": "MALTA",
+      "relatedNames": [
+        "サンダル .-- VAMP （グレー）",
+        "ジャケット .-- JACK （カーキ）"
+      ]
     },
     {
       "name": "ブレザー .-- MALTA （ネイビーブルー）",
@@ -2804,7 +3102,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040996/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MALTA"
+      "englishKey": "MALTA",
+      "relatedNames": []
     },
     {
       "name": "財布 P-- DOLORES （ダークブラウン）",
@@ -2815,7 +3114,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW040807/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "P DOLORES"
+      "englishKey": "P DOLORES",
+      "relatedNames": []
     },
     {
       "name": "財布 P-- DOLORES （ナチュラルホワイト）",
@@ -2826,7 +3126,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW040897/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "P DOLORES"
+      "englishKey": "P DOLORES",
+      "relatedNames": []
     },
     {
       "name": "トップス .-- BUTTER （ブラック）",
@@ -2837,7 +3138,10 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040811/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BUTTER"
+      "englishKey": "BUTTER",
+      "relatedNames": [
+        "ストラップサンダル .-- SNAKE （ナチュラルホワイト）"
+      ]
     },
     {
       "name": "パンツ .-- BUTTER （ナチュラルホワイト）",
@@ -2848,7 +3152,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040983/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BUTTER"
+      "englishKey": "BUTTER",
+      "relatedNames": []
     },
     {
       "name": "ロングワンピース .-- BUTTER （ナチュラルホワイト）",
@@ -2859,7 +3164,10 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041509/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BUTTER"
+      "englishKey": "BUTTER",
+      "relatedNames": [
+        "レザーヒールサンダル .-- DENIS （グリーン）"
+      ]
     },
     {
       "name": "財布 M-- BILMACHO （ダークブラウン）",
@@ -2870,7 +3178,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW040814/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "M BILMACHO"
+      "englishKey": "M BILMACHO",
+      "relatedNames": []
     },
     {
       "name": "ポーチ M-- BILMACHO （ダークブラウン）",
@@ -2881,7 +3190,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW040850/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "M BILMACHO"
+      "englishKey": "M BILMACHO",
+      "relatedNames": []
     },
     {
       "name": "ポーチ M-- BILMACHO （ダークブラウン）",
@@ -2892,7 +3202,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW040941/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "M BILMACHO"
+      "englishKey": "M BILMACHO",
+      "relatedNames": []
     },
     {
       "name": "財布 P-- BILMACHO （ダークブラウン）",
@@ -2903,7 +3214,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW040818/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "P BILMACHO"
+      "englishKey": "P BILMACHO",
+      "relatedNames": []
     },
     {
       "name": "ハンドバッグ P-- BILMACHO （ダークブラウン）",
@@ -2914,7 +3226,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW040925/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "P BILMACHO"
+      "englishKey": "P BILMACHO",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- EMILY （オープンブルー）",
@@ -2925,7 +3238,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040901/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "EMILY"
+      "englishKey": "EMILY",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- EMILY （ホワイト）",
@@ -2936,7 +3250,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041072/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "EMILY"
+      "englishKey": "EMILY",
+      "relatedNames": []
     },
     {
       "name": "ブレザー .-- AZUR （パステルブルー）",
@@ -2947,7 +3262,10 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040948/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "AZUR"
+      "englishKey": "AZUR",
+      "relatedNames": [
+        "パンツ .-- WHITE （ホワイト）"
+      ]
     },
     {
       "name": "トップス .-- AZUR （パステルブルー）",
@@ -2958,7 +3276,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041132/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "AZUR"
+      "englishKey": "AZUR",
+      "relatedNames": []
     },
     {
       "name": "トップス .-- MELISA （グリーン）",
@@ -2969,7 +3288,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040977/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MELISA"
+      "englishKey": "MELISA",
+      "relatedNames": []
     },
     {
       "name": "ロングワンピース .-- MELISA （グリーン）",
@@ -2980,7 +3300,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041107/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MELISA"
+      "englishKey": "MELISA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- SOUFFLE （オープンブルー）",
@@ -2991,7 +3312,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041007/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SOUFFLE"
+      "englishKey": "SOUFFLE",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- SOUFFLE （ナチュラルホワイト）",
@@ -3002,7 +3324,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041197/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SOUFFLE"
+      "englishKey": "SOUFFLE",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- SOUFFLE （カーキ）",
@@ -3013,7 +3336,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041271/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SOUFFLE"
+      "englishKey": "SOUFFLE",
+      "relatedNames": []
     },
     {
       "name": "クロップドジャケット .-- KIKA （オープンブルー）",
@@ -3024,7 +3348,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041023/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "KIKA"
+      "englishKey": "KIKA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- KIKA （オープンブルー）",
@@ -3035,7 +3360,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041096/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "KIKA"
+      "englishKey": "KIKA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- KIKA （ホワイト）",
@@ -3046,7 +3372,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041097/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "KIKA"
+      "englishKey": "KIKA",
+      "relatedNames": []
     },
     {
       "name": "セーター .-- SEQUIN （パステルブルー）",
@@ -3057,7 +3384,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041030/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SEQUIN"
+      "englishKey": "SEQUIN",
+      "relatedNames": []
     },
     {
       "name": "トップス .-- SEQUIN （パステルブルー）",
@@ -3068,7 +3396,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041102/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SEQUIN"
+      "englishKey": "SEQUIN",
+      "relatedNames": []
     },
     {
       "name": "トップス .-- AMELIE （ナチュラルホワイト）",
@@ -3079,7 +3408,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041057/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "AMELIE"
+      "englishKey": "AMELIE",
+      "relatedNames": []
     },
     {
       "name": "バミューダショーツ .-- AMELIE （オープンブルー）",
@@ -3090,7 +3420,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041246/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "AMELIE"
+      "englishKey": "AMELIE",
+      "relatedNames": []
     },
     {
       "name": "ロングワンピース .-- STRAIT （ブラック）",
@@ -3101,7 +3432,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041101/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "STRAIT"
+      "englishKey": "STRAIT",
+      "relatedNames": []
     },
     {
       "name": "トップス .-- STRAIT （ブラウン）",
@@ -3112,7 +3444,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041144/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "STRAIT"
+      "englishKey": "STRAIT",
+      "relatedNames": []
     },
     {
       "name": "トップス .-- GALA （ナチュラルホワイト）",
@@ -3123,7 +3456,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041119/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "GALA"
+      "englishKey": "GALA",
+      "relatedNames": []
     },
     {
       "name": "シャツ .-- GALA （ブラウン）",
@@ -3134,7 +3468,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041469/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "GALA"
+      "englishKey": "GALA",
+      "relatedNames": []
     },
     {
       "name": "パンツ .-- BRYNN （オープンブルー）",
@@ -3145,7 +3480,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041140/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BRYNN"
+      "englishKey": "BRYNN",
+      "relatedNames": []
     },
     {
       "name": "パンツ .-- BRYNN （ホワイト）",
@@ -3156,7 +3492,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041255/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BRYNN"
+      "englishKey": "BRYNN",
+      "relatedNames": []
     },
     {
       "name": "ブラウス .-- LURDES （ミディアムブルー）",
@@ -3167,7 +3504,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041574/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LURDES"
+      "englishKey": "LURDES",
+      "relatedNames": []
     },
     {
       "name": "ミニワンピース .-- LURDES （ナチュラルホワイト）",
@@ -3178,7 +3516,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042396/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LURDES"
+      "englishKey": "LURDES",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- LUDOVIC （ミディアムブルー）",
@@ -3189,7 +3528,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041581/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LUDOVIC"
+      "englishKey": "LUDOVIC",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- LUDOVIC （ホワイト）",
@@ -3200,7 +3540,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041654/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LUDOVIC"
+      "englishKey": "LUDOVIC",
+      "relatedNames": []
     },
     {
       "name": "バミューダショーツ .-- AMELIE （ナチュラルホワイト）",
@@ -3211,7 +3552,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041609/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "AMELIE"
+      "englishKey": "AMELIE",
+      "relatedNames": []
     },
     {
       "name": "バミューダショーツ .-- AMELIE （オープンブルー）",
@@ -3222,7 +3564,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041878/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "AMELIE"
+      "englishKey": "AMELIE",
+      "relatedNames": []
     },
     {
       "name": "ストラップサンダル .-- GINA （ブラック）",
@@ -3233,7 +3576,10 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW041621/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "GINA"
+      "englishKey": "GINA",
+      "relatedNames": [
+        "ミニワンピース .-- CLEAN （ナチュラルホワイト）"
+      ]
     },
     {
       "name": "ブラウス .-- GINA （ナチュラルホワイト）",
@@ -3244,7 +3590,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042029/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "GINA"
+      "englishKey": "GINA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- PALOMA （ホワイト）",
@@ -3255,7 +3602,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041626/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "PALOMA"
+      "englishKey": "PALOMA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- PALOMA （ライトベージュ）",
@@ -3266,7 +3614,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041881/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "PALOMA"
+      "englishKey": "PALOMA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- PALOMA （オープンブルー）",
@@ -3277,7 +3626,10 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042789/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "PALOMA"
+      "englishKey": "PALOMA",
+      "relatedNames": [
+        "セーター .-- RIZON （ミディアムブラウン）"
+      ]
     },
     {
       "name": "ジーンズ .-- PALOMA （ブラック）",
@@ -3288,7 +3640,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042954/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "PALOMA"
+      "englishKey": "PALOMA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .--PALOMA （カーキ）",
@@ -3299,7 +3652,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043295/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "PALOMA"
+      "englishKey": "PALOMA",
+      "relatedNames": []
     },
     {
       "name": "バミューダショーツ .-- CAMILLA （ホワイト）",
@@ -3310,7 +3664,10 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041652/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CAMILLA"
+      "englishKey": "CAMILLA",
+      "relatedNames": [
+        "トップス .-- BONI （ミディアムグレー）"
+      ]
     },
     {
       "name": "バミューダショーツ .-- CAMILLA （オープングレー）",
@@ -3321,7 +3678,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041864/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CAMILLA"
+      "englishKey": "CAMILLA",
+      "relatedNames": []
     },
     {
       "name": "バミューダショーツ .-- CAMILLA （オープンブルー）",
@@ -3332,7 +3690,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041970/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CAMILLA"
+      "englishKey": "CAMILLA",
+      "relatedNames": []
     },
     {
       "name": "ピアス .-- TANIA （ゴールド）",
@@ -3343,7 +3702,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW041664/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "TANIA"
+      "englishKey": "TANIA",
+      "relatedNames": []
     },
     {
       "name": "ワンピース .-- TANIA （ダークブラウン）",
@@ -3354,7 +3714,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042916/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "TANIA"
+      "englishKey": "TANIA",
+      "relatedNames": []
     },
     {
       "name": "スカーフ .-- MIAMI （レッド）",
@@ -3365,7 +3726,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW041687/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MIAMI"
+      "englishKey": "MIAMI",
+      "relatedNames": []
     },
     {
       "name": "シーンズ .-- MIAMI （オープンブルー）",
@@ -3376,7 +3738,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042562/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MIAMI"
+      "englishKey": "MIAMI",
+      "relatedNames": []
     },
     {
       "name": "シーンズ .-- MIAMI （オープンブルー）",
@@ -3387,7 +3750,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042563/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MIAMI"
+      "englishKey": "MIAMI",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- MIAMI （ダークレッド）",
@@ -3398,7 +3762,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042670/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MIAMI"
+      "englishKey": "MIAMI",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- MIAMI （ナチュラルホワイト）",
@@ -3409,7 +3774,11 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042859/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MIAMI"
+      "englishKey": "MIAMI",
+      "relatedNames": [
+        "パンプス .-- RUMBA （ナチュラルホワイト）",
+        "レザージャケット .-- ALAN （ブラック）"
+      ]
     },
     {
       "name": "ロングワンピース .-- GRETA （オレンジ）",
@@ -3420,7 +3789,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041719/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "GRETA"
+      "englishKey": "GRETA",
+      "relatedNames": []
     },
     {
       "name": "レザーローファー .-- GRETA （パステルブラウン）",
@@ -3431,7 +3801,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW042620/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "GRETA"
+      "englishKey": "GRETA",
+      "relatedNames": []
     },
     {
       "name": "ヒールサンダル .-- ANGEL （ダークブラウン）",
@@ -3442,7 +3813,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW041724/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ANGEL"
+      "englishKey": "ANGEL",
+      "relatedNames": []
     },
     {
       "name": "ロングワンピース .-- ANGEL （ダークレッド）",
@@ -3453,7 +3825,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042422/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ANGEL"
+      "englishKey": "ANGEL",
+      "relatedNames": []
     },
     {
       "name": "ロングワンピース .-- CHECK （ブラウン）",
@@ -3464,7 +3837,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041729/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CHECK"
+      "englishKey": "CHECK",
+      "relatedNames": []
     },
     {
       "name": "シャツ-- CHECK （ナチュラルホワイト）",
@@ -3475,7 +3849,11 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042288/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CHECK"
+      "englishKey": "CHECK",
+      "relatedNames": [
+        "ストラップサンダル .-- GINA （ブラック）",
+        "パンツ.-- PICCOLA （ブラック）"
+      ]
     },
     {
       "name": "セーター .-- MARIA （ゴールド）",
@@ -3486,7 +3864,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041737/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MARIA"
+      "englishKey": "MARIA",
+      "relatedNames": []
     },
     {
       "name": "スカーフ .-- MARIA （ナチュラルホワイト）",
@@ -3497,7 +3876,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW041768/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MARIA"
+      "englishKey": "MARIA",
+      "relatedNames": []
     },
     {
       "name": "ピアス .-- MARIA （ゴールド）",
@@ -3508,7 +3888,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW042061/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MARIA"
+      "englishKey": "MARIA",
+      "relatedNames": []
     },
     {
       "name": "アンクルストラップシューズ .-- NUBE （ベージュ）",
@@ -3519,7 +3900,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW041757/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NUBE"
+      "englishKey": "NUBE",
+      "relatedNames": []
     },
     {
       "name": "ブラウス .-- NUBE （ナチュラルホワイト）",
@@ -3530,7 +3912,11 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042816/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NUBE"
+      "englishKey": "NUBE",
+      "relatedNames": [
+        "クラッチバッグ-- G NOEMI （ダークブラウン）",
+        "パンツ .-- MARTIN （パステルグレー）"
+      ]
     },
     {
       "name": "ジーンズ .-- SIENNA （ホワイト）",
@@ -3541,7 +3927,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041792/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SIENNA"
+      "englishKey": "SIENNA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- SIENNA （オープンブルー）",
@@ -3552,7 +3939,10 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041998/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SIENNA"
+      "englishKey": "SIENNA",
+      "relatedNames": [
+        "Tシャツ .-- CONTI （ネイビーブルー）"
+      ]
     },
     {
       "name": "ジーンズ .-- SIENNA （オープングレー）",
@@ -3563,7 +3953,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042343/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SIENNA"
+      "englishKey": "SIENNA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- SIENNA （オープンブルー）",
@@ -3574,7 +3965,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042356/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SIENNA"
+      "englishKey": "SIENNA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- SIENNA （ダークレッド）",
@@ -3585,7 +3977,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042887/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SIENNA"
+      "englishKey": "SIENNA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- SIENNA （ダークブラウン）",
@@ -3596,7 +3989,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042965/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SIENNA"
+      "englishKey": "SIENNA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- SIENNA （オープンブルー）",
@@ -3607,7 +4001,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043027/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SIENNA"
+      "englishKey": "SIENNA",
+      "relatedNames": []
     },
     {
       "name": "ピアス .--SIENNA （ゴールド）",
@@ -3618,7 +4013,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW043128/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SIENNA"
+      "englishKey": "SIENNA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- CATHERIN （ホワイト）",
@@ -3629,7 +4025,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041799/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CATHERIN"
+      "englishKey": "CATHERIN",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- CATHERIN （オープンブルー）",
@@ -3640,7 +4037,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041957/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CATHERIN"
+      "englishKey": "CATHERIN",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- CATHERIN （オープングレー）",
@@ -3651,7 +4049,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042394/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CATHERIN"
+      "englishKey": "CATHERIN",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- CATHERIN （オープンブルー）",
@@ -3662,7 +4061,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042453/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CATHERIN"
+      "englishKey": "CATHERIN",
+      "relatedNames": []
     },
     {
       "name": "シーンズ .-- CATHERIN （オープンブルー）",
@@ -3673,7 +4073,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042557/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CATHERIN"
+      "englishKey": "CATHERIN",
+      "relatedNames": []
     },
     {
       "name": "レザーストラップサンダル .-- SANDRA （ゴールド）",
@@ -3684,7 +4085,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW041892/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SANDRA"
+      "englishKey": "SANDRA",
+      "relatedNames": []
     },
     {
       "name": "ピアス .--SANDRA （ゴールド）",
@@ -3695,7 +4097,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW043153/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SANDRA"
+      "englishKey": "SANDRA",
+      "relatedNames": []
     },
     {
       "name": "スカーフ .-- FLORENCE （ピンク）",
@@ -3706,7 +4109,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW041919/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "FLORENCE"
+      "englishKey": "FLORENCE",
+      "relatedNames": []
     },
     {
       "name": "ブラウス-- FLORENCE （ホワイト）",
@@ -3717,7 +4121,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042259/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "FLORENCE"
+      "englishKey": "FLORENCE",
+      "relatedNames": []
     },
     {
       "name": "トップス .-- LEIRE （イエロー）",
@@ -3728,7 +4133,10 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041937/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LEIRE"
+      "englishKey": "LEIRE",
+      "relatedNames": [
+        "ロングワンピース .-- GLASGOW （パステルイエロー）"
+      ]
     },
     {
       "name": "ピアス .-- LEIRE （ゴールド）",
@@ -3739,7 +4147,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW042530/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LEIRE"
+      "englishKey": "LEIRE",
+      "relatedNames": []
     },
     {
       "name": "ブラウス .-- CUCA （イエロー）",
@@ -3750,7 +4159,11 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041997/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CUCA"
+      "englishKey": "CUCA",
+      "relatedNames": [
+        "ベルト .-- MAYO3 （ダークブラウン）",
+        "パンツ .-- BALO （カーキ）"
+      ]
     },
     {
       "name": "ブラウス .-- CUCA （ナチュラルホワイト）",
@@ -3761,7 +4174,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042870/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CUCA"
+      "englishKey": "CUCA",
+      "relatedNames": []
     },
     {
       "name": "スカーフ .-- JUNE （ピンク）",
@@ -3772,7 +4186,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW042032/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "JUNE"
+      "englishKey": "JUNE",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- JUNE （オープンブルー）",
@@ -3783,7 +4198,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042955/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "JUNE"
+      "englishKey": "JUNE",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .--JUNE （ブラック）",
@@ -3794,7 +4210,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043209/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "JUNE"
+      "englishKey": "JUNE",
+      "relatedNames": []
     },
     {
       "name": "ロングスカート .-- KNOT （チャコール）",
@@ -3805,7 +4222,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042051/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "KNOT"
+      "englishKey": "KNOT",
+      "relatedNames": []
     },
     {
       "name": "パンツ .-- KNOT （ブラック）",
@@ -3816,7 +4234,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042817/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "KNOT"
+      "englishKey": "KNOT",
+      "relatedNames": []
     },
     {
       "name": "ピアス .-- LUA （ゴールド）",
@@ -3827,7 +4246,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW042074/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LUA"
+      "englishKey": "LUA",
+      "relatedNames": []
     },
     {
       "name": "ピアス .-- LUA （シルバー）",
@@ -3838,7 +4258,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW042083/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LUA"
+      "englishKey": "LUA",
+      "relatedNames": []
     },
     {
       "name": "ピアス .-- LAIA （シルバー）",
@@ -3849,7 +4270,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW042077/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LAIA"
+      "englishKey": "LAIA",
+      "relatedNames": []
     },
     {
       "name": "ピアス .-- LAIA （ゴールド）",
@@ -3860,7 +4282,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW042087/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LAIA"
+      "englishKey": "LAIA",
+      "relatedNames": []
     },
     {
       "name": "ピアス .-- CAROL （シルバー）",
@@ -3871,7 +4294,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW042129/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CAROL"
+      "englishKey": "CAROL",
+      "relatedNames": []
     },
     {
       "name": "ピアス .-- CAROL （ゴールド）",
@@ -3882,7 +4306,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW042132/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CAROL"
+      "englishKey": "CAROL",
+      "relatedNames": []
     },
     {
       "name": "ピアス .-- CANDELA （ゴールド）",
@@ -3893,7 +4318,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW042137/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CANDELA"
+      "englishKey": "CANDELA",
+      "relatedNames": []
     },
     {
       "name": "ジャケット .-- CANDELA （ダークブラウン）",
@@ -3904,7 +4330,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042624/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CANDELA"
+      "englishKey": "CANDELA",
+      "relatedNames": []
     },
     {
       "name": "ジャケット .-- CANDELA （オープンブルー）",
@@ -3915,7 +4342,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042749/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CANDELA"
+      "englishKey": "CANDELA",
+      "relatedNames": []
     },
     {
       "name": "ピアス .-- CASILDA （ゴールド）",
@@ -3926,7 +4354,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW042147/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CASILDA"
+      "englishKey": "CASILDA",
+      "relatedNames": []
     },
     {
       "name": "ピアス .-- CASILDA （シルバー）",
@@ -3937,7 +4366,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW042154/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CASILDA"
+      "englishKey": "CASILDA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ-- SCARLETT （オープンブルー）",
@@ -3948,7 +4378,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042184/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SCARLETT"
+      "englishKey": "SCARLETT",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ-- SCARLETT （ナチュラルホワイト）",
@@ -3959,7 +4390,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042274/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SCARLETT"
+      "englishKey": "SCARLETT",
+      "relatedNames": []
     },
     {
       "name": "ジャケット-- BIMBA （オープンブルー）",
@@ -3970,7 +4402,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042188/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BIMBA"
+      "englishKey": "BIMBA",
+      "relatedNames": []
     },
     {
       "name": "トップス-- BIMBA （ブラウン）",
@@ -3981,7 +4414,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042250/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BIMBA"
+      "englishKey": "BIMBA",
+      "relatedNames": []
     },
     {
       "name": "ブラウス .-- BIMBA （ネイビーブルー）",
@@ -3992,7 +4426,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042888/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BIMBA"
+      "englishKey": "BIMBA",
+      "relatedNames": []
     },
     {
       "name": "パンツ-- CLAIRE （ナチュラルホワイト）",
@@ -4003,7 +4438,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042193/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CLAIRE"
+      "englishKey": "CLAIRE",
+      "relatedNames": []
     },
     {
       "name": "パンツ-- CLAIRE （オープンブルー）",
@@ -4014,7 +4450,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042195/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CLAIRE"
+      "englishKey": "CLAIRE",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ-- DANILA （オープンブルー）",
@@ -4025,7 +4462,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042201/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "DANILA"
+      "englishKey": "DANILA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- DANILA （ナチュラルホワイト）",
@@ -4036,7 +4474,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042781/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "DANILA"
+      "englishKey": "DANILA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- DANILA （オープングレー）",
@@ -4047,7 +4486,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042884/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "DANILA"
+      "englishKey": "DANILA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- DANILA （オープンブルー）",
@@ -4058,7 +4498,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043022/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "DANILA"
+      "englishKey": "DANILA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ-- MATILDA （オープンブルー）",
@@ -4069,7 +4510,10 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042212/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MATILDA"
+      "englishKey": "MATILDA",
+      "relatedNames": [
+        "Tシャツ .-- PAN （グレー）"
+      ]
     },
     {
       "name": "シーンズ .-- MATILDA （オープンブルー）",
@@ -4080,7 +4524,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042578/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MATILDA"
+      "englishKey": "MATILDA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- MATILDA （オープングレー）",
@@ -4091,7 +4536,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042721/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MATILDA"
+      "englishKey": "MATILDA",
+      "relatedNames": []
     },
     {
       "name": "スカート-- MAISEL （ナチュラルホワイト）",
@@ -4102,7 +4548,12 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042257/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MAISEL"
+      "englishKey": "MAISEL",
+      "relatedNames": [
+        "ストラップパンプス-- CIRCO （ナチュラルホワイト）",
+        "キャミソール .-- TITY （ナチュラルホワイト）",
+        "トップス .-- BACARI （ナチュラルホワイト）"
+      ]
     },
     {
       "name": "スカート.-- MAISEL （ブラック）",
@@ -4113,7 +4564,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042300/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MAISEL"
+      "englishKey": "MAISEL",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ-- LIA （オープンブルー）",
@@ -4124,7 +4576,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042289/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LIA"
+      "englishKey": "LIA",
+      "relatedNames": []
     },
     {
       "name": "スカート .-- LIA （ナチュラルホワイト）",
@@ -4135,7 +4588,10 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042703/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LIA"
+      "englishKey": "LIA",
+      "relatedNames": [
+        "セーター .-- LAYE （ホワイト）"
+      ]
     },
     {
       "name": "スカート.-- MARTA （ナチュラルホワイト）",
@@ -4146,7 +4602,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042296/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MARTA"
+      "englishKey": "MARTA",
+      "relatedNames": []
     },
     {
       "name": "ワンピース .-- MARTA （ブラウン）",
@@ -4157,7 +4614,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042952/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MARTA"
+      "englishKey": "MARTA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ.-- CLOTILDE （ナチュラルホワイト）",
@@ -4168,7 +4626,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042322/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CLOTILDE"
+      "englishKey": "CLOTILDE",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- CLOTILDE （オープングレー）",
@@ -4179,7 +4638,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042398/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CLOTILDE"
+      "englishKey": "CLOTILDE",
+      "relatedNames": []
     },
     {
       "name": "シャツ .-- RUA （パステルブルー）",
@@ -4190,7 +4650,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042342/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "RUA"
+      "englishKey": "RUA",
+      "relatedNames": []
     },
     {
       "name": "シャツ .-- RUA （ブラウン）",
@@ -4201,7 +4662,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042382/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "RUA"
+      "englishKey": "RUA",
+      "relatedNames": []
     },
     {
       "name": "ジャケット .-- MARIE （ホワイト）",
@@ -4212,7 +4674,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042369/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MARIE"
+      "englishKey": "MARIE",
+      "relatedNames": []
     },
     {
       "name": "パンツ .-- MARIE （ホワイト）",
@@ -4223,7 +4686,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042702/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MARIE"
+      "englishKey": "MARIE",
+      "relatedNames": []
     },
     {
       "name": "シャツ .-- ANNA （ミディアムブルー）",
@@ -4234,7 +4698,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042372/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ANNA"
+      "englishKey": "ANNA",
+      "relatedNames": []
     },
     {
       "name": "シャツ .-- ANNA （ナチュラルホワイト）",
@@ -4245,7 +4710,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042374/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ANNA"
+      "englishKey": "ANNA",
+      "relatedNames": []
     },
     {
       "name": "Tシャツ .-- JESI （ブラック）",
@@ -4256,7 +4722,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042376/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "T JESI"
+      "englishKey": "T JESI",
+      "relatedNames": []
     },
     {
       "name": "Tシャツ .-- JESI （ホワイト）",
@@ -4267,7 +4734,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042404/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "T JESI"
+      "englishKey": "T JESI",
+      "relatedNames": []
     },
     {
       "name": "シャツ .-- ROMA （パステルブルー）",
@@ -4278,7 +4746,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042379/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ROMA"
+      "englishKey": "ROMA",
+      "relatedNames": []
     },
     {
       "name": "ブラウス .-- ROMA （ホワイト）",
@@ -4289,7 +4758,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042515/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ROMA"
+      "englishKey": "ROMA",
+      "relatedNames": []
     },
     {
       "name": "ブラウス .-- ROMA （ピンク）",
@@ -4300,7 +4770,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042535/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ROMA"
+      "englishKey": "ROMA",
+      "relatedNames": []
     },
     {
       "name": "ロングジャンプスーツ .-- ANNE （ミディアムブラウン）",
@@ -4311,7 +4782,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042402/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ANNE"
+      "englishKey": "ANNE",
+      "relatedNames": []
     },
     {
       "name": "ミニワンピース .-- ANNE （ブラック）",
@@ -4322,7 +4794,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042510/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ANNE"
+      "englishKey": "ANNE",
+      "relatedNames": []
     },
     {
       "name": "シャツ .-- SOFIA （パステルブルー）",
@@ -4333,7 +4806,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042441/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SOFIA"
+      "englishKey": "SOFIA",
+      "relatedNames": []
     },
     {
       "name": "シャツ .-- SOFIA （ホワイト）",
@@ -4344,7 +4818,11 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042723/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SOFIA"
+      "englishKey": "SOFIA",
+      "relatedNames": [
+        "バケットバッグ.-- ENRIC （ブラック）",
+        "レザードライビングシューズ .-- PAZ （パステルブラウン）"
+      ]
     },
     {
       "name": "シャツ .-- SOFIA （パステルピンク）",
@@ -4355,7 +4833,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042893/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SOFIA"
+      "englishKey": "SOFIA",
+      "relatedNames": []
     },
     {
       "name": "シャツ .--SOFIA （ネイビーブルー）",
@@ -4366,7 +4845,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043161/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SOFIA"
+      "englishKey": "SOFIA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- VIOLETA （オープンブルー）",
@@ -4377,7 +4857,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042458/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "VIOLETA"
+      "englishKey": "VIOLETA",
+      "relatedNames": []
     },
     {
       "name": "スカーフ .--VIOLETA （ナチュラルホワイト）",
@@ -4388,7 +4869,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW043146/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "VIOLETA"
+      "englishKey": "VIOLETA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .--VIOLETA （ダークブラウン）",
@@ -4399,7 +4881,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043208/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "VIOLETA"
+      "englishKey": "VIOLETA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .--VIOLETA （オープンブルー）",
@@ -4410,7 +4893,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043210/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "VIOLETA"
+      "englishKey": "VIOLETA",
+      "relatedNames": []
     },
     {
       "name": "パンツ .-- BRIN （ブラウン）",
@@ -4421,7 +4905,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042471/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BRIN"
+      "englishKey": "BRIN",
+      "relatedNames": []
     },
     {
       "name": "パンツ .-- BRIN （ネイビーブルー）",
@@ -4432,7 +4917,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042542/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BRIN"
+      "englishKey": "BRIN",
+      "relatedNames": []
     },
     {
       "name": "ブレザー .-- SINGAPUR （ピンク）",
@@ -4443,7 +4929,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042497/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SINGAPUR"
+      "englishKey": "SINGAPUR",
+      "relatedNames": []
     },
     {
       "name": "パンツ .-- SINGAPUR （ピンク）",
@@ -4454,7 +4941,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042577/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SINGAPUR"
+      "englishKey": "SINGAPUR",
+      "relatedNames": []
     },
     {
       "name": "パンツ .-- DARA （ミディアムブルー）",
@@ -4465,7 +4953,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042504/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "DARA"
+      "englishKey": "DARA",
+      "relatedNames": []
     },
     {
       "name": "ブラウス .-- DARA （ミディアムブルー）",
@@ -4476,7 +4965,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042549/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "DARA"
+      "englishKey": "DARA",
+      "relatedNames": []
     },
     {
       "name": "レザージャケット .-- ALAN （ブラック）",
@@ -4487,7 +4977,10 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042505/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ALAN"
+      "englishKey": "ALAN",
+      "relatedNames": [
+        "パンツ .-- CONNIE （ブラック）"
+      ]
     },
     {
       "name": "レザージャケット .-- ALAN （ブラウン）",
@@ -4498,7 +4991,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042885/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ALAN"
+      "englishKey": "ALAN",
+      "relatedNames": []
     },
     {
       "name": "シャツ .-- SELENA （パステルブルー）",
@@ -4509,7 +5003,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042506/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SELENA"
+      "englishKey": "SELENA",
+      "relatedNames": []
     },
     {
       "name": "シャツ .-- SELENA （ブラウン）",
@@ -4520,7 +5015,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042970/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SELENA"
+      "englishKey": "SELENA",
+      "relatedNames": []
     },
     {
       "name": "ピアス .--SELENA （ゴールド）",
@@ -4531,7 +5027,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW043154/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SELENA"
+      "englishKey": "SELENA",
+      "relatedNames": []
     },
     {
       "name": "ネックレス .-- LUCIANA （ホワイト）",
@@ -4542,7 +5039,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW042526/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LUCIANA"
+      "englishKey": "LUCIANA",
+      "relatedNames": []
     },
     {
       "name": "ロングワンピース .-- LUCIANA （ブラウン）",
@@ -4553,7 +5051,11 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042795/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LUCIANA"
+      "englishKey": "LUCIANA",
+      "relatedNames": [
+        "ショルダーバッグ G-- BALBOA （ダークブラウン）",
+        "ストラップパンプス .-- BIMBO （ダークブラウン）"
+      ]
     },
     {
       "name": "ピアス .-- LINA （ゴールド）",
@@ -4564,7 +5066,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW042546/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LINA"
+      "englishKey": "LINA",
+      "relatedNames": []
     },
     {
       "name": "スカート .-- LINA （グレー）",
@@ -4575,7 +5078,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042964/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LINA"
+      "englishKey": "LINA",
+      "relatedNames": []
     },
     {
       "name": "レザーショートブーツ .--LINA （ブラック）",
@@ -4586,7 +5090,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW043297/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LINA"
+      "englishKey": "LINA",
+      "relatedNames": []
     },
     {
       "name": "ジャケット .-- CHARLIE （ナチュラルホワイト）",
@@ -4597,7 +5102,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042596/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CHARLIE"
+      "englishKey": "CHARLIE",
+      "relatedNames": []
     },
     {
       "name": "ショルダーバッグ .-- CHARLIE （ブラック）",
@@ -4608,7 +5114,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW043120/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CHARLIE"
+      "englishKey": "CHARLIE",
+      "relatedNames": []
     },
     {
       "name": "ショルダーバッグ .-- CHARLIE （ブラック）",
@@ -4619,7 +5126,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW043247/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CHARLIE"
+      "englishKey": "CHARLIE",
+      "relatedNames": []
     },
     {
       "name": "ジャケット .-- SOUFFLE （グレー）",
@@ -4630,7 +5138,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042600/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SOUFFLE"
+      "englishKey": "SOUFFLE",
+      "relatedNames": []
     },
     {
       "name": "パンツ .-- SOUFFLE （グレー）",
@@ -4641,7 +5150,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042711/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SOUFFLE"
+      "englishKey": "SOUFFLE",
+      "relatedNames": []
     },
     {
       "name": "パンツ .-- FLARE （ブラック）",
@@ -4652,7 +5162,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042607/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "FLARE"
+      "englishKey": "FLARE",
+      "relatedNames": []
     },
     {
       "name": "パンツ .-- FLARE （ミディアムブラウン）",
@@ -4663,7 +5174,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042889/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "FLARE"
+      "englishKey": "FLARE",
+      "relatedNames": []
     },
     {
       "name": "ブラウス .-- STUT （ブラウン）",
@@ -4674,7 +5186,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042625/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "STUT"
+      "englishKey": "STUT",
+      "relatedNames": []
     },
     {
       "name": "スカート .-- STUT （ブラウン）",
@@ -4685,7 +5198,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042880/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "STUT"
+      "englishKey": "STUT",
+      "relatedNames": []
     },
     {
       "name": "ブレザー .-- CERISE （パステルピンク）",
@@ -4696,7 +5210,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042628/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CERISE"
+      "englishKey": "CERISE",
+      "relatedNames": []
     },
     {
       "name": "パンツ .-- CERISE （パステルピンク）",
@@ -4707,7 +5222,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042876/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CERISE"
+      "englishKey": "CERISE",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- NEWMOM （オープンブルー）",
@@ -4718,7 +5234,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042636/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NEWMOM"
+      "englishKey": "NEWMOM",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- NEWMOM （デニムグレー）",
@@ -4729,7 +5246,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042732/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NEWMOM"
+      "englishKey": "NEWMOM",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- NEWMOM （オープンブルー）",
@@ -4740,7 +5258,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042931/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NEWMOM"
+      "englishKey": "NEWMOM",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- NEWMOM （オープングレー）",
@@ -4751,7 +5270,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042932/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NEWMOM"
+      "englishKey": "NEWMOM",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- CAIT （オープングレー）",
@@ -4762,7 +5282,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042643/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CAIT"
+      "englishKey": "CAIT",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- CAIT （オープンブルー）",
@@ -4773,7 +5294,11 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042758/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CAIT"
+      "englishKey": "CAIT",
+      "relatedNames": [
+        "ストラップサンダル .-- LUSH （ブラック）",
+        "ジャケット .-- PAULA （ピンク）"
+      ]
     },
     {
       "name": "シャツ .-- REGU （ナチュラルホワイト）",
@@ -4784,7 +5309,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042644/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "REGU"
+      "englishKey": "REGU",
+      "relatedNames": []
     },
     {
       "name": "シャツ .-- REGU （ピンク）",
@@ -4795,7 +5321,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042790/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "REGU"
+      "englishKey": "REGU",
+      "relatedNames": []
     },
     {
       "name": "ジャケット .-- JACKES （ダークブラウン）",
@@ -4806,7 +5333,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042655/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "JACKES"
+      "englishKey": "JACKES",
+      "relatedNames": []
     },
     {
       "name": "ジャケット .-- JACKES （レッド）",
@@ -4817,7 +5345,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043082/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "JACKES"
+      "englishKey": "JACKES",
+      "relatedNames": []
     },
     {
       "name": "ブラウス .-- FLORETA （ブラウン）",
@@ -4828,7 +5357,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042658/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "FLORETA"
+      "englishKey": "FLORETA",
+      "relatedNames": []
     },
     {
       "name": "ブラウス .-- FLORETA （ナチュラルホワイト）",
@@ -4839,7 +5369,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042748/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "FLORETA"
+      "englishKey": "FLORETA",
+      "relatedNames": []
     },
     {
       "name": "パンツ .-- LENNY （ナチュラルホワイト）",
@@ -4850,7 +5381,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042674/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LENNY"
+      "englishKey": "LENNY",
+      "relatedNames": []
     },
     {
       "name": "パンツ .-- LENNY （チャコール）",
@@ -4861,7 +5393,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042734/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LENNY"
+      "englishKey": "LENNY",
+      "relatedNames": []
     },
     {
       "name": "パンツ .-- BARREL （ネイビーブルー）",
@@ -4872,7 +5405,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042688/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BARREL"
+      "englishKey": "BARREL",
+      "relatedNames": []
     },
     {
       "name": "パンツ .-- BARREL （ブラウン）",
@@ -4883,7 +5417,10 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042720/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BARREL"
+      "englishKey": "BARREL",
+      "relatedNames": [
+        "シャツ-- CUACKCUA （ブラウン）"
+      ]
     },
     {
       "name": "ジーンズ .-- KAIRA （オープンブルー）",
@@ -4894,7 +5431,10 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042694/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "KAIRA"
+      "englishKey": "KAIRA",
+      "relatedNames": [
+        "ブラウス .-- LAILA （パステルピンク）"
+      ]
     },
     {
       "name": "ジーンズ .--KAIRA （オープンブルー）",
@@ -4905,7 +5445,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043241/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "KAIRA"
+      "englishKey": "KAIRA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- CAROLINE （オープンブルー）",
@@ -4916,7 +5457,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042763/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CAROLINE"
+      "englishKey": "CAROLINE",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- CAROLINE （オープンブルー）",
@@ -4927,7 +5469,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042956/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CAROLINE"
+      "englishKey": "CAROLINE",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- BET （オープンブルー）",
@@ -4938,7 +5481,11 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042777/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BET"
+      "englishKey": "BET",
+      "relatedNames": [
+        "シャツ .-- IRUYA （パステルブルー）",
+        "レザージャケット .-- ZADIG （ダークブラウン）"
+      ]
     },
     {
       "name": "ジーンズ .-- BET （オープンブルー）",
@@ -4949,7 +5496,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042782/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BET"
+      "englishKey": "BET",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- BET （デニムグレー）",
@@ -4960,7 +5508,10 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042822/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BET"
+      "englishKey": "BET",
+      "relatedNames": [
+        "Tシャツ .-- ENI （ホワイト）"
+      ]
     },
     {
       "name": "ジーンズ .-- BET （パステルブラウン）",
@@ -4971,7 +5522,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042944/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BET"
+      "englishKey": "BET",
+      "relatedNames": []
     },
     {
       "name": "カーディガン .-- BIMBU （ミディアムグレー）",
@@ -4982,7 +5534,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042783/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BIMBU"
+      "englishKey": "BIMBU",
+      "relatedNames": []
     },
     {
       "name": "ベスト .-- BIMBU （ミディアムグレー）",
@@ -4993,7 +5546,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042981/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BIMBU"
+      "englishKey": "BIMBU",
+      "relatedNames": []
     },
     {
       "name": "セーター .--BIMBU （ミディアムグレー）",
@@ -5004,7 +5558,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043320/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BIMBU"
+      "englishKey": "BIMBU",
+      "relatedNames": []
     },
     {
       "name": "カーディガン .-- XIXI （ブラウン）",
@@ -5015,7 +5570,10 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042806/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "XIXI"
+      "englishKey": "XIXI",
+      "relatedNames": [
+        "シャツ .-- GALA （ホワイト）"
+      ]
     },
     {
       "name": "スカート .-- XIXI （ブラウン）",
@@ -5026,7 +5584,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042875/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "XIXI"
+      "englishKey": "XIXI",
+      "relatedNames": []
     },
     {
       "name": "ジャケット .-- CANDYX （ネイビーブルー）",
@@ -5037,7 +5596,10 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042825/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CANDYX"
+      "englishKey": "CANDYX",
+      "relatedNames": [
+        "セーター .-- PIMENTEL （ナチュラルホワイト）"
+      ]
     },
     {
       "name": "ジャケット .-- CANDYX （ダークブラウン）",
@@ -5048,7 +5610,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042879/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CANDYX"
+      "englishKey": "CANDYX",
+      "relatedNames": []
     },
     {
       "name": "コート .-- PICAROL （ミディアムブラウン）",
@@ -5059,7 +5622,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042831/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "PICAROL"
+      "englishKey": "PICAROL",
+      "relatedNames": []
     },
     {
       "name": "コート .-- PICAROL （ダークグレー）",
@@ -5070,7 +5634,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042848/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "PICAROL"
+      "englishKey": "PICAROL",
+      "relatedNames": []
     },
     {
       "name": "コート .-- PICAROL （ダークブラウン）",
@@ -5081,7 +5646,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043056/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "PICAROL"
+      "englishKey": "PICAROL",
+      "relatedNames": []
     },
     {
       "name": "コート .-- PICAROL （ブラック）",
@@ -5092,7 +5658,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043108/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "PICAROL"
+      "englishKey": "PICAROL",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- TOKIO （オープンブルー）",
@@ -5103,7 +5670,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042834/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "TOKIO"
+      "englishKey": "TOKIO",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- TOKIO （カーキ）",
@@ -5114,7 +5682,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042992/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "TOKIO"
+      "englishKey": "TOKIO",
+      "relatedNames": []
     },
     {
       "name": "ジャケット .-- TOKIO （カーキ）",
@@ -5125,7 +5694,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043086/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "TOKIO"
+      "englishKey": "TOKIO",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- SOPHIA （オープンブルー）",
@@ -5136,7 +5706,11 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042839/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SOPHIA"
+      "englishKey": "SOPHIA",
+      "relatedNames": [
+        "セーター .-- CARLOS （ダークレッド）",
+        "パンプス .-- RUMBA （ナチュラルホワイト）"
+      ]
     },
     {
       "name": "ジーンズ .-- SOPHIA （オープンブルー）",
@@ -5147,7 +5721,11 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042858/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SOPHIA"
+      "englishKey": "SOPHIA",
+      "relatedNames": [
+        "レザージャケット .-- SHOPER （ブラック）",
+        "パンプス .-- RUMBA （ナチュラルホワイト）"
+      ]
     },
     {
       "name": "パンツ .-- COMET （ナチュラルホワイト）",
@@ -5158,7 +5736,11 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042857/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "COMET"
+      "englishKey": "COMET",
+      "relatedNames": [
+        "パンプス .-- RUMBA （ナチュラルホワイト）",
+        "ジャケット .-- TAMESIS （ブラック）"
+      ]
     },
     {
       "name": "セーター .-- COMET （ナチュラルホワイト）",
@@ -5169,7 +5751,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043007/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "COMET"
+      "englishKey": "COMET",
+      "relatedNames": []
     },
     {
       "name": "ロングワンピース .-- CAMILA （ブラウン）",
@@ -5180,7 +5763,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042877/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CAMILA"
+      "englishKey": "CAMILA",
+      "relatedNames": []
     },
     {
       "name": "シャツ .-- CAMILA （ブラウン）",
@@ -5191,7 +5775,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042948/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "CAMILA"
+      "englishKey": "CAMILA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- EMILY （パステルブラウン）",
@@ -5202,7 +5787,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042949/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "EMILY"
+      "englishKey": "EMILY",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- EMILY （オープングレー）",
@@ -5213,7 +5799,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042972/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "EMILY"
+      "englishKey": "EMILY",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- MARCELA （オープンブルー）",
@@ -5224,7 +5811,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042950/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MARCELA"
+      "englishKey": "MARCELA",
+      "relatedNames": []
     },
     {
       "name": "ジーンズ .-- MARCELA （デニムグレー）",
@@ -5235,7 +5823,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042998/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "MARCELA"
+      "englishKey": "MARCELA",
+      "relatedNames": []
     },
     {
       "name": "シャツ .-- PARTENOP （ホワイト）",
@@ -5246,7 +5835,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042969/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "PARTENOP"
+      "englishKey": "PARTENOP",
+      "relatedNames": []
     },
     {
       "name": "シャツ .-- PARTENOP （パステルブルー）",
@@ -5257,7 +5847,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043048/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "PARTENOP"
+      "englishKey": "PARTENOP",
+      "relatedNames": []
     },
     {
       "name": "ブレザー .-- PENCIL （ネイビーブルー）",
@@ -5268,7 +5859,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042973/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "PENCIL"
+      "englishKey": "PENCIL",
+      "relatedNames": []
     },
     {
       "name": "スカート .--PENCIL （ブラック）",
@@ -5279,7 +5871,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043136/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "PENCIL"
+      "englishKey": "PENCIL",
+      "relatedNames": []
     },
     {
       "name": "パンツ .-- VANESSA （カーキ）",
@@ -5290,7 +5883,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042988/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "VANESSA"
+      "englishKey": "VANESSA",
+      "relatedNames": []
     },
     {
       "name": "セーター .--VANESSA （ミディアムグレー）",
@@ -5301,7 +5895,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043277/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "VANESSA"
+      "englishKey": "VANESSA",
+      "relatedNames": []
     },
     {
       "name": "デニムトレンチ .-- NARCISO （オープンブルー）",
@@ -5312,7 +5907,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043008/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NARCISO"
+      "englishKey": "NARCISO",
+      "relatedNames": []
     },
     {
       "name": "パンツ .--NARCISO （オープンブルー）",
@@ -5323,7 +5919,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043133/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "NARCISO"
+      "englishKey": "NARCISO",
+      "relatedNames": []
     },
     {
       "name": "セーター .-- TAMARA （イエロー）",
@@ -5334,7 +5931,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043012/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "TAMARA"
+      "englishKey": "TAMARA",
+      "relatedNames": []
     },
     {
       "name": "スカート .-- TAMARA （ブラウン）",
@@ -5345,7 +5943,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043045/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "TAMARA"
+      "englishKey": "TAMARA",
+      "relatedNames": []
     },
     {
       "name": "ブラウス .-- FRESA （ナチュラルホワイト）",
@@ -5356,7 +5955,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043024/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "FRESA"
+      "englishKey": "FRESA",
+      "relatedNames": []
     },
     {
       "name": "ブラウス .-- FRESA （レッド）",
@@ -5367,7 +5967,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043046/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "FRESA"
+      "englishKey": "FRESA",
+      "relatedNames": []
     },
     {
       "name": "バケットバッグ .-- LOTTA （グレー）",
@@ -5378,7 +5979,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW043032/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LOTTA"
+      "englishKey": "LOTTA",
+      "relatedNames": []
     },
     {
       "name": "バケットバッグ .-- LOTTA （ブラック）",
@@ -5389,7 +5991,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW043054/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LOTTA"
+      "englishKey": "LOTTA",
+      "relatedNames": []
     },
     {
       "name": "シャツ .-- LIV （ホワイト）",
@@ -5400,7 +6003,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043037/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LIV"
+      "englishKey": "LIV",
+      "relatedNames": []
     },
     {
       "name": "シャツ .-- LIV （ピンク）",
@@ -5411,7 +6015,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043083/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LIV"
+      "englishKey": "LIV",
+      "relatedNames": []
     },
     {
       "name": "スエットシャツ .-- ARKA （ネイビーブルー）",
@@ -5422,7 +6027,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043053/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ARKA"
+      "englishKey": "ARKA",
+      "relatedNames": []
     },
     {
       "name": "パンツ .--ARKA （ネイビーブルー）",
@@ -5433,7 +6039,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043171/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "ARKA"
+      "englishKey": "ARKA",
+      "relatedNames": []
     },
     {
       "name": "コート .-- BATIN （ブラック）",
@@ -5444,7 +6051,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043081/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BATIN"
+      "englishKey": "BATIN",
+      "relatedNames": []
     },
     {
       "name": "コート .-- BATIN （パステルグレー）",
@@ -5455,7 +6063,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043115/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "BATIN"
+      "englishKey": "BATIN",
+      "relatedNames": []
     },
     {
       "name": "コート .-- SIRENITA （パステルグレー）",
@@ -5466,7 +6075,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043087/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SIRENITA"
+      "englishKey": "SIRENITA",
+      "relatedNames": []
     },
     {
       "name": "コート .-- SIRENITA （ブラック）",
@@ -5477,7 +6087,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043092/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SIRENITA"
+      "englishKey": "SIRENITA",
+      "relatedNames": []
     },
     {
       "name": "ブレザー .-- LEA （ブラック）",
@@ -5488,7 +6099,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043102/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LEA"
+      "englishKey": "LEA",
+      "relatedNames": []
     },
     {
       "name": "ショートブーツ .--LEA （ダークレッド）",
@@ -5499,7 +6111,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW043292/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "LEA"
+      "englishKey": "LEA",
+      "relatedNames": []
     },
     {
       "name": "コート .-- TRAVIATA （ブラック）",
@@ -5510,7 +6123,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043113/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "TRAVIATA"
+      "englishKey": "TRAVIATA",
+      "relatedNames": []
     },
     {
       "name": "コート .-- TRAVIATA （ミディアムブラウン）",
@@ -5521,7 +6135,8 @@
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043116/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "TRAVIATA"
+      "englishKey": "TRAVIATA",
+      "relatedNames": []
     }
   ],
   "groups": [],
