@@ -5,6 +5,7 @@ const state = {
   checked: new Set(JSON.parse(localStorage.getItem("mango-monitor-checked") || "[]"))
 };
 let productsReady;
+const dataPathPrefix = /\/(?:relation|global)\/$/.test(window.location.pathname) ? "../" : "";
 
 function escapeHtml(value) {
   return String(value ?? "").replace(/[&<>\"']/g, (character) => ({
@@ -122,7 +123,7 @@ function renderMainProducts() {
 }
 
 function loadProducts() {
-  productsReady = fetch(`products.json?v=${Date.now()}`, { cache: "no-store" })
+  productsReady = fetch(`${dataPathPrefix}products.json?v=${Date.now()}`, { cache: "no-store" })
     .then((response) => response.json())
     .then((data) => {
       const groups = buildProductGroups(data.products || []);
@@ -140,7 +141,7 @@ function loadProducts() {
 
 function loadGlobalProducts() {
   const ready = productsReady || Promise.resolve();
-  ready.then(() => fetch(`global-products.json?v=${Date.now()}`, { cache: "no-store" }))
+  ready.then(() => fetch(`${dataPathPrefix}global-products.json?v=${Date.now()}`, { cache: "no-store" }))
     .then((response) => response.json())
     .then((data) => {
       let rows = [];
@@ -185,5 +186,6 @@ document.querySelectorAll(".main-tab").forEach((button) => {
 
 window.addEventListener("DOMContentLoaded", () => {
   loadProducts();
-  switchTab("relationView");
+  const path = window.location.pathname;
+  switchTab(path.includes("/global/") ? "globalRelationView" : "relationView");
 });

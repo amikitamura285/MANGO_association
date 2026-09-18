@@ -43,6 +43,11 @@ GitHubリポジトリにこのフォルダーをPushし、リポジトリの `Se
 
 のようにアクセスできます。
 
+個別ページのURLも利用できます。
+
+- 関連付け: `https://amikitamura285.github.io/MANGO_association/relation/`
+- グローバル関連付け: `https://amikitamura285.github.io/MANGO_association/global/`
+
 このサイトは、閲覧者が Node.js をインストールせず、ブラウザだけで見ることができます。`public` 配下の HTML / CSS / JavaScript / JSON をそのまま表示する静的サイトなので、誰でも追加ダウンロードなしで利用できます。
 
 `crawl.yml` は毎日19:00 UTC（日本時間4:00）にGitHub Actions上でクロールし、`public/products.json` と `public/global-products.json` を更新してコミットします。Actionsの初回実行は `Actions > Crawl MANGO products > Run workflow` から手動実行できます。
