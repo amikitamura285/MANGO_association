@@ -4,6 +4,7 @@ const state = {
   products: [],
   checked: new Set(JSON.parse(localStorage.getItem("mango-monitor-checked") || "[]"))
 };
+let productsReady;
 
 function escapeHtml(value) {
   return String(value ?? "").replace(/[&<>\"']/g, (character) => ({
@@ -121,7 +122,7 @@ function renderMainProducts() {
 }
 
 function loadProducts() {
-  fetch(`products.json?v=${Date.now()}`, { cache: "no-store" })
+  productsReady = fetch(`products.json?v=${Date.now()}`, { cache: "no-store" })
     .then((response) => response.json())
     .then((data) => {
       const groups = Array.isArray(data.groups) && data.groups.length
@@ -136,10 +137,12 @@ function loadProducts() {
     .catch(() => {
       $("#productEmpty").hidden = false;
     });
+  return productsReady;
 }
 
 function loadGlobalProducts() {
-  fetch(`global-products.json?v=${Date.now()}`, { cache: "no-store" })
+  const ready = productsReady || Promise.resolve();
+  ready.then(() => fetch(`global-products.json?v=${Date.now()}`, { cache: "no-store" }))
     .then((response) => response.json())
     .then((data) => {
       const japanProducts = state.products.length
@@ -158,7 +161,7 @@ function loadGlobalProducts() {
             return normalizeName(item.name || "") !== normalizeName(globalProduct.name || "");
           });
           return { main: globalProduct, related };
-        }).filter((entry) => entry.related.length > 0);
+        });
       }
 
       $("#globalProductCount").textContent = String(rows.length).padStart(2, "0");
