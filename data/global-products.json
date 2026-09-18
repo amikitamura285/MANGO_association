@@ -1,5 +1,5 @@
-﻿{
-  "updatedAt": "2026-09-18T10:02:59.617Z",
+{
+  "updatedAt": "2026-09-18T10:42:52.502Z",
   "products": [
     {
       "name": "Shirt-collar jacket with belt - Women",
@@ -12,7 +12,7 @@
       "relatedProductNumbers": []
     },
     {
-      "name": "Skirt with slit and ruffle detail",
+      "name": "Skirt with slit and ruffle detail - Women",
       "image": "https://media.mango.com/is/image/punto/37036014-99-102?wid=1024",
       "productNumber": "37036014",
       "baseCode": "37036014",
@@ -62,7 +62,7 @@
       "relatedProductNumbers": []
     },
     {
-      "name": "Double-breasted virgin wool coat",
+      "name": "Double-breasted virgin wool coat - Women",
       "image": "https://media.mango.com/is/image/punto/37016751-99-002?wid=1024",
       "productNumber": "37016751",
       "baseCode": "37016751",
@@ -736,7 +736,7 @@
       "relatedProductNumbers": []
     },
     {
-      "name": "Suede drawstring bag",
+      "name": "Suede drawstring bag - Women",
       "image": "https://media.mango.com/is/image/punto/37075864-09-052?wid=1024",
       "productNumber": "37075864",
       "baseCode": "37075864",
@@ -1393,7 +1393,7 @@
       ]
     },
     {
-      "name": "Faux fur contrast scarf - Women",
+      "name": "Faux fur contrast scarf",
       "image": "https://media.mango.com/is/image/punto/37086357-08-016?wid=1024",
       "productNumber": "37086357",
       "baseCode": "37086357",
@@ -1447,7 +1447,7 @@
       ]
     },
     {
-      "name": "Engraved buckle leather belt",
+      "name": "Engraved buckle leather belt - Women",
       "image": "https://media.mango.com/is/image/punto/37046361-32-016?wid=1024",
       "productNumber": "37046361",
       "baseCode": "37046361",
@@ -2035,7 +2035,7 @@
     },
     {
       "main": {
-        "name": "Skirt with slit and ruffle detail",
+        "name": "Skirt with slit and ruffle detail - Women",
         "image": "https://media.mango.com/is/image/punto/37036014-99-102?wid=1024",
         "productNumber": "37036014",
         "baseCode": "37036014",
@@ -2131,7 +2131,7 @@
     },
     {
       "main": {
-        "name": "Double-breasted virgin wool coat",
+        "name": "Double-breasted virgin wool coat - Women",
         "image": "https://media.mango.com/is/image/punto/37016751-99-002?wid=1024",
         "productNumber": "37016751",
         "baseCode": "37016751",
@@ -3806,7 +3806,7 @@
     },
     {
       "main": {
-        "name": "Suede drawstring bag",
+        "name": "Suede drawstring bag - Women",
         "image": "https://media.mango.com/is/image/punto/37075864-09-052?wid=1024",
         "productNumber": "37075864",
         "baseCode": "37075864",
@@ -5494,7 +5494,7 @@
     },
     {
       "main": {
-        "name": "Faux fur contrast scarf - Women",
+        "name": "Faux fur contrast scarf",
         "image": "https://media.mango.com/is/image/punto/37086357-08-016?wid=1024",
         "productNumber": "37086357",
         "baseCode": "37086357",
@@ -5636,7 +5636,7 @@
     },
     {
       "main": {
-        "name": "Engraved buckle leather belt",
+        "name": "Engraved buckle leather belt - Women",
         "image": "https://media.mango.com/is/image/punto/37046361-32-016?wid=1024",
         "productNumber": "37046361",
         "baseCode": "37046361",
