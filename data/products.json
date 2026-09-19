@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T19:22:51.717Z",
+  "updatedAt": "2026-09-19T19:20:57.324Z",
   "products": [
     {
       "name": "ロングワンピース .-- NICOLE （ホワイト）",
@@ -146,6 +146,30 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "JAGUAR",
+      "relatedNames": []
+    },
+    {
+      "name": "セーター .-- NEKKO （ミディアムブラウン）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW038718_1_l.jpg",
+      "productNumber": "MA1658EW038718",
+      "brandItemNumber": "17005812 35 色 ミディアムブラウン（35）",
+      "brandItemFirstDigit": "1",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038718/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "NEKKO",
+      "relatedNames": []
+    },
+    {
+      "name": "ミニワンピース .-- NEKKO （ダークグリーン）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW038967_1_l.jpg",
+      "productNumber": "MA1658EW038967",
+      "brandItemNumber": "17047804 49 色 ダークグリーン（49）",
+      "brandItemFirstDigit": "1",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038967/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "NEKKO",
       "relatedNames": []
     },
     {
@@ -1685,30 +1709,6 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "VIOLETAV",
-      "relatedNames": []
-    },
-    {
-      "name": "セーター .-- LUCCA （ブラック）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039742_1_l.jpg",
-      "productNumber": "MA1658EW039742",
-      "brandItemNumber": "27031275 99 色 ブラック（99）",
-      "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039742/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "LUCCA",
-      "relatedNames": []
-    },
-    {
-      "name": "セーター .-- LUCCA （パステルブルー）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040295_1_l.jpg",
-      "productNumber": "MA1658EW040295",
-      "brandItemNumber": "27014777 50 色 パステルブルー（50）",
-      "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040295/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "LUCCA",
       "relatedNames": []
     },
     {
@@ -6139,8 +6139,38 @@
       "relatedNames": []
     }
   ],
-  "groups": [],
-  "newCount": 0,
+  "groups": [
+    {
+      "englishKey": "NEKKO",
+      "main": {
+        "name": "セーター .-- NEKKO （ミディアムブラウン）",
+        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW038718_1_l.jpg",
+        "productNumber": "MA1658EW038718",
+        "brandItemNumber": "17005812 35 色 ミディアムブラウン（35）",
+        "brandItemFirstDigit": "1",
+        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038718/",
+        "brandCode": "MA1658",
+        "brandName": "MANGO",
+        "englishKey": "NEKKO",
+        "relatedNames": []
+      },
+      "related": [
+        {
+          "name": "ミニワンピース .-- NEKKO （ダークグリーン）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW038967_1_l.jpg",
+          "productNumber": "MA1658EW038967",
+          "brandItemNumber": "17047804 49 色 ダークグリーン（49）",
+          "brandItemFirstDigit": "1",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038967/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "NEKKO",
+          "relatedNames": []
+        }
+      ]
+    }
+  ],
+  "newCount": 1,
   "displayedMainProductNumbers": [
     "MA1658EW33440",
     "MA3878EC003099",
@@ -7390,7 +7420,8 @@
     "MA1658EW043171",
     "MA1658EW043323",
     "MA1658EW043210",
-    "MA1658AW043247"
+    "MA1658AW043247",
+    "MA1658EW038718"
   ],
-  "scanned": 4169
+  "scanned": 4157
 }

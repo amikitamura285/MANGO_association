@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T19:23:56.414Z",
+  "updatedAt": "2026-09-19T19:21:57.236Z",
   "products": [
     {
       "name": "Shirt-collar jacket with belt - Women",
@@ -263,6 +263,10 @@
           "colorId": "99"
         },
         {
+          "productNumber": "37075872",
+          "colorId": "99"
+        },
+        {
           "productNumber": "37076360",
           "colorId": "99"
         },
@@ -458,6 +462,10 @@
           "colorId": "01"
         },
         {
+          "productNumber": "37075872",
+          "colorId": "99"
+        },
+        {
           "productNumber": "37034460",
           "colorId": "92"
         },
@@ -537,6 +545,33 @@
         {
           "productNumber": "37094104",
           "colorId": "30"
+        }
+      ]
+    },
+    {
+      "name": "Straight corduroy trousers - Women",
+      "image": "https://media.mango.com/is/image/punto/37077779-70-002?wid=1024",
+      "productNumber": "37077779",
+      "baseCode": "37077779",
+      "globalCode": "37077779",
+      "colorId": "70",
+      "url": "https://shop.mango.com/gb/en/p/women/jeans/straight/straight-corduroy-trousers/37077779/70/00",
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37027782",
+          "colorId": "32"
+        },
+        {
+          "productNumber": "37054089",
+          "colorId": "32"
+        },
+        {
+          "productNumber": "37026000",
+          "colorId": "32"
+        },
+        {
+          "productNumber": "37004451",
+          "colorId": "OR"
         }
       ]
     },
@@ -710,7 +745,7 @@
       "relatedProductNumbers": []
     },
     {
-      "name": "Crystal flower brooch - Women",
+      "name": "Crystal flower brooch",
       "image": "https://media.mango.com/is/image/punto/37024446-PL-016?wid=1024",
       "productNumber": "37024446",
       "baseCode": "37024446",
@@ -906,10 +941,6 @@
         {
           "productNumber": "37046010",
           "colorId": "05"
-        },
-        {
-          "productNumber": "37076355",
-          "colorId": "30"
         }
       ]
     },
@@ -929,6 +960,10 @@
         {
           "productNumber": "37046368",
           "colorId": "01"
+        },
+        {
+          "productNumber": "37075872",
+          "colorId": "99"
         },
         {
           "productNumber": "37086357",
@@ -971,6 +1006,10 @@
         },
         {
           "productNumber": "37016367",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37075872",
           "colorId": "99"
         },
         {
@@ -1025,6 +1064,10 @@
         },
         {
           "productNumber": "37016368",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37075872",
           "colorId": "99"
         },
         {
@@ -1150,41 +1193,6 @@
         {
           "productNumber": "37046010",
           "colorId": "05"
-        },
-        {
-          "productNumber": "37076355",
-          "colorId": "30"
-        }
-      ]
-    },
-    {
-      "name": "Leather boots with kitten heels - Women",
-      "image": "https://media.mango.com/is/image/punto/37065872-99-016?wid=1024",
-      "productNumber": "37065872",
-      "baseCode": "37065872",
-      "globalCode": "37065872",
-      "colorId": "99",
-      "url": "https://shop.mango.com/gb/en/p/women/shoes/boots-and-ankle-boots/leather-boots-with-kitten-heels/37065872/99/00",
-      "relatedProductNumbers": [
-        {
-          "productNumber": "37085878",
-          "colorId": "TS"
-        },
-        {
-          "productNumber": "37005891",
-          "colorId": "TS"
-        },
-        {
-          "productNumber": "37016365",
-          "colorId": "56"
-        },
-        {
-          "productNumber": "37036351",
-          "colorId": "43"
-        },
-        {
-          "productNumber": "37056350",
-          "colorId": "92"
         }
       ]
     },
@@ -1212,7 +1220,7 @@
       ]
     },
     {
-      "name": "Wool jersey with contrast overlay",
+      "name": "Wool jersey with contrast overlay - Women",
       "image": "https://media.mango.com/is/image/punto/37026364-56-002?wid=1024",
       "productNumber": "37026364",
       "baseCode": "37026364",
@@ -1256,10 +1264,6 @@
           "colorId": "99"
         },
         {
-          "productNumber": "37065872",
-          "colorId": "99"
-        },
-        {
           "productNumber": "37076361",
           "colorId": "PL"
         }
@@ -1285,7 +1289,7 @@
       ]
     },
     {
-      "name": "Tailored wool coat",
+      "name": "Tailored wool coat - Women",
       "image": "https://media.mango.com/is/image/punto/37046365-92-002?wid=1024",
       "productNumber": "37046365",
       "baseCode": "37046365",
@@ -1449,10 +1453,6 @@
           "colorId": "05"
         },
         {
-          "productNumber": "37016366",
-          "colorId": "70"
-        },
-        {
           "productNumber": "37036351",
           "colorId": "43"
         }
@@ -1474,10 +1474,6 @@
         {
           "productNumber": "37046011",
           "colorId": "01"
-        },
-        {
-          "productNumber": "37016366",
-          "colorId": "70"
         }
       ]
     },
@@ -1641,6 +1637,10 @@
           "colorId": "99"
         },
         {
+          "productNumber": "37075872",
+          "colorId": "99"
+        },
+        {
           "productNumber": "37016365",
           "colorId": "56"
         },
@@ -1783,7 +1783,7 @@
       ]
     },
     {
-      "name": "Leather jacket with strap collar",
+      "name": "Leather jacket with strap collar - Women",
       "image": "https://media.mango.com/is/image/punto/37036349-99-002?wid=1024",
       "productNumber": "37036349",
       "baseCode": "37036349",
@@ -1802,10 +1802,6 @@
         {
           "productNumber": "37076360",
           "colorId": "99"
-        },
-        {
-          "productNumber": "37016366",
-          "colorId": "70"
         },
         {
           "productNumber": "37076355",
@@ -1829,6 +1825,10 @@
         {
           "productNumber": "37046368",
           "colorId": "01"
+        },
+        {
+          "productNumber": "37075872",
+          "colorId": "99"
         },
         {
           "productNumber": "37056363",
@@ -1878,10 +1878,6 @@
       "relatedProductNumbers": [
         {
           "productNumber": "37045867",
-          "colorId": "99"
-        },
-        {
-          "productNumber": "37065872",
           "colorId": "99"
         },
         {
@@ -1948,10 +1944,6 @@
         },
         {
           "productNumber": "37016368",
-          "colorId": "99"
-        },
-        {
-          "productNumber": "37065872",
           "colorId": "99"
         },
         {
