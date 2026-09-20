@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-19T19:21:57.236Z",
+  "updatedAt": "2026-09-20T19:21:30.216Z",
   "products": [
     {
       "name": "Shirt-collar jacket with belt - Women",
@@ -32,7 +32,7 @@
       "relatedProductNumbers": []
     },
     {
-      "name": "Bandeau jumpsuit with belt - Women",
+      "name": "Bandeau jumpsuit with belt",
       "image": "https://media.mango.com/is/image/punto/37075993-99-102?wid=1024",
       "productNumber": "37075993",
       "baseCode": "37075993",
@@ -745,7 +745,7 @@
       "relatedProductNumbers": []
     },
     {
-      "name": "Crystal flower brooch",
+      "name": "Crystal flower brooch - Women",
       "image": "https://media.mango.com/is/image/punto/37024446-PL-016?wid=1024",
       "productNumber": "37024446",
       "baseCode": "37024446",
@@ -1174,7 +1174,7 @@
       ]
     },
     {
-      "name": "Double-breasted wool blazer - Women",
+      "name": "Double-breasted wool blazer",
       "image": "https://media.mango.com/is/image/punto/37036368-05-002?wid=1024",
       "productNumber": "37036368",
       "baseCode": "37036368",
@@ -1453,6 +1453,10 @@
           "colorId": "05"
         },
         {
+          "productNumber": "27026717",
+          "colorId": "03"
+        },
+        {
           "productNumber": "37036351",
           "colorId": "43"
         }
@@ -1474,6 +1478,10 @@
         {
           "productNumber": "37046011",
           "colorId": "01"
+        },
+        {
+          "productNumber": "27026717",
+          "colorId": "03"
         }
       ]
     },
@@ -1610,7 +1618,7 @@
       ]
     },
     {
-      "name": "Straight-fit leather trousers - Women",
+      "name": "Straight-fit leather trousers",
       "image": "https://media.mango.com/is/image/punto/37086347-77-002?wid=1024",
       "productNumber": "37086347",
       "baseCode": "37086347",
@@ -1802,6 +1810,10 @@
         {
           "productNumber": "37076360",
           "colorId": "99"
+        },
+        {
+          "productNumber": "27026717",
+          "colorId": "03"
         },
         {
           "productNumber": "37076355",
