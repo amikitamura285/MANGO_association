@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-20T19:20:28.381Z",
+  "updatedAt": "2026-09-21T19:21:59.344Z",
   "products": [
     {
       "name": "ロングワンピース .-- NICOLE （ホワイト）",
@@ -1712,18 +1712,6 @@
       "relatedNames": []
     },
     {
-      "name": "ジーンズ .-- VIOLETAV （ブラック）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039738_1_l.jpg",
-      "productNumber": "MA1658EW039738",
-      "brandItemNumber": "27021199 99 色 ブラック（99）",
-      "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039738/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "VIOLETAV",
-      "relatedNames": []
-    },
-    {
       "name": "ロングスカート .-- ARCHIE-H （ライトベージュ）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039755_1_l.jpg",
       "productNumber": "MA1658EW039755",
@@ -3263,30 +3251,6 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "EMILY",
-      "relatedNames": []
-    },
-    {
-      "name": "トップス .-- SITO （レッド）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040939_1_l.jpg",
-      "productNumber": "MA1658EW040939",
-      "brandItemNumber": "27017141 70 色 レッド（70）",
-      "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040939/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "SITO",
-      "relatedNames": []
-    },
-    {
-      "name": "セーター .-- SITO （カーキ）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW041035_1_l.jpg",
-      "productNumber": "MA1658EW041035",
-      "brandItemNumber": "27047138 37 色 カーキ（37）",
-      "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041035/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "SITO",
       "relatedNames": []
     },
     {
@@ -6179,12 +6143,12 @@
     {
       "englishKey": "NEKKO",
       "main": {
-        "name": "セーター .-- NEKKO （イエロー）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW038719_1_l.jpg",
-        "productNumber": "MA1658EW038719",
-        "brandItemNumber": "17005812 43 色 イエロー（43）",
+        "name": "ミニワンピース .-- NEKKO （ダークグリーン）",
+        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW038967_1_l.jpg",
+        "productNumber": "MA1658EW038967",
+        "brandItemNumber": "17047804 49 色 ダークグリーン（49）",
         "brandItemFirstDigit": "1",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038719/",
+        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038967/",
         "brandCode": "MA1658",
         "brandName": "MANGO",
         "englishKey": "NEKKO",
@@ -6192,91 +6156,21 @@
       },
       "related": [
         {
-          "name": "ミニワンピース .-- NEKKO （ダークグリーン）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW038967_1_l.jpg",
-          "productNumber": "MA1658EW038967",
-          "brandItemNumber": "17047804 49 色 ダークグリーン（49）",
+          "name": "セーター .-- NEKKO （イエロー）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW038719_1_l.jpg",
+          "productNumber": "MA1658EW038719",
+          "brandItemNumber": "17005812 43 色 イエロー（43）",
           "brandItemFirstDigit": "1",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038967/",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038719/",
           "brandCode": "MA1658",
           "brandName": "MANGO",
           "englishKey": "NEKKO",
           "relatedNames": []
         }
       ]
-    },
-    {
-      "englishKey": "VIOLETAV",
-      "main": {
-        "name": "ジーンズ .-- VIOLETAV （ブラック）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039738_1_l.jpg",
-        "productNumber": "MA1658EW039738",
-        "brandItemNumber": "27021199 99 色 ブラック（99）",
-        "brandItemFirstDigit": "2",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039738/",
-        "brandCode": "MA1658",
-        "brandName": "MANGO",
-        "englishKey": "VIOLETAV",
-        "relatedNames": []
-      },
-      "related": [
-        {
-          "name": "ジーンズ .-- VIOLETAV （ダークレッド）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039723_1_l.jpg",
-          "productNumber": "MA1658EW039723",
-          "brandItemNumber": "27021201 77 色 ダークレッド（77）",
-          "brandItemFirstDigit": "2",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039723/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "VIOLETAV",
-          "relatedNames": []
-        },
-        {
-          "name": "ジーンズ .-- VIOLETAV （ダークブラウン）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039724_1_l.jpg",
-          "productNumber": "MA1658EW039724",
-          "brandItemNumber": "27021200 32 色 ダークブラウン（32）",
-          "brandItemFirstDigit": "2",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039724/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "VIOLETAV",
-          "relatedNames": []
-        }
-      ]
-    },
-    {
-      "englishKey": "SITO",
-      "main": {
-        "name": "トップス .-- SITO （レッド）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040939_1_l.jpg",
-        "productNumber": "MA1658EW040939",
-        "brandItemNumber": "27017141 70 色 レッド（70）",
-        "brandItemFirstDigit": "2",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040939/",
-        "brandCode": "MA1658",
-        "brandName": "MANGO",
-        "englishKey": "SITO",
-        "relatedNames": []
-      },
-      "related": [
-        {
-          "name": "セーター .-- SITO （カーキ）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW041035_1_l.jpg",
-          "productNumber": "MA1658EW041035",
-          "brandItemNumber": "27047138 37 色 カーキ（37）",
-          "brandItemFirstDigit": "2",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041035/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "SITO",
-          "relatedNames": []
-        }
-      ]
     }
   ],
-  "newCount": 3,
+  "newCount": 1,
   "displayedMainProductNumbers": [
     "MA1658EW33440",
     "MA3878EC003099",
@@ -7530,7 +7424,8 @@
     "MA1658EW038718",
     "MA1658EW038719",
     "MA1658EW039738",
-    "MA1658EW040939"
+    "MA1658EW040939",
+    "MA1658EW038967"
   ],
-  "scanned": 4133
+  "scanned": 4124
 }
