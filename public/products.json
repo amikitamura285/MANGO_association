@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-21T19:21:59.344Z",
+  "updatedAt": "2026-09-22T19:21:59.619Z",
   "products": [
     {
       "name": "ロングワンピース .-- NICOLE （ホワイト）",
@@ -1352,6 +1352,30 @@
       "relatedNames": []
     },
     {
+      "name": "シャツ .-- BASIC （ナチュラルホワイト）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039581_1_l.jpg",
+      "productNumber": "MA1658EW039581",
+      "brandItemNumber": "27071235 2 色 ナチュラルホワイト（2）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039581/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "BASIC",
+      "relatedNames": []
+    },
+    {
+      "name": "セーター .-- BASIC （ブラック）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW041442_1_l.jpg",
+      "productNumber": "MA1658EW041442",
+      "brandItemNumber": "27092553 99 色 ブラック（99）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041442/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "BASIC",
+      "relatedNames": []
+    },
+    {
       "name": "ロングスカート .-- MIMI （ブラック）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039582_1_l.jpg",
       "productNumber": "MA1658EW039582",
@@ -1661,30 +1685,6 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "TELMA",
-      "relatedNames": []
-    },
-    {
-      "name": "ロングジャンプスーツ .-- SALVIA （ブラウン）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039720_1_l.jpg",
-      "productNumber": "MA1658EW039720",
-      "brandItemNumber": "27081279 30 色 ブラウン（30）",
-      "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039720/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "SALVIA",
-      "relatedNames": []
-    },
-    {
-      "name": "パンツ .-- SALVIA （レッド）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040440_1_l.jpg",
-      "productNumber": "MA1658EW040440",
-      "brandItemNumber": "27035831 70 色 レッド（70）",
-      "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040440/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "SALVIA",
       "relatedNames": []
     },
     {
@@ -5550,18 +5550,6 @@
       "relatedNames": []
     },
     {
-      "name": "セーター .--BIMBU （ミディアムグレー）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043320_1_l.jpg",
-      "productNumber": "MA1658EW043320",
-      "brandItemNumber": "37005863 94 色 ミディアムグレー（94）",
-      "brandItemFirstDigit": "3",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043320/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "BIMBU",
-      "relatedNames": []
-    },
-    {
       "name": "カーディガン .-- XIXI （ブラウン）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042806_1_l.jpg",
       "productNumber": "MA1658EW042806",
@@ -6141,30 +6129,30 @@
   ],
   "groups": [
     {
-      "englishKey": "NEKKO",
+      "englishKey": "BASIC",
       "main": {
-        "name": "ミニワンピース .-- NEKKO （ダークグリーン）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW038967_1_l.jpg",
-        "productNumber": "MA1658EW038967",
-        "brandItemNumber": "17047804 49 色 ダークグリーン（49）",
-        "brandItemFirstDigit": "1",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038967/",
+        "name": "セーター .-- BASIC （ブラック）",
+        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW041442_1_l.jpg",
+        "productNumber": "MA1658EW041442",
+        "brandItemNumber": "27092553 99 色 ブラック（99）",
+        "brandItemFirstDigit": "2",
+        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041442/",
         "brandCode": "MA1658",
         "brandName": "MANGO",
-        "englishKey": "NEKKO",
+        "englishKey": "BASIC",
         "relatedNames": []
       },
       "related": [
         {
-          "name": "セーター .-- NEKKO （イエロー）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW038719_1_l.jpg",
-          "productNumber": "MA1658EW038719",
-          "brandItemNumber": "17005812 43 色 イエロー（43）",
-          "brandItemFirstDigit": "1",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038719/",
+          "name": "シャツ .-- BASIC （ナチュラルホワイト）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039581_1_l.jpg",
+          "productNumber": "MA1658EW039581",
+          "brandItemNumber": "27071235 2 色 ナチュラルホワイト（2）",
+          "brandItemFirstDigit": "2",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039581/",
           "brandCode": "MA1658",
           "brandName": "MANGO",
-          "englishKey": "NEKKO",
+          "englishKey": "BASIC",
           "relatedNames": []
         }
       ]
@@ -7425,7 +7413,8 @@
     "MA1658EW038719",
     "MA1658EW039738",
     "MA1658EW040939",
-    "MA1658EW038967"
+    "MA1658EW038967",
+    "MA1658EW041442"
   ],
-  "scanned": 4124
+  "scanned": 4094
 }

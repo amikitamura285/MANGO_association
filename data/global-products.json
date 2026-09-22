@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-21T19:23:40.282Z",
+  "updatedAt": "2026-09-22T19:24:09.175Z",
   "products": [
     {
       "name": "Bambi shirt dress - Women",
@@ -29,7 +29,24 @@
       "globalCode": "37066348",
       "colorId": "30",
       "url": "https://shop.mango.com/gb/en/p/women/trousers/casual/flared-leather-trousers/37066348/30/02",
-      "relatedProductNumbers": []
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37056348",
+          "colorId": "30"
+        },
+        {
+          "productNumber": "37026370",
+          "colorId": "01"
+        },
+        {
+          "productNumber": "37084799",
+          "colorId": "09"
+        },
+        {
+          "productNumber": "37024462",
+          "colorId": "32"
+        }
+      ]
     },
     {
       "name": "Houndstooth suit trousers - Women",
@@ -52,7 +69,7 @@
       "relatedProductNumbers": []
     },
     {
-      "name": "Bambi-print fur shopper bag - Women",
+      "name": "Bambi-print fur shopper bag",
       "image": "https://media.mango.com/is/image/punto/37055174-30-052?wid=1024",
       "productNumber": "37055174",
       "baseCode": "37055174",
@@ -95,7 +112,7 @@
       "baseCode": "37006012",
       "globalCode": "37006012",
       "colorId": "30",
-      "url": "https://shop.mango.com/gb/en/p/women/dresses-and-jumpsuits/office/ruched-houndstooth-dress/37006012/30/00",
+      "url": "https://shop.mango.com/gb/en/p/women/dresses-and-jumpsuits/dresses/ruched-houndstooth-dress/37006012/30/00",
       "relatedProductNumbers": [
         {
           "productNumber": "37091473",
@@ -127,6 +144,10 @@
         {
           "productNumber": "37005867",
           "colorId": "94"
+        },
+        {
+          "productNumber": "37095998",
+          "colorId": "92"
         },
         {
           "productNumber": "37046011",
@@ -257,7 +278,7 @@
       ]
     },
     {
-      "name": "Bambi leather and faux fur high-heel shoe",
+      "name": "Bambi leather and faux fur high-heel shoe - Women",
       "image": "https://media.mango.com/is/image/punto/37084799-09-016?wid=1024",
       "productNumber": "37084799",
       "baseCode": "37084799",
@@ -637,7 +658,7 @@
       ]
     },
     {
-      "name": "houndstooth pleated trousers - Women",
+      "name": "houndstooth pleated trousers",
       "image": "https://media.mango.com/is/image/punto/37055866-30-002?wid=1024",
       "productNumber": "37055866",
       "baseCode": "37055866",
@@ -671,7 +692,24 @@
       "globalCode": "37046359",
       "colorId": "99",
       "url": "https://shop.mango.com/gb/en/p/women/bags/crossbody/cow-leather-shoulder-bag/37046359/99/00",
-      "relatedProductNumbers": []
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37045839",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37015854",
+          "colorId": "05"
+        },
+        {
+          "productNumber": "37025989",
+          "colorId": "78"
+        },
+        {
+          "productNumber": "37005997",
+          "colorId": "99"
+        }
+      ]
     },
     {
       "name": "Leather round-toe heeled ankle boot - Women",
@@ -722,7 +760,7 @@
           "colorId": "99"
         },
         {
-          "productNumber": "27041343",
+          "productNumber": "37036007",
           "colorId": "99"
         }
       ]
@@ -1085,7 +1123,7 @@
       "relatedProductNumbers": []
     },
     {
-      "name": "Leather-effect city bag with charm detail - Women",
+      "name": "Leather-effect city bag with charm detail",
       "image": "https://media.mango.com/is/image/punto/37075997-78-052?wid=1024",
       "productNumber": "37075997",
       "baseCode": "37075997",
@@ -1456,7 +1494,7 @@
           "colorId": "05"
         },
         {
-          "productNumber": "27041343",
+          "productNumber": "37036007",
           "colorId": "99"
         },
         {
@@ -1622,10 +1660,6 @@
         {
           "productNumber": "37085855",
           "colorId": "37"
-        },
-        {
-          "productNumber": "37072892",
-          "colorId": "30"
         },
         {
           "productNumber": "37064784",
@@ -1796,10 +1830,6 @@
       "colorId": "02",
       "url": "https://shop.mango.com/gb/en/p/women/jeans/straight/straight-low-waist-jeans/37015858/02/00",
       "relatedProductNumbers": [
-        {
-          "productNumber": "37072892",
-          "colorId": "30"
-        },
         {
           "productNumber": "37055985",
           "colorId": "78"
@@ -2591,7 +2621,7 @@
     },
     {
       "main": {
-        "name": "houndstooth pleated trousers - Women",
+        "name": "houndstooth pleated trousers",
         "image": "https://media.mango.com/is/image/punto/37055866-30-002?wid=1024",
         "productNumber": "37055866",
         "baseCode": "37055866",
