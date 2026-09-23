@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T19:21:59.619Z",
+  "updatedAt": "2026-09-23T19:21:53.592Z",
   "products": [
     {
       "name": "ロングワンピース .-- NICOLE （ホワイト）",
@@ -1364,12 +1364,12 @@
       "relatedNames": []
     },
     {
-      "name": "セーター .-- BASIC （ブラック）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW041442_1_l.jpg",
-      "productNumber": "MA1658EW041442",
-      "brandItemNumber": "27092553 99 色 ブラック（99）",
+      "name": "セーター .-- BASIC （ナチュラルホワイト）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW041443_1_l.jpg",
+      "productNumber": "MA1658EW041443",
+      "brandItemNumber": "27092553 5 色 ナチュラルホワイト（5）",
       "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041442/",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041443/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "BASIC",
@@ -3981,18 +3981,6 @@
       "relatedNames": []
     },
     {
-      "name": "ジーンズ .-- SIENNA （ダークブラウン）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042965_1_l.jpg",
-      "productNumber": "MA1658EW042965",
-      "brandItemNumber": "37015876 32 色 ダークブラウン（32）",
-      "brandItemFirstDigit": "3",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042965/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "SIENNA",
-      "relatedNames": []
-    },
-    {
       "name": "ジーンズ .-- SIENNA （オープンブルー）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043027_1_l.jpg",
       "productNumber": "MA1658EW043027",
@@ -6127,38 +6115,8 @@
       "relatedNames": []
     }
   ],
-  "groups": [
-    {
-      "englishKey": "BASIC",
-      "main": {
-        "name": "セーター .-- BASIC （ブラック）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW041442_1_l.jpg",
-        "productNumber": "MA1658EW041442",
-        "brandItemNumber": "27092553 99 色 ブラック（99）",
-        "brandItemFirstDigit": "2",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041442/",
-        "brandCode": "MA1658",
-        "brandName": "MANGO",
-        "englishKey": "BASIC",
-        "relatedNames": []
-      },
-      "related": [
-        {
-          "name": "シャツ .-- BASIC （ナチュラルホワイト）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039581_1_l.jpg",
-          "productNumber": "MA1658EW039581",
-          "brandItemNumber": "27071235 2 色 ナチュラルホワイト（2）",
-          "brandItemFirstDigit": "2",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039581/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "BASIC",
-          "relatedNames": []
-        }
-      ]
-    }
-  ],
-  "newCount": 1,
+  "groups": [],
+  "newCount": 0,
   "displayedMainProductNumbers": [
     "MA1658EW33440",
     "MA3878EC003099",
@@ -7416,5 +7374,5 @@
     "MA1658EW038967",
     "MA1658EW041442"
   ],
-  "scanned": 4094
+  "scanned": 4087
 }

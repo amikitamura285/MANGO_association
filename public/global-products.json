@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T19:24:09.175Z",
+  "updatedAt": "2026-09-23T19:23:25.036Z",
   "products": [
     {
       "name": "Bambi shirt dress - Women",
@@ -9,7 +9,24 @@
       "globalCode": "37095863",
       "colorId": "30",
       "url": "https://shop.mango.com/gb/en/p/women/dresses-and-jumpsuits/dresses/bambi-shirt-dress/37095863/30/01",
-      "relatedProductNumbers": []
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37045980",
+          "colorId": "92"
+        },
+        {
+          "productNumber": "37024462",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37001403",
+          "colorId": "OR"
+        },
+        {
+          "productNumber": "37044445",
+          "colorId": "OR"
+        }
+      ]
     },
     {
       "name": "Leather jacket with strap collar - Women",
@@ -19,7 +36,20 @@
       "globalCode": "37056348",
       "colorId": "30",
       "url": "https://shop.mango.com/gb/en/p/women/jackets/bombers/leather-jacket-with-strap-collar/37056348/30/02",
-      "relatedProductNumbers": []
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37026370",
+          "colorId": "01"
+        },
+        {
+          "productNumber": "37024462",
+          "colorId": "32"
+        },
+        {
+          "productNumber": "37084799",
+          "colorId": "09"
+        }
+      ]
     },
     {
       "name": "Flared leather trousers - Women",
@@ -56,7 +86,24 @@
       "globalCode": "37095864",
       "colorId": "32",
       "url": "https://shop.mango.com/gb/en/p/women/trousers/plus-sizes/houndstooth-suit-trousers/37095864/32/01",
-      "relatedProductNumbers": []
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37085864",
+          "colorId": "32"
+        },
+        {
+          "productNumber": "37026370",
+          "colorId": "01"
+        },
+        {
+          "productNumber": "37005992",
+          "colorId": "30"
+        },
+        {
+          "productNumber": "37024462",
+          "colorId": "32"
+        }
+      ]
     },
     {
       "name": "Straight Bambi shirt - Women",
@@ -66,17 +113,51 @@
       "globalCode": "37085869",
       "colorId": "30",
       "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/straight-bambi-shirt/37085869/30/01",
-      "relatedProductNumbers": []
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37015859",
+          "colorId": "TO"
+        },
+        {
+          "productNumber": "37045980",
+          "colorId": "92"
+        },
+        {
+          "productNumber": "37024462",
+          "colorId": "32"
+        },
+        {
+          "productNumber": "37001401",
+          "colorId": "OR"
+        }
+      ]
     },
     {
-      "name": "Bambi-print fur shopper bag",
+      "name": "Bambi-print fur shopper bag - Women",
       "image": "https://media.mango.com/is/image/punto/37055174-30-052?wid=1024",
       "productNumber": "37055174",
       "baseCode": "37055174",
       "globalCode": "37055174",
       "colorId": "30",
       "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/bambi-print-fur-shopper-bag/37055174/30/00",
-      "relatedProductNumbers": []
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37055843",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37085992",
+          "colorId": "32"
+        },
+        {
+          "productNumber": "37045980",
+          "colorId": "92"
+        },
+        {
+          "productNumber": "37044445",
+          "colorId": "OR"
+        }
+      ]
     },
     {
       "name": "Wool coat, funnel neck with belt - Women",
@@ -115,20 +196,16 @@
       "url": "https://shop.mango.com/gb/en/p/women/dresses-and-jumpsuits/dresses/ruched-houndstooth-dress/37006012/30/00",
       "relatedProductNumbers": [
         {
-          "productNumber": "37091473",
-          "colorId": "32"
-        },
-        {
-          "productNumber": "37041332",
-          "colorId": "30"
-        },
-        {
-          "productNumber": "37091338",
+          "productNumber": "37026370",
           "colorId": "01"
         },
         {
-          "productNumber": "37001401",
-          "colorId": "OR"
+          "productNumber": "37045980",
+          "colorId": "92"
+        },
+        {
+          "productNumber": "37044794",
+          "colorId": "99"
         }
       ]
     },
@@ -144,10 +221,6 @@
         {
           "productNumber": "37005867",
           "colorId": "94"
-        },
-        {
-          "productNumber": "37095998",
-          "colorId": "92"
         },
         {
           "productNumber": "37046011",
@@ -260,8 +333,8 @@
       "url": "https://shop.mango.com/gb/en/p/women/blazers/houndstooth-blazer-with-a-high-neck/37065866/30/00",
       "relatedProductNumbers": [
         {
-          "productNumber": "37084111",
-          "colorId": "92"
+          "productNumber": "37055866",
+          "colorId": "30"
         },
         {
           "productNumber": "37095148",
@@ -334,10 +407,6 @@
         {
           "productNumber": "37045990",
           "colorId": "99"
-        },
-        {
-          "productNumber": "37001339",
-          "colorId": "32"
         }
       ]
     },
@@ -658,7 +727,7 @@
       ]
     },
     {
-      "name": "houndstooth pleated trousers",
+      "name": "houndstooth pleated trousers - Women",
       "image": "https://media.mango.com/is/image/punto/37055866-30-002?wid=1024",
       "productNumber": "37055866",
       "baseCode": "37055866",
@@ -760,8 +829,8 @@
           "colorId": "99"
         },
         {
-          "productNumber": "37036007",
-          "colorId": "99"
+          "productNumber": "27045975",
+          "colorId": "32"
         }
       ]
     },
@@ -1032,7 +1101,7 @@
           "colorId": "99"
         },
         {
-          "productNumber": "27055992",
+          "productNumber": "37067807",
           "colorId": "99"
         },
         {
@@ -1046,6 +1115,37 @@
         {
           "productNumber": "37005993",
           "colorId": "32"
+        }
+      ]
+    },
+    {
+      "name": "Cropped crossover blazer - Women",
+      "image": "https://media.mango.com/is/image/punto/37067807-99-002?wid=1024",
+      "productNumber": "37067807",
+      "baseCode": "37067807",
+      "globalCode": "37067807",
+      "colorId": "99",
+      "url": "https://shop.mango.com/gb/en/p/women/blazers/fitted/cropped-crossover-blazer/37067807/99/00",
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37077807",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37072959",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37045980",
+          "colorId": "92"
+        },
+        {
+          "productNumber": "37065999",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37055992",
+          "colorId": "PL"
         }
       ]
     },
@@ -1094,7 +1194,7 @@
     },
     {
       "name": "Pointed heel ankle boot - Women",
-      "image": "https://media.mango.com/is/image/punto/37086331-78-900?wid=1024",
+      "image": "https://media.mango.com/is/image/punto/37086331-78-016?wid=1024",
       "productNumber": "37086331",
       "baseCode": "37086331",
       "globalCode": "37086331",
@@ -1103,7 +1203,7 @@
       "relatedProductNumbers": []
     },
     {
-      "name": "Leather-effect shoulder bag with charm detail - Women",
+      "name": "Leather-effect shoulder bag with charm detail",
       "image": "https://media.mango.com/is/image/punto/37055998-99-052?wid=1024",
       "productNumber": "37055998",
       "baseCode": "37055998",
@@ -1123,7 +1223,7 @@
       "relatedProductNumbers": []
     },
     {
-      "name": "Leather-effect city bag with charm detail",
+      "name": "Leather-effect city bag with charm detail - Women",
       "image": "https://media.mango.com/is/image/punto/37075997-78-052?wid=1024",
       "productNumber": "37075997",
       "baseCode": "37075997",
@@ -1298,6 +1398,10 @@
           "colorId": "99"
         },
         {
+          "productNumber": "37065872",
+          "colorId": "99"
+        },
+        {
           "productNumber": "37076360",
           "colorId": "99"
         }
@@ -1440,6 +1544,10 @@
       "url": "https://shop.mango.com/gb/en/p/women/trousers/skinny/low-rise-straight-leg-trousers/37056014/99/00",
       "relatedProductNumbers": [
         {
+          "productNumber": "37047793",
+          "colorId": "70"
+        },
+        {
           "productNumber": "37022531",
           "colorId": "99"
         },
@@ -1494,8 +1602,8 @@
           "colorId": "05"
         },
         {
-          "productNumber": "37036007",
-          "colorId": "99"
+          "productNumber": "27045975",
+          "colorId": "32"
         },
         {
           "productNumber": "37076360",
@@ -1908,6 +2016,10 @@
       "url": "https://shop.mango.com/gb/en/p/women/jeans/flare/high-waist-flare-jeans/37027793/TN/00",
       "relatedProductNumbers": [
         {
+          "productNumber": "37007806",
+          "colorId": "95"
+        },
+        {
           "productNumber": "37023318",
           "colorId": "32"
         }
@@ -1927,12 +2039,16 @@
           "colorId": "06"
         },
         {
+          "productNumber": "37007806",
+          "colorId": "95"
+        },
+        {
           "productNumber": "37084440",
           "colorId": "05"
         },
         {
-          "productNumber": "27041343",
-          "colorId": "99"
+          "productNumber": "27045975",
+          "colorId": "32"
         }
       ]
     },
@@ -1989,19 +2105,205 @@
           "colorId": "30"
         }
       ]
-    },
-    {
-      "name": "Rigid knot necklace - Women",
-      "image": "https://media.mango.com/is/image/punto/37094458-OR-016?wid=1024",
-      "productNumber": "37094458",
-      "baseCode": "37094458",
-      "globalCode": "37094458",
-      "colorId": "OR",
-      "url": "https://shop.mango.com/gb/en/p/women/jewellery/necklaces/rigid-knot-necklace/37094458/OR/00",
-      "relatedProductNumbers": []
     }
   ],
   "matches": [
+    {
+      "main": {
+        "name": "Houndstooth suit trousers - Women",
+        "image": "https://media.mango.com/is/image/punto/37095864-32-102?wid=1024",
+        "productNumber": "37095864",
+        "baseCode": "37095864",
+        "globalCode": "37095864",
+        "colorId": "32",
+        "url": "https://shop.mango.com/gb/en/p/women/trousers/plus-sizes/houndstooth-suit-trousers/37095864/32/01",
+        "relatedUrls": [],
+        "relatedProductNumbers": [
+          {
+            "productNumber": "37085864",
+            "colorId": "32"
+          },
+          {
+            "productNumber": "37026370",
+            "colorId": "01"
+          },
+          {
+            "productNumber": "37005992",
+            "colorId": "30"
+          },
+          {
+            "productNumber": "37024462",
+            "colorId": "32"
+          }
+        ],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043023/"
+      },
+      "related": [
+        {
+          "name": "パンツ .-- IRISE （ダークブラウン）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043023_1_l.jpg",
+          "productNumber": "MA1658EW043023",
+          "brandItemNumber": "37095864 32 色 ダークブラウン（32）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043023/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "IRISE",
+          "relatedNames": [
+            "ブレザー .-- IRISE （ダークブラウン）"
+          ],
+          "variationProductNumbers": []
+        }
+      ],
+      "relatedGlobal": [
+        {
+          "name": "Double-breasted suit blazer",
+          "image": "https://media.mango.com/is/image/punto/37085864-32-900?wid=1024",
+          "productNumber": "37085864",
+          "baseCode": "37085864",
+          "globalCode": "37085864",
+          "colorId": "32",
+          "colorName": "",
+          "url": "https://shop.mango.com/gb/en/p/women/blazers/fitted/double-breasted-suit-blazer/37085864/32/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042935/"
+        }
+      ],
+      "baseCode": "37095864",
+      "hasJapanRelations": true
+    },
+    {
+      "main": {
+        "name": "Straight Bambi shirt - Women",
+        "image": "https://media.mango.com/is/image/punto/37085869-30-102?wid=1024",
+        "productNumber": "37085869",
+        "baseCode": "37085869",
+        "globalCode": "37085869",
+        "colorId": "30",
+        "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/straight-bambi-shirt/37085869/30/01",
+        "relatedUrls": [],
+        "relatedProductNumbers": [
+          {
+            "productNumber": "37015859",
+            "colorId": "TO"
+          },
+          {
+            "productNumber": "37045980",
+            "colorId": "92"
+          },
+          {
+            "productNumber": "37024462",
+            "colorId": "32"
+          },
+          {
+            "productNumber": "37001401",
+            "colorId": "OR"
+          }
+        ],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042948/"
+      },
+      "related": [
+        {
+          "name": "シャツ .-- CAMILA （ブラウン）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042948_1_l.jpg",
+          "productNumber": "MA1658EW042948",
+          "brandItemNumber": "37085869 30 色 ブラウン（30）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042948/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "CAMILA",
+          "relatedNames": [],
+          "variationProductNumbers": []
+        }
+      ],
+      "relatedGlobal": [
+        {
+          "name": "Mid-rise flared jeans",
+          "image": "https://media.mango.com/is/image/punto/37015859-TO-900?wid=1024",
+          "productNumber": "37015859",
+          "baseCode": "37015859",
+          "globalCode": "37015859",
+          "colorId": "TO",
+          "colorName": "",
+          "url": "https://shop.mango.com/gb/en/p/women/jeans/flare/mid-rise-flared-jeans/37015859/TO/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043071/"
+        }
+      ],
+      "baseCode": "37085869",
+      "hasJapanRelations": true
+    },
+    {
+      "main": {
+        "name": "Bambi-print fur shopper bag - Women",
+        "image": "https://media.mango.com/is/image/punto/37055174-30-052?wid=1024",
+        "productNumber": "37055174",
+        "baseCode": "37055174",
+        "globalCode": "37055174",
+        "colorId": "30",
+        "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/bambi-print-fur-shopper-bag/37055174/30/00",
+        "relatedUrls": [],
+        "relatedProductNumbers": [
+          {
+            "productNumber": "37055843",
+            "colorId": "99"
+          },
+          {
+            "productNumber": "37085992",
+            "colorId": "32"
+          },
+          {
+            "productNumber": "37045980",
+            "colorId": "92"
+          },
+          {
+            "productNumber": "37044445",
+            "colorId": "OR"
+          }
+        ],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW042930/"
+      },
+      "related": [
+        {
+          "name": "レザートートバッグ .-- M-- DAMIANO （ブラウン）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658AW042930_1_l.jpg",
+          "productNumber": "MA1658AW042930",
+          "brandItemNumber": "37055174 30 色 ブラウン（30）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW042930/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "M DAMIANO",
+          "relatedNames": [],
+          "variationProductNumbers": []
+        }
+      ],
+      "relatedGlobal": [
+        {
+          "name": "Faux leather jacket with ribbed collar",
+          "image": "https://media.mango.com/is/image/punto/37055843-99-900?wid=1024",
+          "productNumber": "37055843",
+          "baseCode": "37055843",
+          "globalCode": "37055843",
+          "colorId": "99",
+          "colorName": "",
+          "url": "https://shop.mango.com/gb/en/p/women/jackets/bombers/faux-leather-jacket-with-ribbed-collar/37055843/99/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040458/"
+        },
+        {
+          "name": "Balloon pleated trousers",
+          "image": "https://media.mango.com/is/image/punto/37085992-32-900?wid=1024",
+          "productNumber": "37085992",
+          "baseCode": "37085992",
+          "globalCode": "37085992",
+          "colorId": "32",
+          "colorName": "",
+          "url": "https://shop.mango.com/gb/en/p/women/trousers/balloon-trousers/balloon-pleated-trousers/37085992/32/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043060/"
+        }
+      ],
+      "baseCode": "37055174",
+      "hasJapanRelations": true
+    },
     {
       "main": {
         "name": "Wool coat, funnel neck with belt - Women",
@@ -2075,8 +2377,8 @@
         "relatedUrls": [],
         "relatedProductNumbers": [
           {
-            "productNumber": "37084111",
-            "colorId": "92"
+            "productNumber": "37055866",
+            "colorId": "30"
           },
           {
             "productNumber": "37095148",
@@ -2112,15 +2414,15 @@
       ],
       "relatedGlobal": [
         {
-          "name": "Straight-fit suit trousers",
-          "image": "https://media.mango.com/is/image/punto/37084111-92-900?wid=1024",
-          "productNumber": "37084111",
-          "baseCode": "37084111",
-          "globalCode": "37084111",
-          "colorId": "92",
+          "name": "houndstooth pleated trousers",
+          "image": "https://media.mango.com/is/image/punto/37055866-30-900?wid=1024",
+          "productNumber": "37055866",
+          "baseCode": "37055866",
+          "globalCode": "37055866",
+          "colorId": "30",
           "colorName": "",
-          "url": "https://shop.mango.com/gb/en/p/women/trousers/plus-sizes/straight-fit-suit-trousers/37084111/92/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042235/"
+          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/houndstooth-pleated-trousers/37055866/30/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042845/"
         }
       ],
       "baseCode": "37065866",
@@ -2621,7 +2923,7 @@
     },
     {
       "main": {
-        "name": "houndstooth pleated trousers",
+        "name": "houndstooth pleated trousers - Women",
         "image": "https://media.mango.com/is/image/punto/37055866-30-002?wid=1024",
         "productNumber": "37055866",
         "baseCode": "37055866",
@@ -3052,6 +3354,10 @@
         "relatedUrls": [],
         "relatedProductNumbers": [
           {
+            "productNumber": "37047793",
+            "colorId": "70"
+          },
+          {
             "productNumber": "37022531",
             "colorId": "99"
           },
@@ -3394,17 +3700,6 @@
           "colorName": "",
           "url": "https://shop.mango.com/gb/en/p/women/jeans/straight/high-waist-straight-jeans/37045852/TG/00",
           "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042998/"
-        },
-        {
-          "name": "Sienna flared cropped jeans",
-          "image": "https://media.mango.com/is/image/punto/37015876-32-900?wid=1024",
-          "productNumber": "37015876",
-          "baseCode": "37015876",
-          "globalCode": "37015876",
-          "colorId": "32",
-          "colorName": "",
-          "url": "https://shop.mango.com/gb/en/p/women/jeans/flare/sienna-flared-cropped-jeans/37015876/32/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042965/"
         }
       ],
       "baseCode": "37075850",
