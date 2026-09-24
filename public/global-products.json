@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-23T19:23:25.036Z",
+  "updatedAt": "2026-09-24T19:23:48.064Z",
   "products": [
     {
       "name": "Bambi shirt dress - Women",
@@ -40,6 +40,10 @@
         {
           "productNumber": "37026370",
           "colorId": "01"
+        },
+        {
+          "productNumber": "37066348",
+          "colorId": "30"
         },
         {
           "productNumber": "37024462",
@@ -133,7 +137,7 @@
       ]
     },
     {
-      "name": "Bambi-print fur shopper bag - Women",
+      "name": "Bambi-print fur shopper bag",
       "image": "https://media.mango.com/is/image/punto/37055174-30-052?wid=1024",
       "productNumber": "37055174",
       "baseCode": "37055174",
@@ -388,7 +392,7 @@
       ]
     },
     {
-      "name": "Cotton parka with corduroy collar - Women",
+      "name": "Cotton parka with corduroy collar",
       "image": "https://media.mango.com/is/image/punto/37045842-99-002?wid=1024",
       "productNumber": "37045842",
       "baseCode": "37045842",
@@ -407,6 +411,10 @@
         {
           "productNumber": "37045990",
           "colorId": "99"
+        },
+        {
+          "productNumber": "37001339",
+          "colorId": "32"
         }
       ]
     },
@@ -434,7 +442,7 @@
       ]
     },
     {
-      "name": "Checked print blouse - Women",
+      "name": "Checked print blouse",
       "image": "https://media.mango.com/is/image/punto/37035859-30-002?wid=1024",
       "productNumber": "37035859",
       "baseCode": "37035859",
@@ -671,7 +679,7 @@
           "colorId": "CU"
         },
         {
-          "productNumber": "37072538",
+          "productNumber": "27051334",
           "colorId": "32"
         }
       ]
@@ -727,7 +735,7 @@
       ]
     },
     {
-      "name": "houndstooth pleated trousers - Women",
+      "name": "houndstooth pleated trousers",
       "image": "https://media.mango.com/is/image/punto/37055866-30-002?wid=1024",
       "productNumber": "37055866",
       "baseCode": "37055866",
@@ -754,7 +762,7 @@
       ]
     },
     {
-      "name": "Cow leather shoulder bag - Women",
+      "name": "Cow leather shoulder bag",
       "image": "https://media.mango.com/is/image/punto/37046359-99-052?wid=1024",
       "productNumber": "37046359",
       "baseCode": "37046359",
@@ -829,8 +837,8 @@
           "colorId": "99"
         },
         {
-          "productNumber": "27045975",
-          "colorId": "32"
+          "productNumber": "37036007",
+          "colorId": "99"
         }
       ]
     },
@@ -1028,7 +1036,7 @@
       ]
     },
     {
-      "name": "Faux leather skirt with belt - Women",
+      "name": "Faux leather skirt with belt",
       "image": "https://media.mango.com/is/image/punto/37045988-99-002?wid=1024",
       "productNumber": "37045988",
       "baseCode": "37045988",
@@ -1160,7 +1168,7 @@
       "relatedProductNumbers": []
     },
     {
-      "name": "Ruched bow dress - Women",
+      "name": "Ruched bow dress",
       "image": "https://media.mango.com/is/image/punto/37015993-99-002?wid=1024",
       "productNumber": "37015993",
       "baseCode": "37015993",
@@ -1203,7 +1211,7 @@
       "relatedProductNumbers": []
     },
     {
-      "name": "Leather-effect shoulder bag with charm detail",
+      "name": "Leather-effect shoulder bag with charm detail - Women",
       "image": "https://media.mango.com/is/image/punto/37055998-99-052?wid=1024",
       "productNumber": "37055998",
       "baseCode": "37055998",
@@ -1303,7 +1311,7 @@
       "relatedProductNumbers": []
     },
     {
-      "name": "Stone ring - Women",
+      "name": "Stone ring",
       "image": "https://media.mango.com/is/image/punto/37096004-OR-900?wid=1024",
       "productNumber": "37096004",
       "baseCode": "37096004",
@@ -1398,10 +1406,6 @@
           "colorId": "99"
         },
         {
-          "productNumber": "37065872",
-          "colorId": "99"
-        },
-        {
           "productNumber": "37076360",
           "colorId": "99"
         }
@@ -1443,10 +1447,6 @@
       "colorId": "99",
       "url": "https://shop.mango.com/gb/en/p/women/jackets/frog-button-jacket-with-band-collar/37035870/99/00",
       "relatedProductNumbers": [
-        {
-          "productNumber": "37041390",
-          "colorId": "05"
-        },
         {
           "productNumber": "37095869",
           "colorId": "99"
@@ -1571,10 +1571,6 @@
           "colorId": "99"
         },
         {
-          "productNumber": "37041390",
-          "colorId": "05"
-        },
-        {
           "productNumber": "37084429",
           "colorId": "32"
         },
@@ -1602,8 +1598,8 @@
           "colorId": "05"
         },
         {
-          "productNumber": "27045975",
-          "colorId": "32"
+          "productNumber": "37036007",
+          "colorId": "99"
         },
         {
           "productNumber": "37076360",
@@ -1612,7 +1608,7 @@
       ]
     },
     {
-      "name": "Midi trench coat with belt - Women",
+      "name": "Midi trench coat with belt",
       "image": "https://media.mango.com/is/image/punto/37046353-99-002?wid=1024",
       "productNumber": "37046353",
       "baseCode": "37046353",
@@ -1770,6 +1766,10 @@
           "colorId": "37"
         },
         {
+          "productNumber": "27035830",
+          "colorId": "30"
+        },
+        {
           "productNumber": "37064784",
           "colorId": "78"
         },
@@ -1780,7 +1780,7 @@
       ]
     },
     {
-      "name": "Faux-leather flared trousers - Women",
+      "name": "Faux-leather flared trousers",
       "image": "https://media.mango.com/is/image/punto/37045163-99-002?wid=1024",
       "productNumber": "37045163",
       "baseCode": "37045163",
@@ -1943,7 +1943,7 @@
           "colorId": "78"
         },
         {
-          "productNumber": "37072538",
+          "productNumber": "27051334",
           "colorId": "32"
         },
         {
@@ -2026,33 +2026,6 @@
       ]
     },
     {
-      "name": "Balloon crop jeans - Women",
-      "image": "https://media.mango.com/is/image/punto/37017816-TN-002?wid=1024",
-      "productNumber": "37017817",
-      "baseCode": "37017817",
-      "globalCode": "37017817",
-      "colorId": "TN",
-      "url": "https://shop.mango.com/gb/en/p/women/jeans/balloon/balloon-crop-jeans/37017817/TN/00",
-      "relatedProductNumbers": [
-        {
-          "productNumber": "37035847",
-          "colorId": "06"
-        },
-        {
-          "productNumber": "37007806",
-          "colorId": "95"
-        },
-        {
-          "productNumber": "37084440",
-          "colorId": "05"
-        },
-        {
-          "productNumber": "27045975",
-          "colorId": "32"
-        }
-      ]
-    },
-    {
       "name": "High-waisted wideleg jeans - Women",
       "image": "https://media.mango.com/is/image/punto/37004100-TO-002?wid=1024",
       "productNumber": "37004092",
@@ -2103,6 +2076,33 @@
         {
           "productNumber": "37084421",
           "colorId": "30"
+        }
+      ]
+    },
+    {
+      "name": "Barrel-leg denim trousers - Women",
+      "image": "https://media.mango.com/is/image/punto/37076748-99-002?wid=1024",
+      "productNumber": "37076748",
+      "baseCode": "37076748",
+      "globalCode": "37076748",
+      "colorId": "99",
+      "url": "https://shop.mango.com/gb/en/p/women/trousers/balloon-trousers/barrel-leg-denim-trousers/37076748/99/00",
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37074415",
+          "colorId": "01"
+        },
+        {
+          "productNumber": "37084465",
+          "colorId": "02"
+        },
+        {
+          "productNumber": "37095985",
+          "colorId": "31"
+        },
+        {
+          "productNumber": "27026717",
+          "colorId": "03"
         }
       ]
     }
@@ -2234,7 +2234,7 @@
     },
     {
       "main": {
-        "name": "Bambi-print fur shopper bag - Women",
+        "name": "Bambi-print fur shopper bag",
         "image": "https://media.mango.com/is/image/punto/37055174-30-052?wid=1024",
         "productNumber": "37055174",
         "baseCode": "37055174",
@@ -2570,7 +2570,7 @@
     },
     {
       "main": {
-        "name": "Checked print blouse - Women",
+        "name": "Checked print blouse",
         "image": "https://media.mango.com/is/image/punto/37035859-30-002?wid=1024",
         "productNumber": "37035859",
         "baseCode": "37035859",
@@ -2923,7 +2923,7 @@
     },
     {
       "main": {
-        "name": "houndstooth pleated trousers - Women",
+        "name": "houndstooth pleated trousers",
         "image": "https://media.mango.com/is/image/punto/37055866-30-002?wid=1024",
         "productNumber": "37055866",
         "baseCode": "37055866",
@@ -3279,10 +3279,6 @@
         "relatedUrls": [],
         "relatedProductNumbers": [
           {
-            "productNumber": "37041390",
-            "colorId": "05"
-          },
-          {
             "productNumber": "37095869",
             "colorId": "99"
           },
@@ -3415,10 +3411,6 @@
           {
             "productNumber": "37035870",
             "colorId": "99"
-          },
-          {
-            "productNumber": "37041390",
-            "colorId": "05"
           },
           {
             "productNumber": "37084429",
@@ -3700,6 +3692,17 @@
           "colorName": "",
           "url": "https://shop.mango.com/gb/en/p/women/jeans/straight/high-waist-straight-jeans/37045852/TG/00",
           "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042998/"
+        },
+        {
+          "name": "Sienna flared cropped jeans",
+          "image": "https://media.mango.com/is/image/punto/37015876-32-900?wid=1024",
+          "productNumber": "37015876",
+          "baseCode": "37015876",
+          "globalCode": "37015876",
+          "colorId": "32",
+          "colorName": "",
+          "url": "https://shop.mango.com/gb/en/p/women/jeans/flare/sienna-flared-cropped-jeans/37015876/32/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042965/"
         }
       ],
       "baseCode": "37075850",
