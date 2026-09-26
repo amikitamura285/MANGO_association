@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-25T19:23:07.624Z",
+  "updatedAt": "2026-09-26T19:23:26.849Z",
   "products": [
     {
       "name": "Bambi shirt dress - Women",
@@ -56,7 +56,7 @@
       ]
     },
     {
-      "name": "Flared leather trousers - Women",
+      "name": "Flared leather trousers",
       "image": "https://media.mango.com/is/image/punto/37066348-30-127?wid=1024",
       "productNumber": "37066348",
       "baseCode": "37066348",
@@ -110,7 +110,7 @@
       ]
     },
     {
-      "name": "Straight Bambi shirt",
+      "name": "Straight Bambi shirt - Women",
       "image": "https://media.mango.com/is/image/punto/37085869-30-102?wid=1024",
       "productNumber": "37085869",
       "baseCode": "37085869",
@@ -359,7 +359,7 @@
       ]
     },
     {
-      "name": "Bambi leather and faux fur high-heel shoe - Women",
+      "name": "Bambi leather and faux fur high-heel shoe",
       "image": "https://media.mango.com/is/image/punto/37084799-09-016?wid=1024",
       "productNumber": "37084799",
       "baseCode": "37084799",
@@ -396,7 +396,7 @@
       ]
     },
     {
-      "name": "Cotton parka with corduroy collar - Women",
+      "name": "Cotton parka with corduroy collar",
       "image": "https://media.mango.com/is/image/punto/37045842-99-002?wid=1024",
       "productNumber": "37045842",
       "baseCode": "37045842",
@@ -415,6 +415,10 @@
         {
           "productNumber": "37045990",
           "colorId": "99"
+        },
+        {
+          "productNumber": "37001339",
+          "colorId": "32"
         }
       ]
     },
@@ -442,7 +446,7 @@
       ]
     },
     {
-      "name": "Checked print blouse",
+      "name": "Checked print blouse - Women",
       "image": "https://media.mango.com/is/image/punto/37035859-30-002?wid=1024",
       "productNumber": "37035859",
       "baseCode": "37035859",
@@ -685,7 +689,7 @@
       ]
     },
     {
-      "name": "Scarf-collar cloth jacket",
+      "name": "Scarf-collar cloth jacket - Women",
       "image": "https://media.mango.com/is/image/punto/37055855-35-002?wid=1024",
       "productNumber": "37055855",
       "baseCode": "37055855",
@@ -708,7 +712,7 @@
       ]
     },
     {
-      "name": "Double-faced faux-leather jacket",
+      "name": "Double-faced faux-leather jacket - Women",
       "image": "https://media.mango.com/is/image/punto/37035991-99-002?wid=1024",
       "productNumber": "37035991",
       "baseCode": "37035991",
@@ -735,7 +739,7 @@
       ]
     },
     {
-      "name": "houndstooth pleated trousers",
+      "name": "houndstooth pleated trousers - Women",
       "image": "https://media.mango.com/is/image/punto/37055866-30-002?wid=1024",
       "productNumber": "37055866",
       "baseCode": "37055866",
@@ -762,7 +766,7 @@
       ]
     },
     {
-      "name": "Cow leather shoulder bag",
+      "name": "Cow leather shoulder bag - Women",
       "image": "https://media.mango.com/is/image/punto/37046359-99-052?wid=1024",
       "productNumber": "37046359",
       "baseCode": "37046359",
@@ -837,8 +841,8 @@
           "colorId": "99"
         },
         {
-          "productNumber": "27045975",
-          "colorId": "32"
+          "productNumber": "27041343",
+          "colorId": "99"
         }
       ]
     },
@@ -1036,7 +1040,7 @@
       ]
     },
     {
-      "name": "Faux leather skirt with belt - Women",
+      "name": "Faux leather skirt with belt",
       "image": "https://media.mango.com/is/image/punto/37045988-99-002?wid=1024",
       "productNumber": "37045988",
       "baseCode": "37045988",
@@ -1127,7 +1131,7 @@
       ]
     },
     {
-      "name": "Cropped crossover blazer",
+      "name": "Cropped crossover blazer - Women",
       "image": "https://media.mango.com/is/image/punto/37067807-99-002?wid=1024",
       "productNumber": "37067807",
       "baseCode": "37067807",
@@ -1271,7 +1275,7 @@
       "relatedProductNumbers": []
     },
     {
-      "name": "Leather shopper bag - Women",
+      "name": "Leather shopper bag",
       "image": "https://media.mango.com/is/image/punto/37044444-37-052?wid=1024",
       "productNumber": "37044444",
       "baseCode": "37044444",
@@ -1281,7 +1285,7 @@
       "relatedProductNumbers": []
     },
     {
-      "name": "Quilted shoulder bag",
+      "name": "Quilted shoulder bag - Women",
       "image": "https://media.mango.com/is/image/punto/37026368-99-052?wid=1024",
       "productNumber": "37026368",
       "baseCode": "37026368",
@@ -1362,7 +1366,7 @@
       ]
     },
     {
-      "name": "Shirt-collar jacket with belt",
+      "name": "Shirt-collar jacket with belt - Women",
       "image": "https://media.mango.com/is/image/punto/37096013-99-002?wid=1024",
       "productNumber": "37096013",
       "baseCode": "37096013",
@@ -1447,10 +1451,6 @@
       "colorId": "99",
       "url": "https://shop.mango.com/gb/en/p/women/jackets/frog-button-jacket-with-band-collar/37035870/99/00",
       "relatedProductNumbers": [
-        {
-          "productNumber": "37041390",
-          "colorId": "05"
-        },
         {
           "productNumber": "37095869",
           "colorId": "99"
@@ -1579,10 +1579,6 @@
           "colorId": "99"
         },
         {
-          "productNumber": "37041390",
-          "colorId": "05"
-        },
-        {
           "productNumber": "37084429",
           "colorId": "32"
         },
@@ -1593,7 +1589,7 @@
       ]
     },
     {
-      "name": "100% cashmere round-neck sweater",
+      "name": "100% cashmere round-neck sweater - Women",
       "image": "https://media.mango.com/is/image/punto/37086334-11-002?wid=1024",
       "productNumber": "37086334",
       "baseCode": "37086334",
@@ -1610,8 +1606,8 @@
           "colorId": "05"
         },
         {
-          "productNumber": "27045975",
-          "colorId": "32"
+          "productNumber": "27041343",
+          "colorId": "99"
         },
         {
           "productNumber": "37076360",
@@ -1815,7 +1811,7 @@
       ]
     },
     {
-      "name": "Flared trousers with pressed crease - Women",
+      "name": "Flared trousers with pressed crease",
       "image": "https://media.mango.com/is/image/punto/37057795-99-002?wid=1024",
       "productNumber": "37057795",
       "baseCode": "37057795",
@@ -1988,7 +1984,7 @@
       ]
     },
     {
-      "name": "Pocket denim shirt",
+      "name": "Pocket denim shirt - Women",
       "image": "https://media.mango.com/is/image/punto/37045851-TO-002?wid=1024",
       "productNumber": "37045851",
       "baseCode": "37045851",
@@ -2181,7 +2177,7 @@
     },
     {
       "main": {
-        "name": "Straight Bambi shirt",
+        "name": "Straight Bambi shirt - Women",
         "image": "https://media.mango.com/is/image/punto/37085869-30-102?wid=1024",
         "productNumber": "37085869",
         "baseCode": "37085869",
@@ -2578,7 +2574,7 @@
     },
     {
       "main": {
-        "name": "Checked print blouse",
+        "name": "Checked print blouse - Women",
         "image": "https://media.mango.com/is/image/punto/37035859-30-002?wid=1024",
         "productNumber": "37035859",
         "baseCode": "37035859",
@@ -2859,7 +2855,7 @@
     },
     {
       "main": {
-        "name": "Double-faced faux-leather jacket",
+        "name": "Double-faced faux-leather jacket - Women",
         "image": "https://media.mango.com/is/image/punto/37035991-99-002?wid=1024",
         "productNumber": "37035991",
         "baseCode": "37035991",
@@ -2931,7 +2927,7 @@
     },
     {
       "main": {
-        "name": "houndstooth pleated trousers",
+        "name": "houndstooth pleated trousers - Women",
         "image": "https://media.mango.com/is/image/punto/37055866-30-002?wid=1024",
         "productNumber": "37055866",
         "baseCode": "37055866",
@@ -3124,6 +3120,17 @@
           "colorName": "",
           "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/sweaters/buttoned-knit-sweater/37055851/92/00",
           "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042927/"
+        },
+        {
+          "name": "Mid-rise straight jeans",
+          "image": "https://media.mango.com/is/image/punto/37075850-TO-900?wid=1024",
+          "productNumber": "37075850",
+          "baseCode": "37075850",
+          "globalCode": "37075850",
+          "colorId": "TO",
+          "colorName": "",
+          "url": "https://shop.mango.com/gb/en/p/women/jeans/straight/mid-rise-straight-jeans/37075850/TO/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043151/"
         }
       ],
       "baseCode": "37086000",
@@ -3131,7 +3138,7 @@
     },
     {
       "main": {
-        "name": "Shirt-collar jacket with belt",
+        "name": "Shirt-collar jacket with belt - Women",
         "image": "https://media.mango.com/is/image/punto/37096013-99-002?wid=1024",
         "productNumber": "37096013",
         "baseCode": "37096013",
@@ -3276,10 +3283,6 @@
         "relatedUrls": [],
         "relatedProductNumbers": [
           {
-            "productNumber": "37041390",
-            "colorId": "05"
-          },
-          {
             "productNumber": "37095869",
             "colorId": "99"
           },
@@ -3412,10 +3415,6 @@
           {
             "productNumber": "37035870",
             "colorId": "99"
-          },
-          {
-            "productNumber": "37041390",
-            "colorId": "05"
           },
           {
             "productNumber": "37084429",
@@ -3639,6 +3638,78 @@
         }
       ],
       "baseCode": "37045993",
+      "hasJapanRelations": true
+    },
+    {
+      "main": {
+        "name": "Mid-rise straight jeans - Women",
+        "image": "https://media.mango.com/is/image/punto/37075850-TO-002?wid=1024",
+        "productNumber": "37075850",
+        "baseCode": "37075850",
+        "globalCode": "37075850",
+        "colorId": "TO",
+        "url": "https://shop.mango.com/gb/en/p/women/jeans/straight/mid-rise-straight-jeans/37075850/TO/00",
+        "relatedUrls": [],
+        "relatedProductNumbers": [
+          {
+            "productNumber": "37025855",
+            "colorId": "02"
+          },
+          {
+            "productNumber": "37015178",
+            "colorId": "TM"
+          },
+          {
+            "productNumber": "37045852",
+            "colorId": "TG"
+          },
+          {
+            "productNumber": "37015876",
+            "colorId": "32"
+          }
+        ],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043151/"
+      },
+      "related": [
+        {
+          "name": "ジーンズ .--LETIZIA （オープンブルー）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043151_1_l.jpg",
+          "productNumber": "MA1658EW043151",
+          "brandItemNumber": "37075850 TO 色 オープンブルー（TO）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043151/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "LETIZIA",
+          "relatedNames": [],
+          "variationProductNumbers": []
+        }
+      ],
+      "relatedGlobal": [
+        {
+          "name": "High waist straight jeans",
+          "image": "https://media.mango.com/is/image/punto/37045852-TG-900?wid=1024",
+          "productNumber": "37045852",
+          "baseCode": "37045852",
+          "globalCode": "37045852",
+          "colorId": "TG",
+          "colorName": "",
+          "url": "https://shop.mango.com/gb/en/p/women/jeans/straight/high-waist-straight-jeans/37045852/TG/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042998/"
+        },
+        {
+          "name": "Sienna flared cropped jeans",
+          "image": "https://media.mango.com/is/image/punto/37015876-32-900?wid=1024",
+          "productNumber": "37015876",
+          "baseCode": "37015876",
+          "globalCode": "37015876",
+          "colorId": "32",
+          "colorName": "",
+          "url": "https://shop.mango.com/gb/en/p/women/jeans/flare/sienna-flared-cropped-jeans/37015876/32/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042965/"
+        }
+      ],
+      "baseCode": "37075850",
       "hasJapanRelations": true
     }
   ]

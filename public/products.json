@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-25T19:21:35.715Z",
+  "updatedAt": "2026-09-26T19:22:14.966Z",
   "products": [
     {
       "name": "ロングワンピース .-- NICOLE （ホワイト）",
@@ -195,35 +195,6 @@
       "brandName": "MANGO",
       "englishKey": "EMMA",
       "relatedNames": []
-    },
-    {
-      "name": "スカート .-- MONI （ダークレッド）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW038974_1_l.jpg",
-      "productNumber": "MA1658EW038974",
-      "brandItemNumber": "17077911 76 色 ダークレッド（76）",
-      "brandItemFirstDigit": "1",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038974/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "MONI",
-      "relatedNames": [
-        "シャツ .-- JAGUAR （ブラウン）"
-      ]
-    },
-    {
-      "name": "カーディガン .-- MONI （グレー）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039295_1_l.jpg",
-      "productNumber": "MA1658EW039295",
-      "brandItemNumber": "17019121 92 色 グレー（92）",
-      "brandItemFirstDigit": "1",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039295/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "MONI",
-      "relatedNames": [
-        "パンプス .-- COCO （ブラック）",
-        "パンツ .-- SAUVI （ブラック）"
-      ]
     },
     {
       "name": "セーター .-- PUNYITOS （ブラック）",
@@ -520,6 +491,18 @@
       "brandItemNumber": "27081237 TS 色 オープンブルー（TS）",
       "brandItemFirstDigit": "2",
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039597/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "MONA",
+      "relatedNames": []
+    },
+    {
+      "name": "トレンチコート .-- MONA （ナチュラルホワイト）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040214_1_l.jpg",
+      "productNumber": "MA1658EW040214",
+      "brandItemNumber": "27044775 5 色 ナチュラルホワイト（5）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040214/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "MONA",
@@ -2794,30 +2777,6 @@
       "relatedNames": []
     },
     {
-      "name": "ジーンズ.-- CLOTILDE （ナチュラルホワイト）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042322_1_l.jpg",
-      "productNumber": "MA1658EW042322",
-      "brandItemNumber": "37034118 5 色 ナチュラルホワイト（5）",
-      "brandItemFirstDigit": "3",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042322/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "CLOTILDE",
-      "relatedNames": []
-    },
-    {
-      "name": "ジーンズ .-- CLOTILDE （オープングレー）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042398_1_l.jpg",
-      "productNumber": "MA1658EW042398",
-      "brandItemNumber": "37034117 TN 色 オープングレー（TN）",
-      "brandItemFirstDigit": "3",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042398/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "CLOTILDE",
-      "relatedNames": []
-    },
-    {
       "name": "シャツ .-- RUA （パステルブルー）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042342_1_l.jpg",
       "productNumber": "MA1658EW042342",
@@ -3726,6 +3685,18 @@
       "relatedNames": []
     },
     {
+      "name": "セーター .--BIMBU （ミディアムグレー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043320_1_l.jpg",
+      "productNumber": "MA1658EW043320",
+      "brandItemNumber": "37005863 94 色 ミディアムグレー（94）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043320/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "BIMBU",
+      "relatedNames": []
+    },
+    {
       "name": "カーディガン .-- XIXI （ブラウン）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042806_1_l.jpg",
       "productNumber": "MA1658EW042806",
@@ -4305,30 +4276,42 @@
   ],
   "groups": [
     {
-      "englishKey": "EMMA",
+      "englishKey": "MONA",
       "main": {
-        "name": "ベスト .-- EMMA （ダークパープル）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW038824_1_l.jpg",
-        "productNumber": "MA1658EW038824",
-        "brandItemNumber": "17036732 66 色 ダークパープル（66）",
-        "brandItemFirstDigit": "1",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038824/",
+        "name": "トレンチコート .-- MONA （ナチュラルホワイト）",
+        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040214_1_l.jpg",
+        "productNumber": "MA1658EW040214",
+        "brandItemNumber": "27044775 5 色 ナチュラルホワイト（5）",
+        "brandItemFirstDigit": "2",
+        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040214/",
         "brandCode": "MA1658",
         "brandName": "MANGO",
-        "englishKey": "EMMA",
+        "englishKey": "MONA",
         "relatedNames": []
       },
       "related": [
         {
-          "name": "パンツ .-- EMMA （グレー）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW038812_1_l.jpg",
-          "productNumber": "MA1658EW038812",
-          "brandItemNumber": "17006734 92 色 グレー（92）",
-          "brandItemFirstDigit": "1",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038812/",
+          "name": "パンツ .-- MONA （オープンブルー）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039597_1_l.jpg",
+          "productNumber": "MA1658EW039597",
+          "brandItemNumber": "27081237 TS 色 オープンブルー（TS）",
+          "brandItemFirstDigit": "2",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039597/",
           "brandCode": "MA1658",
           "brandName": "MANGO",
-          "englishKey": "EMMA",
+          "englishKey": "MONA",
+          "relatedNames": []
+        },
+        {
+          "name": "スリングパンプス .-- MONA （ダークブラウン）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658BW040411_1_l.jpg",
+          "productNumber": "MA1658BW040411",
+          "brandItemNumber": "27085156 32 色 ダークブラウン（32）",
+          "brandItemFirstDigit": "2",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW040411/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "MONA",
           "relatedNames": []
         }
       ]
@@ -4336,12 +4319,12 @@
     {
       "englishKey": "CLEMENCE",
       "main": {
-        "name": "ジーンズ .-- CLEMENCE （カーキ）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039821_1_l.jpg",
-        "productNumber": "MA1658EW039821",
-        "brandItemNumber": "27043298 37 色 カーキ（37）",
+        "name": "ジーンズ .-- CLEMENCE （オープンブルー）",
+        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040507_1_l.jpg",
+        "productNumber": "MA1658EW040507",
+        "brandItemNumber": "27033299 TO 色 オープンブルー（TO）",
         "brandItemFirstDigit": "2",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039821/",
+        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040507/",
         "brandCode": "MA1658",
         "brandName": "MANGO",
         "englishKey": "CLEMENCE",
@@ -4349,62 +4332,21 @@
       },
       "related": [
         {
-          "name": "ジーンズ .-- CLEMENCE （オープンブルー）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040507_1_l.jpg",
-          "productNumber": "MA1658EW040507",
-          "brandItemNumber": "27033299 TO 色 オープンブルー（TO）",
+          "name": "ジーンズ .-- CLEMENCE （カーキ）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039821_1_l.jpg",
+          "productNumber": "MA1658EW039821",
+          "brandItemNumber": "27043298 37 色 カーキ（37）",
           "brandItemFirstDigit": "2",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040507/",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039821/",
           "brandCode": "MA1658",
           "brandName": "MANGO",
           "englishKey": "CLEMENCE",
           "relatedNames": []
         }
       ]
-    },
-    {
-      "englishKey": "MARIA",
-      "main": {
-        "name": "ピアス .-- MARIA （ゴールド）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW040626_1_l.jpg",
-        "productNumber": "MA1658DW040626",
-        "brandItemNumber": "27006003 OR 色 ゴールド（OR）",
-        "brandItemFirstDigit": "2",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW040626/",
-        "brandCode": "MA1658",
-        "brandName": "MANGO",
-        "englishKey": "MARIA",
-        "relatedNames": []
-      },
-      "related": [
-        {
-          "name": "ロングワンピース .-- MARIA （ダークレッド）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040196_1_l.jpg",
-          "productNumber": "MA1658EW040196",
-          "brandItemNumber": "27024085 76 色 ダークレッド（76）",
-          "brandItemFirstDigit": "2",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040196/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "MARIA",
-          "relatedNames": []
-        },
-        {
-          "name": "スカーフ .-- MARIA （ナチュラルホワイト）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW040487_1_l.jpg",
-          "productNumber": "MA1658DW040487",
-          "brandItemNumber": "27055949 5 色 ナチュラルホワイト（5）",
-          "brandItemFirstDigit": "2",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW040487/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "MARIA",
-          "relatedNames": []
-        }
-      ]
     }
   ],
-  "newCount": 3,
+  "newCount": 2,
   "displayedMainProductNumbers": [
     "MA1658EW33440",
     "MA3878EC003099",
@@ -5663,7 +5605,9 @@
     "MA1658EW041442",
     "MA1658EW038824",
     "MA1658EW039821",
-    "MA1658DW040626"
+    "MA1658DW040626",
+    "MA1658EW040214",
+    "MA1658EW040507"
   ],
-  "scanned": 4110
+  "scanned": 4089
 }
