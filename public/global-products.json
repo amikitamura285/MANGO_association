@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-26T19:23:26.849Z",
+  "updatedAt": "2026-09-27T19:23:09.970Z",
   "products": [
     {
       "name": "Bambi shirt dress - Women",
@@ -56,7 +56,7 @@
       ]
     },
     {
-      "name": "Flared leather trousers",
+      "name": "Flared leather trousers - Women",
       "image": "https://media.mango.com/is/image/punto/37066348-30-127?wid=1024",
       "productNumber": "37066348",
       "baseCode": "37066348",
@@ -137,7 +137,7 @@
       ]
     },
     {
-      "name": "Bambi-print fur shopper bag - Women",
+      "name": "Bambi-print fur shopper bag",
       "image": "https://media.mango.com/is/image/punto/37055174-30-052?wid=1024",
       "productNumber": "37055174",
       "baseCode": "37055174",
@@ -191,7 +191,7 @@
       ]
     },
     {
-      "name": "Ruched houndstooth dress - Women",
+      "name": "Ruched houndstooth dress",
       "image": "https://media.mango.com/is/image/punto/37006012-30-002?wid=1024",
       "productNumber": "37006012",
       "baseCode": "37006012",
@@ -225,10 +225,6 @@
         {
           "productNumber": "37005867",
           "colorId": "94"
-        },
-        {
-          "productNumber": "37095998",
-          "colorId": "92"
         },
         {
           "productNumber": "37046011",
@@ -268,7 +264,7 @@
       ]
     },
     {
-      "name": "Double-breasted suit blazer - Women",
+      "name": "Double-breasted suit blazer",
       "image": "https://media.mango.com/is/image/punto/37085864-56-081?wid=1024",
       "productNumber": "37085864",
       "baseCode": "37085864",
@@ -359,7 +355,7 @@
       ]
     },
     {
-      "name": "Bambi leather and faux fur high-heel shoe",
+      "name": "Bambi leather and faux fur high-heel shoe - Women",
       "image": "https://media.mango.com/is/image/punto/37084799-09-016?wid=1024",
       "productNumber": "37084799",
       "baseCode": "37084799",
@@ -396,7 +392,7 @@
       ]
     },
     {
-      "name": "Cotton parka with corduroy collar",
+      "name": "Cotton parka with corduroy collar - Women",
       "image": "https://media.mango.com/is/image/punto/37045842-99-002?wid=1024",
       "productNumber": "37045842",
       "baseCode": "37045842",
@@ -561,7 +557,7 @@
       ]
     },
     {
-      "name": "Striped blouse with tie at the waist",
+      "name": "Striped blouse with tie at the waist - Women",
       "image": "https://media.mango.com/is/image/punto/37035862-05-002?wid=1024",
       "productNumber": "37035862",
       "baseCode": "37035862",
@@ -847,7 +843,7 @@
       ]
     },
     {
-      "name": "Zebra-print faux fur skirt",
+      "name": "Zebra-print faux fur skirt - Women",
       "image": "https://media.mango.com/is/image/punto/37067789-99-002?wid=1024",
       "productNumber": "37067789",
       "baseCode": "37067789",
@@ -963,7 +959,7 @@
       ]
     },
     {
-      "name": "Fine-knit roll-neck jumper - Women",
+      "name": "Fine-knit roll-neck jumper",
       "image": "https://media.mango.com/is/image/punto/37015897-05-002?wid=1024",
       "productNumber": "37015897",
       "baseCode": "37015897",
@@ -1040,7 +1036,7 @@
       ]
     },
     {
-      "name": "Faux leather skirt with belt",
+      "name": "Faux leather skirt with belt - Women",
       "image": "https://media.mango.com/is/image/punto/37045988-99-002?wid=1024",
       "productNumber": "37045988",
       "baseCode": "37045988",
@@ -1275,7 +1271,7 @@
       "relatedProductNumbers": []
     },
     {
-      "name": "Leather shopper bag",
+      "name": "Leather shopper bag - Women",
       "image": "https://media.mango.com/is/image/punto/37044444-37-052?wid=1024",
       "productNumber": "37044444",
       "baseCode": "37044444",
@@ -1543,7 +1539,7 @@
       ]
     },
     {
-      "name": "Low-rise straight-leg trousers",
+      "name": "Low-rise straight-leg trousers - Women",
       "image": "https://media.mango.com/is/image/punto/37056014-99-002?wid=1024",
       "productNumber": "37056014",
       "baseCode": "37056014",
@@ -1643,7 +1639,7 @@
       ]
     },
     {
-      "name": "Balloon trousers with buckle belt",
+      "name": "Balloon trousers with buckle belt - Women",
       "image": "https://media.mango.com/is/image/punto/37085988-99-002?wid=1024",
       "productNumber": "37085988",
       "baseCode": "37085988",
@@ -1784,7 +1780,7 @@
       ]
     },
     {
-      "name": "Faux-leather flared trousers - Women",
+      "name": "Faux-leather flared trousers",
       "image": "https://media.mango.com/is/image/punto/37045163-99-002?wid=1024",
       "productNumber": "37045163",
       "baseCode": "37045163",
@@ -2030,6 +2026,33 @@
       ]
     },
     {
+      "name": "Balloon crop jeans - Women",
+      "image": "https://media.mango.com/is/image/punto/37017816-TN-002?wid=1024",
+      "productNumber": "37017817",
+      "baseCode": "37017817",
+      "globalCode": "37017817",
+      "colorId": "TN",
+      "url": "https://shop.mango.com/gb/en/p/women/jeans/balloon/balloon-crop-jeans/37017817/TN/00",
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37035847",
+          "colorId": "06"
+        },
+        {
+          "productNumber": "37007806",
+          "colorId": "95"
+        },
+        {
+          "productNumber": "37084440",
+          "colorId": "05"
+        },
+        {
+          "productNumber": "27041343",
+          "colorId": "99"
+        }
+      ]
+    },
+    {
       "name": "High-waisted wideleg jeans - Women",
       "image": "https://media.mango.com/is/image/punto/37004100-TO-002?wid=1024",
       "productNumber": "37004092",
@@ -2080,33 +2103,6 @@
         {
           "productNumber": "37084421",
           "colorId": "30"
-        }
-      ]
-    },
-    {
-      "name": "Barrel-leg denim trousers - Women",
-      "image": "https://media.mango.com/is/image/punto/37076748-99-002?wid=1024",
-      "productNumber": "37076748",
-      "baseCode": "37076748",
-      "globalCode": "37076748",
-      "colorId": "99",
-      "url": "https://shop.mango.com/gb/en/p/women/trousers/balloon-trousers/barrel-leg-denim-trousers/37076748/99/00",
-      "relatedProductNumbers": [
-        {
-          "productNumber": "37074415",
-          "colorId": "01"
-        },
-        {
-          "productNumber": "37084465",
-          "colorId": "02"
-        },
-        {
-          "productNumber": "37095985",
-          "colorId": "31"
-        },
-        {
-          "productNumber": "27026717",
-          "colorId": "03"
         }
       ]
     }
@@ -2173,139 +2169,6 @@
         }
       ],
       "baseCode": "37095864",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
-        "name": "Straight Bambi shirt - Women",
-        "image": "https://media.mango.com/is/image/punto/37085869-30-102?wid=1024",
-        "productNumber": "37085869",
-        "baseCode": "37085869",
-        "globalCode": "37085869",
-        "colorId": "30",
-        "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/straight-bambi-shirt/37085869/30/01",
-        "relatedUrls": [],
-        "relatedProductNumbers": [
-          {
-            "productNumber": "37015859",
-            "colorId": "TO"
-          },
-          {
-            "productNumber": "37045980",
-            "colorId": "92"
-          },
-          {
-            "productNumber": "37024462",
-            "colorId": "32"
-          },
-          {
-            "productNumber": "37001401",
-            "colorId": "OR"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042948/"
-      },
-      "related": [
-        {
-          "name": "シャツ .-- CAMILA （ブラウン）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042948_1_l.jpg",
-          "productNumber": "MA1658EW042948",
-          "brandItemNumber": "37085869 30 色 ブラウン（30）",
-          "brandItemFirstDigit": "3",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042948/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "CAMILA",
-          "relatedNames": [],
-          "variationProductNumbers": []
-        }
-      ],
-      "relatedGlobal": [
-        {
-          "name": "Mid-rise flared jeans",
-          "image": "https://media.mango.com/is/image/punto/37015859-TO-900?wid=1024",
-          "productNumber": "37015859",
-          "baseCode": "37015859",
-          "globalCode": "37015859",
-          "colorId": "TO",
-          "colorName": "",
-          "url": "https://shop.mango.com/gb/en/p/women/jeans/flare/mid-rise-flared-jeans/37015859/TO/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043071/"
-        }
-      ],
-      "baseCode": "37085869",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
-        "name": "Bambi-print fur shopper bag - Women",
-        "image": "https://media.mango.com/is/image/punto/37055174-30-052?wid=1024",
-        "productNumber": "37055174",
-        "baseCode": "37055174",
-        "globalCode": "37055174",
-        "colorId": "30",
-        "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/bambi-print-fur-shopper-bag/37055174/30/00",
-        "relatedUrls": [],
-        "relatedProductNumbers": [
-          {
-            "productNumber": "37055843",
-            "colorId": "99"
-          },
-          {
-            "productNumber": "37085992",
-            "colorId": "32"
-          },
-          {
-            "productNumber": "37045980",
-            "colorId": "92"
-          },
-          {
-            "productNumber": "37044445",
-            "colorId": "OR"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW042930/"
-      },
-      "related": [
-        {
-          "name": "レザートートバッグ .-- M-- DAMIANO （ブラウン）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658AW042930_1_l.jpg",
-          "productNumber": "MA1658AW042930",
-          "brandItemNumber": "37055174 30 色 ブラウン（30）",
-          "brandItemFirstDigit": "3",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW042930/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "M DAMIANO",
-          "relatedNames": [],
-          "variationProductNumbers": []
-        }
-      ],
-      "relatedGlobal": [
-        {
-          "name": "Faux leather jacket with ribbed collar",
-          "image": "https://media.mango.com/is/image/punto/37055843-99-900?wid=1024",
-          "productNumber": "37055843",
-          "baseCode": "37055843",
-          "globalCode": "37055843",
-          "colorId": "99",
-          "colorName": "",
-          "url": "https://shop.mango.com/gb/en/p/women/jackets/bombers/faux-leather-jacket-with-ribbed-collar/37055843/99/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040458/"
-        },
-        {
-          "name": "Balloon pleated trousers",
-          "image": "https://media.mango.com/is/image/punto/37085992-32-900?wid=1024",
-          "productNumber": "37085992",
-          "baseCode": "37085992",
-          "globalCode": "37085992",
-          "colorId": "32",
-          "colorName": "",
-          "url": "https://shop.mango.com/gb/en/p/women/trousers/balloon-trousers/balloon-pleated-trousers/37085992/32/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043060/"
-        }
-      ],
-      "baseCode": "37055174",
       "hasJapanRelations": true
     },
     {
@@ -3344,7 +3207,7 @@
     },
     {
       "main": {
-        "name": "Low-rise straight-leg trousers",
+        "name": "Low-rise straight-leg trousers - Women",
         "image": "https://media.mango.com/is/image/punto/37056014-99-002?wid=1024",
         "productNumber": "37056014",
         "baseCode": "37056014",
