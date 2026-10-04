@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-04T02:40:06.945Z",
+  "updatedAt": "2026-10-04T21:34:09.643Z",
   "products": [
     {
       "name": "ロングワンピース .-- RAMONA （ブラック）",
@@ -945,6 +945,30 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "KANSAS",
+      "relatedNames": []
+    },
+    {
+      "name": "ジーンズ .-- NEWYORK （オープンブルー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040308_1_l.jpg",
+      "productNumber": "MA1658EW040308",
+      "brandItemNumber": "27034076 TM 色 オープンブルー（TM）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040308/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "NEWYORK",
+      "relatedNames": []
+    },
+    {
+      "name": "ブレザー .-- NEWYORK （ナチュラルホワイト）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW041240_1_l.jpg",
+      "productNumber": "MA1658EW041240",
+      "brandItemNumber": "27037942 5 色 ナチュラルホワイト（5）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041240/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "NEWYORK",
       "relatedNames": []
     },
     {
@@ -4936,200 +4960,14 @@
   ],
   "groups": [
     {
-      "englishKey": "ADELA",
-      "main": {
-        "name": "ジャケット.-- ADELA （ナチュラルホワイト）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043428_1_l.jpg",
-        "productNumber": "MA1658EW043428",
-        "brandItemNumber": "37077785 5 色 ナチュラルホワイト（5）",
-        "brandItemFirstDigit": "3",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043428/",
-        "brandCode": "MA1658",
-        "brandName": "MANGO",
-        "englishKey": "ADELA",
-        "relatedNames": []
-      },
-      "related": [
-        {
-          "name": "ピアス .-- ADELA （ゴールド）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW042082_1_l.jpg",
-          "productNumber": "MA1658DW042082",
-          "brandItemNumber": "37021551 OR 色 ゴールド（OR）",
-          "brandItemFirstDigit": "3",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW042082/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "ADELA",
-          "relatedNames": []
-        }
-      ]
-    },
-    {
-      "englishKey": "CELIA",
-      "main": {
-        "name": "パンツ.-- CELIA （ブラウン）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043491_1_l.jpg",
-        "productNumber": "MA1658EW043491",
-        "brandItemNumber": "37077136 30 色 ブラウン（30）",
-        "brandItemFirstDigit": "3",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043491/",
-        "brandCode": "MA1658",
-        "brandName": "MANGO",
-        "englishKey": "CELIA",
-        "relatedNames": []
-      },
-      "related": [
-        {
-          "name": "パンツ .-- CELIA （ダークブラウン）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043060_1_l.jpg",
-          "productNumber": "MA1658EW043060",
-          "brandItemNumber": "37085992 32 色 ダークブラウン（32）",
-          "brandItemFirstDigit": "3",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043060/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "CELIA",
-          "relatedNames": []
-        },
-        {
-          "name": "ブレザー.-- CELIA （ブラウン）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043474_1_l.jpg",
-          "productNumber": "MA1658EW043474",
-          "brandItemNumber": "37097136 30 色 ブラウン（30）",
-          "brandItemFirstDigit": "3",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043474/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "CELIA",
-          "relatedNames": []
-        }
-      ]
-    },
-    {
-      "englishKey": "PARIS",
-      "main": {
-        "name": "ブラウス .--PARIS （ブラウン）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043141_1_l.jpg",
-        "productNumber": "MA1658EW043141",
-        "brandItemNumber": "37066747 30 色 ブラウン（30）",
-        "brandItemFirstDigit": "3",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043141/",
-        "brandCode": "MA1658",
-        "brandName": "MANGO",
-        "englishKey": "PARIS",
-        "relatedNames": []
-      },
-      "related": [
-        {
-          "name": "ブラウス .--PARIS （ナチュラルホワイト）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043122_1_l.jpg",
-          "productNumber": "MA1658EW043122",
-          "brandItemNumber": "37086746 2 色 ナチュラルホワイト（2）",
-          "brandItemFirstDigit": "3",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043122/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "PARIS",
-          "relatedNames": []
-        }
-      ]
-    },
-    {
-      "englishKey": "KELLY",
-      "main": {
-        "name": "ジーンズ .--KELLY （オープンブルー）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043228_1_l.jpg",
-        "productNumber": "MA1658EW043228",
-        "brandItemNumber": "37005895 TM 色 オープンブルー（TM）",
-        "brandItemFirstDigit": "3",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043228/",
-        "brandCode": "MA1658",
-        "brandName": "MANGO",
-        "englishKey": "KELLY",
-        "relatedNames": []
-      },
-      "related": [
-        {
-          "name": "ジーンズ .--KELLY （ナチュラルホワイト）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043127_1_l.jpg",
-          "productNumber": "MA1658EW043127",
-          "brandItemNumber": "37056369 5 色 ナチュラルホワイト（5）",
-          "brandItemFirstDigit": "3",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043127/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "KELLY",
-          "relatedNames": []
-        }
-      ]
-    },
-    {
-      "englishKey": "LETIZIA",
-      "main": {
-        "name": "シャツ .--LETIZIA （オープンブルー）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043282_1_l.jpg",
-        "productNumber": "MA1658EW043282",
-        "brandItemNumber": "37045851 TO 色 オープンブルー（TO）",
-        "brandItemFirstDigit": "3",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043282/",
-        "brandCode": "MA1658",
-        "brandName": "MANGO",
-        "englishKey": "LETIZIA",
-        "relatedNames": []
-      },
-      "related": [
-        {
-          "name": "ジーンズ .--LETIZIA （オープンブルー）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043151_1_l.jpg",
-          "productNumber": "MA1658EW043151",
-          "brandItemNumber": "37075850 TO 色 オープンブルー（TO）",
-          "brandItemFirstDigit": "3",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043151/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "LETIZIA",
-          "relatedNames": []
-        }
-      ]
-    },
-    {
-      "englishKey": "MENTON",
-      "main": {
-        "name": "スカート .--MENTON （ネイビーブルー）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043286_1_l.jpg",
-        "productNumber": "MA1658EW043286",
-        "brandItemNumber": "37095876 56 色 ネイビーブルー（56）",
-        "brandItemFirstDigit": "3",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043286/",
-        "brandCode": "MA1658",
-        "brandName": "MANGO",
-        "englishKey": "MENTON",
-        "relatedNames": []
-      },
-      "related": [
-        {
-          "name": "ジャケット .--MENTON （ネイビーブルー）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043173_1_l.jpg",
-          "productNumber": "MA1658EW043173",
-          "brandItemNumber": "37085876 56 色 ネイビーブルー（56）",
-          "brandItemFirstDigit": "3",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043173/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "MENTON",
-          "relatedNames": []
-        }
-      ]
-    },
-    {
       "englishKey": "NICOLA",
       "main": {
-        "name": "ジーンズ .--NICOLA （オープングレー）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043199_1_l.jpg",
-        "productNumber": "MA1658EW043199",
-        "brandItemNumber": "37015858 TN 色 オープングレー（TN）",
+        "name": "ジーンズ .--NICOLA （ナチュラルホワイト）",
+        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043271_1_l.jpg",
+        "productNumber": "MA1658EW043271",
+        "brandItemNumber": "37015883 2 色 ナチュラルホワイト（2）",
         "brandItemFirstDigit": "3",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043199/",
+        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043271/",
         "brandCode": "MA1658",
         "brandName": "MANGO",
         "englishKey": "NICOLA",
@@ -5149,12 +4987,12 @@
           "relatedNames": []
         },
         {
-          "name": "ジーンズ .--NICOLA （ナチュラルホワイト）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043271_1_l.jpg",
-          "productNumber": "MA1658EW043271",
-          "brandItemNumber": "37015883 2 色 ナチュラルホワイト（2）",
+          "name": "ジーンズ .--NICOLA （オープングレー）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043199_1_l.jpg",
+          "productNumber": "MA1658EW043199",
+          "brandItemNumber": "37015858 TN 色 オープングレー（TN）",
           "brandItemFirstDigit": "3",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043271/",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043199/",
           "brandCode": "MA1658",
           "brandName": "MANGO",
           "englishKey": "NICOLA",
@@ -5163,125 +5001,14 @@
       ]
     },
     {
-      "englishKey": "BRIDGER",
-      "main": {
-        "name": "ブラウス .--BRIDGER （ブラウン）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043232_1_l.jpg",
-        "productNumber": "MA1658EW043232",
-        "brandItemNumber": "37065847 30 色 ブラウン（30）",
-        "brandItemFirstDigit": "3",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043232/",
-        "brandCode": "MA1658",
-        "brandName": "MANGO",
-        "englishKey": "BRIDGER",
-        "relatedNames": []
-      },
-      "related": [
-        {
-          "name": "ブラウス .--BRIDGER （ナチュラルホワイト）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043195_1_l.jpg",
-          "productNumber": "MA1658EW043195",
-          "brandItemNumber": "37015854 5 色 ナチュラルホワイト（5）",
-          "brandItemFirstDigit": "3",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043195/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "BRIDGER",
-          "relatedNames": []
-        }
-      ]
-    },
-    {
-      "englishKey": "SIMONE",
-      "main": {
-        "name": "ジーンズ .--SIMONE （オープンブルー）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043270_1_l.jpg",
-        "productNumber": "MA1658EW043270",
-        "brandItemNumber": "37015882 TO 色 オープンブルー（TO）",
-        "brandItemFirstDigit": "3",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043270/",
-        "brandCode": "MA1658",
-        "brandName": "MANGO",
-        "englishKey": "SIMONE",
-        "relatedNames": []
-      },
-      "related": [
-        {
-          "name": "ジーンズ .--SIMONE （オープングレー）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043236_1_l.jpg",
-          "productNumber": "MA1658EW043236",
-          "brandItemNumber": "37015873 TN 色 オープングレー（TN）",
-          "brandItemFirstDigit": "3",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043236/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "SIMONE",
-          "relatedNames": []
-        },
-        {
-          "name": "ネックレス .-- SIMONE （ゴールド）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW043333_1_l.jpg",
-          "productNumber": "MA1658DW043333",
-          "brandItemNumber": "37056008 OR 色 ゴールド（OR）",
-          "brandItemFirstDigit": "3",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW043333/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "SIMONE",
-          "relatedNames": []
-        },
-        {
-          "name": "ジーンズ .-- SIMONE （デニムグレー）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043379_1_l.jpg",
-          "productNumber": "MA1658EW043379",
-          "brandItemNumber": "37015887 TG 色 デニムグレー（TG）",
-          "brandItemFirstDigit": "3",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043379/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "SIMONE",
-          "relatedNames": []
-        }
-      ]
-    },
-    {
-      "englishKey": "ZEBRI",
-      "main": {
-        "name": "ジーンズ .-- ZEBRI （ナチュラルホワイト）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043362_1_l.jpg",
-        "productNumber": "MA1658EW043362",
-        "brandItemNumber": "37076741 2 色 ナチュラルホワイト（2）",
-        "brandItemFirstDigit": "3",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043362/",
-        "brandCode": "MA1658",
-        "brandName": "MANGO",
-        "englishKey": "ZEBRI",
-        "relatedNames": []
-      },
-      "related": [
-        {
-          "name": "セーター .--ZEBRI （ブラック）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043321_1_l.jpg",
-          "productNumber": "MA1658EW043321",
-          "brandItemNumber": "37005864 99 色 ブラック（99）",
-          "brandItemFirstDigit": "3",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043321/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "ZEBRI",
-          "relatedNames": []
-        }
-      ]
-    },
-    {
       "englishKey": "SQUARE",
       "main": {
-        "name": "シャツ.-- SQUARE （ライトベージュ）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043456_1_l.jpg",
-        "productNumber": "MA1658EW043456",
-        "brandItemNumber": "37097941 9 色 ライトベージュ（9）",
+        "name": "スカート.-- SQUARE （ライトベージュ）",
+        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043495_1_l.jpg",
+        "productNumber": "MA1658EW043495",
+        "brandItemNumber": "37047942 9 色 ライトベージュ（9）",
         "brandItemFirstDigit": "3",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043456/",
+        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043495/",
         "brandCode": "MA1658",
         "brandName": "MANGO",
         "englishKey": "SQUARE",
@@ -5301,12 +5028,12 @@
           "relatedNames": []
         },
         {
-          "name": "スカート.-- SQUARE （ライトベージュ）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043495_1_l.jpg",
-          "productNumber": "MA1658EW043495",
-          "brandItemNumber": "37047942 9 色 ライトベージュ（9）",
+          "name": "シャツ.-- SQUARE （ライトベージュ）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043456_1_l.jpg",
+          "productNumber": "MA1658EW043456",
+          "brandItemNumber": "37097941 9 色 ライトベージュ（9）",
           "brandItemFirstDigit": "3",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043495/",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043456/",
           "brandCode": "MA1658",
           "brandName": "MANGO",
           "englishKey": "SQUARE",
@@ -5315,43 +5042,14 @@
       ]
     },
     {
-      "englishKey": "ZEBRA",
-      "main": {
-        "name": "スカート.-- ZEBRA （ブラック）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043421_1_l.jpg",
-        "productNumber": "MA1658EW043421",
-        "brandItemNumber": "37067789 99 色 ブラック（99）",
-        "brandItemFirstDigit": "3",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043421/",
-        "brandCode": "MA1658",
-        "brandName": "MANGO",
-        "englishKey": "ZEBRA",
-        "relatedNames": []
-      },
-      "related": [
-        {
-          "name": "ジャケット .-- ZEBRA （ブラック）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043405_1_l.jpg",
-          "productNumber": "MA1658EW043405",
-          "brandItemNumber": "37097133 99 色 ブラック（99）",
-          "brandItemFirstDigit": "3",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043405/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "ZEBRA",
-          "relatedNames": []
-        }
-      ]
-    },
-    {
       "englishKey": "CINDY",
       "main": {
         "name": "ジーンズ.-- CINDY （オープンブルー）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043467_1_l.jpg",
-        "productNumber": "MA1658EW043467",
-        "brandItemNumber": "37027792 TO 色 オープンブルー（TO）",
+        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043490_1_l.jpg",
+        "productNumber": "MA1658EW043490",
+        "brandItemNumber": "37047782 TM 色 オープンブルー（TM）",
         "brandItemFirstDigit": "3",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043467/",
+        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043490/",
         "brandCode": "MA1658",
         "brandName": "MANGO",
         "englishKey": "CINDY",
@@ -5372,78 +5070,20 @@
         },
         {
           "name": "ジーンズ.-- CINDY （オープンブルー）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043490_1_l.jpg",
-          "productNumber": "MA1658EW043490",
-          "brandItemNumber": "37047782 TM 色 オープンブルー（TM）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043467_1_l.jpg",
+          "productNumber": "MA1658EW043467",
+          "brandItemNumber": "37027792 TO 色 オープンブルー（TO）",
           "brandItemFirstDigit": "3",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043490/",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043467/",
           "brandCode": "MA1658",
           "brandName": "MANGO",
           "englishKey": "CINDY",
           "relatedNames": []
         }
       ]
-    },
-    {
-      "englishKey": "LAURI",
-      "main": {
-        "name": "ダウン.-- LAURI （ネイビーブルー）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043443_1_l.jpg",
-        "productNumber": "MA1658EW043443",
-        "brandItemNumber": "37017774 56 色 ネイビーブルー（56）",
-        "brandItemFirstDigit": "3",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043443/",
-        "brandCode": "MA1658",
-        "brandName": "MANGO",
-        "englishKey": "LAURI",
-        "relatedNames": []
-      },
-      "related": [
-        {
-          "name": "ダウン.-- LAURI （カーキ）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043434_1_l.jpg",
-          "productNumber": "MA1658EW043434",
-          "brandItemNumber": "37047776 37 色 カーキ（37）",
-          "brandItemFirstDigit": "3",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043434/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "LAURI",
-          "relatedNames": []
-        }
-      ]
-    },
-    {
-      "englishKey": "NEWFIONA",
-      "main": {
-        "name": "ジーンズ.-- NEWFIONA （オープンブルー）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043493_1_l.jpg",
-        "productNumber": "MA1658EW043493",
-        "brandItemNumber": "37027793 TO 色 オープンブルー（TO）",
-        "brandItemFirstDigit": "3",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043493/",
-        "brandCode": "MA1658",
-        "brandName": "MANGO",
-        "englishKey": "NEWFIONA",
-        "relatedNames": []
-      },
-      "related": [
-        {
-          "name": "ジーンズ.-- NEWFIONA （オープングレー）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043472_1_l.jpg",
-          "productNumber": "MA1658EW043472",
-          "brandItemNumber": "37047791 TN 色 オープングレー（TN）",
-          "brandItemFirstDigit": "3",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043472/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "NEWFIONA",
-          "relatedNames": []
-        }
-      ]
     }
   ],
-  "newCount": 15,
+  "newCount": 3,
   "displayedMainProductNumbers": [
     "MA1658EW33440",
     "MA3878EC003099",
@@ -6772,7 +6412,10 @@
     "MA1658EW043421",
     "MA1658EW043467",
     "MA1658EW043443",
-    "MA1658EW043493"
+    "MA1658EW043493",
+    "MA1658EW043271",
+    "MA1658EW043495",
+    "MA1658EW043490"
   ],
   "scanned": 4250
 }
