@@ -65,19 +65,24 @@ GitHubリポジトリにこのフォルダーをPushし、リポジトリの `Se
 ### 仕組み
 
 ```
-ブラウザ(収集) → 中継Worker(検証して保存) → data/global-raw.json
+ブラウザ(収集) → 中継サーバー(検証して保存) → data/global-raw.json
   → GitHub Actions(build-global.js が日本商品と照合) → public/global-products.json
 ```
 
-- 中継Worker(`cloudflare/relay-worker.js`)だけがGitHubの書き込みトークンを持ちます。ページにトークンは含まれません。受け取ったデータは項目ごとに検証し(URLは `shop.mango.com`、画像は `*.mango.com` のみなど)、10分以内の再送信や、前回の半分未満の商品数は受け付けません。
+- 中継サーバー(`apps-script/Code.gs`)だけがGitHubの書き込みトークンを持ちます。ページにトークンは含まれません。受け取ったデータは項目ごとに検証し(URLは `shop.mango.com`、画像は `*.mango.com` のみなど)、10分以内の再送信や、前回の半分未満の商品数は受け付けません。
 - 毎朝4:00のActionsも、保存済みの `data/global-raw.json` を最新の日本商品で照合し直します。日本側に新しく出た商品のリンクは、収集しなくても毎日反映されます。
 - 誤ったデータが入った場合は、`data/global-raw.json` のコミットを元に戻してください。
 
-### 中継Workerのセットアップ(最初の1回、Node.js不要)
+### 中継サーバー(Google Apps Script)のセットアップ(最初の1回、インストール不要)
 
-1. GitHubで Fine-grained token を作成します(Repository access は `MANGO_association` のみ、Permissions は Contents: Read and write)。
-2. Cloudflare Dashboard で Workers & Pages → Create → Worker を作り、`cloudflare/relay-worker.js` の内容を貼り付けてデプロイします。
-3. Worker の Settings → Variables and Secrets に、Secret として `GITHUB_TOKEN` を登録します。
-4. 発行されたWorkerのURL(`https://〜.workers.dev`)を `public/global-update.js` の `RELAY_URL` に設定してPushします。
+1. GitHubで Fine-grained token を作成します(Repository access は `MANGO_association` のみ、Permissions は Contents: Read and write)。トークンは他人に見せず、手順3以外には貼らないでください。
+2. https://script.google.com で「新しいプロジェクト」を作り、`apps-script/Code.gs` の内容を貼り付けて保存します。
+3. 左メニューの「プロジェクトの設定」→「スクリプト プロパティ」に、`GITHUB_TOKEN` という名前でトークンを登録します。
+4. 右上の「デプロイ」→「新しいデプロイ」→ 種類「ウェブアプリ」で、次のように設定してデプロイします。初回はGoogleの権限承認が求められます。
+   - 次のユーザーとして実行: **自分**
+   - アクセスできるユーザー: **全員**
+5. 表示された「ウェブアプリのURL」(`https://script.google.com/macros/s/〜/exec`)を `public/global-update.js` の `RELAY_URL` に設定してPushします。
+
+コードを変更したときは、「デプロイを管理」から新しいバージョンでデプロイし直してください(URLは変わりません)。
 
 `RELAY_URL` が未設定の間は、更新結果はその画面にだけ表示されます。ページに送れなかった場合は `global-raw.json` がダウンロードされるので、`public/tools/update-global.html` と `update-global.ps1` で手動反映もできます。

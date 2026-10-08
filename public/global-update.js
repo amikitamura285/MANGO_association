@@ -1,5 +1,5 @@
 (function () {
-  // Cloudflare Worker (cloudflare/relay-worker.js) をデプロイしたら、そのURLをここに設定する
+  // Apps Script (apps-script/Code.gs) をウェブアプリとしてデプロイしたら、そのURL(…/exec)をここに設定する
   const RELAY_URL = "";
   const SHOP_ORIGIN = "https://shop.mango.com";
   const SHOP_URL = `${SHOP_ORIGIN}/gb/en/c/women/new-now/56b5c5ed`;
@@ -30,11 +30,11 @@
   async function publish(raw) {
     const response = await fetch(RELAY_URL, {
       method: "POST",
-      headers: { "content-type": "application/json" },
+      headers: { "content-type": "text/plain;charset=utf-8" },
       body: JSON.stringify({ raw })
     });
     const body = await response.json().catch(() => ({}));
-    if (!response.ok) throw new Error(body.error || `公開サイトへの保存に失敗しました (${response.status})`);
+    if (!response.ok || !body.ok) throw new Error(body.error || `公開サイトへの保存に失敗しました (${response.status})`);
   }
 
   async function handleRaw(raw) {
