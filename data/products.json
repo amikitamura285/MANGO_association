@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-07T19:25:38.101Z",
+  "updatedAt": "2026-10-08T11:46:01.283Z",
   "products": [
     {
       "name": "ロングワンピース .-- RAMONA （ブラック）",
@@ -763,6 +763,30 @@
       "relatedNames": []
     },
     {
+      "name": "ピアス .-- ELENA （シルバー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW040002_1_l.jpg",
+      "productNumber": "MA1658DW040002",
+      "brandItemNumber": "27052927 PL 色 シルバー（PL）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW040002/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "ELENA",
+      "relatedNames": []
+    },
+    {
+      "name": "ミディスカート .-- ELENA （ライトベージュ）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040783_1_l.jpg",
+      "productNumber": "MA1658EW040783",
+      "brandItemNumber": "27065999 8 色 ライトベージュ（8）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040783/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "ELENA",
+      "relatedNames": []
+    },
+    {
       "name": "パーカー .-- LENA （オープンブルー）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040091_1_l.jpg",
       "productNumber": "MA1658EW040091",
@@ -860,44 +884,6 @@
         "スカート .-- AURA （ダークブラウン）",
         "シャツ .-- SOFIA （パステルブルー）"
       ]
-    },
-    {
-      "name": "ヘアクリップ .-- AZUR （ブラック）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW040290_1_l.jpg",
-      "productNumber": "MA1658DW040290",
-      "brandItemNumber": "27064437 99 色 ブラック（99）",
-      "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW040290/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "AZUR",
-      "relatedNames": []
-    },
-    {
-      "name": "ブレザー .-- AZUR （パステルブルー）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040948_1_l.jpg",
-      "productNumber": "MA1658EW040948",
-      "brandItemNumber": "27067941 50 色 パステルブルー（50）",
-      "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040948/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "AZUR",
-      "relatedNames": [
-        "パンツ .-- WHITE （ホワイト）"
-      ]
-    },
-    {
-      "name": "トップス .-- AZUR （パステルブルー）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW041132_1_l.jpg",
-      "productNumber": "MA1658EW041132",
-      "brandItemNumber": "27057941 50 色 パステルブルー（50）",
-      "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041132/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "AZUR",
-      "relatedNames": []
     },
     {
       "name": "シャツ .-- PARTENOP （ライラック）",
@@ -1228,6 +1214,32 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "P DOLORES",
+      "relatedNames": []
+    },
+    {
+      "name": "ブレザー .-- AZUR （パステルブルー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040948_1_l.jpg",
+      "productNumber": "MA1658EW040948",
+      "brandItemNumber": "27067941 50 色 パステルブルー（50）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040948/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "AZUR",
+      "relatedNames": [
+        "パンツ .-- WHITE （ホワイト）"
+      ]
+    },
+    {
+      "name": "トップス .-- AZUR （パステルブルー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW041132_1_l.jpg",
+      "productNumber": "MA1658EW041132",
+      "brandItemNumber": "27057941 50 色 パステルブルー（50）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041132/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "AZUR",
       "relatedNames": []
     },
     {
@@ -2464,8 +2476,38 @@
       "relatedNames": []
     }
   ],
-  "groups": [],
-  "newCount": 0,
+  "groups": [
+    {
+      "englishKey": "ELENA",
+      "main": {
+        "name": "ピアス .-- ELENA （シルバー）",
+        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW040002_1_l.jpg",
+        "productNumber": "MA1658DW040002",
+        "brandItemNumber": "27052927 PL 色 シルバー（PL）",
+        "brandItemFirstDigit": "2",
+        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW040002/",
+        "brandCode": "MA1658",
+        "brandName": "MANGO",
+        "englishKey": "ELENA",
+        "relatedNames": []
+      },
+      "related": [
+        {
+          "name": "ミディスカート .-- ELENA （ライトベージュ）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040783_1_l.jpg",
+          "productNumber": "MA1658EW040783",
+          "brandItemNumber": "27065999 8 色 ライトベージュ（8）",
+          "brandItemFirstDigit": "2",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040783/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "ELENA",
+          "relatedNames": []
+        }
+      ]
+    }
+  ],
+  "newCount": 1,
   "displayedMainProductNumbers": [
     "MA1658EW33440",
     "MA3878EC003099",
@@ -3797,7 +3839,8 @@
     "MA1658EW043493",
     "MA1658EW043271",
     "MA1658EW043495",
-    "MA1658EW043490"
+    "MA1658EW043490",
+    "MA1658DW040002"
   ],
-  "scanned": 4226
+  "scanned": 4231
 }
