@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MANGO FINDER</title>
   <link rel="icon" type="image/png" href="../favicon.png">
-  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../styles.css?v=20260918-2">
 </head>
 <body>
   <header class="topbar">
@@ -78,20 +78,13 @@
           <span class="summary-label">LAST UPDATED</span>
           <strong id="globalUpdatedAt">—</strong>
         </div>
+        <button id="globalUpdateToggle" class="update-button" type="button">UPDATE</button>
         <div class="rule-note">
           <span class="rule-icon">◎</span>
           <span>ブランド商品番号の前8桁を比較<br>グローバルURLと照合</span>
         </div>
       </div>
-      <div class="relation-results-head">
-        <div>
-          <p class="eyebrow">GLOBAL COMPARISON</p>
-          <h2>グローバル候補</h2>
-        </div>
-        <span id="globalScannedCount" class="muted"></span>
-      </div>
       <div class="global-update">
-        <button id="globalUpdateToggle" class="update-button" type="button">更新</button>
         <div id="globalUpdatePanel" class="update-panel" hidden>
           <ol>
             <li>初回のみ: GitHubトークン(このリポジトリの Contents 読み書き権限)を保存<br>
@@ -102,6 +95,13 @@
           </ol>
           <p id="globalUpdateStatus" class="update-status" role="status"></p>
         </div>
+      </div>
+      <div class="relation-results-head">
+        <div>
+          <p class="eyebrow">GLOBAL COMPARISON</p>
+          <h2>グローバル候補</h2>
+        </div>
+        <span id="globalScannedCount" class="muted"></span>
       </div>
       <div id="globalProductGrid" class="product-grid"></div>
       <div id="globalProductEmpty" class="empty" hidden>
