@@ -140,6 +140,7 @@ main { min-height: calc(100vh - 120px); }
 
 .relation-summary strong {
   display: block;
+  white-space: nowrap;
   margin-top: 9px;
   font-family: 'Mango Sans', sans-serif;
   font-size: 25px;
