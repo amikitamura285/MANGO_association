@@ -383,3 +383,19 @@ footer {
     gap: 8px;
   }
 }
+
+.global-update { margin: 0 0 24px; }
+.update-button, .update-panel button {
+  font: inherit;
+  padding: 6px 16px;
+  border: 1px solid var(--ink);
+  background: var(--white);
+  color: var(--ink);
+  cursor: pointer;
+}
+.update-button:hover, .update-panel button:hover { background: var(--accent); }
+.update-panel { margin-top: 12px; padding: 16px 20px; border: 1px solid var(--line); background: var(--white); font-size: 14px; line-height: 1.8; }
+.update-panel ol { margin: 0; padding-left: 1.2em; }
+.update-panel input { font: inherit; padding: 4px 8px; border: 1px solid var(--line); width: min(320px, 100%); }
+.update-status { margin: 12px 0 0; color: var(--muted); }
+.update-status.is-error { color: #b00020; }

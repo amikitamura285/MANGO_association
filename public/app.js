@@ -139,26 +139,26 @@ function loadProducts() {
   return productsReady;
 }
 
+function renderGlobalData(data) {
+  const rows = (Array.isArray(data.matches) ? data.matches : [])
+    .map((entry) => ({
+      main: entry.main,
+      related: entry.relatedGlobal || []
+    }))
+    .filter((entry) => entry.main && entry.related.length > 0);
+
+  $("#globalProductCount").textContent = String(rows.length).padStart(2, "0");
+  $("#globalUpdatedAt").textContent = data.updatedAt ? new Intl.DateTimeFormat("ja-JP", { month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit" }).format(new Date(data.updatedAt)) : "—";
+  $("#globalScannedCount").textContent = (data.products || []).length ? `${(data.products || []).length} GLOBAL PRODUCTS` : "";
+  renderProductCards("#globalProductGrid", rows, true);
+  $("#globalProductEmpty").hidden = rows.length > 0;
+}
+
 function loadGlobalProducts() {
   const ready = productsReady || Promise.resolve();
   ready.then(() => fetch(`${dataPathPrefix}global-products.json?v=${Date.now()}`, { cache: "no-store" }))
     .then((response) => response.json())
-    .then((data) => {
-      let rows = [];
-
-      rows = (Array.isArray(data.matches) ? data.matches : [])
-        .map((entry) => ({
-          main: entry.main,
-          related: entry.relatedGlobal || []
-        }))
-        .filter((entry) => entry.main && entry.related.length > 0);
-
-      $("#globalProductCount").textContent = String(rows.length).padStart(2, "0");
-      $("#globalUpdatedAt").textContent = data.updatedAt ? new Intl.DateTimeFormat("ja-JP", { month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit" }).format(new Date(data.updatedAt)) : "—";
-      $("#globalScannedCount").textContent = (data.products || []).length ? `${(data.products || []).length} GLOBAL PRODUCTS` : "";
-      renderProductCards("#globalProductGrid", rows, true);
-      $("#globalProductEmpty").hidden = rows.length > 0;
-    })
+    .then(renderGlobalData)
     .catch(() => {
       $("#globalProductEmpty").hidden = false;
     });

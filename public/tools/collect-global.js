@@ -11,7 +11,19 @@
   const API = "https://online-orchestrator.mango.com/v4/products?channelId=shop&countryIso=GB&languageIso=en&productId=";
 
   const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-  const log = (...args) => console.log("[collect-global]", ...args);
+  const FINDER_ORIGIN = "https://amikitamura285.github.io";
+  const banner = document.createElement("div");
+  banner.id = "mango-finder-banner";
+  banner.style.cssText = "position:fixed;z-index:2147483647;left:0;right:0;top:0;padding:8px 12px;background:#181716;color:#e8ff67;font:14px sans-serif";
+  document.body.appendChild(banner);
+  const send = (message) => {
+    try { window.opener?.postMessage(message, FINDER_ORIGIN); return Boolean(window.opener); } catch { return false; }
+  };
+  const log = (...args) => {
+    console.log("[collect-global]", ...args);
+    banner.textContent = `MANGO FINDER: ${args.join(" ")}`;
+    send({ type: "mango-global-progress", text: args.join(" ") });
+  };
   let apiBlocked = false;
 
   if (location.origin !== "https://shop.mango.com") {
@@ -162,10 +174,20 @@
   window.__mangoRaw = raw;
   log(`完了: 商品 ${products.length} 件 / 関連候補 ${Object.values(candidates).filter(Boolean).length} 件`);
 
+  if (send({ type: "mango-global-raw", raw })) {
+    banner.textContent = "MANGO FINDER: 元のページにデータを送信しました。このタブは閉じて構いません。";
+    return;
+  }
+  banner.textContent = "MANGO FINDER: 元のページに送信できなかったため global-raw.json をダウンロードしました。";
   const link = document.createElement("a");
   link.href = URL.createObjectURL(new Blob([JSON.stringify(raw)], { type: "application/json" }));
   link.download = "global-raw.json";
   document.body.appendChild(link);
   link.click();
   link.remove();
-})().catch((error) => console.error("[collect-global] 失敗:", error.message));
+})().catch((error) => {
+  console.error("[collect-global] 失敗:", error.message);
+  const failed = document.getElementById("mango-finder-banner");
+  if (failed) failed.textContent = `MANGO FINDER: 失敗 - ${error.message}`;
+  try { window.opener?.postMessage({ type: "mango-global-error", text: error.message }, "https://amikitamura285.github.io"); } catch {}
+});

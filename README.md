@@ -51,3 +51,15 @@ GitHubリポジトリにこのフォルダーをPushし、リポジトリの `Se
 このサイトは、閲覧者が Node.js をインストールせず、ブラウザだけで見ることができます。`public` 配下の HTML / CSS / JavaScript / JSON をそのまま表示する静的サイトなので、誰でも追加ダウンロードなしで利用できます。
 
 `crawl.yml` は毎日19:00 UTC（日本時間4:00）にGitHub Actions上でクロールし、`public/products.json` と `public/global-products.json` を更新してコミットします。Actionsの初回実行は `Actions > Crawl MANGO products > Run workflow` から手動実行できます。
+
+## グローバル関連付けの更新(ブラウザから)
+
+`shop.mango.com` はGitHub Actionsなどの自動アクセスをVercelのSecurity Checkpointで制限しているため、グローバルの商品一覧はブラウザから収集します。毎朝4:00のActionsは日本側のデータと `japan-index.json` を更新し、グローバルの取得が0件のときは既存の `global-products.json` を上書きしません。
+
+`/global/` ページの「更新」ボタンから行います。
+
+1. 初回のみ: GitHubのPersonal Access Token(このリポジトリのContents読み書き権限)を保存します。トークンはそのブラウザの localStorage にだけ保存されます。
+2. 初回のみ: 「MANGO収集」リンクをブックマークバーへドラッグします。
+3. 「MANGOを開く」で開いたタブでブックマークをクリックすると、収集 → 日本商品との照合 → 画面表示 → `public/` と `data/` の `global-products.json` へのコミットまで自動で行われます。
+
+トークンを保存していない場合は画面表示のみで、公開サイトには反映されません。ページに送れなかった場合は `global-raw.json` がダウンロードされるので、`public/tools/update-global.html` と `update-global.ps1` で手動反映できます。

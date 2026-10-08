@@ -90,6 +90,19 @@
         </div>
         <span id="globalScannedCount" class="muted"></span>
       </div>
+      <div class="global-update">
+        <button id="globalUpdateToggle" class="update-button" type="button">更新</button>
+        <div id="globalUpdatePanel" class="update-panel" hidden>
+          <ol>
+            <li>初回のみ: GitHubトークン(このリポジトリの Contents 読み書き権限)を保存<br>
+              <input id="globalUpdateToken" type="password" autocomplete="off" placeholder="github_pat_...">
+              <button id="globalUpdateSaveToken" type="button">保存</button></li>
+            <li>初回のみ: <a id="globalUpdateBookmarklet" href="#">MANGO収集</a> をブックマークバーへドラッグ</li>
+            <li><button id="globalUpdateOpen" type="button">MANGOを開く</button> → 開いたタブでブックマーク「MANGO収集」をクリック</li>
+          </ol>
+          <p id="globalUpdateStatus" class="update-status" role="status"></p>
+        </div>
+      </div>
       <div id="globalProductGrid" class="product-grid"></div>
       <div id="globalProductEmpty" class="empty" hidden>
         <div class="empty-mark">M</div>
@@ -104,6 +117,8 @@
     <span>DATA SOURCE: MANGO JAPAN / GLOBAL PUBLIC PRODUCT PAGES</span>
   </footer>
 
-  <script src="../app.js?v=20260918-13"></script>
+  <script src="../tools/global-match.js"></script>
+  <script src="../app.js?v=20260918-14"></script>
+  <script src="../global-update.js?v=20260918-1"></script>
 </body>
 </html>
