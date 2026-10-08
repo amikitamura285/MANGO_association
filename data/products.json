@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-08T12:09:55.989Z",
+  "updatedAt": "2026-10-08T19:26:15.323Z",
   "products": [
     {
       "name": "ロングワンピース .-- RAMONA （ブラック）",
@@ -2476,38 +2476,8 @@
       "relatedNames": []
     }
   ],
-  "groups": [
-    {
-      "englishKey": "ELENA",
-      "main": {
-        "name": "ミディスカート .-- ELENA （ライトベージュ）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040783_1_l.jpg",
-        "productNumber": "MA1658EW040783",
-        "brandItemNumber": "27065999 8 色 ライトベージュ（8）",
-        "brandItemFirstDigit": "2",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040783/",
-        "brandCode": "MA1658",
-        "brandName": "MANGO",
-        "englishKey": "ELENA",
-        "relatedNames": []
-      },
-      "related": [
-        {
-          "name": "ピアス .-- ELENA （シルバー）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW040002_1_l.jpg",
-          "productNumber": "MA1658DW040002",
-          "brandItemNumber": "27052927 PL 色 シルバー（PL）",
-          "brandItemFirstDigit": "2",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW040002/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "ELENA",
-          "relatedNames": []
-        }
-      ]
-    }
-  ],
-  "newCount": 1,
+  "groups": [],
+  "newCount": 0,
   "displayedMainProductNumbers": [
     "MA1658EW33440",
     "MA3878EC003099",
@@ -3843,5 +3813,5 @@
     "MA1658DW040002",
     "MA1658EW040783"
   ],
-  "scanned": 4231
+  "scanned": 4227
 }
