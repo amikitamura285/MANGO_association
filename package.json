@@ -5,7 +5,8 @@
   "description": "MANGO Japan product monitor",
   "scripts": {
     "start": "node server.js",
-    "crawl": "node server.js --crawl"
+    "crawl": "node server.js --crawl",
+    "build-global": "node build-global.js"
   },
   "engines": {
     "node": ">=18"

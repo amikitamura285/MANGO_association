@@ -54,12 +54,30 @@ GitHubリポジトリにこのフォルダーをPushし、リポジトリの `Se
 
 ## グローバル関連付けの更新(ブラウザから)
 
-`shop.mango.com` はGitHub Actionsなどの自動アクセスをVercelのSecurity Checkpointで制限しているため、グローバルの商品一覧はブラウザから収集します。毎朝4:00のActionsは日本側のデータと `japan-index.json` を更新し、グローバルの取得が0件のときは既存の `global-products.json` を上書きしません。
+`shop.mango.com` はGitHub Actionsなどの自動アクセスをVercelのSecurity Checkpointで制限しているため、グローバルの商品一覧はブラウザから収集します。サイトのURLを知っている人なら誰でも、`/global/` ページの「UPDATE」から更新できます。
 
-`/global/` ページの「更新」ボタンから行います。
+### 使い方(更新する人)
 
-1. 初回のみ: GitHubのPersonal Access Token(このリポジトリのContents読み書き権限)を保存します。トークンはそのブラウザの localStorage にだけ保存されます。
-2. 初回のみ: 「MANGO収集」リンクをブックマークバーへドラッグします。
-3. 「MANGOを開く」で開いたタブでブックマークをクリックすると、収集 → 日本商品との照合 → 画面表示 → `public/` と `data/` の `global-products.json` へのコミットまで自動で行われます。
+1. 初回のみ: パネルの「MANGO収集」リンクをブックマークバーへドラッグします。
+2. 「MANGOを開く」で開いたタブで、ブックマーク「MANGO収集」をクリックします。
+3. 収集 → 日本商品との照合 → 画面表示 → 公開サイトへの保存まで自動で行われます。公開サイトへの反映は数分かかります。
 
-トークンを保存していない場合は画面表示のみで、公開サイトには反映されません。ページに送れなかった場合は `global-raw.json` がダウンロードされるので、`public/tools/update-global.html` と `update-global.ps1` で手動反映できます。
+### 仕組み
+
+```
+ブラウザ(収集) → 中継Worker(検証して保存) → data/global-raw.json
+  → GitHub Actions(build-global.js が日本商品と照合) → public/global-products.json
+```
+
+- 中継Worker(`cloudflare/relay-worker.js`)だけがGitHubの書き込みトークンを持ちます。ページにトークンは含まれません。受け取ったデータは項目ごとに検証し(URLは `shop.mango.com`、画像は `*.mango.com` のみなど)、10分以内の再送信や、前回の半分未満の商品数は受け付けません。
+- 毎朝4:00のActionsも、保存済みの `data/global-raw.json` を最新の日本商品で照合し直します。日本側に新しく出た商品のリンクは、収集しなくても毎日反映されます。
+- 誤ったデータが入った場合は、`data/global-raw.json` のコミットを元に戻してください。
+
+### 中継Workerのセットアップ(最初の1回、Node.js不要)
+
+1. GitHubで Fine-grained token を作成します(Repository access は `MANGO_association` のみ、Permissions は Contents: Read and write)。
+2. Cloudflare Dashboard で Workers & Pages → Create → Worker を作り、`cloudflare/relay-worker.js` の内容を貼り付けてデプロイします。
+3. Worker の Settings → Variables and Secrets に、Secret として `GITHUB_TOKEN` を登録します。
+4. 発行されたWorkerのURL(`https://〜.workers.dev`)を `public/global-update.js` の `RELAY_URL` に設定してPushします。
+
+`RELAY_URL` が未設定の間は、更新結果はその画面にだけ表示されます。ページに送れなかった場合は `global-raw.json` がダウンロードされるので、`public/tools/update-global.html` と `update-global.ps1` で手動反映もできます。

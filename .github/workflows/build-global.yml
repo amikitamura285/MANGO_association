@@ -1,0 +1,33 @@
+name: Build global data
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "data/global-raw.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-commit
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node build-global.js
+      - name: Commit rebuilt global data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/global-products.json public/global-products.json
+          git diff --cached --quiet || git commit -m "chore: rebuild global data"
+          git pull --rebase
+          git push

@@ -73,8 +73,8 @@
       || doc.title;
     const image = doc.querySelector('meta[property="og:image"]')?.content || "";
     const productNumber = [...url.matchAll(/\/(\d{8})\b/g)].at(-1)?.[1] || "";
-    const colorId = [...url.matchAll(/\/([^/]+)\/[^/]+$/g)].at(-1)?.[1] || "";
-    if (!productNumber || !title) return null;
+    const colorId = url.match(/\/\d{8}\/([A-Za-z0-9]{1,4})(?:\/|$)/)?.[1] || "";
+    if (!productNumber || !colorId || !title) return null;
     return {
       name: title.replace(/\s+/g, " ").replace(/\s*\|\s*MANGO.*$/i, "").trim(),
       image,
