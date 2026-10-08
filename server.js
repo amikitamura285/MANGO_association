@@ -369,6 +369,10 @@ async function crawlGlobalProducts(japanProducts = []) {
     }
   }
   const deduped = products.filter((product, index, array) => array.findIndex((entry) => entry.baseCode === product.baseCode) === index);
+  if (!deduped.length) {
+    console.warn("Global crawl returned no products (blocked?). Keeping existing global-products.json.");
+    return readGlobalProducts();
+  }
   for (const product of deduped) {
     for (const relatedUrl of product.relatedUrls || []) {
       if (productByUrl.has(relatedUrl)) continue;
@@ -518,6 +522,11 @@ async function crawl() {
     };
     await writeProducts(result);
     await fs.writeFile(path.join(ROOT, "public", "products.json"), JSON.stringify(result, null, 2), "utf8");
+    await fs.writeFile(path.join(ROOT, "public", "japan-index.json"), JSON.stringify({
+      updatedAt: result.updatedAt,
+      products: eligibleProducts.map(({ name, productNumber, brandItemNumber, url, relatedNames }) =>
+        ({ name, productNumber, brandItemNumber, url, relatedNames }))
+    }), "utf8");
     await crawlGlobalProducts(eligibleProducts);
     crawlState = { ...crawlState, status: "idle", finishedAt: new Date().toISOString(), count: matched.length };
   } catch (error) {

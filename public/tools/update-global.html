@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>グローバル関連付け 更新</title>
+  <style>
+    body { font: 15px/1.7 system-ui, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 16px; }
+    ol { padding-left: 1.2em; }
+    #result { margin-top: 24px; white-space: pre-wrap; }
+    #result.error { color: #b00020; }
+    button { font: inherit; padding: 6px 14px; margin-top: 12px; }
+  </style>
+</head>
+<body>
+  <h1>グローバル関連付け 更新</h1>
+  <ol>
+    <li>ブラウザで <code>shop.mango.com/gb/en/</code> を開き、コンソールで <code>collect-global.js</code> を実行 → <code>global-raw.json</code> がダウンロードされる</li>
+    <li>下のボタンでそのファイルを選ぶ</li>
+    <li>出力された <code>global-products.json</code> を、リポジトリの <code>update-global.ps1</code> で反映する</li>
+  </ol>
+  <input id="file" type="file" accept=".json,application/json">
+  <div id="result"></div>
+  <button id="download" hidden>global-products.json をダウンロード</button>
+  <script src="global-match.js"></script>
+  <script>
+    const result = document.getElementById("result");
+    const download = document.getElementById("download");
+    let output = null;
+
+    async function loadJapanProducts() {
+      for (const [path, pick] of [["../japan-index.json", (d) => d.products], ["../products.json", (d) => d.products]]) {
+        const response = await fetch(`${path}?v=${Date.now()}`, { cache: "no-store" });
+        if (!response.ok) continue;
+        const products = pick(await response.json()) || [];
+        return { products, source: path };
+      }
+      throw new Error("日本商品データ(japan-index.json)を読み込めませんでした。");
+    }
+
+    document.getElementById("file").addEventListener("change", async (event) => {
+      const file = event.target.files[0];
+      result.className = "";
+      download.hidden = true;
+      if (!file) return;
+      try {
+        const raw = JSON.parse(await file.text());
+        if (!Array.isArray(raw.products)) throw new Error("global-raw.json の形式が正しくありません。");
+        const japan = await loadJapanProducts();
+        output = GlobalMatch.buildGlobalResult(raw, japan.products);
+        const warning = japan.source.includes("japan-index") ? "" :
+          "\n注意: japan-index.json がまだ無いため products.json で照合しています。一部の関連付けが漏れる可能性があります(次回のクロール後に再実行してください)。";
+        result.textContent = `収集日時: ${raw.collectedAt}\nグローバル商品: ${output.products.length} 件\n日本商品との関連付け: ${output.matches.length} 件${warning}`;
+        download.hidden = false;
+      } catch (error) {
+        result.className = "error";
+        result.textContent = error.message;
+      }
+    });
+
+    download.addEventListener("click", () => {
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(new Blob([JSON.stringify(output, null, 2)], { type: "application/json" }));
+      link.download = "global-products.json";
+      link.click();
+    });
+  </script>
+</body>
+</html>
