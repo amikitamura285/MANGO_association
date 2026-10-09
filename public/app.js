@@ -2,7 +2,9 @@
 const state = {
   groups: [],
   products: [],
-  checked: new Set(JSON.parse(localStorage.getItem("mango-monitor-checked") || "[]"))
+  checked: new Set(JSON.parse(localStorage.getItem("mango-monitor-checked") || "[]")),
+  globalChecked: new Set(JSON.parse(localStorage.getItem("mango-monitor-global-checked") || "[]")),
+  globalRows: []
 };
 let productsReady;
 const dataPathPrefix = /\/(?:relation|global)\/$/.test(window.location.pathname) ? "../" : "";
@@ -49,9 +51,10 @@ function getJapanUrl(product) {
   return product.japanUrl || "";
 }
 
-function renderProductCards(containerSelector, groups, compact) {
+function renderProductCards(containerSelector, groups, compact, scope = "main") {
   const container = $(containerSelector);
   if (!container) return;
+  const checkedSet = scope === "global" ? state.globalChecked : state.checked;
 
   const renderImage = (product, small) => {
     const globalUrl = product.globalUrl || product.url || "";
@@ -77,7 +80,7 @@ function renderProductCards(containerSelector, groups, compact) {
   container.innerHTML = groups.map((group) => {
     const main = group.main || group.japanese || group;
     const related = Array.isArray(group.related) ? group.related : (Array.isArray(group.global) ? group.global : []);
-    const isChecked = state.checked.has(main.productNumber);
+    const isChecked = checkedSet.has(main.productNumber);
 
     return `
       <section class="product-group">
@@ -95,18 +98,23 @@ function renderProductCards(containerSelector, groups, compact) {
 
   container.classList.toggle("compact", Boolean(compact));
 
-  document.querySelectorAll("[data-product-number]").forEach((checkbox) => {
+  container.querySelectorAll("[data-product-number]").forEach((checkbox) => {
     checkbox.addEventListener("change", (event) => {
       const target = event.target;
       const productNumber = target.dataset.productNumber;
       if (!productNumber) return;
       if (target.checked) {
-        state.checked.add(productNumber);
+        checkedSet.add(productNumber);
       } else {
-        state.checked.delete(productNumber);
+        checkedSet.delete(productNumber);
       }
-      localStorage.setItem("mango-monitor-checked", JSON.stringify([...state.checked]));
-      renderMainProducts();
+      if (scope === "global") {
+        localStorage.setItem("mango-monitor-global-checked", JSON.stringify([...checkedSet]));
+        renderGlobalRows();
+      } else {
+        localStorage.setItem("mango-monitor-checked", JSON.stringify([...checkedSet]));
+        renderMainProducts();
+      }
     });
   });
 }
@@ -147,11 +155,21 @@ function renderGlobalData(data) {
     }))
     .filter((entry) => entry.main && entry.related.length > 0);
 
-  $("#globalProductCount").textContent = String(rows.length).padStart(2, "0");
+  state.globalRows = rows;
   $("#globalUpdatedAt").textContent = data.updatedAt ? new Intl.DateTimeFormat("ja-JP", { month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit" }).format(new Date(data.updatedAt)) : "—";
   $("#globalScannedCount").textContent = (data.products || []).length ? `${(data.products || []).length} GLOBAL PRODUCTS` : "";
-  renderProductCards("#globalProductGrid", rows, true);
+  renderGlobalRows();
+}
+
+function renderGlobalRows() {
+  const rows = state.globalRows;
+  const activeRows = rows.filter((row) => !state.globalChecked.has(row.main.productNumber));
+  const checkedRows = rows.filter((row) => state.globalChecked.has(row.main.productNumber));
+  $("#globalProductCount").textContent = String(activeRows.length).padStart(2, "0");
+  renderProductCards("#globalProductGrid", activeRows, true, "global");
+  renderProductCards("#globalCheckedProductGrid", checkedRows, true, "global");
   $("#globalProductEmpty").hidden = rows.length > 0;
+  $("#globalCheckedEmpty").hidden = checkedRows.length > 0;
 }
 
 function loadGlobalProducts() {
