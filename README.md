@@ -73,6 +73,15 @@ GitHubリポジトリにこのフォルダーをPushし、リポジトリの `Se
 - 毎朝4:00のActionsも、保存済みの `data/global-raw.json` を最新の日本商品で照合し直します。日本側に新しく出た商品のリンクは、収集しなくても毎日反映されます。
 - 誤ったデータが入った場合は、`data/global-raw.json` のコミットを元に戻してください。
 
+### 毎日の自動収集(会社のPC)
+
+`scripts/auto-global.ps1` が、PCのChromeを自動で開いて上のブックマークレットと同じ収集を行い、中継サーバーへ送信します(約5分。Chromeの画面が表示されます)。実行結果は `%LOCALAPPDATA%\mango-finder\auto-global.log` に記録されます。
+
+- 登録(最初の1回): `powershell -ExecutionPolicy Bypass -File scripts\register-auto-global.ps1`(既定は毎日10:30。`-Time 9:30` で変更)
+- 解除: `Unregister-ScheduledTask -TaskName "MANGO FINDER global collect" -Confirm:$false`
+- 試し実行(公開せず収集だけ): `powershell -ExecutionPolicy Bypass -File scripts\auto-global.ps1 -DryRun`
+- PCにログインしている間だけ動きます。電源が入っていなかった場合は、次に起動したときに実行されます。1日1回成功したらその日は再実行しません(`-Force` で強制)。
+
 ### 中継サーバー(Google Apps Script)のセットアップ(最初の1回、インストール不要)
 
 1. GitHubで Fine-grained token を作成します(Repository access は `MANGO_association` のみ、Permissions は Contents: Read and write と Actions: Read and write。後者は関連付けチェックの UPDATE ボタン用)。トークンは他人に見せず、手順3以外には貼らないでください。
