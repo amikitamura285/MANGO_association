@@ -143,10 +143,26 @@ function loadProducts() {
       $("#updatedAt").textContent = data.updatedAt ? new Intl.DateTimeFormat("ja-JP", { month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit" }).format(new Date(data.updatedAt)) : "—";
       $("#scannedCount").textContent = data.scanned ? `${data.scanned} ITEMS SCANNED` : "";
     })
+    .then(() => true)
     .catch(() => {
-      $("#productEmpty").hidden = false;
+      if (!state.groups.length) $("#productEmpty").hidden = false;
+      return false;
     });
   return productsReady;
+}
+
+const refreshButton = $("#productRefresh");
+if (refreshButton) {
+  refreshButton.addEventListener("click", async () => {
+    refreshButton.disabled = true;
+    refreshButton.textContent = "読み込み中…";
+    const ok = await loadProducts();
+    refreshButton.textContent = ok ? "更新しました" : "失敗しました";
+    setTimeout(() => {
+      refreshButton.textContent = "UPDATE";
+      refreshButton.disabled = false;
+    }, 2000);
+  });
 }
 
 function renderGlobalData(data) {
