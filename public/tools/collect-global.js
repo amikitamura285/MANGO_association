@@ -6,7 +6,7 @@
     "https://shop.mango.com/gb/en/h/women",
     "https://shop.mango.com/gb/en/c/women/new-now/56b5c5ed"
   ];
-  const MAX_PRODUCTS = 100;
+  const MAX_PRODUCTS = 150;
   const DELAY_MS = 400;
   const API = "https://online-orchestrator.mango.com/v4/products?channelId=shop&countryIso=GB&languageIso=en&productId=";
 
@@ -128,6 +128,23 @@
       url: `https://shop.mango.com${productPath}/${colorId}/00`
     };
   }
+
+  async function scrollToLoadAll() {
+    const countLinks = () => new Set([...document.querySelectorAll('a[href*="/gb/en/p/"]')].map((a) => a.getAttribute("href").replace(/[#?].*$/, ""))).size;
+    const startY = window.scrollY;
+    let best = countLinks();
+    let idle = 0;
+    for (let step = 0; step < 150 && idle < 5 && best < MAX_PRODUCTS; step += 1) {
+      window.scrollBy(0, Math.round(window.innerHeight * 0.9));
+      await sleep(700);
+      const now = countLinks();
+      if (now > best) { best = now; idle = 0; } else { idle += 1; }
+      if (step % 5 === 0) log(`ページをスクロールして商品を読み込み中… ${best}件`);
+    }
+    window.scrollTo(0, startY);
+    log(`スクロール読み込み完了: 商品リンク ${best}件`);
+  }
+  await scrollToLoadAll();
 
   const pages = [{ html: document.documentElement.outerHTML, newArrivals: location.pathname.includes("/new-now/") }];
   for (const source of SOURCES) {
