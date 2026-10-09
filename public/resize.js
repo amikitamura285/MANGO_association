@@ -11,9 +11,6 @@
   const labelA = $("resizeLabelA");
   const wrapB = $("resizeWrapB");
   const formatSelect = $("resizeFormat");
-  const fitSelect = $("resizeFit");
-  const bgInput = $("resizeBg");
-  const wrapBg = $("resizeWrapBg");
   const quality = $("resizeQuality");
   const qualityValue = $("resizeQualityValue");
   const grid = $("resizeGrid");
@@ -22,7 +19,16 @@
   const zipButton = $("resizeZip");
   const clearButton = $("resizeClear");
   const snsButtons = [...root.querySelectorAll("[data-preset]")];
-  const snsStatus = $("resizeSnsStatus");
+  const editor = $("resizeEditor");
+  const editorTitle = $("resizeEditorTitle");
+  const editorCanvas = $("resizeEditorCanvas");
+  const editorThumbs = $("resizeEditorThumbs");
+  const editorZoom = $("resizeEditorZoom");
+  const editorDownload = $("resizeEditorDownload");
+  const editorZip = $("resizeEditorZip");
+  const editorReset = $("resizeEditorReset");
+  const editorClose = $("resizeEditorClose");
+  const editorStatus = $("resizeEditorStatus");
 
   const MODES = {
     width: { label: "幅 (px)", unit: 800 },
@@ -32,9 +38,9 @@
     exact: { label: "幅 (px)", unit: 800 }
   };
   const PRESETS = {
-    igFeed: { label: "IGフィード", width: 1440, height: 1080 },
-    igStory: { label: "ストーリーズ", width: 1080, height: 1920 },
-    xSquare: { label: "X正方形", width: 1080, height: 1080 }
+    igFeed: { label: "Instagram フィード投稿 4:3", width: 1440, height: 1080 },
+    igStory: { label: "Instagram ストーリーズ", width: 1080, height: 1920 },
+    xSquare: { label: "X 正方形 1:1", width: 1080, height: 1080 }
   };
   const TYPES = {
     jpeg: { mime: "image/jpeg", ext: "jpg" },
@@ -46,7 +52,11 @@
   let items = [];
   let runId = 0;
   let timer = 0;
+  let editing = null;
+  let dragging = null;
+  let previewWidth = 1;
 
+  const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
   const formatBytes = (bytes) => bytes >= 1048576 ? `${(bytes / 1048576).toFixed(1)} MB` : `${Math.max(1, Math.round(bytes / 1024))} KB`;
 
   function targetSize(width, height) {
@@ -69,38 +79,26 @@
     return Object.values(TYPES).find((type) => type.mime === file.type) || TYPES.png;
   }
 
-  function baseName(file) {
-    return file.name.replace(/\.[^.]*$/, "");
-  }
+  const baseName = (file) => file.name.replace(/\.[^.]*$/, "");
 
   function canvasBlob(canvas, type) {
     const q = type.mime === "image/png" ? undefined : Number(quality.value) / 100;
     return new Promise((resolve) => canvas.toBlob(resolve, type.mime, q));
   }
 
-  // fit: "stretch"(指定サイズに合わせる) / "pad"(余白を足して収める) / "cover"(切り抜く)
-  async function drawToBlob(item, width, height, fit) {
+  // 元画像の (sx, sy, sw, sh) の範囲を width×height に描いたものを返す
+  async function renderBlob(item, width, height, sx, sy, sw, sh) {
     const type = outputType(item.file);
     const canvas = document.createElement("canvas");
     canvas.width = width;
     canvas.height = height;
     const context = canvas.getContext("2d");
     context.imageSmoothingQuality = "high";
-    const { bitmap } = item;
-    if (fit === "stretch") {
-      if (type.mime === "image/jpeg") {
-        context.fillStyle = "#ffffff";
-        context.fillRect(0, 0, width, height);
-      }
-      context.drawImage(bitmap, 0, 0, width, height);
-    } else {
-      const scale = (fit === "cover" ? Math.max : Math.min)(width / bitmap.width, height / bitmap.height);
-      const drawWidth = bitmap.width * scale;
-      const drawHeight = bitmap.height * scale;
-      context.fillStyle = bgInput.value;
+    if (type.mime === "image/jpeg") {
+      context.fillStyle = "#ffffff";
       context.fillRect(0, 0, width, height);
-      context.drawImage(bitmap, (width - drawWidth) / 2, (height - drawHeight) / 2, drawWidth, drawHeight);
     }
+    context.drawImage(item.bitmap, sx, sy, sw, sh, 0, 0, width, height);
     const blob = await canvasBlob(canvas, type);
     return blob ? { blob, type } : null;
   }
@@ -108,7 +106,7 @@
   async function resizeItem(item) {
     if (!item.bitmap) return;
     const [width, height] = targetSize(item.bitmap.width, item.bitmap.height);
-    const output = await drawToBlob(item, width, height, "stretch");
+    const output = await renderBlob(item, width, height, 0, 0, item.bitmap.width, item.bitmap.height);
     if (item.url) URL.revokeObjectURL(item.url);
     item.result = output ? { blob: output.blob, width, height, name: `${baseName(item.file)}_resized.${output.type.ext}` } : null;
     item.url = output ? URL.createObjectURL(output.blob) : "";
@@ -127,7 +125,7 @@
     zipButton.disabled = !items.some((item) => item.result);
     clearButton.disabled = !items.length;
     const usable = items.some((item) => item.bitmap);
-    snsButtons.forEach((button) => { button.disabled = !usable || button.dataset.busy === "1"; });
+    snsButtons.forEach((button) => { button.disabled = !usable; });
     const done = items.filter((item) => item.result);
     summary.textContent = items.length
       ? `${items.length}件 / 変換後の合計 ${formatBytes(done.reduce((sum, item) => sum + item.result.blob.size, 0))}`
@@ -181,7 +179,7 @@
   async function addFiles(fileList) {
     const files = [...fileList].filter((file) => file.type.startsWith("image/") || /\.(jpe?g|png|webp|gif|bmp|avif)$/i.test(file.name));
     for (const file of files) {
-      const item = { file, bitmap: null, result: null, url: "", error: "" };
+      const item = { file, bitmap: null, result: null, url: "", error: "", crops: {}, sourceUrl: "" };
       try {
         item.bitmap = await createImageBitmap(file);
       } catch (error) {
@@ -200,6 +198,82 @@
     wrapB.hidden = modeSelect.value !== "exact";
   }
 
+  // ---- SNS用: 余白なしで切り抜き(位置とズームを調整できる) ----
+  function cropFor(item, key) {
+    if (!item.crops[key]) item.crops[key] = { zoom: 1, x: item.bitmap.width / 2, y: item.bitmap.height / 2 };
+    return item.crops[key];
+  }
+
+  function cropRegion(item, key) {
+    const preset = PRESETS[key];
+    const crop = cropFor(item, key);
+    const scale = Math.max(preset.width / item.bitmap.width, preset.height / item.bitmap.height) * crop.zoom;
+    const vw = preset.width / scale;
+    const vh = preset.height / scale;
+    crop.x = clamp(crop.x, vw / 2, Math.max(vw / 2, item.bitmap.width - vw / 2));
+    crop.y = clamp(crop.y, vh / 2, Math.max(vh / 2, item.bitmap.height - vh / 2));
+    return { sx: crop.x - vw / 2, sy: crop.y - vh / 2, vw, vh };
+  }
+
+  async function cropToBlob(item, key) {
+    const preset = PRESETS[key];
+    const region = cropRegion(item, key);
+    const output = await renderBlob(item, preset.width, preset.height, region.sx, region.sy, region.vw, region.vh);
+    return output ? { name: `${baseName(item.file)}_${key}_${preset.width}x${preset.height}.${output.type.ext}`, blob: output.blob } : null;
+  }
+
+  const editorItems = () => items.filter((item) => item.bitmap);
+  const editorItem = () => editorItems()[editing.index];
+
+  function drawEditor() {
+    const item = editorItem();
+    const preset = PRESETS[editing.key];
+    const ratio = Math.min(Math.min(480, window.innerWidth * 0.8) / preset.width, Math.min(window.innerHeight * 0.5, 520) / preset.height);
+    previewWidth = Math.round(preset.width * ratio);
+    const previewHeight = Math.round(preset.height * ratio);
+    editorCanvas.style.width = `${previewWidth}px`;
+    editorCanvas.style.height = `${previewHeight}px`;
+    editorCanvas.width = previewWidth * 2;
+    editorCanvas.height = previewHeight * 2;
+    const region = cropRegion(item, editing.key);
+    const context = editorCanvas.getContext("2d");
+    context.imageSmoothingQuality = "high";
+    context.drawImage(item.bitmap, region.sx, region.sy, region.vw, region.vh, 0, 0, editorCanvas.width, editorCanvas.height);
+    editorZoom.value = Math.round(cropFor(item, editing.key).zoom * 100);
+    editorTitle.textContent = `${preset.label}  ${preset.width}×${preset.height}`;
+    editorThumbs.querySelectorAll("button").forEach((button, index) => button.classList.toggle("is-active", index === editing.index));
+  }
+
+  function openEditor(key) {
+    const list = editorItems();
+    if (!list.length) return;
+    editing = { key, index: 0 };
+    editorThumbs.replaceChildren();
+    list.forEach((item, index) => {
+      if (!item.sourceUrl) item.sourceUrl = URL.createObjectURL(item.file);
+      const button = el("button", "");
+      button.type = "button";
+      const image = document.createElement("img");
+      image.src = item.sourceUrl;
+      image.alt = item.file.name;
+      button.appendChild(image);
+      button.addEventListener("click", () => { editing.index = index; editorStatus.textContent = ""; drawEditor(); });
+      editorThumbs.appendChild(button);
+    });
+    editorThumbs.hidden = list.length < 2;
+    editorZip.hidden = list.length < 2;
+    editorStatus.textContent = "";
+    editor.hidden = false;
+    drawEditor();
+  }
+
+  function closeEditor() {
+    editor.hidden = true;
+    editing = null;
+    dragging = null;
+  }
+
+  // ---- ZIP ----
   const crcTable = (() => {
     const table = new Uint32Array(256);
     for (let n = 0; n < 256; n += 1) {
@@ -292,39 +366,72 @@
     zipButton.disabled = false;
   });
 
-  snsButtons.forEach((button) => button.addEventListener("click", async () => {
-    const key = button.dataset.preset;
+  // ---- イベント ----
+  snsButtons.forEach((button) => button.addEventListener("click", () => openEditor(button.dataset.preset)));
+
+  editorDownload.addEventListener("click", async () => {
+    const output = await cropToBlob(editorItem(), editing.key);
+    if (output) download(output.blob, output.name);
+    editorStatus.textContent = output ? `${output.name} をダウンロードしました。` : "作成できませんでした。";
+  });
+
+  editorZip.addEventListener("click", async () => {
+    const key = editing.key;
     const preset = PRESETS[key];
-    const targets = items.filter((item) => item.bitmap);
-    if (!targets.length) return;
-    button.dataset.busy = "1";
-    button.disabled = true;
-    snsStatus.textContent = `${preset.label} を作成中…`;
-    try {
-      const entries = [];
-      for (const item of targets) {
-        const output = await drawToBlob(item, preset.width, preset.height, fitSelect.value);
-        if (output) entries.push({ name: `${baseName(item.file)}_${key}_${preset.width}x${preset.height}.${output.type.ext}`, blob: output.blob });
-      }
-      const named = uniqueNames(entries);
-      if (named.length === 1) download(named[0].blob, named[0].name);
-      else if (named.length > 1) download(await buildZip(named), `${key}_${preset.width}x${preset.height}.zip`);
-      snsStatus.textContent = named.length
-        ? `${preset.label} ${preset.width}×${preset.height} を${named.length}件ダウンロードしました${named.length > 1 ? "(ZIP)" : ""}。`
-        : "作成できませんでした。";
-    } catch (error) {
-      snsStatus.textContent = "作成できませんでした。";
+    editorZip.disabled = true;
+    const entries = [];
+    for (const item of editorItems()) {
+      const output = await cropToBlob(item, key);
+      if (output) entries.push(output);
     }
-    button.dataset.busy = "";
-    render();
-  }));
+    download(await buildZip(uniqueNames(entries)), `${key}_${preset.width}x${preset.height}.zip`);
+    editorStatus.textContent = `${entries.length}件をZIPでダウンロードしました。`;
+    editorZip.disabled = false;
+  });
+
+  editorReset.addEventListener("click", () => {
+    delete editorItem().crops[editing.key];
+    drawEditor();
+  });
+  editorClose.addEventListener("click", closeEditor);
+  editor.addEventListener("click", (event) => { if (event.target === editor) closeEditor(); });
+  document.addEventListener("keydown", (event) => { if (event.key === "Escape" && editing) closeEditor(); });
+
+  editorZoom.addEventListener("input", () => {
+    cropFor(editorItem(), editing.key).zoom = Number(editorZoom.value) / 100;
+    drawEditor();
+  });
+  editorCanvas.addEventListener("wheel", (event) => {
+    event.preventDefault();
+    const crop = cropFor(editorItem(), editing.key);
+    crop.zoom = clamp(crop.zoom * Math.exp(-event.deltaY * 0.001), 1, 5);
+    drawEditor();
+  }, { passive: false });
+  editorCanvas.addEventListener("pointerdown", (event) => {
+    dragging = { x: event.clientX, y: event.clientY };
+    editorCanvas.setPointerCapture(event.pointerId);
+  });
+  editorCanvas.addEventListener("pointermove", (event) => {
+    if (!dragging) return;
+    const item = editorItem();
+    const crop = cropFor(item, editing.key);
+    const perPixel = cropRegion(item, editing.key).vw / previewWidth;
+    crop.x -= (event.clientX - dragging.x) * perPixel;
+    crop.y -= (event.clientY - dragging.y) * perPixel;
+    dragging = { x: event.clientX, y: event.clientY };
+    drawEditor();
+  });
+  ["pointerup", "pointercancel"].forEach((name) => editorCanvas.addEventListener(name, () => { dragging = null; }));
 
   clearButton.addEventListener("click", () => {
     runId += 1;
-    items.forEach((item) => { if (item.url) URL.revokeObjectURL(item.url); if (item.bitmap) item.bitmap.close(); });
+    items.forEach((item) => {
+      if (item.url) URL.revokeObjectURL(item.url);
+      if (item.sourceUrl) URL.revokeObjectURL(item.sourceUrl);
+      if (item.bitmap) item.bitmap.close();
+    });
     items = [];
     fileInput.value = "";
-    snsStatus.textContent = "";
     render();
   });
 
@@ -340,7 +447,6 @@
   dropzone.addEventListener("drop", (event) => addFiles(event.dataTransfer.files));
 
   modeSelect.addEventListener("change", () => { applyMode(); schedule(); });
-  fitSelect.addEventListener("change", () => { wrapBg.hidden = fitSelect.value === "cover"; });
   [valueA, valueB, formatSelect].forEach((control) => control.addEventListener("input", schedule));
   quality.addEventListener("input", () => { qualityValue.textContent = quality.value; schedule(); });
 

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MANGO FINDER</title>
   <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="stylesheet" href="styles.css?v=20261009-3">
+  <link rel="stylesheet" href="styles.css?v=20261009-4">
 </head>
 <body>
   <header class="topbar">
@@ -31,21 +31,14 @@
           <span>複数選択できます(JPEG / PNG / WebP / GIF など)</span>
         </label>
 
-        <h2 class="resize-subhead">SNS用サイズ(ボタン1つでダウンロード)</h2>
+        <h2 class="resize-subhead">SNS用サイズ(ボタンを押すと、切り抜きイメージを確認・調整できます)</h2>
         <div class="resize-sns">
           <button type="button" data-preset="igFeed" disabled><strong>Instagram フィード投稿</strong><span>4:3 / 1440×1080</span></button>
           <button type="button" data-preset="igStory" disabled><strong>Instagram ストーリーズ</strong><span>縦長 / 1080×1920</span></button>
           <button type="button" data-preset="xSquare" disabled><strong>X 正方形</strong><span>1:1 / 1080×1080</span></button>
         </div>
-        <p id="resizeSnsStatus" class="resize-note">画像を選ぶとボタンが押せるようになります。複数の画像を選んだ場合はZIPでまとめて保存されます。</p>
+        <p class="resize-note">画像を選ぶとボタンが押せるようになります。余白は作らず、枠に合わせて切り抜きます。</p>
         <div class="resize-controls">
-          <label class="resize-field"><span>縦横比が合わない時</span>
-            <select id="resizeFit">
-              <option value="pad">余白を足して全体を収める</option>
-              <option value="cover">中央で切り抜く</option>
-            </select>
-          </label>
-          <label id="resizeWrapBg" class="resize-field"><span>余白の色</span><input id="resizeBg" type="color" value="#ffffff"></label>
           <label class="resize-field"><span>形式</span>
             <select id="resizeFormat">
               <option value="original">元の形式のまま</option>
@@ -78,6 +71,22 @@
         </div>
         <p id="resizeEmpty" class="resize-empty">画像を選ぶと、ここに変換結果が表示されます。</p>
         <div id="resizeGrid" class="resize-grid"></div>
+      </div>
+      <div id="resizeEditor" class="resize-editor" hidden>
+        <div class="resize-editor-box" role="dialog" aria-modal="true" aria-labelledby="resizeEditorTitle">
+          <h3 id="resizeEditorTitle" class="resize-editor-title"></h3>
+          <p class="resize-note">ドラッグで位置、スライダーまたはホイールで拡大を調整できます。余白は作らず、この枠のとおりに切り抜かれます。</p>
+          <div id="resizeEditorThumbs" class="resize-editor-thumbs" hidden></div>
+          <canvas id="resizeEditorCanvas" class="resize-editor-canvas"></canvas>
+          <label class="resize-field resize-editor-zoom"><span>拡大</span><input id="resizeEditorZoom" type="range" min="100" max="500" value="100"></label>
+          <div class="resize-actions">
+            <button id="resizeEditorDownload" type="button">この画像をダウンロード</button>
+            <button id="resizeEditorZip" type="button" hidden>全画像をZIPでダウンロード</button>
+            <button id="resizeEditorReset" type="button" class="is-secondary">位置を戻す</button>
+            <button id="resizeEditorClose" type="button" class="is-secondary">閉じる</button>
+          </div>
+          <p id="resizeEditorStatus" class="resize-note"></p>
+        </div>
       </div>
     </section>
 
@@ -192,6 +201,6 @@
   <script src="tools/global-match.js?v=20261009-3"></script>
   <script src="app.js?v=20261009-4"></script>
   <script src="global-update.js?v=20261009-7"></script>
-  <script src="resize.js?v=20261009-3"></script>
+  <script src="resize.js?v=20261009-4"></script>
 </body>
 </html>
