@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T10:29:53.386Z",
+  "updatedAt": "2026-10-09T19:16:52.786Z",
   "products": [
     {
       "name": "ロングワンピース .-- RAMONA （ブラック）",
@@ -664,6 +664,30 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "FATIMA",
+      "relatedNames": []
+    },
+    {
+      "name": "ジャケット .-- LIZ （ブラック）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039773_1_l.jpg",
+      "productNumber": "MA1658EW039773",
+      "brandItemNumber": "27071311 99 色 ブラック（99）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039773/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "LIZ",
+      "relatedNames": []
+    },
+    {
+      "name": "ミニワンピース .-- LIZ （ナチュラルホワイト）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW041391_1_l.jpg",
+      "productNumber": "MA1658EW041391",
+      "brandItemNumber": "27019081 5 色 ナチュラルホワイト（5）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041391/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "LIZ",
       "relatedNames": []
     },
     {
@@ -2484,8 +2508,38 @@
       "relatedNames": []
     }
   ],
-  "groups": [],
-  "newCount": 0,
+  "groups": [
+    {
+      "englishKey": "LIZ",
+      "main": {
+        "name": "ミニワンピース .-- LIZ （ナチュラルホワイト）",
+        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW041391_1_l.jpg",
+        "productNumber": "MA1658EW041391",
+        "brandItemNumber": "27019081 5 色 ナチュラルホワイト（5）",
+        "brandItemFirstDigit": "2",
+        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041391/",
+        "brandCode": "MA1658",
+        "brandName": "MANGO",
+        "englishKey": "LIZ",
+        "relatedNames": []
+      },
+      "related": [
+        {
+          "name": "ジャケット .-- LIZ （ブラック）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039773_1_l.jpg",
+          "productNumber": "MA1658EW039773",
+          "brandItemNumber": "27071311 99 色 ブラック（99）",
+          "brandItemFirstDigit": "2",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039773/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "LIZ",
+          "relatedNames": []
+        }
+      ]
+    }
+  ],
+  "newCount": 1,
   "displayedMainProductNumbers": [
     "MA1658EW33440",
     "MA3878EC003099",
@@ -3821,7 +3875,8 @@
     "MA1658DW040002",
     "MA1658EW040783",
     "MA1658EW042239",
-    "MA1658EW042692"
+    "MA1658EW042692",
+    "MA1658EW041391"
   ],
-  "scanned": 4224
+  "scanned": 4223
 }
