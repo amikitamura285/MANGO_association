@@ -1,6 +1,6 @@
 (function () {
   // Apps Script (apps-script/Code.gs) をウェブアプリとしてデプロイしたら、そのURL(…/exec)をここに設定する
-  const RELAY_URL = "";
+  const RELAY_URL = "https://script.google.com/macros/s/AKfycby6IA2sF1896ef4iyxa_sxcgZ6ikz-DZtdUtlFAzuAnzJwL8puhqeGbciEonpBM0KFt/exec";
   const SHOP_ORIGIN = "https://shop.mango.com";
   const SHOP_URL = `${SHOP_ORIGIN}/gb/en/c/women/new-now/56b5c5ed`;
 
@@ -37,21 +37,31 @@
     if (!response.ok || !body.ok) throw new Error(body.error || `公開サイトへの保存に失敗しました (${response.status})`);
   }
 
+  const clock = () => new Date().toLocaleTimeString("ja-JP", { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+
   async function handleRaw(raw) {
-    setStatus("日本商品と照合しています…");
+    const candidateCount = Object.values(raw.candidates || {}).filter(Boolean).length;
+    const counts = `収集 商品${(raw.products || []).length}件 / 関連候補${candidateCount}件`;
+    setStatus(`${clock()} 収集が終わりました(${counts})。日本商品と照合しています…`);
     const result = GlobalMatch.buildGlobalResult(raw, await loadJapanProducts());
+    const found = `${counts} / 一致${result.matches.length}件`;
     if (!result.matches.length) {
-      setStatus("関連付けが0件でした。既存データを守るため、反映しませんでした。", true);
+      setStatus(`${clock()} ${found}。一致が0件だったため、既存データを守るため反映しませんでした。`, true);
       return;
     }
     renderGlobalData(result);
     if (!RELAY_URL) {
-      setStatus(`${result.matches.length}件を画面に表示しました。公開サイトへの保存先が未設定のため、この画面だけの表示です。`);
+      setStatus(`${clock()} ${found}。公開サイトへの保存先が未設定のため、この画面だけの表示です。`);
       return;
     }
-    setStatus("公開サイトに保存しています…");
-    await publish(raw);
-    setStatus(`${result.matches.length}件を表示しました。公開サイトへの反映には数分かかります。`);
+    setStatus(`${clock()} ${found}。公開サイトに保存しています…`);
+    try {
+      await publish(raw);
+    } catch (error) {
+      setStatus(`${clock()} ${found}。画面には表示しましたが、公開サイトへの保存に失敗しました: ${error.message}`, true);
+      return;
+    }
+    setStatus(`${clock()} 完了。${found}。公開サイトへの反映には数分かかります(LAST UPDATEDはそのとき更新されます)。`);
   }
 
   window.addEventListener("message", (event) => {

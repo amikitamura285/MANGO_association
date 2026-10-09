@@ -30,8 +30,20 @@
     throw new Error("https://shop.mango.com/gb/en/ のページを開いてから実行してください。");
   }
 
+  const TIMEOUT_MS = 20000;
+  const timed = (url, options = {}) => fetch(url, { ...options, signal: AbortSignal.timeout(TIMEOUT_MS) });
+  async function pool(items, limit, worker) {
+    let next = 0;
+    await Promise.all(Array.from({ length: Math.min(limit, items.length) }, async () => {
+      while (next < items.length) {
+        const index = next++;
+        await worker(items[index], index);
+      }
+    }));
+  }
+
   async function fetchText(url) {
-    const response = await fetch(url, { credentials: "include" });
+    const response = await timed(url, { credentials: "include" });
     const text = await response.text();
     await sleep(DELAY_MS);
     if (response.status === 429 || text.includes("Vercel Security Checkpoint")) {
@@ -91,7 +103,7 @@
     if (apiBlocked) return null;
     let data;
     try {
-      const response = await fetch(`${API}${productNumber}`);
+      const response = await timed(`${API}${productNumber}`);
       await sleep(DELAY_MS);
       if (!response.ok) return null;
       data = await response.json();
@@ -120,8 +132,9 @@
   const pages = [{ html: document.documentElement.outerHTML, newArrivals: location.pathname.includes("/new-now/") }];
   for (const source of SOURCES) {
     try {
-      pages.push({ html: await fetchText(source), newArrivals: source.includes("/new-now/") });
-      log("取得元OK:", source);
+      const html = await fetchText(source);
+      pages.push({ html, newArrivals: source.includes("/new-now/") });
+      log(`取得元OK(商品URL ${extractProductUrls(html).length}件):`, source);
     } catch (error) {
       log("取得元NG:", source, error.message);
       if (error.message.includes("アクセス制限")) throw error;
@@ -137,48 +150,74 @@
   };
 
   const urls = [...new Set(pages.flatMap((page) => extractProductUrls(page.html)))].slice(0, MAX_PRODUCTS);
-  log(`商品ページ候補 ${urls.length} 件`);
-  for (const [index, url] of urls.entries()) {
+  log(`[1/3] 商品ページ ${urls.length} 件を読み込みます`);
+  let skipped = 0;
+  let blocked = null;
+  let done = 0;
+  await pool(urls, 3, async (url) => {
+    if (blocked) return;
     try {
-      addProduct(parseProduct(url, await fetchText(url)));
+      const product = parseProduct(url, await fetchText(url));
+      if (!product) skipped += 1;
+      addProduct(product);
     } catch (error) {
-      log("スキップ:", url, error.message);
-      if (error.message.includes("アクセス制限")) throw error;
+      skipped += 1;
+      if (error.message.includes("アクセス制限")) blocked = error;
     }
-    if ((index + 1) % 10 === 0) log(`${index + 1}/${urls.length}`);
-  }
+    done += 1;
+    if (done % 5 === 0 || done === urls.length) log(`[1/3] 商品ページ ${done}/${urls.length} (商品 ${products.length}件)`);
+  });
+  if (blocked) throw blocked;
 
-  for (const productId of [...new Set(pages.filter((page) => page.newArrivals).flatMap((page) => extractProductIds(page.html)))]) {
-    if (products.length >= MAX_PRODUCTS) break;
-    if (byBaseCode.has(productId)) continue;
+  const newIds = [...new Set(pages.filter((page) => page.newArrivals).flatMap((page) => extractProductIds(page.html)))]
+    .filter((productId) => !byBaseCode.has(productId))
+    .slice(0, Math.max(0, MAX_PRODUCTS - products.length));
+  log(`[2/3] 新着商品 ${newIds.length} 件を追加で読み込みます`);
+  done = 0;
+  await pool(newIds, 3, async (productId) => {
+    if (blocked || products.length >= MAX_PRODUCTS) return;
     const apiProduct = await fetchApiProduct(productId);
-    if (!apiProduct) continue;
-    try {
-      addProduct(parseProduct(apiProduct.url, await fetchText(apiProduct.url)) || { ...apiProduct, relatedProductNumbers: [] });
-    } catch (error) {
-      log("スキップ(新着):", productId, error.message);
-      if (error.message.includes("アクセス制限")) throw error;
+    if (apiProduct) {
+      try {
+        addProduct(parseProduct(apiProduct.url, await fetchText(apiProduct.url)) || { ...apiProduct, relatedProductNumbers: [] });
+      } catch (error) {
+        skipped += 1;
+        if (error.message.includes("アクセス制限")) blocked = error;
+      }
     }
-  }
+    done += 1;
+    if (done % 5 === 0 || done === newIds.length) log(`[2/3] 新着 ${done}/${newIds.length} (商品 ${products.length}件)`);
+  });
+  if (blocked) throw blocked;
 
-  const candidates = {};
+  const relatedEntries = new Map();
   for (const product of products) {
-    for (const related of product.relatedProductNumbers) {
-      const key = `${related.productNumber}:${related.colorId}`;
-      if (key in candidates) continue;
-      candidates[key] = await fetchApiProduct(related.productNumber, related.colorId);
-    }
+    for (const related of product.relatedProductNumbers) relatedEntries.set(`${related.productNumber}:${related.colorId}`, related);
   }
+  const relatedList = [...relatedEntries.entries()].slice(0, 600);
+  log(`[3/3] 関連候補 ${relatedList.length} 件を調べます`);
+  const candidates = {};
+  done = 0;
+  await pool(relatedList, 4, async ([key, related]) => {
+    candidates[key] = await fetchApiProduct(related.productNumber, related.colorId);
+    done += 1;
+    if (done % 10 === 0 || done === relatedList.length) log(`[3/3] 関連候補 ${done}/${relatedList.length}`);
+  });
 
   const raw = { collectedAt: new Date().toISOString(), products, candidates };
   window.__mangoRaw = raw;
-  log(`完了: 商品 ${products.length} 件 / 関連候補 ${Object.values(candidates).filter(Boolean).length} 件`);
+  const summary = `商品 ${products.length} 件(取得できず ${skipped} 件) / 関連候補 ${Object.values(candidates).filter(Boolean).length} 件`;
+  log(`収集終了: ${summary}`);
+  document.title = `【収集完了】${document.title}`;
+  banner.style.background = "#1f7a3a";
+  banner.style.color = "#fff";
+  try { window.opener?.focus(); } catch {}
 
   if (send({ type: "mango-global-raw", raw })) {
-    banner.textContent = "MANGO FINDER: 元のページにデータを送信しました。このタブは閉じて構いません。";
+    banner.textContent = `MANGO FINDER: 収集完了 (${summary})。元のページにデータを送信しました。このタブは閉じて構いません。`;
     return;
   }
-  banner.textContent = "MANGO FINDER: 元のページに送信できなかったため global-raw.json をダウンロードしました。";
+  banner.textContent = `MANGO FINDER: 収集完了 (${summary})。元のページに送信できなかったため global-raw.json をダウンロードしました。`;
   const link = document.createElement("a");
   link.href = URL.createObjectURL(new Blob([JSON.stringify(raw)], { type: "application/json" }));
   link.download = "global-raw.json";
@@ -188,6 +227,11 @@
 })().catch((error) => {
   console.error("[collect-global] 失敗:", error.message);
   const failed = document.getElementById("mango-finder-banner");
-  if (failed) failed.textContent = `MANGO FINDER: 失敗 - ${error.message}`;
+  if (failed) {
+    failed.textContent = `MANGO FINDER: 失敗 - ${error.message}`;
+    failed.style.background = "#b3261e";
+    failed.style.color = "#fff";
+  }
+  document.title = `【収集失敗】${document.title}`;
   try { window.opener?.postMessage({ type: "mango-global-error", text: error.message }, "https://amikitamura285.github.io"); } catch {}
 });
