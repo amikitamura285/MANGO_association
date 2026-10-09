@@ -38,7 +38,10 @@
     height: { label: "高さ (px)", unit: 800 },
     long: { label: "長辺 (px)", unit: 1000 },
     percent: { label: "倍率 (%)", unit: 50 },
-    exact: { label: "幅 (px)", unit: 800 }
+    exact: { label: "幅 (px)", unit: 800, crop: true },
+    ratio54: { label: "幅 (px)", unit: 1080, crop: true },
+    magTitle: { fixed: [350, 1000], crop: true },
+    magCarousel: { fixed: [640, 960], crop: true }
   };
   const PRESETS = {
     igFeed: { label: "Instagram フィード投稿 縦長 4:3", width: 1080, height: 1440 },
@@ -67,11 +70,14 @@
     const b = Number(valueB.value) || 0;
     let w;
     let h;
+    const fixed = MODES[modeSelect.value].fixed;
+    if (fixed) return fixed;
     switch (modeSelect.value) {
       case "width": w = a; h = height * (a / width); break;
       case "height": h = a; w = width * (a / height); break;
       case "long": { const scale = a / Math.max(width, height); w = width * scale; h = height * scale; break; }
       case "percent": w = width * a / 100; h = height * a / 100; break;
+      case "ratio54": w = a; h = a * 4 / 5; break;
       default: w = a; h = b;
     }
     return [Math.min(MAX_SIDE, Math.max(1, Math.round(w))), Math.min(MAX_SIDE, Math.max(1, Math.round(h)))];
@@ -109,7 +115,7 @@
   async function resizeItem(item) {
     if (!item.bitmap) return;
     const [width, height] = targetSize(item.bitmap.width, item.bitmap.height);
-    const region = modeSelect.value === "exact" || item.crops.free ? cropRegion(item, "free") : null;
+    const region = MODES[modeSelect.value].crop || item.crops.free ? cropRegion(item, "free") : null;
     const output = region
       ? await renderBlob(item, width, height, region.sx, region.sy, region.vw, region.vh)
       : await renderBlob(item, width, height, 0, 0, item.bitmap.width, item.bitmap.height);
@@ -215,6 +221,8 @@
 
   function applyMode() {
     const mode = MODES[modeSelect.value];
+    valueA.parentElement.hidden = Boolean(mode.fixed);
+    if (mode.fixed) { wrapB.hidden = true; return; }
     labelA.textContent = mode.label;
     valueA.value = mode.unit;
     wrapB.hidden = modeSelect.value !== "exact";
