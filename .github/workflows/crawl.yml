@@ -10,6 +10,9 @@ on:
       - "public/products.json"
       - "public/global-products.json"
       - "public/japan-index.json"
+      - "public/**"
+      - "apps-script/**"
+      - "README.md"
   schedule:
     - cron: "0 19 * * *"
   workflow_dispatch:

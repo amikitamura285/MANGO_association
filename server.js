@@ -15,7 +15,7 @@ const GLOBAL_PRODUCT_SOURCES = [
   "https://shop.mango.com/gb/en/c/women/new-now/56b5c5ed"
 ];
 const CRAWL_LIMIT = Number(process.env.CRAWL_LIMIT || 0);
-const CRAWL_CONCURRENCY = Number(process.env.CRAWL_CONCURRENCY || 12);
+const CRAWL_CONCURRENCY = Number(process.env.CRAWL_CONCURRENCY || 40);
 const headers = { "user-agent": process.env.CRAWLER_USER_AGENT || "MangoMonitor/1.0 (+local product monitor)" };
 let crawlState = { status: "idle", startedAt: null, finishedAt: null, count: 0, error: null };
 
@@ -136,10 +136,22 @@ function parseProduct(url, html) {
   };
 }
 
-async function fetchText(url) {
-  const response = await fetch(url, { headers, redirect: "follow" });
-  if (!response.ok) throw new Error(`${response.status} ${response.statusText} (${url})`);
-  return response.text();
+async function fetchText(url, attempt = 0) {
+  try {
+    const response = await fetch(url, { headers, redirect: "follow" });
+    if (!response.ok) {
+      const error = new Error(`${response.status} ${response.statusText} (${url})`);
+      error.retryable = response.status === 429 || response.status >= 500;
+      throw error;
+    }
+    return await response.text();
+  } catch (error) {
+    if (attempt < 2 && (error.retryable !== false)) {
+      await new Promise((resolve) => setTimeout(resolve, 500 * (attempt + 1)));
+      return fetchText(url, attempt + 1);
+    }
+    throw error;
+  }
 }
 
 async function fetchVariationProductNumbers(productNumber) {
