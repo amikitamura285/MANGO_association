@@ -1,6 +1,5 @@
 (function () {
-  // Apps Script (apps-script/Code.gs) をウェブアプリとしてデプロイしたら、そのURL(…/exec)をここに設定する
-  const RELAY_URL = "https://script.google.com/macros/s/AKfycby6IA2sF1896ef4iyxa_sxcgZ6ikz-DZtdUtlFAzuAnzJwL8puhqeGbciEonpBM0KFt/exec";
+  const RELAY_URL = GLOBAL_RELAY_URL;
   const SHOP_ORIGIN = "https://shop.mango.com";
   const SHOP_URL = `${SHOP_ORIGIN}/gb/en/c/women/new-now/56b5c5ed`;
 
@@ -32,11 +31,11 @@
     throw new Error("日本商品データを読み込めませんでした。");
   }
 
-  async function publish(raw) {
+  async function publish(raw, keep) {
     const response = await fetch(RELAY_URL, {
       method: "POST",
       headers: { "content-type": "text/plain;charset=utf-8" },
-      body: JSON.stringify({ raw })
+      body: JSON.stringify({ raw, keep })
     });
     const body = await response.json().catch(() => ({}));
     if (!response.ok || !body.ok) throw new Error(body.error || `公開サイトへの保存に失敗しました (${response.status})`);
@@ -48,15 +47,12 @@
     const candidateCount = Object.values(raw.candidates || {}).filter(Boolean).length;
     const counts = `収集 商品${(raw.products || []).length}件 / 関連候補${candidateCount}件`;
     setStatus(`${clock()} 収集完了(${counts})。日本商品と照合しています…`);
-    const base = GlobalMatch.buildGlobalResult(raw, await loadJapanProducts());
-    if (!base.matches.length) {
-      setStatus(`${clock()} ${counts} / 一致0件。一致が0件だったため、既存データを守るため反映しませんでした。`, true);
+    const result = GlobalMatch.buildGlobalResult(raw, await loadJapanProducts());
+    const found = `${counts} / 一致${result.matches.length}件`;
+    if (!result.matches.length) {
+      setStatus(`${clock()} ${found}。一致が0件だったため、既存データを守るため反映しませんでした。`, true);
       return;
     }
-    const existing = await fetch(`${dataPathPrefix}global-products.json?v=${Date.now()}`, { cache: "no-store" })
-      .then((response) => (response.ok ? response.json() : null)).catch(() => null);
-    const result = GlobalMatch.applyDisplayHistory(base, raw.collectedAt, existing);
-    const found = `${counts} / 一致${base.matches.length}件(うち新規${result.matches.length}件)`;
     renderGlobalData(result);
     if (!RELAY_URL) {
       setStatus(`${clock()} ${found}。公開サイトへの保存先が未設定のため、この画面だけの表示です。`);
@@ -64,7 +60,7 @@
     }
     setStatus(`${clock()} ${found}。公開サイトに保存しています…`);
     try {
-      await publish(raw);
+      await publish(raw, result.matches.map((entry) => entry.main.productNumber));
     } catch (error) {
       setStatus(`${clock()} ${found}。画面には表示しましたが、公開サイトへの保存に失敗しました: ${error.message}`, true);
       return;

@@ -1,6 +1,6 @@
 const fs = require("node:fs");
 const path = require("node:path");
-const { buildGlobalResult, applyDisplayHistory } =require("./public/tools/global-match.js");
+const { buildGlobalResult } = require("./public/tools/global-match.js");
 
 function readJson(file) {
   try {
@@ -18,14 +18,13 @@ if (!raw || !japan) {
   process.exit(0);
 }
 
-const base = buildGlobalResult(raw, japan.products || []);
-if (!base.matches.length) {
+const result = buildGlobalResult(raw, japan.products || []);
+if (!result.matches.length) {
   console.warn("No matches built; keeping existing global-products.json.");
   process.exit(0);
 }
 
-const result = applyDisplayHistory(base, raw.collectedAt, readJson("public/global-products.json"));
 for (const file of ["public/global-products.json", "data/global-products.json"]) {
   fs.writeFileSync(path.join(__dirname, file), JSON.stringify(result, null, 2), "utf8");
 }
-console.log(`Built global-products.json: ${result.matches.length} new / ${result.totalMatches} total matches / ${result.products.length} products.`);
+console.log(`Built global-products.json: ${result.matches.length} matches / ${result.products.length} products.`);

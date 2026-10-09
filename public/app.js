@@ -1,9 +1,11 @@
-﻿const $ = (selector) => document.querySelector(selector);
+﻿// Apps Script (apps-script/Code.gs) をウェブアプリとしてデプロイしたURL(…/exec)。UPDATEと全員共通の確認済で使う
+const GLOBAL_RELAY_URL = "https://script.google.com/macros/s/AKfycby6IA2sF1896ef4iyxa_sxcgZ6ikz-DZtdUtlFAzuAnzJwL8puhqeGbciEonpBM0KFt/exec";
+const $ = (selector) => document.querySelector(selector);
 const state = {
   groups: [],
   products: [],
   checked: new Set(JSON.parse(localStorage.getItem("mango-monitor-checked") || "[]")),
-  globalChecked: new Set(JSON.parse(localStorage.getItem("mango-monitor-global-checked") || "[]")),
+  globalChecked: new Set(),
   globalRows: []
 };
 let productsReady;
@@ -109,8 +111,8 @@ function renderProductCards(containerSelector, groups, compact, scope = "main") 
         checkedSet.delete(productNumber);
       }
       if (scope === "global") {
-        localStorage.setItem("mango-monitor-global-checked", JSON.stringify([...checkedSet]));
         renderGlobalRows();
+        saveGlobalChecked(productNumber, target.checked);
       } else {
         localStorage.setItem("mango-monitor-checked", JSON.stringify([...checkedSet]));
         renderMainProducts();
@@ -172,7 +174,37 @@ function renderGlobalRows() {
   $("#globalCheckedEmpty").hidden = checkedRows.length > 0;
 }
 
+async function relayChecked(request) {
+  const response = request
+    ? await fetch(GLOBAL_RELAY_URL, { method: "POST", headers: { "content-type": "text/plain;charset=utf-8" }, body: JSON.stringify(request) })
+    : await fetch(`${GLOBAL_RELAY_URL}?action=checked&v=${Date.now()}`, { cache: "no-store" });
+  const body = await response.json();
+  if (!body.ok) throw new Error(body.error || "確認済を取得できませんでした。");
+  return body.checked || [];
+}
+
+async function loadGlobalChecked() {
+  try {
+    state.globalChecked = new Set(await relayChecked());
+    renderGlobalRows();
+  } catch (error) {
+    console.warn("確認済を読み込めませんでした:", error.message);
+  }
+}
+
+async function saveGlobalChecked(productNumber, checked) {
+  try {
+    state.globalChecked = new Set(await relayChecked({ action: "check", productNumber, checked }));
+  } catch (error) {
+    if (checked) state.globalChecked.delete(productNumber); else state.globalChecked.add(productNumber);
+    alert(`確認済の保存に失敗しました。もう一度お試しください。(${error.message})`);
+  }
+  renderGlobalRows();
+}
+
 function loadGlobalProducts() {
+  loadGlobalChecked();
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) { loadGlobalChecked(); } });
   const ready = productsReady || Promise.resolve();
   ready.then(() => fetch(`${dataPathPrefix}global-products.json?v=${Date.now()}`, { cache: "no-store" }))
     .then((response) => response.json())

@@ -9,9 +9,41 @@ var MIN_INTERVAL_MS = 10 * 60 * 1000;
 var MIN_PRODUCTS = 10;
 var MAX_PRODUCTS = 300;
 var MAX_CANDIDATES = 4000;
+var CHECKED_KEY = "CHECKED_CODES";
+var MAX_CHECKED = 600;
 
-function doGet() {
+function doGet(e) {
+  if (e && e.parameter && e.parameter.action === "checked") return json_({ ok: true, checked: readChecked_() });
   return json_({ ok: true, message: "MANGO FINDER relay" });
+}
+
+function readChecked_() {
+  try {
+    var list = JSON.parse(PropertiesService.getScriptProperties().getProperty(CHECKED_KEY) || "[]");
+    return Array.isArray(list) ? list.filter(function (code) { return code8_(code); }) : [];
+  } catch (error) {
+    return [];
+  }
+}
+
+function writeChecked_(list) {
+  PropertiesService.getScriptProperties().setProperty(CHECKED_KEY, JSON.stringify(list.slice(-MAX_CHECKED)));
+}
+
+function setChecked_(parsed) {
+  var code = code8_(parsed.productNumber);
+  if (!code || typeof parsed.checked !== "boolean") fail_("確認済の指定が正しくありません。");
+  var list = readChecked_().filter(function (entry) { return entry !== code; });
+  if (parsed.checked) list.push(code);
+  writeChecked_(list);
+  return { ok: true, checked: list.slice(-MAX_CHECKED) };
+}
+
+function pruneChecked_(keep) {
+  if (!Array.isArray(keep)) return;
+  var allowed = {};
+  keep.slice(0, 2000).forEach(function (code) { if (code8_(code)) allowed[code] = true; });
+  writeChecked_(readChecked_().filter(function (code) { return allowed[code]; }));
 }
 
 function doPost(e) {
@@ -153,6 +185,8 @@ function handle_(e) {
   var parsed;
   try { parsed = JSON.parse(body); } catch (error) { fail_("JSONの形式が正しくありません。"); }
 
+  if (parsed && parsed.action === "check") return setChecked_(parsed);
+
   var now = new Date();
   var raw = cleanRaw_(parsed && parsed.raw, now);
   var current = readCurrent_();
@@ -180,5 +214,6 @@ function handle_(e) {
   if (save.getResponseCode() !== 200 && save.getResponseCode() !== 201) {
     fail_("GitHubへの保存に失敗しました(" + save.getResponseCode() + ")。");
   }
+  pruneChecked_(parsed.keep);
   return { ok: true, products: raw.products.length };
 }
