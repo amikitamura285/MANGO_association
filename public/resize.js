@@ -9,15 +9,11 @@
   const valueA = $("resizeValueA");
   const valueB = $("resizeValueB");
   const labelA = $("resizeLabelA");
-  const wrapA = $("resizeWrapA");
   const wrapB = $("resizeWrapB");
-  const wrapOrient = $("resizeWrapOrient");
-  const wrapFit = $("resizeWrapFit");
-  const wrapBg = $("resizeWrapBg");
-  const orientSelect = $("resizeOrient");
+  const formatSelect = $("resizeFormat");
   const fitSelect = $("resizeFit");
   const bgInput = $("resizeBg");
-  const formatSelect = $("resizeFormat");
+  const wrapBg = $("resizeWrapBg");
   const quality = $("resizeQuality");
   const qualityValue = $("resizeQualityValue");
   const grid = $("resizeGrid");
@@ -25,6 +21,8 @@
   const summary = $("resizeSummary");
   const zipButton = $("resizeZip");
   const clearButton = $("resizeClear");
+  const snsButtons = [...root.querySelectorAll("[data-preset]")];
+  const snsStatus = $("resizeSnsStatus");
 
   const MODES = {
     width: { label: "幅 (px)", unit: 800 },
@@ -34,9 +32,9 @@
     exact: { label: "幅 (px)", unit: 800 }
   };
   const PRESETS = {
-    igFeed: { long: 1440, short: 1080, orient: "landscape" },
-    igStory: { long: 1920, short: 1080, orient: "portrait" },
-    xSquare: { long: 1080, short: 1080, orient: "" }
+    igFeed: { label: "IGフィード", width: 1440, height: 1080 },
+    igStory: { label: "ストーリーズ", width: 1080, height: 1920 },
+    xSquare: { label: "X正方形", width: 1080, height: 1080 }
   };
   const TYPES = {
     jpeg: { mime: "image/jpeg", ext: "jpg" },
@@ -52,11 +50,6 @@
   const formatBytes = (bytes) => bytes >= 1048576 ? `${(bytes / 1048576).toFixed(1)} MB` : `${Math.max(1, Math.round(bytes / 1024))} KB`;
 
   function targetSize(width, height) {
-    const preset = PRESETS[modeSelect.value];
-    if (preset) {
-      const portrait = preset.orient && orientSelect.value === "portrait";
-      return portrait ? [preset.short, preset.long] : [preset.long, preset.short];
-    }
     const a = Number(valueA.value) || 0;
     const b = Number(valueB.value) || 0;
     let w;
@@ -76,8 +69,8 @@
     return Object.values(TYPES).find((type) => type.mime === file.type) || TYPES.png;
   }
 
-  function outputName(file, type) {
-    return `${file.name.replace(/\.[^.]*$/, "")}_resized.${type.ext}`;
+  function baseName(file) {
+    return file.name.replace(/\.[^.]*$/, "");
   }
 
   function canvasBlob(canvas, type) {
@@ -85,36 +78,40 @@
     return new Promise((resolve) => canvas.toBlob(resolve, type.mime, q));
   }
 
-  async function resizeItem(item) {
-    if (!item.bitmap) return;
-    const [width, height] = targetSize(item.bitmap.width, item.bitmap.height);
+  // fit: "stretch"(指定サイズに合わせる) / "pad"(余白を足して収める) / "cover"(切り抜く)
+  async function drawToBlob(item, width, height, fit) {
     const type = outputType(item.file);
     const canvas = document.createElement("canvas");
     canvas.width = width;
     canvas.height = height;
     const context = canvas.getContext("2d");
-    if (type.mime === "image/jpeg") {
-      context.fillStyle = "#ffffff";
-      context.fillRect(0, 0, width, height);
-    }
     context.imageSmoothingQuality = "high";
-    if (PRESETS[modeSelect.value]) {
-      const cover = fitSelect.value === "cover";
-      const scale = (cover ? Math.max : Math.min)(width / item.bitmap.width, height / item.bitmap.height);
-      const drawWidth = item.bitmap.width * scale;
-      const drawHeight = item.bitmap.height * scale;
-      if (!cover || type.mime !== "image/jpeg") {
-        context.fillStyle = bgInput.value;
+    const { bitmap } = item;
+    if (fit === "stretch") {
+      if (type.mime === "image/jpeg") {
+        context.fillStyle = "#ffffff";
         context.fillRect(0, 0, width, height);
       }
-      context.drawImage(item.bitmap, (width - drawWidth) / 2, (height - drawHeight) / 2, drawWidth, drawHeight);
+      context.drawImage(bitmap, 0, 0, width, height);
     } else {
-      context.drawImage(item.bitmap, 0, 0, width, height);
+      const scale = (fit === "cover" ? Math.max : Math.min)(width / bitmap.width, height / bitmap.height);
+      const drawWidth = bitmap.width * scale;
+      const drawHeight = bitmap.height * scale;
+      context.fillStyle = bgInput.value;
+      context.fillRect(0, 0, width, height);
+      context.drawImage(bitmap, (width - drawWidth) / 2, (height - drawHeight) / 2, drawWidth, drawHeight);
     }
     const blob = await canvasBlob(canvas, type);
+    return blob ? { blob, type } : null;
+  }
+
+  async function resizeItem(item) {
+    if (!item.bitmap) return;
+    const [width, height] = targetSize(item.bitmap.width, item.bitmap.height);
+    const output = await drawToBlob(item, width, height, "stretch");
     if (item.url) URL.revokeObjectURL(item.url);
-    item.result = blob ? { blob, width, height, name: outputName(item.file, type) } : null;
-    item.url = blob ? URL.createObjectURL(blob) : "";
+    item.result = output ? { blob: output.blob, width, height, name: `${baseName(item.file)}_resized.${output.type.ext}` } : null;
+    item.url = output ? URL.createObjectURL(output.blob) : "";
   }
 
   function el(tag, className, text) {
@@ -129,6 +126,8 @@
     emptyNote.hidden = items.length > 0;
     zipButton.disabled = !items.some((item) => item.result);
     clearButton.disabled = !items.length;
+    const usable = items.some((item) => item.bitmap);
+    snsButtons.forEach((button) => { button.disabled = !usable || button.dataset.busy === "1"; });
     const done = items.filter((item) => item.result);
     summary.textContent = items.length
       ? `${items.length}件 / 変換後の合計 ${formatBytes(done.reduce((sum, item) => sum + item.result.blob.size, 0))}`
@@ -195,26 +194,12 @@
   }
 
   function applyMode() {
-    const preset = PRESETS[modeSelect.value];
-    wrapA.hidden = Boolean(preset);
-    wrapB.hidden = modeSelect.value !== "exact";
-    wrapFit.hidden = !preset;
-    wrapBg.hidden = !preset || fitSelect.value === "cover";
-    wrapOrient.hidden = !preset || !preset.orient;
-    if (preset) {
-      if (preset.orient) orientSelect.value = preset.orient;
-      return;
-    }
     const mode = MODES[modeSelect.value];
     labelA.textContent = mode.label;
     valueA.value = mode.unit;
+    wrapB.hidden = modeSelect.value !== "exact";
   }
 
-  function crc32(bytes) {
-    let crc = 0xffffffff;
-    for (let i = 0; i < bytes.length; i += 1) crc = crcTable[(crc ^ bytes[i]) & 0xff] ^ (crc >>> 8);
-    return (crc ^ 0xffffffff) >>> 0;
-  }
   const crcTable = (() => {
     const table = new Uint32Array(256);
     for (let n = 0; n < 256; n += 1) {
@@ -224,6 +209,12 @@
     }
     return table;
   })();
+
+  function crc32(bytes) {
+    let crc = 0xffffffff;
+    for (let i = 0; i < bytes.length; i += 1) crc = crcTable[(crc ^ bytes[i]) & 0xff] ^ (crc >>> 8);
+    return (crc ^ 0xffffffff) >>> 0;
+  }
 
   async function buildZip(entries) {
     const encoder = new TextEncoder();
@@ -273,32 +264,67 @@
     return new Blob([...parts, ...central, end.buffer], { type: "application/zip" });
   }
 
-  zipButton.addEventListener("click", async () => {
-    const used = new Set();
-    const entries = items.filter((item) => item.result).map((item) => {
-      let name = item.result.name;
-      for (let n = 2; used.has(name); n += 1) name = item.result.name.replace(/(\.[^.]*)$/, `_${n}$1`);
-      used.add(name);
-      return { name, blob: item.result.blob };
-    });
-    if (!entries.length) return;
-    zipButton.disabled = true;
-    const blob = await buildZip(entries);
+  function download(blob, name) {
     const link = document.createElement("a");
     link.href = URL.createObjectURL(blob);
-    link.download = "resized-images.zip";
+    link.download = name;
     document.body.appendChild(link);
     link.click();
     link.remove();
     setTimeout(() => URL.revokeObjectURL(link.href), 10000);
+  }
+
+  function uniqueNames(entries) {
+    const used = new Set();
+    return entries.map((entry) => {
+      let name = entry.name;
+      for (let n = 2; used.has(name); n += 1) name = entry.name.replace(/(\.[^.]*)$/, `_${n}$1`);
+      used.add(name);
+      return { ...entry, name };
+    });
+  }
+
+  zipButton.addEventListener("click", async () => {
+    const entries = uniqueNames(items.filter((item) => item.result).map((item) => ({ name: item.result.name, blob: item.result.blob })));
+    if (!entries.length) return;
+    zipButton.disabled = true;
+    download(await buildZip(entries), "resized-images.zip");
     zipButton.disabled = false;
   });
+
+  snsButtons.forEach((button) => button.addEventListener("click", async () => {
+    const key = button.dataset.preset;
+    const preset = PRESETS[key];
+    const targets = items.filter((item) => item.bitmap);
+    if (!targets.length) return;
+    button.dataset.busy = "1";
+    button.disabled = true;
+    snsStatus.textContent = `${preset.label} を作成中…`;
+    try {
+      const entries = [];
+      for (const item of targets) {
+        const output = await drawToBlob(item, preset.width, preset.height, fitSelect.value);
+        if (output) entries.push({ name: `${baseName(item.file)}_${key}_${preset.width}x${preset.height}.${output.type.ext}`, blob: output.blob });
+      }
+      const named = uniqueNames(entries);
+      if (named.length === 1) download(named[0].blob, named[0].name);
+      else if (named.length > 1) download(await buildZip(named), `${key}_${preset.width}x${preset.height}.zip`);
+      snsStatus.textContent = named.length
+        ? `${preset.label} ${preset.width}×${preset.height} を${named.length}件ダウンロードしました${named.length > 1 ? "(ZIP)" : ""}。`
+        : "作成できませんでした。";
+    } catch (error) {
+      snsStatus.textContent = "作成できませんでした。";
+    }
+    button.dataset.busy = "";
+    render();
+  }));
 
   clearButton.addEventListener("click", () => {
     runId += 1;
     items.forEach((item) => { if (item.url) URL.revokeObjectURL(item.url); if (item.bitmap) item.bitmap.close(); });
     items = [];
     fileInput.value = "";
+    snsStatus.textContent = "";
     render();
   });
 
@@ -315,7 +341,7 @@
 
   modeSelect.addEventListener("change", () => { applyMode(); schedule(); });
   fitSelect.addEventListener("change", () => { wrapBg.hidden = fitSelect.value === "cover"; });
-  [valueA, valueB, formatSelect, orientSelect, fitSelect, bgInput].forEach((control) => control.addEventListener("input", schedule));
+  [valueA, valueB, formatSelect].forEach((control) => control.addEventListener("input", schedule));
   quality.addEventListener("input", () => { qualityValue.textContent = quality.value; schedule(); });
 
   applyMode();

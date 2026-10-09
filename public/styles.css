@@ -470,3 +470,12 @@ footer {
 .resize-meta.is-error { color: #b3261e; }
 .resize-download { display: inline-block; margin-top: 8px; padding: 8px 12px; background: var(--accent); color: var(--ink); font: 11px 'DM Mono', monospace; text-decoration: none; }
 @media (max-width: 640px) { .main-tabs { gap: 14px; } }
+
+.resize-subhead { margin: 36px 0 14px; font: 12px 'DM Mono', monospace; letter-spacing: .14em; color: var(--muted); font-weight: 500; }
+.resize-sns { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.resize-sns button { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; padding: 20px; border: 1px solid var(--ink); background: var(--accent); color: var(--ink); text-align: left; cursor: pointer; font-family: 'DM Sans', sans-serif; }
+.resize-sns button strong { font-size: 15px; }
+.resize-sns button span { font: 11px 'DM Mono', monospace; }
+.resize-sns button:hover:not(:disabled) { background: var(--ink); color: var(--accent); }
+.resize-sns button:disabled { background: var(--white); border-color: var(--line); color: var(--muted); cursor: default; }
+.resize-note { margin: 12px 0 0; color: var(--muted); font-size: 13px; }
