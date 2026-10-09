@@ -498,3 +498,5 @@ footer {
 
 .resize-adjust { margin: 8px 0 0 6px; padding: 8px 12px; border: 1px solid var(--ink); background: #94bbd4; color: var(--ink); font: 11px 'DM Mono', monospace; cursor: pointer; }
 .resize-adjust:hover { background: var(--ink); color: #94bbd4; }
+
+#productRefresh { flex: none; box-sizing: border-box; width: 112px; min-width: 112px; padding-left: 0; padding-right: 0; text-align: center; white-space: nowrap; }

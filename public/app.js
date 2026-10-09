@@ -157,7 +157,7 @@ if (refreshButton) {
     refreshButton.disabled = true;
     refreshButton.textContent = "読み込み中…";
     const ok = await loadProducts();
-    refreshButton.textContent = ok ? "更新しました" : "失敗しました";
+    refreshButton.textContent = ok ? "UPDATED" : "失敗しました";
     setTimeout(() => {
       refreshButton.textContent = "UPDATE";
       refreshButton.disabled = false;
