@@ -32,7 +32,18 @@
   }
 
   const TIMEOUT_MS = 20000;
-  const timed = (url, options = {}) => fetch(url, { ...options, signal: AbortSignal.timeout(TIMEOUT_MS) });
+  const nativeFetch = window.fetch.bind(window);
+  const timed = (url, options = {}) => nativeFetch(url, { ...options, signal: AbortSignal.timeout(TIMEOUT_MS) });
+  const pageApiCalls = new Set();
+  const nativeXhrOpen = XMLHttpRequest.prototype.open;
+  window.fetch = function (input, init) {
+    try { pageApiCalls.add(String(typeof input === "string" ? input : input.url)); } catch {}
+    return nativeFetch(input, init);
+  };
+  XMLHttpRequest.prototype.open = function (method, url) {
+    try { pageApiCalls.add(String(url)); } catch {}
+    return nativeXhrOpen.apply(this, arguments);
+  };
   async function pool(items, limit, worker) {
     let next = 0;
     await Promise.all(Array.from({ length: Math.min(limit, items.length) }, async () => {
@@ -146,6 +157,36 @@
     log(`スクロール読み込み完了: 商品リンク ${best}件`);
   }
   await scrollToLoadAll();
+  window.fetch = nativeFetch;
+  XMLHttpRequest.prototype.open = nativeXhrOpen;
+
+  const apiCalls = [...new Set([...pageApiCalls, ...performance.getEntriesByType("resource").filter((entry) => /^(fetch|xmlhttprequest)$/.test(entry.initiatorType)).map((entry) => entry.name)])]
+    .map((url) => { try { return new URL(url, location.href).href; } catch { return ""; } })
+    .filter((url) => /mango\.com/.test(url) && !/\.(png|jpe?g|webp|gif|svg|js|css|woff2?|ico)(\?|$)/i.test(url) && !url.startsWith(API.split("?")[0]));
+  log(`ページ自身の通信 ${apiCalls.length}件`);
+  apiCalls.slice(0, 12).forEach((url) => log("通信:", url.replace("https://", "").slice(0, 150)));
+
+  const apiIds = new Set();
+  const idPattern = /"(?:productId|reference|id)"\s*:\s*"?(\d{8})"?/g;
+  const pageParam = /([?&](?:page|pageNum|pageNumber|pageIndex|offset|start|from)=)(\d+)/i;
+  for (const apiUrl of apiCalls.filter((url) => pageParam.test(url)).slice(0, 4)) {
+    const [, prefix, startValue] = apiUrl.match(pageParam);
+    const isOffset = /offset|start|from/i.test(prefix);
+    let value = Number(startValue);
+    let lastSize = 0;
+    for (let i = 0; i < 8; i += 1) {
+      let text;
+      try { text = await (await timed(apiUrl.replace(pageParam, `${prefix}${value}`), { credentials: "include" })).text(); } catch { break; }
+      await sleep(DELAY_MS);
+      const ids = [...text.matchAll(idPattern)].map((match) => match[1]);
+      const fresh = ids.filter((id) => !apiIds.has(id));
+      ids.forEach((id) => apiIds.add(id));
+      log(`一覧API ${prefix.slice(1, -1)}=${value}: ${ids.length}件(新規${fresh.length}件)`);
+      if (!fresh.length) break;
+      lastSize = lastSize || ids.length;
+      value += isOffset ? lastSize : 1;
+    }
+  }
 
   const pages = [{ html: document.documentElement.outerHTML, newArrivals: location.pathname.includes("/new-now/") }];
   const seenUrls = new Set(extractProductUrls(pages[0].html));
@@ -208,7 +249,7 @@
   });
   if (blocked) throw blocked;
 
-  const newIds = [...new Set(pages.filter((page) => page.newArrivals).flatMap((page) => extractProductIds(page.html)))]
+  const newIds = [...new Set([...apiIds, ...pages.filter((page) => page.newArrivals).flatMap((page) => extractProductIds(page.html))])]
     .filter((productId) => !byBaseCode.has(productId))
     .slice(0, Math.max(0, MAX_PRODUCTS - products.length));
   log(`[2/3] 新着商品 ${newIds.length} 件を追加で読み込みます`);
