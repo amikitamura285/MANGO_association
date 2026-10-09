@@ -1,5 +1,5 @@
 ﻿// Apps Script (apps-script/Code.gs) をウェブアプリとしてデプロイしたURL(…/exec)。UPDATEと全員共通の確認済で使う
-const GLOBAL_RELAY_URL = "https://script.google.com/macros/s/AKfycbzlBAJ_d0QvYsEw88G4yQK0kldmlS1RpGBJ2E-SUtMA_UVIL9bKR2Gc9prXmECnb2d-/exec";
+const GLOBAL_RELAY_URL = "https://script.google.com/macros/s/AKfycbxqxYvg2SIIEoEsvY4I0Ehly-eD_B3Thmu5PQvstHRFerVDgUOlievb-AsPgjDjlrCuxQ/exec";
 const $ = (selector) => document.querySelector(selector);
 const state = {
   groups: [],
