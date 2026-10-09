@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T03:14:27.176Z",
+  "updatedAt": "2026-10-09T03:28:14.266Z",
   "products": [
     {
       "name": "Leather trench coat with belt - Women",
@@ -21,29 +21,6 @@
         {
           "productNumber": "37067926",
           "colorId": "32"
-        }
-      ]
-    },
-    {
-      "name": "Open-back knitted dress - Women",
-      "image": "https://media.mango.com/is/image/punto/37037938-92-002?wid=1024",
-      "productNumber": "37037938",
-      "baseCode": "37037938",
-      "globalCode": "37037938",
-      "colorId": "92",
-      "url": "https://shop.mango.com/gb/en/p/women/dresses-and-jumpsuits/dresses/open-back-knitted-dress/37037938/92/00",
-      "relatedProductNumbers": [
-        {
-          "productNumber": "37087773",
-          "colorId": "30"
-        },
-        {
-          "productNumber": "37037935",
-          "colorId": "99"
-        },
-        {
-          "productNumber": "37036361",
-          "colorId": "99"
         }
       ]
     },
@@ -75,17 +52,17 @@
       ]
     },
     {
-      "name": "Knitted dress with flower detail - Women",
-      "image": "https://media.mango.com/is/image/punto/37027943-32-002?wid=1024",
-      "productNumber": "37027943",
-      "baseCode": "37027943",
-      "globalCode": "37027943",
-      "colorId": "32",
-      "url": "https://shop.mango.com/gb/en/p/women/dresses-and-jumpsuits/dresses/knitted-dress-with-flower-detail/37027943/32/00",
+      "name": "Open-back knitted dress - Women",
+      "image": "https://media.mango.com/is/image/punto/37037938-92-002?wid=1024",
+      "productNumber": "37037938",
+      "baseCode": "37037938",
+      "globalCode": "37037938",
+      "colorId": "92",
+      "url": "https://shop.mango.com/gb/en/p/women/dresses-and-jumpsuits/dresses/open-back-knitted-dress/37037938/92/00",
       "relatedProductNumbers": [
         {
-          "productNumber": "37097907",
-          "colorId": "99"
+          "productNumber": "37087773",
+          "colorId": "30"
         },
         {
           "productNumber": "37037935",
@@ -98,17 +75,17 @@
       ]
     },
     {
-      "name": "Coat with detachable fur collar - Women",
-      "image": "https://media.mango.com/is/image/punto/37098265-35-102?wid=1024",
-      "productNumber": "37098265",
-      "baseCode": "37098265",
-      "globalCode": "37098265",
-      "colorId": "35",
-      "url": "https://shop.mango.com/gb/en/p/women/coats/coats/coat-with-detachable-fur-collar/37098265/35/01",
+      "name": "Knitted dress with flower detail - Women",
+      "image": "https://media.mango.com/is/image/punto/37027943-32-002?wid=1024",
+      "productNumber": "37027943",
+      "baseCode": "37027943",
+      "globalCode": "37027943",
+      "colorId": "32",
+      "url": "https://shop.mango.com/gb/en/p/women/dresses-and-jumpsuits/dresses/knitted-dress-with-flower-detail/37027943/32/00",
       "relatedProductNumbers": [
         {
-          "productNumber": "37037938",
-          "colorId": "92"
+          "productNumber": "37097907",
+          "colorId": "99"
         },
         {
           "productNumber": "37037935",
@@ -140,6 +117,29 @@
         {
           "productNumber": "27096340",
           "colorId": "05"
+        }
+      ]
+    },
+    {
+      "name": "Coat with detachable fur collar - Women",
+      "image": "https://media.mango.com/is/image/punto/37098265-35-102?wid=1024",
+      "productNumber": "37098265",
+      "baseCode": "37098265",
+      "globalCode": "37098265",
+      "colorId": "35",
+      "url": "https://shop.mango.com/gb/en/p/women/coats/coats/coat-with-detachable-fur-collar/37098265/35/01",
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37037938",
+          "colorId": "92"
+        },
+        {
+          "productNumber": "37037935",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37036361",
+          "colorId": "99"
         }
       ]
     },
@@ -221,52 +221,6 @@
       ]
     },
     {
-      "name": "Leather stiletto-heel boot - Women",
-      "image": "https://media.mango.com/is/image/punto/37037935-99-016?wid=1024",
-      "productNumber": "37037935",
-      "baseCode": "37037935",
-      "globalCode": "37037935",
-      "colorId": "99",
-      "url": "https://shop.mango.com/gb/en/p/women/shoes/boots-and-ankle-boots/leather-stiletto-heel-boot/37037935/99/00",
-      "relatedProductNumbers": [
-        {
-          "productNumber": "37098265",
-          "colorId": "35"
-        },
-        {
-          "productNumber": "37037938",
-          "colorId": "92"
-        },
-        {
-          "productNumber": "37007946",
-          "colorId": "30"
-        },
-        {
-          "productNumber": "37036361",
-          "colorId": "99"
-        }
-      ]
-    },
-    {
-      "name": "Suede boot with fur trim - Women",
-      "image": "https://media.mango.com/is/image/punto/37067926-32-016?wid=1024",
-      "productNumber": "37067926",
-      "baseCode": "37067926",
-      "globalCode": "37067926",
-      "colorId": "32",
-      "url": "https://shop.mango.com/gb/en/p/women/shoes/boots-and-ankle-boots/suede-boot-with-fur-trim/37067926/32/00",
-      "relatedProductNumbers": [
-        {
-          "productNumber": "37087773",
-          "colorId": "30"
-        },
-        {
-          "productNumber": "37047938",
-          "colorId": "05"
-        }
-      ]
-    },
-    {
       "name": "Cross-over top with scarf detail - Women",
       "image": "https://media.mango.com/is/image/punto/37057940-92-002?wid=1024",
       "productNumber": "37057940",
@@ -294,29 +248,48 @@
       ]
     },
     {
-      "name": "Asymmetrical midi denim skirt - Women",
-      "image": "https://media.mango.com/is/image/punto/37097939-DI-002?wid=1024",
-      "productNumber": "37097939",
-      "baseCode": "37097939",
-      "globalCode": "37097939",
-      "colorId": "DI",
-      "url": "https://shop.mango.com/gb/en/p/women/skirts/midi/asymmetrical-midi-denim-skirt/37097939/DI/00",
+      "name": "Suede boot with fur trim - Women",
+      "image": "https://media.mango.com/is/image/punto/37067926-32-016?wid=1024",
+      "productNumber": "37067926",
+      "baseCode": "37067926",
+      "globalCode": "37067926",
+      "colorId": "32",
+      "url": "https://shop.mango.com/gb/en/p/women/shoes/boots-and-ankle-boots/suede-boot-with-fur-trim/37067926/32/00",
       "relatedProductNumbers": [
         {
-          "productNumber": "37037935",
-          "colorId": "99"
-        },
-        {
-          "productNumber": "37017941",
+          "productNumber": "37087773",
           "colorId": "30"
         },
         {
-          "productNumber": "37094435",
-          "colorId": "32"
+          "productNumber": "37047938",
+          "colorId": "05"
+        }
+      ]
+    },
+    {
+      "name": "Leather stiletto-heel boot - Women",
+      "image": "https://media.mango.com/is/image/punto/37037935-99-016?wid=1024",
+      "productNumber": "37037935",
+      "baseCode": "37037935",
+      "globalCode": "37037935",
+      "colorId": "99",
+      "url": "https://shop.mango.com/gb/en/p/women/shoes/boots-and-ankle-boots/leather-stiletto-heel-boot/37037935/99/00",
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37098265",
+          "colorId": "35"
         },
         {
-          "productNumber": "37007943",
-          "colorId": "32"
+          "productNumber": "37037938",
+          "colorId": "92"
+        },
+        {
+          "productNumber": "37007946",
+          "colorId": "30"
+        },
+        {
+          "productNumber": "37036361",
+          "colorId": "99"
         }
       ]
     },
@@ -375,29 +348,29 @@
       ]
     },
     {
-      "name": "Buttoned ribbed t-shirt - Women",
-      "image": "https://media.mango.com/is/image/punto/37057938-70-002?wid=1024",
-      "productNumber": "37057938",
-      "baseCode": "37057938",
-      "globalCode": "37057938",
-      "colorId": "70",
-      "url": "https://shop.mango.com/gb/en/p/women/t-shirts/long-sleeve/buttoned-ribbed-t-shirt/37057938/70/00",
+      "name": "Asymmetrical midi denim skirt - Women",
+      "image": "https://media.mango.com/is/image/punto/37097939-DI-002?wid=1024",
+      "productNumber": "37097939",
+      "baseCode": "37097939",
+      "globalCode": "37097939",
+      "colorId": "DI",
+      "url": "https://shop.mango.com/gb/en/p/women/skirts/midi/asymmetrical-midi-denim-skirt/37097939/DI/00",
       "relatedProductNumbers": [
-        {
-          "productNumber": "27045992",
-          "colorId": "99"
-        },
         {
           "productNumber": "37037935",
           "colorId": "99"
         },
         {
-          "productNumber": "37097786",
-          "colorId": "99"
+          "productNumber": "37017941",
+          "colorId": "30"
         },
         {
-          "productNumber": "37087794",
-          "colorId": "78"
+          "productNumber": "37094435",
+          "colorId": "32"
+        },
+        {
+          "productNumber": "37007943",
+          "colorId": "32"
         }
       ]
     },
@@ -425,6 +398,33 @@
       ]
     },
     {
+      "name": "Buttoned ribbed t-shirt - Women",
+      "image": "https://media.mango.com/is/image/punto/37057938-70-002?wid=1024",
+      "productNumber": "37057938",
+      "baseCode": "37057938",
+      "globalCode": "37057938",
+      "colorId": "70",
+      "url": "https://shop.mango.com/gb/en/p/women/t-shirts/long-sleeve/buttoned-ribbed-t-shirt/37057938/70/00",
+      "relatedProductNumbers": [
+        {
+          "productNumber": "27045992",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37037935",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37097786",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37087794",
+          "colorId": "78"
+        }
+      ]
+    },
+    {
       "name": "Leather jacket with worn effect - Women",
       "image": "https://media.mango.com/is/image/punto/37087901-30-002?wid=1024",
       "productNumber": "37087901",
@@ -443,6 +443,33 @@
         },
         {
           "productNumber": "37086353",
+          "colorId": "32"
+        }
+      ]
+    },
+    {
+      "name": "Wool bomber jacket - Women",
+      "image": "https://media.mango.com/is/image/punto/37027939-37-002?wid=1024",
+      "productNumber": "37027939",
+      "baseCode": "37027939",
+      "globalCode": "37027939",
+      "colorId": "37",
+      "url": "https://shop.mango.com/gb/en/p/women/jackets/bombers/wool-bomber-jacket/37027939/37/00",
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37097938",
+          "colorId": "37"
+        },
+        {
+          "productNumber": "37047938",
+          "colorId": "05"
+        },
+        {
+          "productNumber": "37037935",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37036361",
           "colorId": "32"
         }
       ]
@@ -471,33 +498,6 @@
         {
           "productNumber": "37047942",
           "colorId": "09"
-        }
-      ]
-    },
-    {
-      "name": "Wool bomber jacket - Women",
-      "image": "https://media.mango.com/is/image/punto/37027939-37-002?wid=1024",
-      "productNumber": "37027939",
-      "baseCode": "37027939",
-      "globalCode": "37027939",
-      "colorId": "37",
-      "url": "https://shop.mango.com/gb/en/p/women/jackets/bombers/wool-bomber-jacket/37027939/37/00",
-      "relatedProductNumbers": [
-        {
-          "productNumber": "37097938",
-          "colorId": "37"
-        },
-        {
-          "productNumber": "37047938",
-          "colorId": "05"
-        },
-        {
-          "productNumber": "37037935",
-          "colorId": "99"
-        },
-        {
-          "productNumber": "37036361",
-          "colorId": "32"
         }
       ]
     },
@@ -556,33 +556,6 @@
       ]
     },
     {
-      "name": "Faux fur shopper bag - Women",
-      "image": "https://media.mango.com/is/image/punto/37007946-30-052?wid=1024",
-      "productNumber": "37007946",
-      "baseCode": "37007946",
-      "globalCode": "37007946",
-      "colorId": "30",
-      "url": "https://shop.mango.com/gb/en/p/women/bags/crossbody/faux-fur-shopper-bag/37007946/30/00",
-      "relatedProductNumbers": [
-        {
-          "productNumber": "37097907",
-          "colorId": "99"
-        },
-        {
-          "productNumber": "37057938",
-          "colorId": "70"
-        },
-        {
-          "productNumber": "27045992",
-          "colorId": "99"
-        },
-        {
-          "productNumber": "37045987",
-          "colorId": "37"
-        }
-      ]
-    },
-    {
       "name": "Shopper bag with padlock detail - Women",
       "image": "https://media.mango.com/is/image/punto/37007945-99-052?wid=1024",
       "productNumber": "37007945",
@@ -606,25 +579,29 @@
       ]
     },
     {
-      "name": "Leopard-print halter top - Women",
-      "image": "https://media.mango.com/is/image/punto/37017941-30-002?wid=1024",
-      "productNumber": "37017941",
-      "baseCode": "37017941",
-      "globalCode": "37017941",
+      "name": "Faux fur shopper bag - Women",
+      "image": "https://media.mango.com/is/image/punto/37007946-30-052?wid=1024",
+      "productNumber": "37007946",
+      "baseCode": "37007946",
+      "globalCode": "37007946",
       "colorId": "30",
-      "url": "https://shop.mango.com/gb/en/p/women/tops/gilets/leopard-print-halter-top/37017941/30/00",
+      "url": "https://shop.mango.com/gb/en/p/women/bags/crossbody/faux-fur-shopper-bag/37007946/30/00",
       "relatedProductNumbers": [
         {
-          "productNumber": "37067784",
-          "colorId": "32"
+          "productNumber": "37097907",
+          "colorId": "99"
         },
         {
-          "productNumber": "37077939",
-          "colorId": "DO"
+          "productNumber": "37057938",
+          "colorId": "70"
         },
         {
-          "productNumber": "27096340",
-          "colorId": "05"
+          "productNumber": "27045992",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37045987",
+          "colorId": "37"
         }
       ]
     },
@@ -683,29 +660,25 @@
       ]
     },
     {
-      "name": "Padded jacket with fur-effect collar - Women",
-      "image": "https://media.mango.com/is/image/punto/37087938-08-002?wid=1024",
-      "productNumber": "37087938",
-      "baseCode": "37087938",
-      "globalCode": "37087938",
-      "colorId": "08",
-      "url": "https://shop.mango.com/gb/en/p/women/jackets/bombers/padded-jacket-with-fur-effect-collar/37087938/08/00",
+      "name": "Leopard-print halter top - Women",
+      "image": "https://media.mango.com/is/image/punto/37017941-30-002?wid=1024",
+      "productNumber": "37017941",
+      "baseCode": "37017941",
+      "globalCode": "37017941",
+      "colorId": "30",
+      "url": "https://shop.mango.com/gb/en/p/women/tops/gilets/leopard-print-halter-top/37017941/30/00",
       "relatedProductNumbers": [
         {
-          "productNumber": "37087793",
-          "colorId": "99"
+          "productNumber": "37067784",
+          "colorId": "32"
         },
         {
-          "productNumber": "37097782",
-          "colorId": "02"
+          "productNumber": "37077939",
+          "colorId": "DO"
         },
         {
-          "productNumber": "37037935",
-          "colorId": "99"
-        },
-        {
-          "productNumber": "37007946",
-          "colorId": "30"
+          "productNumber": "27096340",
+          "colorId": "05"
         }
       ]
     },
@@ -733,6 +706,33 @@
       ]
     },
     {
+      "name": "Padded jacket with fur-effect collar - Women",
+      "image": "https://media.mango.com/is/image/punto/37087938-08-002?wid=1024",
+      "productNumber": "37087938",
+      "baseCode": "37087938",
+      "globalCode": "37087938",
+      "colorId": "08",
+      "url": "https://shop.mango.com/gb/en/p/women/jackets/bombers/padded-jacket-with-fur-effect-collar/37087938/08/00",
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37087793",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37097782",
+          "colorId": "02"
+        },
+        {
+          "productNumber": "37037935",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37007946",
+          "colorId": "30"
+        }
+      ]
+    },
+    {
       "name": "Fitted houndstooth trousers - Women",
       "image": "https://media.mango.com/is/image/punto/37027944-09-001?wid=1024",
       "productNumber": "37027944",
@@ -748,33 +748,6 @@
         {
           "productNumber": "37037935",
           "colorId": "99"
-        }
-      ]
-    },
-    {
-      "name": "Square-toe leather court shoe - Women",
-      "image": "https://media.mango.com/is/image/punto/37027925-32-016?wid=1024",
-      "productNumber": "37027925",
-      "baseCode": "37027925",
-      "globalCode": "37027925",
-      "colorId": "32",
-      "url": "https://shop.mango.com/gb/en/p/women/shoes/heeled-shoes/square-toe-leather-court-shoe/37027925/32/00",
-      "relatedProductNumbers": [
-        {
-          "productNumber": "37007946",
-          "colorId": "30"
-        },
-        {
-          "productNumber": "37027939",
-          "colorId": "37"
-        },
-        {
-          "productNumber": "37097938",
-          "colorId": "37"
-        },
-        {
-          "productNumber": "37007796",
-          "colorId": "05"
         }
       ]
     },
@@ -829,48 +802,29 @@
       ]
     },
     {
-      "name": "Straight-leg distressed jeans - Women",
-      "image": "https://media.mango.com/is/image/punto/37077777-32-002?wid=1024",
-      "productNumber": "37077777",
-      "baseCode": "37077777",
-      "globalCode": "37077777",
+      "name": "Square-toe leather court shoe - Women",
+      "image": "https://media.mango.com/is/image/punto/37027925-32-016?wid=1024",
+      "productNumber": "37027925",
+      "baseCode": "37027925",
+      "globalCode": "37027925",
       "colorId": "32",
-      "url": "https://shop.mango.com/gb/en/p/women/jeans/straight/straight-leg-distressed-jeans/37077777/32/00",
+      "url": "https://shop.mango.com/gb/en/p/women/shoes/heeled-shoes/square-toe-leather-court-shoe/37027925/32/00",
       "relatedProductNumbers": [
         {
-          "productNumber": "37097773",
+          "productNumber": "37007946",
           "colorId": "30"
         },
         {
-          "productNumber": "37037935",
-          "colorId": "99"
+          "productNumber": "37027939",
+          "colorId": "37"
         },
         {
-          "productNumber": "37077920",
-          "colorId": "32"
-        }
-      ]
-    },
-    {
-      "name": "Leopard print lace top - Women",
-      "image": "https://media.mango.com/is/image/punto/37087940-30-002?wid=1024",
-      "productNumber": "37087940",
-      "baseCode": "37087940",
-      "globalCode": "37087940",
-      "colorId": "30",
-      "url": "https://shop.mango.com/gb/en/p/women/tops/party/leopard-print-lace-top/37087940/30/00",
-      "relatedProductNumbers": [
-        {
-          "productNumber": "37087813",
-          "colorId": "30"
+          "productNumber": "37097938",
+          "colorId": "37"
         },
         {
-          "productNumber": "37045986",
-          "colorId": "99"
-        },
-        {
-          "productNumber": "37072905",
-          "colorId": "32"
+          "productNumber": "37007796",
+          "colorId": "05"
         }
       ]
     },
@@ -902,25 +856,44 @@
       ]
     },
     {
-      "name": "Asymmetrical pleated dress - Women",
-      "image": "https://media.mango.com/is/image/punto/37037944-99-002?wid=1024",
-      "productNumber": "37037944",
-      "baseCode": "37037944",
-      "globalCode": "37037944",
-      "colorId": "99",
-      "url": "https://shop.mango.com/gb/en/p/women/dresses-and-jumpsuits/black/asymmetrical-pleated-dress/37037944/99/00",
+      "name": "Leopard print lace top - Women",
+      "image": "https://media.mango.com/is/image/punto/37087940-30-002?wid=1024",
+      "productNumber": "37087940",
+      "baseCode": "37087940",
+      "globalCode": "37087940",
+      "colorId": "30",
+      "url": "https://shop.mango.com/gb/en/p/women/tops/party/leopard-print-lace-top/37087940/30/00",
       "relatedProductNumbers": [
+        {
+          "productNumber": "37087813",
+          "colorId": "30"
+        },
         {
           "productNumber": "37045986",
           "colorId": "99"
         },
         {
-          "productNumber": "37087773",
+          "productNumber": "37072905",
+          "colorId": "32"
+        }
+      ]
+    },
+    {
+      "name": "Straight-leg distressed jeans - Women",
+      "image": "https://media.mango.com/is/image/punto/37077777-32-002?wid=1024",
+      "productNumber": "37077777",
+      "baseCode": "37077777",
+      "globalCode": "37077777",
+      "colorId": "32",
+      "url": "https://shop.mango.com/gb/en/p/women/jeans/straight/straight-leg-distressed-jeans/37077777/32/00",
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37097773",
           "colorId": "30"
         },
         {
-          "productNumber": "37007944",
-          "colorId": "CU"
+          "productNumber": "37037935",
+          "colorId": "99"
         },
         {
           "productNumber": "37077920",
@@ -952,6 +925,33 @@
       ]
     },
     {
+      "name": "Asymmetrical pleated dress - Women",
+      "image": "https://media.mango.com/is/image/punto/37037944-99-002?wid=1024",
+      "productNumber": "37037944",
+      "baseCode": "37037944",
+      "globalCode": "37037944",
+      "colorId": "99",
+      "url": "https://shop.mango.com/gb/en/p/women/dresses-and-jumpsuits/black/asymmetrical-pleated-dress/37037944/99/00",
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37045986",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37087773",
+          "colorId": "30"
+        },
+        {
+          "productNumber": "37007944",
+          "colorId": "CU"
+        },
+        {
+          "productNumber": "37077920",
+          "colorId": "32"
+        }
+      ]
+    },
+    {
       "name": "Gathered blouse with wide elasticated waistband - Women",
       "image": "https://media.mango.com/is/image/punto/37097783-37-002?wid=1024",
       "productNumber": "37097783",
@@ -973,16 +973,6 @@
           "colorId": "32"
         }
       ]
-    },
-    {
-      "name": "Fitted coat with faux fur trim - Women",
-      "image": "https://media.mango.com/is/image/punto/37028280-32-002?wid=1024",
-      "productNumber": "37028280",
-      "baseCode": "37028280",
-      "globalCode": "37028280",
-      "colorId": "32",
-      "url": "https://shop.mango.com/gb/en/p/women/coats/coats/fitted-coat-with-faux-fur-trim/37028280/32/00",
-      "relatedProductNumbers": []
     },
     {
       "name": "Houndstooth short skirt - Women",
@@ -1035,89 +1025,81 @@
       ]
     },
     {
+      "name": "Fitted coat with faux fur trim - Women",
+      "image": "https://media.mango.com/is/image/punto/37028280-32-002?wid=1024",
+      "productNumber": "37028280",
+      "baseCode": "37028280",
+      "globalCode": "37028280",
+      "colorId": "32",
+      "url": "https://shop.mango.com/gb/en/p/women/coats/coats/fitted-coat-with-faux-fur-trim/37028280/32/00",
+      "relatedProductNumbers": []
+    },
+    {
+      "name": "Round-neck knitted sweater - Women",
+      "image": "https://media.mango.com/is/image/punto/37017777-11-002?wid=1024",
+      "productNumber": "37017777",
+      "baseCode": "37017777",
+      "globalCode": "37017777",
+      "colorId": "11",
+      "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/plus-sizes/round-neck-knitted-sweater/37017777/11/00",
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37035847",
+          "colorId": "06"
+        },
+        {
+          "productNumber": "37004099",
+          "colorId": "TO"
+        },
+        {
+          "productNumber": "37084440",
+          "colorId": "05"
+        },
+        {
+          "productNumber": "37094104",
+          "colorId": "09"
+        }
+      ]
+    },
+    {
       "name": "High-waist flared jeans - Women",
-      "image": "https://media.mango.com/is/image/punto/37027793-TO-002?wid=1024",
+      "image": "https://media.mango.com/is/image/punto/37047791-TN-002?wid=1024",
       "productNumber": "37027793",
       "baseCode": "37027793",
       "globalCode": "37027793",
-      "colorId": "TO",
-      "url": "https://shop.mango.com/gb/en/p/women/jeans/flare/high-waist-flared-jeans/37027793/TO/00",
+      "colorId": "TN",
+      "url": "https://shop.mango.com/gb/en/p/women/jeans/flare/high-waist-flared-jeans/37027793/TN/00",
       "relatedProductNumbers": [
         {
-          "productNumber": "37014079",
-          "colorId": "50"
+          "productNumber": "37007806",
+          "colorId": "95"
         },
         {
-          "productNumber": "37095985",
-          "colorId": "31"
-        },
-        {
-          "productNumber": "37094098",
-          "colorId": "CU"
+          "productNumber": "37023318",
+          "colorId": "32"
         }
       ]
     },
     {
       "name": "Faux leather jacket with shearling trim - Women",
-      "image": "https://media.mango.com/is/image/punto/37068278-30-127?wid=1024",
+      "image": "https://media.mango.com/is/image/punto/37068278-30-002?wid=1024",
       "productNumber": "37068278",
       "baseCode": "37068278",
       "globalCode": "37068278",
       "colorId": "30",
-      "url": "https://shop.mango.com/gb/en/p/women/jackets/leather/faux-leather-jacket-with-shearling-trim/37068278/30/02",
-      "relatedProductNumbers": []
-    },
-    {
-      "name": "Round-neck knitted sweater - Women",
-      "image": "https://media.mango.com/is/image/punto/37017777-92-002?wid=1024",
-      "productNumber": "37017777",
-      "baseCode": "37017777",
-      "globalCode": "37017777",
-      "colorId": "92",
-      "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/plus-sizes/round-neck-knitted-sweater/37017777/92/00",
+      "url": "https://shop.mango.com/gb/en/p/women/jackets/leather/faux-leather-jacket-with-shearling-trim/37068278/30/00",
       "relatedProductNumbers": [
         {
-          "productNumber": "37087804",
-          "colorId": "99"
+          "productNumber": "37065878",
+          "colorId": "02"
         },
         {
-          "productNumber": "37094428",
-          "colorId": "99"
+          "productNumber": "37082549",
+          "colorId": "OR"
         },
         {
-          "productNumber": "27041343",
+          "productNumber": "37005997",
           "colorId": "99"
-        },
-        {
-          "productNumber": "37084440",
-          "colorId": "05"
-        }
-      ]
-    },
-    {
-      "name": "Cotton and lyocell blend straight shirt - Women",
-      "image": "https://media.mango.com/is/image/punto/37047793-50-002?wid=1024",
-      "productNumber": "37047793",
-      "baseCode": "37047793",
-      "globalCode": "37047793",
-      "colorId": "50",
-      "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/cotton-and-lyocell-blend-straight-shirt/37047793/50/00",
-      "relatedProductNumbers": [
-        {
-          "productNumber": "37077807",
-          "colorId": "99"
-        },
-        {
-          "productNumber": "37056354",
-          "colorId": "99"
-        },
-        {
-          "productNumber": "37085842",
-          "colorId": "99"
-        },
-        {
-          "productNumber": "37007946",
-          "colorId": "30"
         }
       ]
     },
@@ -1172,6 +1154,37 @@
       ]
     },
     {
+      "name": "Cotton and lyocell blend straight shirt",
+      "image": "https://media.mango.com/is/image/punto/37047793-70-002?wid=1024",
+      "productNumber": "37047793",
+      "baseCode": "37047793",
+      "globalCode": "37047793",
+      "colorId": "70",
+      "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/cotton-and-lyocell-blend-straight-shirt/37047793/70/00",
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37017782",
+          "colorId": "92"
+        },
+        {
+          "productNumber": "37034474",
+          "colorId": "37"
+        },
+        {
+          "productNumber": "37045980",
+          "colorId": "92"
+        },
+        {
+          "productNumber": "37023318",
+          "colorId": "32"
+        },
+        {
+          "productNumber": "37022908",
+          "colorId": "78"
+        }
+      ]
+    },
+    {
       "name": "Peplum blazer with pockets - Women",
       "image": "https://media.mango.com/is/image/punto/37067942-56-002?wid=1024",
       "productNumber": "37067942",
@@ -1200,12 +1213,12 @@
     },
     {
       "name": "Fur-effect scarf - Women",
-      "image": "https://media.mango.com/is/image/punto/47081357-32-016?wid=1024",
+      "image": "https://media.mango.com/is/image/punto/47081357-30-900?wid=1024",
       "productNumber": "47081357",
       "baseCode": "47081357",
       "globalCode": "47081357",
-      "colorId": "32",
-      "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/fur-effect-scarf/47081357/32/00",
+      "colorId": "30",
+      "url": "https://shop.mango.com/gb/en/p/women/scarfs-and-foulards/fur-effect-scarf/47081357/30/00",
       "relatedProductNumbers": []
     },
     {
@@ -1232,6 +1245,33 @@
         {
           "productNumber": "37095153",
           "colorId": "70"
+        }
+      ]
+    },
+    {
+      "name": "Balloon crop jeans - Women",
+      "image": "https://media.mango.com/is/image/punto/37017816-TN-002?wid=1024",
+      "productNumber": "37017816",
+      "baseCode": "37017816",
+      "globalCode": "37017816",
+      "colorId": "TN",
+      "url": "https://shop.mango.com/gb/en/p/women/jeans/balloon/balloon-crop-jeans/37017816/TN/00",
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37035847",
+          "colorId": "06"
+        },
+        {
+          "productNumber": "37007806",
+          "colorId": "95"
+        },
+        {
+          "productNumber": "37084440",
+          "colorId": "05"
+        },
+        {
+          "productNumber": "27041343",
+          "colorId": "99"
         }
       ]
     },
@@ -1264,63 +1304,30 @@
     },
     {
       "name": "Wool blend coat with funnel neck - Women",
-      "image": "https://media.mango.com/is/image/punto/37068273-32-002?wid=1024",
+      "image": "https://media.mango.com/is/image/punto/37058283-96-002?wid=1024",
       "productNumber": "37068273",
       "baseCode": "37068273",
       "globalCode": "37068273",
-      "colorId": "32",
-      "url": "https://shop.mango.com/gb/en/p/women/coats/coats/wool-blend-coat-with-funnel-neck/37068273/32/00",
+      "colorId": "96",
+      "url": "https://shop.mango.com/gb/en/p/women/coats/coats/wool-blend-coat-with-funnel-neck/37068273/96/00",
       "relatedProductNumbers": [
         {
-          "productNumber": "37041348",
-          "colorId": "01"
+          "productNumber": "27011244",
+          "colorId": "TO"
         },
         {
-          "productNumber": "37076358",
-          "colorId": "30"
-        },
-        {
-          "productNumber": "27038275",
-          "colorId": "05"
-        }
-      ]
-    },
-    {
-      "name": "Balloon crop jeans - Women",
-      "image": "https://media.mango.com/is/image/punto/37017816-TN-002?wid=1024",
-      "productNumber": "37017816",
-      "baseCode": "37017816",
-      "globalCode": "37017816",
-      "colorId": "TN",
-      "url": "https://shop.mango.com/gb/en/p/women/jeans/balloon/balloon-crop-jeans/37017816/TN/00",
-      "relatedProductNumbers": [
-        {
-          "productNumber": "37035847",
-          "colorId": "06"
-        },
-        {
-          "productNumber": "37007806",
-          "colorId": "95"
-        },
-        {
-          "productNumber": "37084440",
+          "productNumber": "37035856",
           "colorId": "05"
         },
         {
-          "productNumber": "27041343",
+          "productNumber": "37014099",
+          "colorId": "32"
+        },
+        {
+          "productNumber": "37024462",
           "colorId": "99"
         }
       ]
-    },
-    {
-      "name": "Double-breasted virgin wool coat - Women",
-      "image": "https://media.mango.com/is/image/punto/37016751-99-102?wid=1024",
-      "productNumber": "37016751",
-      "baseCode": "37016751",
-      "globalCode": "37016751",
-      "colorId": "99",
-      "url": "https://shop.mango.com/gb/en/p/women/coats/coats/double-breasted-virgin-wool-coat/37016751/99/01",
-      "relatedProductNumbers": []
     },
     {
       "name": "Double-breasted wool-blend coat - Women",
@@ -1350,14 +1357,136 @@
       ]
     },
     {
+      "name": "Double-breasted virgin wool coat - Women",
+      "image": "https://media.mango.com/is/image/punto/37016751-99-002?wid=1024",
+      "productNumber": "37016751",
+      "baseCode": "37016751",
+      "globalCode": "37016751",
+      "colorId": "99",
+      "url": "https://shop.mango.com/gb/en/p/women/coats/coats/double-breasted-virgin-wool-coat/37016751/99/00",
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37035856",
+          "colorId": "05"
+        },
+        {
+          "productNumber": "37098286",
+          "colorId": "TG"
+        },
+        {
+          "productNumber": "37005998",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37001401",
+          "colorId": "OR"
+        }
+      ]
+    },
+    {
       "name": "Wool coat, funnel neck with belt - Women",
-      "image": "https://media.mango.com/is/image/punto/37095981-35-102?wid=1024",
+      "image": "https://media.mango.com/is/image/punto/37095981-35-002?wid=1024",
       "productNumber": "37095981",
       "baseCode": "37095981",
       "globalCode": "37095981",
       "colorId": "35",
-      "url": "https://shop.mango.com/gb/en/p/women/coats/coats/wool-coat--funnel-neck-with-belt/37095981/35/01",
-      "relatedProductNumbers": []
+      "url": "https://shop.mango.com/gb/en/p/women/coats/coats/wool-coat--funnel-neck-with-belt/37095981/35/00",
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37086334",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37085999",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37045980",
+          "colorId": "92"
+        },
+        {
+          "productNumber": "37065153",
+          "colorId": "32"
+        }
+      ]
+    },
+    {
+      "name": "Handmade wool coat with belt - Women",
+      "image": "https://media.mango.com/is/image/punto/37096727-99-002?wid=1024",
+      "productNumber": "37096727",
+      "baseCode": "37096727",
+      "globalCode": "37096727",
+      "colorId": "99",
+      "url": "https://shop.mango.com/gb/en/p/women/coats/coats/handmade-wool-coat-with-belt/37096727/99/00",
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37007797",
+          "colorId": "94"
+        },
+        {
+          "productNumber": "37035856",
+          "colorId": "05"
+        },
+        {
+          "productNumber": "37094428",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37005993",
+          "colorId": "32"
+        },
+        {
+          "productNumber": "37067132",
+          "colorId": "32"
+        }
+      ]
+    },
+    {
+      "name": "Manteco wool coat with funnel neck - Women",
+      "image": "https://media.mango.com/is/image/punto/37027806-99-002?wid=1024",
+      "productNumber": "37017808",
+      "baseCode": "37017808",
+      "globalCode": "37017808",
+      "colorId": "99",
+      "url": "https://shop.mango.com/gb/en/p/women/coats/coats/manteco-wool-coat-with-funnel-neck/37017808/99/00",
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37061351",
+          "colorId": "01"
+        },
+        {
+          "productNumber": "37094080",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37045990",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37026368",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37007797",
+          "colorId": "94"
+        },
+        {
+          "productNumber": "37091331",
+          "colorId": "70"
+        },
+        {
+          "productNumber": "37004097",
+          "colorId": "TN"
+        },
+        {
+          "productNumber": "37085842",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "27041343",
+          "colorId": "99"
+        }
+      ]
     },
     {
       "name": "Textured jacket with a high neck - Women",
@@ -1387,54 +1516,139 @@
       ]
     },
     {
-      "name": "Manteco wool coat with funnel neck - Women",
-      "image": "https://media.mango.com/is/image/punto/37017808-06-102?wid=1024",
-      "productNumber": "37017808",
-      "baseCode": "37017808",
-      "globalCode": "37017808",
-      "colorId": "06",
-      "url": "https://shop.mango.com/gb/en/p/women/coats/coats/manteco-wool-coat-with-funnel-neck/37017808/06/01",
-      "relatedProductNumbers": []
-    },
-    {
-      "name": "Handmade wool coat with belt - Women",
-      "image": "https://media.mango.com/is/image/punto/37096727-99-102?wid=1024",
-      "productNumber": "37096727",
-      "baseCode": "37096727",
-      "globalCode": "37096727",
-      "colorId": "99",
-      "url": "https://shop.mango.com/gb/en/p/women/coats/coats/handmade-wool-coat-with-belt/37096727/99/01",
-      "relatedProductNumbers": []
-    },
-    {
-      "name": "High-neck zip-up jacket - Women",
-      "image": "https://media.mango.com/is/image/punto/37056727-99-102?wid=1024",
-      "productNumber": "37056727",
-      "baseCode": "37056727",
-      "globalCode": "37056727",
-      "colorId": "99",
-      "url": "https://shop.mango.com/gb/en/p/women/jackets/high-neck-zip-up-jacket/37056727/99/01",
-      "relatedProductNumbers": []
-    },
-    {
-      "name": "Belted knit coat - Women",
-      "image": "https://media.mango.com/is/image/punto/37095846-99-102?wid=1024",
-      "productNumber": "37095846",
-      "baseCode": "37095846",
-      "globalCode": "37095846",
-      "colorId": "99",
-      "url": "https://shop.mango.com/gb/en/p/women/coats/coats/belted-knit-coat/37095846/99/01",
-      "relatedProductNumbers": []
-    },
-    {
       "name": "Bomber jacket with funnel neck - Women",
-      "image": "https://media.mango.com/is/image/punto/37046742-37-102?wid=1024",
+      "image": "https://media.mango.com/is/image/punto/37046742-37-002?wid=1024",
       "productNumber": "37046742",
       "baseCode": "37046742",
       "globalCode": "37046742",
       "colorId": "37",
-      "url": "https://shop.mango.com/gb/en/p/women/jackets/bombers/bomber-jacket-with-funnel-neck/37046742/37/01",
-      "relatedProductNumbers": []
+      "url": "https://shop.mango.com/gb/en/p/women/jackets/bombers/bomber-jacket-with-funnel-neck/37046742/37/00",
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37054110",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37004098",
+          "colorId": "05"
+        },
+        {
+          "productNumber": "37005996",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37032539",
+          "colorId": "32"
+        }
+      ]
+    },
+    {
+      "name": "High-neck zip-up jacket - Women",
+      "image": "https://media.mango.com/is/image/punto/37056727-99-002?wid=1024",
+      "productNumber": "37056727",
+      "baseCode": "37056727",
+      "globalCode": "37056727",
+      "colorId": "99",
+      "url": "https://shop.mango.com/gb/en/p/women/jackets/high-neck-zip-up-jacket/37056727/99/00",
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37042894",
+          "colorId": "52"
+        },
+        {
+          "productNumber": "37054112",
+          "colorId": "01"
+        },
+        {
+          "productNumber": "37045993",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37055983",
+          "colorId": "99"
+        }
+      ]
+    },
+    {
+      "name": "Belted knit coat - Women",
+      "image": "https://media.mango.com/is/image/punto/37095846-99-002?wid=1024",
+      "productNumber": "37095846",
+      "baseCode": "37095846",
+      "globalCode": "37095846",
+      "colorId": "99",
+      "url": "https://shop.mango.com/gb/en/p/women/coats/coats/belted-knit-coat/37095846/99/00",
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37051378",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37015883",
+          "colorId": "02"
+        },
+        {
+          "productNumber": "37005994",
+          "colorId": "78"
+        },
+        {
+          "productNumber": "37086353",
+          "colorId": "32"
+        }
+      ]
+    },
+    {
+      "name": "Houndstooth wool jacket - Women",
+      "image": "https://media.mango.com/is/image/punto/37076726-56-002?wid=1024",
+      "productNumber": "37076726",
+      "baseCode": "37076726",
+      "globalCode": "37076726",
+      "colorId": "56",
+      "url": "https://shop.mango.com/gb/en/p/women/jackets/bombers/houndstooth-wool-jacket/37076726/56/00",
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37055841",
+          "colorId": "70"
+        },
+        {
+          "productNumber": "37091331",
+          "colorId": "92"
+        },
+        {
+          "productNumber": "37004098",
+          "colorId": "05"
+        },
+        {
+          "productNumber": "37085842",
+          "colorId": "99"
+        }
+      ]
+    },
+    {
+      "name": "100% wool funnel-neck coat",
+      "image": "https://media.mango.com/is/image/punto/37016747-35-002?wid=1024",
+      "productNumber": "37016747",
+      "baseCode": "37016747",
+      "globalCode": "37016747",
+      "colorId": "35",
+      "url": "https://shop.mango.com/gb/en/p/women/coats/coats/100-wool-funnel-neck-coat/37016747/35/00",
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37015842",
+          "colorId": "94"
+        },
+        {
+          "productNumber": "37075877",
+          "colorId": "30"
+        },
+        {
+          "productNumber": "37045990",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37031424",
+          "colorId": "11"
+        }
+      ]
     },
     {
       "name": "Knitted polo-neck sweater - Women",
@@ -1464,33 +1678,13 @@
       ]
     },
     {
-      "name": "100% wool funnel-neck coat",
-      "image": "https://media.mango.com/is/image/punto/37016747-92-102?wid=1024",
-      "productNumber": "37016747",
-      "baseCode": "37016747",
-      "globalCode": "37016747",
-      "colorId": "92",
-      "url": "https://shop.mango.com/gb/en/p/women/coats/coats/100-wool-funnel-neck-coat/37016747/92/01",
-      "relatedProductNumbers": []
-    },
-    {
-      "name": "Houndstooth wool jacket - Women",
-      "image": "https://media.mango.com/is/image/punto/37076726-56-102?wid=1024",
-      "productNumber": "37076726",
-      "baseCode": "37076726",
-      "globalCode": "37076726",
-      "colorId": "56",
-      "url": "https://shop.mango.com/gb/en/p/women/jackets/bombers/houndstooth-wool-jacket/37076726/56/01",
-      "relatedProductNumbers": []
-    },
-    {
       "name": "Round-neck knitted sweater",
-      "image": "https://media.mango.com/is/image/punto/37017783-06-002?wid=1024",
-      "productNumber": "37017783",
-      "baseCode": "37017783",
-      "globalCode": "37017783",
-      "colorId": "06",
-      "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/plus-sizes/round-neck-knitted-sweater/37017783/06/00",
+      "image": "https://media.mango.com/is/image/punto/37027788-11-002?wid=1024",
+      "productNumber": "37027788",
+      "baseCode": "37027788",
+      "globalCode": "37027788",
+      "colorId": "11",
+      "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/sweaters/round-neck-knitted-sweater/37027788/11/00",
       "relatedProductNumbers": [
         {
           "productNumber": "37072892",
@@ -1501,12 +1695,12 @@
           "colorId": "TO"
         },
         {
-          "productNumber": "37094104",
-          "colorId": "09"
+          "productNumber": "37084440",
+          "colorId": "05"
         },
         {
-          "productNumber": "37034422",
-          "colorId": "32"
+          "productNumber": "37094104",
+          "colorId": "09"
         }
       ]
     },
@@ -1538,16 +1732,16 @@
       ]
     },
     {
-      "name": "Round-neck knitted sweater - Women",
-      "image": "https://media.mango.com/is/image/punto/37027788-56-002?wid=1024",
-      "productNumber": "37027788",
-      "baseCode": "37027788",
-      "globalCode": "37027788",
-      "colorId": "56",
-      "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/sweaters/round-neck-knitted-sweater/37027788/56/00",
+      "name": "Round-neck knitted sweater",
+      "image": "https://media.mango.com/is/image/punto/37017783-06-002?wid=1024",
+      "productNumber": "37017783",
+      "baseCode": "37017783",
+      "globalCode": "37017783",
+      "colorId": "06",
+      "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/plus-sizes/round-neck-knitted-sweater/37017783/06/00",
       "relatedProductNumbers": [
         {
-          "productNumber": "37055854",
+          "productNumber": "37072892",
           "colorId": "30"
         },
         {
@@ -1555,12 +1749,35 @@
           "colorId": "TO"
         },
         {
-          "productNumber": "27038275",
-          "colorId": "05"
-        },
-        {
           "productNumber": "37094104",
           "colorId": "09"
+        },
+        {
+          "productNumber": "37034422",
+          "colorId": "32"
+        }
+      ]
+    },
+    {
+      "name": "Short knitted dress - Women",
+      "image": "https://media.mango.com/is/image/punto/37097796-56-002?wid=1024",
+      "productNumber": "37097796",
+      "baseCode": "37097796",
+      "globalCode": "37097796",
+      "colorId": "56",
+      "url": "https://shop.mango.com/gb/en/p/women/dresses-and-jumpsuits/knitwear/short-knitted-dress/37097796/56/00",
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37086342",
+          "colorId": "92"
+        },
+        {
+          "productNumber": "37044430",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37076002",
+          "colorId": "99"
         }
       ]
     },
@@ -1592,78 +1809,74 @@
       ]
     },
     {
-      "name": "Short knitted dress - Women",
-      "image": "https://media.mango.com/is/image/punto/37097796-92-002?wid=1024",
-      "productNumber": "37097796",
-      "baseCode": "37097796",
-      "globalCode": "37097796",
-      "colorId": "92",
-      "url": "https://shop.mango.com/gb/en/p/women/dresses-and-jumpsuits/knitwear/short-knitted-dress/37097796/92/00",
-      "relatedProductNumbers": [
-        {
-          "productNumber": "37086342",
-          "colorId": "92"
-        },
-        {
-          "productNumber": "37044430",
-          "colorId": "99"
-        },
-        {
-          "productNumber": "37076002",
-          "colorId": "99"
-        },
-        {
-          "productNumber": "37061366",
-          "colorId": "OR"
-        }
-      ]
-    },
-    {
       "name": "Knitted turtleneck dress - Women",
-      "image": "https://media.mango.com/is/image/punto/37087812-05-002?wid=1024",
+      "image": "https://media.mango.com/is/image/punto/37087812-99-002?wid=1024",
       "productNumber": "37087812",
       "baseCode": "37087812",
       "globalCode": "37087812",
-      "colorId": "05",
-      "url": "https://shop.mango.com/gb/en/p/women/dresses-and-jumpsuits/knitwear/knitted-turtleneck-dress/37087812/05/00",
+      "colorId": "99",
+      "url": "https://shop.mango.com/gb/en/p/women/dresses-and-jumpsuits/knitwear/knitted-turtleneck-dress/37087812/99/00",
       "relatedProductNumbers": [
         {
-          "productNumber": "37064790",
-          "colorId": "TM"
+          "productNumber": "37045990",
+          "colorId": "99"
         },
         {
-          "productNumber": "37045980",
-          "colorId": "92"
+          "productNumber": "37065999",
+          "colorId": "99"
         },
         {
-          "productNumber": "37074097",
-          "colorId": "32"
+          "productNumber": "37092537",
+          "colorId": "99"
         },
         {
-          "productNumber": "37004451",
-          "colorId": "OR"
+          "productNumber": "37006018",
+          "colorId": "PL"
         }
       ]
     },
     {
-      "name": "Knitted cardigan with flocked detail",
-      "image": "https://media.mango.com/is/image/punto/37037775-32-002?wid=1024",
+      "name": "Knitted cardigan with flocked detail - Women",
+      "image": "https://media.mango.com/is/image/punto/37037775-81-002?wid=1024",
       "productNumber": "37037775",
       "baseCode": "37037775",
       "globalCode": "37037775",
-      "colorId": "32",
-      "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/cardigans/knitted-cardigan-with-flocked-detail/37037775/32/00",
+      "colorId": "81",
+      "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/cardigans/knitted-cardigan-with-flocked-detail/37037775/81/00",
       "relatedProductNumbers": [
-        {
-          "productNumber": "37072892",
-          "colorId": "30"
-        },
         {
           "productNumber": "37004099",
           "colorId": "TO"
         },
         {
-          "productNumber": "37084440",
+          "productNumber": "27041343",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37047794",
+          "colorId": "OR"
+        }
+      ]
+    },
+    {
+      "name": "Knitted polo-neck sweater - Women",
+      "image": "https://media.mango.com/is/image/punto/37017787-49-002?wid=1024",
+      "productNumber": "37017787",
+      "baseCode": "37017787",
+      "globalCode": "37017787",
+      "colorId": "49",
+      "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/polos/knitted-polo-neck-sweater/37017787/49/00",
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37055854",
+          "colorId": "30"
+        },
+        {
+          "productNumber": "37065867",
+          "colorId": "56"
+        },
+        {
+          "productNumber": "27038275",
           "colorId": "05"
         },
         {
@@ -1673,58 +1886,29 @@
       ]
     },
     {
-      "name": "Ribbed V-neck jumper - Women",
-      "image": "https://media.mango.com/is/image/punto/37007797-94-002?wid=1024",
+      "name": "Ribbed V-neck jumper",
+      "image": "https://media.mango.com/is/image/punto/37007797-05-002?wid=1024",
       "productNumber": "37007797",
       "baseCode": "37007797",
       "globalCode": "37007797",
-      "colorId": "94",
-      "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/plus-sizes/ribbed-v-neck-jumper/37007797/94/00",
+      "colorId": "05",
+      "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/plus-sizes/ribbed-v-neck-jumper/37007797/05/00",
       "relatedProductNumbers": [
         {
-          "productNumber": "37045839",
-          "colorId": "99"
+          "productNumber": "37024802",
+          "colorId": "06"
         },
         {
-          "productNumber": "37024121",
-          "colorId": "TO"
-        },
-        {
-          "productNumber": "37084413",
-          "colorId": "32"
-        },
-        {
-          "productNumber": "37036367",
-          "colorId": "99"
-        }
-      ]
-    },
-    {
-      "name": "Knitted polo-neck sweater - Women",
-      "image": "https://media.mango.com/is/image/punto/37017787-49-102?wid=1024",
-      "productNumber": "37017787",
-      "baseCode": "37017787",
-      "globalCode": "37017787",
-      "colorId": "49",
-      "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/polos/knitted-polo-neck-sweater/37017787/49/01",
-      "relatedProductNumbers": []
-    },
-    {
-      "name": "Knitted cardigan with metallic buttons",
-      "image": "https://media.mango.com/is/image/punto/37097809-56-002?wid=1024",
-      "productNumber": "37097809",
-      "baseCode": "37097809",
-      "globalCode": "37097809",
-      "colorId": "56",
-      "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/cardigans/knitted-cardigan-with-metallic-buttons/37097809/56/00",
-      "relatedProductNumbers": [
-        {
-          "productNumber": "37024115",
+          "productNumber": "37084440",
           "colorId": "05"
         },
         {
-          "productNumber": "37034474",
-          "colorId": "05"
+          "productNumber": "37094098",
+          "colorId": "CU"
+        },
+        {
+          "productNumber": "37076002",
+          "colorId": "30"
         }
       ]
     },
@@ -1752,6 +1936,52 @@
         {
           "productNumber": "27038275",
           "colorId": "05"
+        }
+      ]
+    },
+    {
+      "name": "Knitted cardigan with metallic buttons",
+      "image": "https://media.mango.com/is/image/punto/37097809-56-002?wid=1024",
+      "productNumber": "37097809",
+      "baseCode": "37097809",
+      "globalCode": "37097809",
+      "colorId": "56",
+      "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/cardigans/knitted-cardigan-with-metallic-buttons/37097809/56/00",
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37024115",
+          "colorId": "05"
+        },
+        {
+          "productNumber": "37034474",
+          "colorId": "05"
+        }
+      ]
+    },
+    {
+      "name": "Ribbed peplum sweater - Women",
+      "image": "https://media.mango.com/is/image/punto/37007817-77-002?wid=1024",
+      "productNumber": "37007817",
+      "baseCode": "37007817",
+      "globalCode": "37007817",
+      "colorId": "77",
+      "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/sweaters/ribbed-peplum-sweater/37007817/77/00",
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37086342",
+          "colorId": "92"
+        },
+        {
+          "productNumber": "37034801",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37045980",
+          "colorId": "92"
+        },
+        {
+          "productNumber": "37061366",
+          "colorId": "OR"
         }
       ]
     },
@@ -1802,33 +2032,6 @@
         {
           "productNumber": "37061366",
           "colorId": "OR"
-        }
-      ]
-    },
-    {
-      "name": "Ribbed peplum sweater - Women",
-      "image": "https://media.mango.com/is/image/punto/37007817-05-002?wid=1024",
-      "productNumber": "37007817",
-      "baseCode": "37007817",
-      "globalCode": "37007817",
-      "colorId": "05",
-      "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/sweaters/ribbed-peplum-sweater/37007817/05/00",
-      "relatedProductNumbers": [
-        {
-          "productNumber": "37096727",
-          "colorId": "99"
-        },
-        {
-          "productNumber": "37036014",
-          "colorId": "99"
-        },
-        {
-          "productNumber": "37075872",
-          "colorId": "99"
-        },
-        {
-          "productNumber": "37047795",
-          "colorId": "99"
         }
       ]
     },
@@ -1884,73 +2087,27 @@
     },
     {
       "name": "High-waist crop trousers - Women",
-      "image": "https://media.mango.com/is/image/punto/37096012-99-102?wid=1024",
+      "image": "https://media.mango.com/is/image/punto/37096012-99-002?wid=1024",
       "productNumber": "37096012",
       "baseCode": "37096012",
       "globalCode": "37096012",
       "colorId": "99",
-      "url": "https://shop.mango.com/gb/en/p/women/trousers/casual/high-waist-crop-trousers/37096012/99/01",
+      "url": "https://shop.mango.com/gb/en/p/women/trousers/casual/high-waist-crop-trousers/37096012/99/00",
       "relatedProductNumbers": [
         {
-          "productNumber": "37096352",
+          "productNumber": "37086334",
           "colorId": "99"
         },
         {
-          "productNumber": "37037778",
+          "productNumber": "37075872",
           "colorId": "99"
         },
         {
           "productNumber": "37076360",
           "colorId": "99"
-        }
-      ]
-    },
-    {
-      "name": "Plain knit cape - Women",
-      "image": "https://media.mango.com/is/image/punto/37077789-91-002?wid=1024",
-      "productNumber": "37077789",
-      "baseCode": "37077789",
-      "globalCode": "37077789",
-      "colorId": "91",
-      "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/sweaters/plain-knit-cape/37077789/91/00",
-      "relatedProductNumbers": [
-        {
-          "productNumber": "37086347",
-          "colorId": "99"
         },
         {
-          "productNumber": "37075872",
-          "colorId": "99"
-        },
-        {
-          "productNumber": "27041343",
-          "colorId": "99"
-        },
-        {
-          "productNumber": "37066004",
-          "colorId": "OR"
-        }
-      ]
-    },
-    {
-      "name": "Long-sleeved maxi dress - Women",
-      "image": "https://media.mango.com/is/image/punto/37057810-05-002?wid=1024",
-      "productNumber": "37057810",
-      "baseCode": "37057810",
-      "globalCode": "37057810",
-      "colorId": "05",
-      "url": "https://shop.mango.com/gb/en/p/women/dresses-and-jumpsuits/long/long-sleeved-maxi-dress/37057810/05/00",
-      "relatedProductNumbers": [
-        {
-          "productNumber": "37006339",
-          "colorId": "50"
-        },
-        {
-          "productNumber": "27041343",
-          "colorId": "99"
-        },
-        {
-          "productNumber": "37075872",
+          "productNumber": "37095153",
           "colorId": "99"
         }
       ]
@@ -1983,6 +2140,37 @@
       ]
     },
     {
+      "name": "Plain knit cape - Women",
+      "image": "https://media.mango.com/is/image/punto/37077789-02-002?wid=1024",
+      "productNumber": "37077789",
+      "baseCode": "37077789",
+      "globalCode": "37077789",
+      "colorId": "02",
+      "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/sweaters/plain-knit-cape/37077789/02/00",
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37074074",
+          "colorId": "05"
+        },
+        {
+          "productNumber": "37064790",
+          "colorId": "TM"
+        },
+        {
+          "productNumber": "37026000",
+          "colorId": "32"
+        },
+        {
+          "productNumber": "37054089",
+          "colorId": "32"
+        },
+        {
+          "productNumber": "37004451",
+          "colorId": "OR"
+        }
+      ]
+    },
+    {
       "name": "Pointed heel ankle boot",
       "image": "https://media.mango.com/is/image/punto/37037778-99-016?wid=1024",
       "productNumber": "37037778",
@@ -1993,25 +2181,25 @@
       "relatedProductNumbers": []
     },
     {
-      "name": "Cotton blouse with tie neck - Women",
-      "image": "https://media.mango.com/is/image/punto/37086746-02-002?wid=1024",
-      "productNumber": "37086746",
-      "baseCode": "37086746",
-      "globalCode": "37086746",
-      "colorId": "02",
-      "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/blouses/cotton-blouse-with-tie-neck/37086746/02/00",
+      "name": "Long-sleeved maxi dress - Women",
+      "image": "https://media.mango.com/is/image/punto/37057810-05-002?wid=1024",
+      "productNumber": "37057810",
+      "baseCode": "37057810",
+      "globalCode": "37057810",
+      "colorId": "05",
+      "url": "https://shop.mango.com/gb/en/p/women/dresses-and-jumpsuits/long/long-sleeved-maxi-dress/37057810/05/00",
       "relatedProductNumbers": [
         {
-          "productNumber": "37064085",
+          "productNumber": "37006339",
+          "colorId": "50"
+        },
+        {
+          "productNumber": "27041343",
           "colorId": "99"
         },
         {
           "productNumber": "37075872",
           "colorId": "99"
-        },
-        {
-          "productNumber": "37001401",
-          "colorId": "OR"
         }
       ]
     },
@@ -2066,6 +2254,29 @@
         {
           "productNumber": "37055979",
           "colorId": "99"
+        }
+      ]
+    },
+    {
+      "name": "Cotton blouse with tie neck - Women",
+      "image": "https://media.mango.com/is/image/punto/37086746-02-002?wid=1024",
+      "productNumber": "37086746",
+      "baseCode": "37086746",
+      "globalCode": "37086746",
+      "colorId": "02",
+      "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/blouses/cotton-blouse-with-tie-neck/37086746/02/00",
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37064085",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37075872",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37001401",
+          "colorId": "OR"
         }
       ]
     },
@@ -2159,6 +2370,37 @@
       ]
     },
     {
+      "name": "Mid-rise straight jeans - Women",
+      "image": "https://media.mango.com/is/image/punto/37027792-TO-002?wid=1024",
+      "productNumber": "37027792",
+      "baseCode": "37027792",
+      "globalCode": "37027792",
+      "colorId": "TO",
+      "url": "https://shop.mango.com/gb/en/p/women/jeans/straight/mid-rise-straight-jeans/37027792/TO/00",
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37056741",
+          "colorId": "70"
+        },
+        {
+          "productNumber": "37074111",
+          "colorId": "92"
+        },
+        {
+          "productNumber": "37086334",
+          "colorId": "99"
+        },
+        {
+          "productNumber": "37084067",
+          "colorId": "01"
+        },
+        {
+          "productNumber": "37045986",
+          "colorId": "99"
+        }
+      ]
+    },
+    {
       "name": "Rhombus cardigan with buttons",
       "image": "https://media.mango.com/is/image/punto/37075847-94-002?wid=1024",
       "productNumber": "37075847",
@@ -2198,37 +2440,6 @@
       ]
     },
     {
-      "name": "Mid-rise straight jeans - Women",
-      "image": "https://media.mango.com/is/image/punto/37027792-TO-002?wid=1024",
-      "productNumber": "37027792",
-      "baseCode": "37027792",
-      "globalCode": "37027792",
-      "colorId": "TO",
-      "url": "https://shop.mango.com/gb/en/p/women/jeans/straight/mid-rise-straight-jeans/37027792/TO/00",
-      "relatedProductNumbers": [
-        {
-          "productNumber": "37056741",
-          "colorId": "70"
-        },
-        {
-          "productNumber": "37074111",
-          "colorId": "92"
-        },
-        {
-          "productNumber": "37086334",
-          "colorId": "99"
-        },
-        {
-          "productNumber": "37084067",
-          "colorId": "01"
-        },
-        {
-          "productNumber": "37045986",
-          "colorId": "99"
-        }
-      ]
-    },
-    {
       "name": "Faux fur funnel-neck jacket - Women",
       "image": "https://media.mango.com/is/image/punto/37047923-92-002?wid=1024",
       "productNumber": "37047923",
@@ -2256,29 +2467,6 @@
       ]
     },
     {
-      "name": "Argyle-knit vest - Women",
-      "image": "https://media.mango.com/is/image/punto/37085847-94-002?wid=1024",
-      "productNumber": "37085847",
-      "baseCode": "37085847",
-      "globalCode": "37085847",
-      "colorId": "94",
-      "url": "https://shop.mango.com/gb/en/p/women/tops/gilets/argyle-knit-vest/37085847/94/00",
-      "relatedProductNumbers": [
-        {
-          "productNumber": "37014080",
-          "colorId": "02"
-        },
-        {
-          "productNumber": "37027792",
-          "colorId": "TO"
-        },
-        {
-          "productNumber": "37044091",
-          "colorId": "05"
-        }
-      ]
-    },
-    {
       "name": "Cardigan with buttons and lapel collar - Women",
       "image": "https://media.mango.com/is/image/punto/37025854-70-002?wid=1024",
       "productNumber": "37025854",
@@ -2298,6 +2486,29 @@
         {
           "productNumber": "37024798",
           "colorId": "09"
+        }
+      ]
+    },
+    {
+      "name": "Argyle-knit vest - Women",
+      "image": "https://media.mango.com/is/image/punto/37085847-94-002?wid=1024",
+      "productNumber": "37085847",
+      "baseCode": "37085847",
+      "globalCode": "37085847",
+      "colorId": "94",
+      "url": "https://shop.mango.com/gb/en/p/women/tops/gilets/argyle-knit-vest/37085847/94/00",
+      "relatedProductNumbers": [
+        {
+          "productNumber": "37014080",
+          "colorId": "02"
+        },
+        {
+          "productNumber": "37027792",
+          "colorId": "TO"
+        },
+        {
+          "productNumber": "37044091",
+          "colorId": "05"
         }
       ]
     }
@@ -2389,86 +2600,32 @@
     },
     {
       "main": {
-        "name": "Double-breasted wool-blend coat - Women",
-        "image": "https://media.mango.com/is/image/punto/37097786-99-002?wid=1024",
-        "productNumber": "37097786",
-        "baseCode": "37097786",
-        "globalCode": "37097786",
-        "colorId": "99",
-        "url": "https://shop.mango.com/gb/en/p/women/coats/coats/double-breasted-wool-blend-coat/37097786/99/00",
+        "name": "Wool coat, funnel neck with belt - Women",
+        "image": "https://media.mango.com/is/image/punto/37095981-35-002?wid=1024",
+        "productNumber": "37095981",
+        "baseCode": "37095981",
+        "globalCode": "37095981",
+        "colorId": "35",
+        "url": "https://shop.mango.com/gb/en/p/women/coats/coats/wool-coat--funnel-neck-with-belt/37095981/35/00",
         "relatedProductNumbers": [
           {
-            "productNumber": "37007826",
-            "colorId": "50"
-          },
-          {
-            "productNumber": "37012528",
-            "colorId": "TM"
-          },
-          {
-            "productNumber": "37014099",
-            "colorId": "32"
-          },
-          {
-            "productNumber": "37056004",
+            "productNumber": "37086334",
             "colorId": "99"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043364/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "Wide-leg jeans with frayed waistband",
-          "image": "https://media.mango.com/is/image/punto/37012528-TM-900?wid=1024",
-          "productNumber": "37012528",
-          "baseCode": "37012528",
-          "globalCode": "37012528",
-          "colorId": "TM",
-          "url": "https://shop.mango.com/gb/en/p/women/jeans/wide-leg/wide-leg-jeans-with-frayed-waistband/37012528/TM/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042239/"
-        },
-        {
-          "name": "Ballet pump with elastic bow",
-          "image": "https://media.mango.com/is/image/punto/37014099-32-900?wid=1024",
-          "productNumber": "37014099",
-          "baseCode": "37014099",
-          "globalCode": "37014099",
-          "colorId": "32",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/ballet-flats/ballet-pump-with-elastic-bow/37014099/32/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW042538/"
-        }
-      ],
-      "baseCode": "37097786",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
-        "name": "Knitted turtleneck dress - Women",
-        "image": "https://media.mango.com/is/image/punto/37087812-05-002?wid=1024",
-        "productNumber": "37087812",
-        "baseCode": "37087812",
-        "globalCode": "37087812",
-        "colorId": "05",
-        "url": "https://shop.mango.com/gb/en/p/women/dresses-and-jumpsuits/knitwear/knitted-turtleneck-dress/37087812/05/00",
-        "relatedProductNumbers": [
+          },
           {
-            "productNumber": "37064790",
-            "colorId": "TM"
+            "productNumber": "37085999",
+            "colorId": "99"
           },
           {
             "productNumber": "37045980",
             "colorId": "92"
           },
           {
-            "productNumber": "37074097",
+            "productNumber": "37065153",
             "colorId": "32"
-          },
-          {
-            "productNumber": "37004451",
-            "colorId": "OR"
           }
         ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043380/"
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043322/"
       },
       "relatedGlobal": [
         {
@@ -2480,379 +2637,53 @@
           "colorId": "92",
           "url": "https://shop.mango.com/gb/en/p/women/shoes/heeled-shoes/pointed-toe-court-shoe-in-leather-effect/37045980/92/00",
           "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW043368/"
-        },
-        {
-          "name": "Oval shoulder bag",
-          "image": "https://media.mango.com/is/image/punto/37074097-32-900?wid=1024",
-          "productNumber": "37074097",
-          "baseCode": "37074097",
-          "globalCode": "37074097",
-          "colorId": "32",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/crossbody/oval-shoulder-bag/37074097/32/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW042463/"
-        },
-        {
-          "name": "Crystal pendant earrings",
-          "image": "https://media.mango.com/is/image/punto/37004451-OR-900?wid=1024",
-          "productNumber": "37004451",
-          "baseCode": "37004451",
-          "globalCode": "37004451",
-          "colorId": "OR",
-          "url": "https://shop.mango.com/gb/en/p/women/jewellery/earrings/crystal-pendant-earrings/37004451/OR/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW042522/"
         }
       ],
-      "baseCode": "37087812",
+      "baseCode": "37095981",
       "hasJapanRelations": true
     },
     {
       "main": {
-        "name": "Knitted cardigan with flocked detail",
-        "image": "https://media.mango.com/is/image/punto/37037775-32-002?wid=1024",
-        "productNumber": "37037775",
-        "baseCode": "37037775",
-        "globalCode": "37037775",
-        "colorId": "32",
-        "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/cardigans/knitted-cardigan-with-flocked-detail/37037775/32/00",
+        "name": "Houndstooth wool jacket - Women",
+        "image": "https://media.mango.com/is/image/punto/37076726-56-002?wid=1024",
+        "productNumber": "37076726",
+        "baseCode": "37076726",
+        "globalCode": "37076726",
+        "colorId": "56",
+        "url": "https://shop.mango.com/gb/en/p/women/jackets/bombers/houndstooth-wool-jacket/37076726/56/00",
         "relatedProductNumbers": [
           {
-            "productNumber": "37072892",
-            "colorId": "30"
-          },
-          {
-            "productNumber": "37004099",
-            "colorId": "TO"
-          },
-          {
-            "productNumber": "37084440",
-            "colorId": "05"
-          },
-          {
-            "productNumber": "37094104",
-            "colorId": "09"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043422/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "Ballet pump with bow detail",
-          "image": "https://media.mango.com/is/image/punto/37084440-05-900?wid=1024",
-          "productNumber": "37084440",
-          "baseCode": "37084440",
-          "globalCode": "37084440",
-          "colorId": "05",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/ballet-flats/ballet-pump-with-bow-detail/37084440/05/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW042582/"
-        }
-      ],
-      "baseCode": "37037775",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
-        "name": "Fine knit button-up cardigan - Women",
-        "image": "https://media.mango.com/is/image/punto/37027814-96-002?wid=1024",
-        "productNumber": "37027814",
-        "baseCode": "37027814",
-        "globalCode": "37027814",
-        "colorId": "96",
-        "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/cardigans/fine-knit-button-up-cardigan/37027814/96/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "37086746",
-            "colorId": "02"
-          },
-          {
-            "productNumber": "37064085",
-            "colorId": "99"
-          },
-          {
-            "productNumber": "37037778",
-            "colorId": "99"
-          },
-          {
-            "productNumber": "37047795",
-            "colorId": "99"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043377/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "Cotton blouse with tie neck",
-          "image": "https://media.mango.com/is/image/punto/37086746-02-900?wid=1024",
-          "productNumber": "37086746",
-          "baseCode": "37086746",
-          "globalCode": "37086746",
-          "colorId": "02",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/blouses/cotton-blouse-with-tie-neck/37086746/02/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043122/"
-        },
-        {
-          "name": "Straight-fit pleated trousers",
-          "image": "https://media.mango.com/is/image/punto/37064085-99-900?wid=1024",
-          "productNumber": "37064085",
-          "baseCode": "37064085",
-          "globalCode": "37064085",
-          "colorId": "99",
-          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/straight-fit-pleated-trousers/37064085/99/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042440/"
-        }
-      ],
-      "baseCode": "37027814",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
-        "name": "High-neck blazer - Women",
-        "image": "https://media.mango.com/is/image/punto/37097136-30-002?wid=1024",
-        "productNumber": "37097136",
-        "baseCode": "37097136",
-        "globalCode": "37097136",
-        "colorId": "30",
-        "url": "https://shop.mango.com/gb/en/p/women/blazers/fitted/high-neck-blazer/37097136/30/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "37086342",
-            "colorId": "92"
-          },
-          {
-            "productNumber": "37046368",
-            "colorId": "01"
-          },
-          {
-            "productNumber": "37077136",
-            "colorId": "30"
-          },
-          {
-            "productNumber": "27038275",
-            "colorId": "05"
-          },
-          {
-            "productNumber": "37026337",
-            "colorId": "70"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043474/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "Double-breasted wool coat",
-          "image": "https://media.mango.com/is/image/punto/37086342-92-900?wid=1024",
-          "productNumber": "37086342",
-          "baseCode": "37086342",
-          "globalCode": "37086342",
-          "colorId": "92",
-          "url": "https://shop.mango.com/gb/en/p/women/coats/coats/double-breasted-wool-coat/37086342/92/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042886/"
-        },
-        {
-          "name": "Fitted cotton shirt",
-          "image": "https://media.mango.com/is/image/punto/37046368-01-900?wid=1024",
-          "productNumber": "37046368",
-          "baseCode": "37046368",
-          "globalCode": "37046368",
-          "colorId": "01",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-cotton-shirt/37046368/01/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043037/"
-        },
-        {
-          "name": "Straight checked trousers",
-          "image": "https://media.mango.com/is/image/punto/37077136-30-900?wid=1024",
-          "productNumber": "37077136",
-          "baseCode": "37077136",
-          "globalCode": "37077136",
-          "colorId": "30",
-          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/straight-checked-trousers/37077136/30/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043491/"
-        },
-        {
-          "name": "Patent leather bow shoe",
-          "image": "https://media.mango.com/is/image/punto/27038275-05-900?wid=1024",
-          "productNumber": "27038275",
-          "baseCode": "27038275",
-          "globalCode": "27038275",
-          "colorId": "05",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/heeled-shoes/patent-leather-bow-shoe/27038275/05/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW041283/"
-        }
-      ],
-      "baseCode": "37097136",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
-        "name": "Rhombus cardigan with buttons",
-        "image": "https://media.mango.com/is/image/punto/37075847-94-002?wid=1024",
-        "productNumber": "37075847",
-        "baseCode": "37075847",
-        "globalCode": "37075847",
-        "colorId": "94",
-        "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/cardigans/rhombus-cardigan-with-buttons/37075847/94/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "37044466",
-            "colorId": "50"
-          },
-          {
-            "productNumber": "37074779",
-            "colorId": "TO"
-          },
-          {
-            "productNumber": "37034094",
-            "colorId": "01"
-          },
-          {
-            "productNumber": "37072538",
-            "colorId": "32"
-          },
-          {
-            "productNumber": "37004097",
-            "colorId": "TN"
-          },
-          {
-            "productNumber": "37094467",
-            "colorId": "99"
-          },
-          {
-            "productNumber": "37024461",
-            "colorId": "99"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042783/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "Crop shirt with darts",
-          "image": "https://media.mango.com/is/image/punto/37044466-50-900?wid=1024",
-          "productNumber": "37044466",
-          "baseCode": "37044466",
-          "globalCode": "37044466",
-          "colorId": "50",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/crop-shirt-with-darts/37044466/50/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042432/"
-        },
-        {
-          "name": "Leather ballet flats with bow",
-          "image": "https://media.mango.com/is/image/punto/37094467-99-900?wid=1024",
-          "productNumber": "37094467",
-          "baseCode": "37094467",
-          "globalCode": "37094467",
-          "colorId": "99",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/ballet-flats/leather-ballet-flats-with-bow/37094467/99/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW042509/"
-        },
-        {
-          "name": "Bucket bag with buckles",
-          "image": "https://media.mango.com/is/image/punto/37024461-99-900?wid=1024",
-          "productNumber": "37024461",
-          "baseCode": "37024461",
-          "globalCode": "37024461",
-          "colorId": "99",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/shoppers/bucket-bag-with-buckles/37024461/99/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW043054/"
-        }
-      ],
-      "baseCode": "37075847",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
-        "name": "Mid-rise straight jeans - Women",
-        "image": "https://media.mango.com/is/image/punto/37027792-TO-002?wid=1024",
-        "productNumber": "37027792",
-        "baseCode": "37027792",
-        "globalCode": "37027792",
-        "colorId": "TO",
-        "url": "https://shop.mango.com/gb/en/p/women/jeans/straight/mid-rise-straight-jeans/37027792/TO/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "37056741",
+            "productNumber": "37055841",
             "colorId": "70"
           },
           {
-            "productNumber": "37074111",
+            "productNumber": "37091331",
             "colorId": "92"
           },
           {
-            "productNumber": "37086334",
-            "colorId": "99"
-          },
-          {
-            "productNumber": "37084067",
-            "colorId": "01"
-          },
-          {
-            "productNumber": "37045986",
-            "colorId": "99"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043467/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "Straight-fit suit blazer",
-          "image": "https://media.mango.com/is/image/punto/37074111-92-900?wid=1024",
-          "productNumber": "37074111",
-          "baseCode": "37074111",
-          "globalCode": "37074111",
-          "colorId": "92",
-          "url": "https://shop.mango.com/gb/en/p/women/blazers/fitted/straight-fit-suit-blazer/37074111/92/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042185/"
-        },
-        {
-          "name": "Slim-fit poplin shirt",
-          "image": "https://media.mango.com/is/image/punto/37084067-01-900?wid=1024",
-          "productNumber": "37084067",
-          "baseCode": "37084067",
-          "globalCode": "37084067",
-          "colorId": "01",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/slim-fit-poplin-shirt/37084067/01/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042723/"
-        }
-      ],
-      "baseCode": "37027792",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
-        "name": "Argyle-knit vest - Women",
-        "image": "https://media.mango.com/is/image/punto/37085847-94-002?wid=1024",
-        "productNumber": "37085847",
-        "baseCode": "37085847",
-        "globalCode": "37085847",
-        "colorId": "94",
-        "url": "https://shop.mango.com/gb/en/p/women/tops/gilets/argyle-knit-vest/37085847/94/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "37014080",
-            "colorId": "02"
-          },
-          {
-            "productNumber": "37027792",
-            "colorId": "TO"
-          },
-          {
-            "productNumber": "37044091",
+            "productNumber": "37004098",
             "colorId": "05"
+          },
+          {
+            "productNumber": "37085842",
+            "colorId": "99"
           }
         ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042981/"
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043105/"
       },
       "relatedGlobal": [
         {
-          "name": "Cotton and lyocell blend straight shirt",
-          "image": "https://media.mango.com/is/image/punto/37014080-02-900?wid=1024",
-          "productNumber": "37014080",
-          "baseCode": "37014080",
-          "globalCode": "37014080",
-          "colorId": "02",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/cotton-and-lyocell-blend-straight-shirt/37014080/02/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042644/"
+          "name": "Heeled leather shoes",
+          "image": "https://media.mango.com/is/image/punto/37085842-99-900?wid=1024",
+          "productNumber": "37085842",
+          "baseCode": "37085842",
+          "globalCode": "37085842",
+          "colorId": "99",
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/heeled-shoes/heeled-leather-shoes/37085842/99/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW043043/"
         }
       ],
-      "baseCode": "37085847",
+      "baseCode": "37076726",
       "hasJapanRelations": true
     }
   ]
