@@ -60,7 +60,21 @@
     }
     setStatus(`${clock()} ${found}。公開サイトに保存しています…`);
     try {
-      await publish(raw);
+      for (let attempt = 0; ; attempt += 1) {
+        try {
+          await publish(raw);
+          break;
+        } catch (error) {
+          const wait = String(error.message).match(/(\d+)分後/);
+          if (!wait || attempt >= 2) throw error;
+          const seconds = Number(wait[1]) * 60 + 5;
+          for (let left = seconds; left > 0; left -= 1) {
+            setStatus(`${clock()} ${found}。直前に更新されているため、あと${left}秒待ってから自動で保存します…`);
+            await new Promise((resolve) => setTimeout(resolve, 1000));
+          }
+          setStatus(`${clock()} ${found}。公開サイトに保存しています…`);
+        }
+      }
     } catch (error) {
       setStatus(`${clock()} ${found}。画面には表示しましたが、公開サイトへの保存に失敗しました: ${error.message}`, true);
       return;
