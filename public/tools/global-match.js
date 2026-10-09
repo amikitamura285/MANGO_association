@@ -64,5 +64,29 @@
     };
   }
 
-  return { buildGlobalResult, japanProductUrlForGlobal, normalizeComparisonName, normalizeBrandBaseCode };
+  // 過去に表示した商品(main.productNumber)は候補から外し、新しく出てきたものだけを matches に残す。
+  // 同じ収集データ(rawCollectedAt)の再構築では、そのデータを処理する前の履歴を基準にして結果を再現する。
+  function applyDisplayHistory(result, rawCollectedAt, existing) {
+    let baseline = [];
+    if (existing) {
+      if (rawCollectedAt && existing.rawCollectedAt === rawCollectedAt) {
+        baseline = existing.previousDisplayedMainProductNumbers || [];
+      } else {
+        baseline = existing.displayedMainProductNumbers
+          || (existing.matches || []).map((entry) => entry.main && entry.main.productNumber).filter(Boolean);
+      }
+    }
+    const seen = new Set(baseline);
+    const matches = result.matches.filter((entry) => !seen.has(entry.main.productNumber));
+    return {
+      ...result,
+      matches,
+      totalMatches: result.matches.length,
+      rawCollectedAt: rawCollectedAt || null,
+      previousDisplayedMainProductNumbers: baseline,
+      displayedMainProductNumbers: [...new Set([...baseline, ...matches.map((entry) => entry.main.productNumber)])]
+    };
+  }
+
+  return { buildGlobalResult, applyDisplayHistory, japanProductUrlForGlobal, normalizeComparisonName, normalizeBrandBaseCode };
 });

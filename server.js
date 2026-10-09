@@ -2,6 +2,7 @@ const http = require("node:http");
 const fs = require("node:fs/promises");
 const path = require("node:path");
 const { URL } = require("node:url");
+const { applyDisplayHistory } = require("./public/tools/global-match.js");
 
 const ROOT = __dirname;
 const DATA_FILE = path.join(ROOT, "data", "products.json");
@@ -442,11 +443,11 @@ async function crawlGlobalProducts(japanProducts = []) {
     };
   }).filter((entry) => entry.baseCode && entry.hasJapanRelations);
 
-  const result = {
+  const result = applyDisplayHistory({
     updatedAt: new Date().toISOString(),
     products: deduped.map(({ relatedUrls, ...product }) => product).slice(0, 200),
     matches
-  };
+  }, null, await readGlobalProducts());
   await writeGlobalProducts(result);
   await fs.writeFile(path.join(ROOT, "public", "global-products.json"), JSON.stringify(result, null, 2), "utf8");
   return result;

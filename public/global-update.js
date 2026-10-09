@@ -48,12 +48,15 @@
     const candidateCount = Object.values(raw.candidates || {}).filter(Boolean).length;
     const counts = `収集 商品${(raw.products || []).length}件 / 関連候補${candidateCount}件`;
     setStatus(`${clock()} 収集完了(${counts})。日本商品と照合しています…`);
-    const result = GlobalMatch.buildGlobalResult(raw, await loadJapanProducts());
-    const found = `${counts} / 一致${result.matches.length}件`;
-    if (!result.matches.length) {
-      setStatus(`${clock()} ${found}。一致が0件だったため、既存データを守るため反映しませんでした。`, true);
+    const base = GlobalMatch.buildGlobalResult(raw, await loadJapanProducts());
+    if (!base.matches.length) {
+      setStatus(`${clock()} ${counts} / 一致0件。一致が0件だったため、既存データを守るため反映しませんでした。`, true);
       return;
     }
+    const existing = await fetch(`${dataPathPrefix}global-products.json?v=${Date.now()}`, { cache: "no-store" })
+      .then((response) => (response.ok ? response.json() : null)).catch(() => null);
+    const result = GlobalMatch.applyDisplayHistory(base, raw.collectedAt, existing);
+    const found = `${counts} / 一致${base.matches.length}件(うち新規${result.matches.length}件)`;
     renderGlobalData(result);
     if (!RELAY_URL) {
       setStatus(`${clock()} ${found}。公開サイトへの保存先が未設定のため、この画面だけの表示です。`);
