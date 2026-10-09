@@ -33,15 +33,35 @@
         <div class="resize-controls">
           <label class="resize-field"><span>リサイズ方法</span>
             <select id="resizeMode">
+              <optgroup label="SNS用サイズ">
+                <option value="igFeed">Instagram フィード投稿 4:3</option>
+                <option value="igStory">Instagram ストーリーズ 16:9</option>
+                <option value="xSquare">X 正方形 1:1</option>
+              </optgroup>
+              <optgroup label="自由に指定">
               <option value="width">幅を指定(高さは自動)</option>
               <option value="height">高さを指定(幅は自動)</option>
               <option value="long">長辺を指定</option>
               <option value="percent">倍率で指定</option>
               <option value="exact">幅と高さを指定</option>
+              </optgroup>
             </select>
           </label>
-          <label class="resize-field"><span id="resizeLabelA">幅 (px)</span><input id="resizeValueA" type="number" min="1" max="16384" value="800"></label>
+          <label id="resizeWrapA" class="resize-field"><span id="resizeLabelA">幅 (px)</span><input id="resizeValueA" type="number" min="1" max="16384" value="800"></label>
           <label id="resizeWrapB" class="resize-field" hidden><span>高さ (px)</span><input id="resizeValueB" type="number" min="1" max="16384" value="800"></label>
+          <label id="resizeWrapOrient" class="resize-field" hidden><span>向き</span>
+            <select id="resizeOrient">
+              <option value="landscape">横長</option>
+              <option value="portrait">縦長</option>
+            </select>
+          </label>
+          <label id="resizeWrapFit" class="resize-field" hidden><span>縦横比が合わない時</span>
+            <select id="resizeFit">
+              <option value="pad">余白を足して全体を収める</option>
+              <option value="cover">中央で切り抜く</option>
+            </select>
+          </label>
+          <label id="resizeWrapBg" class="resize-field" hidden><span>余白の色</span><input id="resizeBg" type="color" value="#ffffff"></label>
           <label class="resize-field"><span>形式</span>
             <select id="resizeFormat">
               <option value="original">元の形式のまま</option>
@@ -173,6 +193,6 @@
   <script src="tools/global-match.js?v=20261009-3"></script>
   <script src="app.js?v=20261009-4"></script>
   <script src="global-update.js?v=20261009-7"></script>
-  <script src="resize.js?v=20261009-1"></script>
+  <script src="resize.js?v=20261009-2"></script>
 </body>
 </html>

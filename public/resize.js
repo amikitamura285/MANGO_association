@@ -9,7 +9,14 @@
   const valueA = $("resizeValueA");
   const valueB = $("resizeValueB");
   const labelA = $("resizeLabelA");
+  const wrapA = $("resizeWrapA");
   const wrapB = $("resizeWrapB");
+  const wrapOrient = $("resizeWrapOrient");
+  const wrapFit = $("resizeWrapFit");
+  const wrapBg = $("resizeWrapBg");
+  const orientSelect = $("resizeOrient");
+  const fitSelect = $("resizeFit");
+  const bgInput = $("resizeBg");
   const formatSelect = $("resizeFormat");
   const quality = $("resizeQuality");
   const qualityValue = $("resizeQualityValue");
@@ -26,6 +33,11 @@
     percent: { label: "倍率 (%)", unit: 50 },
     exact: { label: "幅 (px)", unit: 800 }
   };
+  const PRESETS = {
+    igFeed: { long: 1440, short: 1080, orient: "landscape" },
+    igStory: { long: 1920, short: 1080, orient: "portrait" },
+    xSquare: { long: 1080, short: 1080, orient: "" }
+  };
   const TYPES = {
     jpeg: { mime: "image/jpeg", ext: "jpg" },
     png: { mime: "image/png", ext: "png" },
@@ -40,6 +52,11 @@
   const formatBytes = (bytes) => bytes >= 1048576 ? `${(bytes / 1048576).toFixed(1)} MB` : `${Math.max(1, Math.round(bytes / 1024))} KB`;
 
   function targetSize(width, height) {
+    const preset = PRESETS[modeSelect.value];
+    if (preset) {
+      const portrait = preset.orient && orientSelect.value === "portrait";
+      return portrait ? [preset.short, preset.long] : [preset.long, preset.short];
+    }
     const a = Number(valueA.value) || 0;
     const b = Number(valueB.value) || 0;
     let w;
@@ -81,7 +98,19 @@
       context.fillRect(0, 0, width, height);
     }
     context.imageSmoothingQuality = "high";
-    context.drawImage(item.bitmap, 0, 0, width, height);
+    if (PRESETS[modeSelect.value]) {
+      const cover = fitSelect.value === "cover";
+      const scale = (cover ? Math.max : Math.min)(width / item.bitmap.width, height / item.bitmap.height);
+      const drawWidth = item.bitmap.width * scale;
+      const drawHeight = item.bitmap.height * scale;
+      if (!cover || type.mime !== "image/jpeg") {
+        context.fillStyle = bgInput.value;
+        context.fillRect(0, 0, width, height);
+      }
+      context.drawImage(item.bitmap, (width - drawWidth) / 2, (height - drawHeight) / 2, drawWidth, drawHeight);
+    } else {
+      context.drawImage(item.bitmap, 0, 0, width, height);
+    }
     const blob = await canvasBlob(canvas, type);
     if (item.url) URL.revokeObjectURL(item.url);
     item.result = blob ? { blob, width, height, name: outputName(item.file, type) } : null;
@@ -166,10 +195,19 @@
   }
 
   function applyMode() {
+    const preset = PRESETS[modeSelect.value];
+    wrapA.hidden = Boolean(preset);
+    wrapB.hidden = modeSelect.value !== "exact";
+    wrapFit.hidden = !preset;
+    wrapBg.hidden = !preset || fitSelect.value === "cover";
+    wrapOrient.hidden = !preset || !preset.orient;
+    if (preset) {
+      if (preset.orient) orientSelect.value = preset.orient;
+      return;
+    }
     const mode = MODES[modeSelect.value];
     labelA.textContent = mode.label;
     valueA.value = mode.unit;
-    wrapB.hidden = modeSelect.value !== "exact";
   }
 
   function crc32(bytes) {
@@ -276,7 +314,8 @@
   dropzone.addEventListener("drop", (event) => addFiles(event.dataTransfer.files));
 
   modeSelect.addEventListener("change", () => { applyMode(); schedule(); });
-  [valueA, valueB, formatSelect].forEach((control) => control.addEventListener("input", schedule));
+  fitSelect.addEventListener("change", () => { wrapBg.hidden = fitSelect.value === "cover"; });
+  [valueA, valueB, formatSelect, orientSelect, fitSelect, bgInput].forEach((control) => control.addEventListener("input", schedule));
   quality.addEventListener("input", () => { qualityValue.textContent = quality.value; schedule(); });
 
   applyMode();
