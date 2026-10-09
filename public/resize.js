@@ -16,7 +16,7 @@
   const grid = $("resizeGrid");
   const emptyNote = $("resizeEmpty");
   const summary = $("resizeSummary");
-  const zipButton = $("resizeZip");
+  const allButton = $("resizeAll");
   const clearButton = $("resizeClear");
   const snsButtons = [...root.querySelectorAll("[data-preset]")];
   const editor = $("resizeEditor");
@@ -25,10 +25,13 @@
   const editorThumbs = $("resizeEditorThumbs");
   const editorZoom = $("resizeEditorZoom");
   const editorDownload = $("resizeEditorDownload");
-  const editorZip = $("resizeEditorZip");
+  const editorAll = $("resizeEditorAll");
   const editorReset = $("resizeEditorReset");
   const editorClose = $("resizeEditorClose");
   const editorStatus = $("resizeEditorStatus");
+  const editorNote = $("resizeEditorNote");
+  const presetNote = editorNote.textContent;
+  const FREE_NOTE = "ドラッグで位置、スライダーまたはホイールで拡大を調整できます。この枠のとおりに切り抜かれます。";
 
   const MODES = {
     width: { label: "幅 (px)", unit: 800 },
@@ -106,7 +109,10 @@
   async function resizeItem(item) {
     if (!item.bitmap) return;
     const [width, height] = targetSize(item.bitmap.width, item.bitmap.height);
-    const output = await renderBlob(item, width, height, 0, 0, item.bitmap.width, item.bitmap.height);
+    const region = modeSelect.value === "exact" || item.crops.free ? cropRegion(item, "free") : null;
+    const output = region
+      ? await renderBlob(item, width, height, region.sx, region.sy, region.vw, region.vh)
+      : await renderBlob(item, width, height, 0, 0, item.bitmap.width, item.bitmap.height);
     if (item.url) URL.revokeObjectURL(item.url);
     item.result = output ? { blob: output.blob, width, height, name: `${baseName(item.file)}_resized.${output.type.ext}` } : null;
     item.url = output ? URL.createObjectURL(output.blob) : "";
@@ -122,7 +128,7 @@
   function render() {
     grid.replaceChildren();
     emptyNote.hidden = items.length > 0;
-    zipButton.disabled = !items.some((item) => item.result);
+    allButton.disabled = !items.some((item) => item.result);
     clearButton.disabled = !items.length;
     const usable = items.some((item) => item.bitmap);
     snsButtons.forEach((button) => { button.disabled = !usable; });
@@ -150,6 +156,10 @@
         link.href = item.url;
         link.download = item.result.name;
         card.appendChild(link);
+        const adjust = el("button", "resize-adjust", "位置を調整");
+        adjust.type = "button";
+        adjust.addEventListener("click", () => openEditor("free", editorItems().indexOf(item)));
+        card.appendChild(adjust);
       } else {
         card.appendChild(el("p", "resize-meta", "処理中…"));
       }
@@ -176,10 +186,22 @@
     timer = setTimeout(() => { render(); processAll(); }, 250);
   }
 
+  function clearItems() {
+    runId += 1;
+    items.forEach((item) => {
+      if (item.url) URL.revokeObjectURL(item.url);
+      if (item.sourceUrl) URL.revokeObjectURL(item.sourceUrl);
+      if (item.bitmap) item.bitmap.close();
+    });
+    items = [];
+  }
+
   async function addFiles(fileList) {
     const files = [...fileList].filter((file) => file.type.startsWith("image/") || /\.(jpe?g|png|webp|gif|bmp|avif)$/i.test(file.name));
+    if (!files.length) return;
+    clearItems();
     for (const file of files) {
-      const item = { file, bitmap: null, result: null, url: "", error: "", crops: {}, sourceUrl: "" };
+      const item = { file, bitmap: null, result: null, url: "", error: "", crops: {}, box: undefined, sourceUrl: "" };
       try {
         item.bitmap = await createImageBitmap(file);
       } catch (error) {
@@ -199,13 +221,80 @@
   }
 
   // ---- SNS用: 余白なしで切り抜き(位置とズームを調整できる) ----
+  // 背景(白・透明・単色)の余白を除いた、被写体の範囲を元画像の座標で返す。判定できなければ null
+  function detectContent(bitmap) {
+    const scale = Math.min(1, 300 / Math.max(bitmap.width, bitmap.height));
+    const cw = Math.max(1, Math.round(bitmap.width * scale));
+    const ch = Math.max(1, Math.round(bitmap.height * scale));
+    const canvas = document.createElement("canvas");
+    canvas.width = cw;
+    canvas.height = ch;
+    const context = canvas.getContext("2d", { willReadFrequently: true });
+    context.drawImage(bitmap, 0, 0, cw, ch);
+    const data = context.getImageData(0, 0, cw, ch).data;
+    const at = (x, y) => (y * cw + x) * 4;
+    const corners = [at(0, 0), at(cw - 1, 0), at(0, ch - 1), at(cw - 1, ch - 1)].map((i) => [data[i], data[i + 1], data[i + 2], data[i + 3]]);
+    const transparent = corners.reduce((sum, c) => sum + c[3], 0) / 4 < 128;
+    const median = (channel) => corners.map((c) => c[channel]).sort((a, b) => a - b)[1];
+    const bg = [median(0), median(1), median(2)];
+    if (!transparent) {
+      const spread = Math.max(...[0, 1, 2].map((k) => Math.max(...corners.map((c) => c[k])) - Math.min(...corners.map((c) => c[k]))));
+      if (spread > 40) return null;
+    }
+    const rows = new Array(ch).fill(0);
+    const cols = new Array(cw).fill(0);
+    for (let y = 0; y < ch; y += 1) {
+      for (let x = 0; x < cw; x += 1) {
+        const i = at(x, y);
+        const isContent = transparent
+          ? data[i + 3] > 32
+          : data[i + 3] > 32 && Math.max(Math.abs(data[i] - bg[0]), Math.abs(data[i + 1] - bg[1]), Math.abs(data[i + 2] - bg[2])) > 30;
+        if (isContent) { rows[y] += 1; cols[x] += 1; }
+      }
+    }
+    const first = (counts, need) => counts.findIndex((n) => n >= need);
+    const last = (counts, need) => counts.length - 1 - [...counts].reverse().findIndex((n) => n >= need);
+    const top = first(rows, Math.max(1, cw * 0.005));
+    const left = first(cols, Math.max(1, ch * 0.005));
+    if (top < 0 || left < 0) return null;
+    const bottom = last(rows, Math.max(1, cw * 0.005));
+    const right = last(cols, Math.max(1, ch * 0.005));
+    const box = {
+      x: left / scale,
+      y: top / scale,
+      w: (right - left + 1) / scale,
+      h: (bottom - top + 1) / scale
+    };
+    if (box.w < bitmap.width * 0.08 || box.h < bitmap.height * 0.08) return null;
+    if (box.w > bitmap.width * 0.97 && box.h > bitmap.height * 0.97) return null;
+    return box;
+  }
+
+  function sizeFor(item, key) {
+    if (key !== "free") return PRESETS[key];
+    const [width, height] = targetSize(item.bitmap.width, item.bitmap.height);
+    return { label: "フリーサイズ", width, height };
+  }
+
   function cropFor(item, key) {
-    if (!item.crops[key]) item.crops[key] = { zoom: 1, x: item.bitmap.width / 2, y: item.bitmap.height / 2 };
+    if (!item.crops[key]) {
+      const preset = sizeFor(item, key);
+      const crop = { zoom: 1, x: item.bitmap.width / 2, y: item.bitmap.height / 2 };
+      if (key !== "free" && item.box === undefined) item.box = detectContent(item.bitmap);
+      if (key !== "free" && item.box) {
+        const regionWidth = Math.min(item.box.w, (item.box.h * preset.width) / preset.height);
+        const cover = Math.max(preset.width / item.bitmap.width, preset.height / item.bitmap.height);
+        crop.zoom = clamp(preset.width / regionWidth / cover, 1, 5);
+        crop.x = item.box.x + item.box.w / 2;
+        crop.y = item.box.y + item.box.h / 2;
+      }
+      item.crops[key] = crop;
+    }
     return item.crops[key];
   }
 
   function cropRegion(item, key) {
-    const preset = PRESETS[key];
+    const preset = sizeFor(item, key);
     const crop = cropFor(item, key);
     const scale = Math.max(preset.width / item.bitmap.width, preset.height / item.bitmap.height) * crop.zoom;
     const vw = preset.width / scale;
@@ -216,10 +305,11 @@
   }
 
   async function cropToBlob(item, key) {
-    const preset = PRESETS[key];
+    const preset = sizeFor(item, key);
     const region = cropRegion(item, key);
     const output = await renderBlob(item, preset.width, preset.height, region.sx, region.sy, region.vw, region.vh);
-    return output ? { name: `${baseName(item.file)}_${key}_${preset.width}x${preset.height}.${output.type.ext}`, blob: output.blob } : null;
+    const name = key === "free" ? `${baseName(item.file)}_resized.${output?.type.ext}` : `${baseName(item.file)}_${key}_${preset.width}x${preset.height}.${output?.type.ext}`;
+    return output ? { name, blob: output.blob } : null;
   }
 
   const editorItems = () => items.filter((item) => item.bitmap);
@@ -227,7 +317,7 @@
 
   function drawEditor() {
     const item = editorItem();
-    const preset = PRESETS[editing.key];
+    const preset = sizeFor(item, editing.key);
     const ratio = Math.min(Math.min(480, window.innerWidth * 0.8) / preset.width, Math.min(window.innerHeight * 0.5, 520) / preset.height);
     previewWidth = Math.round(preset.width * ratio);
     const previewHeight = Math.round(preset.height * ratio);
@@ -244,10 +334,11 @@
     editorThumbs.querySelectorAll("button").forEach((button, index) => button.classList.toggle("is-active", index === editing.index));
   }
 
-  function openEditor(key) {
+  function openEditor(key, startIndex = 0) {
     const list = editorItems();
     if (!list.length) return;
-    editing = { key, index: 0 };
+    editing = { key, index: Math.max(0, startIndex) };
+    editorNote.textContent = key === "free" ? FREE_NOTE : presetNote;
     editorThumbs.replaceChildren();
     list.forEach((item, index) => {
       if (!item.sourceUrl) item.sourceUrl = URL.createObjectURL(item.file);
@@ -261,81 +352,18 @@
       editorThumbs.appendChild(button);
     });
     editorThumbs.hidden = list.length < 2;
-    editorZip.hidden = list.length < 2;
+    editorAll.hidden = list.length < 2;
     editorStatus.textContent = "";
     editor.hidden = false;
     drawEditor();
   }
 
   function closeEditor() {
+    const wasFree = editing && editing.key === "free";
     editor.hidden = true;
     editing = null;
     dragging = null;
-  }
-
-  // ---- ZIP ----
-  const crcTable = (() => {
-    const table = new Uint32Array(256);
-    for (let n = 0; n < 256; n += 1) {
-      let c = n;
-      for (let k = 0; k < 8; k += 1) c = c & 1 ? 0xedb88320 ^ (c >>> 1) : c >>> 1;
-      table[n] = c >>> 0;
-    }
-    return table;
-  })();
-
-  function crc32(bytes) {
-    let crc = 0xffffffff;
-    for (let i = 0; i < bytes.length; i += 1) crc = crcTable[(crc ^ bytes[i]) & 0xff] ^ (crc >>> 8);
-    return (crc ^ 0xffffffff) >>> 0;
-  }
-
-  async function buildZip(entries) {
-    const encoder = new TextEncoder();
-    const now = new Date();
-    const dosTime = (now.getHours() << 11) | (now.getMinutes() << 5) | (now.getSeconds() >> 1);
-    const dosDate = ((now.getFullYear() - 1980) << 9) | ((now.getMonth() + 1) << 5) | now.getDate();
-    const parts = [];
-    const central = [];
-    let offset = 0;
-    for (const entry of entries) {
-      const data = new Uint8Array(await entry.blob.arrayBuffer());
-      const name = encoder.encode(entry.name);
-      const crc = crc32(data);
-      const local = new DataView(new ArrayBuffer(30));
-      local.setUint32(0, 0x04034b50, true);
-      local.setUint16(4, 20, true);
-      local.setUint16(6, 0x0800, true);
-      local.setUint16(10, dosTime, true);
-      local.setUint16(12, dosDate, true);
-      local.setUint32(14, crc, true);
-      local.setUint32(18, data.length, true);
-      local.setUint32(22, data.length, true);
-      local.setUint16(26, name.length, true);
-      parts.push(local.buffer, name, data);
-      const header = new DataView(new ArrayBuffer(46));
-      header.setUint32(0, 0x02014b50, true);
-      header.setUint16(4, 20, true);
-      header.setUint16(6, 20, true);
-      header.setUint16(8, 0x0800, true);
-      header.setUint16(12, dosTime, true);
-      header.setUint16(14, dosDate, true);
-      header.setUint32(16, crc, true);
-      header.setUint32(20, data.length, true);
-      header.setUint32(24, data.length, true);
-      header.setUint16(28, name.length, true);
-      header.setUint32(42, offset, true);
-      central.push(header.buffer, name);
-      offset += 30 + name.length + data.length;
-    }
-    const centralSize = central.reduce((sum, part) => sum + part.byteLength, 0);
-    const end = new DataView(new ArrayBuffer(22));
-    end.setUint32(0, 0x06054b50, true);
-    end.setUint16(8, entries.length, true);
-    end.setUint16(10, entries.length, true);
-    end.setUint32(12, centralSize, true);
-    end.setUint32(16, offset, true);
-    return new Blob([...parts, ...central, end.buffer], { type: "application/zip" });
+    if (wasFree) processAll();
   }
 
   function download(blob, name) {
@@ -358,12 +386,19 @@
     });
   }
 
-  zipButton.addEventListener("click", async () => {
+  async function downloadEach(entries) {
+    for (let i = 0; i < entries.length; i += 1) {
+      if (i) await new Promise((resolve) => setTimeout(resolve, 400));
+      download(entries[i].blob, entries[i].name);
+    }
+  }
+
+  allButton.addEventListener("click", async () => {
     const entries = uniqueNames(items.filter((item) => item.result).map((item) => ({ name: item.result.name, blob: item.result.blob })));
     if (!entries.length) return;
-    zipButton.disabled = true;
-    download(await buildZip(entries), "resized-images.zip");
-    zipButton.disabled = false;
+    allButton.disabled = true;
+    await downloadEach(entries);
+    allButton.disabled = false;
   });
 
   // ---- イベント ----
@@ -375,18 +410,17 @@
     editorStatus.textContent = output ? `${output.name} をダウンロードしました。` : "作成できませんでした。";
   });
 
-  editorZip.addEventListener("click", async () => {
+  editorAll.addEventListener("click", async () => {
     const key = editing.key;
-    const preset = PRESETS[key];
-    editorZip.disabled = true;
+    editorAll.disabled = true;
     const entries = [];
     for (const item of editorItems()) {
       const output = await cropToBlob(item, key);
       if (output) entries.push(output);
     }
-    download(await buildZip(uniqueNames(entries)), `${key}_${preset.width}x${preset.height}.zip`);
-    editorStatus.textContent = `${entries.length}件をZIPでダウンロードしました。`;
-    editorZip.disabled = false;
+    await downloadEach(uniqueNames(entries));
+    editorStatus.textContent = `${entries.length}件をダウンロードしました。`;
+    editorAll.disabled = false;
   });
 
   editorReset.addEventListener("click", () => {
@@ -424,13 +458,7 @@
   ["pointerup", "pointercancel"].forEach((name) => editorCanvas.addEventListener(name, () => { dragging = null; }));
 
   clearButton.addEventListener("click", () => {
-    runId += 1;
-    items.forEach((item) => {
-      if (item.url) URL.revokeObjectURL(item.url);
-      if (item.sourceUrl) URL.revokeObjectURL(item.sourceUrl);
-      if (item.bitmap) item.bitmap.close();
-    });
-    items = [];
+    clearItems();
     fileInput.value = "";
     render();
   });

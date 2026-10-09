@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MANGO FINDER</title>
   <link rel="icon" type="image/png" href="../favicon.png">
-  <link rel="stylesheet" href="../styles.css?v=20261009-6">
+  <link rel="stylesheet" href="../styles.css?v=20261009-9">
 </head>
 <body>
   <header class="topbar">
@@ -65,7 +65,7 @@
           <label id="resizeWrapB" class="resize-field" hidden><span>高さ (px)</span><input id="resizeValueB" type="number" min="1" max="16384" value="800"></label>
         </div>
         <div class="resize-actions">
-          <button id="resizeZip" type="button" disabled>まとめてダウンロード(ZIP)</button>
+          <button id="resizeAll" type="button" disabled>すべてダウンロード</button>
           <button id="resizeClear" type="button" class="is-secondary" disabled>クリア</button>
           <span id="resizeSummary" class="resize-summary"></span>
         </div>
@@ -75,13 +75,13 @@
       <div id="resizeEditor" class="resize-editor" hidden>
         <div class="resize-editor-box" role="dialog" aria-modal="true" aria-labelledby="resizeEditorTitle">
           <h3 id="resizeEditorTitle" class="resize-editor-title"></h3>
-          <p class="resize-note">ドラッグで位置、スライダーまたはホイールで拡大を調整できます。余白は作らず、この枠のとおりに切り抜かれます。</p>
+          <p id="resizeEditorNote" class="resize-note">ドラッグで位置、スライダーまたはホイールで拡大を調整できます。背景の余白は自動で除いて枠いっぱいに合わせています。この枠のとおりに切り抜かれます。</p>
           <div id="resizeEditorThumbs" class="resize-editor-thumbs" hidden></div>
           <canvas id="resizeEditorCanvas" class="resize-editor-canvas"></canvas>
           <label class="resize-field resize-editor-zoom"><span>拡大</span><input id="resizeEditorZoom" type="range" min="100" max="500" value="100"></label>
           <div class="resize-actions">
             <button id="resizeEditorDownload" type="button">この画像をダウンロード</button>
-            <button id="resizeEditorZip" type="button" hidden>全画像をZIPでダウンロード</button>
+            <button id="resizeEditorAll" type="button" hidden>全画像をダウンロード</button>
             <button id="resizeEditorReset" type="button" class="is-secondary">位置を戻す</button>
             <button id="resizeEditorClose" type="button" class="is-secondary">閉じる</button>
           </div>
@@ -201,6 +201,6 @@
   <script src="../tools/global-match.js?v=20261009-3"></script>
   <script src="../app.js?v=20261009-4"></script>
   <script src="../global-update.js?v=20261009-7"></script>
-  <script src="../resize.js?v=20261009-5"></script>
+  <script src="../resize.js?v=20261009-9"></script>
 </body>
 </html>
