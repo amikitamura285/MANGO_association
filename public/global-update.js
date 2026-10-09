@@ -31,11 +31,11 @@
     throw new Error("日本商品データを読み込めませんでした。");
   }
 
-  async function publish(raw, keep) {
+  async function publish(raw) {
     const response = await fetch(RELAY_URL, {
       method: "POST",
       headers: { "content-type": "text/plain;charset=utf-8" },
-      body: JSON.stringify({ raw, keep })
+      body: JSON.stringify({ raw })
     });
     const body = await response.json().catch(() => ({}));
     if (!response.ok || !body.ok) throw new Error(body.error || `公開サイトへの保存に失敗しました (${response.status})`);
@@ -60,7 +60,7 @@
     }
     setStatus(`${clock()} ${found}。公開サイトに保存しています…`);
     try {
-      await publish(raw, result.matches.map((entry) => entry.main.productNumber));
+      await publish(raw);
     } catch (error) {
       setStatus(`${clock()} ${found}。画面には表示しましたが、公開サイトへの保存に失敗しました: ${error.message}`, true);
       return;

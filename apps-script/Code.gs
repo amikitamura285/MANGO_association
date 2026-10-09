@@ -39,13 +39,6 @@ function setChecked_(parsed) {
   return { ok: true, checked: list.slice(-MAX_CHECKED) };
 }
 
-function pruneChecked_(keep) {
-  if (!Array.isArray(keep)) return;
-  var allowed = {};
-  keep.slice(0, 2000).forEach(function (code) { if (code8_(code)) allowed[code] = true; });
-  writeChecked_(readChecked_().filter(function (code) { return allowed[code]; }));
-}
-
 function doPost(e) {
   var lock = LockService.getScriptLock();
   if (!lock.tryLock(20000)) return json_({ ok: false, error: "混み合っています。少し待ってからもう一度お試しください。" });
@@ -214,6 +207,5 @@ function handle_(e) {
   if (save.getResponseCode() !== 200 && save.getResponseCode() !== 201) {
     fail_("GitHubへの保存に失敗しました(" + save.getResponseCode() + ")。");
   }
-  pruneChecked_(parsed.keep);
   return { ok: true, products: raw.products.length };
 }
