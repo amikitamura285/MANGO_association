@@ -1,0 +1,23 @@
+name: Probe global site access
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --no-save playwright
+      - run: npx playwright install --with-deps chromium
+      - name: Open the global product list
+        run: node scripts/probe-global.js page
+      - name: Call the product API from the page
+        if: always()
+        run: node scripts/probe-global.js api
