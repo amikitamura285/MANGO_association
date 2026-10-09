@@ -11,45 +11,57 @@
     return match ? match[1] : "";
   }
 
-  function japanProductUrlForGlobal(globalProduct, japanProducts) {
+  function normalizeJapaneseName(value) {
+    return String(value || "").normalize("NFKC").toLowerCase().replace(/\s+/g, "");
+  }
+
+  function japanItemForGlobal(globalProduct, japanProducts) {
     const globalCode = normalizeBrandBaseCode(globalProduct.baseCode || globalProduct.productNumber);
     const normalizeColor = (value) => String(value || "").toUpperCase().replace(/^0+(?=\d)/, "");
     const globalColor = normalizeColor(globalProduct.colorId);
-    if (!globalCode || !globalColor) return "";
-    const match = japanProducts.find((item) => {
+    if (!globalCode || !globalColor) return null;
+    return japanProducts.find((item) => {
       const brandMatch = String(item.brandItemNumber || "").match(/(\d{8})\s+([A-Z0-9]+)/i);
       if (!brandMatch) return false;
       const itemCode = brandMatch[1];
       const sameCode = itemCode === globalCode || itemCode.slice(-7) === globalCode.slice(-7);
       return sameCode && normalizeColor(brandMatch[2]) === globalColor;
-    });
-    return match?.url || "";
+    }) || null;
+  }
+
+  function japanProductUrlForGlobal(globalProduct, japanProducts) {
+    return japanItemForGlobal(globalProduct, japanProducts)?.url || "";
+  }
+
+  // 日本サイトの商品ページで、すでに互いを関連商品として表示しているか
+  function relatedOnJapan(itemA, itemB) {
+    if (!itemA || !itemB) return false;
+    const nameA = normalizeJapaneseName(itemA.name);
+    const nameB = normalizeJapaneseName(itemB.name);
+    const listed = (item, name) => name && (item.relatedNames || []).some((related) => normalizeJapaneseName(related) === name);
+    return listed(itemA, nameB) || listed(itemB, nameA);
   }
 
   // raw: { products: [...], candidates: { "<productNumber>:<colorId>": product | null } }
   function buildGlobalResult(raw, japanProducts, now = new Date()) {
     const candidates = raw.candidates || {};
-    const registeredNames = new Set();
-    for (const item of japanProducts) {
-      for (const name of item.relatedNames || []) registeredNames.add(normalizeComparisonName(name));
-    }
-
     const deduped = (raw.products || []).filter((product, index, array) =>
       product.baseCode && array.findIndex((entry) => entry.baseCode === product.baseCode) === index);
 
     const matches = deduped.map((globalProduct) => {
+      const mainItem = japanItemForGlobal(globalProduct, japanProducts);
+      const japanUrl = mainItem?.url || "";
       const related = (globalProduct.relatedProductNumbers || [])
         .map((entry) => candidates[`${entry.productNumber}:${entry.colorId}`])
         .filter(Boolean)
         .filter((candidate) => candidate.baseCode !== globalProduct.baseCode || candidate.colorId !== globalProduct.colorId)
-        .filter((candidate) => !registeredNames.has(normalizeComparisonName(candidate.name)))
         .filter((candidate, index, list) => list.findIndex((entry) => entry.baseCode === candidate.baseCode) === index)
-        .map(({ relatedUrls, relatedProductNumbers, ...candidate }) => ({
-          ...candidate,
-          japanUrl: japanProductUrlForGlobal(candidate, japanProducts)
-        }))
-        .filter((candidate) => candidate.japanUrl);
-      const japanUrl = japanProductUrlForGlobal(globalProduct, japanProducts);
+        .map(({ relatedUrls, relatedProductNumbers, ...candidate }) => {
+          const candidateItem = japanItemForGlobal(candidate, japanProducts);
+          return { ...candidate, japanUrl: candidateItem?.url || "", alreadyRelated: relatedOnJapan(mainItem, candidateItem) };
+        })
+        .filter((candidate) => candidate.japanUrl && !candidate.alreadyRelated)
+        .map(({ alreadyRelated, ...candidate }) => candidate);
       return {
         main: { ...globalProduct, japanUrl },
         relatedGlobal: related,
