@@ -38,7 +38,7 @@
     exact: { label: "幅 (px)", unit: 800 }
   };
   const PRESETS = {
-    igFeed: { label: "Instagram フィード投稿 4:3", width: 1440, height: 1080 },
+    igFeed: { label: "Instagram フィード投稿 縦長 4:3", width: 1080, height: 1440 },
     igStory: { label: "Instagram ストーリーズ", width: 1080, height: 1920 },
     xSquare: { label: "X 正方形 1:1", width: 1080, height: 1080 }
   };
