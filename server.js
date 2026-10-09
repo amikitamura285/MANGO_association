@@ -311,7 +311,8 @@ function normalizeBrandBaseCode(value) {
 
 function japanProductUrlForGlobal(globalProduct, japanProducts) {
   const globalCode = normalizeBrandBaseCode(globalProduct.baseCode || globalProduct.productNumber);
-  const globalColor = String(globalProduct.colorId || "").toUpperCase();
+  const normalizeColor = (value) => String(value || "").toUpperCase().replace(/^0+(?=\d)/, "");
+  const globalColor = normalizeColor(globalProduct.colorId);
   if (!globalCode || !globalColor) return "";
   const match = (japanProducts || []).find((item) => {
     const brandMatch = String(item.brandItemNumber || "").match(/(\d{8})\s+([A-Z0-9]+)/i);
@@ -319,7 +320,7 @@ function japanProductUrlForGlobal(globalProduct, japanProducts) {
     const sameCode = itemCode === globalCode || itemCode.slice(-7) === globalCode.slice(-7);
     return brandMatch
       && sameCode
-      && brandMatch[2].toUpperCase() === globalColor;
+      && normalizeColor(brandMatch[2]) === globalColor;
   });
   return match?.url || "";
 }
