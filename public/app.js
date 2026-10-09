@@ -139,6 +139,7 @@ function loadProducts() {
       const groups = buildProductGroups(data.products || []);
       state.products = data.products || [];
       state.groups = groups;
+      state.productsUpdatedAt = data.updatedAt || "";
       renderMainProducts();
       $("#updatedAt").textContent = data.updatedAt ? new Intl.DateTimeFormat("ja-JP", { month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit" }).format(new Date(data.updatedAt)) : "—";
       $("#scannedCount").textContent = data.scanned ? `${data.scanned} ITEMS SCANNED` : "";
@@ -153,13 +154,46 @@ function loadProducts() {
 
 const refreshButton = $("#productRefresh");
 if (refreshButton) {
+  const REFRESH_POLL_MS = 30000;
+  const REFRESH_TIMEOUT_MS = 25 * 60 * 1000;
+  const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+  const fetchUpdatedAt = async () => {
+    try {
+      const response = await fetch(`${dataPathPrefix}products.json?v=${Date.now()}`, { cache: "no-store" });
+      return (await response.json()).updatedAt || "";
+    } catch (error) {
+      return "";
+    }
+  };
+  const setRefreshLabel = (text) => { refreshButton.textContent = text; };
+
   refreshButton.addEventListener("click", async () => {
     refreshButton.disabled = true;
-    refreshButton.textContent = "読み込み中…";
-    const ok = await loadProducts();
-    refreshButton.textContent = ok ? "UPDATED" : "失敗しました";
+    setRefreshLabel("開始中…");
+    let label = "UPDATED";
+    try {
+      const before = state.productsUpdatedAt || await fetchUpdatedAt();
+      const response = await fetch(GLOBAL_RELAY_URL, { method: "POST", headers: { "content-type": "text/plain;charset=utf-8" }, body: JSON.stringify({ action: "crawl" }) });
+      const body = await response.json();
+      if (!body.ok) throw new Error(body.error || "更新を開始できませんでした。");
+      const startedAt = Date.now();
+      let updated = false;
+      while (Date.now() - startedAt < REFRESH_TIMEOUT_MS) {
+        const minutes = Math.floor((Date.now() - startedAt) / 60000);
+        setRefreshLabel(`更新中 ${minutes}分`);
+        await sleep(REFRESH_POLL_MS);
+        const latest = await fetchUpdatedAt();
+        if (latest && latest !== before) { updated = true; break; }
+      }
+      if (!updated) throw new Error("更新が終わるまで時間がかかっています。しばらくしてからもう一度UPDATEを押してください。");
+      await loadProducts();
+    } catch (error) {
+      label = "失敗しました";
+      alert(error.message);
+    }
+    setRefreshLabel(label);
     setTimeout(() => {
-      refreshButton.textContent = "UPDATE";
+      setRefreshLabel("UPDATE");
       refreshButton.disabled = false;
     }, 2000);
   });

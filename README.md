@@ -75,7 +75,7 @@ GitHubリポジトリにこのフォルダーをPushし、リポジトリの `Se
 
 ### 中継サーバー(Google Apps Script)のセットアップ(最初の1回、インストール不要)
 
-1. GitHubで Fine-grained token を作成します(Repository access は `MANGO_association` のみ、Permissions は Contents: Read and write)。トークンは他人に見せず、手順3以外には貼らないでください。
+1. GitHubで Fine-grained token を作成します(Repository access は `MANGO_association` のみ、Permissions は Contents: Read and write と Actions: Read and write。後者は関連付けチェックの UPDATE ボタン用)。トークンは他人に見せず、手順3以外には貼らないでください。
 2. https://script.google.com で「新しいプロジェクト」を作り、`apps-script/Code.gs` の内容を貼り付けて保存します。
 3. 左メニューの「プロジェクトの設定」→「スクリプト プロパティ」に、`GITHUB_TOKEN` という名前でトークンを登録します。
 4. 右上の「デプロイ」→「新しいデプロイ」→ 種類「ウェブアプリ」で、次のように設定してデプロイします。初回はGoogleの権限承認が求められます。

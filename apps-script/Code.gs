@@ -1,5 +1,5 @@
 // Google Apps Script (ウェブアプリ): ブラウザで収集したMANGOグローバル商品データを検証し、data/global-raw.json としてコミットする。
-// スクリプトプロパティ: GITHUB_TOKEN (Fine-grained token / このリポジトリの Contents: Read and write)
+// スクリプトプロパティ: GITHUB_TOKEN (Fine-grained token / このリポジトリの Contents: Read and write、UPDATEボタン用に Actions: Read and write)
 var OWNER = "amikitamura285";
 var REPO = "MANGO_association";
 var BRANCH = "main";
@@ -11,6 +11,9 @@ var MAX_PRODUCTS = 300;
 var MAX_CANDIDATES = 4000;
 var CHECKED_KEY = "CHECKED_CODES";
 var MAX_CHECKED = 600;
+var CRAWL_WORKFLOW = "crawl.yml";
+var CRAWL_KEY = "LAST_CRAWL_AT";
+var CRAWL_INTERVAL_MS = 15 * 60 * 1000;
 
 function doGet(e) {
   if (e && e.parameter && e.parameter.action === "checked") return json_({ ok: true, checked: readChecked_() });
@@ -139,6 +142,10 @@ function cleanRaw_(raw, now) {
 }
 
 function github_(path, options) {
+  return githubRequest_("https://api.github.com/repos/" + OWNER + "/" + REPO + "/contents/" + path, options);
+}
+
+function githubRequest_(url, options) {
   options = options || {};
   var token = PropertiesService.getScriptProperties().getProperty("GITHUB_TOKEN");
   if (!token) fail_("サーバーにGITHUB_TOKENが設定されていません。");
@@ -155,7 +162,23 @@ function github_(path, options) {
     request.contentType = "application/json";
     request.payload = JSON.stringify(options.payload);
   }
-  return UrlFetchApp.fetch("https://api.github.com/repos/" + OWNER + "/" + REPO + "/contents/" + path, request);
+  return UrlFetchApp.fetch(url, request);
+}
+
+function startCrawl_() {
+  var props = PropertiesService.getScriptProperties();
+  var last = Number(props.getProperty(CRAWL_KEY) || 0);
+  var now = Date.now();
+  if (last && now - last < CRAWL_INTERVAL_MS) return { ok: true, running: true, startedAt: new Date(last).toISOString() };
+  var response = githubRequest_("https://api.github.com/repos/" + OWNER + "/" + REPO + "/actions/workflows/" + CRAWL_WORKFLOW + "/dispatches", {
+    method: "post",
+    payload: { ref: BRANCH }
+  });
+  var code = response.getResponseCode();
+  if (code === 403 || code === 404) fail_("更新を開始できませんでした。GITHUB_TOKENに Actions: Read and write の権限を追加してください。");
+  if (code !== 204) fail_("更新を開始できませんでした(" + code + ")。");
+  props.setProperty(CRAWL_KEY, String(now));
+  return { ok: true, running: false, startedAt: new Date(now).toISOString() };
 }
 
 function readCurrent_() {
@@ -179,6 +202,7 @@ function handle_(e) {
   try { parsed = JSON.parse(body); } catch (error) { fail_("JSONの形式が正しくありません。"); }
 
   if (parsed && parsed.action === "check") return setChecked_(parsed);
+  if (parsed && parsed.action === "crawl") return startCrawl_();
 
   var now = new Date();
   var raw = cleanRaw_(parsed && parsed.raw, now);
