@@ -26,6 +26,7 @@
     send({ type: "mango-global-progress", text: args.join(" ") });
   };
   let apiBlocked = false;
+  let apiFailureStreak = 0;
 
   if (location.origin !== "https://shop.mango.com") {
     throw new Error("https://shop.mango.com/gb/en/ のページを開いてから実行してください。");
@@ -114,16 +115,24 @@
   async function fetchApiProduct(productNumber, requestedColorId = "") {
     if (apiBlocked) return null;
     let data;
-    try {
-      const response = await timed(`${API}${productNumber}`);
-      await sleep(DELAY_MS);
-      if (!response.ok) return null;
-      data = await response.json();
-    } catch (error) {
-      apiBlocked = true;
-      log("商品APIにアクセスできませんでした(CORS等)。関連商品の解決をスキップします:", error.message);
-      return null;
+    for (let attempt = 0; attempt < 3 && !data; attempt += 1) {
+      try {
+        const response = await timed(`${API}${productNumber}`);
+        await sleep(DELAY_MS);
+        if (!response.ok) return null;
+        data = await response.json();
+        apiFailureStreak = 0;
+      } catch (error) {
+        apiFailureStreak += 1;
+        if (apiFailureStreak >= 10) {
+          apiBlocked = true;
+          log("商品APIに連続で失敗したため、残りの関連商品の解決をスキップします:", error.message);
+        }
+        if (apiBlocked) return undefined;
+        await sleep(1500 * (attempt + 1));
+      }
     }
+    if (!data) return undefined;
     const color = data.colors?.find((entry) => String(entry.id) === String(requestedColorId)) || data.colors?.[0];
     const colorId = color?.id || "99";
     const imagePath = Object.values(color?.looks?.["00"]?.images || {}).find((entry) => entry?.img)?.img;
@@ -278,8 +287,9 @@
   log(`[3/3] 関連候補 ${relatedList.length} 件を調べます`);
   const candidates = {};
   done = 0;
-  await pool(relatedList, 4, async ([key, related]) => {
-    candidates[key] = await fetchApiProduct(related.productNumber, related.colorId);
+  await pool(relatedList, 3, async ([key, related]) => {
+    const candidate = await fetchApiProduct(related.productNumber, related.colorId);
+    if (candidate !== undefined) candidates[key] = candidate;
     done += 1;
     if (done % 10 === 0 || done === relatedList.length) log(`[3/3] 関連候補 ${done}/${relatedList.length}`);
   });
