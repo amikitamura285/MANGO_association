@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T07:15:09.014Z",
+  "updatedAt": "2026-10-09T07:37:22.472Z",
   "products": [
     {
       "name": "Leather trench coat with belt - Women",
@@ -4796,16 +4796,6 @@
       },
       "relatedGlobal": [
         {
-          "name": "Pointed-toe court shoe in leather effect",
-          "image": "https://media.mango.com/is/image/punto/37045980-92-900?wid=1024",
-          "productNumber": "37045980",
-          "baseCode": "37045980",
-          "globalCode": "37045980",
-          "colorId": "92",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/heeled-shoes/pointed-toe-court-shoe-in-leather-effect/37045980/92/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW043368/"
-        },
-        {
           "name": "Oval shoulder bag",
           "image": "https://media.mango.com/is/image/punto/37074097-32-900?wid=1024",
           "productNumber": "37074097",
@@ -5165,6 +5155,54 @@
         }
       ],
       "baseCode": "37027792",
+      "hasJapanRelations": true
+    },
+    {
+      "main": {
+        "name": "Wide leg corduroy trousers - Women",
+        "image": "https://media.mango.com/is/image/punto/37057780-52-002?wid=1024",
+        "productNumber": "37057780",
+        "baseCode": "37057780",
+        "globalCode": "37057780",
+        "colorId": "52",
+        "url": "https://shop.mango.com/gb/en/p/women/jeans/wide-leg/wide-leg-corduroy-trousers/37057780/52/00",
+        "relatedProductNumbers": [
+          {
+            "productNumber": "37084099",
+            "colorId": "06"
+          },
+          {
+            "productNumber": "37076335",
+            "colorId": "92"
+          },
+          {
+            "productNumber": "37014080",
+            "colorId": "02"
+          },
+          {
+            "productNumber": "37045980",
+            "colorId": "92"
+          },
+          {
+            "productNumber": "37072538",
+            "colorId": "32"
+          }
+        ],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043497/"
+      },
+      "relatedGlobal": [
+        {
+          "name": "Pointed-toe court shoe in leather effect",
+          "image": "https://media.mango.com/is/image/punto/37045980-92-900?wid=1024",
+          "productNumber": "37045980",
+          "baseCode": "37045980",
+          "globalCode": "37045980",
+          "colorId": "92",
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/heeled-shoes/pointed-toe-court-shoe-in-leather-effect/37045980/92/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW043368/"
+        }
+      ],
+      "baseCode": "37057780",
       "hasJapanRelations": true
     },
     {
