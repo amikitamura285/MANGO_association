@@ -446,10 +446,11 @@ footer {
 .update-status.is-error { color: #b00020; }
 
 .resize-tool { max-width: 1100px; margin: 0 auto; padding: 0 5vw 80px; }
-.resize-drop { display: flex; flex-direction: column; gap: 8px; align-items: center; justify-content: center; padding: 42px 20px; border: 1.5px dashed var(--ink); background: #94bbd4; text-align: center; cursor: pointer; }
+.resize-drop { display: flex; flex-direction: column; gap: 8px; align-items: center; justify-content: center; padding: 42px 20px; border: 1.5px dashed var(--muted); background: var(--white); text-align: center; cursor: pointer; }
 .resize-drop input { display: none; }
-.resize-drop span { color: var(--ink); font-size: 13px; }
-.resize-drop.is-over { border-color: var(--ink); background: #7aa9c7; }
+.resize-drop span { color: var(--muted); font-size: 13px; }
+.resize-drop:hover, .resize-drop.is-over { border-color: var(--ink); background: #94bbd4; }
+.resize-drop:hover span, .resize-drop.is-over span { color: var(--ink); }
 .resize-controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px; margin: 24px 0; }
 .resize-field { display: flex; flex-direction: column; gap: 6px; font: 11px 'DM Mono', monospace; color: var(--muted); letter-spacing: .06em; }
 .resize-field[hidden] { display: none; }
