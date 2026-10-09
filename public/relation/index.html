@@ -5,18 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MANGO FINDER</title>
   <link rel="icon" type="image/png" href="../favicon.png">
-  <link rel="stylesheet" href="../styles.css?v=20261009-1">
+  <link rel="stylesheet" href="../styles.css?v=20261009-2">
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="../"><img src="../logo.jpg" alt="MANGO"><span>FINDER</span></a>
     <nav class="main-tabs" aria-label="メインメニュー">
+      <button class="main-tab" type="button" data-view="resizeView">画像リサイズ</button>
       <button class="main-tab is-active" type="button" data-view="relationView">関連付け</button>
       <button class="main-tab" type="button" data-view="globalRelationView">グローバル関連付け</button>
     </nav>
   </header>
 
   <main>
+    <section id="resizeView" class="relation-view" hidden>
+      <div class="relation-hero">
+        <p class="eyebrow">IMAGE RESIZE</p>
+        <h1>画像 <em>リサイズ</em></h1>
+        <p class="lead">画像はこのブラウザの中だけで処理されます。外部には送信されません。</p>
+      </div>
+      <div class="resize-tool">
+        <label id="resizeDrop" class="resize-drop">
+          <input id="resizeFiles" type="file" accept="image/*" multiple>
+          <strong>画像をここにドラッグ、またはクリックして選択</strong>
+          <span>複数選択できます(JPEG / PNG / WebP / GIF など)</span>
+        </label>
+        <div class="resize-controls">
+          <label class="resize-field"><span>リサイズ方法</span>
+            <select id="resizeMode">
+              <option value="width">幅を指定(高さは自動)</option>
+              <option value="height">高さを指定(幅は自動)</option>
+              <option value="long">長辺を指定</option>
+              <option value="percent">倍率で指定</option>
+              <option value="exact">幅と高さを指定</option>
+            </select>
+          </label>
+          <label class="resize-field"><span id="resizeLabelA">幅 (px)</span><input id="resizeValueA" type="number" min="1" max="16384" value="800"></label>
+          <label id="resizeWrapB" class="resize-field" hidden><span>高さ (px)</span><input id="resizeValueB" type="number" min="1" max="16384" value="800"></label>
+          <label class="resize-field"><span>形式</span>
+            <select id="resizeFormat">
+              <option value="original">元の形式のまま</option>
+              <option value="jpeg">JPEG</option>
+              <option value="png">PNG</option>
+              <option value="webp">WebP</option>
+            </select>
+          </label>
+          <label class="resize-field"><span>画質 <b id="resizeQualityValue">90</b>(JPEG / WebP)</span><input id="resizeQuality" type="range" min="10" max="100" value="90"></label>
+        </div>
+        <div class="resize-actions">
+          <button id="resizeZip" type="button" disabled>まとめてダウンロード(ZIP)</button>
+          <button id="resizeClear" type="button" class="is-secondary" disabled>クリア</button>
+          <span id="resizeSummary" class="resize-summary"></span>
+        </div>
+        <p id="resizeEmpty" class="resize-empty">画像を選ぶと、ここに変換結果が表示されます。</p>
+        <div id="resizeGrid" class="resize-grid"></div>
+      </div>
+    </section>
+
     <section id="relationView" class="relation-view">
       <div class="relation-hero">
         <p class="eyebrow">DAILY PRODUCT WATCH</p>
@@ -126,7 +171,8 @@
   </footer>
 
   <script src="../tools/global-match.js?v=20261009-3"></script>
-  <script src="../app.js?v=20261009-3"></script>
+  <script src="../app.js?v=20261009-4"></script>
   <script src="../global-update.js?v=20261009-7"></script>
+  <script src="../resize.js?v=20261009-1"></script>
 </body>
 </html>

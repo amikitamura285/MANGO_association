@@ -9,7 +9,7 @@ const state = {
   globalRows: []
 };
 let productsReady;
-const dataPathPrefix = /\/(?:relation|global)\/$/.test(window.location.pathname) ? "../" : "";
+const dataPathPrefix = /\/(?:relation|global|resize)\/$/.test(window.location.pathname) ? "../" : "";
 
 function escapeHtml(value) {
   return String(value ?? "").replace(/[&<>\"']/g, (character) => ({
@@ -215,9 +215,9 @@ function loadGlobalProducts() {
 }
 
 function routeForView(targetView) {
-  const route = targetView === "globalRelationView" ? "global" : "relation";
+  const route = { globalRelationView: "global", resizeView: "resize" }[targetView] || "relation";
   const path = window.location.pathname;
-  const base = path.replace(/(?:relation|global)\/?$/, "").replace(/\/?$/, "/");
+  const base = path.replace(/(?:relation|global|resize)\/?$/, "").replace(/\/?$/, "/");
   return `${base}${route}/`;
 }
 
@@ -244,12 +244,15 @@ document.querySelectorAll(".main-tab").forEach((button) => {
   button.addEventListener("click", () => switchTab(button.dataset.view, true));
 });
 
-window.addEventListener("popstate", () => {
-  switchTab(window.location.pathname.includes("/global/") ? "globalRelationView" : "relationView");
-});
+function viewForPath(path) {
+  if (path.includes("/global/")) return "globalRelationView";
+  if (path.includes("/resize/")) return "resizeView";
+  return "relationView";
+}
+
+window.addEventListener("popstate", () => switchTab(viewForPath(window.location.pathname)));
 
 window.addEventListener("DOMContentLoaded", () => {
   loadProducts();
-  const path = window.location.pathname;
-  switchTab(path.includes("/global/") ? "globalRelationView" : "relationView");
+  switchTab(viewForPath(window.location.pathname));
 });
