@@ -8,10 +8,15 @@
   const status = document.getElementById("globalUpdateStatus");
   if (!panel) return;
 
+  const logLines = [];
+  let headline = "";
+  const render = () => { status.textContent = [headline, ...logLines.slice(-14)].filter(Boolean).join("\n"); };
   const setStatus = (text, isError = false) => {
-    status.textContent = text;
+    headline = text;
     status.classList.toggle("is-error", isError);
+    render();
   };
+  const addLog = (text) => { logLines.push(text); render(); };
 
   async function buildBookmarklet() {
     const source = await (await fetch(`${dataPathPrefix}tools/collect-global.js?v=${Date.now()}`, { cache: "no-store" })).text();
@@ -42,7 +47,7 @@
   async function handleRaw(raw) {
     const candidateCount = Object.values(raw.candidates || {}).filter(Boolean).length;
     const counts = `収集 商品${(raw.products || []).length}件 / 関連候補${candidateCount}件`;
-    setStatus(`${clock()} 収集が終わりました(${counts})。日本商品と照合しています…`);
+    setStatus(`${clock()} 収集完了(${counts})。日本商品と照合しています…`);
     const result = GlobalMatch.buildGlobalResult(raw, await loadJapanProducts());
     const found = `${counts} / 一致${result.matches.length}件`;
     if (!result.matches.length) {
@@ -61,13 +66,13 @@
       setStatus(`${clock()} ${found}。画面には表示しましたが、公開サイトへの保存に失敗しました: ${error.message}`, true);
       return;
     }
-    setStatus(`${clock()} 完了。${found}。公開サイトへの反映には数分かかります(LAST UPDATEDはそのとき更新されます)。`);
+    setStatus(`【完了】${clock()} すべて完了しました。${found}。公開サイトへの反映には数分かかります(LAST UPDATEDはそのとき更新されます)。`);
   }
 
   window.addEventListener("message", (event) => {
     if (event.origin !== SHOP_ORIGIN) return;
     const message = event.data || {};
-    if (message.type === "mango-global-progress") setStatus(`収集中: ${message.text}`);
+    if (message.type === "mango-global-progress") { if (!logLines.length) setStatus("収集中です。完了と表示されるまでお待ちください…"); addLog(message.text); }
     if (message.type === "mango-global-error") setStatus(`収集に失敗しました: ${message.text}`, true);
     if (message.type === "mango-global-raw") {
       handleRaw(message.raw).catch((error) => setStatus(error.message, true));

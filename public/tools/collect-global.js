@@ -7,6 +7,7 @@
     "https://shop.mango.com/gb/en/c/women/new-now/56b5c5ed"
   ];
   const MAX_PRODUCTS = 150;
+  const SHOP = "https://shop.mango.com";
   const DELAY_MS = 400;
   const API = "https://online-orchestrator.mango.com/v4/products?channelId=shop&countryIso=GB&languageIso=en&productId=";
 
@@ -21,7 +22,7 @@
   };
   const log = (...args) => {
     console.log("[collect-global]", ...args);
-    banner.textContent = `MANGO FINDER: ${args.join(" ")}`;
+    banner.textContent = `MANGO FINDER 収集中…: ${args.join(" ")}`;
     send({ type: "mango-global-progress", text: args.join(" ") });
   };
   let apiBlocked = false;
@@ -147,15 +148,36 @@
   await scrollToLoadAll();
 
   const pages = [{ html: document.documentElement.outerHTML, newArrivals: location.pathname.includes("/new-now/") }];
-  for (const source of SOURCES) {
-    try {
-      const html = await fetchText(source);
+  const seenUrls = new Set(extractProductUrls(pages[0].html));
+  async function loadListing(source) {
+    for (let page = 1; page <= 4; page += 1) {
+      const url = page === 1 ? source : `${source}${source.includes("?") ? "&" : "?"}page=${page}`;
+      let html;
+      try {
+        html = await fetchText(url);
+      } catch (error) {
+        log("取得元NG:", url.replace(SHOP, ""), error.message);
+        if (error.message.includes("アクセス制限")) throw error;
+        return;
+      }
+      const found = extractProductUrls(html);
+      const fresh = found.filter((productUrl) => !seenUrls.has(productUrl));
+      found.forEach((productUrl) => seenUrls.add(productUrl));
       pages.push({ html, newArrivals: source.includes("/new-now/") });
-      log(`取得元OK(商品URL ${extractProductUrls(html).length}件):`, source);
-    } catch (error) {
-      log("取得元NG:", source, error.message);
-      if (error.message.includes("アクセス制限")) throw error;
+      log(`取得元OK ${url.replace(SHOP, "")} 商品URL${found.length}件(新規${fresh.length}件)`);
+      if (!found.length || (page > 1 && !fresh.length)) return;
     }
+  }
+  for (const source of SOURCES) await loadListing(source);
+
+  const knownListings = new Set(SOURCES);
+  const categories = [...new Set(pages.flatMap((page) => [...unescapeJson(page.html).matchAll(/\/gb\/en\/c\/women\/[a-z0-9\/-]*\/[0-9a-f]{8}(?![0-9a-z])/gi)].map((match) => SHOP + match[0])))]
+    .filter((category) => !knownListings.has(category) && seenUrls.size < MAX_PRODUCTS)
+    .slice(0, 8);
+  log(`カテゴリページ ${categories.length}件を追加で調べます`);
+  for (const category of categories) {
+    if (seenUrls.size >= MAX_PRODUCTS) break;
+    await loadListing(category);
   }
 
   const products = [];
@@ -231,10 +253,10 @@
   try { window.opener?.focus(); } catch {}
 
   if (send({ type: "mango-global-raw", raw })) {
-    banner.textContent = `MANGO FINDER: 収集完了 (${summary})。元のページにデータを送信しました。このタブは閉じて構いません。`;
+    banner.textContent = `【完了】MANGO FINDER: 収集が完了しました (${summary})。元のページにデータを送信しました。このタブは閉じて構いません。`;
     return;
   }
-  banner.textContent = `MANGO FINDER: 収集完了 (${summary})。元のページに送信できなかったため global-raw.json をダウンロードしました。`;
+  banner.textContent = `【完了】MANGO FINDER: 収集が完了しました (${summary})。元のページに送信できなかったため global-raw.json をダウンロードしました。`;
   const link = document.createElement("a");
   link.href = URL.createObjectURL(new Blob([JSON.stringify(raw)], { type: "application/json" }));
   link.download = "global-raw.json";
