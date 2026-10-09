@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T09:08:02.386Z",
+  "updatedAt": "2026-10-09T10:11:46.297Z",
   "products": [
     {
       "name": "ロングワンピース .-- RAMONA （ブラック）",
@@ -1509,7 +1509,10 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "CHECK",
-      "relatedNames": []
+      "relatedNames": [
+        "レザーベルト .-- NINE （ブラウン）",
+        "ジャケット.-- LARIS （ネイビーブルー）"
+      ]
     },
     {
       "name": "セーター .-- MARIA （ゴールド）",
@@ -2380,7 +2383,9 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "PARIS",
-      "relatedNames": []
+      "relatedNames": [
+        "パンツ .-- ROMA （ブラック）"
+      ]
     },
     {
       "name": "ブラウス .--PARIS （ブラウン）",
@@ -3818,5 +3823,5 @@
     "MA1658EW042239",
     "MA1658EW042692"
   ],
-  "scanned": 4224
+  "scanned": 4218
 }
