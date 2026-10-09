@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T03:28:14.021Z",
+  "updatedAt": "2026-10-09T05:45:28.478Z",
   "products": [
     {
       "name": "ロングワンピース .-- RAMONA （ブラック）",
@@ -1844,6 +1844,33 @@
       "relatedNames": []
     },
     {
+      "name": "ジーンズ-- OSCAR （オープンブルー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042239_1_l.jpg",
+      "productNumber": "MA1658EW042239",
+      "brandItemNumber": "37012528 TM 色 オープンブルー（TM）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042239/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "OSCAR",
+      "relatedNames": []
+    },
+    {
+      "name": "パンツ .-- OSCAR （ブラウン）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042692_1_l.jpg",
+      "productNumber": "MA1658EW042692",
+      "brandItemNumber": "37094428 30 色 ブラウン（30）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042692/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "OSCAR",
+      "relatedNames": [
+        "レザーローファー .-- LOUISA （ブラック）",
+        "バケットバッグ.-- ENRIC （ブラック）"
+      ]
+    },
+    {
       "name": "ジーンズ-- LIA （オープンブルー）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042289_1_l.jpg",
       "productNumber": "MA1658EW042289",
@@ -2452,8 +2479,41 @@
       "relatedNames": []
     }
   ],
-  "groups": [],
-  "newCount": 0,
+  "groups": [
+    {
+      "englishKey": "OSCAR",
+      "main": {
+        "name": "ジーンズ-- OSCAR （オープンブルー）",
+        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042239_1_l.jpg",
+        "productNumber": "MA1658EW042239",
+        "brandItemNumber": "37012528 TM 色 オープンブルー（TM）",
+        "brandItemFirstDigit": "3",
+        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042239/",
+        "brandCode": "MA1658",
+        "brandName": "MANGO",
+        "englishKey": "OSCAR",
+        "relatedNames": []
+      },
+      "related": [
+        {
+          "name": "パンツ .-- OSCAR （ブラウン）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042692_1_l.jpg",
+          "productNumber": "MA1658EW042692",
+          "brandItemNumber": "37094428 30 色 ブラウン（30）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042692/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "OSCAR",
+          "relatedNames": [
+            "レザーローファー .-- LOUISA （ブラック）",
+            "バケットバッグ.-- ENRIC （ブラック）"
+          ]
+        }
+      ]
+    }
+  ],
+  "newCount": 1,
   "displayedMainProductNumbers": [
     "MA1658EW33440",
     "MA3878EC003099",
@@ -3787,7 +3847,8 @@
     "MA1658EW043495",
     "MA1658EW043490",
     "MA1658DW040002",
-    "MA1658EW040783"
+    "MA1658EW040783",
+    "MA1658EW042239"
   ],
-  "scanned": 4224
+  "scanned": 4223
 }
