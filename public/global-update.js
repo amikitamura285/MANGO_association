@@ -82,9 +82,36 @@
     setStatus(`【完了】${clock()} すべて完了しました。${found}。公開サイトへの反映には数分かかります(LAST UPDATEDはそのとき更新されます)。`);
   }
 
+  async function buildContext() {
+    const [previous, japanProducts] = await Promise.all([
+      fetch(`${dataPathPrefix}global-products.json?v=${Date.now()}`, { cache: "no-store" }).then((response) => (response.ok ? response.json() : null)).catch(() => null),
+      loadJapanProducts()
+    ]);
+    const knownCandidates = {};
+    for (const entry of (previous && previous.matches) || []) {
+      for (const candidate of entry.relatedGlobal || []) knownCandidates[`${candidate.productNumber}:${candidate.colorId}`] = candidate;
+    }
+    const seenCodes = new Set();
+    const japanTargets = [];
+    for (const item of japanProducts) {
+      if ((item.relatedNames || []).length) continue;
+      const brand = String(item.brandItemNumber || "").match(/(\d{8})\s+([A-Za-z0-9]+)/);
+      if (!brand || seenCodes.has(brand[1])) continue;
+      seenCodes.add(brand[1]);
+      japanTargets.push({ code: brand[1], color: brand[2] });
+    }
+    return { knownProducts: (previous && previous.products) || [], knownCandidates, japanTargets };
+  }
+
   window.addEventListener("message", (event) => {
     if (event.origin !== SHOP_ORIGIN) return;
     const message = event.data || {};
+    if (message.type === "mango-global-context-request") {
+      buildContext()
+        .catch(() => ({}))
+        .then((context) => event.source.postMessage({ type: "mango-global-context", ...context }, SHOP_ORIGIN));
+      return;
+    }
     if (message.type === "mango-global-progress") { if (!logLines.length) setStatus("収集中です。完了と表示されるまでお待ちください…"); addLog(message.text); }
     if (message.type === "mango-global-error") setStatus(`収集に失敗しました: ${message.text}`, true);
     if (message.type === "mango-global-raw") {

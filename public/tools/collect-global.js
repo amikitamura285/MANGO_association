@@ -32,6 +32,37 @@
     throw new Error("https://shop.mango.com/gb/en/ のページを開いてから実行してください。");
   }
 
+  const JAPAN_EXTRA = 100;
+  function requestContext() {
+    return new Promise((resolve) => {
+      if (!window.opener) { resolve({}); return; }
+      const onMessage = (event) => {
+        if (event.origin !== FINDER_ORIGIN || !event.data || event.data.type !== "mango-global-context") return;
+        clearTimeout(timer);
+        window.removeEventListener("message", onMessage);
+        resolve(event.data);
+      };
+      const timer = setTimeout(() => { window.removeEventListener("message", onMessage); resolve({}); }, 10000);
+      window.addEventListener("message", onMessage);
+      send({ type: "mango-global-context-request" });
+    });
+  }
+  log("表示済みの商品情報を確認しています…");
+  const context = await requestContext();
+  const knownByKey = new Map();
+  const knownByCode = new Map();
+  for (const product of context.knownProducts || []) {
+    knownByKey.set(`${product.productNumber}:${product.colorId}`, product);
+    if (!knownByCode.has(product.productNumber)) knownByCode.set(product.productNumber, product);
+  }
+  const knownCandidates = context.knownCandidates || {};
+  const displayedCodes = new Set([
+    ...knownByCode.keys(),
+    ...Object.values(knownCandidates).filter(Boolean).map((candidate) => candidate.baseCode)
+  ]);
+  let reused = 0;
+  log(`表示済み: 商品${knownByKey.size}件 / 候補${Object.keys(knownCandidates).length}件(これらは再取得せず再利用します)`);
+
   const TIMEOUT_MS = 20000;
   const nativeFetch = window.fetch.bind(window);
   const timed = (url, options = {}) => nativeFetch(url, { ...options, signal: AbortSignal.timeout(TIMEOUT_MS) });
@@ -239,29 +270,38 @@
   };
 
   const urls = [...new Set(pages.flatMap((page) => extractProductUrls(page.html)))].slice(0, MAX_PRODUCTS);
-  log(`[1/3] 商品ページ ${urls.length} 件を読み込みます`);
+  log(`[1/4] 商品ページ ${urls.length} 件を読み込みます`);
   let skipped = 0;
   let blocked = null;
   let done = 0;
   await pool(urls, 3, async (url) => {
     if (blocked) return;
     try {
-      const product = parseProduct(url, await fetchText(url));
-      if (!product) skipped += 1;
-      addProduct(product);
+      const urlCode = [...url.matchAll(/\/(\d{8})\b/g)].at(-1)?.[1] || "";
+      const urlColor = url.match(/\/\d{8}\/([A-Za-z0-9]{1,4})(?:\/|$)/)?.[1] || "";
+      const known = knownByKey.get(`${urlCode}:${urlColor}`);
+      if (known) {
+        addProduct(known);
+        reused += 1;
+      } else {
+        const product = parseProduct(url, await fetchText(url));
+        if (!product) skipped += 1;
+        addProduct(product);
+      }
     } catch (error) {
       skipped += 1;
       if (error.message.includes("アクセス制限")) blocked = error;
     }
     done += 1;
-    if (done % 5 === 0 || done === urls.length) log(`[1/3] 商品ページ ${done}/${urls.length} (商品 ${products.length}件)`);
+    if (done % 5 === 0 || done === urls.length) log(`[1/4] 商品ページ ${done}/${urls.length} (商品 ${products.length}件)`);
   });
   if (blocked) throw blocked;
 
   const newIds = [...new Set([...apiIds, ...pages.filter((page) => page.newArrivals).flatMap((page) => extractProductIds(page.html))])]
     .filter((productId) => !byBaseCode.has(productId))
+    .filter((productId) => { const known = knownByCode.get(productId); if (known) { addProduct(known); reused += 1; } return !known; })
     .slice(0, Math.max(0, MAX_PRODUCTS - products.length));
-  log(`[2/3] 新着商品 ${newIds.length} 件を追加で読み込みます`);
+  log(`[2/4] 新着商品 ${newIds.length} 件を追加で読み込みます`);
   done = 0;
   await pool(newIds, 3, async (productId) => {
     if (blocked || products.length >= MAX_PRODUCTS) return;
@@ -275,7 +315,34 @@
       }
     }
     done += 1;
-    if (done % 5 === 0 || done === newIds.length) log(`[2/3] 新着 ${done}/${newIds.length} (商品 ${products.length}件)`);
+    if (done % 5 === 0 || done === newIds.length) log(`[2/4] 新着 ${done}/${newIds.length} (商品 ${products.length}件)`);
+  });
+  if (blocked) throw blocked;
+
+  const japanTargets = (context.japanTargets || [])
+    .filter((target) => !byBaseCode.has(target.code) && !displayedCodes.has(target.code))
+    .map((target) => ({ target, order: Math.random() }))
+    .sort((a, b) => a.order - b.order)
+    .map((entry) => entry.target)
+    .slice(0, JAPAN_EXTRA * 2);
+  log(`[3/4] 日本の未関連付け商品 ${japanTargets.length} 件からグローバルの商品を探します(最大 ${JAPAN_EXTRA} 件)`);
+  let japanAdded = 0;
+  done = 0;
+  await pool(japanTargets, 3, async (target) => {
+    if (blocked || japanAdded >= JAPAN_EXTRA) return;
+    const apiProduct = await fetchApiProduct(target.code, String(target.color).padStart(2, "0"));
+    if (apiProduct) {
+      try {
+        const before = products.length;
+        addProduct(parseProduct(apiProduct.url, await fetchText(apiProduct.url)) || { ...apiProduct, relatedProductNumbers: [] });
+        if (products.length > before) japanAdded += 1;
+      } catch (error) {
+        skipped += 1;
+        if (error.message.includes("アクセス制限")) blocked = error;
+      }
+    }
+    done += 1;
+    if (done % 10 === 0 || done === japanTargets.length) log(`[3/4] 日本商品から ${done}/${japanTargets.length} (追加 ${japanAdded}件)`);
   });
   if (blocked) throw blocked;
 
@@ -283,20 +350,25 @@
   for (const product of products) {
     for (const related of product.relatedProductNumbers) relatedEntries.set(`${related.productNumber}:${related.colorId}`, related);
   }
-  const relatedList = [...relatedEntries.entries()].slice(0, 600);
-  log(`[3/3] 関連候補 ${relatedList.length} 件を調べます`);
+  const relatedList = [...relatedEntries.entries()].slice(0, 800);
+  log(`[4/4] 関連候補 ${relatedList.length} 件を調べます`);
   const candidates = {};
   done = 0;
   await pool(relatedList, 3, async ([key, related]) => {
-    const candidate = await fetchApiProduct(related.productNumber, related.colorId);
-    if (candidate !== undefined) candidates[key] = candidate;
+    if (knownCandidates[key]) {
+      candidates[key] = knownCandidates[key];
+      reused += 1;
+    } else {
+      const candidate = await fetchApiProduct(related.productNumber, related.colorId);
+      if (candidate !== undefined) candidates[key] = candidate;
+    }
     done += 1;
-    if (done % 10 === 0 || done === relatedList.length) log(`[3/3] 関連候補 ${done}/${relatedList.length}`);
+    if (done % 10 === 0 || done === relatedList.length) log(`[4/4] 関連候補 ${done}/${relatedList.length}`);
   });
 
   const raw = { collectedAt: new Date().toISOString(), products, candidates };
   window.__mangoRaw = raw;
-  const summary = `商品 ${products.length} 件(取得できず ${skipped} 件) / 関連候補 ${Object.values(candidates).filter(Boolean).length} 件`;
+  const summary = `商品 ${products.length} 件(取得できず ${skipped} 件) / 関連候補 ${Object.values(candidates).filter(Boolean).length} 件 / 表示済みの再利用 ${reused} 件`;
   log(`収集終了: ${summary}`);
   document.title = `【収集完了】${document.title}`;
   banner.style.background = "#1f7a3a";
