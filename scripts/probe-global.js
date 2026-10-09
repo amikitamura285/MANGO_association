@@ -16,7 +16,7 @@ const API = "https://online-orchestrator.mango.com/v4/products?channelId=shop&co
     const response = await page.goto(SEARCH, { waitUntil: "domcontentloaded", timeout: 60000 });
     await page.waitForTimeout(8000);
     const html = await page.content();
-    const links = new Set([...html.replace(/\u002f|\\//gi, "/").matchAll(/\/gb\/en\/p\/[^\s"'<>\]+/gi)].map((m) => m[0]));
+    const links = new Set([...html.replace(/\\u002f|\\\//gi, "/").matchAll(/\/gb\/en\/p\/[^\s"'<>\\]+/gi)].map((m) => m[0]));
     const blocked = /Security Checkpoint|Access Denied|captcha/i.test(html);
     console.log(`status=${response && response.status()} title=${await page.title()} blocked=${blocked} productLinks=${links.size}`);
     console.log(`html head: ${html.slice(0, 300).replace(/\s+/g, " ")}`);
@@ -31,7 +31,7 @@ const API = "https://online-orchestrator.mango.com/v4/products?channelId=shop&co
       if (result.status !== 200) process.exitCode = 1;
     }
   } catch (error) {
-    console.log(`error: ${error && error.stack || error}`);
+    console.log(`error: ${(error && error.stack) || error}`);
     process.exitCode = 1;
   } finally {
     if (browser) await browser.close();
