@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-08T19:26:15.323Z",
+  "updatedAt": "2026-10-09T01:35:31.778Z",
   "products": [
     {
       "name": "ロングワンピース .-- RAMONA （ブラック）",
@@ -47,30 +47,6 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "ALBERT",
-      "relatedNames": []
-    },
-    {
-      "name": "ジーンズ .-- DAVINA （オープンブルー）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW037861_1_l.jpg",
-      "productNumber": "MA1658EW037861",
-      "brandItemNumber": "17054137 TM 色 オープンブルー（TM）",
-      "brandItemFirstDigit": "1",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW037861/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "DAVINA",
-      "relatedNames": []
-    },
-    {
-      "name": "ジーンズ .-- DAVINA （ブラック）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW038705_1_l.jpg",
-      "productNumber": "MA1658EW038705",
-      "brandItemNumber": "17016358 BB 色 ブラック（BB）",
-      "brandItemFirstDigit": "1",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038705/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "DAVINA",
       "relatedNames": []
     },
     {
@@ -3813,5 +3789,5 @@
     "MA1658DW040002",
     "MA1658EW040783"
   ],
-  "scanned": 4227
+  "scanned": 4224
 }
