@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T19:17:33.764Z",
+  "updatedAt": "2026-10-11T19:18:20.492Z",
   "products": [
     {
       "name": "Leather trench coat with belt - Women",
@@ -5351,50 +5351,6 @@
     },
     {
       "main": {
-        "name": "Coat with funnel neck and belt - Women",
-        "image": "https://media.mango.com/is/image/punto/37077115-35-002?wid=1024",
-        "productNumber": "37077115",
-        "baseCode": "37077115",
-        "globalCode": "37077115",
-        "colorId": "35",
-        "url": "https://shop.mango.com/gb/en/p/women/coats/coats/coat-with-funnel-neck-and-belt/37077115/35/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "37027782",
-            "colorId": "32"
-          },
-          {
-            "productNumber": "37067779",
-            "colorId": "32"
-          },
-          {
-            "productNumber": "37026000",
-            "colorId": "32"
-          },
-          {
-            "productNumber": "37004451",
-            "colorId": "OR"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043365/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "Knit top with brooch detail",
-          "image": "https://media.mango.com/is/image/punto/37027782-32-900?wid=1024",
-          "productNumber": "37027782",
-          "baseCode": "37027782",
-          "globalCode": "37027782",
-          "colorId": "32",
-          "url": "https://shop.mango.com/gb/en/p/women/tops/basics/knit-top-with-brooch-detail/37027782/32/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039139/"
-        }
-      ],
-      "baseCode": "37077115",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
         "name": "Argyle knit sweater - Women",
         "image": "https://media.mango.com/is/image/punto/37017779-56-002?wid=1024",
         "productNumber": "37017779",
@@ -6237,46 +6193,6 @@
     },
     {
       "main": {
-        "name": "100% suede long gloves - Women",
-        "image": "https://media.mango.com/is/image/punto/17017775-32-016?wid=1024",
-        "productNumber": "17017775",
-        "baseCode": "17017775",
-        "globalCode": "17017775",
-        "colorId": "32",
-        "url": "https://shop.mango.com/gb/en/p/women/caps-and-hats/gloves/100-suede-long-gloves/17017775/32/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "27044446",
-            "colorId": "66"
-          },
-          {
-            "productNumber": "27054788",
-            "colorId": "61"
-          },
-          {
-            "productNumber": "27084043",
-            "colorId": "01"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038471/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "Fitted cotton shirt",
-          "image": "https://media.mango.com/is/image/punto/27054788-61-900?wid=1024",
-          "productNumber": "27054788",
-          "baseCode": "27054788",
-          "globalCode": "27054788",
-          "colorId": "61",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-cotton-shirt/27054788/61/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040298/"
-        }
-      ],
-      "baseCode": "17017775",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
         "name": "Fine knit polo neck sweater - Women",
         "image": "https://media.mango.com/is/image/punto/37044088-99-002?wid=1024",
         "productNumber": "37044088",
@@ -6484,6 +6400,16 @@
           "colorId": "30",
           "url": "https://shop.mango.com/gb/en/p/women/blazers/check-suit-jacket/27041324/30/00",
           "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039424/"
+        },
+        {
+          "name": "Fitted cotton shirt",
+          "image": "https://media.mango.com/is/image/punto/27054788-61-900?wid=1024",
+          "productNumber": "27054788",
+          "baseCode": "27054788",
+          "globalCode": "27054788",
+          "colorId": "61",
+          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-cotton-shirt/27054788/61/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040298/"
         },
         {
           "name": "Wool blend suit trousers",
