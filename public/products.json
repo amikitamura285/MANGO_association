@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-12T19:20:48.679Z",
+  "updatedAt": "2026-10-13T05:58:50.164Z",
   "products": [
     {
       "name": "ロングワンピース .-- RAMONA （ブラック）",
@@ -479,18 +479,6 @@
       "brandItemNumber": "27044775 35 色 ミディアムブラウン（35）",
       "brandItemFirstDigit": "2",
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040215/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "MONA",
-      "relatedNames": []
-    },
-    {
-      "name": "キャップ .-- MONA （ミディアムブルー）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW040329_1_l.jpg",
-      "productNumber": "MA1658DW040329",
-      "brandItemNumber": "27085948 52 色 ミディアムブルー（52）",
-      "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW040329/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "MONA",
@@ -2751,12 +2739,12 @@
     {
       "englishKey": "P JACOBA",
       "main": {
-        "name": "財布 P-- JACOBA （ブラック）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW039498_1_l.jpg",
-        "productNumber": "MA1658DW039498",
-        "brandItemNumber": "27051275 99 色 ブラック（99）",
+        "name": "ハンドバッグ P-- JACOBA （ブラック）",
+        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658AW039567_1_l.jpg",
+        "productNumber": "MA1658AW039567",
+        "brandItemNumber": "27021238 99 色 ブラック（99）",
         "brandItemFirstDigit": "2",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW039498/",
+        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW039567/",
         "brandCode": "MA1658",
         "brandName": "MANGO",
         "englishKey": "P JACOBA",
@@ -2764,12 +2752,12 @@
       },
       "related": [
         {
-          "name": "ハンドバッグ P-- JACOBA （ブラック）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658AW039567_1_l.jpg",
-          "productNumber": "MA1658AW039567",
-          "brandItemNumber": "27021238 99 色 ブラック（99）",
+          "name": "財布 P-- JACOBA （ブラック）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW039498_1_l.jpg",
+          "productNumber": "MA1658DW039498",
+          "brandItemNumber": "27051275 99 色 ブラック（99）",
           "brandItemFirstDigit": "2",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW039567/",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW039498/",
           "brandCode": "MA1658",
           "brandName": "MANGO",
           "englishKey": "P JACOBA",
@@ -4138,7 +4126,8 @@
     "MA1658EW043623",
     "MA1658EW043622",
     "MA1658EW043630",
-    "MA1658DW039498"
+    "MA1658DW039498",
+    "MA1658AW039567"
   ],
-  "scanned": 4328
+  "scanned": 4305
 }

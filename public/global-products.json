@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-13T01:34:54.627Z",
+  "updatedAt": "2026-10-13T05:58:55.153Z",
   "products": [
     {
       "name": "Check-print jacket - Women",
@@ -5922,70 +5922,6 @@
     },
     {
       "main": {
-        "name": "Polo-neck jumper with striped detailing - Women",
-        "image": "https://media.mango.com/is/image/punto/37015896-56-002?wid=1024",
-        "productNumber": "37015896",
-        "baseCode": "37015896",
-        "globalCode": "37015896",
-        "colorId": "56",
-        "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/polos/polo-neck-jumper-with-striped-detailing/37015896/56/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "37055877",
-            "colorId": "07"
-          },
-          {
-            "productNumber": "37075841",
-            "colorId": "99"
-          },
-          {
-            "productNumber": "37055983",
-            "colorId": "99"
-          },
-          {
-            "productNumber": "37044460",
-            "colorId": "70"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043301/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "High-waist suits trousers",
-          "image": "https://media.mango.com/is/image/punto/37075841-99-900?wid=1024",
-          "productNumber": "37075841",
-          "baseCode": "37075841",
-          "globalCode": "37075841",
-          "colorId": "99",
-          "url": "https://shop.mango.com/gb/en/p/women/trousers/plus-sizes/high-waist-suits-trousers/37075841/99/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040571/"
-        },
-        {
-          "name": "Ankle boots with square toe heel",
-          "image": "https://media.mango.com/is/image/punto/37055983-99-900?wid=1024",
-          "productNumber": "37055983",
-          "baseCode": "37055983",
-          "globalCode": "37055983",
-          "colorId": "99",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/boots-and-ankle-boots/ankle-boots-with-square-toe-heel/37055983/99/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW043457/"
-        },
-        {
-          "name": "Shoulder bag with buckles",
-          "image": "https://media.mango.com/is/image/punto/37044460-70-900?wid=1024",
-          "productNumber": "37044460",
-          "baseCode": "37044460",
-          "globalCode": "37044460",
-          "colorId": "70",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/shoulder/shoulder-bag-with-buckles/37044460/70/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW042689/"
-        }
-      ],
-      "baseCode": "37015896",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
         "name": "Faux leather skirt with lace trim - Women",
         "image": "https://media.mango.com/is/image/punto/37095999-99-002?wid=1024",
         "productNumber": "37095999",
@@ -6396,46 +6332,6 @@
     },
     {
       "main": {
-        "name": "Animal print cardigan with buttons - Women",
-        "image": "https://media.mango.com/is/image/punto/37045853-95-002?wid=1024",
-        "productNumber": "37045853",
-        "baseCode": "37045853",
-        "globalCode": "37045853",
-        "colorId": "95",
-        "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/cardigans/animal-print-cardigan-with-buttons/37045853/95/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "37005896",
-            "colorId": "DO"
-          },
-          {
-            "productNumber": "37064414",
-            "colorId": "32"
-          },
-          {
-            "productNumber": "37014099",
-            "colorId": "32"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043287/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "Distressed flare jeans",
-          "image": "https://media.mango.com/is/image/punto/37005896-DO-900?wid=1024",
-          "productNumber": "37005896",
-          "baseCode": "37005896",
-          "globalCode": "37005896",
-          "colorId": "DO",
-          "url": "https://shop.mango.com/gb/en/p/women/jeans/flare/distressed-flare-jeans/37005896/DO/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043229/"
-        }
-      ],
-      "baseCode": "37045853",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
         "name": "Wide leg faux-leather trousers - Women",
         "image": "https://media.mango.com/is/image/punto/17085976-37-002?wid=1024",
         "productNumber": "17085976",
@@ -6476,46 +6372,6 @@
         }
       ],
       "baseCode": "17085976",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
-        "name": "Kitten-heel pointed shoes - Women",
-        "image": "https://media.mango.com/is/image/punto/27085156-32-016?wid=1024",
-        "productNumber": "27085156",
-        "baseCode": "27085156",
-        "globalCode": "27085156",
-        "colorId": "32",
-        "url": "https://shop.mango.com/gb/en/p/women/shoes/heeled-shoes/kitten-heel-pointed-shoes/27085156/32/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "27094432",
-            "colorId": "99"
-          },
-          {
-            "productNumber": "27077928",
-            "colorId": "32"
-          },
-          {
-            "productNumber": "27061177",
-            "colorId": "99"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW040411/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "Polka-dot print umbrella",
-          "image": "https://media.mango.com/is/image/punto/27061177-99-900?wid=1024",
-          "productNumber": "27061177",
-          "baseCode": "27061177",
-          "globalCode": "27061177",
-          "colorId": "99",
-          "url": "https://shop.mango.com/gb/en/p/women/more-accessories/umbrellas/polka-dot-print-umbrella/27061177/99/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW037215/"
-        }
-      ],
-      "baseCode": "27085156",
       "hasJapanRelations": true
     },
     {
@@ -6724,6 +6580,16 @@
         "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042646/"
       },
       "relatedGlobal": [
+        {
+          "name": "High-waist suits trousers",
+          "image": "https://media.mango.com/is/image/punto/37075841-99-900?wid=1024",
+          "productNumber": "37075841",
+          "baseCode": "37075841",
+          "globalCode": "37075841",
+          "colorId": "99",
+          "url": "https://shop.mango.com/gb/en/p/women/trousers/plus-sizes/high-waist-suits-trousers/37075841/99/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040571/"
+        },
         {
           "name": "Small clutch bag with metallic details",
           "image": "https://media.mango.com/is/image/punto/37022531-99-900?wid=1024",
