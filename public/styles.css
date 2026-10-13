@@ -500,3 +500,5 @@ footer {
 .resize-adjust:hover { background: var(--ink); color: #94bbd4; }
 
 #productRefresh { flex: none; box-sizing: border-box; width: 112px; min-width: 112px; padding-left: 0; padding-right: 0; text-align: center; white-space: nowrap; }
+
+#checkedProductGrid, #globalCheckedProductGrid { zoom: .7; }
