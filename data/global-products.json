@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-13T05:58:55.153Z",
+  "updatedAt": "2026-10-13T19:34:16.493Z",
   "products": [
     {
       "name": "Check-print jacket - Women",
@@ -4741,6 +4741,50 @@
     {
       "main": {
         "name": "Wide leg corduroy trousers - Women",
+        "image": "https://media.mango.com/is/image/punto/37097803-99-002?wid=1024",
+        "productNumber": "37097803",
+        "baseCode": "37097803",
+        "globalCode": "37097803",
+        "colorId": "99",
+        "url": "https://shop.mango.com/gb/en/p/women/jeans/plus-sizes/wide-leg-corduroy-trousers/37097803/99/00",
+        "relatedProductNumbers": [
+          {
+            "productNumber": "37027816",
+            "colorId": "01"
+          },
+          {
+            "productNumber": "37006341",
+            "colorId": "96"
+          },
+          {
+            "productNumber": "37024095",
+            "colorId": "CG"
+          },
+          {
+            "productNumber": "37012544",
+            "colorId": "32"
+          }
+        ],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043622/"
+      },
+      "relatedGlobal": [
+        {
+          "name": "100% brushed wool jumper",
+          "image": "https://media.mango.com/is/image/punto/37006341-96-900?wid=1024",
+          "productNumber": "37006341",
+          "baseCode": "37006341",
+          "globalCode": "37006341",
+          "colorId": "96",
+          "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/sweaters/100-brushed-wool-jumper/37006341/96/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043445/"
+        }
+      ],
+      "baseCode": "37097803",
+      "hasJapanRelations": true
+    },
+    {
+      "main": {
+        "name": "Wide leg corduroy trousers - Women",
         "image": "https://media.mango.com/is/image/punto/37077804-07-002?wid=1024",
         "productNumber": "37077804",
         "baseCode": "37077804",
@@ -4985,6 +5029,16 @@
           "colorId": "56",
           "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/blouses/striped-blouse-with-frogging-details/37097812/56/00",
           "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043609/"
+        },
+        {
+          "name": "Large bucket bag buckle",
+          "image": "https://media.mango.com/is/image/punto/37023318-32-900?wid=1024",
+          "productNumber": "37023318",
+          "baseCode": "37023318",
+          "globalCode": "37023318",
+          "colorId": "32",
+          "url": "https://shop.mango.com/gb/en/p/women/bags/shoppers/large-bucket-bag-buckle/37023318/32/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW042881/"
         }
       ],
       "baseCode": "37077813",

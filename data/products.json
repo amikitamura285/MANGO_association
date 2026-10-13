@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-13T05:58:50.164Z",
+  "updatedAt": "2026-10-13T19:34:11.456Z",
   "products": [
     {
       "name": "ロングワンピース .-- RAMONA （ブラック）",
@@ -2020,6 +2020,33 @@
       ]
     },
     {
+      "name": "レザージャケット .-- SHOPER （ブラック）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042536_1_l.jpg",
+      "productNumber": "MA1658EW042536",
+      "brandItemNumber": "37045839 99 色 ブラック（99）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042536/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "SHOPER",
+      "relatedNames": [
+        "パンツ.-- PICCOLA （ブラック）",
+        "パンプス .-- RUMBA （ナチュラルホワイト）"
+      ]
+    },
+    {
+      "name": "コート.-- SHOPER （ミディアムブラウン）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043487_1_l.jpg",
+      "productNumber": "MA1658EW043487",
+      "brandItemNumber": "37016747 35 色 ミディアムブラウン（35）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043487/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "SHOPER",
+      "relatedNames": []
+    },
+    {
       "name": "ピアス .-- LOLA （ゴールド）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW042539_1_l.jpg",
       "productNumber": "MA1658DW042539",
@@ -2188,6 +2215,30 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "CAROLINE",
+      "relatedNames": []
+    },
+    {
+      "name": "トートバッグ.-- ENRIC （ブラック）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658AW042863_1_l.jpg",
+      "productNumber": "MA1658AW042863",
+      "brandItemNumber": "37043317 99 色 ブラック（99）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW042863/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "ENRIC",
+      "relatedNames": []
+    },
+    {
+      "name": "バケットバッグ.-- ENRIC （ダークブラウン）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658AW042881_1_l.jpg",
+      "productNumber": "MA1658AW042881",
+      "brandItemNumber": "37023318 32 色 ダークブラウン（32）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW042881/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "ENRIC",
       "relatedNames": []
     },
     {
@@ -2541,6 +2592,54 @@
       "relatedNames": []
     },
     {
+      "name": "ニット.-- INES （レッド）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043444_1_l.jpg",
+      "productNumber": "MA1658EW043444",
+      "brandItemNumber": "37006341 70 色 レッド（70）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043444/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "INES",
+      "relatedNames": []
+    },
+    {
+      "name": "ニット.-- INES （ダークグレー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043445_1_l.jpg",
+      "productNumber": "MA1658EW043445",
+      "brandItemNumber": "37006341 96 色 ダークグレー（96）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043445/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "INES",
+      "relatedNames": []
+    },
+    {
+      "name": "シャツ.-- PREPPY （ピンク）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043446_1_l.jpg",
+      "productNumber": "MA1658EW043446",
+      "brandItemNumber": "37087780 85 色 ピンク（85）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043446/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "PREPPY",
+      "relatedNames": []
+    },
+    {
+      "name": "シャツ.-- PREPPY （パステルブルー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043447_1_l.jpg",
+      "productNumber": "MA1658EW043447",
+      "brandItemNumber": "37087780 50 色 パステルブルー（50）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043447/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "PREPPY",
+      "relatedNames": []
+    },
+    {
       "name": "ジーンズ.-- CINDY （オープンブルー）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043467_1_l.jpg",
       "productNumber": "MA1658EW043467",
@@ -2737,36 +2836,126 @@
   ],
   "groups": [
     {
-      "englishKey": "P JACOBA",
+      "englishKey": "SHOPER",
       "main": {
-        "name": "ハンドバッグ P-- JACOBA （ブラック）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658AW039567_1_l.jpg",
-        "productNumber": "MA1658AW039567",
-        "brandItemNumber": "27021238 99 色 ブラック（99）",
-        "brandItemFirstDigit": "2",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW039567/",
+        "name": "レザージャケット .-- SHOPER （ブラック）",
+        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042536_1_l.jpg",
+        "productNumber": "MA1658EW042536",
+        "brandItemNumber": "37045839 99 色 ブラック（99）",
+        "brandItemFirstDigit": "3",
+        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042536/",
         "brandCode": "MA1658",
         "brandName": "MANGO",
-        "englishKey": "P JACOBA",
+        "englishKey": "SHOPER",
+        "relatedNames": [
+          "パンツ.-- PICCOLA （ブラック）",
+          "パンプス .-- RUMBA （ナチュラルホワイト）"
+        ]
+      },
+      "related": [
+        {
+          "name": "コート.-- SHOPER （ミディアムブラウン）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043487_1_l.jpg",
+          "productNumber": "MA1658EW043487",
+          "brandItemNumber": "37016747 35 色 ミディアムブラウン（35）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043487/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "SHOPER",
+          "relatedNames": []
+        }
+      ]
+    },
+    {
+      "englishKey": "ENRIC",
+      "main": {
+        "name": "トートバッグ.-- ENRIC （ブラック）",
+        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658AW042863_1_l.jpg",
+        "productNumber": "MA1658AW042863",
+        "brandItemNumber": "37043317 99 色 ブラック（99）",
+        "brandItemFirstDigit": "3",
+        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW042863/",
+        "brandCode": "MA1658",
+        "brandName": "MANGO",
+        "englishKey": "ENRIC",
         "relatedNames": []
       },
       "related": [
         {
-          "name": "財布 P-- JACOBA （ブラック）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW039498_1_l.jpg",
-          "productNumber": "MA1658DW039498",
-          "brandItemNumber": "27051275 99 色 ブラック（99）",
-          "brandItemFirstDigit": "2",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW039498/",
+          "name": "バケットバッグ.-- ENRIC （ダークブラウン）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658AW042881_1_l.jpg",
+          "productNumber": "MA1658AW042881",
+          "brandItemNumber": "37023318 32 色 ダークブラウン（32）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW042881/",
           "brandCode": "MA1658",
           "brandName": "MANGO",
-          "englishKey": "P JACOBA",
+          "englishKey": "ENRIC",
+          "relatedNames": []
+        }
+      ]
+    },
+    {
+      "englishKey": "INES",
+      "main": {
+        "name": "ニット.-- INES （レッド）",
+        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043444_1_l.jpg",
+        "productNumber": "MA1658EW043444",
+        "brandItemNumber": "37006341 70 色 レッド（70）",
+        "brandItemFirstDigit": "3",
+        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043444/",
+        "brandCode": "MA1658",
+        "brandName": "MANGO",
+        "englishKey": "INES",
+        "relatedNames": []
+      },
+      "related": [
+        {
+          "name": "ニット.-- INES （ダークグレー）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043445_1_l.jpg",
+          "productNumber": "MA1658EW043445",
+          "brandItemNumber": "37006341 96 色 ダークグレー（96）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043445/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "INES",
+          "relatedNames": []
+        }
+      ]
+    },
+    {
+      "englishKey": "PREPPY",
+      "main": {
+        "name": "シャツ.-- PREPPY （ピンク）",
+        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043446_1_l.jpg",
+        "productNumber": "MA1658EW043446",
+        "brandItemNumber": "37087780 85 色 ピンク（85）",
+        "brandItemFirstDigit": "3",
+        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043446/",
+        "brandCode": "MA1658",
+        "brandName": "MANGO",
+        "englishKey": "PREPPY",
+        "relatedNames": []
+      },
+      "related": [
+        {
+          "name": "シャツ.-- PREPPY （パステルブルー）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043447_1_l.jpg",
+          "productNumber": "MA1658EW043447",
+          "brandItemNumber": "37087780 50 色 パステルブルー（50）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043447/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "PREPPY",
           "relatedNames": []
         }
       ]
     }
   ],
-  "newCount": 1,
+  "newCount": 4,
   "displayedMainProductNumbers": [
     "MA1658EW33440",
     "MA3878EC003099",
@@ -4127,7 +4316,11 @@
     "MA1658EW043622",
     "MA1658EW043630",
     "MA1658DW039498",
-    "MA1658AW039567"
+    "MA1658AW039567",
+    "MA1658EW042536",
+    "MA1658AW042863",
+    "MA1658EW043444",
+    "MA1658EW043446"
   ],
-  "scanned": 4305
+  "scanned": 4297
 }
