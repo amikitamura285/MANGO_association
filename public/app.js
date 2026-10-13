@@ -4,7 +4,7 @@ const $ = (selector) => document.querySelector(selector);
 const state = {
   groups: [],
   products: [],
-  checked: new Set(JSON.parse(localStorage.getItem("mango-monitor-checked") || "[]")),
+  checked: new Set(),
   globalChecked: new Set(),
   globalRows: []
 };
@@ -112,10 +112,10 @@ function renderProductCards(containerSelector, groups, compact, scope = "main") 
       }
       if (scope === "global") {
         renderGlobalRows();
-        saveGlobalChecked(productNumber, target.checked);
+        saveChecked("global", productNumber, target.checked);
       } else {
-        localStorage.setItem("mango-monitor-checked", JSON.stringify([...checkedSet]));
         renderMainProducts();
+        saveChecked("relation", productNumber, target.checked);
       }
     });
   });
@@ -224,37 +224,57 @@ function renderGlobalRows() {
   $("#globalCheckedEmpty").hidden = checkedRows.length > 0;
 }
 
-async function relayChecked(request) {
+async function relayChecked(scope, request) {
   const response = request
-    ? await fetch(GLOBAL_RELAY_URL, { method: "POST", headers: { "content-type": "text/plain;charset=utf-8" }, body: JSON.stringify(request) })
-    : await fetch(`${GLOBAL_RELAY_URL}?action=checked&v=${Date.now()}`, { cache: "no-store" });
+    ? await fetch(GLOBAL_RELAY_URL, { method: "POST", headers: { "content-type": "text/plain;charset=utf-8" }, body: JSON.stringify({ ...request, scope }) })
+    : await fetch(`${GLOBAL_RELAY_URL}?action=checked&scope=${scope}&v=${Date.now()}`, { cache: "no-store" });
   const body = await response.json();
   if (!body.ok) throw new Error(body.error || "確認済を取得できませんでした。");
   return body.checked || [];
 }
 
-async function loadGlobalChecked() {
+const CHECKED_VIEWS = {
+  global: { stateKey: "globalChecked", render: () => renderGlobalRows() },
+  relation: { stateKey: "checked", render: () => renderMainProducts() }
+};
+
+async function loadChecked(scope) {
+  const view = CHECKED_VIEWS[scope];
   try {
-    state.globalChecked = new Set(await relayChecked());
-    renderGlobalRows();
+    let list = await relayChecked(scope);
+    if (scope === "relation") {
+      // 以前このブラウザだけに保存していた確認済を、一度だけ共有側へ移す
+      const legacy = JSON.parse(localStorage.getItem("mango-monitor-checked") || "[]").filter((code) => /^[A-Za-z0-9]{6,20}$/.test(code));
+      if (legacy.length) {
+        list = await relayChecked(scope, { action: "check", productNumbers: legacy.slice(-450), checked: true });
+        localStorage.removeItem("mango-monitor-checked");
+      }
+    }
+    state[view.stateKey] = new Set(list);
+    view.render();
   } catch (error) {
     console.warn("確認済を読み込めませんでした:", error.message);
   }
 }
 
-async function saveGlobalChecked(productNumber, checked) {
+async function saveChecked(scope, productNumber, checked) {
+  const view = CHECKED_VIEWS[scope];
   try {
-    state.globalChecked = new Set(await relayChecked({ action: "check", productNumber, checked }));
+    state[view.stateKey] = new Set(await relayChecked(scope, { action: "check", productNumber, checked }));
   } catch (error) {
-    if (checked) state.globalChecked.delete(productNumber); else state.globalChecked.add(productNumber);
+    if (checked) state[view.stateKey].delete(productNumber); else state[view.stateKey].add(productNumber);
     alert(`確認済の保存に失敗しました。もう一度お試しください。(${error.message})`);
   }
-  renderGlobalRows();
+  view.render();
+}
+
+function watchChecked() {
+  const reload = () => { loadChecked("global"); loadChecked("relation"); };
+  reload();
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) reload(); });
 }
 
 function loadGlobalProducts() {
-  loadGlobalChecked();
-  document.addEventListener("visibilitychange", () => { if (!document.hidden) { loadGlobalChecked(); } });
   const ready = productsReady || Promise.resolve();
   ready.then(() => fetch(`${dataPathPrefix}global-products.json?v=${Date.now()}`, { cache: "no-store" }))
     .then((response) => response.json())
@@ -304,5 +324,6 @@ window.addEventListener("popstate", () => switchTab(viewForPath(window.location.
 
 window.addEventListener("DOMContentLoaded", () => {
   loadProducts();
+  watchChecked();
   switchTab(viewForPath(window.location.pathname));
 });

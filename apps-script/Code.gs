@@ -11,35 +11,56 @@ var MAX_PRODUCTS = 300;
 var MAX_CANDIDATES = 4000;
 var CHECKED_KEY = "CHECKED_CODES";
 var MAX_CHECKED = 600;
+var RELATION_CHECKED_KEY = "CHECKED_RELATION";
+var MAX_RELATION_CHECKED = 450;
 var CRAWL_WORKFLOW = "crawl.yml";
 var CRAWL_KEY = "LAST_CRAWL_AT";
 var CRAWL_INTERVAL_MS = 15 * 60 * 1000;
 
 function doGet(e) {
-  if (e && e.parameter && e.parameter.action === "checked") return json_({ ok: true, checked: readChecked_() });
+  if (e && e.parameter && e.parameter.action === "checked") {
+    var scope = scope_(e.parameter.scope);
+    return json_({ ok: true, checked: readChecked_(scope) });
+  }
   return json_({ ok: true, message: "MANGO FINDER relay" });
 }
 
-function readChecked_() {
+function scope_(value) {
+  return value === "relation" ? "relation" : "global";
+}
+
+function checkedKey_(scope) {
+  return scope === "relation" ? RELATION_CHECKED_KEY : CHECKED_KEY;
+}
+
+function checkedCode_(scope, value) {
+  if (scope === "relation") return typeof value === "string" && /^[A-Za-z0-9]{6,20}$/.test(value) ? value : null;
+  return code8_(value);
+}
+
+function maxChecked_(scope) {
+  return scope === "relation" ? MAX_RELATION_CHECKED : MAX_CHECKED;
+}
+
+function readChecked_(scope) {
   try {
-    var list = JSON.parse(PropertiesService.getScriptProperties().getProperty(CHECKED_KEY) || "[]");
-    return Array.isArray(list) ? list.filter(function (code) { return code8_(code); }) : [];
+    var list = JSON.parse(PropertiesService.getScriptProperties().getProperty(checkedKey_(scope)) || "[]");
+    return Array.isArray(list) ? list.filter(function (code) { return checkedCode_(scope, code); }) : [];
   } catch (error) {
     return [];
   }
 }
 
-function writeChecked_(list) {
-  PropertiesService.getScriptProperties().setProperty(CHECKED_KEY, JSON.stringify(list.slice(-MAX_CHECKED)));
-}
-
 function setChecked_(parsed) {
-  var code = code8_(parsed.productNumber);
-  if (!code || typeof parsed.checked !== "boolean") fail_("確認済の指定が正しくありません。");
-  var list = readChecked_().filter(function (entry) { return entry !== code; });
-  if (parsed.checked) list.push(code);
-  writeChecked_(list);
-  return { ok: true, checked: list.slice(-MAX_CHECKED) };
+  var scope = scope_(parsed.scope);
+  var codes = Array.isArray(parsed.productNumbers) ? parsed.productNumbers : [parsed.productNumber];
+  codes = codes.slice(0, 1000).map(function (value) { return checkedCode_(scope, value); });
+  if (!codes.length || codes.some(function (code) { return !code; }) || typeof parsed.checked !== "boolean") fail_("確認済の指定が正しくありません。");
+  var list = readChecked_(scope).filter(function (entry) { return codes.indexOf(entry) < 0; });
+  if (parsed.checked) list = list.concat(codes);
+  list = list.slice(-maxChecked_(scope));
+  PropertiesService.getScriptProperties().setProperty(checkedKey_(scope), JSON.stringify(list));
+  return { ok: true, checked: list };
 }
 
 function doPost(e) {
