@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-14T19:37:16.600Z",
+  "updatedAt": "2026-10-15T07:28:56.588Z",
   "products": [
     {
       "name": "ロングワンピース .-- RAMONA （ブラック）",
@@ -1486,6 +1486,7 @@
       "brandName": "MANGO",
       "englishKey": "CHECK",
       "relatedNames": [
+        "レザーショートブーツ .--LINA （ブラック）",
         "レザーベルト .-- NINE （ブラウン）",
         "ジャケット.-- LARIS （ネイビーブルー）"
       ]
@@ -1906,7 +1907,9 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "ANNA",
-      "relatedNames": []
+      "relatedNames": [
+        "ジャケット .--RAFAEL （ナチュラルホワイト）"
+      ]
     },
     {
       "name": "シャツ .-- ANNA （ナチュラルホワイト）",
@@ -2065,7 +2068,11 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "LINA",
-      "relatedNames": []
+      "relatedNames": [
+        "パンツ .-- CONNIE （ブラック）",
+        "シャツ .-- ANNA （ミディアムブルー）",
+        "ジャケット .--RAFAEL （ナチュラルホワイト）"
+      ]
     },
     {
       "name": "シャツ .-- REGU （ナチュラルホワイト）",
@@ -2478,6 +2485,56 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "BRUMA",
+      "relatedNames": []
+    },
+    {
+      "name": "スカート.-- FRAPPE （ライトベージュ）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043427_1_l.jpg",
+      "productNumber": "MA1658EW043427",
+      "brandItemNumber": "37088640 8 色 ライトベージュ（8）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043427/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "FRAPPE",
+      "relatedNames": []
+    },
+    {
+      "name": "ジャケット .-- FRAPPE （ブラウン）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043538_1_l.jpg",
+      "productNumber": "MA1658EW043538",
+      "brandItemNumber": "37078640 30 色 ブラウン（30）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043538/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "FRAPPE",
+      "relatedNames": [
+        "パンツ .-- RENATA （ブラウン）"
+      ]
+    },
+    {
+      "name": "ダウン.-- LAURI （カーキ）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043434_1_l.jpg",
+      "productNumber": "MA1658EW043434",
+      "brandItemNumber": "37047776 37 色 カーキ（37）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043434/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "LAURI",
+      "relatedNames": []
+    },
+    {
+      "name": "ダウン.-- LAURI （ネイビーブルー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043443_1_l.jpg",
+      "productNumber": "MA1658EW043443",
+      "brandItemNumber": "37017774 56 色 ネイビーブルー（56）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043443/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "LAURI",
       "relatedNames": []
     },
     {
@@ -3899,5 +3956,5 @@
     "MA1658EW043444",
     "MA1658EW043446"
   ],
-  "scanned": 4270
+  "scanned": 4320
 }
