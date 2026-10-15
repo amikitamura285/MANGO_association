@@ -238,8 +238,24 @@ const CHECKED_VIEWS = {
   relation: { stateKey: "checked", render: () => renderMainProducts() }
 };
 
+// 保存の完了待ちの間に、古い読み込み結果で画面が戻らないよう、押した直後の状態を重ねて表示する
+const pendingChecks = { global: new Map(), relation: new Map() };
+const checkedSeq = { global: { started: 0, applied: 0 }, relation: { started: 0, applied: 0 } };
+
+function applyChecked(scope, list, seq) {
+  const tracker = checkedSeq[scope];
+  if (seq < tracker.applied) return;
+  tracker.applied = seq;
+  const set = new Set(list);
+  for (const [code, checked] of pendingChecks[scope]) {
+    if (checked) set.add(code); else set.delete(code);
+  }
+  state[CHECKED_VIEWS[scope].stateKey] = set;
+  CHECKED_VIEWS[scope].render();
+}
+
 async function loadChecked(scope) {
-  const view = CHECKED_VIEWS[scope];
+  const seq = ++checkedSeq[scope].started;
   try {
     let list = await relayChecked(scope);
     if (scope === "relation") {
@@ -250,22 +266,27 @@ async function loadChecked(scope) {
         localStorage.removeItem("mango-monitor-checked");
       }
     }
-    state[view.stateKey] = new Set(list);
-    view.render();
+    applyChecked(scope, list, seq);
   } catch (error) {
     console.warn("確認済を読み込めませんでした:", error.message);
   }
 }
 
 async function saveChecked(scope, productNumber, checked) {
-  const view = CHECKED_VIEWS[scope];
+  const pending = pendingChecks[scope];
+  pending.set(productNumber, checked);
+  const seq = ++checkedSeq[scope].started;
   try {
-    state[view.stateKey] = new Set(await relayChecked(scope, { action: "check", productNumber, checked }));
+    const list = await relayChecked(scope, { action: "check", productNumber, checked });
+    if (pending.get(productNumber) === checked) pending.delete(productNumber);
+    applyChecked(scope, list, seq);
   } catch (error) {
-    if (checked) state[view.stateKey].delete(productNumber); else state[view.stateKey].add(productNumber);
+    if (pending.get(productNumber) === checked) pending.delete(productNumber);
+    const set = state[CHECKED_VIEWS[scope].stateKey];
+    if (checked) set.delete(productNumber); else set.add(productNumber);
+    CHECKED_VIEWS[scope].render();
     alert(`確認済の保存に失敗しました。もう一度お試しください。(${error.message})`);
   }
-  view.render();
 }
 
 function watchChecked() {
