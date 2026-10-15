@@ -6,7 +6,29 @@
     "https://shop.mango.com/gb/en/h/women",
     "https://shop.mango.com/gb/en/c/women/new-now/56b5c5ed"
   ];
-  const MAX_PRODUCTS = 150;
+  // 毎日の自動収集(auto-global.ps1)のときだけ、カテゴリ別の一覧も収集する
+  const DAILY = window.__mangoDaily === true;
+  const CATEGORY_SOURCES = [
+    "https://shop.mango.com/gb/en/c/women/coats/d1b967bc",
+    "https://shop.mango.com/gb/en/c/women/jeans/164d8c42",
+    "https://shop.mango.com/gb/en/c/women/jumpers-and-cardigans/f9a8c868",
+    "https://shop.mango.com/gb/en/c/women/dresses-and-jumpsuits/e6bb8705",
+    "https://shop.mango.com/gb/en/c/women/jackets/5ef3ad3b",
+    "https://shop.mango.com/gb/en/c/women/trousers/0bf28b3b",
+    "https://shop.mango.com/gb/en/c/women/blazers/193c791e",
+    "https://shop.mango.com/gb/en/c/women/trench-coats-and-parkas/f899ebfd",
+    "https://shop.mango.com/gb/en/c/women/shirts---blouses/b8003173",
+    "https://shop.mango.com/gb/en/c/women/co-ords/0b7f9751",
+    "https://shop.mango.com/gb/en/c/women/skirts/a1a0d939",
+    "https://shop.mango.com/gb/en/c/women/tops/227371cd",
+    "https://shop.mango.com/gb/en/c/women/t-shirts/8e23bdfb",
+    "https://shop.mango.com/gb/en/c/women/knitting/7e46863e",
+    "https://shop.mango.com/gb/en/c/women/leather/59141c0c",
+    "https://shop.mango.com/gb/en/c/women/pyjamas/1ca642a2"
+  ];
+  if (DAILY) SOURCES.push(...CATEGORY_SOURCES);
+  const MAX_PRODUCTS = DAILY ? 240 : 150;
+  const HARD_CAP = 290;
   const SHOP = "https://shop.mango.com";
   const DELAY_MS = 400;
   const API = "https://online-orchestrator.mango.com/v4/products?channelId=shop&countryIso=GB&languageIso=en&productId=";
@@ -269,7 +291,12 @@
     products.push(product);
   };
 
-  const urls = [...new Set(pages.flatMap((page) => extractProductUrls(page.html)))].slice(0, MAX_PRODUCTS);
+  const pageUrls = pages.map((page) => extractProductUrls(page.html));
+  // 毎日の収集では、先頭の一覧だけで上限に達しないよう、一覧ごとに順番に取り出す
+  const ordered = DAILY
+    ? Array.from({ length: Math.max(0, ...pageUrls.map((list) => list.length)) }, (_, index) => pageUrls.map((list) => list[index])).flat().filter(Boolean)
+    : pageUrls.flat();
+  const urls = [...new Set(ordered)].slice(0, MAX_PRODUCTS);
   log(`[1/4] 商品ページ ${urls.length} 件を読み込みます`);
   let skipped = 0;
   let blocked = null;
@@ -329,7 +356,7 @@
   let japanAdded = 0;
   done = 0;
   await pool(japanTargets, 3, async (target) => {
-    if (blocked || japanAdded >= JAPAN_EXTRA) return;
+    if (blocked || japanAdded >= JAPAN_EXTRA || products.length >= HARD_CAP) return;
     const apiProduct = await fetchApiProduct(target.code, String(target.color).padStart(2, "0"));
     if (apiProduct) {
       try {

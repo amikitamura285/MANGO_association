@@ -87,6 +87,7 @@ function Download-Text([string]$url) {
 $StubJs = @'
 (() => {
   const ORIGIN = "https://amikitamura285.github.io";
+  window.__mangoDaily = true;
   const state = { raw: null, error: "", progress: "", steps: 0 };
   window.__auto = state;
   function buildContext() {
