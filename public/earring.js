@@ -40,7 +40,12 @@
       headers: { "content-type": "text/plain;charset=utf-8" },
       body: JSON.stringify(request)
     });
-    const body = await response.json();
+    let body;
+    try {
+      body = await response.json();
+    } catch (error) {
+      throw new Error("中継サーバー(Apps Script)がエラーを返しました。再デプロイが正しく反映されているか確認してください。");
+    }
     if (!body.ok) throw new Error(body.error || "処理できませんでした。");
     return body;
   }
@@ -51,12 +56,9 @@
     const height = fmt(Number(heightInput.value) / 10);
     const width = fmt(Number(widthInput.value) / 10);
     return [
-      "添付のピアスの商品画像と、モデルの着用写真を使って、このピアスを着用した画像を生成して。",
-      "・ピアスは商品画像のデザイン・形・色・金属の質感(光沢、ツヤ、細かい傷や彫りの陰影)を忠実に再現し、形を変えたり、装飾を足したりしない",
-      `・ピアスの実寸は横${width}cm×縦${height}cm。耳たぶ(約1.5cm)と比べた大きさを正確に守り、実寸より大きく・小さく描かない`,
-      "・耳とピアスを同じ光で自然に照らし、金属の反射、耳たぶへの小さな影も描く",
-      "・モデル、髪型、表情、服の色、背景はモデルの着用写真から変えない。ピアス以外は変更しない",
-      "・出力画像は、モデルの着用写真と同じ縦横比・構図にして、左右の白い余白もそのまま残す"
+      "次はこの写真のピアスの着用画像を生成して。質感も忠実に。",
+      `ピアスのサイズ：横${width}cm×縦${height}cm（耳たぶ1.5cmとして正確なサイズ感で）`,
+      "モデル：添付の着用写真を参考に、服の色は変更なし"
     ].join("\n");
   }
 
@@ -210,7 +212,10 @@
     const button = document.createElement("button");
     button.type = "button";
     button.textContent = "画像を保存";
-    button.addEventListener("click", () => saveBlob(found.base64, found.mime, `model_${item.productNumber}_${found.n}.${fileExt(found.mime)}`));
+    button.addEventListener("click", () => {
+      saveBlob(found.base64, found.mime, `model_${item.productNumber}_${found.n}.${fileExt(found.mime)}`);
+      markDownloaded(item.productNumber);
+    });
     figure.append(image, caption, button);
     return figure;
   }
@@ -218,6 +223,17 @@
   let modelRun = 0;
   let modelOffset = 0;
   const MODEL_BATCH = 30;
+  // 保存したことのあるモデル写真は、次回以降は出さない(このブラウザに記録)
+  const DOWNLOADED_KEY = "mango-earring-downloaded-models";
+  const downloadedModels = () => {
+    try { return new Set(JSON.parse(localStorage.getItem(DOWNLOADED_KEY) || "[]")); } catch (error) { return new Set(); }
+  };
+  const markDownloaded = (productNumber) => {
+    const set = downloadedModels();
+    set.add(productNumber);
+    try { localStorage.setItem(DOWNLOADED_KEY, JSON.stringify([...set].slice(-2000))); } catch (error) { /* 保存できない場合は記録しない */ }
+  };
+
   const leadingDigit = (value) => (String(value || "").match(/\d/) || [""])[0];
 
   async function showModels(fromStart = false) {
@@ -227,7 +243,8 @@
     setModelStatus("新着アイテムから、顔が写っている写真を探しています…");
     try {
       const digit = leadingDigit(loaded && loaded.brandItemNumber);
-      const pool = (await loadModelPool()).filter((item) => !digit || leadingDigit(item.brandItemNumber) === digit);
+      const downloaded = downloadedModels();
+      const pool = (await loadModelPool()).filter((item) => (!digit || leadingDigit(item.brandItemNumber) === digit) && !downloaded.has(item.productNumber));
       if (!pool.length) throw new Error("商品データが見つかりませんでした。");
       if (fromStart || modelOffset >= pool.length) modelOffset = 0;
       const candidates = pool.slice(modelOffset, modelOffset + MODEL_BATCH);
