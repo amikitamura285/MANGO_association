@@ -14,13 +14,23 @@
   const widthInput = $("earringWidth");
   const promptBox = $("earringPrompt");
   const copyButton = $("earringCopy");
+  const modelUrlInput = $("earringModelUrl");
+  const modelLoadButton = $("earringModelLoad");
+  const modelStatus = $("earringModelStatus");
+  const modelImages = $("earringModelImages");
 
   let loaded = null;
   let busy = false;
+  let modelBusy = false;
 
   const setStatus = (text, isError = false) => {
     status.textContent = text;
     status.classList.toggle("is-error", isError);
+  };
+
+  const setModelStatus = (text, isError = false) => {
+    modelStatus.textContent = text;
+    modelStatus.classList.toggle("is-error", isError);
   };
 
   async function callRelay(request) {
@@ -59,19 +69,38 @@
     setTimeout(() => URL.revokeObjectURL(link.href), 10000);
   }
 
-  async function saveImage(index, button) {
+  // 商品ページの画像を、中継サーバー経由で保存する
+  async function saveImage(pageUrl, index, prefix, button, report) {
     button.disabled = true;
     const label = button.textContent;
     button.textContent = "取得中…";
     try {
-      const body = await callRelay({ action: "earringImage", url: loaded.url, index });
-      const code = loaded.url.split("/").filter(Boolean).pop() || "earring";
-      saveBlob(body.image, body.mime, `${code}_${index + 1}.${body.mime.includes("png") ? "png" : body.mime.includes("webp") ? "webp" : "jpg"}`);
+      const body = await callRelay({ action: "earringImage", url: pageUrl, index });
+      const code = pageUrl.split("/").filter(Boolean).pop() || "image";
+      const ext = body.mime.includes("png") ? "png" : body.mime.includes("webp") ? "webp" : "jpg";
+      saveBlob(body.image, body.mime, `${prefix}${code}_${index + 1}.${ext}`);
     } catch (error) {
-      setStatus(`画像を保存できませんでした: ${error.message}`, true);
+      report(`画像を保存できませんでした: ${error.message}`, true);
     }
     button.textContent = label;
     button.disabled = false;
+  }
+
+  function renderImages(container, info, prefix, report) {
+    container.replaceChildren(...info.images.map((src, index) => {
+      const figure = document.createElement("figure");
+      const image = document.createElement("img");
+      image.src = src;
+      image.alt = info.name || "商品画像";
+      const caption = document.createElement("figcaption");
+      caption.textContent = `${index + 1}枚目`;
+      const button = document.createElement("button");
+      button.type = "button";
+      button.textContent = "画像を保存";
+      button.addEventListener("click", () => saveImage(info.url, index, prefix, button, report));
+      figure.append(image, caption, button);
+      return figure;
+    }));
   }
 
   async function loadProduct() {
@@ -90,20 +119,7 @@
       const info = await callRelay({ action: "earringInfo", url });
       loaded = info;
       nameLabel.textContent = info.name || "商品";
-      images.replaceChildren(...info.images.map((src, index) => {
-        const figure = document.createElement("figure");
-        const image = document.createElement("img");
-        image.src = src;
-        image.alt = info.name || "商品画像";
-        const button = document.createElement("button");
-        button.type = "button";
-        button.textContent = "画像を保存";
-        button.addEventListener("click", () => saveImage(index, button));
-        const caption = document.createElement("figcaption");
-        caption.textContent = index === 2 ? "モデル着用写真(3枚目)" : `商品画像(${index + 1}枚目)`;
-        figure.append(image, caption, button);
-        return figure;
-      }));
+      renderImages(images, info, "earring_", setStatus);
       heightInput.value = info.heightMm ?? "";
       widthInput.value = info.widthMm ?? "";
       sizeNote.textContent = info.sizeText
@@ -121,6 +137,30 @@
     busy = false;
   }
 
+  async function loadModel() {
+    if (modelBusy) return;
+    const url = modelUrlInput.value.trim();
+    if (!url) {
+      setModelStatus("モデル写真用の商品URLを入力してください。", true);
+      return;
+    }
+    modelBusy = true;
+    modelLoadButton.disabled = true;
+    modelLoadButton.textContent = "読み込み中…";
+    modelImages.replaceChildren();
+    setModelStatus("読み込んでいます…");
+    try {
+      const info = await callRelay({ action: "earringModel", url });
+      renderImages(modelImages, info, "model_", setModelStatus);
+      setModelStatus(`${info.name || "商品"} の画像です。顔が写っている写真を保存してください。`);
+    } catch (error) {
+      setModelStatus(`読み込めませんでした: ${error.message}`, true);
+    }
+    modelLoadButton.textContent = "写真を読み込む";
+    modelLoadButton.disabled = false;
+    modelBusy = false;
+  }
+
   async function copyPrompt() {
     try {
       await navigator.clipboard.writeText(promptBox.value);
@@ -134,6 +174,8 @@
 
   loadButton.addEventListener("click", loadProduct);
   urlInput.addEventListener("keydown", (event) => { if (event.key === "Enter") loadProduct(); });
+  modelLoadButton.addEventListener("click", loadModel);
+  modelUrlInput.addEventListener("keydown", (event) => { if (event.key === "Enter") loadModel(); });
   [heightInput, widthInput].forEach((input) => input.addEventListener("input", refreshPrompt));
   copyButton.addEventListener("click", copyPrompt);
 })();

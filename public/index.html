@@ -201,7 +201,7 @@
       <div class="relation-hero">
         <p class="eyebrow">EARRING PREVIEW</p>
         <h1>ピアス <em>着用イメージ</em></h1>
-        <p class="lead">MANGO日本サイトの商品URLを入れると、商品画像(1〜2枚目)・モデル着用写真(3枚目)とモチーフのサイズを読み取り、Geminiに貼り付ける指示文を作ります。<br>AIによる生成のため、実際の大きさと多少ずれることがあります(サイズ感の目安としてお使いください)。</p>
+        <p class="lead">MANGO日本サイトの商品URLを入れると、商品画像(1〜2枚目)とモチーフのサイズを読み取り、Geminiに貼り付ける指示文を作ります。<br>AIによる生成のため、実際の大きさと多少ずれることがあります(サイズ感の目安としてお使いください)。</p>
       </div>
       <div class="resize-tool">
         <div class="earring-url">
@@ -213,6 +213,14 @@
           <h2 id="earringName" class="resize-subhead">商品</h2>
           <div id="earringImages" class="earring-thumbs"></div>
           <p id="earringSizeNote" class="resize-note"></p>
+          <h2 class="resize-subhead">モデルの着用写真</h2>
+          <p class="resize-note">ワンピースなどの商品URLを入れると、その商品のモデル写真を選べます。顔が写っている写真を保存してください。</p>
+          <div class="earring-url">
+            <label class="resize-field"><span>モデル写真用の商品URL</span><input id="earringModelUrl" type="url" placeholder="https://japan.mango.com/commodity/…"></label>
+            <button id="earringModelLoad" type="button">写真を読み込む</button>
+          </div>
+          <p id="earringModelStatus" class="resize-note earring-status" role="status"></p>
+          <div id="earringModelImages" class="earring-thumbs"></div>
           <div class="resize-controls">
             <label class="resize-field"><span>縦 (mm)</span><input id="earringHeight" type="number" min="1" max="200" step="0.5"></label>
             <label class="resize-field"><span>横 (mm)</span><input id="earringWidth" type="number" min="1" max="200" step="0.5"></label>
@@ -224,8 +232,8 @@
             <a class="resize-download" href="https://gemini.google.com/app" target="_blank" rel="noopener">Geminiを開く</a>
           </div>
           <ol class="resize-note earring-steps">
-            <li>上の画像(商品画像とモデル着用写真)を「画像を保存」で保存する</li>
-            <li>「Geminiを開く」で開き、保存した画像をすべて添付する</li>
+            <li>商品画像2枚と、モデルの写真1枚を「画像を保存」で保存する</li>
+            <li>「Geminiを開く」で開き、保存した画像(商品画像2枚+モデルの写真)を添付する</li>
             <li>「指示文をコピー」で貼り付けて送信する(「画像を作成」の設定にしておく)。サイズを直した場合は、コピーし直す</li>
           </ol>
         </div>

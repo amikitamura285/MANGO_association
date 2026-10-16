@@ -63,6 +63,8 @@ function setChecked_(parsed) {
   return { ok: true, checked: list };
 }
 
+var EARRING_MAX_IMAGES = 6;
+
 function isEarringRequest_(e) {
   var body = e && e.postData ? e.postData.contents : "";
   return body.slice(0, 80).indexOf('"action":"earring') >= 0;
@@ -81,7 +83,7 @@ function decodeHtml_(text) {
   return String(text || "").replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">");
 }
 
-function earringImageUrls_(html, code) {
+function earringImageUrls_(html, code, limit) {
   var found = {};
   var pattern = new RegExp("https://[a-z0-9.-]*locondo\\.jp/[^\"'\\s<>]*" + code + "_(\\d+)_l\\.jpg", "gi");
   var match;
@@ -92,7 +94,7 @@ function earringImageUrls_(html, code) {
     if (og && /^https:\/\/[a-z0-9.-]*locondo\.jp\//i.test(og[1])) return [og[1]];
     return [];
   }
-  return numbers.slice(0, 3).map(function (n) { return found[n]; });
+  return numbers.slice(0, limit).map(function (n) { return found[n]; });
 }
 
 // "0.7×3.7"(cm)のような表記から [縦mm, 横mm] を作る。大きい方を縦(全長)にする
@@ -137,11 +139,11 @@ function fetchProductPage_(product) {
   return { html: html, name: title ? decodeHtml_(title[1]).replace(/\s+/g, " ").replace(/\s*\|\s*MANGO.*$/i, "").trim().slice(0, 120) : "" };
 }
 
-// 商品ページから、画像(1〜3枚目。3枚目がモデル着用写真)とモチーフのサイズを取得する
+// 商品ページから、画像(1〜2枚目)とモチーフのサイズを取得する
 function earringInfo_(parsed) {
   var product = parseJapanProductUrl_(parsed.url);
   var page = fetchProductPage_(product);
-  var images = earringImageUrls_(page.html, product.code);
+  var images = earringImageUrls_(page.html, product.code, 2);
   if (!images.length) fail_("商品ページから画像を取得できませんでした。");
   var motif = fetchMotifSize_(product);
   return {
@@ -156,11 +158,20 @@ function earringInfo_(parsed) {
   };
 }
 
+// モデルの着用写真用に、ワンピースなどの商品ページの画像一覧を返す(顔が写っているものを選べるよう、複数枚)
+function earringModel_(parsed) {
+  var product = parseJapanProductUrl_(parsed.url);
+  var page = fetchProductPage_(product);
+  var images = earringImageUrls_(page.html, product.code, EARRING_MAX_IMAGES);
+  if (!images.length) fail_("商品ページから画像を取得できませんでした。");
+  return { ok: true, url: product.url, name: page.name, images: images };
+}
+
 // 商品画像を1枚返す(ブラウザから直接は保存できないため、中継して渡す)
 function earringImage_(parsed) {
   var product = parseJapanProductUrl_(parsed.url);
   var page = fetchProductPage_(product);
-  var urls = earringImageUrls_(page.html, product.code);
+  var urls = earringImageUrls_(page.html, product.code, EARRING_MAX_IMAGES);
   var index = Number(parsed.index);
   if (!(index >= 0 && index < urls.length)) fail_("画像の指定が正しくありません。");
   if (!/^https:\/\/[a-z0-9.-]*locondo\.jp\//i.test(urls[index])) fail_("画像の取得先が正しくありません。");
@@ -179,6 +190,7 @@ function handleEarring_(e) {
     var parsed;
     try { parsed = JSON.parse(body); } catch (error) { fail_("JSONの形式が正しくありません。"); }
     if (parsed.action === "earringInfo") return json_(earringInfo_(parsed));
+    if (parsed.action === "earringModel") return json_(earringModel_(parsed));
     if (parsed.action === "earringImage") return json_(earringImage_(parsed));
     fail_("操作が正しくありません。");
   } catch (error) {
