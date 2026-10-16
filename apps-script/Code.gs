@@ -63,57 +63,9 @@ function setChecked_(parsed) {
   return { ok: true, checked: list };
 }
 
-var EARRING_DAILY_LIMIT = 40;
-var EARRING_DAY_KEY = "EARRING_DAY";
-var DEFAULT_GEMINI_MODEL = "gemini-2.5-flash-image";
-
 function isEarringRequest_(e) {
   var body = e && e.postData ? e.postData.contents : "";
   return body.slice(0, 80).indexOf('"action":"earring') >= 0;
-}
-
-// 利用回数を1日の上限で数える(日本時間で日替わり)。上限を超えていたら null
-function reserveEarringQuota_() {
-  var lock = LockService.getScriptLock();
-  if (!lock.tryLock(10000)) fail_("混み合っています。少し待ってからもう一度お試しください。");
-  try {
-    var props = PropertiesService.getScriptProperties();
-    var today = Utilities.formatDate(new Date(), "Asia/Tokyo", "yyyy-MM-dd");
-    var state;
-    try { state = JSON.parse(props.getProperty(EARRING_DAY_KEY) || "{}"); } catch (error) { state = {}; }
-    if (state.date !== today) state = { date: today, count: 0 };
-    if (state.count >= EARRING_DAILY_LIMIT) return null;
-    state.count += 1;
-    props.setProperty(EARRING_DAY_KEY, JSON.stringify(state));
-    return EARRING_DAILY_LIMIT - state.count;
-  } finally {
-    lock.releaseLock();
-  }
-}
-
-function refundEarringQuota_() {
-  var lock = LockService.getScriptLock();
-  if (!lock.tryLock(10000)) return;
-  try {
-    var props = PropertiesService.getScriptProperties();
-    var state = JSON.parse(props.getProperty(EARRING_DAY_KEY) || "{}");
-    if (state.count > 0) {
-      state.count -= 1;
-      props.setProperty(EARRING_DAY_KEY, JSON.stringify(state));
-    }
-  } catch (error) {
-  } finally {
-    lock.releaseLock();
-  }
-}
-
-function earringPrompt_(heightMm, widthMm) {
-  return [
-    "Create a photorealistic, high-quality close-up photo of the side of a woman's head, with her hair tucked back so one ear and earlobe are fully visible, wearing the earring shown in the attached product photos (the photos show the same earring).",
-    "Reproduce the earring's exact design, shape, color, material and finish from the photos. Do not add or change any details.",
-    "The real earring measures " + heightMm + " mm tall and " + widthMm + " mm wide. Render it at exactly that scale relative to the ear: an adult earlobe is about 20 mm tall and the whole ear about 60 mm tall.",
-    "Soft natural studio lighting, plain neutral background, no text, no watermark, no other jewelry. Show only one ear."
-  ].join(" ");
 }
 
 // 日本のMANGOの商品ページだけを受け付ける(任意のURLを取りに行かせない)
@@ -185,7 +137,7 @@ function fetchProductPage_(product) {
   return { html: html, name: title ? decodeHtml_(title[1]).replace(/\s+/g, " ").replace(/\s*\|\s*MANGO.*$/i, "").trim().slice(0, 120) : "" };
 }
 
-// 商品ページから、画像(1〜2枚目)とモチーフのサイズを取得する。AIは使わない
+// 商品ページから、画像(1〜2枚目)とモチーフのサイズを取得する
 function earringInfo_(parsed) {
   var product = parseJapanProductUrl_(parsed.url);
   var page = fetchProductPage_(product);
@@ -204,61 +156,19 @@ function earringInfo_(parsed) {
   };
 }
 
-function imagePart_(url) {
-  if (!/^https:\/\/[a-z0-9.-]*locondo\.jp\//i.test(url)) fail_("画像の取得先が正しくありません。");
-  var response = UrlFetchApp.fetch(url, { muteHttpExceptions: true });
+// 商品画像を1枚返す(ブラウザから直接は保存できないため、中継して渡す)
+function earringImage_(parsed) {
+  var product = parseJapanProductUrl_(parsed.url);
+  var page = fetchProductPage_(product);
+  var urls = earringImageUrls_(page.html, product.code);
+  var index = Number(parsed.index);
+  if (!(index >= 0 && index < urls.length)) fail_("画像の指定が正しくありません。");
+  if (!/^https:\/\/[a-z0-9.-]*locondo\.jp\//i.test(urls[index])) fail_("画像の取得先が正しくありません。");
+  var response = UrlFetchApp.fetch(urls[index], { muteHttpExceptions: true });
   if (response.getResponseCode() !== 200) fail_("商品画像を取得できませんでした。");
   var blob = response.getBlob();
   var mime = blob.getContentType() || "image/jpeg";
-  return { inline_data: { mime_type: /^image\/(jpeg|png|webp)$/.test(mime) ? mime : "image/jpeg", data: Utilities.base64Encode(blob.getBytes()) } };
-}
-
-function earringGenerate_(parsed) {
-  var heightMm = Number(parsed.heightMm);
-  var widthMm = Number(parsed.widthMm);
-  if (!(heightMm >= 1 && heightMm <= 200 && widthMm >= 1 && widthMm <= 200)) fail_("サイズは1〜200mmで入力してください。");
-  var product = parseJapanProductUrl_(parsed.url);
-
-  var props = PropertiesService.getScriptProperties();
-  var key = props.getProperty("GEMINI_API_KEY");
-  if (!key) fail_("サーバーにGEMINI_API_KEYが設定されていません。");
-  var model = props.getProperty("GEMINI_MODEL") || DEFAULT_GEMINI_MODEL;
-
-  var page = fetchProductPage_(product);
-  var imageUrls = earringImageUrls_(page.html, product.code);
-  if (!imageUrls.length) fail_("商品ページから画像を取得できませんでした。");
-  var parts = [{ text: earringPrompt_(Math.round(heightMm * 10) / 10, Math.round(widthMm * 10) / 10) }].concat(imageUrls.map(imagePart_));
-
-  var remaining = reserveEarringQuota_();
-  if (remaining === null) fail_("本日の生成回数の上限(" + EARRING_DAILY_LIMIT + "回)に達しました。明日またお試しください。");
-
-  try {
-    var response = UrlFetchApp.fetch("https://generativelanguage.googleapis.com/v1beta/models/" + encodeURIComponent(model) + ":generateContent", {
-      method: "post",
-      contentType: "application/json",
-      muteHttpExceptions: true,
-      headers: { "x-goog-api-key": key },
-      payload: JSON.stringify({ contents: [{ parts: parts }], generationConfig: { responseModalities: ["TEXT", "IMAGE"] } })
-    });
-    var code = response.getResponseCode();
-    if (code !== 200) {
-      console.error("Gemini error " + code + ": " + response.getContentText().slice(0, 500));
-      if (code === 429) fail_("AIの利用が集中しています。しばらくしてからもう一度お試しください。");
-      fail_("画像を生成できませんでした(" + code + ")。");
-    }
-    var data = JSON.parse(response.getContentText());
-    var outParts = (data.candidates && data.candidates[0] && data.candidates[0].content && data.candidates[0].content.parts) || [];
-    for (var i = 0; i < outParts.length; i += 1) {
-      var inline = outParts[i].inlineData || outParts[i].inline_data;
-      if (inline && inline.data) {
-        return { ok: true, image: inline.data, mime: inline.mimeType || inline.mime_type || "image/png", remaining: remaining };
-      }
-    }
-    fail_("画像を生成できませんでした。別の商品でお試しください。");
-  } catch (error) {
-    refundEarringQuota_();
-    throw error;
-  }
+  return { ok: true, mime: /^image\/(jpeg|png|webp)$/.test(mime) ? mime : "image/jpeg", image: Utilities.base64Encode(blob.getBytes()) };
 }
 
 // 他の操作(確認済の保存など)を止めないよう、全体のロックは使わない
@@ -269,7 +179,7 @@ function handleEarring_(e) {
     var parsed;
     try { parsed = JSON.parse(body); } catch (error) { fail_("JSONの形式が正しくありません。"); }
     if (parsed.action === "earringInfo") return json_(earringInfo_(parsed));
-    if (parsed.action === "earring") return json_(earringGenerate_(parsed));
+    if (parsed.action === "earringImage") return json_(earringImage_(parsed));
     fail_("操作が正しくありません。");
   } catch (error) {
     if (error && error.validation) return json_({ ok: false, error: error.message });

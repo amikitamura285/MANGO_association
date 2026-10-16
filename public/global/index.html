@@ -201,7 +201,7 @@
       <div class="relation-hero">
         <p class="eyebrow">EARRING PREVIEW</p>
         <h1>ピアス <em>着用イメージ</em></h1>
-        <p class="lead">MANGO日本サイトの商品URLを入れると、商品画像(1〜2枚目)とモチーフのサイズを読み取り、AIが耳に着けた画像を作ります。<br>AIによる生成のため、実際の大きさと多少ずれることがあります(サイズ感の目安としてお使いください)。</p>
+        <p class="lead">MANGO日本サイトの商品URLを入れると、商品画像(1〜2枚目)とモチーフのサイズを読み取り、Geminiに貼り付ける指示文を作ります。<br>AIによる生成のため、実際の大きさと多少ずれることがあります(サイズ感の目安としてお使いください)。</p>
       </div>
       <div class="resize-tool">
         <div class="earring-url">
@@ -209,26 +209,25 @@
           <button id="earringLoad" type="button">読み込む</button>
         </div>
         <p id="earringStatus" class="resize-note earring-status" role="status"></p>
-        <div id="earringProduct" class="earring-grid" hidden>
-          <div class="earring-panel">
-            <h2 id="earringName" class="resize-subhead">商品</h2>
-            <div id="earringImages" class="earring-thumbs"></div>
-            <p id="earringSizeNote" class="resize-note"></p>
-            <div class="resize-controls">
-              <label class="resize-field"><span>縦 (mm)</span><input id="earringHeight" type="number" min="1" max="200" step="0.5"></label>
-              <label class="resize-field"><span>横 (mm)</span><input id="earringWidth" type="number" min="1" max="200" step="0.5"></label>
-            </div>
-            <div class="resize-actions">
-              <button id="earringGenerate" type="button">着用画像を生成</button>
-            </div>
+        <div id="earringProduct" class="earring-panel" hidden>
+          <h2 id="earringName" class="resize-subhead">商品</h2>
+          <div id="earringImages" class="earring-thumbs"></div>
+          <p id="earringSizeNote" class="resize-note"></p>
+          <div class="resize-controls">
+            <label class="resize-field"><span>縦 (mm)</span><input id="earringHeight" type="number" min="1" max="200" step="0.5"></label>
+            <label class="resize-field"><span>横 (mm)</span><input id="earringWidth" type="number" min="1" max="200" step="0.5"></label>
           </div>
-          <div id="earringResult" class="earring-panel" hidden>
-            <h2 class="resize-subhead">着用イメージ</h2>
-            <img id="earringResultImage" class="earring-image" alt="生成された着用画像">
-            <div class="resize-actions">
-              <a id="earringDownload" class="resize-download" href="#" download>ダウンロード</a>
-            </div>
+          <h2 class="resize-subhead">Geminiに貼り付ける指示文</h2>
+          <textarea id="earringPrompt" class="earring-prompt" rows="9" readonly></textarea>
+          <div class="resize-actions">
+            <button id="earringCopy" type="button">指示文をコピー</button>
+            <a class="resize-download" href="https://gemini.google.com/app" target="_blank" rel="noopener">Geminiを開く</a>
           </div>
+          <ol class="resize-note earring-steps">
+            <li>上の画像2枚を「画像を保存」で保存する</li>
+            <li>「Geminiを開く」で開き、保存した画像2枚を添付する</li>
+            <li>「指示文をコピー」で貼り付けて送信する(「画像を作成」の設定にしておく)</li>
+          </ol>
         </div>
       </div>
     </section>

@@ -82,13 +82,13 @@ GitHubリポジトリにこのフォルダーをPushし、リポジトリの `Se
 - 試し実行(公開せず収集だけ): `powershell -ExecutionPolicy Bypass -File scripts\auto-global.ps1 -DryRun`
 - PCにログインしている間だけ動きます。電源が入っていなかった場合は、次に起動したときに実行されます。1日1回成功したらその日は再実行しません(`-Force` で強制)。
 
-### ピアス着用イメージ(AI画像生成)
+### ピアス着用イメージ
 
-`/earring/` のタブは、MANGO日本サイトの商品URLから、商品画像(1〜2枚目)と「モチーフのサイズ」を中継サーバーが読み取り、Gemini(画像生成)で耳に着けた画像を作ります。読み取ったサイズ(cm)は大きい方を縦・小さい方を横にして入力欄に入るので、向きが違う場合は画面上で直せます。受け付けるのは `https://japan.mango.com/commodity/…` のURLだけです。キーはページに置かず、中継サーバーが代わりに呼び出します。
+`/earring/` のタブは、MANGO日本サイトの商品URLから、商品画像(1〜2枚目)と「モチーフのサイズ」を中継サーバーが読み取り、Geminiに貼り付ける指示文を作ります。画像を保存して、GeminiのサイトでAI画像を手動で生成します(APIは使わないため、課金は不要です)。
 
-- Apps Script の「プロジェクトの設定」→「スクリプト プロパティ」に `GEMINI_API_KEY`(Google AI Studio で発行)を追加し、`Code.gs` を貼り付けて再デプロイします。
-- 使うモデルは既定で `gemini-2.5-flash-image` です。変える場合はスクリプト プロパティ `GEMINI_MODEL` に指定します。
-- 利用料はキーの持ち主にかかります。URLを知っていれば誰でも使えるため、`Code.gs` の `EARRING_DAILY_LIMIT`(既定は1日40回、日本時間で日替わり)で上限を設けています。
+- 読み取ったサイズ(cm)は、大きい方を縦・小さい方を横にして入力欄に入ります。向きが違う場合は画面上で直せます。
+- 受け付けるのは `https://japan.mango.com/commodity/…` のURLだけです。
+- 中継サーバー(`apps-script/Code.gs`)の `earringInfo` / `earringImage` が商品ページと画像を取得します。APIキーの設定は不要です。
 
 ### 中継サーバー(Google Apps Script)のセットアップ(最初の1回、インストール不要)
 
