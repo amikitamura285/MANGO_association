@@ -14,14 +14,15 @@
   const widthInput = $("earringWidth");
   const promptBox = $("earringPrompt");
   const copyButton = $("earringCopy");
-  const modelUrlInput = $("earringModelUrl");
-  const modelLoadButton = $("earringModelLoad");
+  const modelShuffle = $("earringModelShuffle");
   const modelStatus = $("earringModelStatus");
   const modelImages = $("earringModelImages");
 
   let loaded = null;
   let busy = false;
-  let modelBusy = false;
+  let modelPool = null;
+  const MODEL_COUNT = 8;
+  const MODEL_PATTERN = /ワンピース|トップス|シャツ|ブラウス|セーター|ニット|カーディガン|ジャケット|ブレザー|コート|カットソー/;
 
   const setStatus = (text, isError = false) => {
     status.textContent = text;
@@ -69,16 +70,18 @@
     setTimeout(() => URL.revokeObjectURL(link.href), 10000);
   }
 
-  // 商品ページの画像を、中継サーバー経由で保存する
-  async function saveImage(pageUrl, index, prefix, button, report) {
+  function fileExt(mime) {
+    return mime.includes("png") ? "png" : mime.includes("webp") ? "webp" : "jpg";
+  }
+
+  // 画像を、中継サーバー経由で保存する
+  async function saveVia(request, fileName, button, report) {
     button.disabled = true;
     const label = button.textContent;
     button.textContent = "取得中…";
     try {
-      const body = await callRelay({ action: "earringImage", url: pageUrl, index });
-      const code = pageUrl.split("/").filter(Boolean).pop() || "image";
-      const ext = body.mime.includes("png") ? "png" : body.mime.includes("webp") ? "webp" : "jpg";
-      saveBlob(body.image, body.mime, `${prefix}${code}_${index + 1}.${ext}`);
+      const body = await callRelay(request);
+      saveBlob(body.image, body.mime, `${fileName}.${fileExt(body.mime)}`);
     } catch (error) {
       report(`画像を保存できませんでした: ${error.message}`, true);
     }
@@ -86,7 +89,7 @@
     button.disabled = false;
   }
 
-  function renderImages(container, info, prefix, report) {
+  function renderImages(container, info, report) {
     container.replaceChildren(...info.images.map((src, index) => {
       const figure = document.createElement("figure");
       const image = document.createElement("img");
@@ -97,7 +100,8 @@
       const button = document.createElement("button");
       button.type = "button";
       button.textContent = "画像を保存";
-      button.addEventListener("click", () => saveImage(info.url, index, prefix, button, report));
+      const code = info.url.split("/").filter(Boolean).pop() || "image";
+      button.addEventListener("click", () => saveVia({ action: "earringImage", url: info.url, index }, `earring_${code}_${index + 1}`, button, report));
       figure.append(image, caption, button);
       return figure;
     }));
@@ -119,7 +123,7 @@
       const info = await callRelay({ action: "earringInfo", url });
       loaded = info;
       nameLabel.textContent = info.name || "商品";
-      renderImages(images, info, "earring_", setStatus);
+      renderImages(images, info, setStatus);
       heightInput.value = info.heightMm ?? "";
       widthInput.value = info.widthMm ?? "";
       sizeNote.textContent = info.sizeText
@@ -127,6 +131,7 @@
         : "商品ページにモチーフのサイズが見つかりませんでした。縦と横(mm)を入力してください。";
       refreshPrompt();
       product.hidden = false;
+      if (!modelImages.children.length) showModels();
       setStatus("");
     } catch (error) {
       loaded = null;
@@ -137,28 +142,44 @@
     busy = false;
   }
 
-  async function loadModel() {
-    if (modelBusy) return;
-    const url = modelUrlInput.value.trim();
-    if (!url) {
-      setModelStatus("モデル写真用の商品URLを入力してください。", true);
-      return;
-    }
-    modelBusy = true;
-    modelLoadButton.disabled = true;
-    modelLoadButton.textContent = "読み込み中…";
-    modelImages.replaceChildren();
-    setModelStatus("読み込んでいます…");
+  // 日本サイトの商品一覧(japan-index.json)から、ワンピースやトップスなどをランダムに選ぶ
+  async function loadModelPool() {
+    if (modelPool) return modelPool;
+    const response = await fetch(`${dataPathPrefix}japan-index.json?v=${Date.now()}`, { cache: "no-store" });
+    const data = await response.json();
+    modelPool = (data.products || []).filter((item) => MODEL_PATTERN.test(item.name || "") && /^[A-Z]{2}[A-Za-z0-9]+$/.test(item.productNumber || ""));
+    return modelPool;
+  }
+
+  const modelImageUrl = (item) => `https://sc3.locondo.jp/contents/commodity_image/${item.productNumber.slice(0, 2)}/${item.productNumber}_1_l.jpg`;
+
+  async function showModels() {
+    modelShuffle.disabled = true;
+    setModelStatus("探しています…");
     try {
-      const info = await callRelay({ action: "earringModel", url });
-      renderImages(modelImages, info, "model_", setModelStatus);
-      setModelStatus(`${info.name || "商品"} の画像です。顔が写っている写真を保存してください。`);
+      const pool = await loadModelPool();
+      if (!pool.length) throw new Error("商品データが見つかりませんでした。");
+      const picked = [...pool].sort(() => Math.random() - 0.5).slice(0, MODEL_COUNT);
+      modelImages.replaceChildren(...picked.map((item) => {
+        const figure = document.createElement("figure");
+        const image = document.createElement("img");
+        image.src = modelImageUrl(item);
+        image.alt = item.name;
+        image.loading = "lazy";
+        const caption = document.createElement("figcaption");
+        caption.textContent = item.name.replace(/\s*\.--\s*/, " ").slice(0, 24);
+        const button = document.createElement("button");
+        button.type = "button";
+        button.textContent = "画像を保存";
+        button.addEventListener("click", () => saveVia({ action: "earringPhoto", imageUrl: modelImageUrl(item) }, `model_${item.productNumber}`, button, setModelStatus));
+        figure.append(image, caption, button);
+        return figure;
+      }));
+      setModelStatus("");
     } catch (error) {
-      setModelStatus(`読み込めませんでした: ${error.message}`, true);
+      setModelStatus(`写真を探せませんでした: ${error.message}`, true);
     }
-    modelLoadButton.textContent = "写真を読み込む";
-    modelLoadButton.disabled = false;
-    modelBusy = false;
+    modelShuffle.disabled = false;
   }
 
   async function copyPrompt() {
@@ -174,8 +195,8 @@
 
   loadButton.addEventListener("click", loadProduct);
   urlInput.addEventListener("keydown", (event) => { if (event.key === "Enter") loadProduct(); });
-  modelLoadButton.addEventListener("click", loadModel);
-  modelUrlInput.addEventListener("keydown", (event) => { if (event.key === "Enter") loadModel(); });
+  modelShuffle.addEventListener("click", showModels);
+
   [heightInput, widthInput].forEach((input) => input.addEventListener("input", refreshPrompt));
   copyButton.addEventListener("click", copyPrompt);
 })();

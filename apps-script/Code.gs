@@ -63,8 +63,6 @@ function setChecked_(parsed) {
   return { ok: true, checked: list };
 }
 
-var EARRING_MAX_IMAGES = 6;
-
 function isEarringRequest_(e) {
   var body = e && e.postData ? e.postData.contents : "";
   return body.slice(0, 80).indexOf('"action":"earring') >= 0;
@@ -158,24 +156,26 @@ function earringInfo_(parsed) {
   };
 }
 
-// モデルの着用写真用に、ワンピースなどの商品ページの画像一覧を返す(顔が写っているものを選べるよう、複数枚)
-function earringModel_(parsed) {
-  var product = parseJapanProductUrl_(parsed.url);
-  var page = fetchProductPage_(product);
-  var images = earringImageUrls_(page.html, product.code, EARRING_MAX_IMAGES);
-  if (!images.length) fail_("商品ページから画像を取得できませんでした。");
-  return { ok: true, url: product.url, name: page.name, images: images };
-}
-
 // 商品画像を1枚返す(ブラウザから直接は保存できないため、中継して渡す)
 function earringImage_(parsed) {
   var product = parseJapanProductUrl_(parsed.url);
   var page = fetchProductPage_(product);
-  var urls = earringImageUrls_(page.html, product.code, EARRING_MAX_IMAGES);
+  var urls = earringImageUrls_(page.html, product.code, 2);
   var index = Number(parsed.index);
   if (!(index >= 0 && index < urls.length)) fail_("画像の指定が正しくありません。");
-  if (!/^https:\/\/[a-z0-9.-]*locondo\.jp\//i.test(urls[index])) fail_("画像の取得先が正しくありません。");
-  var response = UrlFetchApp.fetch(urls[index], { muteHttpExceptions: true });
+  return fetchLocondoImage_(urls[index]);
+}
+
+// 画像のURLを直接指定して1枚返す(モデルの着用写真用)。MANGOの商品画像のURLだけを受け付ける
+function earringPhoto_(parsed) {
+  var url = typeof parsed.imageUrl === "string" ? parsed.imageUrl.trim() : "";
+  if (!/^https:\/\/sc3\.locondo\.jp\/contents\/commodity_image\/[A-Za-z0-9]{2}\/[A-Za-z0-9]+_\d{1,2}_l\.jpg$/.test(url)) fail_("画像のURLが正しくありません。");
+  return fetchLocondoImage_(url);
+}
+
+function fetchLocondoImage_(url) {
+  if (!/^https:\/\/[a-z0-9.-]*locondo\.jp\//i.test(url)) fail_("画像の取得先が正しくありません。");
+  var response = UrlFetchApp.fetch(url, { muteHttpExceptions: true });
   if (response.getResponseCode() !== 200) fail_("商品画像を取得できませんでした。");
   var blob = response.getBlob();
   var mime = blob.getContentType() || "image/jpeg";
@@ -190,7 +190,7 @@ function handleEarring_(e) {
     var parsed;
     try { parsed = JSON.parse(body); } catch (error) { fail_("JSONの形式が正しくありません。"); }
     if (parsed.action === "earringInfo") return json_(earringInfo_(parsed));
-    if (parsed.action === "earringModel") return json_(earringModel_(parsed));
+    if (parsed.action === "earringPhoto") return json_(earringPhoto_(parsed));
     if (parsed.action === "earringImage") return json_(earringImage_(parsed));
     fail_("操作が正しくありません。");
   } catch (error) {
