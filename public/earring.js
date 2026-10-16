@@ -37,14 +37,13 @@
   const fmt = (value) => (Number.isFinite(value) && value > 0 ? String(Math.round(value * 10) / 10) : "?");
 
   function buildPrompt() {
-    const height = fmt(Number(heightInput.value));
-    const width = fmt(Number(widthInput.value));
+    const height = fmt(Number(heightInput.value) / 10);
+    const width = fmt(Number(widthInput.value) / 10);
     return [
-      "Create a photorealistic, high-quality close-up photo of the side of a woman's head, with her hair tucked back so one ear and earlobe are fully visible, wearing the earring shown in the attached product photos (the photos show the same earring).",
-      "Reproduce the earring's exact design, shape, color, material and finish from the photos. Do not add or change any details.",
-      `The real earring measures ${height} mm tall and ${width} mm wide. Render it at exactly that scale relative to the ear: an adult earlobe is about 20 mm tall and the whole ear about 60 mm tall.`,
-      "Soft natural studio lighting, plain neutral background, no text, no watermark, no other jewelry. Show only one ear."
-    ].join("\n\n");
+      "次はこの写真のピアスの着用画像を生成して。質感も忠実に。",
+      `ピアスのサイズ：横${width}cm×縦${height}cm`,
+      "モデル：添付の着用写真を参考に、服の色は変更なし"
+    ].join("\n");
   }
 
   const refreshPrompt = () => { promptBox.value = buildPrompt(); };
