@@ -122,6 +122,8 @@
     try {
       const info = await callRelay({ action: "earringInfo", url });
       loaded = info;
+      modelOffset = 0;
+      modelImages.replaceChildren();
       nameLabel.textContent = info.name || "商品";
       renderImages(images, info, setStatus);
       heightInput.value = info.heightMm ?? "";
@@ -213,13 +215,16 @@
   let modelRun = 0;
   let modelOffset = 0;
   const MODEL_BATCH = 30;
+  const leadingDigit = (value) => (String(value || "").match(/\d/) || [""])[0];
+
   async function showModels(fromStart = false) {
     const run = ++modelRun;
     modelShuffle.disabled = true;
     modelImages.replaceChildren();
     setModelStatus("新着アイテムから、顔が写っている写真を探しています…");
     try {
-      const pool = await loadModelPool();
+      const digit = leadingDigit(loaded && loaded.brandItemNumber);
+      const pool = (await loadModelPool()).filter((item) => !digit || leadingDigit(item.brandItemNumber) === digit);
       if (!pool.length) throw new Error("商品データが見つかりませんでした。");
       if (fromStart || modelOffset >= pool.length) modelOffset = 0;
       const candidates = pool.slice(modelOffset, modelOffset + MODEL_BATCH);
@@ -267,7 +272,7 @@
       if (run !== modelRun) return;
       if (!found.length) throw new Error("条件に合う写真が見つかりませんでした。もう一度お試しください。");
       setModelStatus(detector
-        ? "新着アイテム順に、顔が写っている写真を並べています(耳が見えるかは写真により異なります)。使いたい写真を「画像を保存」してください。「次の写真を探す」で、さらに古いアイテムの写真を表示します。"
+        ? `${digit ? `ブランド商品番号が「${digit}」で始まる` : ""}新着アイテム順に、顔が写っている写真を並べています(耳が見えるかは写真により異なります)。使いたい写真を「画像を保存」してください。「次の写真を探す」で、さらに古いアイテムの写真を表示します。`
         : "顔の判定を読み込めなかったため、判定なしで表示しています。顔が写っている写真を選んでください。");
     } catch (error) {
       setModelStatus(`写真を探せませんでした: ${error.message}`, true);

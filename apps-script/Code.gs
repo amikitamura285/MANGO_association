@@ -137,6 +137,14 @@ function fetchProductPage_(product) {
   return { html: html, name: title ? decodeHtml_(title[1]).replace(/\s+/g, " ").replace(/\s*\|\s*MANGO.*$/i, "").trim().slice(0, 120) : "" };
 }
 
+// 商品ページの「ブランド商品番号」(例: 17061154 99 色 …)を返す。見つからなければ空
+function brandItemNumber_(html) {
+  var row = html.match(/<tr[^>]*class=["'][^"']*-brandItemCode[^"']*["'][^>]*>([\s\S]*?)<\/tr>/i);
+  if (!row) return "";
+  var cell = row[1].replace(/<th[\s\S]*?<\/th>/i, "").replace(/<[^>]+>/g, " ");
+  return decodeHtml_(cell).replace(/\s+/g, " ").trim().slice(0, 60);
+}
+
 // 商品ページから、画像(1〜2枚目)とモチーフのサイズを取得する
 function earringInfo_(parsed) {
   var product = parseJapanProductUrl_(parsed.url);
@@ -148,6 +156,7 @@ function earringInfo_(parsed) {
     ok: true,
     url: product.url,
     name: page.name,
+    brandItemNumber: brandItemNumber_(page.html),
     images: images,
     sizeLabel: motif ? motif.label : "",
     sizeText: motif ? motif.text : "",
