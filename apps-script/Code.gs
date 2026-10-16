@@ -168,9 +168,28 @@ function earringImage_(parsed) {
 
 // 画像のURLを直接指定して1枚返す(モデルの着用写真用)。MANGOの商品画像のURLだけを受け付ける
 function earringPhoto_(parsed) {
-  var url = typeof parsed.imageUrl === "string" ? parsed.imageUrl.trim() : "";
+  return fetchLocondoImage_(photoUrl_(parsed.imageUrl));
+}
+
+function photoUrl_(value) {
+  var url = typeof value === "string" ? value.trim() : "";
   if (!/^https:\/\/sc3\.locondo\.jp\/contents\/commodity_image\/[A-Za-z0-9]{2}\/[A-Za-z0-9]+_\d{1,2}_l\.jpg$/.test(url)) fail_("画像のURLが正しくありません。");
-  return fetchLocondoImage_(url);
+  return url;
+}
+
+// 画像を最大6枚まとめて取得する(存在しない番号は結果に含めない)
+function earringPhotos_(parsed) {
+  var urls = Array.isArray(parsed.imageUrls) ? parsed.imageUrls.slice(0, 6).map(photoUrl_) : [];
+  if (!urls.length) fail_("画像のURLが正しくありません。");
+  var responses = UrlFetchApp.fetchAll(urls.map(function (url) { return { url: url, muteHttpExceptions: true }; }));
+  var photos = [];
+  responses.forEach(function (response, i) {
+    if (response.getResponseCode() !== 200) return;
+    var blob = response.getBlob();
+    var mime = blob.getContentType() || "image/jpeg";
+    photos.push({ url: urls[i], mime: /^image\/(jpeg|png|webp)$/.test(mime) ? mime : "image/jpeg", image: Utilities.base64Encode(blob.getBytes()) });
+  });
+  return { ok: true, photos: photos };
 }
 
 function fetchLocondoImage_(url) {
@@ -191,6 +210,7 @@ function handleEarring_(e) {
     try { parsed = JSON.parse(body); } catch (error) { fail_("JSONの形式が正しくありません。"); }
     if (parsed.action === "earringInfo") return json_(earringInfo_(parsed));
     if (parsed.action === "earringPhoto") return json_(earringPhoto_(parsed));
+    if (parsed.action === "earringPhotos") return json_(earringPhotos_(parsed));
     if (parsed.action === "earringImage") return json_(earringImage_(parsed));
     fail_("操作が正しくありません。");
   } catch (error) {

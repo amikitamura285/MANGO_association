@@ -151,35 +151,118 @@
     return modelPool;
   }
 
-  const modelImageUrl = (item) => `https://sc3.locondo.jp/contents/commodity_image/${item.productNumber.slice(0, 2)}/${item.productNumber}_1_l.jpg`;
+  const modelImageUrl = (item, n) => `https://sc3.locondo.jp/contents/commodity_image/${item.productNumber.slice(0, 2)}/${item.productNumber}_${n}_l.jpg`;
 
+  // 顔の検出(MediaPipe)。読み込めない環境では null を返し、判定なしで表示する
+  let detectorPromise = null;
+  function loadDetector() {
+    if (!detectorPromise) {
+      detectorPromise = (async () => {
+        const base = "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14";
+        const { FaceDetector, FilesetResolver } = await import(`${base}/vision_bundle.mjs`);
+        const fileset = await FilesetResolver.forVisionTasks(`${base}/wasm`);
+        return FaceDetector.createFromOptions(fileset, {
+          baseOptions: { modelAssetPath: "https://storage.googleapis.com/mediapipe-models/face_detector/blaze_face_short_range/float16/1/blaze_face_short_range.tflite" },
+          runningMode: "IMAGE",
+          minDetectionConfidence: 0.6
+        });
+      })().catch(() => null);
+    }
+    return detectorPromise;
+  }
+
+  // 顔がはっきり写っている写真か判定し、点数(大きい顔・横向きほど高い)を返す。写っていなければ 0
+  function faceScore(detector, bitmap) {
+    const detections = detector.detect(bitmap).detections || [];
+    let best = 0;
+    for (const detection of detections) {
+      const width = detection.boundingBox.width / bitmap.width;
+      if (width < 0.22) continue;
+      const [rightEye, leftEye, nose] = detection.keypoints;
+      const eyeGap = Math.abs(leftEye.x - rightEye.x) || 1;
+      const turn = Math.abs(nose.x - (leftEye.x + rightEye.x) / 2) / eyeGap;
+      best = Math.max(best, width * (1 + Math.min(turn, 1)));
+    }
+    return best;
+  }
+
+  function dataBlob(base64, mime) {
+    return new Blob([Uint8Array.from(atob(base64), (char) => char.charCodeAt(0))], { type: mime });
+  }
+
+  function modelFigure(item, found) {
+    const figure = document.createElement("figure");
+    const image = document.createElement("img");
+    image.src = URL.createObjectURL(found.blob);
+    image.alt = item.name;
+    const caption = document.createElement("figcaption");
+    caption.textContent = item.name.replace(/\s*\.--\s*/, " ").slice(0, 30);
+    const button = document.createElement("button");
+    button.type = "button";
+    button.textContent = "画像を保存";
+    button.addEventListener("click", () => saveBlob(found.base64, found.mime, `model_${item.productNumber}_${found.n}.${fileExt(found.mime)}`));
+    figure.append(image, caption, button);
+    return figure;
+  }
+
+  let modelRun = 0;
   async function showModels() {
+    const run = ++modelRun;
     modelShuffle.disabled = true;
-    setModelStatus("探しています…");
+    modelImages.replaceChildren();
+    setModelStatus("顔が写っている写真を探しています…");
     try {
       const pool = await loadModelPool();
       if (!pool.length) throw new Error("商品データが見つかりませんでした。");
-      const picked = [...pool].sort(() => Math.random() - 0.5).slice(0, MODEL_COUNT);
-      modelImages.replaceChildren(...picked.map((item) => {
-        const figure = document.createElement("figure");
-        const image = document.createElement("img");
-        image.src = modelImageUrl(item);
-        image.alt = item.name;
-        image.loading = "lazy";
-        const caption = document.createElement("figcaption");
-        caption.textContent = item.name.replace(/\s*\.--\s*/, " ").slice(0, 24);
-        const button = document.createElement("button");
-        button.type = "button";
-        button.textContent = "画像を保存";
-        button.addEventListener("click", () => saveVia({ action: "earringPhoto", imageUrl: modelImageUrl(item) }, `model_${item.productNumber}`, button, setModelStatus));
-        figure.append(image, caption, button);
-        return figure;
-      }));
-      setModelStatus("");
+      const candidates = [...pool].sort(() => Math.random() - 0.5).slice(0, 24);
+      const detector = await loadDetector();
+      const found = [];
+      let next = 0;
+      let tried = 0;
+      const render = () => {
+        found.sort((x, y) => y.score - x.score);
+        modelImages.replaceChildren(...found.slice(0, MODEL_COUNT).map((entry) => modelFigure(entry.item, entry)));
+      };
+      const worker = async () => {
+        while (run === modelRun && next < candidates.length && found.length < MODEL_COUNT * 1.5) {
+          const item = candidates[next];
+          next += 1;
+          try {
+            const body = await callRelay({ action: "earringPhotos", imageUrls: [2, 3, 4, 5].map((n) => modelImageUrl(item, n)) });
+            let best = null;
+            for (const photo of body.photos || []) {
+              const blob = dataBlob(photo.image, photo.mime);
+              let score = 1;
+              if (detector) {
+                const bitmap = await createImageBitmap(blob);
+                score = faceScore(detector, bitmap);
+                bitmap.close();
+              }
+              if (score > 0 && (!best || score > best.score)) {
+                best = { item, blob, base64: photo.image, mime: photo.mime, score, n: Number((photo.url.match(/_(\d+)_l\.jpg$/) || [])[1]) || 0 };
+              }
+            }
+            if (best && run === modelRun) {
+              found.push(best);
+              render();
+            }
+          } catch (error) {
+            // 取得や判定に失敗した写真は飛ばす
+          }
+          tried += 1;
+          if (run === modelRun) setModelStatus(`顔が写っている写真を探しています… ${Math.min(found.length, MODEL_COUNT)}枚(${tried}/${candidates.length}枚を確認)`);
+        }
+      };
+      await Promise.all(Array.from({ length: 4 }, worker));
+      if (run !== modelRun) return;
+      if (!found.length) throw new Error("条件に合う写真が見つかりませんでした。もう一度お試しください。");
+      setModelStatus(detector
+        ? "顔が写っている写真です(耳が見えるかは写真により異なります)。使いたい写真を「画像を保存」してください。"
+        : "顔の判定を読み込めなかったため、判定なしで表示しています。顔が写っている写真を選んでください。");
     } catch (error) {
       setModelStatus(`写真を探せませんでした: ${error.message}`, true);
     }
-    modelShuffle.disabled = false;
+    if (run === modelRun) modelShuffle.disabled = false;
   }
 
   async function copyPrompt() {
