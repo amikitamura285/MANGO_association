@@ -65,12 +65,11 @@ function setChecked_(parsed) {
 
 var EARRING_DAILY_LIMIT = 40;
 var EARRING_DAY_KEY = "EARRING_DAY";
-var EARRING_MAX_IMAGE_CHARS = 1500000;
 var DEFAULT_GEMINI_MODEL = "gemini-2.5-flash-image";
 
 function isEarringRequest_(e) {
   var body = e && e.postData ? e.postData.contents : "";
-  return body.slice(0, 80).indexOf('"action":"earring"') >= 0;
+  return body.slice(0, 80).indexOf('"action":"earring') >= 0;
 }
 
 // 利用回数を1日の上限で数える(日本時間で日替わり)。上限を超えていたら null
@@ -110,68 +109,168 @@ function refundEarringQuota_() {
 
 function earringPrompt_(heightMm, widthMm) {
   return [
-    "Create a photorealistic, high-quality close-up photo of the side of a woman's head, with her hair tucked back so one ear and earlobe are fully visible, wearing the earring shown in the attached image.",
-    "Reproduce the earring's exact design, shape, color, material and finish from the attached image. Do not add or change any details.",
+    "Create a photorealistic, high-quality close-up photo of the side of a woman's head, with her hair tucked back so one ear and earlobe are fully visible, wearing the earring shown in the attached product photos (the photos show the same earring).",
+    "Reproduce the earring's exact design, shape, color, material and finish from the photos. Do not add or change any details.",
     "The real earring measures " + heightMm + " mm tall and " + widthMm + " mm wide. Render it at exactly that scale relative to the ear: an adult earlobe is about 20 mm tall and the whole ear about 60 mm tall.",
     "Soft natural studio lighting, plain neutral background, no text, no watermark, no other jewelry. Show only one ear."
   ].join(" ");
 }
 
-// Geminiで着用画像を作る。他の操作を止めないよう、全体のロックは使わない
+// 日本のMANGOの商品ページだけを受け付ける(任意のURLを取りに行かせない)
+function parseJapanProductUrl_(value) {
+  var match = typeof value === "string" && value.length <= 300
+    ? value.trim().match(/^https:\/\/japan\.mango\.com\/commodity\/([A-Za-z0-9]+)\/([A-Za-z0-9]+)\/?(?:[?#].*)?$/)
+    : null;
+  if (!match) fail_("日本のMANGOの商品ページのURL(https://japan.mango.com/commodity/…)を入力してください。");
+  return { shop: match[1], code: match[2], url: "https://japan.mango.com/commodity/" + match[1] + "/" + match[2] + "/" };
+}
+
+function decodeHtml_(text) {
+  return String(text || "").replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">");
+}
+
+function earringImageUrls_(html, code) {
+  var found = {};
+  var pattern = new RegExp("https://[a-z0-9.-]*locondo\\.jp/[^\"'\\s<>]*" + code + "_(\\d+)_l\\.jpg", "gi");
+  var match;
+  while ((match = pattern.exec(html)) !== null) found[Number(match[1])] = match[0];
+  var numbers = Object.keys(found).map(Number).sort(function (x, y) { return x - y; });
+  if (!numbers.length) {
+    var og = html.match(/property="og:image"\s+content="([^"]+)"/i);
+    if (og && /^https:\/\/[a-z0-9.-]*locondo\.jp\//i.test(og[1])) return [og[1]];
+    return [];
+  }
+  return numbers.slice(0, 2).map(function (n) { return found[n]; });
+}
+
+// "0.7×3.7"(cm)のような表記から [縦mm, 横mm] を作る。大きい方を縦(全長)にする
+function parseMotifSize_(text) {
+  var numbers = String(text || "").match(/\d+(?:\.\d+)?/g);
+  if (!numbers) return null;
+  var values = numbers.slice(0, 2).map(function (n) { return Math.round(Number(n) * 100) / 10; });
+  if (values.length === 1) values.push(values[0]);
+  values.sort(function (x, y) { return y - x; });
+  return values.every(function (v) { return v >= 1 && v <= 200; }) ? values : null;
+}
+
+function fetchMotifSize_(product) {
+  try {
+    var response = UrlFetchApp.fetch("https://japan.mango.com/commodity/json/" + product.shop + "/" + product.code + "/measurement", {
+      method: "post",
+      muteHttpExceptions: true,
+      headers: { "X-Requested-With": "XMLHttpRequest" }
+    });
+    if (response.getResponseCode() !== 200) return null;
+    var data = JSON.parse(response.getContentText());
+    var headers = data.headers || [];
+    var row = (data.rows || [])[0];
+    if (!row) return null;
+    for (var i = 0; i < headers.length; i += 1) {
+      if (/モチーフ|motif/i.test(String(headers[i].labelJa || "") + String(headers[i].key || ""))) {
+        var text = (row.values || [])[i];
+        return { text: String(text || ""), label: headers[i].labelJa || "モチーフのサイズ", sizes: parseMotifSize_(text) };
+      }
+    }
+  } catch (error) {
+    console.error(error);
+  }
+  return null;
+}
+
+function fetchProductPage_(product) {
+  var response = UrlFetchApp.fetch(product.url, { muteHttpExceptions: true });
+  if (response.getResponseCode() !== 200) fail_("商品ページを読み込めませんでした(" + response.getResponseCode() + ")。URLを確認してください。");
+  var html = response.getContentText();
+  var title = html.match(/property="og:title"\s+content="([^"]*)"/i) || html.match(/<title>([^<]*)<\/title>/i);
+  return { html: html, name: title ? decodeHtml_(title[1]).replace(/\s+/g, " ").replace(/\s*\|\s*MANGO.*$/i, "").trim().slice(0, 120) : "" };
+}
+
+// 商品ページから、画像(1〜2枚目)とモチーフのサイズを取得する。AIは使わない
+function earringInfo_(parsed) {
+  var product = parseJapanProductUrl_(parsed.url);
+  var page = fetchProductPage_(product);
+  var images = earringImageUrls_(page.html, product.code);
+  if (!images.length) fail_("商品ページから画像を取得できませんでした。");
+  var motif = fetchMotifSize_(product);
+  return {
+    ok: true,
+    url: product.url,
+    name: page.name,
+    images: images,
+    sizeLabel: motif ? motif.label : "",
+    sizeText: motif ? motif.text : "",
+    heightMm: motif && motif.sizes ? motif.sizes[0] : null,
+    widthMm: motif && motif.sizes ? motif.sizes[1] : null
+  };
+}
+
+function imagePart_(url) {
+  if (!/^https:\/\/[a-z0-9.-]*locondo\.jp\//i.test(url)) fail_("画像の取得先が正しくありません。");
+  var response = UrlFetchApp.fetch(url, { muteHttpExceptions: true });
+  if (response.getResponseCode() !== 200) fail_("商品画像を取得できませんでした。");
+  var blob = response.getBlob();
+  var mime = blob.getContentType() || "image/jpeg";
+  return { inline_data: { mime_type: /^image\/(jpeg|png|webp)$/.test(mime) ? mime : "image/jpeg", data: Utilities.base64Encode(blob.getBytes()) } };
+}
+
+function earringGenerate_(parsed) {
+  var heightMm = Number(parsed.heightMm);
+  var widthMm = Number(parsed.widthMm);
+  if (!(heightMm >= 1 && heightMm <= 200 && widthMm >= 1 && widthMm <= 200)) fail_("サイズは1〜200mmで入力してください。");
+  var product = parseJapanProductUrl_(parsed.url);
+
+  var props = PropertiesService.getScriptProperties();
+  var key = props.getProperty("GEMINI_API_KEY");
+  if (!key) fail_("サーバーにGEMINI_API_KEYが設定されていません。");
+  var model = props.getProperty("GEMINI_MODEL") || DEFAULT_GEMINI_MODEL;
+
+  var page = fetchProductPage_(product);
+  var imageUrls = earringImageUrls_(page.html, product.code);
+  if (!imageUrls.length) fail_("商品ページから画像を取得できませんでした。");
+  var parts = [{ text: earringPrompt_(Math.round(heightMm * 10) / 10, Math.round(widthMm * 10) / 10) }].concat(imageUrls.map(imagePart_));
+
+  var remaining = reserveEarringQuota_();
+  if (remaining === null) fail_("本日の生成回数の上限(" + EARRING_DAILY_LIMIT + "回)に達しました。明日またお試しください。");
+
+  try {
+    var response = UrlFetchApp.fetch("https://generativelanguage.googleapis.com/v1beta/models/" + encodeURIComponent(model) + ":generateContent", {
+      method: "post",
+      contentType: "application/json",
+      muteHttpExceptions: true,
+      headers: { "x-goog-api-key": key },
+      payload: JSON.stringify({ contents: [{ parts: parts }], generationConfig: { responseModalities: ["TEXT", "IMAGE"] } })
+    });
+    var code = response.getResponseCode();
+    if (code !== 200) {
+      console.error("Gemini error " + code + ": " + response.getContentText().slice(0, 500));
+      if (code === 429) fail_("AIの利用が集中しています。しばらくしてからもう一度お試しください。");
+      fail_("画像を生成できませんでした(" + code + ")。");
+    }
+    var data = JSON.parse(response.getContentText());
+    var outParts = (data.candidates && data.candidates[0] && data.candidates[0].content && data.candidates[0].content.parts) || [];
+    for (var i = 0; i < outParts.length; i += 1) {
+      var inline = outParts[i].inlineData || outParts[i].inline_data;
+      if (inline && inline.data) {
+        return { ok: true, image: inline.data, mime: inline.mimeType || inline.mime_type || "image/png", remaining: remaining };
+      }
+    }
+    fail_("画像を生成できませんでした。別の商品でお試しください。");
+  } catch (error) {
+    refundEarringQuota_();
+    throw error;
+  }
+}
+
+// 他の操作(確認済の保存など)を止めないよう、全体のロックは使わない
 function handleEarring_(e) {
   try {
     var body = e.postData.contents;
-    if (body.length > EARRING_MAX_IMAGE_CHARS + 2000) fail_("画像が大きすぎます。");
+    if (body.length > 5000) fail_("データが大きすぎます。");
     var parsed;
     try { parsed = JSON.parse(body); } catch (error) { fail_("JSONの形式が正しくありません。"); }
-    var image = parsed.image;
-    var mime = parsed.mime === "image/png" ? "image/png" : "image/jpeg";
-    var heightMm = Number(parsed.heightMm);
-    var widthMm = Number(parsed.widthMm);
-    if (typeof image !== "string" || !image || image.length > EARRING_MAX_IMAGE_CHARS || !/^[A-Za-z0-9+\/]+=*$/.test(image)) fail_("画像の形式が正しくありません。");
-    if (!(heightMm >= 1 && heightMm <= 200 && widthMm >= 1 && widthMm <= 200)) fail_("サイズは1〜200mmで入力してください。");
-
-    var props = PropertiesService.getScriptProperties();
-    var key = props.getProperty("GEMINI_API_KEY");
-    if (!key) fail_("サーバーにGEMINI_API_KEYが設定されていません。");
-    var model = props.getProperty("GEMINI_MODEL") || DEFAULT_GEMINI_MODEL;
-
-    var remaining = reserveEarringQuota_();
-    if (remaining === null) fail_("本日の生成回数の上限(" + EARRING_DAILY_LIMIT + "回)に達しました。明日またお試しください。");
-
-    var result = null;
-    try {
-      var response = UrlFetchApp.fetch("https://generativelanguage.googleapis.com/v1beta/models/" + encodeURIComponent(model) + ":generateContent", {
-        method: "post",
-        contentType: "application/json",
-        muteHttpExceptions: true,
-        headers: { "x-goog-api-key": key },
-        payload: JSON.stringify({
-          contents: [{ parts: [{ text: earringPrompt_(Math.round(heightMm * 10) / 10, Math.round(widthMm * 10) / 10) }, { inline_data: { mime_type: mime, data: image } }] }],
-          generationConfig: { responseModalities: ["TEXT", "IMAGE"] }
-        })
-      });
-      var code = response.getResponseCode();
-      if (code !== 200) {
-        console.error("Gemini error " + code + ": " + response.getContentText().slice(0, 500));
-        if (code === 429) fail_("AIの利用が集中しています。しばらくしてからもう一度お試しください。");
-        fail_("画像を生成できませんでした(" + code + ")。");
-      }
-      var data = JSON.parse(response.getContentText());
-      var parts = (data.candidates && data.candidates[0] && data.candidates[0].content && data.candidates[0].content.parts) || [];
-      for (var i = 0; i < parts.length; i += 1) {
-        var inline = parts[i].inlineData || parts[i].inline_data;
-        if (inline && inline.data) {
-          result = { ok: true, image: inline.data, mime: inline.mimeType || inline.mime_type || "image/png", remaining: remaining };
-          break;
-        }
-      }
-      if (!result) fail_("画像を生成できませんでした。別の画像でお試しください。");
-    } catch (error) {
-      refundEarringQuota_();
-      throw error;
-    }
-    return json_(result);
+    if (parsed.action === "earringInfo") return json_(earringInfo_(parsed));
+    if (parsed.action === "earring") return json_(earringGenerate_(parsed));
+    fail_("操作が正しくありません。");
   } catch (error) {
     if (error && error.validation) return json_({ ok: false, error: error.message });
     console.error(error);

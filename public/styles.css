@@ -508,3 +508,12 @@ footer {
 .earring-image { display: block; width: 100%; max-width: 480px; height: auto; background: #f1efeb; border: 1px solid var(--line); margin-bottom: 16px; }
 .earring-status.is-error { color: #b3261e; }
 .earring-image[hidden] { display: none; }
+.earring-url { display: flex; gap: 12px; align-items: flex-end; flex-wrap: wrap; }
+.earring-url .resize-field { flex: 1 1 360px; }
+.earring-url input { width: 100%; }
+.earring-thumbs { display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+.earring-thumbs img { width: 160px; height: auto; background: #f1efeb; border: 1px solid var(--line); }
+.earring-grid[hidden] { display: none; }
+.earring-url .resize-field input[type="url"] { padding: 10px; border: 1px solid var(--line); background: var(--white); color: var(--ink); font: 14px 'DM Sans', sans-serif; }
+.earring-url button, #earringGenerate { padding: 12px 20px; border: 1px solid var(--ink); background: var(--ink); color: var(--white); font: 11px 'DM Mono', monospace; cursor: pointer; }
+.earring-url button:disabled, #earringGenerate:disabled { opacity: .35; cursor: default; }

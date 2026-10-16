@@ -3,20 +3,21 @@
   if (!root) return;
 
   const $ = (id) => document.getElementById(id);
-  const fileInput = $("earringFile");
-  const dropzone = $("earringDrop");
+  const urlInput = $("earringUrl");
+  const loadButton = $("earringLoad");
+  const status = $("earringStatus");
+  const product = $("earringProduct");
+  const nameLabel = $("earringName");
+  const images = $("earringImages");
+  const sizeNote = $("earringSizeNote");
   const heightInput = $("earringHeight");
   const widthInput = $("earringWidth");
   const generate = $("earringGenerate");
-  const status = $("earringStatus");
-  const source = $("earringSource");
   const result = $("earringResult");
   const resultImage = $("earringResultImage");
   const download = $("earringDownload");
-  const MAX_SIDE = 1024;
 
-  let imageData = null;
-  let baseName = "earring";
+  let loaded = null;
   let busy = false;
 
   const setStatus = (text, isError = false) => {
@@ -24,49 +25,68 @@
     status.classList.toggle("is-error", isError);
   };
 
-  const refresh = () => {
-    generate.disabled = busy || !imageData;
+  const setBusy = (value) => {
+    busy = value;
+    loadButton.disabled = value;
+    generate.disabled = value;
   };
 
-  async function loadImage(file) {
-    if (!file || !file.type.startsWith("image/")) {
-      setStatus("画像ファイルを選んでください。", true);
-      return;
-    }
-    try {
-      const bitmap = await createImageBitmap(file);
-      const scale = Math.min(1, MAX_SIDE / Math.max(bitmap.width, bitmap.height));
-      const canvas = document.createElement("canvas");
-      canvas.width = Math.max(1, Math.round(bitmap.width * scale));
-      canvas.height = Math.max(1, Math.round(bitmap.height * scale));
-      const context = canvas.getContext("2d");
-      context.fillStyle = "#ffffff";
-      context.fillRect(0, 0, canvas.width, canvas.height);
-      context.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
-      bitmap.close();
-      const dataUrl = canvas.toDataURL("image/jpeg", 0.9);
-      imageData = dataUrl.split(",")[1];
-      baseName = file.name.replace(/\.[^.]*$/, "") || "earring";
-      source.src = dataUrl;
-      source.hidden = false;
-      result.hidden = true;
-      setStatus("");
-    } catch (error) {
-      imageData = null;
-      source.hidden = true;
-      setStatus("この画像は読み込めませんでした。", true);
-    }
-    refresh();
+  async function callRelay(request) {
+    const response = await fetch(GLOBAL_RELAY_URL, {
+      method: "POST",
+      headers: { "content-type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(request)
+    });
+    const body = await response.json();
+    if (!body.ok) throw new Error(body.error || "処理できませんでした。");
+    return body;
   }
 
   function readSize(input, label) {
     const value = Number(input.value);
-    if (!Number.isFinite(value) || value < 1 || value > 200) throw new Error(`${label}は1〜200mmで入力してください。`);
+    if (!input.value || !Number.isFinite(value) || value < 1 || value > 200) throw new Error(`${label}は1〜200mmで入力してください。`);
     return Math.round(value * 10) / 10;
   }
 
-  generate.addEventListener("click", async () => {
-    if (busy || !imageData) return;
+  async function loadProduct() {
+    if (busy) return;
+    const url = urlInput.value.trim();
+    if (!url) {
+      setStatus("商品URLを入力してください。", true);
+      return;
+    }
+    setBusy(true);
+    loadButton.textContent = "読み込み中…";
+    product.hidden = true;
+    result.hidden = true;
+    setStatus("商品ページを読み込んでいます…");
+    try {
+      const info = await callRelay({ action: "earringInfo", url });
+      loaded = info;
+      nameLabel.textContent = info.name || "商品";
+      images.replaceChildren(...info.images.map((src) => {
+        const image = document.createElement("img");
+        image.src = src;
+        image.alt = info.name || "商品画像";
+        return image;
+      }));
+      heightInput.value = info.heightMm ?? "";
+      widthInput.value = info.widthMm ?? "";
+      sizeNote.textContent = info.sizeText
+        ? `商品ページの「${info.sizeLabel}」: ${info.sizeText} cm を、大きい方を縦・小さい方を横として入力しました。実際の向きと違う場合は直してください。`
+        : "商品ページにモチーフのサイズが見つかりませんでした。縦と横(mm)を入力してください。";
+      product.hidden = false;
+      setStatus("");
+    } catch (error) {
+      loaded = null;
+      setStatus(`読み込めませんでした: ${error.message}`, true);
+    }
+    loadButton.textContent = "読み込む";
+    setBusy(false);
+  }
+
+  async function generateImage() {
+    if (busy || !loaded) return;
     let heightMm;
     let widthMm;
     try {
@@ -76,41 +96,27 @@
       setStatus(error.message, true);
       return;
     }
-    busy = true;
+    setBusy(true);
     generate.textContent = "生成中…";
-    refresh();
     result.hidden = true;
     setStatus("生成しています。20〜40秒ほどかかります。");
     try {
-      const response = await fetch(GLOBAL_RELAY_URL, {
-        method: "POST",
-        headers: { "content-type": "text/plain;charset=utf-8" },
-        body: JSON.stringify({ action: "earring", image: imageData, mime: "image/jpeg", heightMm, widthMm })
-      });
-      const body = await response.json();
-      if (!body.ok) throw new Error(body.error || "生成できませんでした。");
-      resultImage.src = `data:${body.mime || "image/png"};base64,${body.image}`;
+      const body = await callRelay({ action: "earring", url: loaded.url, heightMm, widthMm });
+      const mime = body.mime || "image/png";
+      resultImage.src = `data:${mime};base64,${body.image}`;
       download.href = resultImage.src;
-      download.download = `${baseName}_worn.${(body.mime || "image/png").includes("jpeg") ? "jpg" : "png"}`;
+      const code = loaded.url.split("/").filter(Boolean).pop() || "earring";
+      download.download = `${code}_worn.${mime.includes("jpeg") ? "jpg" : "png"}`;
       result.hidden = false;
       setStatus(body.remaining === undefined ? "生成しました。" : `生成しました。本日の残り回数: ${body.remaining}回`);
     } catch (error) {
       setStatus(`生成に失敗しました: ${error.message}`, true);
     }
-    busy = false;
     generate.textContent = "着用画像を生成";
-    refresh();
-  });
+    setBusy(false);
+  }
 
-  fileInput.addEventListener("change", () => loadImage(fileInput.files[0]));
-  ["dragenter", "dragover"].forEach((name) => dropzone.addEventListener(name, (event) => {
-    event.preventDefault();
-    dropzone.classList.add("is-over");
-  }));
-  ["dragleave", "drop"].forEach((name) => dropzone.addEventListener(name, (event) => {
-    event.preventDefault();
-    dropzone.classList.remove("is-over");
-  }));
-  dropzone.addEventListener("drop", (event) => loadImage(event.dataTransfer.files[0]));
-  refresh();
+  loadButton.addEventListener("click", loadProduct);
+  urlInput.addEventListener("keydown", (event) => { if (event.key === "Enter") loadProduct(); });
+  generate.addEventListener("click", generateImage);
 })();

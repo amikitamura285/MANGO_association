@@ -201,26 +201,26 @@
       <div class="relation-hero">
         <p class="eyebrow">EARRING PREVIEW</p>
         <h1>ピアス <em>着用イメージ</em></h1>
-        <p class="lead">ピアスの画像とサイズを入れると、AIが耳に着けた画像を作ります。<br>AIによる生成のため、実際の大きさと多少ずれることがあります(サイズ感の目安としてお使いください)。</p>
+        <p class="lead">MANGO日本サイトの商品URLを入れると、商品画像(1〜2枚目)とモチーフのサイズを読み取り、AIが耳に着けた画像を作ります。<br>AIによる生成のため、実際の大きさと多少ずれることがあります(サイズ感の目安としてお使いください)。</p>
       </div>
       <div class="resize-tool">
-        <label id="earringDrop" class="resize-drop">
-          <input id="earringFile" type="file" accept="image/*">
-          <strong>ピアスの画像をここにドラッグ、またはクリックして選択</strong>
-          <span>背景がシンプルな商品画像がきれいに仕上がります</span>
-        </label>
-        <div class="earring-grid">
+        <div class="earring-url">
+          <label class="resize-field"><span>商品URL</span><input id="earringUrl" type="url" placeholder="https://japan.mango.com/commodity/SPUN0477D/MA1658DW039664/"></label>
+          <button id="earringLoad" type="button">読み込む</button>
+        </div>
+        <p id="earringStatus" class="resize-note earring-status" role="status"></p>
+        <div id="earringProduct" class="earring-grid" hidden>
           <div class="earring-panel">
-            <h2 class="resize-subhead">元の画像とサイズ</h2>
-            <img id="earringSource" class="earring-image" alt="選んだピアスの画像" hidden>
+            <h2 id="earringName" class="resize-subhead">商品</h2>
+            <div id="earringImages" class="earring-thumbs"></div>
+            <p id="earringSizeNote" class="resize-note"></p>
             <div class="resize-controls">
-              <label class="resize-field"><span>縦 (mm)</span><input id="earringHeight" type="number" min="1" max="200" step="0.5" value="30"></label>
-              <label class="resize-field"><span>横 (mm)</span><input id="earringWidth" type="number" min="1" max="200" step="0.5" value="15"></label>
+              <label class="resize-field"><span>縦 (mm)</span><input id="earringHeight" type="number" min="1" max="200" step="0.5"></label>
+              <label class="resize-field"><span>横 (mm)</span><input id="earringWidth" type="number" min="1" max="200" step="0.5"></label>
             </div>
             <div class="resize-actions">
-              <button id="earringGenerate" type="button" disabled>着用画像を生成</button>
+              <button id="earringGenerate" type="button">着用画像を生成</button>
             </div>
-            <p id="earringStatus" class="resize-note earring-status" role="status"></p>
           </div>
           <div id="earringResult" class="earring-panel" hidden>
             <h2 class="resize-subhead">着用イメージ</h2>
