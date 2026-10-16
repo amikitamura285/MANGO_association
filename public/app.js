@@ -9,7 +9,7 @@ const state = {
   globalRows: []
 };
 let productsReady;
-const dataPathPrefix = /\/(?:relation|global|resize)\/$/.test(window.location.pathname) ? "../" : "";
+const dataPathPrefix = /\/(?:relation|global|resize|earring)\/$/.test(window.location.pathname) ? "../" : "";
 
 function escapeHtml(value) {
   return String(value ?? "").replace(/[&<>\"']/g, (character) => ({
@@ -306,9 +306,9 @@ function loadGlobalProducts() {
 }
 
 function routeForView(targetView) {
-  const route = { globalRelationView: "global", resizeView: "resize" }[targetView] || "relation";
+  const route = { globalRelationView: "global", resizeView: "resize", earringView: "earring" }[targetView] || "relation";
   const path = window.location.pathname;
-  const base = path.replace(/(?:relation|global|resize)\/?$/, "").replace(/\/?$/, "/");
+  const base = path.replace(/(?:relation|global|resize|earring)\/?$/, "").replace(/\/?$/, "/");
   return `${base}${route}/`;
 }
 
@@ -338,6 +338,7 @@ document.querySelectorAll(".main-tab").forEach((button) => {
 function viewForPath(path) {
   if (path.includes("/global/")) return "globalRelationView";
   if (path.includes("/resize/")) return "resizeView";
+  if (path.includes("/earring/")) return "earringView";
   return "relationView";
 }
 

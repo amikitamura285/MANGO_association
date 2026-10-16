@@ -82,6 +82,14 @@ GitHubリポジトリにこのフォルダーをPushし、リポジトリの `Se
 - 試し実行(公開せず収集だけ): `powershell -ExecutionPolicy Bypass -File scripts\auto-global.ps1 -DryRun`
 - PCにログインしている間だけ動きます。電源が入っていなかった場合は、次に起動したときに実行されます。1日1回成功したらその日は再実行しません(`-Force` で強制)。
 
+### ピアス着用イメージ(AI画像生成)
+
+`/earring/` のタブは、ピアスの画像とサイズ(mm)をGemini(画像生成)に渡して、耳に着けた画像を作ります。キーはページに置かず、中継サーバーが代わりに呼び出します。
+
+- Apps Script の「プロジェクトの設定」→「スクリプト プロパティ」に `GEMINI_API_KEY`(Google AI Studio で発行)を追加し、`Code.gs` を貼り付けて再デプロイします。
+- 使うモデルは既定で `gemini-2.5-flash-image` です。変える場合はスクリプト プロパティ `GEMINI_MODEL` に指定します。
+- 利用料はキーの持ち主にかかります。URLを知っていれば誰でも使えるため、`Code.gs` の `EARRING_DAILY_LIMIT`(既定は1日40回、日本時間で日替わり)で上限を設けています。
+
 ### 中継サーバー(Google Apps Script)のセットアップ(最初の1回、インストール不要)
 
 1. GitHubで Fine-grained token を作成します(Repository access は `MANGO_association` のみ、Permissions は Contents: Read and write と Actions: Read and write。後者は関連付けチェックの UPDATE ボタン用)。トークンは他人に見せず、手順3以外には貼らないでください。

@@ -502,3 +502,9 @@ footer {
 #productRefresh { flex: none; box-sizing: border-box; width: 112px; min-width: 112px; padding-left: 0; padding-right: 0; text-align: center; white-space: nowrap; }
 
 #checkedProductGrid, #globalCheckedProductGrid { zoom: .7; }
+
+.earring-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 24px; align-items: start; }
+.earring-panel { min-width: 0; }
+.earring-image { display: block; width: 100%; max-width: 480px; height: auto; background: #f1efeb; border: 1px solid var(--line); margin-bottom: 16px; }
+.earring-status.is-error { color: #b3261e; }
+.earring-image[hidden] { display: none; }

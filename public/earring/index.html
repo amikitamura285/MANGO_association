@@ -1,0 +1,249 @@
+﻿<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MANGO FINDER</title>
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <script>document.write('<link rel="stylesheet" href="../styles.css?v=' + Date.now() + '">');</script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../"><img src="../logo.jpg" alt="MANGO"><span>FINDER</span></a>
+    <nav class="main-tabs" aria-label="メインメニュー">
+      <button class="main-tab" type="button" data-view="resizeView">画像リサイズ</button>
+      <button class="main-tab" type="button" data-view="relationView">関連付け</button>
+      <button class="main-tab" type="button" data-view="globalRelationView">グローバル関連付け</button>
+      <button class="main-tab" type="button" data-view="earringView">ピアス着用</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="resizeView" class="relation-view" hidden>
+      <div class="relation-hero">
+        <p class="eyebrow">IMAGE RESIZE</p>
+        <h1>画像 <em>リサイズ</em></h1>
+        <p class="lead">画像はこのブラウザの中だけで処理されます。外部には送信されません。</p>
+      </div>
+      <div class="resize-tool">
+        <label id="resizeDrop" class="resize-drop">
+          <input id="resizeFiles" type="file" accept="image/*" multiple>
+          <strong>画像をここにドラッグ、またはクリックして選択</strong>
+          <span>複数選択できます(JPEG / PNG / WebP / GIF など)</span>
+        </label>
+
+        <h2 class="resize-subhead">SNS用サイズ</h2>
+        <div class="resize-sns">
+          <button type="button" data-preset="igFeed" disabled><strong>Instagram フィード投稿</strong><span>縦長 4:3 / 1080×1440</span></button>
+          <button type="button" data-preset="igStory" disabled><strong>Instagram ストーリーズ</strong><span>縦長 / 1080×1920</span></button>
+          <button type="button" data-preset="xSquare" disabled><strong>X 正方形</strong><span>1:1 / 1080×1080</span></button>
+        </div>
+        <p class="resize-note">画像を選ぶとボタンが押せるようになります。余白は作らず、枠に合わせて切り抜きます。</p>
+        <div class="resize-controls">
+          <label class="resize-field"><span>形式</span>
+            <select id="resizeFormat">
+              <option value="original">元の形式のまま</option>
+              <option value="jpeg">JPEG</option>
+              <option value="png">PNG</option>
+              <option value="webp">WebP</option>
+            </select>
+          </label>
+          <label class="resize-field"><span>画質 <b id="resizeQualityValue">90</b>(JPEG / WebP)</span><input id="resizeQuality" type="range" min="10" max="100" value="90"></label>
+        </div>
+
+        <h2 class="resize-subhead">フリーサイズ</h2>
+        <div class="resize-controls">
+          <label class="resize-field"><span>リサイズ方法</span>
+            <select id="resizeMode">
+              <option value="magTitle">MAGAZINE title-image(横1000 × 縦350px)</option>
+              <option value="magCarousel">MAGAZINE carousel-image(横960 × 縦640px)</option>
+              <option value="ratio54">5:4 縦長(幅を指定、高さは自動)</option>
+              <option value="width" selected>幅を指定(高さは自動)</option>
+              <option value="height">高さを指定(幅は自動)</option>
+              <option value="long">長辺を指定</option>
+              <option value="percent">倍率で指定</option>
+              <option value="exact">幅と高さを指定</option>
+            </select>
+          </label>
+          <label class="resize-field"><span id="resizeLabelA">幅 (px)</span><input id="resizeValueA" type="number" min="1" max="16384" value="800"></label>
+          <label id="resizeWrapB" class="resize-field" hidden><span>高さ (px)</span><input id="resizeValueB" type="number" min="1" max="16384" value="800"></label>
+        </div>
+        <div class="resize-actions">
+          <button id="resizeAll" type="button" disabled>すべてダウンロード</button>
+          <button id="resizeClear" type="button" class="is-secondary" disabled>クリア</button>
+          <span id="resizeSummary" class="resize-summary"></span>
+        </div>
+        <p id="resizeEmpty" class="resize-empty">画像を選ぶと、ここに変換結果が表示されます。</p>
+        <div id="resizeGrid" class="resize-grid"></div>
+      </div>
+      <div id="resizeEditor" class="resize-editor" hidden>
+        <div class="resize-editor-box" role="dialog" aria-modal="true" aria-labelledby="resizeEditorTitle">
+          <h3 id="resizeEditorTitle" class="resize-editor-title"></h3>
+          <p id="resizeEditorNote" class="resize-note">ドラッグで位置、スライダーまたはホイールで拡大を調整できます。背景の余白は自動で除いて枠いっぱいに合わせています。この枠のとおりに切り抜かれます。</p>
+          <div id="resizeEditorThumbs" class="resize-editor-thumbs" hidden></div>
+          <canvas id="resizeEditorCanvas" class="resize-editor-canvas"></canvas>
+          <label class="resize-field resize-editor-zoom"><span>拡大</span><input id="resizeEditorZoom" type="range" min="100" max="500" value="100"></label>
+          <div class="resize-actions">
+            <button id="resizeEditorDownload" type="button">この画像をダウンロード</button>
+            <button id="resizeEditorAll" type="button" hidden>全画像をダウンロード</button>
+            <button id="resizeEditorReset" type="button" class="is-secondary">位置を戻す</button>
+            <button id="resizeEditorClose" type="button" class="is-secondary">閉じる</button>
+          </div>
+          <p id="resizeEditorStatus" class="resize-note"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="relationView" class="relation-view">
+      <div class="relation-hero">
+        <p class="eyebrow">DAILY PRODUCT WATCH</p>
+        <h1>関連付け <em>チェック</em></h1>
+        <p class="lead">表示されているアイテムは関連付け未対応アイテムです。<br>関連付け対応をお願いいたします。</p>
+      </div>
+      <div class="relation-summary">
+        <div>
+          <span class="summary-label">MATCHED ITEMS</span>
+          <strong id="productCount">—</strong>
+        </div>
+        <div>
+          <span class="summary-label">LAST UPDATED</span>
+          <strong id="updatedAt">—</strong>
+        </div>
+        <button id="productRefresh" class="update-button" type="button">UPDATE</button>
+        <div class="rule-note">
+          <span class="rule-icon">◎</span>
+          <span>英字部分が同じ<br>関連アイテムに同名なし</span>
+        </div>
+      </div>
+      <div class="relation-results-head">
+        <div>
+          <p class="eyebrow">CURATED RESULTS</p>
+          <h2>今日のアイテム</h2>
+        </div>
+        <span id="scannedCount" class="muted"></span>
+      </div>
+      <div id="productGrid" class="product-grid"></div>
+      <div id="productEmpty" class="empty" hidden>
+        <div class="empty-mark">M</div>
+        <h3>まだ結果がありません</h3>
+        <p>毎朝4:00に最新データへ更新されます。</p>
+      </div>
+
+      <div id="checkedSection" class="checked-section">
+        <div class="relation-results-head checked-head">
+          <div>
+            <p class="eyebrow">CHECKED OFF</p>
+            <h2>確認済</h2>
+          </div>
+        </div>
+        <div id="checkedProductGrid" class="product-grid"></div>
+        <p id="checkedEmpty" class="checked-empty">確認済にしたアイテムはありません。</p>
+      </div>
+    </section>
+
+    <section id="globalRelationView" class="relation-view" hidden>
+      <div class="relation-hero">
+        <p class="eyebrow">GLOBAL PRODUCT MATCH</p>
+        <h1>グローバル関連付け <em>比較</em></h1>
+        <p class="lead">表示されているアイテムは関連付け未対応アイテムです。<br>関連付け対応をお願いいたします。</p>
+      </div>
+      <div class="relation-summary">
+        <div>
+          <span class="summary-label">MATCHED ITEMS</span>
+          <strong id="globalProductCount">—</strong>
+        </div>
+        <div>
+          <span class="summary-label">LAST UPDATED</span>
+          <strong id="globalUpdatedAt">—</strong>
+        </div>
+        <button id="globalUpdateToggle" class="update-button" type="button">UPDATE</button>
+        <div class="rule-note">
+          <span class="rule-icon">◎</span>
+          <span>ブランド商品番号の前8桁を比較し、グローバルURLと照合</span>
+        </div>
+      </div>
+      <div class="global-update">
+        <div id="globalUpdatePanel" class="update-panel" hidden>
+          <ol>
+            <li>初回のみ: <a id="globalUpdateBookmarklet" href="#">MANGO収集</a> をブックマークバーへドラッグ</li>
+            <li><button id="globalUpdateOpen" type="button">MANGOを開く</button> → 開いたタブでブックマーク「MANGO収集」をクリック(ページが自動でスクロールされます。終わるまでそのタブを前面に出したままにしてください)</li>
+          </ol>
+          <p id="globalUpdateStatus" class="update-status" role="status"></p>
+        </div>
+      </div>
+      <div class="relation-results-head">
+        <div>
+          <p class="eyebrow">GLOBAL COMPARISON</p>
+          <h2>グローバル候補</h2>
+        </div>
+        <span id="globalScannedCount" class="muted"></span>
+      </div>
+      <div id="globalProductGrid" class="product-grid"></div>
+      <div id="globalProductEmpty" class="empty" hidden>
+        <div class="empty-mark">M</div>
+        <h3>比較候補がまだありません</h3>
+        <p>グローバル比較データが更新されるまで少しお待ちください。</p>
+      </div>
+
+      <div id="globalCheckedSection" class="checked-section">
+        <div class="relation-results-head checked-head">
+          <div>
+            <p class="eyebrow">CHECKED OFF</p>
+            <h2>確認済</h2>
+          </div>
+        </div>
+        <div id="globalCheckedProductGrid" class="product-grid"></div>
+        <p id="globalCheckedEmpty" class="checked-empty">確認済にしたアイテムはありません。</p>
+      </div>
+    </section>
+
+    <section id="earringView" class="relation-view" hidden>
+      <div class="relation-hero">
+        <p class="eyebrow">EARRING PREVIEW</p>
+        <h1>ピアス <em>着用イメージ</em></h1>
+        <p class="lead">ピアスの画像とサイズを入れると、AIが耳に着けた画像を作ります。<br>AIによる生成のため、実際の大きさと多少ずれることがあります(サイズ感の目安としてお使いください)。</p>
+      </div>
+      <div class="resize-tool">
+        <label id="earringDrop" class="resize-drop">
+          <input id="earringFile" type="file" accept="image/*">
+          <strong>ピアスの画像をここにドラッグ、またはクリックして選択</strong>
+          <span>背景がシンプルな商品画像がきれいに仕上がります</span>
+        </label>
+        <div class="earring-grid">
+          <div class="earring-panel">
+            <h2 class="resize-subhead">元の画像とサイズ</h2>
+            <img id="earringSource" class="earring-image" alt="選んだピアスの画像" hidden>
+            <div class="resize-controls">
+              <label class="resize-field"><span>縦 (mm)</span><input id="earringHeight" type="number" min="1" max="200" step="0.5" value="30"></label>
+              <label class="resize-field"><span>横 (mm)</span><input id="earringWidth" type="number" min="1" max="200" step="0.5" value="15"></label>
+            </div>
+            <div class="resize-actions">
+              <button id="earringGenerate" type="button" disabled>着用画像を生成</button>
+            </div>
+            <p id="earringStatus" class="resize-note earring-status" role="status"></p>
+          </div>
+          <div id="earringResult" class="earring-panel" hidden>
+            <h2 class="resize-subhead">着用イメージ</h2>
+            <img id="earringResultImage" class="earring-image" alt="生成された着用画像">
+            <div class="resize-actions">
+              <a id="earringDownload" class="resize-download" href="#" download>ダウンロード</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>MANGO FINDER</span>
+    <span>DATA SOURCE: MANGO JAPAN / GLOBAL PUBLIC PRODUCT PAGES</span>
+  </footer>
+
+  <script>
+    // 新しいタブでも常に最新のCSS/JSを読み込む(ブラウザに残った古い版を使わない)
+    ["tools/global-match.js", "app.js", "global-update.js", "resize.js", "earring.js"].forEach(function (name) {
+      document.write('<script src="../' + name + '?v=' + Date.now() + '"><\/script>');
+    });
+  </script>
+</body>
+</html>
