@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T19:32:10.033Z",
+  "updatedAt": "2026-10-16T19:29:50.306Z",
   "products": [
     {
       "name": "ロングワンピース .-- RAMONA （ブラック）",
@@ -715,6 +715,30 @@
       "relatedNames": []
     },
     {
+      "name": "レザーベルト .-- MAYA （ダークブラウン）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039978_1_l.jpg",
+      "productNumber": "MA1658EW039978",
+      "brandItemNumber": "27051334 32 色 ダークブラウン（32）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039978/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "MAYA",
+      "relatedNames": []
+    },
+    {
+      "name": "レザーベルト .-- MAYA （ブラウン）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039979_1_l.jpg",
+      "productNumber": "MA1658EW039979",
+      "brandItemNumber": "27051334 30 色 ブラウン（30）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039979/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "MAYA",
+      "relatedNames": []
+    },
+    {
       "name": "ピアス .-- ELENA （シルバー）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW040002_1_l.jpg",
       "productNumber": "MA1658DW040002",
@@ -1267,30 +1291,6 @@
       "relatedNames": []
     },
     {
-      "name": "ロングワンピース .-- NICOLE （ホワイト）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW041573_1_l.jpg",
-      "productNumber": "MA1658EW041573",
-      "brandItemNumber": "37011404 1 色 ホワイト（1）",
-      "brandItemFirstDigit": "3",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041573/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "NICOLE",
-      "relatedNames": []
-    },
-    {
-      "name": "パンツ .-- NICOLE （ブラック）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043057_1_l.jpg",
-      "productNumber": "MA1658EW043057",
-      "brandItemNumber": "37016372 99 色 ブラック（99）",
-      "brandItemFirstDigit": "3",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043057/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "NICOLE",
-      "relatedNames": []
-    },
-    {
       "name": "ブラウス .-- LURDES （ミディアムブルー）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW041574_1_l.jpg",
       "productNumber": "MA1658EW041574",
@@ -1704,6 +1704,30 @@
       "relatedNames": []
     },
     {
+      "name": "ピアス .-- ADELA （ゴールド）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW042082_1_l.jpg",
+      "productNumber": "MA1658DW042082",
+      "brandItemNumber": "37021551 OR 色 ゴールド（OR）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW042082/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "ADELA",
+      "relatedNames": []
+    },
+    {
+      "name": "ジャケット.-- ADELA （ナチュラルホワイト）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043428_1_l.jpg",
+      "productNumber": "MA1658EW043428",
+      "brandItemNumber": "37077785 5 色 ナチュラルホワイト（5）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043428/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "ADELA",
+      "relatedNames": []
+    },
+    {
       "name": "ピアス .-- CANDELA （ゴールド）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW042137_1_l.jpg",
       "productNumber": "MA1658DW042137",
@@ -1773,6 +1797,30 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "BIMBA",
+      "relatedNames": []
+    },
+    {
+      "name": "パンツ-- CLAIRE （ナチュラルホワイト）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042193_1_l.jpg",
+      "productNumber": "MA1658EW042193",
+      "brandItemNumber": "37052901 5 色 ナチュラルホワイト（5）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042193/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "CLAIRE",
+      "relatedNames": []
+    },
+    {
+      "name": "パンツ-- CLAIRE （オープンブルー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042195_1_l.jpg",
+      "productNumber": "MA1658EW042195",
+      "brandItemNumber": "37052902 TS 色 オープンブルー（TS）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042195/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "CLAIRE",
       "relatedNames": []
     },
     {
@@ -2291,7 +2339,9 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "LEA",
-      "relatedNames": []
+      "relatedNames": [
+        "パンツ .-- PAPER （ブラック）"
+      ]
     },
     {
       "name": "ショートブーツ .--LEA （ダークレッド）",
@@ -2540,8 +2590,38 @@
       "relatedNames": []
     }
   ],
-  "groups": [],
-  "newCount": 0,
+  "groups": [
+    {
+      "englishKey": "MAYA",
+      "main": {
+        "name": "レザーベルト .-- MAYA （ダークブラウン）",
+        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039978_1_l.jpg",
+        "productNumber": "MA1658EW039978",
+        "brandItemNumber": "27051334 32 色 ダークブラウン（32）",
+        "brandItemFirstDigit": "2",
+        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039978/",
+        "brandCode": "MA1658",
+        "brandName": "MANGO",
+        "englishKey": "MAYA",
+        "relatedNames": []
+      },
+      "related": [
+        {
+          "name": "レザーベルト .-- MAYA （ブラウン）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039979_1_l.jpg",
+          "productNumber": "MA1658EW039979",
+          "brandItemNumber": "27051334 30 色 ブラウン（30）",
+          "brandItemFirstDigit": "2",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039979/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "MAYA",
+          "relatedNames": []
+        }
+      ]
+    }
+  ],
+  "newCount": 1,
   "displayedMainProductNumbers": [
     "MA1658EW33440",
     "MA3878EC003099",
@@ -3906,7 +3986,8 @@
     "MA1658EW042536",
     "MA1658AW042863",
     "MA1658EW043444",
-    "MA1658EW043446"
+    "MA1658EW043446",
+    "MA1658EW039978"
   ],
-  "scanned": 4314
+  "scanned": 4323
 }
