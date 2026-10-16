@@ -143,11 +143,16 @@
   }
 
   // 日本サイトの商品一覧(japan-index.json)から、ワンピースやトップスなどをランダムに選ぶ
+  const productSerial = (item) => Number((item.productNumber.match(/(\d+)$/) || [])[1]) || 0;
+
   async function loadModelPool() {
     if (modelPool) return modelPool;
     const response = await fetch(`${dataPathPrefix}japan-index.json?v=${Date.now()}`, { cache: "no-store" });
     const data = await response.json();
-    modelPool = (data.products || []).filter((item) => MODEL_PATTERN.test(item.name || "") && /^[A-Z]{2}[A-Za-z0-9]+$/.test(item.productNumber || ""));
+    // 商品番号は新しい商品ほど大きいため、降順に並べて新着から順に使う
+    modelPool = (data.products || [])
+      .filter((item) => MODEL_PATTERN.test(item.name || "") && /^[A-Z]{2}[A-Za-z0-9]+$/.test(item.productNumber || ""))
+      .sort((x, y) => productSerial(y) - productSerial(x));
     return modelPool;
   }
 
@@ -206,26 +211,30 @@
   }
 
   let modelRun = 0;
-  async function showModels() {
+  let modelOffset = 0;
+  const MODEL_BATCH = 30;
+  async function showModels(fromStart = false) {
     const run = ++modelRun;
     modelShuffle.disabled = true;
     modelImages.replaceChildren();
-    setModelStatus("顔が写っている写真を探しています…");
+    setModelStatus("新着アイテムから、顔が写っている写真を探しています…");
     try {
       const pool = await loadModelPool();
       if (!pool.length) throw new Error("商品データが見つかりませんでした。");
-      const candidates = [...pool].sort(() => Math.random() - 0.5).slice(0, 24);
+      if (fromStart || modelOffset >= pool.length) modelOffset = 0;
+      const candidates = pool.slice(modelOffset, modelOffset + MODEL_BATCH);
       const detector = await loadDetector();
       const found = [];
       let next = 0;
       let tried = 0;
       const render = () => {
-        found.sort((x, y) => y.score - x.score);
+        found.sort((x, y) => x.order - y.order);
         modelImages.replaceChildren(...found.slice(0, MODEL_COUNT).map((entry) => modelFigure(entry.item, entry)));
       };
       const worker = async () => {
-        while (run === modelRun && next < candidates.length && found.length < MODEL_COUNT * 1.5) {
-          const item = candidates[next];
+        while (run === modelRun && next < candidates.length && found.length < MODEL_COUNT) {
+          const order = next;
+          const item = candidates[order];
           next += 1;
           try {
             const body = await callRelay({ action: "earringPhotos", imageUrls: [2, 3, 4, 5].map((n) => modelImageUrl(item, n)) });
@@ -239,7 +248,7 @@
                 bitmap.close();
               }
               if (score > 0 && (!best || score > best.score)) {
-                best = { item, blob, base64: photo.image, mime: photo.mime, score, n: Number((photo.url.match(/_(\d+)_l\.jpg$/) || [])[1]) || 0 };
+                best = { order, item, blob, base64: photo.image, mime: photo.mime, score, n: Number((photo.url.match(/_(\d+)_l\.jpg$/) || [])[1]) || 0 };
               }
             }
             if (best && run === modelRun) {
@@ -254,10 +263,11 @@
         }
       };
       await Promise.all(Array.from({ length: 4 }, worker));
+      modelOffset += next;
       if (run !== modelRun) return;
       if (!found.length) throw new Error("条件に合う写真が見つかりませんでした。もう一度お試しください。");
       setModelStatus(detector
-        ? "顔が写っている写真です(耳が見えるかは写真により異なります)。使いたい写真を「画像を保存」してください。"
+        ? "新着アイテム順に、顔が写っている写真を並べています(耳が見えるかは写真により異なります)。使いたい写真を「画像を保存」してください。「次の写真を探す」で、さらに古いアイテムの写真を表示します。"
         : "顔の判定を読み込めなかったため、判定なしで表示しています。顔が写っている写真を選んでください。");
     } catch (error) {
       setModelStatus(`写真を探せませんでした: ${error.message}`, true);
@@ -278,7 +288,7 @@
 
   loadButton.addEventListener("click", loadProduct);
   urlInput.addEventListener("keydown", (event) => { if (event.key === "Enter") loadProduct(); });
-  modelShuffle.addEventListener("click", showModels);
+  modelShuffle.addEventListener("click", () => showModels());
 
   [heightInput, widthInput].forEach((input) => input.addEventListener("input", refreshPrompt));
   copyButton.addEventListener("click", copyPrompt);
