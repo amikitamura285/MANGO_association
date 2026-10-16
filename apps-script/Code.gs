@@ -92,7 +92,7 @@ function earringImageUrls_(html, code) {
     if (og && /^https:\/\/[a-z0-9.-]*locondo\.jp\//i.test(og[1])) return [og[1]];
     return [];
   }
-  return numbers.slice(0, 2).map(function (n) { return found[n]; });
+  return numbers.slice(0, 3).map(function (n) { return found[n]; });
 }
 
 // "0.7×3.7"(cm)のような表記から [縦mm, 横mm] を作る。大きい方を縦(全長)にする
@@ -137,7 +137,7 @@ function fetchProductPage_(product) {
   return { html: html, name: title ? decodeHtml_(title[1]).replace(/\s+/g, " ").replace(/\s*\|\s*MANGO.*$/i, "").trim().slice(0, 120) : "" };
 }
 
-// 商品ページから、画像(1〜2枚目)とモチーフのサイズを取得する
+// 商品ページから、画像(1〜3枚目。3枚目がモデル着用写真)とモチーフのサイズを取得する
 function earringInfo_(parsed) {
   var product = parseJapanProductUrl_(parsed.url);
   var page = fetchProductPage_(product);

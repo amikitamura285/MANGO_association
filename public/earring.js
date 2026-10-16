@@ -99,7 +99,9 @@
         button.type = "button";
         button.textContent = "画像を保存";
         button.addEventListener("click", () => saveImage(index, button));
-        figure.append(image, button);
+        const caption = document.createElement("figcaption");
+        caption.textContent = index === 2 ? "モデル着用写真(3枚目)" : `商品画像(${index + 1}枚目)`;
+        figure.append(image, caption, button);
         return figure;
       }));
       heightInput.value = info.heightMm ?? "";
