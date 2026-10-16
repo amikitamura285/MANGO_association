@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T07:28:56.588Z",
+  "updatedAt": "2026-10-15T19:32:10.033Z",
   "products": [
     {
       "name": "ロングワンピース .-- RAMONA （ブラック）",
@@ -1704,30 +1704,6 @@
       "relatedNames": []
     },
     {
-      "name": "ピアス .-- ADELA （ゴールド）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW042082_1_l.jpg",
-      "productNumber": "MA1658DW042082",
-      "brandItemNumber": "37021551 OR 色 ゴールド（OR）",
-      "brandItemFirstDigit": "3",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW042082/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "ADELA",
-      "relatedNames": []
-    },
-    {
-      "name": "ジャケット.-- ADELA （ナチュラルホワイト）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043428_1_l.jpg",
-      "productNumber": "MA1658EW043428",
-      "brandItemNumber": "37077785 5 色 ナチュラルホワイト（5）",
-      "brandItemFirstDigit": "3",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043428/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "ADELA",
-      "relatedNames": []
-    },
-    {
       "name": "ピアス .-- CANDELA （ゴールド）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW042137_1_l.jpg",
       "productNumber": "MA1658DW042137",
@@ -1797,30 +1773,6 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "BIMBA",
-      "relatedNames": []
-    },
-    {
-      "name": "パンツ-- CLAIRE （ナチュラルホワイト）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042193_1_l.jpg",
-      "productNumber": "MA1658EW042193",
-      "brandItemNumber": "37052901 5 色 ナチュラルホワイト（5）",
-      "brandItemFirstDigit": "3",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042193/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "CLAIRE",
-      "relatedNames": []
-    },
-    {
-      "name": "パンツ-- CLAIRE （オープンブルー）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042195_1_l.jpg",
-      "productNumber": "MA1658EW042195",
-      "brandItemNumber": "37052902 TS 色 オープンブルー（TS）",
-      "brandItemFirstDigit": "3",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042195/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "CLAIRE",
       "relatedNames": []
     },
     {
@@ -3956,5 +3908,5 @@
     "MA1658EW043444",
     "MA1658EW043446"
   ],
-  "scanned": 4320
+  "scanned": 4314
 }
