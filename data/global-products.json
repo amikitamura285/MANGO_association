@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-16T19:29:55.235Z",
+  "updatedAt": "2026-10-17T21:24:02.075Z",
   "products": [
     {
       "name": "Bambi skirt with brushed finish - Women",
@@ -6623,42 +6623,6 @@
         }
       ],
       "baseCode": "37037788",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
-        "name": "Pointed toe flat shoes - Women",
-        "image": "https://media.mango.com/is/image/punto/37093882-32-016?wid=1024",
-        "productNumber": "37093882",
-        "baseCode": "37093882",
-        "globalCode": "37093882",
-        "colorId": "32",
-        "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/pointed-toe-flat-shoes/37093882/32/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "37031416",
-            "colorId": "99"
-          },
-          {
-            "productNumber": "37031350",
-            "colorId": "32"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW042332/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "Bow straight trousers",
-          "image": "https://media.mango.com/is/image/punto/37031416-99-900?wid=1024",
-          "productNumber": "37031416",
-          "baseCode": "37031416",
-          "globalCode": "37031416",
-          "colorId": "99",
-          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/bow-straight-trousers/37031416/99/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041777/"
-        }
-      ],
-      "baseCode": "37093882",
       "hasJapanRelations": true
     }
   ]

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-16T19:29:50.306Z",
+  "updatedAt": "2026-10-17T21:23:57.319Z",
   "products": [
     {
       "name": "ロングワンピース .-- RAMONA （ブラック）",
@@ -715,30 +715,6 @@
       "relatedNames": []
     },
     {
-      "name": "レザーベルト .-- MAYA （ダークブラウン）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039978_1_l.jpg",
-      "productNumber": "MA1658EW039978",
-      "brandItemNumber": "27051334 32 色 ダークブラウン（32）",
-      "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039978/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "MAYA",
-      "relatedNames": []
-    },
-    {
-      "name": "レザーベルト .-- MAYA （ブラウン）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039979_1_l.jpg",
-      "productNumber": "MA1658EW039979",
-      "brandItemNumber": "27051334 30 色 ブラウン（30）",
-      "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039979/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "MAYA",
-      "relatedNames": []
-    },
-    {
       "name": "ピアス .-- ELENA （シルバー）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW040002_1_l.jpg",
       "productNumber": "MA1658DW040002",
@@ -862,6 +838,44 @@
       ]
     },
     {
+      "name": "ヘアクリップ .-- AZUR （ブラック）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW040290_1_l.jpg",
+      "productNumber": "MA1658DW040290",
+      "brandItemNumber": "27064437 99 色 ブラック（99）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW040290/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "AZUR",
+      "relatedNames": []
+    },
+    {
+      "name": "ブレザー .-- AZUR （パステルブルー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040948_1_l.jpg",
+      "productNumber": "MA1658EW040948",
+      "brandItemNumber": "27067941 50 色 パステルブルー（50）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040948/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "AZUR",
+      "relatedNames": [
+        "パンツ .-- WHITE （ホワイト）"
+      ]
+    },
+    {
+      "name": "トップス .-- AZUR （パステルブルー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW041132_1_l.jpg",
+      "productNumber": "MA1658EW041132",
+      "brandItemNumber": "27057941 50 色 パステルブルー（50）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041132/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "AZUR",
+      "relatedNames": []
+    },
+    {
       "name": "シャツ .-- PARTENOP （ライラック）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040298_1_l.jpg",
       "productNumber": "MA1658EW040298",
@@ -931,6 +945,30 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "STUDS",
+      "relatedNames": []
+    },
+    {
+      "name": "トレンチコート .-- ANGELA （ライトベージュ）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040358_1_l.jpg",
+      "productNumber": "MA1658EW040358",
+      "brandItemNumber": "27044774 8 色 ライトベージュ（8）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040358/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "ANGELA",
+      "relatedNames": []
+    },
+    {
+      "name": "ピアス .-- ANGELA （ゴールド）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW041328_1_l.jpg",
+      "productNumber": "MA1658DW041328",
+      "brandItemNumber": "27017799 OR 色 ゴールド（OR）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW041328/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "ANGELA",
       "relatedNames": []
     },
     {
@@ -1193,29 +1231,27 @@
       "relatedNames": []
     },
     {
-      "name": "ブレザー .-- AZUR （パステルブルー）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040948_1_l.jpg",
-      "productNumber": "MA1658EW040948",
-      "brandItemNumber": "27067941 50 色 パステルブルー（50）",
+      "name": "トップス .-- LOTUS （ダークブラウン）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040872_1_l.jpg",
+      "productNumber": "MA1658EW040872",
+      "brandItemNumber": "27077145 32 色 ダークブラウン（32）",
       "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040948/",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040872/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "AZUR",
-      "relatedNames": [
-        "パンツ .-- WHITE （ホワイト）"
-      ]
+      "englishKey": "LOTUS",
+      "relatedNames": []
     },
     {
-      "name": "トップス .-- AZUR （パステルブルー）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW041132_1_l.jpg",
-      "productNumber": "MA1658EW041132",
-      "brandItemNumber": "27057941 50 色 パステルブルー（50）",
+      "name": "ロングワンピース .-- LOTUS （ライトベージュ）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW041493_1_l.jpg",
+      "productNumber": "MA1658EW041493",
+      "brandItemNumber": "27009091 10 色 ライトベージュ（10）",
       "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041132/",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041493/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "AZUR",
+      "englishKey": "LOTUS",
       "relatedNames": []
     },
     {
@@ -2592,36 +2628,65 @@
   ],
   "groups": [
     {
-      "englishKey": "MAYA",
+      "englishKey": "ANGELA",
       "main": {
-        "name": "レザーベルト .-- MAYA （ダークブラウン）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039978_1_l.jpg",
-        "productNumber": "MA1658EW039978",
-        "brandItemNumber": "27051334 32 色 ダークブラウン（32）",
+        "name": "トレンチコート .-- ANGELA （ライトベージュ）",
+        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040358_1_l.jpg",
+        "productNumber": "MA1658EW040358",
+        "brandItemNumber": "27044774 8 色 ライトベージュ（8）",
         "brandItemFirstDigit": "2",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039978/",
+        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040358/",
         "brandCode": "MA1658",
         "brandName": "MANGO",
-        "englishKey": "MAYA",
+        "englishKey": "ANGELA",
         "relatedNames": []
       },
       "related": [
         {
-          "name": "レザーベルト .-- MAYA （ブラウン）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039979_1_l.jpg",
-          "productNumber": "MA1658EW039979",
-          "brandItemNumber": "27051334 30 色 ブラウン（30）",
+          "name": "ピアス .-- ANGELA （ゴールド）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW041328_1_l.jpg",
+          "productNumber": "MA1658DW041328",
+          "brandItemNumber": "27017799 OR 色 ゴールド（OR）",
           "brandItemFirstDigit": "2",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039979/",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW041328/",
           "brandCode": "MA1658",
           "brandName": "MANGO",
-          "englishKey": "MAYA",
+          "englishKey": "ANGELA",
+          "relatedNames": []
+        }
+      ]
+    },
+    {
+      "englishKey": "LOTUS",
+      "main": {
+        "name": "トップス .-- LOTUS （ダークブラウン）",
+        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040872_1_l.jpg",
+        "productNumber": "MA1658EW040872",
+        "brandItemNumber": "27077145 32 色 ダークブラウン（32）",
+        "brandItemFirstDigit": "2",
+        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040872/",
+        "brandCode": "MA1658",
+        "brandName": "MANGO",
+        "englishKey": "LOTUS",
+        "relatedNames": []
+      },
+      "related": [
+        {
+          "name": "ロングワンピース .-- LOTUS （ライトベージュ）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW041493_1_l.jpg",
+          "productNumber": "MA1658EW041493",
+          "brandItemNumber": "27009091 10 色 ライトベージュ（10）",
+          "brandItemFirstDigit": "2",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041493/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "LOTUS",
           "relatedNames": []
         }
       ]
     }
   ],
-  "newCount": 1,
+  "newCount": 2,
   "displayedMainProductNumbers": [
     "MA1658EW33440",
     "MA3878EC003099",
@@ -3987,7 +4052,9 @@
     "MA1658AW042863",
     "MA1658EW043444",
     "MA1658EW043446",
-    "MA1658EW039978"
+    "MA1658EW039978",
+    "MA1658EW040358",
+    "MA1658EW040872"
   ],
-  "scanned": 4323
+  "scanned": 4291
 }
