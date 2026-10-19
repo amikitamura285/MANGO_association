@@ -127,6 +127,7 @@
     try {
       const info = await callRelay({ action: "earringInfo", url });
       loaded = info;
+      markShownAsSkipped();
       modelSeen.clear();
       shownModels = [];
       modelImages.replaceChildren();
@@ -336,6 +337,7 @@
   loadButton.addEventListener("click", loadProduct);
   urlInput.addEventListener("keydown", (event) => { if (event.key === "Enter") loadProduct(); });
   modelShuffle.addEventListener("click", () => { markShownAsSkipped(); showModels(); });
+  window.addEventListener("pagehide", markShownAsSkipped);
 
   [heightInput, widthInput].forEach((input) => input.addEventListener("input", refreshPrompt));
   copyButton.addEventListener("click", copyPrompt);
