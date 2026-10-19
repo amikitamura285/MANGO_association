@@ -82,7 +82,7 @@ function renderProductCards(containerSelector, groups, compact, scope = "main") 
   container.innerHTML = groups.map((group) => {
     const main = group.main || group.japanese || group;
     const related = Array.isArray(group.related) ? group.related : (Array.isArray(group.global) ? group.global : []);
-    const isChecked = checkedSet.has(main.productNumber);
+    const isChecked = scope === "global" ? checkedSet.has(main.productNumber) : isGroupChecked(group);
 
     return `
       <section class="product-group">
@@ -105,25 +105,32 @@ function renderProductCards(containerSelector, groups, compact, scope = "main") 
       const target = event.target;
       const productNumber = target.dataset.productNumber;
       if (!productNumber) return;
-      if (target.checked) {
-        checkedSet.add(productNumber);
-      } else {
-        checkedSet.delete(productNumber);
-      }
+      // 関連付けページでは、そのとき並んでいた関連アイテムもまとめて確認済にする(あとから加わったアイテムだけが、再び出るようにするため)
+      const group = scope === "global" ? null : groups.find((entry) => entry.main.productNumber === productNumber);
+      const members = [productNumber, ...(group ? group.related.map((item) => item.productNumber).filter(Boolean) : [])];
+      members.forEach((code) => { if (target.checked) checkedSet.add(code); else checkedSet.delete(code); });
       if (scope === "global") {
         renderGlobalRows();
-        saveChecked("global", productNumber, target.checked);
+        saveChecked("global", members, target.checked);
       } else {
         renderMainProducts();
-        saveChecked("relation", productNumber, target.checked);
+        saveChecked("relation", members, target.checked);
       }
     });
   });
 }
 
+// メインが確認済で、関連アイテムの確認済が混ざっている(=まとめて確認した)のに、未確認のアイテムが残っているグループは、あとから加わったアイテムがあるため未確認として出す
+function isGroupChecked(group) {
+  if (!state.checked.has(group.main.productNumber)) return false;
+  const related = group.related.map((item) => item.productNumber);
+  if (!related.some((code) => state.checked.has(code))) return true;
+  return related.every((code) => state.checked.has(code));
+}
+
 function renderMainProducts() {
-  const activeGroups = state.groups.filter((group) => !state.checked.has(group.main.productNumber));
-  const checkedGroups = state.groups.filter((group) => state.checked.has(group.main.productNumber));
+  const activeGroups = state.groups.filter((group) => !isGroupChecked(group));
+  const checkedGroups = state.groups.filter((group) => isGroupChecked(group));
 
   renderProductCards("#productGrid", activeGroups, false);
   renderProductCards("#checkedProductGrid", checkedGroups, false);
@@ -272,18 +279,19 @@ async function loadChecked(scope) {
   }
 }
 
-async function saveChecked(scope, productNumber, checked) {
+async function saveChecked(scope, codes, checked) {
   const pending = pendingChecks[scope];
-  pending.set(productNumber, checked);
+  codes.forEach((code) => pending.set(code, checked));
   const seq = ++checkedSeq[scope].started;
+  const settle = () => codes.forEach((code) => { if (pending.get(code) === checked) pending.delete(code); });
   try {
-    const list = await relayChecked(scope, { action: "check", productNumber, checked });
-    if (pending.get(productNumber) === checked) pending.delete(productNumber);
+    const list = await relayChecked(scope, { action: "check", productNumbers: codes, checked });
+    settle();
     applyChecked(scope, list, seq);
   } catch (error) {
-    if (pending.get(productNumber) === checked) pending.delete(productNumber);
+    settle();
     const set = state[CHECKED_VIEWS[scope].stateKey];
-    if (checked) set.delete(productNumber); else set.add(productNumber);
+    codes.forEach((code) => { if (checked) set.delete(code); else set.add(code); });
     CHECKED_VIEWS[scope].render();
     alert(`確認済の保存に失敗しました。もう一度お試しください。(${error.message})`);
   }
