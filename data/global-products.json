@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19T06:54:03.726Z",
+  "updatedAt": "2026-10-19T22:56:55.650Z",
   "products": [
     {
       "name": "Argyle knit sweater - Women",
@@ -5822,50 +5822,6 @@
     },
     {
       "main": {
-        "name": "Wool bomber jacket - Women",
-        "image": "https://media.mango.com/is/image/punto/37027939-37-002?wid=1024",
-        "productNumber": "37027939",
-        "baseCode": "37027939",
-        "globalCode": "37027939",
-        "colorId": "37",
-        "url": "https://shop.mango.com/gb/en/p/women/jackets/bombers/wool-bomber-jacket/37027939/37/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "37097938",
-            "colorId": "37"
-          },
-          {
-            "productNumber": "37047938",
-            "colorId": "05"
-          },
-          {
-            "productNumber": "37037935",
-            "colorId": "99"
-          },
-          {
-            "productNumber": "37036361",
-            "colorId": "32"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043666/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "Short belt skirt",
-          "image": "https://media.mango.com/is/image/punto/37097938-37-900?wid=1024",
-          "productNumber": "37097938",
-          "baseCode": "37097938",
-          "globalCode": "37097938",
-          "colorId": "37",
-          "url": "https://shop.mango.com/gb/en/p/women/skirts/short/short-belt-skirt/37097938/37/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043603/"
-        }
-      ],
-      "baseCode": "37027939",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
         "name": "Lace camisole dress - Women",
         "image": "https://media.mango.com/is/image/punto/37003874-75-002?wid=1024",
         "productNumber": "37003874",
@@ -6518,46 +6474,6 @@
         }
       ],
       "baseCode": "27024095",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
-        "name": "Fitted top with lace detail - Women",
-        "image": "https://media.mango.com/is/image/punto/37041372-30-002?wid=1024",
-        "productNumber": "37041372",
-        "baseCode": "37041372",
-        "globalCode": "37041372",
-        "colorId": "30",
-        "url": "https://shop.mango.com/gb/en/p/women/tops/fitted-top-with-lace-detail/37041372/30/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "27096340",
-            "colorId": "05"
-          },
-          {
-            "productNumber": "27026717",
-            "colorId": "03"
-          },
-          {
-            "productNumber": "37001403",
-            "colorId": "PL"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041863/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "Interlinked hoop earrings",
-          "image": "https://media.mango.com/is/image/punto/37001403-PL-900?wid=1024",
-          "productNumber": "37001403",
-          "baseCode": "37001403",
-          "globalCode": "37001403",
-          "colorId": "PL",
-          "url": "https://shop.mango.com/gb/en/p/women/jewellery/earrings/interlinked-hoop-earrings/37001403/PL/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW042006/"
-        }
-      ],
-      "baseCode": "37041372",
       "hasJapanRelations": true
     },
     {
