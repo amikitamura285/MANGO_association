@@ -13,6 +13,7 @@
   const heightInput = $("earringHeight");
   const widthInput = $("earringWidth");
   const promptBox = $("earringPrompt");
+  const hookSelect = $("earringHook");
   const copyButton = $("earringCopy");
   const modelShuffle = $("earringModelShuffle");
   const modelStatus = $("earringModelStatus");
@@ -55,9 +56,12 @@
   function buildPrompt() {
     const height = fmt(Number(heightInput.value) / 10);
     const width = fmt(Number(widthInput.value) / 10);
+    const hook = hookSelect.value === "short"
+      ? "フックや留め具は短く、耳たぶの穴から本体の上端までを約0.5cmにして、商品画像のとおりの形にし、長くしない"
+      : "フックや留め具、チェーンの長さと形は商品画像のとおりにして、別の形に変えたり長くしたりしない";
     return [
       "次はこの写真のピアスの着用画像を生成して。質感も忠実に。",
-      `ピアスのサイズ：横${width}cm×縦${height}cm（耳全体の縦幅を6cmとして正確なサイズ感で。ピアスの縦は耳全体の縦幅の約${fmt(Math.round(Number(heightInput.value) / 60 * 100))}%、横は約${fmt(Math.round(Number(widthInput.value) / 60 * 100))}%。実際より大きく描かない）`,
+      `ピアスのサイズ：本体（モチーフ）は横${width}cm×縦${height}cm。${hook}（頭の奥行きを約18cm、耳全体の縦幅を6cmとして正確なサイズ感で。実際より大きく描かない）`,
       "モデル：添付の着用写真を参考に、服の色は変更なし"
     ].join("\n");
   }
@@ -340,5 +344,6 @@
   window.addEventListener("pagehide", markShownAsSkipped);
 
   [heightInput, widthInput].forEach((input) => input.addEventListener("input", refreshPrompt));
+  hookSelect.addEventListener("change", refreshPrompt);
   copyButton.addEventListener("click", copyPrompt);
 })();
