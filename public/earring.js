@@ -57,7 +57,7 @@
     const width = fmt(Number(widthInput.value) / 10);
     return [
       "次はこの写真のピアスの着用画像を生成して。質感も忠実に。",
-      `ピアスのサイズ：横${width}cm×縦${height}cm（耳たぶ1.5cmとして正確なサイズ感で）`,
+      `ピアスのサイズ：横${width}cm×縦${height}cm（耳たぶの縦幅を1.5cmとして正確なサイズ感で）`,
       "モデル：添付の着用写真を参考に、服の色は変更なし"
     ].join("\n");
   }
