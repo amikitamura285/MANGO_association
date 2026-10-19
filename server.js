@@ -329,7 +329,7 @@ function japanProductUrlForGlobal(globalProduct, japanProducts) {
   const match = (japanProducts || []).find((item) => {
     const brandMatch = String(item.brandItemNumber || "").match(/(\d{8})\s+([A-Z0-9]+)/i);
     const itemCode = brandMatch?.[1] || "";
-    const sameCode = itemCode === globalCode || itemCode.slice(-7) === globalCode.slice(-7);
+    const sameCode = itemCode === globalCode;
     return brandMatch
       && sameCode
       && normalizeColor(brandMatch[2]) === globalColor;
