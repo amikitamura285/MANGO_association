@@ -127,7 +127,8 @@
     try {
       const info = await callRelay({ action: "earringInfo", url });
       loaded = info;
-      modelOffset = 0;
+      modelSeen.clear();
+      shownModels = [];
       modelImages.replaceChildren();
       nameLabel.textContent = info.name || "商品";
       renderImages(images, info, setStatus);
@@ -221,7 +222,8 @@
   }
 
   let modelRun = 0;
-  let modelOffset = 0;
+  const modelSeen = new Set();
+  let shownModels = [];
   const MODEL_BATCH = 30;
   // 保存したことのあるモデル写真は、次回以降は出さない(このブラウザに記録)
   const DOWNLOADED_KEY = "mango-earring-downloaded-models";
@@ -234,9 +236,21 @@
     try { localStorage.setItem(DOWNLOADED_KEY, JSON.stringify([...set].slice(-2000))); } catch (error) { /* 保存できない場合は記録しない */ }
   };
 
+  // 「次の写真を探す」で飛ばした写真は、ほかの候補が出尽くすまで出さない(このブラウザに記録)
+  const SKIPPED_KEY = "mango-earring-skipped-models";
+  const skippedModels = () => {
+    try { return new Set(JSON.parse(localStorage.getItem(SKIPPED_KEY) || "[]")); } catch (error) { return new Set(); }
+  };
+  const markShownAsSkipped = () => {
+    const downloaded = downloadedModels();
+    const set = skippedModels();
+    shownModels.forEach((item) => { if (!downloaded.has(item.productNumber)) set.add(item.productNumber); });
+    try { localStorage.setItem(SKIPPED_KEY, JSON.stringify([...set].slice(-2000))); } catch (error) { /* 保存できない場合は記録しない */ }
+  };
+
   const leadingDigit = (value) => (String(value || "").match(/\d/) || [""])[0];
 
-  async function showModels(fromStart = false) {
+  async function showModels() {
     const run = ++modelRun;
     modelShuffle.disabled = true;
     modelImages.replaceChildren();
@@ -246,8 +260,15 @@
       const downloaded = downloadedModels();
       const pool = (await loadModelPool()).filter((item) => (!digit || leadingDigit(item.brandItemNumber) === digit) && !downloaded.has(item.productNumber));
       if (!pool.length) throw new Error("商品データが見つかりませんでした。");
-      if (fromStart || modelOffset >= pool.length) modelOffset = 0;
-      const candidates = pool.slice(modelOffset, modelOffset + MODEL_BATCH);
+      // 未表示の候補を新着順に並べ、飛ばしたことのある写真は最後に回す
+      const skipped = skippedModels();
+      const order = (list) => list.filter((item) => !skipped.has(item.productNumber)).concat(list.filter((item) => skipped.has(item.productNumber)));
+      let fresh = order(pool.filter((item) => !modelSeen.has(item.productNumber)));
+      if (!fresh.length) {
+        modelSeen.clear();
+        fresh = order(pool);
+      }
+      const candidates = fresh.slice(0, MODEL_BATCH);
       const detector = await loadDetector();
       const found = [];
       let next = 0;
@@ -288,7 +309,8 @@
         }
       };
       await Promise.all(Array.from({ length: 4 }, worker));
-      modelOffset += next;
+      candidates.slice(0, next).forEach((item) => modelSeen.add(item.productNumber));
+      shownModels = found.slice(0, MODEL_COUNT).map((entry) => entry.item);
       if (run !== modelRun) return;
       if (!found.length) throw new Error("条件に合う写真が見つかりませんでした。もう一度お試しください。");
       setModelStatus(detector
@@ -313,7 +335,7 @@
 
   loadButton.addEventListener("click", loadProduct);
   urlInput.addEventListener("keydown", (event) => { if (event.key === "Enter") loadProduct(); });
-  modelShuffle.addEventListener("click", () => showModels());
+  modelShuffle.addEventListener("click", () => { markShownAsSkipped(); showModels(); });
 
   [heightInput, widthInput].forEach((input) => input.addEventListener("input", refreshPrompt));
   copyButton.addEventListener("click", copyPrompt);
