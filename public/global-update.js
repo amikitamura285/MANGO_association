@@ -24,11 +24,20 @@
   }
 
   async function loadJapanProducts() {
-    for (const path of ["japan-index.json", "products.json"]) {
-      const response = await fetch(`${dataPathPrefix}${path}?v=${Date.now()}`, { cache: "no-store" });
-      if (response.ok) return (await response.json()).products || [];
+    const problems = [];
+    for (let attempt = 0; attempt < 3; attempt += 1) {
+      if (attempt) await new Promise((resolve) => setTimeout(resolve, 3000));
+      for (const path of ["japan-index.json", "products.json"]) {
+        try {
+          const response = await fetch(`${dataPathPrefix}${path}?v=${Date.now()}`, { cache: "no-store" });
+          if (response.ok) return (await response.json()).products || [];
+          problems.push(`${path}:${response.status}`);
+        } catch (error) {
+          problems.push(`${path}:${error.message}`);
+        }
+      }
     }
-    throw new Error("日本商品データを読み込めませんでした。");
+    throw new Error(`日本商品データを読み込めませんでした。(${problems.slice(-2).join(", ")}) ページを再読み込みして、もう一度UPDATEしてください。`);
   }
 
   async function publish(raw) {
