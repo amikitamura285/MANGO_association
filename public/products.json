@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19T22:56:50.579Z",
+  "updatedAt": "2026-10-20T22:16:14.307Z",
   "products": [
     {
       "name": "ロングワンピース .-- RAMONA （ブラック）",
@@ -647,6 +647,30 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "LUCCA",
+      "relatedNames": []
+    },
+    {
+      "name": "ジーンズ .-- NIKI （チャコール）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039768_1_l.jpg",
+      "productNumber": "MA1658EW039768",
+      "brandItemNumber": "27081342 95 色 チャコール（95）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039768/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "NIKI",
+      "relatedNames": []
+    },
+    {
+      "name": "ジーンズ .-- NIKI （オープングレー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040750_1_l.jpg",
+      "productNumber": "MA1658EW040750",
+      "brandItemNumber": "27044099 TN 色 オープングレー（TN）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040750/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "NIKI",
       "relatedNames": []
     },
     {
@@ -1600,42 +1624,6 @@
       ]
     },
     {
-      "name": "パンツ .-- LOLA （ダークブラウン）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW041880_1_l.jpg",
-      "productNumber": "MA1658EW041880",
-      "brandItemNumber": "37081466 32 色 ダークブラウン（32）",
-      "brandItemFirstDigit": "3",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041880/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "LOLA",
-      "relatedNames": []
-    },
-    {
-      "name": "ピアス .-- LOLA （ゴールド）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW042539_1_l.jpg",
-      "productNumber": "MA1658DW042539",
-      "brandItemNumber": "37004450 OR 色 ゴールド（OR）",
-      "brandItemFirstDigit": "3",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW042539/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "LOLA",
-      "relatedNames": []
-    },
-    {
-      "name": "ブラウス.-- LOLA （グリーン）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043480_1_l.jpg",
-      "productNumber": "MA1658EW043480",
-      "brandItemNumber": "37037782 43 色 グリーン（43）",
-      "brandItemFirstDigit": "3",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043480/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "LOLA",
-      "relatedNames": []
-    },
-    {
       "name": "レザーストラップサンダル .-- SANDRA （ゴールド）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658BW041892_1_l.jpg",
       "productNumber": "MA1658BW041892",
@@ -2092,6 +2080,30 @@
       ]
     },
     {
+      "name": "ピアス .-- LOLA （ゴールド）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW042539_1_l.jpg",
+      "productNumber": "MA1658DW042539",
+      "brandItemNumber": "37004450 OR 色 ゴールド（OR）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW042539/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "LOLA",
+      "relatedNames": []
+    },
+    {
+      "name": "ブラウス.-- LOLA （グリーン）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043480_1_l.jpg",
+      "productNumber": "MA1658EW043480",
+      "brandItemNumber": "37037782 43 色 グリーン（43）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043480/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "LOLA",
+      "relatedNames": []
+    },
+    {
       "name": "ピアス .-- LINA （ゴールド）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW042546_1_l.jpg",
       "productNumber": "MA1658DW042546",
@@ -2242,6 +2254,35 @@
       "brandName": "MANGO",
       "englishKey": "CAROLINE",
       "relatedNames": []
+    },
+    {
+      "name": "ジーンズ .-- SOPHIA （オープンブルー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042839_1_l.jpg",
+      "productNumber": "MA1658EW042839",
+      "brandItemNumber": "37054780 TM 色 オープンブルー（TM）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042839/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "SOPHIA",
+      "relatedNames": [
+        "セーター .-- CARLOS （ダークレッド）",
+        "パンプス .-- RUMBA （ナチュラルホワイト）"
+      ]
+    },
+    {
+      "name": "ジーンズ .-- SOPHIA （オープングレー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043358_1_l.jpg",
+      "productNumber": "MA1658EW043358",
+      "brandItemNumber": "37017818 TN 色 オープングレー（TN）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043358/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "SOPHIA",
+      "relatedNames": [
+        "ブレザー .-- LEA （ブラック）"
+      ]
     },
     {
       "name": "ブラウス .-- DORIS （ブラウン）",
@@ -2644,46 +2685,58 @@
       "brandName": "MANGO",
       "englishKey": "ALLEGRA",
       "relatedNames": []
+    },
+    {
+      "name": "セーター .-- SANSES （レッド）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043555_1_l.jpg",
+      "productNumber": "MA1658EW043555",
+      "brandItemNumber": "37007795 70 色 レッド（70）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043555/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "SANSES",
+      "relatedNames": []
+    },
+    {
+      "name": "セーター .-- SANSES （ブライトブルー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043556_1_l.jpg",
+      "productNumber": "MA1658EW043556",
+      "brandItemNumber": "37007795 53 色 ブライトブルー（53）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043556/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "SANSES",
+      "relatedNames": []
     }
   ],
   "groups": [
     {
-      "englishKey": "LOLA",
+      "englishKey": "SANSES",
       "main": {
-        "name": "パンツ .-- LOLA （ダークブラウン）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW041880_1_l.jpg",
-        "productNumber": "MA1658EW041880",
-        "brandItemNumber": "37081466 32 色 ダークブラウン（32）",
+        "name": "セーター .-- SANSES （レッド）",
+        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043555_1_l.jpg",
+        "productNumber": "MA1658EW043555",
+        "brandItemNumber": "37007795 70 色 レッド（70）",
         "brandItemFirstDigit": "3",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041880/",
+        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043555/",
         "brandCode": "MA1658",
         "brandName": "MANGO",
-        "englishKey": "LOLA",
+        "englishKey": "SANSES",
         "relatedNames": []
       },
       "related": [
         {
-          "name": "ピアス .-- LOLA （ゴールド）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW042539_1_l.jpg",
-          "productNumber": "MA1658DW042539",
-          "brandItemNumber": "37004450 OR 色 ゴールド（OR）",
+          "name": "セーター .-- SANSES （ブライトブルー）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043556_1_l.jpg",
+          "productNumber": "MA1658EW043556",
+          "brandItemNumber": "37007795 53 色 ブライトブルー（53）",
           "brandItemFirstDigit": "3",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW042539/",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043556/",
           "brandCode": "MA1658",
           "brandName": "MANGO",
-          "englishKey": "LOLA",
-          "relatedNames": []
-        },
-        {
-          "name": "ブラウス.-- LOLA （グリーン）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043480_1_l.jpg",
-          "productNumber": "MA1658EW043480",
-          "brandItemNumber": "37037782 43 色 グリーン（43）",
-          "brandItemFirstDigit": "3",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043480/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "LOLA",
+          "englishKey": "SANSES",
           "relatedNames": []
         }
       ]
@@ -4074,7 +4127,8 @@
     "MA1658EW043640",
     "MA1658EW043655",
     "MA1658EW043568",
-    "MA1658EW041880"
+    "MA1658EW041880",
+    "MA1658EW043555"
   ],
-  "scanned": 4275
+  "scanned": 4272
 }
