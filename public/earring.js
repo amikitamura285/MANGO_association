@@ -269,6 +269,18 @@
     try { localStorage.setItem(SKIPPED_KEY, JSON.stringify([...set].slice(-2000))); } catch (error) { /* 保存できない場合は記録しない */ }
   };
 
+  // 顔の写る写真が無かった商品は、次回以降は調べない(写真は変わらないため。このブラウザに記録)
+  const NOFACE_KEY = "mango-earring-noface-models";
+  const noFaceModels = () => {
+    try { return new Set(JSON.parse(localStorage.getItem(NOFACE_KEY) || "[]")); } catch (error) { return new Set(); }
+  };
+  const markNoFace = (productNumbers) => {
+    if (!productNumbers.length) return;
+    const set = noFaceModels();
+    productNumbers.forEach((code) => set.add(code));
+    try { localStorage.setItem(NOFACE_KEY, JSON.stringify([...set].slice(-4000))); } catch (error) { /* 保存できない場合は記録しない */ }
+  };
+
   const leadingDigit = (value) => (String(value || "").match(/\d/) || [""])[0];
 
   async function showModels() {
@@ -282,7 +294,8 @@
     try {
       const digit = leadingDigit(loaded && loaded.brandItemNumber);
       const downloaded = downloadedModels();
-      const pool = (await loadModelPool()).filter((item) => (!digit || leadingDigit(item.brandItemNumber) === digit) && !downloaded.has(item.productNumber));
+      const noFace = noFaceModels();
+      const pool = (await loadModelPool()).filter((item) => (!digit || leadingDigit(item.brandItemNumber) === digit) && !downloaded.has(item.productNumber) && !noFace.has(item.productNumber));
       if (!pool.length) throw new Error("商品データが見つかりませんでした。");
       // 未表示の候補を新着順に並べ、飛ばしたことのある写真は最後に回す
       const skipped = skippedModels();
@@ -292,6 +305,7 @@
       let tried = 0;
       let failed = 0;
       let lastError = null;
+      const noFaceFound = [];
       const render = () => {
         found.sort((x, y) => x.order - y.order);
         modelImages.replaceChildren(...found.slice(0, MODEL_COUNT).map((entry) => modelFigure(entry.item, entry)));
@@ -308,7 +322,7 @@
         }
       };
       let rounds = 0;
-      while (run === modelRun && !found.length && rounds < 3) {
+      while (run === modelRun && !found.length && rounds < 6) {
         rounds += 1;
         let fresh = order(pool.filter((item) => !modelSeen.has(item.productNumber)));
         if (!fresh.length) {
@@ -331,6 +345,7 @@
                 next = candidates.length;
                 throw new Error("顔の判定機能を読み込めませんでした");
               }
+              if (!(body.photos || []).length) throw new Error("写真を取得できませんでした");
               let best = null;
               for (const photo of body.photos || []) {
                 const blob = dataBlob(photo.image, photo.mime);
@@ -344,6 +359,8 @@
               if (best && run === modelRun) {
                 found.push(best);
                 render();
+              } else if (!best) {
+                noFaceFound.push(item.productNumber);
               }
             } catch (error) {
               failed += 1;
@@ -355,6 +372,7 @@
           }
         };
         await Promise.all(Array.from({ length: 8 }, worker));
+        markNoFace(noFaceFound.splice(0));
         // 取得に失敗した商品は「確認済み」にせず、次回もう一度試す
         candidates.slice(0, next).filter((item) => !errored.has(item.productNumber)).forEach((item) => modelSeen.add(item.productNumber));
         if (detectorMissing || (!found.length && failed > 0 && failed >= tried / 2)) break;
@@ -364,7 +382,7 @@
       // 顔を判定できないまま写真を並べると、商品だけの写真や後ろ姿が混ざるため、並べない
       if (detectorMissing) throw new Error("顔の判定機能(インターネット上のGoogleの顔検出)を読み込めませんでした。ネットワークを確認して、もう一度「次の写真を探す」を押してください。");
       if (!found.length && lastError && failed >= tried / 2) throw new Error(`写真を取得できませんでした(${lastError.message}) もう一度お試しください。`);
-      if (!found.length) throw new Error("条件に合う写真が見つかりませんでした。もう一度お試しください。");
+      if (!found.length) throw new Error(`条件に合う写真が見つかりませんでした(${tried}商品を確認、取得失敗${failed}件)。もう一度お試しください。`);
       setModelStatus(`${digit ? `ブランド商品番号が「${digit}」で始まる` : ""}新着アイテム順に、顔が写っている写真を並べています(耳が見えるかは写真により異なります)。使いたい写真を「画像を保存」してください。「次の写真を探す」で、さらに古いアイテムの写真を表示します。`);
     } catch (error) {
       setModelStatus(`写真を探せませんでした: ${error.message}`, true);
