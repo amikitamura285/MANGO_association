@@ -171,7 +171,7 @@
 
   const modelImageUrl = (item, n) => `https://sc3.locondo.jp/contents/commodity_image/${item.productNumber.slice(0, 2)}/${item.productNumber}_${n}_l.jpg`;
 
-  // 顔の検出(MediaPipe)。読み込めない環境では null を返し、判定なしで表示する
+  // 顔の検出(MediaPipe)。読み込めなければ null を返す
   let detectorPromise = null;
   function loadDetector() {
     if (!detectorPromise) {
@@ -184,7 +184,10 @@
           runningMode: "IMAGE",
           minDetectionConfidence: 0.6
         });
-      })().catch(() => null);
+      })().catch(() => {
+        detectorPromise = null; // 失敗を覚えず、次回もう一度読み込む
+        return null;
+      });
     }
     return detectorPromise;
   }
@@ -272,7 +275,13 @@
       // 未表示の候補を新着順に並べ、飛ばしたことのある写真は最後に回す
       const skipped = skippedModels();
       const order = (list) => list.filter((item) => !skipped.has(item.productNumber)).concat(list.filter((item) => skipped.has(item.productNumber)));
-      const detector = await loadDetector();
+      let detector = await loadDetector();
+      for (let attempt = 0; !detector && attempt < 2; attempt += 1) {
+        await new Promise((resolve) => setTimeout(resolve, 1500));
+        detector = await loadDetector();
+      }
+      // 顔を判定できないまま写真を並べると、商品だけの写真や後ろ姿が混ざるため、並べない
+      if (!detector) throw new Error("顔の判定機能(インターネット上のGoogleの顔検出)を読み込めませんでした。ネットワークを確認して、もう一度「次の写真を探す」を押してください。");
       const found = [];
       let tried = 0;
       let failed = 0;
@@ -313,12 +322,9 @@
               let best = null;
               for (const photo of body.photos || []) {
                 const blob = dataBlob(photo.image, photo.mime);
-                let score = 1;
-                if (detector) {
-                  const bitmap = await createImageBitmap(blob);
-                  score = faceScore(detector, bitmap);
-                  bitmap.close();
-                }
+                const bitmap = await createImageBitmap(blob);
+                const score = faceScore(detector, bitmap);
+                bitmap.close();
                 if (score > 0 && (!best || score > best.score)) {
                   best = { order: index + (rounds - 1) * MODEL_BATCH, item, blob, base64: photo.image, mime: photo.mime, score, n: Number((photo.url.match(/_(\d+)_l\.jpg$/) || [])[1]) || 0 };
                 }
@@ -345,9 +351,7 @@
       if (run !== modelRun) return;
       if (!found.length && lastError && failed >= tried / 2) throw new Error(`写真を取得できませんでした(${lastError.message}) もう一度お試しください。`);
       if (!found.length) throw new Error("条件に合う写真が見つかりませんでした。もう一度お試しください。");
-      setModelStatus(detector
-        ? `${digit ? `ブランド商品番号が「${digit}」で始まる` : ""}新着アイテム順に、顔が写っている写真を並べています(耳が見えるかは写真により異なります)。使いたい写真を「画像を保存」してください。「次の写真を探す」で、さらに古いアイテムの写真を表示します。`
-        : "顔の判定を読み込めなかったため、判定なしで表示しています。顔が写っている写真を選んでください。");
+      setModelStatus(`${digit ? `ブランド商品番号が「${digit}」で始まる` : ""}新着アイテム順に、顔が写っている写真を並べています(耳が見えるかは写真により異なります)。使いたい写真を「画像を保存」してください。「次の写真を探す」で、さらに古いアイテムの写真を表示します。`);
     } catch (error) {
       setModelStatus(`写真を探せませんでした: ${error.message}`, true);
     }
