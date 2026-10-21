@@ -322,10 +322,11 @@
         }
       };
       let rounds = 0;
-      while (run === modelRun && !found.length && rounds < 6) {
+      while (run === modelRun && found.length < MODEL_COUNT && rounds < 6) {
         rounds += 1;
         let fresh = order(pool.filter((item) => !modelSeen.has(item.productNumber)));
         if (!fresh.length) {
+          if (rounds > 1) break;
           modelSeen.clear();
           fresh = order(pool);
         }
