@@ -192,6 +192,15 @@
     return detectorPromise;
   }
 
+  async function loadDetectorWithRetry() {
+    let detector = await loadDetector();
+    for (let attempt = 0; !detector && attempt < 2; attempt += 1) {
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+      detector = await loadDetector();
+    }
+    return detector;
+  }
+
   // 顔がはっきり写っている写真か判定し、点数(大きい顔・横向きほど高い)を返す。写っていなければ 0
   function faceScore(detector, bitmap) {
     const detections = detector.detect(bitmap).detections || [];
@@ -267,6 +276,9 @@
     modelShuffle.disabled = true;
     modelImages.replaceChildren();
     setModelStatus("新着アイテムから、顔が写っている写真を探しています…");
+    // 顔の判定機能の読み込みを、写真の取得と同時に進めて、待ち時間を短くする
+    const detectorReady = loadDetectorWithRetry();
+    detectorReady.catch(() => {});
     try {
       const digit = leadingDigit(loaded && loaded.brandItemNumber);
       const downloaded = downloadedModels();
@@ -275,13 +287,7 @@
       // 未表示の候補を新着順に並べ、飛ばしたことのある写真は最後に回す
       const skipped = skippedModels();
       const order = (list) => list.filter((item) => !skipped.has(item.productNumber)).concat(list.filter((item) => skipped.has(item.productNumber)));
-      let detector = await loadDetector();
-      for (let attempt = 0; !detector && attempt < 2; attempt += 1) {
-        await new Promise((resolve) => setTimeout(resolve, 1500));
-        detector = await loadDetector();
-      }
-      // 顔を判定できないまま写真を並べると、商品だけの写真や後ろ姿が混ざるため、並べない
-      if (!detector) throw new Error("顔の判定機能(インターネット上のGoogleの顔検出)を読み込めませんでした。ネットワークを確認して、もう一度「次の写真を探す」を押してください。");
+      let detectorMissing = false;
       const found = [];
       let tried = 0;
       let failed = 0;
@@ -319,6 +325,12 @@
             next += 1;
             try {
               const body = await fetchPhotos(item);
+              const detector = await detectorReady;
+              if (!detector) {
+                detectorMissing = true;
+                next = candidates.length;
+                throw new Error("顔の判定機能を読み込めませんでした");
+              }
               let best = null;
               for (const photo of body.photos || []) {
                 const blob = dataBlob(photo.image, photo.mime);
@@ -342,13 +354,15 @@
             if (run === modelRun) setModelStatus(`顔が写っている写真を探しています… ${Math.min(found.length, MODEL_COUNT)}枚(${tried}枚を確認)`);
           }
         };
-        await Promise.all(Array.from({ length: 4 }, worker));
+        await Promise.all(Array.from({ length: 8 }, worker));
         // 取得に失敗した商品は「確認済み」にせず、次回もう一度試す
         candidates.slice(0, next).filter((item) => !errored.has(item.productNumber)).forEach((item) => modelSeen.add(item.productNumber));
-        if (!found.length && failed > 0 && failed >= tried / 2) break;
+        if (detectorMissing || (!found.length && failed > 0 && failed >= tried / 2)) break;
       }
       shownModels = found.slice(0, MODEL_COUNT).map((entry) => entry.item);
       if (run !== modelRun) return;
+      // 顔を判定できないまま写真を並べると、商品だけの写真や後ろ姿が混ざるため、並べない
+      if (detectorMissing) throw new Error("顔の判定機能(インターネット上のGoogleの顔検出)を読み込めませんでした。ネットワークを確認して、もう一度「次の写真を探す」を押してください。");
       if (!found.length && lastError && failed >= tried / 2) throw new Error(`写真を取得できませんでした(${lastError.message}) もう一度お試しください。`);
       if (!found.length) throw new Error("条件に合う写真が見つかりませんでした。もう一度お試しください。");
       setModelStatus(`${digit ? `ブランド商品番号が「${digit}」で始まる` : ""}新着アイテム順に、顔が写っている写真を並べています(耳が見えるかは写真により異なります)。使いたい写真を「画像を保存」してください。「次の写真を探す」で、さらに古いアイテムの写真を表示します。`);
