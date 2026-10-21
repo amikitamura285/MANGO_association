@@ -523,3 +523,9 @@ footer {
 .earring-prompt { width: 100%; max-width: 760px; box-sizing: border-box; padding: 12px; border: 1px solid var(--line); background: var(--white); color: var(--ink); font: 13px/1.6 'DM Sans', sans-serif; resize: vertical; margin-bottom: 16px; }
 .earring-steps { padding-left: 20px; }
 .earring-thumbs figcaption { font: 11px 'DM Mono', monospace; color: var(--muted); }
+.earring-thumbs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px 12px; align-items: start; max-width: 760px; }
+.earring-thumbs figure { min-width: 0; }
+.earring-thumbs img { width: 100%; height: auto; display: block; }
+.earring-thumbs figcaption { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+@media (max-width: 600px) { .earring-thumbs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.earring-status { margin-bottom: 12px; }
