@@ -268,55 +268,78 @@
       // 未表示の候補を新着順に並べ、飛ばしたことのある写真は最後に回す
       const skipped = skippedModels();
       const order = (list) => list.filter((item) => !skipped.has(item.productNumber)).concat(list.filter((item) => skipped.has(item.productNumber)));
-      let fresh = order(pool.filter((item) => !modelSeen.has(item.productNumber)));
-      if (!fresh.length) {
-        modelSeen.clear();
-        fresh = order(pool);
-      }
-      const candidates = fresh.slice(0, MODEL_BATCH);
       const detector = await loadDetector();
       const found = [];
-      let next = 0;
       let tried = 0;
+      let failed = 0;
+      let lastError = null;
       const render = () => {
         found.sort((x, y) => x.order - y.order);
         modelImages.replaceChildren(...found.slice(0, MODEL_COUNT).map((entry) => modelFigure(entry.item, entry)));
       };
-      const worker = async () => {
-        while (run === modelRun && next < candidates.length && found.length < MODEL_COUNT) {
-          const order = next;
-          const item = candidates[order];
-          next += 1;
+      // 1回目の接続が不安定なことがあるため、失敗したら少し待ってもう一度取得する
+      const fetchPhotos = async (item) => {
+        for (let attempt = 0; ; attempt += 1) {
           try {
-            const body = await callRelay({ action: "earringPhotos", imageUrls: [2, 3, 4, 5].map((n) => modelImageUrl(item, n)) });
-            let best = null;
-            for (const photo of body.photos || []) {
-              const blob = dataBlob(photo.image, photo.mime);
-              let score = 1;
-              if (detector) {
-                const bitmap = await createImageBitmap(blob);
-                score = faceScore(detector, bitmap);
-                bitmap.close();
-              }
-              if (score > 0 && (!best || score > best.score)) {
-                best = { order, item, blob, base64: photo.image, mime: photo.mime, score, n: Number((photo.url.match(/_(\d+)_l\.jpg$/) || [])[1]) || 0 };
-              }
-            }
-            if (best && run === modelRun) {
-              found.push(best);
-              render();
-            }
+            return await callRelay({ action: "earringPhotos", imageUrls: [2, 3, 4, 5].map((n) => modelImageUrl(item, n)) });
           } catch (error) {
-            // 取得や判定に失敗した写真は飛ばす
+            if (attempt >= 1) throw error;
+            await new Promise((resolve) => setTimeout(resolve, 1500));
           }
-          tried += 1;
-          if (run === modelRun) setModelStatus(`顔が写っている写真を探しています… ${Math.min(found.length, MODEL_COUNT)}枚(${tried}/${candidates.length}枚を確認)`);
         }
       };
-      await Promise.all(Array.from({ length: 4 }, worker));
-      candidates.slice(0, next).forEach((item) => modelSeen.add(item.productNumber));
+      let rounds = 0;
+      while (run === modelRun && !found.length && rounds < 3) {
+        rounds += 1;
+        let fresh = order(pool.filter((item) => !modelSeen.has(item.productNumber)));
+        if (!fresh.length) {
+          modelSeen.clear();
+          fresh = order(pool);
+        }
+        const candidates = fresh.slice(0, MODEL_BATCH);
+        const errored = new Set();
+        let next = 0;
+        const worker = async () => {
+          while (run === modelRun && next < candidates.length && found.length < MODEL_COUNT) {
+            const index = next;
+            const item = candidates[index];
+            next += 1;
+            try {
+              const body = await fetchPhotos(item);
+              let best = null;
+              for (const photo of body.photos || []) {
+                const blob = dataBlob(photo.image, photo.mime);
+                let score = 1;
+                if (detector) {
+                  const bitmap = await createImageBitmap(blob);
+                  score = faceScore(detector, bitmap);
+                  bitmap.close();
+                }
+                if (score > 0 && (!best || score > best.score)) {
+                  best = { order: index + (rounds - 1) * MODEL_BATCH, item, blob, base64: photo.image, mime: photo.mime, score, n: Number((photo.url.match(/_(\d+)_l\.jpg$/) || [])[1]) || 0 };
+                }
+              }
+              if (best && run === modelRun) {
+                found.push(best);
+                render();
+              }
+            } catch (error) {
+              failed += 1;
+              lastError = error;
+              errored.add(item.productNumber);
+            }
+            tried += 1;
+            if (run === modelRun) setModelStatus(`顔が写っている写真を探しています… ${Math.min(found.length, MODEL_COUNT)}枚(${tried}枚を確認)`);
+          }
+        };
+        await Promise.all(Array.from({ length: 4 }, worker));
+        // 取得に失敗した商品は「確認済み」にせず、次回もう一度試す
+        candidates.slice(0, next).filter((item) => !errored.has(item.productNumber)).forEach((item) => modelSeen.add(item.productNumber));
+        if (!found.length && failed > 0 && failed >= tried / 2) break;
+      }
       shownModels = found.slice(0, MODEL_COUNT).map((entry) => entry.item);
       if (run !== modelRun) return;
+      if (!found.length && lastError && failed >= tried / 2) throw new Error(`写真を取得できませんでした(${lastError.message}) もう一度お試しください。`);
       if (!found.length) throw new Error("条件に合う写真が見つかりませんでした。もう一度お試しください。");
       setModelStatus(detector
         ? `${digit ? `ブランド商品番号が「${digit}」で始まる` : ""}新着アイテム順に、顔が写っている写真を並べています(耳が見えるかは写真により異なります)。使いたい写真を「画像を保存」してください。「次の写真を探す」で、さらに古いアイテムの写真を表示します。`
