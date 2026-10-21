@@ -196,6 +196,10 @@
     for (const detection of detections) {
       const width = detection.boundingBox.width / bitmap.width;
       if (width < 0.22) continue;
+      // 後ろ姿や服の模様を顔と誤判定した写真を除く(本物の顔は信頼度が高く、画像の上寄りに写る)
+      const confidence = (detection.categories[0] && detection.categories[0].score) || 0;
+      const centerY = (detection.boundingBox.originY + detection.boundingBox.height / 2) / bitmap.height;
+      if (confidence < 0.85 || centerY > 0.6) continue;
       const [rightEye, leftEye, nose] = detection.keypoints;
       const eyeGap = Math.abs(leftEye.x - rightEye.x) || 1;
       const turn = Math.abs(nose.x - (leftEye.x + rightEye.x) / 2) / eyeGap;
