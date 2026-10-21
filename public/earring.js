@@ -105,12 +105,13 @@
       image.src = src;
       image.alt = info.name || "商品画像";
       const caption = document.createElement("figcaption");
-      caption.textContent = `${index + 1}枚目`;
+      const number = Number((src.match(/_([0-9]+)_l\.jpg$/) || [])[1]) || index + 1;
+      caption.textContent = `${number}枚目`;
       const button = document.createElement("button");
       button.type = "button";
       button.textContent = "画像を保存";
       const code = info.url.split("/").filter(Boolean).pop() || "image";
-      button.addEventListener("click", () => saveVia({ action: "earringImage", url: info.url, index }, `earring_${code}_${index + 1}`, button, report));
+      button.addEventListener("click", () => saveVia({ action: "earringPhoto", imageUrl: src }, `earring_${code}_${number}`, button, report));
       figure.append(image, caption, button);
       return figure;
     }));
