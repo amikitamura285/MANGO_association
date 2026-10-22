@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-20T22:16:14.307Z",
+  "updatedAt": "2026-10-21T22:17:17.135Z",
   "products": [
     {
       "name": "ロングワンピース .-- RAMONA （ブラック）",
@@ -650,30 +650,6 @@
       "relatedNames": []
     },
     {
-      "name": "ジーンズ .-- NIKI （チャコール）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039768_1_l.jpg",
-      "productNumber": "MA1658EW039768",
-      "brandItemNumber": "27081342 95 色 チャコール（95）",
-      "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039768/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "NIKI",
-      "relatedNames": []
-    },
-    {
-      "name": "ジーンズ .-- NIKI （オープングレー）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040750_1_l.jpg",
-      "productNumber": "MA1658EW040750",
-      "brandItemNumber": "27044099 TN 色 オープングレー（TN）",
-      "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040750/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "NIKI",
-      "relatedNames": []
-    },
-    {
       "name": "パンツ .-- FATIMA （ダークブラウン）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039771_1_l.jpg",
       "productNumber": "MA1658EW039771",
@@ -1288,6 +1264,30 @@
       "relatedNames": []
     },
     {
+      "name": "トップス .-- LOTUS （ダークブラウン）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040872_1_l.jpg",
+      "productNumber": "MA1658EW040872",
+      "brandItemNumber": "27077145 32 色 ダークブラウン（32）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040872/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "LOTUS",
+      "relatedNames": []
+    },
+    {
+      "name": "ロングワンピース .-- LOTUS （ライトベージュ）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW041493_1_l.jpg",
+      "productNumber": "MA1658EW041493",
+      "brandItemNumber": "27009091 10 色 ライトベージュ（10）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041493/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "LOTUS",
+      "relatedNames": []
+    },
+    {
       "name": "セーター .-- SEQUIN （パステルブルー）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW041030_1_l.jpg",
       "productNumber": "MA1658EW041030",
@@ -1570,7 +1570,9 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "MARIA",
-      "relatedNames": []
+      "relatedNames": [
+        "パンツ .-- LALALA （ブラック）"
+      ]
     },
     {
       "name": "スカーフ .-- MARIA （ナチュラルホワイト）",
@@ -2256,35 +2258,6 @@
       "relatedNames": []
     },
     {
-      "name": "ジーンズ .-- SOPHIA （オープンブルー）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042839_1_l.jpg",
-      "productNumber": "MA1658EW042839",
-      "brandItemNumber": "37054780 TM 色 オープンブルー（TM）",
-      "brandItemFirstDigit": "3",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042839/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "SOPHIA",
-      "relatedNames": [
-        "セーター .-- CARLOS （ダークレッド）",
-        "パンプス .-- RUMBA （ナチュラルホワイト）"
-      ]
-    },
-    {
-      "name": "ジーンズ .-- SOPHIA （オープングレー）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043358_1_l.jpg",
-      "productNumber": "MA1658EW043358",
-      "brandItemNumber": "37017818 TN 色 オープングレー（TN）",
-      "brandItemFirstDigit": "3",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043358/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "SOPHIA",
-      "relatedNames": [
-        "ブレザー .-- LEA （ブラック）"
-      ]
-    },
-    {
       "name": "ブラウス .-- DORIS （ブラウン）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042933_1_l.jpg",
       "productNumber": "MA1658EW042933",
@@ -2589,30 +2562,6 @@
       "relatedNames": []
     },
     {
-      "name": "ショートブーツ .--TEA （ブラック）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658BW043220_1_l.jpg",
-      "productNumber": "MA1658BW043220",
-      "brandItemNumber": "37056325 99 色 ブラック（99）",
-      "brandItemFirstDigit": "3",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW043220/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "TEA",
-      "relatedNames": []
-    },
-    {
-      "name": "ブラウス .-- TEA （ホワイト）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043618_1_l.jpg",
-      "productNumber": "MA1658EW043618",
-      "brandItemNumber": "37037783 1 色 ホワイト（1）",
-      "brandItemFirstDigit": "3",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043618/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "TEA",
-      "relatedNames": []
-    },
-    {
       "name": "ダウン.-- LAURI （カーキ）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043434_1_l.jpg",
       "productNumber": "MA1658EW043434",
@@ -2661,82 +2610,34 @@
       "brandName": "MANGO",
       "englishKey": "CINDY",
       "relatedNames": []
-    },
-    {
-      "name": "ロングブーツ .-- ALLEGRA （ブラック）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658BW043520_1_l.jpg",
-      "productNumber": "MA1658BW043520",
-      "brandItemNumber": "37045986 99 色 ブラック（99）",
-      "brandItemFirstDigit": "3",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW043520/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "ALLEGRA",
-      "relatedNames": []
-    },
-    {
-      "name": "ジーンズ .-- ALLEGRA （オープンブルー）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043527_1_l.jpg",
-      "productNumber": "MA1658EW043527",
-      "brandItemNumber": "37038287 TO 色 オープンブルー（TO）",
-      "brandItemFirstDigit": "3",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043527/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "ALLEGRA",
-      "relatedNames": []
-    },
-    {
-      "name": "セーター .-- SANSES （レッド）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043555_1_l.jpg",
-      "productNumber": "MA1658EW043555",
-      "brandItemNumber": "37007795 70 色 レッド（70）",
-      "brandItemFirstDigit": "3",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043555/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "SANSES",
-      "relatedNames": []
-    },
-    {
-      "name": "セーター .-- SANSES （ブライトブルー）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043556_1_l.jpg",
-      "productNumber": "MA1658EW043556",
-      "brandItemNumber": "37007795 53 色 ブライトブルー（53）",
-      "brandItemFirstDigit": "3",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043556/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "SANSES",
-      "relatedNames": []
     }
   ],
   "groups": [
     {
-      "englishKey": "SANSES",
+      "englishKey": "LOTUS",
       "main": {
-        "name": "セーター .-- SANSES （レッド）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043555_1_l.jpg",
-        "productNumber": "MA1658EW043555",
-        "brandItemNumber": "37007795 70 色 レッド（70）",
-        "brandItemFirstDigit": "3",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043555/",
+        "name": "ロングワンピース .-- LOTUS （ライトベージュ）",
+        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW041493_1_l.jpg",
+        "productNumber": "MA1658EW041493",
+        "brandItemNumber": "27009091 10 色 ライトベージュ（10）",
+        "brandItemFirstDigit": "2",
+        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041493/",
         "brandCode": "MA1658",
         "brandName": "MANGO",
-        "englishKey": "SANSES",
+        "englishKey": "LOTUS",
         "relatedNames": []
       },
       "related": [
         {
-          "name": "セーター .-- SANSES （ブライトブルー）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043556_1_l.jpg",
-          "productNumber": "MA1658EW043556",
-          "brandItemNumber": "37007795 53 色 ブライトブルー（53）",
-          "brandItemFirstDigit": "3",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043556/",
+          "name": "トップス .-- LOTUS （ダークブラウン）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040872_1_l.jpg",
+          "productNumber": "MA1658EW040872",
+          "brandItemNumber": "27077145 32 色 ダークブラウン（32）",
+          "brandItemFirstDigit": "2",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040872/",
           "brandCode": "MA1658",
           "brandName": "MANGO",
-          "englishKey": "SANSES",
+          "englishKey": "LOTUS",
           "relatedNames": []
         }
       ]
@@ -4128,7 +4029,8 @@
     "MA1658EW043655",
     "MA1658EW043568",
     "MA1658EW041880",
-    "MA1658EW043555"
+    "MA1658EW043555",
+    "MA1658EW041493"
   ],
-  "scanned": 4272
+  "scanned": 4237
 }
