@@ -12,7 +12,7 @@ $ErrorActionPreference = "Stop"
 
 $SiteBase = "https://amikitamura285.github.io/MANGO_association/"
 $RelayUrl = "https://script.google.com/macros/s/AKfycbxqxYvg2SIIEoEsvY4I0Ehly-eD_B3Thmu5PQvstHRFerVDgUOlievb-AsPgjDjlrCuxQ/exec"
-$StartUrl = "https://shop.mango.com/gb/en/search/women"
+$StartUrl = "https://shop.mango.com/gb/en/c/women/new-now/56b5c5ed"
 $Port = 9223
 $MaxMinutes = 45
 
@@ -182,6 +182,8 @@ try {
     try {
       $state = Eval-Js 'JSON.stringify({ host: location.host, ready: document.readyState, title: document.title, links: document.querySelectorAll(''a[href*="/gb/en/p/"]'').length })'
       $info = $state | ConvertFrom-Json
+      # "Which country would you like to shop in?" dialog: accept it so the product list is usable
+      Eval-Js "(() => { const b = [...document.querySelectorAll('button')].find(x => x.textContent.trim().toLowerCase() === 'accept'); if (b) b.click(); return true; })()" | Out-Null
       if ($info.host -eq "shop.mango.com" -and $info.ready -eq "complete" -and $info.links -gt 0) { $ready = $true }
       elseif ($i % 5 -eq 4) { Log "waiting for the page (host=$($info.host) title=$($info.title) links=$($info.links))" }
     } catch { }

@@ -1,4 +1,6 @@
 (function () {
+  // このスクリプトの置き場所を基準に、サイトのデータファイルの場所を決める(ページのURLの形に左右されない)
+  const siteBase = document.currentScript && document.currentScript.src ? new URL("./", document.currentScript.src).href : "";
   const root = document.getElementById("earringView");
   if (!root) return;
 
@@ -161,8 +163,17 @@
 
   async function loadModelPool() {
     if (modelPool) return modelPool;
-    const response = await fetch(`${dataPathPrefix}japan-index.json?v=${Date.now()}`, { cache: "no-store" });
-    const data = await response.json();
+    let data = null;
+    for (let attempt = 0; attempt < 3 && !data; attempt += 1) {
+      if (attempt) await new Promise((resolve) => setTimeout(resolve, 2000));
+      try {
+        const response = await fetch(`${siteBase || dataPathPrefix}japan-index.json?v=${Date.now()}`, { cache: "no-store" });
+        if (response.ok) data = await response.json();
+      } catch (error) {
+        data = null;
+      }
+    }
+    if (!data) throw new Error("日本の商品データを読み込めませんでした。少し待ってから、もう一度「次の写真を探す」を押してください。");
     // 商品番号は新しい商品ほど大きいため、降順に並べて新着から順に使う
     modelPool = (data.products || [])
       .filter((item) => MODEL_PATTERN.test(item.name || "") && /^[A-Z]{2}[A-Za-z0-9]+$/.test(item.productNumber || ""))
