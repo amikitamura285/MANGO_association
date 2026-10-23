@@ -25,7 +25,7 @@
   let busy = false;
   let modelPool = null;
   const MODEL_COUNT = 8;
-  const MODEL_PATTERN = /ワンピース|トップス|シャツ|ブラウス|セーター|ニット|カーディガン|ジャケット|ブレザー|コート|カットソー/;
+  const MODEL_PATTERN = /ワンピース|トップス|シャツ|ブラウス|セーター|ニット|カーディガン|ジャケット|ブレザー|コート|カットソー|ベスト|ポロ|スカート|パンツ|ジーンズ|ネックレス|スカーフ/;
 
   const setStatus = (text, isError = false) => {
     status.textContent = text;
@@ -90,13 +90,16 @@
     button.disabled = true;
     const label = button.textContent;
     button.textContent = "取得中…";
+    let saved = false;
     try {
       const body = await callRelay(request);
       saveBlob(body.image, body.mime, `${fileName}.${fileExt(body.mime)}`);
+      saved = true;
     } catch (error) {
       report(`画像を保存できませんでした: ${error.message}`, true);
     }
-    button.textContent = label;
+    // 保存できたら「ダウンロード済」にする(押せる状態のままなので、もう一度保存もできる)
+    button.textContent = saved ? "ダウンロード済" : label;
     button.disabled = false;
   }
 
