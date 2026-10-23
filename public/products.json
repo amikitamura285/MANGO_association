@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T03:53:18.285Z",
+  "updatedAt": "2026-10-22T22:21:24.166Z",
   "products": [
     {
       "name": "ロングワンピース .-- RAMONA （ブラック）",
@@ -170,6 +170,44 @@
       "relatedNames": []
     },
     {
+      "name": "ジャケット .-- SABINA （ブラック）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039343_1_l.jpg",
+      "productNumber": "MA1658EW039343",
+      "brandItemNumber": "27091189 99 色 ブラック（99）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039343/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "SABINA",
+      "relatedNames": [
+        "ロングスカート .-- PARIS （ブラック）"
+      ]
+    },
+    {
+      "name": "ジャケット .-- SABINA （グリーン）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039503_1_l.jpg",
+      "productNumber": "MA1658EW039503",
+      "brandItemNumber": "27021229 43 色 グリーン（43）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039503/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "SABINA",
+      "relatedNames": []
+    },
+    {
+      "name": "ジャケット .-- SABINA （ダークレッド）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040205_1_l.jpg",
+      "productNumber": "MA1658EW040205",
+      "brandItemNumber": "27064775 76 色 ダークレッド（76）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040205/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "SABINA",
+      "relatedNames": []
+    },
+    {
       "name": "ジーンズ .-- NEWMOM （オープンブルー）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039373_1_l.jpg",
       "productNumber": "MA1658EW039373",
@@ -335,30 +373,6 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "P JACOBA",
-      "relatedNames": []
-    },
-    {
-      "name": "ジャケット .-- SABINA （グリーン）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039503_1_l.jpg",
-      "productNumber": "MA1658EW039503",
-      "brandItemNumber": "27021229 43 色 グリーン（43）",
-      "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039503/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "SABINA",
-      "relatedNames": []
-    },
-    {
-      "name": "ジャケット .-- SABINA （ダークレッド）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040205_1_l.jpg",
-      "productNumber": "MA1658EW040205",
-      "brandItemNumber": "27064775 76 色 ダークレッド（76）",
-      "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040205/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "SABINA",
       "relatedNames": []
     },
     {
@@ -1482,18 +1496,6 @@
       "relatedNames": []
     },
     {
-      "name": "オールインワン .-- GRETA （ブラック）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043344_1_l.jpg",
-      "productNumber": "MA1658EW043344",
-      "brandItemNumber": "37047809 99 色 ブラック（99）",
-      "brandItemFirstDigit": "3",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043344/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "GRETA",
-      "relatedNames": []
-    },
-    {
       "name": "ヒールサンダル .-- ANGEL （ダークブラウン）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658BW041724_1_l.jpg",
       "productNumber": "MA1658BW041724",
@@ -2258,6 +2260,30 @@
       "relatedNames": []
     },
     {
+      "name": "ジーンズ .-- TOKIO （オープンブルー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042834_1_l.jpg",
+      "productNumber": "MA1658EW042834",
+      "brandItemNumber": "37015861 TM 色 オープンブルー（TM）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042834/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "TOKIO",
+      "relatedNames": []
+    },
+    {
+      "name": "ジャケット .-- TOKIO （カーキ）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043086_1_l.jpg",
+      "productNumber": "MA1658EW043086",
+      "brandItemNumber": "37085855 37 色 カーキ（37）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043086/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "TOKIO",
+      "relatedNames": []
+    },
+    {
       "name": "ブラウス .-- DORIS （ブラウン）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042933_1_l.jpg",
       "productNumber": "MA1658EW042933",
@@ -2662,30 +2688,44 @@
   ],
   "groups": [
     {
-      "englishKey": "LOTUS",
+      "englishKey": "SABINA",
       "main": {
-        "name": "トップス .-- LOTUS （ピンク）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040873_1_l.jpg",
-        "productNumber": "MA1658EW040873",
-        "brandItemNumber": "27077145 85 色 ピンク（85）",
+        "name": "ジャケット .-- SABINA （ブラック）",
+        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039343_1_l.jpg",
+        "productNumber": "MA1658EW039343",
+        "brandItemNumber": "27091189 99 色 ブラック（99）",
         "brandItemFirstDigit": "2",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040873/",
+        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039343/",
         "brandCode": "MA1658",
         "brandName": "MANGO",
-        "englishKey": "LOTUS",
-        "relatedNames": []
+        "englishKey": "SABINA",
+        "relatedNames": [
+          "ロングスカート .-- PARIS （ブラック）"
+        ]
       },
       "related": [
         {
-          "name": "ロングワンピース .-- LOTUS （ライトベージュ）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW041493_1_l.jpg",
-          "productNumber": "MA1658EW041493",
-          "brandItemNumber": "27009091 10 色 ライトベージュ（10）",
+          "name": "ジャケット .-- SABINA （グリーン）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039503_1_l.jpg",
+          "productNumber": "MA1658EW039503",
+          "brandItemNumber": "27021229 43 色 グリーン（43）",
           "brandItemFirstDigit": "2",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041493/",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039503/",
           "brandCode": "MA1658",
           "brandName": "MANGO",
-          "englishKey": "LOTUS",
+          "englishKey": "SABINA",
+          "relatedNames": []
+        },
+        {
+          "name": "ジャケット .-- SABINA （ダークレッド）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040205_1_l.jpg",
+          "productNumber": "MA1658EW040205",
+          "brandItemNumber": "27064775 76 色 ダークレッド（76）",
+          "brandItemFirstDigit": "2",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040205/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "SABINA",
           "relatedNames": []
         }
       ]
@@ -4079,7 +4119,8 @@
     "MA1658EW041880",
     "MA1658EW043555",
     "MA1658EW041493",
-    "MA1658EW040873"
+    "MA1658EW040873",
+    "MA1658EW039343"
   ],
-  "scanned": 4256
+  "scanned": 4250
 }
