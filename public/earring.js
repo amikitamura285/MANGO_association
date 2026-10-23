@@ -324,6 +324,8 @@
       const render = () => {
         found.sort((x, y) => x.order - y.order);
         modelImages.replaceChildren(...found.slice(0, MODEL_COUNT).map((entry) => modelFigure(entry.item, entry)));
+        // 探している途中でURLを変えたり、ページを離れたりしても、画面に出した写真を「飛ばした」として記録できるよう、表示するたびに控える
+        shownModels = found.slice(0, MODEL_COUNT).map((entry) => entry.item);
       };
       // 1回目の接続が不安定なことがあるため、失敗したら少し待ってもう一度取得する
       const fetchPhotos = async (item) => {
