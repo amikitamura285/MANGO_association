@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-23T22:01:28.617Z",
+  "updatedAt": "2026-10-24T21:32:39.233Z",
   "products": [
     {
       "name": "Crocodile-effect dress with V-neckline - Women",
@@ -5316,6 +5316,60 @@
     },
     {
       "main": {
+        "name": "Short knitted dress - Women",
+        "image": "https://media.mango.com/is/image/punto/37097796-56-002?wid=1024",
+        "productNumber": "37097796",
+        "baseCode": "37097796",
+        "globalCode": "37097796",
+        "colorId": "56",
+        "url": "https://shop.mango.com/gb/en/p/women/dresses-and-jumpsuits/knitwear/short-knitted-dress/37097796/56/00",
+        "relatedProductNumbers": [
+          {
+            "productNumber": "37086342",
+            "colorId": "92"
+          },
+          {
+            "productNumber": "37045989",
+            "colorId": "56"
+          },
+          {
+            "productNumber": "37045990",
+            "colorId": "99"
+          },
+          {
+            "productNumber": "37056362",
+            "colorId": "99"
+          }
+        ],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043676/"
+      },
+      "relatedGlobal": [
+        {
+          "name": "Double-breasted wool coat",
+          "image": "https://media.mango.com/is/image/punto/37086342-92-900?wid=1024",
+          "productNumber": "37086342",
+          "baseCode": "37086342",
+          "globalCode": "37086342",
+          "colorId": "92",
+          "url": "https://shop.mango.com/gb/en/p/women/coats/coats/double-breasted-wool-coat/37086342/92/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042886/"
+        },
+        {
+          "name": "Fitted check shirt",
+          "image": "https://media.mango.com/is/image/punto/37045989-56-900?wid=1024",
+          "productNumber": "37045989",
+          "baseCode": "37045989",
+          "globalCode": "37045989",
+          "colorId": "56",
+          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-check-shirt/37045989/56/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043161/"
+        }
+      ],
+      "baseCode": "37097796",
+      "hasJapanRelations": true
+    },
+    {
+      "main": {
         "name": "Diamond-pattern sweater with crew neck - Women",
         "image": "https://media.mango.com/is/image/punto/37017781-09-002?wid=1024",
         "productNumber": "37017781",
@@ -5360,6 +5414,138 @@
     },
     {
       "main": {
+        "name": "Devoré blouse with bow detail - Women",
+        "image": "https://media.mango.com/is/image/punto/37027786-30-002?wid=1024",
+        "productNumber": "37027786",
+        "baseCode": "37027786",
+        "globalCode": "37027786",
+        "colorId": "30",
+        "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/blouses/devore-blouse-with-bow-detail/37027786/30/00",
+        "relatedProductNumbers": [
+          {
+            "productNumber": "37097784",
+            "colorId": "30"
+          },
+          {
+            "productNumber": "37096722",
+            "colorId": "30"
+          },
+          {
+            "productNumber": "37007945",
+            "colorId": "99"
+          },
+          {
+            "productNumber": "37087790",
+            "colorId": "OR"
+          }
+        ],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043701/"
+      },
+      "relatedGlobal": [
+        {
+          "name": "Devoré A-line skirt",
+          "image": "https://media.mango.com/is/image/punto/37097784-30-900?wid=1024",
+          "productNumber": "37097784",
+          "baseCode": "37097784",
+          "globalCode": "37097784",
+          "colorId": "30",
+          "url": "https://shop.mango.com/gb/en/p/women/skirts/midi/devore-a-line-skirt/37097784/30/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043688/"
+        }
+      ],
+      "baseCode": "37027786",
+      "hasJapanRelations": true
+    },
+    {
+      "main": {
+        "name": "Balloon crop jeans - Women",
+        "image": "https://media.mango.com/is/image/punto/37017817-TO-002?wid=1024",
+        "productNumber": "37017817",
+        "baseCode": "37017817",
+        "globalCode": "37017817",
+        "colorId": "TO",
+        "url": "https://shop.mango.com/gb/en/p/women/jeans/balloon/balloon-crop-jeans/37017817/TO/00",
+        "relatedProductNumbers": [
+          {
+            "productNumber": "37007813",
+            "colorId": "05"
+          },
+          {
+            "productNumber": "37072892",
+            "colorId": "30"
+          },
+          {
+            "productNumber": "37084440",
+            "colorId": "05"
+          },
+          {
+            "productNumber": "37094104",
+            "colorId": "09"
+          }
+        ],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043685/"
+      },
+      "relatedGlobal": [
+        {
+          "name": "Ballet pump with bow detail",
+          "image": "https://media.mango.com/is/image/punto/37084440-05-900?wid=1024",
+          "productNumber": "37084440",
+          "baseCode": "37084440",
+          "globalCode": "37084440",
+          "colorId": "05",
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/ballet-flats/ballet-pump-with-bow-detail/37084440/05/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW042582/"
+        }
+      ],
+      "baseCode": "37017817",
+      "hasJapanRelations": true
+    },
+    {
+      "main": {
+        "name": "Semi-sheer lace blouse - Women",
+        "image": "https://media.mango.com/is/image/punto/37027787-99-002?wid=1024",
+        "productNumber": "37027787",
+        "baseCode": "37027787",
+        "globalCode": "37027787",
+        "colorId": "99",
+        "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/blouses/semi-sheer-lace-blouse/37027787/99/00",
+        "relatedProductNumbers": [
+          {
+            "productNumber": "37094109",
+            "colorId": "99"
+          },
+          {
+            "productNumber": "37064404",
+            "colorId": "99"
+          },
+          {
+            "productNumber": "37015850",
+            "colorId": "35"
+          },
+          {
+            "productNumber": "37007943",
+            "colorId": "32"
+          }
+        ],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043699/"
+      },
+      "relatedGlobal": [
+        {
+          "name": "Wool-blend lapel jacket",
+          "image": "https://media.mango.com/is/image/punto/37015850-35-900?wid=1024",
+          "productNumber": "37015850",
+          "baseCode": "37015850",
+          "globalCode": "37015850",
+          "colorId": "35",
+          "url": "https://shop.mango.com/gb/en/p/women/jackets/cropped/wool-blend-lapel-jacket/37015850/35/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042819/"
+        }
+      ],
+      "baseCode": "37027787",
+      "hasJapanRelations": true
+    },
+    {
+      "main": {
         "name": "Velvet lace top - Women",
         "image": "https://media.mango.com/is/image/punto/37057778-30-002?wid=1024",
         "productNumber": "37057778",
@@ -5400,6 +5586,90 @@
         }
       ],
       "baseCode": "37057778",
+      "hasJapanRelations": true
+    },
+    {
+      "main": {
+        "name": "Asymmetric lace camisole top - Women",
+        "image": "https://media.mango.com/is/image/punto/37037779-99-002?wid=1024",
+        "productNumber": "37037779",
+        "baseCode": "37037779",
+        "globalCode": "37037779",
+        "colorId": "99",
+        "url": "https://shop.mango.com/gb/en/p/women/tops/party/asymmetric-lace-camisole-top/37037779/99/00",
+        "relatedProductNumbers": [
+          {
+            "productNumber": "37067795",
+            "colorId": "99"
+          },
+          {
+            "productNumber": "37077787",
+            "colorId": "99"
+          },
+          {
+            "productNumber": "37047906",
+            "colorId": "99"
+          }
+        ],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043672/"
+      },
+      "relatedGlobal": [
+        {
+          "name": "Flared velvet trousers",
+          "image": "https://media.mango.com/is/image/punto/37067795-99-900?wid=1024",
+          "productNumber": "37067795",
+          "baseCode": "37067795",
+          "globalCode": "37067795",
+          "colorId": "99",
+          "url": "https://shop.mango.com/gb/en/p/women/trousers/party/flared-velvet-trousers/37067795/99/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043682/"
+        }
+      ],
+      "baseCode": "37037779",
+      "hasJapanRelations": true
+    },
+    {
+      "main": {
+        "name": "Balloon crop jeans - Women",
+        "image": "https://media.mango.com/is/image/punto/37017816-TN-002?wid=1024",
+        "productNumber": "37017816",
+        "baseCode": "37017816",
+        "globalCode": "37017816",
+        "colorId": "TN",
+        "url": "https://shop.mango.com/gb/en/p/women/jeans/balloon/balloon-crop-jeans/37017816/TN/00",
+        "relatedProductNumbers": [
+          {
+            "productNumber": "37035847",
+            "colorId": "06"
+          },
+          {
+            "productNumber": "37007806",
+            "colorId": "95"
+          },
+          {
+            "productNumber": "37084440",
+            "colorId": "05"
+          },
+          {
+            "productNumber": "27045975",
+            "colorId": "32"
+          }
+        ],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043686/"
+      },
+      "relatedGlobal": [
+        {
+          "name": "Beaded sleeveless top",
+          "image": "https://media.mango.com/is/image/punto/37007806-95-505?wid=1024",
+          "productNumber": "37007806",
+          "baseCode": "37007806",
+          "globalCode": "37007806",
+          "colorId": "95",
+          "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/party/beaded-sleeveless-top/37007806/95/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043631/"
+        }
+      ],
+      "baseCode": "37017816",
       "hasJapanRelations": true
     },
     {
@@ -6280,46 +6550,6 @@
     },
     {
       "main": {
-        "name": "Straight-cut polo-neck jumper - Women",
-        "image": "https://media.mango.com/is/image/punto/37005880-05-002?wid=1024",
-        "productNumber": "37005880",
-        "baseCode": "37005880",
-        "globalCode": "37005880",
-        "colorId": "05",
-        "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/sweaters/straight-cut-polo-neck-jumper/37005880/05/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "37045989",
-            "colorId": "56"
-          },
-          {
-            "productNumber": "37095148",
-            "colorId": "32"
-          },
-          {
-            "productNumber": "37007943",
-            "colorId": "32"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043382/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "Fitted check shirt",
-          "image": "https://media.mango.com/is/image/punto/37045989-56-900?wid=1024",
-          "productNumber": "37045989",
-          "baseCode": "37045989",
-          "globalCode": "37045989",
-          "colorId": "56",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-check-shirt/37045989/56/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043161/"
-        }
-      ],
-      "baseCode": "37005880",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
         "name": "Fine-knit ruched blouse - Women",
         "image": "https://media.mango.com/is/image/punto/27071301-30-002?wid=1024",
         "productNumber": "27071301",
@@ -6601,6 +6831,16 @@
           "colorId": "05",
           "url": "https://shop.mango.com/gb/en/p/women/jackets/bombers/knitted-bomber-jacket/37075879/05/00",
           "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043308/"
+        },
+        {
+          "name": "Slouchy suede ankle boot",
+          "image": "https://media.mango.com/is/image/punto/37056342-09-900?wid=1024",
+          "productNumber": "37056342",
+          "baseCode": "37056342",
+          "globalCode": "37056342",
+          "colorId": "09",
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/boots-and-ankle-boots/slouchy-suede-ankle-boot/37056342/09/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW043709/"
         }
       ],
       "baseCode": "37095880",
