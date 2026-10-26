@@ -198,13 +198,20 @@
     if (!detectorPromise) {
       detectorPromise = (async () => {
         const base = "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14";
-        const { FaceDetector, FilesetResolver } = await import(`${base}/vision_bundle.mjs`);
+        const { FaceDetector, ImageSegmenter, FilesetResolver } = await import(`${base}/vision_bundle.mjs`);
         const fileset = await FilesetResolver.forVisionTasks(`${base}/wasm`);
-        return FaceDetector.createFromOptions(fileset, {
+        const faceDetector = await FaceDetector.createFromOptions(fileset, {
           baseOptions: { modelAssetPath: "https://storage.googleapis.com/mediapipe-models/face_detector/blaze_face_short_range/float16/1/blaze_face_short_range.tflite" },
           runningMode: "IMAGE",
           minDetectionConfidence: 0.6
         });
+        const segmenter = await ImageSegmenter.createFromOptions(fileset, {
+          baseOptions: { modelAssetPath: "https://storage.googleapis.com/mediapipe-models/image_segmenter/selfie_multiclass_256x256/float32/latest/selfie_multiclass_256x256.tflite" },
+          runningMode: "IMAGE",
+          outputCategoryMask: true,
+          outputConfidenceMasks: false
+        });
+        return { faceDetector, segmenter };
       })().catch(() => {
         detectorPromise = null; // 失敗を覚えず、次回もう一度読み込む
         return null;
@@ -222,9 +229,42 @@
     return detector;
   }
 
+  // 耳が見えているか判定する。耳の位置(顔の端)のさらに外側が、髪ではなく肌なら、耳が出ているとみなす
+  function earVisible(segmenter, bitmap, detection) {
+    const result = segmenter.segment(bitmap);
+    const mask = result.categoryMask;
+    if (!mask) return false;
+    const data = mask.getAsUint8Array();
+    const mw = mask.width;
+    const mh = mask.height;
+    const faceWidth = detection.boundingBox.width / bitmap.width;
+    const half = Math.max(2, Math.round(faceWidth * mw * 0.16));
+    const noseX = detection.keypoints[2].x;
+    let visible = false;
+    for (const k of [4, 5]) {
+      const point = detection.keypoints[k];
+      if (!point) continue;
+      const sign = point.x >= noseX ? 1 : -1;
+      const cx = Math.round(Math.min(0.999, Math.max(0, point.x + sign * 0.28 * faceWidth)) * mw);
+      const cy = Math.round(point.y * mh);
+      let skin = 0;
+      let total = 0;
+      for (let y = Math.max(0, cy - half); y < Math.min(mh, cy + half); y += 1) {
+        for (let x = Math.max(0, cx - half); x < Math.min(mw, cx + half); x += 1) {
+          const category = data[y * mw + x];
+          total += 1;
+          if (category === 3 || category === 4) skin += 1;
+        }
+      }
+      if (total && skin / total >= 0.12) visible = true;
+    }
+    mask.close();
+    return visible;
+  }
+
   // 顔がはっきり写っている写真か判定し、点数(大きい顔・横向きほど高い)を返す。写っていなければ 0
   function faceScore(detector, bitmap) {
-    const detections = detector.detect(bitmap).detections || [];
+    const detections = detector.faceDetector.detect(bitmap).detections || [];
     let best = 0;
     for (const detection of detections) {
       const width = detection.boundingBox.width / bitmap.width;
@@ -233,6 +273,7 @@
       const confidence = (detection.categories[0] && detection.categories[0].score) || 0;
       const centerY = (detection.boundingBox.originY + detection.boundingBox.height / 2) / bitmap.height;
       if (confidence < 0.85 || centerY > 0.6) continue;
+      if (!earVisible(detector.segmenter, bitmap, detection)) continue;
       const [rightEye, leftEye, nose] = detection.keypoints;
       const eyeGap = Math.abs(leftEye.x - rightEye.x) || 1;
       const turn = Math.abs(nose.x - (leftEye.x + rightEye.x) / 2) / eyeGap;
