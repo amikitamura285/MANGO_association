@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-26T09:02:08.528Z",
+  "updatedAt": "2026-10-26T23:11:08.931Z",
   "products": [
     {
       "name": "Reversible nappa leather jacket - Women",
@@ -4800,16 +4800,6 @@
           "colorId": "92",
           "url": "https://shop.mango.com/gb/en/p/women/coats/coats/double-breasted-wool-coat/37086342/92/00",
           "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042886/"
-        },
-        {
-          "name": "Fitted check shirt",
-          "image": "https://media.mango.com/is/image/punto/37045989-56-900?wid=1024",
-          "productNumber": "37045989",
-          "baseCode": "37045989",
-          "globalCode": "37045989",
-          "colorId": "56",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/fitted-check-shirt/37045989/56/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043161/"
         }
       ],
       "baseCode": "37097796",
@@ -5165,54 +5155,6 @@
         }
       ],
       "baseCode": "37077790",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
-        "name": "Double-breasted wool suit blazer - Women",
-        "image": "https://media.mango.com/is/image/punto/37018289-35-002?wid=1024",
-        "productNumber": "37018289",
-        "baseCode": "37018289",
-        "globalCode": "37018289",
-        "colorId": "35",
-        "url": "https://shop.mango.com/gb/en/p/women/blazers/fitted/double-breasted-wool-suit-blazer/37018289/35/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "37058288",
-            "colorId": "35"
-          },
-          {
-            "productNumber": "37046367",
-            "colorId": "50"
-          },
-          {
-            "productNumber": "37006337",
-            "colorId": "95"
-          },
-          {
-            "productNumber": "37095148",
-            "colorId": "99"
-          },
-          {
-            "productNumber": "37067791",
-            "colorId": "99"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043655/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "Straight poplin shirt",
-          "image": "https://media.mango.com/is/image/punto/37046367-50-900?wid=1024",
-          "productNumber": "37046367",
-          "baseCode": "37046367",
-          "globalCode": "37046367",
-          "colorId": "50",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/straight-poplin-shirt/37046367/50/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043091/"
-        }
-      ],
-      "baseCode": "37018289",
       "hasJapanRelations": true
     },
     {
