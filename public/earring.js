@@ -360,9 +360,11 @@
       const noFace = noFaceModels();
       const baseList = (await loadModelPool()).filter((item) => (!digit || leadingDigit(item.brandItemNumber) === digit) && !downloaded.has(item.productNumber) && !noFace.has(item.productNumber));
       if (!baseList.length) throw new Error("条件に合う写真が見つかりませんでした。");
+      const justSkipped = new Set(shownModels.map((item) => item.productNumber));
       let skipped = skippedModels();
       let pool = baseList.filter((item) => !skipped.has(item.productNumber));
       let startedNewCycle = false;
+      let passCompleted = false;
       let detectorMissing = false;
       const found = [];
       let tried = 0;
@@ -393,11 +395,16 @@
         const fresh = pool.filter((item) => !modelSeen.has(item.productNumber) && !shownNow.has(item.productNumber));
         if (!fresh.length) {
           // 飛ばしていない写真を出し尽くした(一巡した)ので、飛ばした記録を消して、もう一度対象にする
+          // 新しい写真を出し尽くした。すでに何枚か見つかっているなら、飛ばした写真は混ぜずに、そこで終える
+          if (found.length) {
+            passCompleted = true;
+            break;
+          }
           if (!startedNewCycle && skipped.size) {
             startedNewCycle = true;
             try { localStorage.removeItem(SKIPPED_KEY); } catch (error) { /* 消せない場合は何もしない */ }
             skipped = new Set();
-            pool = baseList;
+            pool = baseList.filter((item) => !justSkipped.has(item.productNumber));
             modelSeen.clear();
             rounds -= 1;
             continue;
@@ -458,7 +465,7 @@
       if (detectorMissing) throw new Error("顔の判定機能(インターネット上のGoogleの顔検出)を読み込めませんでした。ネットワークを確認して、もう一度「次の写真を探す」を押してください。");
       if (!found.length && lastError && failed >= tried / 2) throw new Error(`写真を取得できませんでした(${lastError.message}) もう一度お試しください。`);
       if (!found.length) throw new Error(`条件に合う写真が見つかりませんでした(${tried}商品を確認)。もう一度「次の写真を探す」を押してください。`);
-      setModelStatus(`${digit ? `ブランド商品番号が「${digit}」で始まる` : ""}新着アイテム順に、顔が写っている写真を並べています(耳が見えるかは写真により異なります)。使いたい写真を「画像を保存」してください。「次の写真を探す」で、さらに古いアイテムの写真を表示します。`);
+      setModelStatus((passCompleted ? "条件に合う新しい写真を、ひと通り出し終えました。次に「次の写真を探す」を押すと、飛ばした写真がもう一度出ます。\n" : "") + `${digit ? `ブランド商品番号が「${digit}」で始まる` : ""}新着アイテム順に、顔が写っている写真を並べています(耳が見えるかは写真により異なります)。使いたい写真を「画像を保存」してください。「次の写真を探す」で、さらに古いアイテムの写真を表示します。`);
     } catch (error) {
       setModelStatus(`写真を探せませんでした: ${error.message}`, true);
     }
