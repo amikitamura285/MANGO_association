@@ -269,7 +269,7 @@
     let best = 0;
     for (const detection of detections) {
       const width = detection.boundingBox.width / bitmap.width;
-      if (width < 0.22) continue;
+      if (width < 0.15) continue;
       // 後ろ姿や服の模様を顔と誤判定した写真を除く(本物の顔は信頼度が高く、画像の上寄りに写る)
       const confidence = (detection.categories[0] && detection.categories[0].score) || 0;
       const centerY = (detection.boundingBox.originY + detection.boundingBox.height / 2) / bitmap.height;
@@ -333,7 +333,7 @@
   };
 
   // 顔の写る写真が無かった商品は、次回以降は調べない(写真は変わらないため。このブラウザに記録)
-  const NOFACE_KEY = "mango-earring-noface-models";
+  const NOFACE_KEY = "mango-earring-noface-models-v2";
   const noFaceModels = () => {
     try { return new Set(JSON.parse(localStorage.getItem(NOFACE_KEY) || "[]")); } catch (error) { return new Set(); }
   };
@@ -381,7 +381,7 @@
       const fetchPhotos = async (item) => {
         for (let attempt = 0; ; attempt += 1) {
           try {
-            return await callRelay({ action: "earringPhotos", imageUrls: [2, 3, 4, 5].map((n) => modelImageUrl(item, n)) });
+            return await callRelay({ action: "earringPhotos", imageUrls: [1, 2, 3, 4, 5].map((n) => modelImageUrl(item, n)) });
           } catch (error) {
             if (attempt >= 1) throw error;
             await new Promise((resolve) => setTimeout(resolve, 1500));
