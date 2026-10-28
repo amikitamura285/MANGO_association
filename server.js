@@ -154,6 +154,41 @@ async function fetchText(url, attempt = 0) {
   }
 }
 
+// 色違い(同じ商品の別の色)は1つにまとめ、代表の1点だけを残す。
+// 色違いどうしは、お互いを「色違い」として挙げ合うため、挙げられた側をすべて除くと、複数の色がある商品が1つも残らない。
+function representativeProducts(products) {
+  const parent = new Map();
+  const find = (code) => {
+    if (!parent.has(code)) parent.set(code, code);
+    let root = code;
+    while (parent.get(root) !== root) root = parent.get(root);
+    let current = code;
+    while (parent.get(current) !== root) {
+      const next = parent.get(current);
+      parent.set(current, root);
+      current = next;
+    }
+    return root;
+  };
+  const union = (a, b) => {
+    const ra = find(a);
+    const rb = find(b);
+    if (ra !== rb) parent.set(rb, ra);
+  };
+  for (const product of products) {
+    find(product.productNumber);
+    for (const code of product.variationProductNumbers || []) union(product.productNumber, code);
+  }
+  const best = new Map();
+  for (const product of products) {
+    const root = find(product.productNumber);
+    const current = best.get(root);
+    if (!current || product.productNumber < current.productNumber) best.set(root, product);
+  }
+  const keep = new Set([...best.values()].map((product) => product.productNumber));
+  return products.filter((product) => keep.has(product.productNumber));
+}
+
 async function fetchVariationProductNumbers(productNumber) {
   try {
     const response = JSON.parse(await fetchText(`${BASE}/commodity/${productNumber}/colors`));
@@ -485,8 +520,7 @@ async function crawl() {
         return null;
       }
     }, CRAWL_CONCURRENCY)).filter(Boolean);
-    const variationProductNumbers = new Set(products.flatMap((product) => product.variationProductNumbers));
-    const eligibleProducts = products.filter((product) => !variationProductNumbers.has(product.productNumber));
+    const eligibleProducts = representativeProducts(products);
     const eligibleGroups = new Map();
     for (const product of eligibleProducts) {
       const key = displayGroupKey(product);
