@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-26T23:11:04.077Z",
+  "updatedAt": "2026-10-27T22:59:08.660Z",
   "products": [
     {
       "name": "ロングワンピース .-- RAMONA （ブラック）",
@@ -359,6 +359,30 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "P JACOBA",
+      "relatedNames": []
+    },
+    {
+      "name": "ピアス .-- NORA （ゴールド）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW039502_1_l.jpg",
+      "productNumber": "MA1658DW039502",
+      "brandItemNumber": "27021227 OR 色 ゴールド（OR）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW039502/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "NORA",
+      "relatedNames": []
+    },
+    {
+      "name": "ベルト .-- NORA （ブラウン）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039571_1_l.jpg",
+      "productNumber": "MA1658EW039571",
+      "brandItemNumber": "27061203 30 色 ブラウン（30）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039571/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "NORA",
       "relatedNames": []
     },
     {
@@ -2676,12 +2700,12 @@
     {
       "englishKey": "POL",
       "main": {
-        "name": "パンツ .-- POL （ダークパープル）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039490_1_l.jpg",
-        "productNumber": "MA1658EW039490",
-        "brandItemNumber": "27041238 66 色 ダークパープル（66）",
+        "name": "ブラウス .-- POL （パステルピンク）",
+        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040431_1_l.jpg",
+        "productNumber": "MA1658EW040431",
+        "brandItemNumber": "27055826 83 色 パステルピンク（83）",
         "brandItemFirstDigit": "2",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039490/",
+        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040431/",
         "brandCode": "MA1658",
         "brandName": "MANGO",
         "englishKey": "POL",
@@ -2689,12 +2713,12 @@
       },
       "related": [
         {
-          "name": "ブラウス .-- POL （パステルピンク）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040431_1_l.jpg",
-          "productNumber": "MA1658EW040431",
-          "brandItemNumber": "27055826 83 色 パステルピンク（83）",
+          "name": "パンツ .-- POL （ダークパープル）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039490_1_l.jpg",
+          "productNumber": "MA1658EW039490",
+          "brandItemNumber": "27041238 66 色 ダークパープル（66）",
           "brandItemFirstDigit": "2",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040431/",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039490/",
           "brandCode": "MA1658",
           "brandName": "MANGO",
           "englishKey": "POL",
@@ -2703,14 +2727,43 @@
       ]
     },
     {
+      "englishKey": "NORA",
+      "main": {
+        "name": "ピアス .-- NORA （ゴールド）",
+        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW039502_1_l.jpg",
+        "productNumber": "MA1658DW039502",
+        "brandItemNumber": "27021227 OR 色 ゴールド（OR）",
+        "brandItemFirstDigit": "2",
+        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW039502/",
+        "brandCode": "MA1658",
+        "brandName": "MANGO",
+        "englishKey": "NORA",
+        "relatedNames": []
+      },
+      "related": [
+        {
+          "name": "ベルト .-- NORA （ブラウン）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039571_1_l.jpg",
+          "productNumber": "MA1658EW039571",
+          "brandItemNumber": "27061203 30 色 ブラウン（30）",
+          "brandItemFirstDigit": "2",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039571/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "NORA",
+          "relatedNames": []
+        }
+      ]
+    },
+    {
       "englishKey": "BANGKOK",
       "main": {
-        "name": "パンツ .-- BANGKOK （ピンク）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040305_1_l.jpg",
-        "productNumber": "MA1658EW040305",
-        "brandItemNumber": "27004449 85 色 ピンク（85）",
+        "name": "ロングスカート .-- BANGKOK （ダークブラウン）",
+        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040952_1_l.jpg",
+        "productNumber": "MA1658EW040952",
+        "brandItemNumber": "27098646 32 色 ダークブラウン（32）",
         "brandItemFirstDigit": "2",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040305/",
+        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040952/",
         "brandCode": "MA1658",
         "brandName": "MANGO",
         "englishKey": "BANGKOK",
@@ -2718,12 +2771,12 @@
       },
       "related": [
         {
-          "name": "ロングスカート .-- BANGKOK （ダークブラウン）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040952_1_l.jpg",
-          "productNumber": "MA1658EW040952",
-          "brandItemNumber": "27098646 32 色 ダークブラウン（32）",
+          "name": "パンツ .-- BANGKOK （ピンク）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040305_1_l.jpg",
+          "productNumber": "MA1658EW040305",
+          "brandItemNumber": "27004449 85 色 ピンク（85）",
           "brandItemFirstDigit": "2",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040952/",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040305/",
           "brandCode": "MA1658",
           "brandName": "MANGO",
           "englishKey": "BANGKOK",
@@ -2732,7 +2785,7 @@
       ]
     }
   ],
-  "newCount": 2,
+  "newCount": 3,
   "displayedMainProductNumbers": [
     "MA1658EW33440",
     "MA3878EC003099",
@@ -4143,7 +4196,10 @@
     "MA1658AW043681",
     "MA1658EW043701",
     "MA1658EW039490",
-    "MA1658EW040305"
+    "MA1658EW040305",
+    "MA1658EW040431",
+    "MA1658DW039502",
+    "MA1658EW040952"
   ],
-  "scanned": 4223
+  "scanned": 4216
 }
