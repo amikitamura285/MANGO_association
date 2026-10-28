@@ -18,6 +18,7 @@
   const hookSelect = $("earringHook");
   const copyButton = $("earringCopy");
   const modelShuffle = $("earringModelShuffle");
+  const modelReset = $("earringModelReset");
   const modelStatus = $("earringModelStatus");
   const modelImages = $("earringModelImages");
 
@@ -316,7 +317,7 @@
   const markDownloaded = (productNumber) => {
     const set = downloadedModels();
     set.add(productNumber);
-    try { localStorage.setItem(DOWNLOADED_KEY, JSON.stringify([...set].slice(-2000))); } catch (error) { /* 保存できない場合は記録しない */ }
+    try { localStorage.setItem(DOWNLOADED_KEY, JSON.stringify([...set].slice(-6000))); } catch (error) { /* 保存できない場合は記録しない */ }
   };
 
   // 「次の写真を探す」で飛ばした写真は、ほかの候補が出尽くすまで出さない(このブラウザに記録)
@@ -328,7 +329,7 @@
     const downloaded = downloadedModels();
     const set = skippedModels();
     shownModels.forEach((item) => { if (!downloaded.has(item.productNumber)) set.add(item.productNumber); });
-    try { localStorage.setItem(SKIPPED_KEY, JSON.stringify([...set].slice(-2000))); } catch (error) { /* 保存できない場合は記録しない */ }
+    try { localStorage.setItem(SKIPPED_KEY, JSON.stringify([...set].slice(-6000))); } catch (error) { /* 保存できない場合は記録しない */ }
   };
 
   // 顔の写る写真が無かった商品は、次回以降は調べない(写真は変わらないため。このブラウザに記録)
@@ -357,11 +358,11 @@
       const digit = leadingDigit(loaded && loaded.brandItemNumber);
       const downloaded = downloadedModels();
       const noFace = noFaceModels();
-      const pool = (await loadModelPool()).filter((item) => (!digit || leadingDigit(item.brandItemNumber) === digit) && !downloaded.has(item.productNumber) && !noFace.has(item.productNumber));
-      if (!pool.length) throw new Error("商品データが見つかりませんでした。");
-      // 未表示の候補を新着順に並べ、飛ばしたことのある写真は最後に回す
-      const skipped = skippedModels();
-      const order = (list) => list.filter((item) => !skipped.has(item.productNumber)).concat(list.filter((item) => skipped.has(item.productNumber)));
+      const baseList = (await loadModelPool()).filter((item) => (!digit || leadingDigit(item.brandItemNumber) === digit) && !downloaded.has(item.productNumber) && !noFace.has(item.productNumber));
+      if (!baseList.length) throw new Error("条件に合う写真が見つかりませんでした。");
+      let skipped = skippedModels();
+      let pool = baseList.filter((item) => !skipped.has(item.productNumber));
+      let startedNewCycle = false;
       let detectorMissing = false;
       const found = [];
       let tried = 0;
@@ -388,11 +389,20 @@
       let rounds = 0;
       while (run === modelRun && found.length < MODEL_COUNT && rounds < 6) {
         rounds += 1;
-        let fresh = order(pool.filter((item) => !modelSeen.has(item.productNumber)));
+        const shownNow = new Set(found.map((entry) => entry.item.productNumber));
+        const fresh = pool.filter((item) => !modelSeen.has(item.productNumber) && !shownNow.has(item.productNumber));
         if (!fresh.length) {
-          if (rounds > 1) break;
-          modelSeen.clear();
-          fresh = order(pool);
+          // 飛ばしていない写真を出し尽くした(一巡した)ので、飛ばした記録を消して、もう一度対象にする
+          if (!startedNewCycle && skipped.size) {
+            startedNewCycle = true;
+            try { localStorage.removeItem(SKIPPED_KEY); } catch (error) { /* 消せない場合は何もしない */ }
+            skipped = new Set();
+            pool = baseList;
+            modelSeen.clear();
+            rounds -= 1;
+            continue;
+          }
+          break;
         }
         const candidates = fresh.slice(0, MODEL_BATCH);
         const errored = new Set();
@@ -447,7 +457,7 @@
       // 顔を判定できないまま写真を並べると、商品だけの写真や後ろ姿が混ざるため、並べない
       if (detectorMissing) throw new Error("顔の判定機能(インターネット上のGoogleの顔検出)を読み込めませんでした。ネットワークを確認して、もう一度「次の写真を探す」を押してください。");
       if (!found.length && lastError && failed >= tried / 2) throw new Error(`写真を取得できませんでした(${lastError.message}) もう一度お試しください。`);
-      if (!found.length) throw new Error(`条件に合う写真が見つかりませんでした(${tried}商品を確認、取得失敗${failed}件)。もう一度お試しください。`);
+      if (!found.length) throw new Error(`条件に合う写真が見つかりませんでした(${tried}商品を確認)。もう一度「次の写真を探す」を押してください。`);
       setModelStatus(`${digit ? `ブランド商品番号が「${digit}」で始まる` : ""}新着アイテム順に、顔が写っている写真を並べています(耳が見えるかは写真により異なります)。使いたい写真を「画像を保存」してください。「次の写真を探す」で、さらに古いアイテムの写真を表示します。`);
     } catch (error) {
       setModelStatus(`写真を探せませんでした: ${error.message}`, true);
@@ -470,6 +480,13 @@
   urlInput.addEventListener("keydown", (event) => { if (event.key === "Enter") loadProduct(); });
   modelShuffle.addEventListener("click", () => { markShownAsSkipped(); showModels(); });
   window.addEventListener("pagehide", markShownAsSkipped);
+  modelReset.addEventListener("click", () => {
+    if (!window.confirm("これまでに飛ばした写真の記録を消します。飛ばした写真が、また表示されるようになります。よろしいですか?")) return;
+    try { localStorage.removeItem(SKIPPED_KEY); } catch (error) { /* 消せない場合は何もしない */ }
+    shownModels = [];
+    modelSeen.clear();
+    setModelStatus("飛ばした記録をリセットしました。「次の写真を探す」を押してください。");
+  });
 
   [heightInput, widthInput].forEach((input) => input.addEventListener("input", refreshPrompt));
   hookSelect.addEventListener("change", refreshPrompt);
