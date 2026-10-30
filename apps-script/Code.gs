@@ -12,7 +12,8 @@ var MAX_CANDIDATES = 4000;
 var CHECKED_KEY = "CHECKED_CODES";
 var MAX_CHECKED = 600;
 var RELATION_CHECKED_KEY = "CHECKED_RELATION";
-var MAX_RELATION_CHECKED = 450;
+var MAX_RELATION_CHECKED = 2000;
+var CHECKED_CHUNK = 400;
 var CRAWL_WORKFLOW = "crawl.yml";
 var CRAWL_KEY = "LAST_CRAWL_AT";
 var CRAWL_INTERVAL_MS = 15 * 60 * 1000;
@@ -42,13 +43,36 @@ function maxChecked_(scope) {
   return scope === "relation" ? MAX_RELATION_CHECKED : MAX_CHECKED;
 }
 
+// 確認済の一覧は、1つのプロパティに入る大きさ(約9KB)を超えないよう、400件ずつに分けて保存する
+function checkedStoreKey_(scope, index) {
+  return index === 0 ? checkedKey_(scope) : checkedKey_(scope) + "_" + index;
+}
+
 function readChecked_(scope) {
   try {
-    var list = JSON.parse(PropertiesService.getScriptProperties().getProperty(checkedKey_(scope)) || "[]");
-    return Array.isArray(list) ? list.filter(function (code) { return checkedCode_(scope, code); }) : [];
+    var props = PropertiesService.getScriptProperties();
+    var list = [];
+    for (var i = 0; i < 20; i += 1) {
+      var raw = props.getProperty(checkedStoreKey_(scope, i));
+      if (!raw) break;
+      var part = JSON.parse(raw);
+      if (Array.isArray(part)) list = list.concat(part);
+    }
+    return list.filter(function (code) { return checkedCode_(scope, code); });
   } catch (error) {
     return [];
   }
+}
+
+function writeChecked_(scope, list) {
+  var props = PropertiesService.getScriptProperties();
+  var chunks = Math.max(1, Math.ceil(list.length / CHECKED_CHUNK));
+  var values = {};
+  for (var i = 0; i < chunks; i += 1) {
+    values[checkedStoreKey_(scope, i)] = JSON.stringify(list.slice(i * CHECKED_CHUNK, (i + 1) * CHECKED_CHUNK));
+  }
+  props.setProperties(values);
+  for (var j = chunks; j < 20; j += 1) props.deleteProperty(checkedStoreKey_(scope, j));
 }
 
 function setChecked_(parsed) {
@@ -59,7 +83,7 @@ function setChecked_(parsed) {
   var list = readChecked_(scope).filter(function (entry) { return codes.indexOf(entry) < 0; });
   if (parsed.checked) list = list.concat(codes);
   list = list.slice(-maxChecked_(scope));
-  PropertiesService.getScriptProperties().setProperty(checkedKey_(scope), JSON.stringify(list));
+  writeChecked_(scope, list);
   return { ok: true, checked: list };
 }
 
