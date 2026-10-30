@@ -39,12 +39,12 @@
     long: { label: "長辺 (px)", unit: 1000 },
     percent: { label: "倍率 (%)", unit: 50 },
     exact: { label: "幅 (px)", unit: 800, crop: true },
-    ratio54: { label: "幅 (px)", unit: 1080, crop: true },
+    ratio34: { label: "幅 (px)", unit: 1080, crop: true },
     magTitle: { fixed: [1000, 350], crop: true },
     magCarousel: { fixed: [960, 640], crop: true }
   };
   const PRESETS = {
-    igFeed: { label: "Instagram フィード投稿 縦長 4:3", width: 1080, height: 1440 },
+    igFeed: { label: "Instagram フィード投稿 縦長 5:4", width: 1080, height: 1350 },
     igStory: { label: "Instagram ストーリーズ", width: 1080, height: 1920 },
     xSquare: { label: "X 正方形 1:1", width: 1080, height: 1080 }
   };
@@ -77,7 +77,7 @@
       case "height": h = a; w = width * (a / height); break;
       case "long": { const scale = a / Math.max(width, height); w = width * scale; h = height * scale; break; }
       case "percent": w = width * a / 100; h = height * a / 100; break;
-      case "ratio54": w = a; h = a * 5 / 4; break;
+      case "ratio34": w = a; h = a * 4 / 3; break;
       default: w = a; h = b;
     }
     return [Math.min(MAX_SIDE, Math.max(1, Math.round(w))), Math.min(MAX_SIDE, Math.max(1, Math.round(h)))];
