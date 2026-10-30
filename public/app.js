@@ -128,12 +128,28 @@ function isGroupChecked(group) {
   return related.every((code) => state.checked.has(code));
 }
 
+// 確認済は、初期状態では閉じておく(開いたときだけカードを作る)
+const checkedOpen = { relation: false, global: false };
+
+function syncCheckedSection(name, bodyId, gridSelector, toggleId, items, compact, scope) {
+  const open = checkedOpen[name];
+  const body = $(bodyId);
+  const toggle = $(toggleId);
+  if (toggle) {
+    toggle.textContent = open ? `確認済を閉じる(${items.length}件)` : `確認済を表示(${items.length}件)`;
+    toggle.setAttribute("aria-expanded", String(open));
+  }
+  if (body) body.hidden = !open;
+  if (open) renderProductCards(gridSelector, items, compact, scope);
+  else if ($(gridSelector)) $(gridSelector).replaceChildren();
+}
+
 function renderMainProducts() {
   const activeGroups = state.groups.filter((group) => !isGroupChecked(group));
   const checkedGroups = state.groups.filter((group) => isGroupChecked(group));
 
   renderProductCards("#productGrid", activeGroups, false);
-  renderProductCards("#checkedProductGrid", checkedGroups, false);
+  syncCheckedSection("relation", "#checkedBody", "#checkedProductGrid", "#checkedToggle", checkedGroups, false);
   $("#productEmpty").hidden = activeGroups.length > 0;
   $("#checkedEmpty").hidden = checkedGroups.length > 0;
   $("#productCount").textContent = String(activeGroups.length).padStart(2, "0");
@@ -226,7 +242,7 @@ function renderGlobalRows() {
   const checkedRows = rows.filter((row) => state.globalChecked.has(row.main.productNumber));
   $("#globalProductCount").textContent = String(activeRows.length).padStart(2, "0");
   renderProductCards("#globalProductGrid", activeRows, true, "global");
-  renderProductCards("#globalCheckedProductGrid", checkedRows, true, "global");
+  syncCheckedSection("global", "#globalCheckedBody", "#globalCheckedProductGrid", "#globalCheckedToggle", checkedRows, true, "global");
   $("#globalProductEmpty").hidden = rows.length > 0;
   $("#globalCheckedEmpty").hidden = checkedRows.length > 0;
 }
@@ -349,6 +365,11 @@ function viewForPath(path) {
   if (path.includes("/earring/")) return "earringView";
   return "relationView";
 }
+
+[["relation", "#checkedToggle", () => renderMainProducts()], ["global", "#globalCheckedToggle", () => renderGlobalRows()]].forEach(([name, selector, render]) => {
+  const toggle = $(selector);
+  if (toggle) toggle.addEventListener("click", () => { checkedOpen[name] = !checkedOpen[name]; render(); });
+});
 
 window.addEventListener("popstate", () => switchTab(viewForPath(window.location.pathname)));
 

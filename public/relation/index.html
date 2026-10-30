@@ -135,9 +135,12 @@
             <p class="eyebrow">CHECKED OFF</p>
             <h2>確認済</h2>
           </div>
+          <button id="checkedToggle" class="checked-toggle" type="button" aria-expanded="false">確認済を表示</button>
         </div>
-        <div id="checkedProductGrid" class="product-grid"></div>
-        <p id="checkedEmpty" class="checked-empty">確認済にしたアイテムはありません。</p>
+        <div id="checkedBody" hidden>
+          <div id="checkedProductGrid" class="product-grid"></div>
+          <p id="checkedEmpty" class="checked-empty">確認済にしたアイテムはありません。</p>
+        </div>
       </div>
     </section>
 
@@ -191,9 +194,12 @@
             <p class="eyebrow">CHECKED OFF</p>
             <h2>確認済</h2>
           </div>
+          <button id="globalCheckedToggle" class="checked-toggle" type="button" aria-expanded="false">確認済を表示</button>
         </div>
-        <div id="globalCheckedProductGrid" class="product-grid"></div>
-        <p id="globalCheckedEmpty" class="checked-empty">確認済にしたアイテムはありません。</p>
+        <div id="globalCheckedBody" hidden>
+          <div id="globalCheckedProductGrid" class="product-grid"></div>
+          <p id="globalCheckedEmpty" class="checked-empty">確認済にしたアイテムはありません。</p>
+        </div>
       </div>
     </section>
 

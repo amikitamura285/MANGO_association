@@ -530,3 +530,6 @@ footer {
 @media (max-width: 600px) { .earring-thumbs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .earring-status { margin-bottom: 12px; }
 .earring-status { white-space: pre-line; }
+.checked-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; }
+.checked-toggle { padding: 10px 16px; border: 1px solid var(--ink); background: var(--white); color: var(--ink); font: 11px 'DM Mono', monospace; cursor: pointer; }
+.checked-toggle:hover { background: var(--ink); color: var(--white); }
