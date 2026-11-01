@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T22:23:42.990Z",
+  "updatedAt": "2026-11-01T22:44:41.396Z",
   "products": [
     {
       "name": "Sequin knit dress - Women",
@@ -8678,42 +8678,6 @@
         }
       ],
       "baseCode": "37005883",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
-        "name": "High-waist straight-fit denim shorts - Women",
-        "image": "https://media.mango.com/is/image/punto/27037140-TS-002?wid=1024",
-        "productNumber": "27037140",
-        "baseCode": "27037140",
-        "globalCode": "27037140",
-        "colorId": "TS",
-        "url": "https://shop.mango.com/gb/en/p/women/shorts-and-bermuda-shorts/bermuda-shorts/high-waist-straight-fit-denim-shorts/27037140/TS/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "27011212",
-            "colorId": "32"
-          },
-          {
-            "productNumber": "27031347",
-            "colorId": "OR"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040871/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "Intertwined knot earrings",
-          "image": "https://media.mango.com/is/image/punto/27031347-OR-900?wid=1024",
-          "productNumber": "27031347",
-          "baseCode": "27031347",
-          "globalCode": "27031347",
-          "colorId": "OR",
-          "url": "https://shop.mango.com/gb/en/p/women/jewellery/earrings/intertwined-knot-earrings/27031347/OR/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW039825/"
-        }
-      ],
-      "baseCode": "27037140",
       "hasJapanRelations": true
     },
     {
