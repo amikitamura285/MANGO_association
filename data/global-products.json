@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-03T01:35:23.723Z",
+  "updatedAt": "2026-11-04T00:00:12.431Z",
   "products": [
     {
       "name": "Sequin knit dress - Women",
@@ -6903,54 +6903,6 @@
         }
       ],
       "baseCode": "37044102",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
-        "name": "Midi quilted anorak with hood - Women",
-        "image": "https://media.mango.com/is/image/punto/37008269-99-002?wid=1024",
-        "productNumber": "37008269",
-        "baseCode": "37008269",
-        "globalCode": "37008269",
-        "colorId": "99",
-        "url": "https://shop.mango.com/gb/en/p/women/coats/plus-sizes/midi-quilted-anorak-with-hood/37008269/99/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "37036336",
-            "colorId": "05"
-          },
-          {
-            "productNumber": "37024078",
-            "colorId": "TM"
-          },
-          {
-            "productNumber": "37005997",
-            "colorId": "99"
-          },
-          {
-            "productNumber": "37022908",
-            "colorId": "99"
-          },
-          {
-            "productNumber": "37067115",
-            "colorId": "70"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043532/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "High-waist flared jeans",
-          "image": "https://media.mango.com/is/image/punto/37024078-TM-900?wid=1024",
-          "productNumber": "37024078",
-          "baseCode": "37024078",
-          "globalCode": "37024078",
-          "colorId": "TM",
-          "url": "https://shop.mango.com/gb/en/p/women/jeans/flare/high-waist-flared-jeans/37024078/TM/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042458/"
-        }
-      ],
-      "baseCode": "37008269",
       "hasJapanRelations": true
     },
     {

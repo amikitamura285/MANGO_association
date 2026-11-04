@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-03T01:35:18.895Z",
+  "updatedAt": "2026-11-04T00:00:07.214Z",
   "products": [
     {
       "name": "ロングワンピース .-- MILA （ホワイト）",
@@ -242,18 +242,16 @@
       "relatedNames": []
     },
     {
-      "name": "ジャケット .-- SABINA （ブラック）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039343_1_l.jpg",
-      "productNumber": "MA1658EW039343",
-      "brandItemNumber": "27091189 99 色 ブラック（99）",
+      "name": "ジャケット .-- SABINA （ダークレッド）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039344_1_l.jpg",
+      "productNumber": "MA1658EW039344",
+      "brandItemNumber": "27091189 76 色 ダークレッド（76）",
       "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039343/",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039344/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "SABINA",
-      "relatedNames": [
-        "ロングスカート .-- PARIS （ブラック）"
-      ]
+      "relatedNames": []
     },
     {
       "name": "ジャケット .-- SABINA （グリーン）",
@@ -316,27 +314,27 @@
       "relatedNames": []
     },
     {
-      "name": "スリングパンプス .-- SOL （ダークブラウン）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658BW039377_1_l.jpg",
-      "productNumber": "MA1658BW039377",
-      "brandItemNumber": "27051228 32 色 ダークブラウン（32）",
+      "name": "ジーンズ .-- VIOLETA （オープングレー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039386_1_l.jpg",
+      "productNumber": "MA1658EW039386",
+      "brandItemNumber": "27021192 TN 色 オープングレー（TN）",
       "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW039377/",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039386/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SOL",
+      "englishKey": "VIOLETA",
       "relatedNames": []
     },
     {
-      "name": "ピアス .-- SOL （ゴールド）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW039525_1_l.jpg",
-      "productNumber": "MA1658DW039525",
-      "brandItemNumber": "27021336 OR 色 ゴールド（OR）",
+      "name": "ジーンズ .-- VIOLETA （オープンブルー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039484_1_l.jpg",
+      "productNumber": "MA1658EW039484",
+      "brandItemNumber": "27031191 TS 色 オープンブルー（TS）",
       "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW039525/",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039484/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
-      "englishKey": "SOL",
+      "englishKey": "VIOLETA",
       "relatedNames": []
     },
     {
@@ -944,12 +942,12 @@
       "relatedNames": []
     },
     {
-      "name": "ジーンズ .-- EMILY （オープンブルー）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040901_1_l.jpg",
-      "productNumber": "MA1658EW040901",
-      "brandItemNumber": "27047152 TS 色 オープンブルー（TS）",
+      "name": "ジーンズ .-- EMILY （ホワイト）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW041072_1_l.jpg",
+      "productNumber": "MA1658EW041072",
+      "brandItemNumber": "27027144 1 色 ホワイト（1）",
       "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040901/",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041072/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "EMILY",
@@ -1150,6 +1148,30 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "AZUR",
+      "relatedNames": []
+    },
+    {
+      "name": "シャツ .-- PARTENOP （ライラック）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040298_1_l.jpg",
+      "productNumber": "MA1658EW040298",
+      "brandItemNumber": "27054788 61 色 ライラック（61）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040298/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "PARTENOP",
+      "relatedNames": []
+    },
+    {
+      "name": "シャツ .-- PARTENOP （ホワイト）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040313_1_l.jpg",
+      "productNumber": "MA1658EW040313",
+      "brandItemNumber": "27074100 1 色 ホワイト（1）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040313/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "PARTENOP",
       "relatedNames": []
     },
     {
@@ -3196,30 +3218,6 @@
       "relatedNames": []
     },
     {
-      "name": "ジーンズ .-- VIOLETA （オープンブルー）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042458_1_l.jpg",
-      "productNumber": "MA1658EW042458",
-      "brandItemNumber": "37024078 TM 色 オープンブルー（TM）",
-      "brandItemFirstDigit": "3",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042458/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "VIOLETA",
-      "relatedNames": []
-    },
-    {
-      "name": "スカーフ .--VIOLETA （ナチュラルホワイト）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW043146_1_l.jpg",
-      "productNumber": "MA1658DW043146",
-      "brandItemNumber": "37016002 5 色 ナチュラルホワイト（5）",
-      "brandItemFirstDigit": "3",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW043146/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "VIOLETA",
-      "relatedNames": []
-    },
-    {
       "name": "ピアス .-- LUCIA （ゴールド）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW042476_1_l.jpg",
       "productNumber": "MA1658DW042476",
@@ -4200,6 +4198,30 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "LEA",
+      "relatedNames": []
+    },
+    {
+      "name": "スカーフ .--VIOLETA （ナチュラルホワイト）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW043146_1_l.jpg",
+      "productNumber": "MA1658DW043146",
+      "brandItemNumber": "37016002 5 色 ナチュラルホワイト（5）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW043146/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "VIOLETA",
+      "relatedNames": []
+    },
+    {
+      "name": "ジーンズ .--VIOLETA （ダークブラウン）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043208_1_l.jpg",
+      "productNumber": "MA1658EW043208",
+      "brandItemNumber": "37015864 32 色 ダークブラウン（32）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043208/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "VIOLETA",
       "relatedNames": []
     },
     {
@@ -6226,5 +6248,5 @@
     "MA1658AW043836",
     "MA1658BW043851"
   ],
-  "scanned": 4280
+  "scanned": 4276
 }
