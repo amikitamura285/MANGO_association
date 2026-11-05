@@ -9,7 +9,10 @@ const state = {
   globalRows: []
 };
 let productsReady;
-const dataPathPrefix = /\/(?:relation|global|resize|earring)\/$/.test(window.location.pathname) ? "../" : "";
+// データの場所は、このスクリプト(サイトの根元にある)の位置から決める。タブを切り替えるとページのURLが変わるため、ページのURLからの相対では、ずれてしまう
+const dataPathPrefix = document.currentScript && document.currentScript.src
+  ? new URL("./", document.currentScript.src).href
+  : (/\/(?:relation|global|resize|earring)\/$/.test(window.location.pathname) ? "../" : "");
 
 function escapeHtml(value) {
   return String(value ?? "").replace(/[&<>\"']/g, (character) => ({
