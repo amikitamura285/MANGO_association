@@ -7,10 +7,10 @@ var FILE_PATH = "data/global-raw.json";
 var MAX_BODY_CHARS = 3000000;
 var MIN_INTERVAL_MS = 10 * 60 * 1000;
 var MIN_PRODUCTS = 10;
-var MAX_PRODUCTS = 300;
+var MAX_PRODUCTS = 700;
 var MAX_CANDIDATES = 4000;
 var CHECKED_KEY = "CHECKED_CODES";
-var MAX_CHECKED = 600;
+var MAX_CHECKED = 2000;
 var RELATION_CHECKED_KEY = "CHECKED_RELATION";
 var MAX_RELATION_CHECKED = 2000;
 var CHECKED_CHUNK = 400;
@@ -36,7 +36,7 @@ function checkedKey_(scope) {
 
 function checkedCode_(scope, value) {
   if (scope === "relation") return typeof value === "string" && /^[A-Za-z0-9]{6,20}$/.test(value) ? value : null;
-  return code8_(value);
+  return typeof value === "string" && /^\d{8}(?:-[0-9a-z]{6})?$/.test(value) ? value : null;
 }
 
 function maxChecked_(scope) {

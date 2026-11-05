@@ -100,7 +100,8 @@ $StubJs = @'
     }
     const seenCodes = new Set();
     const japanTargets = [];
-    for (const item of japan) {
+    const serial = (item) => Number((String(item.productNumber || "").match(/(\d+)$/) || [])[1]) || 0;
+    for (const item of [...japan].sort((a, b) => serial(b) - serial(a))) {
       if ((item.relatedNames || []).length) continue;
       const brand = String(item.brandItemNumber || "").match(/(\d{8})\s+([A-Za-z0-9]+)/);
       if (!brand || seenCodes.has(brand[1])) continue;

@@ -28,7 +28,7 @@
   ];
   if (DAILY) SOURCES.push(...CATEGORY_SOURCES);
   const MAX_PRODUCTS = DAILY ? 240 : 150;
-  const HARD_CAP = 290;
+  const HARD_CAP = DAILY ? 650 : 290;
   const SHOP = "https://shop.mango.com";
   const DELAY_MS = 400;
   const API = "https://online-orchestrator.mango.com/v4/products?channelId=shop&countryIso=GB&languageIso=en&productId=";
@@ -54,7 +54,8 @@
     throw new Error("https://shop.mango.com/gb/en/ のページを開いてから実行してください。");
   }
 
-  const JAPAN_EXTRA = 100;
+  // 毎日の収集では、新商品から順に、日本の未関連付け商品をすべて調べる。手動のUPDATEは、これまでどおり控えめにする
+  const JAPAN_EXTRA = DAILY ? 400 : 100;
   function requestContext() {
     return new Promise((resolve) => {
       if (!window.opener) { resolve({}); return; }
@@ -348,10 +349,10 @@
 
   const japanTargets = (context.japanTargets || [])
     .filter((target) => !byBaseCode.has(target.code) && !displayedCodes.has(target.code))
-    .map((target) => ({ target, order: Math.random() }))
+    .map((target) => ({ target, order: DAILY ? 0 : Math.random() }))
     .sort((a, b) => a.order - b.order)
     .map((entry) => entry.target)
-    .slice(0, JAPAN_EXTRA * 2);
+    .slice(0, DAILY ? 900 : JAPAN_EXTRA * 2);
   log(`[3/4] 日本の未関連付け商品 ${japanTargets.length} 件からグローバルの商品を探します(最大 ${JAPAN_EXTRA} 件)`);
   let japanAdded = 0;
   done = 0;

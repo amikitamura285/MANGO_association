@@ -56,6 +56,19 @@ function getJapanUrl(product) {
   return product.japanUrl || "";
 }
 
+// グローバルの確認済は、関連候補の内容(署名)つきで覚える。あとから新しい候補が加わると署名が変わり、未確認に戻る
+function globalCheckKey(row) {
+  const signature = (row.related || []).map((item) => `${item.productNumber}:${item.colorId}`).sort().join(",");
+  let hash = 0;
+  for (let i = 0; i < signature.length; i += 1) hash = (hash * 31 + signature.charCodeAt(i)) >>> 0;
+  return `${row.main.productNumber}-${hash.toString(36).padStart(6, "0").slice(-6)}`;
+}
+
+// 署名のない昔の確認済(8桁のみ)は、署名が合う確認済として扱う
+function isGlobalRowChecked(row) {
+  return state.globalChecked.has(globalCheckKey(row)) || state.globalChecked.has(row.main.productNumber);
+}
+
 function renderProductCards(containerSelector, groups, compact, scope = "main") {
   const container = $(containerSelector);
   if (!container) return;
@@ -85,14 +98,15 @@ function renderProductCards(containerSelector, groups, compact, scope = "main") 
   container.innerHTML = groups.map((group) => {
     const main = group.main || group.japanese || group;
     const related = Array.isArray(group.related) ? group.related : (Array.isArray(group.global) ? group.global : []);
-    const isChecked = scope === "global" ? checkedSet.has(main.productNumber) : isGroupChecked(group);
+    const checkKey = scope === "global" ? globalCheckKey({ main, related }) : main.productNumber;
+    const isChecked = scope === "global" ? isGlobalRowChecked({ main, related }) : isGroupChecked(group);
 
     return `
       <section class="product-group">
         <article class="card card-main">
           ${renderImage(main, false)}
           <label class="check-toggle">
-            <input type="checkbox" data-product-number="${escapeHtml(main.productNumber || "")}" ${isChecked ? "checked" : ""}>
+            <input type="checkbox" data-product-number="${escapeHtml(checkKey || "")}" ${isChecked ? "checked" : ""}>
             <span>確認済</span>
           </label>
         </article>
@@ -241,8 +255,8 @@ function renderGlobalData(data) {
 
 function renderGlobalRows() {
   const rows = state.globalRows;
-  const activeRows = rows.filter((row) => !state.globalChecked.has(row.main.productNumber));
-  const checkedRows = rows.filter((row) => state.globalChecked.has(row.main.productNumber));
+  const activeRows = rows.filter((row) => !isGlobalRowChecked(row));
+  const checkedRows = rows.filter((row) => isGlobalRowChecked(row));
   $("#globalProductCount").textContent = String(activeRows.length).padStart(2, "0");
   renderProductCards("#globalProductGrid", activeRows, true, "global");
   syncCheckedSection("global", "#globalCheckedBody", "#globalCheckedProductGrid", "#globalCheckedToggle", checkedRows, true, "global");
