@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-05T06:46:59.762Z",
+  "updatedAt": "2026-11-05T07:31:57.276Z",
   "products": [
     {
       "name": "Short blazer dress",
@@ -5324,16 +5324,6 @@
       },
       "relatedGlobal": [
         {
-          "name": "Asymmetrical heeled shoes",
-          "image": "https://media.mango.com/is/image/punto/37064404-99-900?wid=1024",
-          "productNumber": "37064404",
-          "baseCode": "37064404",
-          "globalCode": "37064404",
-          "colorId": "99",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/heeled-shoes/asymmetrical-heeled-shoes/37064404/99/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW042316/"
-        },
-        {
           "name": "Faux-leather shoulder bag",
           "image": "https://media.mango.com/is/image/punto/37024462-99-900?wid=1024",
           "productNumber": "37024462",
@@ -5400,16 +5390,6 @@
           "colorId": "99",
           "url": "https://shop.mango.com/gb/en/p/women/shoes/heeled-shoes/patent-heeled-shoes/37055979/99/00",
           "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW043186/"
-        },
-        {
-          "name": "Buckle leather belt",
-          "image": "https://media.mango.com/is/image/punto/37094447-99-900?wid=1024",
-          "productNumber": "37094447",
-          "baseCode": "37094447",
-          "globalCode": "37094447",
-          "colorId": "99",
-          "url": "https://shop.mango.com/gb/en/p/women/belts/basics/buckle-leather-belt/37094447/99/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042676/"
         }
       ],
       "baseCode": "37009136",
@@ -7229,50 +7209,6 @@
     },
     {
       "main": {
-        "name": "Bomber jacket with funnel neck",
-        "image": "https://media.mango.com/is/image/punto/37046742-37-002?wid=1024",
-        "productNumber": "37046742",
-        "baseCode": "37046742",
-        "globalCode": "37046742",
-        "colorId": "37",
-        "url": "https://shop.mango.com/gb/en/p/women/jackets/bombers/bomber-jacket-with-funnel-neck/37046742/37/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "37004098",
-            "colorId": "05"
-          },
-          {
-            "productNumber": "37054110",
-            "colorId": "99"
-          },
-          {
-            "productNumber": "37005996",
-            "colorId": "99"
-          },
-          {
-            "productNumber": "37032539",
-            "colorId": "32"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043531/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "Faux leather ankle boot with block heel",
-          "image": "https://media.mango.com/is/image/punto/37005996-99-900?wid=1024",
-          "productNumber": "37005996",
-          "baseCode": "37005996",
-          "globalCode": "37005996",
-          "colorId": "99",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/boots-and-ankle-boots/faux-leather-ankle-boot-with-block-heel/37005996/99/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW043296/"
-        }
-      ],
-      "baseCode": "37046742",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
         "name": "Straight cotton jeans",
         "image": "https://media.mango.com/is/image/punto/37096367-70-002?wid=1024",
         "productNumber": "37096367",
@@ -7549,60 +7485,6 @@
         }
       ],
       "baseCode": "37017817",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
-        "name": "Polka dots cotton t-shirt",
-        "image": "https://media.mango.com/is/image/punto/37093324-01-002?wid=1024",
-        "productNumber": "37093324",
-        "baseCode": "37093324",
-        "globalCode": "37093324",
-        "colorId": "01",
-        "url": "https://shop.mango.com/gb/en/p/women/t-shirts/short-sleeve/polka-dots-cotton-t-shirt/37093324/01/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "37054086",
-            "colorId": "99"
-          },
-          {
-            "productNumber": "37001361",
-            "colorId": "32"
-          },
-          {
-            "productNumber": "37023318",
-            "colorId": "99"
-          },
-          {
-            "productNumber": "37004456",
-            "colorId": "PL"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042473/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "Buckle strap sandals",
-          "image": "https://media.mango.com/is/image/punto/37001361-32-900?wid=1024",
-          "productNumber": "37001361",
-          "baseCode": "37001361",
-          "globalCode": "37001361",
-          "colorId": "32",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/leather-shoes/buckle-strap-sandals/37001361/32/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW041564/"
-        },
-        {
-          "name": "Large bucket bag buckle",
-          "image": "https://media.mango.com/is/image/punto/37023318-99-900?wid=1024",
-          "productNumber": "37023318",
-          "baseCode": "37023318",
-          "globalCode": "37023318",
-          "colorId": "99",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/shoppers/large-bucket-bag-buckle/37023318/99/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW042336/"
-        }
-      ],
-      "baseCode": "37093324",
       "hasJapanRelations": true
     }
   ]
