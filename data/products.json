@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-06T00:04:42.603Z",
+  "updatedAt": "2026-11-06T23:48:40.458Z",
   "products": [
     {
       "name": "ロングワンピース .-- MILA （ホワイト）",
@@ -4341,7 +4341,9 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "SHOOU",
-      "relatedNames": []
+      "relatedNames": [
+        "ジーンズ-- JOY （オープンブルー）"
+      ]
     },
     {
       "name": "セーター .--SHOOU （ミディアムグレー）",
@@ -6314,5 +6316,5 @@
     "MA1658EW043883",
     "MA1658EW043891"
   ],
-  "scanned": 4311
+  "scanned": 4303
 }
