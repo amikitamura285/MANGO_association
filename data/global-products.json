@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-05T07:31:57.276Z",
+  "updatedAt": "2026-11-06T00:04:47.528Z",
   "products": [
     {
       "name": "Short blazer dress",
@@ -6208,16 +6208,6 @@
           "colorId": "99",
           "url": "https://shop.mango.com/gb/en/p/women/bags/crossbody/100-bovine-leather-bag/37065999/99/00",
           "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW043196/"
-        },
-        {
-          "name": "Pointed-toe court shoe in leather effect",
-          "image": "https://media.mango.com/is/image/punto/37045980-92-900?wid=1024",
-          "productNumber": "37045980",
-          "baseCode": "37045980",
-          "globalCode": "37045980",
-          "colorId": "92",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/heeled-shoes/pointed-toe-court-shoe-in-leather-effect/37045980/92/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW043368/"
         }
       ],
       "baseCode": "37077791",
@@ -6326,6 +6316,16 @@
           "colorId": "99",
           "url": "https://shop.mango.com/gb/en/p/women/skirts/midi/straight-leather-look-skirt/37025989/99/00",
           "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043136/"
+        },
+        {
+          "name": "Pointed-toe court shoe in leather effect",
+          "image": "https://media.mango.com/is/image/punto/37045980-92-900?wid=1024",
+          "productNumber": "37045980",
+          "baseCode": "37045980",
+          "globalCode": "37045980",
+          "colorId": "92",
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/heeled-shoes/pointed-toe-court-shoe-in-leather-effect/37045980/92/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW043368/"
         }
       ],
       "baseCode": "37045841",
@@ -7485,6 +7485,60 @@
         }
       ],
       "baseCode": "37017817",
+      "hasJapanRelations": true
+    },
+    {
+      "main": {
+        "name": "Polka dots cotton t-shirt",
+        "image": "https://media.mango.com/is/image/punto/37093324-01-002?wid=1024",
+        "productNumber": "37093324",
+        "baseCode": "37093324",
+        "globalCode": "37093324",
+        "colorId": "01",
+        "url": "https://shop.mango.com/gb/en/p/women/t-shirts/short-sleeve/polka-dots-cotton-t-shirt/37093324/01/00",
+        "relatedProductNumbers": [
+          {
+            "productNumber": "37054086",
+            "colorId": "99"
+          },
+          {
+            "productNumber": "37001361",
+            "colorId": "32"
+          },
+          {
+            "productNumber": "37023318",
+            "colorId": "99"
+          },
+          {
+            "productNumber": "37004456",
+            "colorId": "PL"
+          }
+        ],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042473/"
+      },
+      "relatedGlobal": [
+        {
+          "name": "Buckle strap sandals",
+          "image": "https://media.mango.com/is/image/punto/37001361-32-900?wid=1024",
+          "productNumber": "37001361",
+          "baseCode": "37001361",
+          "globalCode": "37001361",
+          "colorId": "32",
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/leather-shoes/buckle-strap-sandals/37001361/32/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW041564/"
+        },
+        {
+          "name": "Large bucket bag buckle",
+          "image": "https://media.mango.com/is/image/punto/37023318-99-900?wid=1024",
+          "productNumber": "37023318",
+          "baseCode": "37023318",
+          "globalCode": "37023318",
+          "colorId": "99",
+          "url": "https://shop.mango.com/gb/en/p/women/bags/shoppers/large-bucket-bag-buckle/37023318/99/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW042336/"
+        }
+      ],
+      "baseCode": "37093324",
       "hasJapanRelations": true
     }
   ]

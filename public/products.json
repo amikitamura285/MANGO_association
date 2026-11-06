@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-05T07:31:52.327Z",
+  "updatedAt": "2026-11-06T00:04:42.603Z",
   "products": [
     {
       "name": "ロングワンピース .-- MILA （ホワイト）",
@@ -1586,33 +1586,6 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "MOJITO",
-      "relatedNames": []
-    },
-    {
-      "name": "パンツ .-- MALTA （ナチュラルホワイト）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040805_1_l.jpg",
-      "productNumber": "MA1658EW040805",
-      "brandItemNumber": "27017163 5 色 ナチュラルホワイト（5）",
-      "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040805/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "MALTA",
-      "relatedNames": [
-        "サンダル .-- VAMP （グレー）",
-        "ジャケット .-- JACK （カーキ）"
-      ]
-    },
-    {
-      "name": "ブレザー .-- MALTA （ネイビーブルー）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040996_1_l.jpg",
-      "productNumber": "MA1658EW040996",
-      "brandItemNumber": "27057158 56 色 ネイビーブルー（56）",
-      "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040996/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "MALTA",
       "relatedNames": []
     },
     {
@@ -4737,67 +4710,8 @@
       "relatedNames": []
     }
   ],
-  "groups": [
-    {
-      "englishKey": "RAMONA",
-      "main": {
-        "name": "パンツ .-- RAMONA （グレー）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043883_1_l.jpg",
-        "productNumber": "MA1658EW043883",
-        "brandItemNumber": "37078273 92 色 グレー（92）",
-        "brandItemFirstDigit": "3",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043883/",
-        "brandCode": "MA1658",
-        "brandName": "MANGO",
-        "englishKey": "RAMONA",
-        "relatedNames": []
-      },
-      "related": [
-        {
-          "name": "ロングワンピース .-- RAMONA （ブラック）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042024_1_l.jpg",
-          "productNumber": "MA1658EW042024",
-          "brandItemNumber": "37011381 99 色 ブラック（99）",
-          "brandItemFirstDigit": "3",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042024/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "RAMONA",
-          "relatedNames": []
-        }
-      ]
-    },
-    {
-      "englishKey": "LAMPONE",
-      "main": {
-        "name": "ブラウス .-- LAMPONE （パステルピンク）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043891_1_l.jpg",
-        "productNumber": "MA1658EW043891",
-        "brandItemNumber": "37029123 81 色 パステルピンク（81）",
-        "brandItemFirstDigit": "3",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043891/",
-        "brandCode": "MA1658",
-        "brandName": "MANGO",
-        "englishKey": "LAMPONE",
-        "relatedNames": []
-      },
-      "related": [
-        {
-          "name": "ブラウス .-- LAMPONE （ナチュラルホワイト）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042587_1_l.jpg",
-          "productNumber": "MA1658EW042587",
-          "brandItemNumber": "37034467 5 色 ナチュラルホワイト（5）",
-          "brandItemFirstDigit": "3",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042587/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "LAMPONE",
-          "relatedNames": []
-        }
-      ]
-    }
-  ],
-  "newCount": 2,
+  "groups": [],
+  "newCount": 0,
   "displayedMainProductNumbers": [
     "MA1658EW33440",
     "MA3878EC003099",
