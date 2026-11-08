@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07T22:38:57.782Z",
+  "updatedAt": "2026-11-08T22:49:10.729Z",
   "products": [
     {
       "name": "ロングワンピース .-- MILA （ホワイト）",
@@ -86,30 +86,6 @@
       "relatedNames": []
     },
     {
-      "name": "ジーンズ .-- DAVINA （オープンブルー）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW037861_1_l.jpg",
-      "productNumber": "MA1658EW037861",
-      "brandItemNumber": "17054137 TM 色 オープンブルー（TM）",
-      "brandItemFirstDigit": "1",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW037861/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "DAVINA",
-      "relatedNames": []
-    },
-    {
-      "name": "ジーンズ .-- DAVINA （ブラック）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW038705_1_l.jpg",
-      "productNumber": "MA1658EW038705",
-      "brandItemNumber": "17016358 BB 色 ブラック（BB）",
-      "brandItemFirstDigit": "1",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038705/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "DAVINA",
-      "relatedNames": []
-    },
-    {
       "name": "セーター .-- LIBRA （ライトベージュ）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW038493_1_l.jpg",
       "productNumber": "MA1658EW038493",
@@ -131,30 +107,6 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "LIBRA",
-      "relatedNames": []
-    },
-    {
-      "name": "セーター .-- NEKKO （イエロー）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW038719_1_l.jpg",
-      "productNumber": "MA1658EW038719",
-      "brandItemNumber": "17005812 43 色 イエロー（43）",
-      "brandItemFirstDigit": "1",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038719/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "NEKKO",
-      "relatedNames": []
-    },
-    {
-      "name": "ミニワンピース .-- NEKKO （ダークグリーン）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW038967_1_l.jpg",
-      "productNumber": "MA1658EW038967",
-      "brandItemNumber": "17047804 49 色 ダークグリーン（49）",
-      "brandItemFirstDigit": "1",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW038967/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "NEKKO",
       "relatedNames": []
     },
     {
@@ -6316,5 +6268,5 @@
     "MA1658EW043883",
     "MA1658EW043891"
   ],
-  "scanned": 4303
+  "scanned": 4266
 }
