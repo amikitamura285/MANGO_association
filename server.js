@@ -532,6 +532,8 @@ async function crawl() {
       const hasSameRelated = product.relatedNames.some((related) => englishKey(related) === product.englishKey);
       return sameNameProducts.length > 1 && !hasSameRelated;
     });
+    // 同じ名前のグループの中に、日本サイトで同名の関連が付いていない商品が1つでもあれば、そのグループを出す。
+    // すでにお互いが関連付いている商品(例: パンツとスカート)は、関連付いていない商品(例: ジャケット)の相手として、あとに並べる
     const matchedGroups = new Map();
     for (const product of matchedCandidates) {
       const key = displayGroupKey(product);
@@ -539,8 +541,11 @@ async function crawl() {
       matchedGroups.get(key).push(product);
     }
     const matched = [...matchedGroups.entries()]
-      .filter(([, items]) => items.length > 1)
-      .flatMap(([, items]) => items)
+      .flatMap(([key, items]) => {
+        const already = new Set(items.map((item) => item.productNumber));
+        const linked = (eligibleGroups.get(key) || []).filter((item) => !already.has(item.productNumber));
+        return [...items, ...linked];
+      })
       .map(({ variationProductNumbers, ...product }) => product);
     const displayBuckets = new Map();
     for (const product of matched) {
