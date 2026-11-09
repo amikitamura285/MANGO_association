@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T01:56:17.110Z",
+  "updatedAt": "2026-11-09T04:27:55.268Z",
   "products": [
     {
       "name": "Short blazer dress",
@@ -5758,6 +5758,70 @@
     },
     {
       "main": {
+        "name": "Floral embroidered blouse with frog closures",
+        "image": "https://media.mango.com/is/image/punto/37019125-99-002?wid=1024",
+        "productNumber": "37019125",
+        "baseCode": "37019125",
+        "globalCode": "37019125",
+        "colorId": "99",
+        "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/blouses/floral-embroidered-blouse-with-frog-closures/37019125/99/00",
+        "relatedProductNumbers": [
+          {
+            "productNumber": "37026366",
+            "colorId": "92"
+          },
+          {
+            "productNumber": "37035870",
+            "colorId": "99"
+          },
+          {
+            "productNumber": "37048279",
+            "colorId": "99"
+          },
+          {
+            "productNumber": "37047910",
+            "colorId": "99"
+          }
+        ],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043873/"
+      },
+      "relatedGlobal": [
+        {
+          "name": "Wool suit trousers",
+          "image": "https://media.mango.com/is/image/punto/37026366-92-900?wid=1024",
+          "productNumber": "37026366",
+          "baseCode": "37026366",
+          "globalCode": "37026366",
+          "colorId": "92",
+          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/wool-suit-trousers/37026366/92/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043055/"
+        },
+        {
+          "name": "Frog-button jacket with band collar",
+          "image": "https://media.mango.com/is/image/punto/37035870-99-900?wid=1024",
+          "productNumber": "37035870",
+          "baseCode": "37035870",
+          "globalCode": "37035870",
+          "colorId": "99",
+          "url": "https://shop.mango.com/gb/en/p/women/jackets/frog-button-jacket-with-band-collar/37035870/99/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042832/"
+        },
+        {
+          "name": "Sequin chain bag",
+          "image": "https://media.mango.com/is/image/punto/37048279-99-900?wid=1024",
+          "productNumber": "37048279",
+          "baseCode": "37048279",
+          "globalCode": "37048279",
+          "colorId": "99",
+          "url": "https://shop.mango.com/gb/en/p/women/bags/crossbody/sequin-chain-bag/37048279/99/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW043865/"
+        }
+      ],
+      "baseCode": "37019125",
+      "hasJapanRelations": true
+    },
+    {
+      "main": {
         "name": "Brushed-finish Bambi jacket - Women",
         "image": "https://media.mango.com/is/image/punto/37087921-32-002?wid=1024",
         "productNumber": "37087921",
@@ -6008,50 +6072,6 @@
         }
       ],
       "baseCode": "37028281",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
-        "name": "Embroidered semi-sheer blouse",
-        "image": "https://media.mango.com/is/image/punto/37029123-81-002?wid=1024",
-        "productNumber": "37029123",
-        "baseCode": "37029123",
-        "globalCode": "37029123",
-        "colorId": "81",
-        "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/blouses/embroidered-semi-sheer-blouse/37029123/81/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "37039129",
-            "colorId": "43"
-          },
-          {
-            "productNumber": "37035870",
-            "colorId": "99"
-          },
-          {
-            "productNumber": "37077805",
-            "colorId": "99"
-          },
-          {
-            "productNumber": "37001355",
-            "colorId": "99"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043891/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "Frog-button jacket with band collar",
-          "image": "https://media.mango.com/is/image/punto/37035870-99-900?wid=1024",
-          "productNumber": "37035870",
-          "baseCode": "37035870",
-          "globalCode": "37035870",
-          "colorId": "99",
-          "url": "https://shop.mango.com/gb/en/p/women/jackets/frog-button-jacket-with-band-collar/37035870/99/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042832/"
-        }
-      ],
-      "baseCode": "37029123",
       "hasJapanRelations": true
     },
     {
@@ -6362,46 +6382,6 @@
         }
       ],
       "baseCode": "37094786",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
-        "name": "Midi skirt with slit",
-        "image": "https://media.mango.com/is/image/punto/37088639-35-002?wid=1024",
-        "productNumber": "37088639",
-        "baseCode": "37088639",
-        "globalCode": "37088639",
-        "colorId": "35",
-        "url": "https://shop.mango.com/gb/en/p/women/skirts/midi/midi-skirt-with-slit/37088639/35/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "37078639",
-            "colorId": "35"
-          },
-          {
-            "productNumber": "37006341",
-            "colorId": "96"
-          },
-          {
-            "productNumber": "37055989",
-            "colorId": "99"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043758/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "Mandarin collar pinstripe jacket",
-          "image": "https://media.mango.com/is/image/punto/37078639-35-900?wid=1024",
-          "productNumber": "37078639",
-          "baseCode": "37078639",
-          "globalCode": "37078639",
-          "colorId": "35",
-          "url": "https://shop.mango.com/gb/en/p/women/jackets/funnel-neck/mandarin-collar-pinstripe-jacket/37078639/35/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043878/"
-        }
-      ],
-      "baseCode": "37088639",
       "hasJapanRelations": true
     },
     {
@@ -7068,46 +7048,6 @@
         }
       ],
       "baseCode": "37028280",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
-        "name": "Sequin chain bag",
-        "image": "https://media.mango.com/is/image/punto/37048279-99-052?wid=1024",
-        "productNumber": "37048279",
-        "baseCode": "37048279",
-        "globalCode": "37048279",
-        "colorId": "99",
-        "url": "https://shop.mango.com/gb/en/p/women/bags/crossbody/sequin-chain-bag/37048279/99/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "37064776",
-            "colorId": "30"
-          },
-          {
-            "productNumber": "37054780",
-            "colorId": "TM"
-          },
-          {
-            "productNumber": "37001349",
-            "colorId": "07"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW043865/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "Slim-fit high-waist jeans",
-          "image": "https://media.mango.com/is/image/punto/37054780-TM-900?wid=1024",
-          "productNumber": "37054780",
-          "baseCode": "37054780",
-          "globalCode": "37054780",
-          "colorId": "TM",
-          "url": "https://shop.mango.com/gb/en/p/women/jeans/plus-sizes/slim-fit-high-waist-jeans/37054780/TM/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042839/"
-        }
-      ],
-      "baseCode": "37048279",
       "hasJapanRelations": true
     },
     {
@@ -11101,6 +11041,16 @@
       },
       "relatedGlobal": [
         {
+          "name": "Slim-fit high-waist jeans",
+          "image": "https://media.mango.com/is/image/punto/37054780-TM-900?wid=1024",
+          "productNumber": "37054780",
+          "baseCode": "37054780",
+          "globalCode": "37054780",
+          "colorId": "TM",
+          "url": "https://shop.mango.com/gb/en/p/women/jeans/plus-sizes/slim-fit-high-waist-jeans/37054780/TM/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042839/"
+        },
+        {
           "name": "Contrasting ribbed cardigan",
           "image": "https://media.mango.com/is/image/punto/37044106-56-900?wid=1024",
           "productNumber": "37044106",
@@ -13600,54 +13550,6 @@
         }
       ],
       "baseCode": "37095865",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
-        "name": "Poplin shirt with pocket",
-        "image": "https://media.mango.com/is/image/punto/37086366-70-002?wid=1024",
-        "productNumber": "37086366",
-        "baseCode": "37086366",
-        "globalCode": "37086366",
-        "colorId": "70",
-        "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/poplin-shirt-with-pocket/37086366/70/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "37056364",
-            "colorId": "92"
-          },
-          {
-            "productNumber": "37026366",
-            "colorId": "92"
-          },
-          {
-            "productNumber": "37046010",
-            "colorId": "05"
-          },
-          {
-            "productNumber": "37086357",
-            "colorId": "08"
-          },
-          {
-            "productNumber": "37046361",
-            "colorId": "32"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043078/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "Wool suit trousers",
-          "image": "https://media.mango.com/is/image/punto/37026366-92-900?wid=1024",
-          "productNumber": "37026366",
-          "baseCode": "37026366",
-          "globalCode": "37026366",
-          "colorId": "92",
-          "url": "https://shop.mango.com/gb/en/p/women/trousers/smart/wool-suit-trousers/37026366/92/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043055/"
-        }
-      ],
-      "baseCode": "37086366",
       "hasJapanRelations": true
     },
     {
