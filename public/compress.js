@@ -55,10 +55,10 @@
   async function encodeWithin(canvas, type, maxQuality, targetBytes) {
     const top = await canvasBlob(canvas, type, maxQuality);
     if (!top || !targetBytes || type.mime === "image/png" || top.size <= targetBytes) return top;
-    let low = 0.2;
+    let low = 0.1;
     let high = maxQuality;
     let best = null;
-    for (let step = 0; step < 7; step += 1) {
+    for (let step = 0; step < 10; step += 1) {
       const mid = (low + high) / 2;
       const blob = await canvasBlob(canvas, type, mid);
       if (blob && blob.size <= targetBytes) { best = blob; low = mid; } else { high = mid; }
@@ -68,8 +68,9 @@
 
   async function compressItem(item) {
     const type = outputType(item.file);
-    const q = Number(quality.value) / 100;
     const targetBytes = Number(targetInput.value) > 0 ? Number(targetInput.value) * 1024 : 0;
+    // 目標サイズ(投稿先の上限を含む)があるときは、画質のスライダーを使わず、上限に収まる一番高い画質まで上げる
+    const q = targetBytes ? 1 : Number(quality.value) / 100;
     const maxSide = Number(maxSideInput.value) > 0 ? Number(maxSideInput.value) : 0;
     // 投稿先の上限を選んでいるときは、すでに上限以内の画像を劣化させず、そのまま使う
     if (presetSelect.value && targetBytes && !maxSide && item.file.size <= targetBytes) {
