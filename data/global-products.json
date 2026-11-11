@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T02:03:13.008Z",
+  "updatedAt": "2026-11-11T00:03:52.514Z",
   "products": [
     {
       "name": "Faux-leather coat with fur-effect trim - Women",
@@ -11157,6 +11157,16 @@
           "colorId": "99",
           "url": "https://shop.mango.com/gb/en/p/women/blazers/party/velvet-suit-jacket/37099114/99/00",
           "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043649/"
+        },
+        {
+          "name": "Textured metal buckle belt",
+          "image": "https://media.mango.com/is/image/punto/27042890-30-900?wid=1024",
+          "productNumber": "27042890",
+          "baseCode": "27042890",
+          "globalCode": "27042890",
+          "colorId": "30",
+          "url": "https://shop.mango.com/gb/en/p/women/belts/basics/textured-metal-buckle-belt/27042890/30/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039946/"
         }
       ],
       "baseCode": "37057777",
