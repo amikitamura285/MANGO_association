@@ -12,7 +12,7 @@ let productsReady;
 // データの場所は、このスクリプト(サイトの根元にある)の位置から決める。タブを切り替えるとページのURLが変わるため、ページのURLからの相対では、ずれてしまう
 const dataPathPrefix = document.currentScript && document.currentScript.src
   ? new URL("./", document.currentScript.src).href
-  : (/\/(?:relation|global|resize|earring)\/$/.test(window.location.pathname) ? "../" : "");
+  : (/\/(?:relation|global|resize|compress|earring)\/$/.test(window.location.pathname) ? "../" : "");
 
 function escapeHtml(value) {
   return String(value ?? "").replace(/[&<>\"']/g, (character) => ({
@@ -347,9 +347,9 @@ function loadGlobalProducts() {
 }
 
 function routeForView(targetView) {
-  const route = { globalRelationView: "global", resizeView: "resize", earringView: "earring" }[targetView] || "relation";
+  const route = { globalRelationView: "global", resizeView: "resize", compressView: "compress", earringView: "earring" }[targetView] || "relation";
   const path = window.location.pathname;
-  const base = path.replace(/(?:relation|global|resize|earring)\/?$/, "").replace(/\/?$/, "/");
+  const base = path.replace(/(?:relation|global|resize|compress|earring)\/?$/, "").replace(/\/?$/, "/");
   return `${base}${route}/`;
 }
 
@@ -379,6 +379,7 @@ document.querySelectorAll(".main-tab").forEach((button) => {
 function viewForPath(path) {
   if (path.includes("/global/")) return "globalRelationView";
   if (path.includes("/resize/")) return "resizeView";
+  if (path.includes("/compress/")) return "compressView";
   if (path.includes("/earring/")) return "earringView";
   return "relationView";
 }

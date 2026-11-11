@@ -12,6 +12,7 @@
     <a class="brand" href="../"><img src="../logo.jpg" alt="MANGO"><span>FINDER</span></a>
     <nav class="main-tabs" aria-label="メインメニュー">
       <button class="main-tab" type="button" data-view="resizeView">画像リサイズ</button>
+      <button class="main-tab" type="button" data-view="compressView">画像サイズ</button>
       <button class="main-tab is-active" type="button" data-view="relationView">関連付け</button>
       <button class="main-tab" type="button" data-view="globalRelationView">グローバル関連付け</button>
       <button class="main-tab" type="button" data-view="earringView">ピアス画像生成</button>
@@ -91,6 +92,42 @@
           </div>
           <p id="resizeEditorStatus" class="resize-note"></p>
         </div>
+      </div>
+    </section>
+
+    <section id="compressView" class="relation-view" hidden>
+      <div class="relation-hero">
+        <p class="eyebrow">IMAGE SIZE</p>
+        <h1>画像 <em>サイズ</em></h1>
+        <p class="lead">重い画像を、見た目をほとんど変えずに軽くします。画像はこのブラウザの中だけで処理されます。外部には送信されません。</p>
+      </div>
+      <div class="resize-tool">
+        <label id="compressDrop" class="resize-drop">
+          <input id="compressFiles" type="file" accept="image/*" multiple>
+          <strong>画像をここにドラッグ、またはクリックして選択</strong>
+          <span>複数選択できます(JPEG / PNG / WebP など)</span>
+        </label>
+
+        <div class="resize-controls">
+          <label class="resize-field"><span>形式</span>
+            <select id="compressFormat">
+              <option value="jpeg">JPEG(おすすめ・軽くなりやすい)</option>
+              <option value="webp">WebP(さらに軽い)</option>
+              <option value="original">元の形式のまま(PNGは軽くなりにくい)</option>
+            </select>
+          </label>
+          <label class="resize-field"><span>画質 <b id="compressQualityValue">80</b></span><input id="compressQuality" type="range" min="10" max="100" value="80"></label>
+          <label class="resize-field"><span>目標サイズ (KB・空欄は指定なし)</span><input id="compressTarget" type="number" min="10" max="50000" placeholder="例: 500"></label>
+          <label class="resize-field"><span>長辺の上限 (px・空欄はそのまま)</span><input id="compressMaxSide" type="number" min="100" max="16384" placeholder="例: 2000"></label>
+        </div>
+        <p class="resize-note">目標サイズを入れると、その大きさに入る一番高い画質を自動で探します。それでも入らないときは、少しずつ小さくします。透明な部分は白になります(JPEGのとき)。</p>
+        <div class="resize-actions">
+          <button id="compressAll" type="button" disabled>すべてダウンロード</button>
+          <button id="compressClear" type="button" class="is-secondary" disabled>クリア</button>
+          <span id="compressSummary" class="resize-summary"></span>
+        </div>
+        <p id="compressEmpty" class="resize-empty">画像を選ぶと、ここに軽くした結果が表示されます。</p>
+        <div id="compressGrid" class="resize-grid"></div>
       </div>
     </section>
 
@@ -255,7 +292,7 @@
 
   <script>
     // 新しいタブでも常に最新のCSS/JSを読み込む(ブラウザに残った古い版を使わない)
-    ["tools/global-match.js", "app.js", "global-update.js", "resize.js", "earring.js"].forEach(function (name) {
+    ["tools/global-match.js", "app.js", "global-update.js", "resize.js", "compress.js", "earring.js"].forEach(function (name) {
       document.write('<script src="../' + name + '?v=' + Date.now() + '"><\/script>');
     });
   </script>
