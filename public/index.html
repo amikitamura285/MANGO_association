@@ -117,10 +117,17 @@
             </select>
           </label>
           <label class="resize-field"><span>画質 <b id="compressQualityValue">80</b></span><input id="compressQuality" type="range" min="10" max="100" value="80"></label>
+          <label class="resize-field"><span>投稿先の上限</span>
+            <select id="compressPreset">
+              <option value="">指定なし(自分で入力)</option>
+              <option value="15360">Instagram(15MBまで)</option>
+              <option value="5120">X(5MBまで)</option>
+            </select>
+          </label>
           <label class="resize-field"><span>目標サイズ (KB・空欄は指定なし)</span><input id="compressTarget" type="number" min="10" max="50000" placeholder="例: 500"></label>
           <label class="resize-field"><span>長辺の上限 (px・空欄はそのまま)</span><input id="compressMaxSide" type="number" min="100" max="16384" placeholder="例: 2000"></label>
         </div>
-        <p class="resize-note">目標サイズを入れると、その大きさに入る一番高い画質を自動で探します。それでも入らないときは、少しずつ小さくします。透明な部分は白になります(JPEGのとき)。</p>
+        <p class="resize-note">投稿先を選ぶと、その上限に入るように軽くします(上限以内の画像は、そのままです)。目標サイズを入れると、その大きさに入る一番高い画質を自動で探します。それでも入らないときは、少しずつ小さくします。透明な部分は白になります(JPEGのとき)。</p>
         <div class="resize-actions">
           <button id="compressAll" type="button" disabled>すべてダウンロード</button>
           <button id="compressClear" type="button" class="is-secondary" disabled>クリア</button>

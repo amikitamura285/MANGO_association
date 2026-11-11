@@ -8,6 +8,7 @@
   const formatSelect = $("compressFormat");
   const quality = $("compressQuality");
   const qualityValue = $("compressQualityValue");
+  const presetSelect = $("compressPreset");
   const targetInput = $("compressTarget");
   const maxSideInput = $("compressMaxSide");
   const grid = $("compressGrid");
@@ -70,6 +71,10 @@
     const q = Number(quality.value) / 100;
     const targetBytes = Number(targetInput.value) > 0 ? Number(targetInput.value) * 1024 : 0;
     const maxSide = Number(maxSideInput.value) > 0 ? Number(maxSideInput.value) : 0;
+    // 投稿先の上限を選んでいるときは、すでに上限以内の画像を劣化させず、そのまま使う
+    if (presetSelect.value && targetBytes && !maxSide && item.file.size <= targetBytes) {
+      return { blob: item.file, width: item.bitmap.width, height: item.bitmap.height, name: item.file.name, kept: true, reason: "上限以内のため、元のままです" };
+    }
     const longSide = Math.max(item.bitmap.width, item.bitmap.height);
     let scale = maxSide && longSide > maxSide ? maxSide / longSide : 1;
 
@@ -125,7 +130,7 @@
         const cut = Math.round((1 - item.result.blob.size / item.file.size) * 100);
         card.appendChild(el("p", "resize-meta", `${item.bitmap.width}×${item.bitmap.height} (${formatBytes(item.file.size)})`));
         card.appendChild(el("p", "resize-meta is-after", item.result.kept
-          ? "→ これ以上軽くなりませんでした(元のまま)"
+          ? `→ ${item.result.reason || "これ以上軽くなりませんでした(元のまま)"}`
           : `→ ${item.result.width}×${item.result.height} (${formatBytes(item.result.blob.size)} / ${cut}%軽く)`));
         const link = el("a", "resize-download", "ダウンロード");
         link.href = item.url;
@@ -237,6 +242,12 @@
   dropzone.addEventListener("drop", (event) => addFiles(event.dataTransfer.files));
 
   quality.addEventListener("input", () => { qualityValue.textContent = quality.value; schedule(); });
+presetSelect.addEventListener("change", () => {
+    if (presetSelect.value) targetInput.value = presetSelect.value;
+    schedule();
+  });
+  // 目標サイズを自分で書き換えたら、投稿先の選択は外す
+  targetInput.addEventListener("input", () => { if (presetSelect.value && targetInput.value !== presetSelect.value) presetSelect.value = ""; });
   [formatSelect, targetInput, maxSideInput].forEach((control) => control.addEventListener("input", schedule));
 
   render();
