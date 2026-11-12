@@ -84,6 +84,14 @@
     ...Object.values(knownCandidates).filter(Boolean).map((candidate) => candidate.baseCode)
   ]);
   let reused = 0;
+  const REFRESH_DAYS = 7;
+  const refreshDay = Math.floor(Date.now() / 86400000) % REFRESH_DAYS;
+  const dueToday = (product) => {
+    let hash = 0;
+    for (const character of String(product.productNumber)) hash = (hash * 31 + character.charCodeAt(0)) >>> 0;
+    return hash % REFRESH_DAYS === refreshDay;
+  };
+  let refreshed = 0;
   log(`表示済み: 商品${knownByKey.size}件 / 候補${Object.keys(knownCandidates).length}件(これらは再取得せず再利用します)`);
 
   const TIMEOUT_MS = 20000;
@@ -308,7 +316,7 @@
       const urlCode = [...url.matchAll(/\/(\d{8})\b/g)].at(-1)?.[1] || "";
       const urlColor = url.match(/\/\d{8}\/([A-Za-z0-9]{1,4})(?:\/|$)/)?.[1] || "";
       const known = knownByKey.get(`${urlCode}:${urlColor}`);
-      if (known) {
+      if (known && !dueToday(known)) {
         addProduct(known);
         reused += 1;
       } else {
@@ -327,7 +335,7 @@
 
   const newIds = [...new Set([...apiIds, ...pages.filter((page) => page.newArrivals).flatMap((page) => extractProductIds(page.html))])]
     .filter((productId) => !byBaseCode.has(productId))
-    .filter((productId) => { const known = knownByCode.get(productId); if (known) { addProduct(known); reused += 1; } return !known; })
+    .filter((productId) => { const known = knownByCode.get(productId); if (known && !dueToday(known)) { addProduct(known); reused += 1; } return !known || dueToday(known); })
     .slice(0, Math.max(0, MAX_PRODUCTS - products.length));
   log(`[2/4] 新着商品 ${newIds.length} 件を追加で読み込みます`);
   done = 0;
@@ -344,6 +352,21 @@
     }
     done += 1;
     if (done % 5 === 0 || done === newIds.length) log(`[2/4] 新着 ${done}/${newIds.length} (商品 ${products.length}件)`);
+  });
+  if (blocked) throw blocked;
+
+  const dueKnown = [...knownByKey.values()].filter((product) => dueToday(product) && !byBaseCode.has(product.baseCode));
+  log(`[2.5/4] 取得済みの商品のうち、今日が取り直しの日の ${dueKnown.length} 件を、商品ページから取り直します`);
+  await pool(dueKnown, 3, async (known) => {
+    if (blocked) return;
+    try {
+      const fresh = parseProduct(known.url, await fetchText(known.url));
+      addProduct(fresh || known);
+      if (fresh) refreshed += 1;
+    } catch (error) {
+      addProduct(known);
+      if (error.message.includes("アクセス制限")) blocked = error;
+    }
   });
   if (blocked) throw blocked;
 
@@ -396,7 +419,7 @@
 
   const raw = { collectedAt: new Date().toISOString(), products, candidates };
   window.__mangoRaw = raw;
-  const summary = `商品 ${products.length} 件(取得できず ${skipped} 件) / 関連候補 ${Object.values(candidates).filter(Boolean).length} 件 / 表示済みの再利用 ${reused} 件`;
+  const summary = `商品 ${products.length} 件(取得できず ${skipped} 件) / 関連候補 ${Object.values(candidates).filter(Boolean).length} 件 / 表示済みの再利用 ${reused} 件 / 取り直し ${refreshed} 件`;
   log(`収集終了: ${summary}`);
   document.title = `【収集完了】${document.title}`;
   banner.style.background = "#1f7a3a";
