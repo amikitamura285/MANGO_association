@@ -64,9 +64,9 @@ function globalCheckKey(row) {
   return `${row.main.productNumber}-${hash.toString(36).padStart(6, "0").slice(-6)}`;
 }
 
-// 署名のない昔の確認済(8桁のみ)は、署名が合う確認済として扱う
+// 確認済にした時点の関連商品と、いまの関連商品が同じ(署名が合う)ときだけ、確認済として扱う。違っていたら、未確認に戻る
 function isGlobalRowChecked(row) {
-  return state.globalChecked.has(globalCheckKey(row)) || state.globalChecked.has(row.main.productNumber);
+  return state.globalChecked.has(globalCheckKey(row));
 }
 
 function renderProductCards(containerSelector, groups, compact, scope = "main") {
