@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T23:00:46.603Z",
+  "updatedAt": "2026-11-15T23:28:58.397Z",
   "products": [
     {
       "name": "Faux-leather coat with fur-effect trim - Women",
@@ -5933,6 +5933,60 @@
     },
     {
       "main": {
+        "name": "Lapels leather jacket",
+        "image": "https://media.mango.com/is/image/punto/37064776-30-002?wid=1024",
+        "productNumber": "37064776",
+        "baseCode": "37064776",
+        "globalCode": "37064776",
+        "colorId": "30",
+        "url": "https://shop.mango.com/gb/en/p/women/jackets/cropped/lapels-leather-jacket/37064776/30/00",
+        "relatedProductNumbers": [
+          {
+            "productNumber": "37055985",
+            "colorId": "78"
+          },
+          {
+            "productNumber": "37004098",
+            "colorId": "05"
+          },
+          {
+            "productNumber": "27035830",
+            "colorId": "30"
+          },
+          {
+            "productNumber": "37015841",
+            "colorId": "76"
+          }
+        ],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042885/"
+      },
+      "relatedGlobal": [
+        {
+          "name": "High block-heel boot",
+          "image": "https://media.mango.com/is/image/punto/37055985-78-900?wid=1024",
+          "productNumber": "37055985",
+          "baseCode": "37055985",
+          "globalCode": "37055985",
+          "colorId": "78",
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/boots-and-ankle-boots/high-block-heel-boot/37055985/78/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW043366/"
+        },
+        {
+          "name": "Striped straight shirt",
+          "image": "https://media.mango.com/is/image/punto/27035830-30-900?wid=1024",
+          "productNumber": "27035830",
+          "baseCode": "27035830",
+          "globalCode": "27035830",
+          "colorId": "30",
+          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/striped-straight-shirt/27035830/30/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040441/"
+        }
+      ],
+      "baseCode": "37064776",
+      "hasJapanRelations": true
+    },
+    {
+      "main": {
         "name": "Suede-effect coat with fur trim",
         "image": "https://media.mango.com/is/image/punto/37028281-09-002?wid=1024",
         "productNumber": "37028281",
@@ -7797,50 +7851,6 @@
     },
     {
       "main": {
-        "name": "Round-neck knitted sweater",
-        "image": "https://media.mango.com/is/image/punto/37027788-11-002?wid=1024",
-        "productNumber": "37027788",
-        "baseCode": "37027788",
-        "globalCode": "37027788",
-        "colorId": "11",
-        "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/sweaters/round-neck-knitted-sweater/37027788/11/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "27035830",
-            "colorId": "30"
-          },
-          {
-            "productNumber": "37004099",
-            "colorId": "TO"
-          },
-          {
-            "productNumber": "37084440",
-            "colorId": "05"
-          },
-          {
-            "productNumber": "37094104",
-            "colorId": "09"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043704/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "Striped straight shirt",
-          "image": "https://media.mango.com/is/image/punto/27035830-30-900?wid=1024",
-          "productNumber": "27035830",
-          "baseCode": "27035830",
-          "globalCode": "27035830",
-          "colorId": "30",
-          "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/long-sleeve/striped-straight-shirt/27035830/30/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040441/"
-        }
-      ],
-      "baseCode": "37027788",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
         "name": "Semi-sheer lace blouse",
         "image": "https://media.mango.com/is/image/punto/37027787-99-002?wid=1024",
         "productNumber": "37027787",
@@ -8735,16 +8745,6 @@
         "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043633/"
       },
       "relatedGlobal": [
-        {
-          "name": "Leather jacket with funnel neck",
-          "image": "https://media.mango.com/is/image/punto/37045839-99-900?wid=1024",
-          "productNumber": "37045839",
-          "baseCode": "37045839",
-          "globalCode": "37045839",
-          "colorId": "99",
-          "url": "https://shop.mango.com/gb/en/p/women/jackets/bombers/leather-jacket-with-funnel-neck/37045839/99/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042536/"
-        },
         {
           "name": "Kitten heel sandals",
           "image": "https://media.mango.com/is/image/punto/37001381-32-900?wid=1024",
@@ -14115,50 +14115,6 @@
         }
       ],
       "baseCode": "37055879",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
-        "name": "Embroidered puff-sleeve blouse",
-        "image": "https://media.mango.com/is/image/punto/37015852-43-002?wid=1024",
-        "productNumber": "37015852",
-        "baseCode": "37015852",
-        "globalCode": "37015852",
-        "colorId": "43",
-        "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/blouses/embroidered-puff-sleeve-blouse/37015852/43/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "37075877",
-            "colorId": "30"
-          },
-          {
-            "productNumber": "37055985",
-            "colorId": "78"
-          },
-          {
-            "productNumber": "37094435",
-            "colorId": "32"
-          },
-          {
-            "productNumber": "37064414",
-            "colorId": "32"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042934/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "High block-heel boot",
-          "image": "https://media.mango.com/is/image/punto/37055985-78-900?wid=1024",
-          "productNumber": "37055985",
-          "baseCode": "37055985",
-          "globalCode": "37055985",
-          "colorId": "78",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/boots-and-ankle-boots/high-block-heel-boot/37055985/78/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW043366/"
-        }
-      ],
-      "baseCode": "37015852",
       "hasJapanRelations": true
     }
   ]
