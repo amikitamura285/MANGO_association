@@ -372,7 +372,7 @@
 
   const japanTargets = (context.japanTargets || [])
     .filter((target) => !byBaseCode.has(target.code) && !displayedCodes.has(target.code))
-    .map((target) => ({ target, order: DAILY ? 0 : Math.random() }))
+    .map((target) => ({ target, order: 0 }))
     .sort((a, b) => a.order - b.order)
     .map((entry) => entry.target)
     .slice(0, DAILY ? 900 : JAPAN_EXTRA * 2);

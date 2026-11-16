@@ -70,6 +70,10 @@
       };
     }).filter((entry) => entry.hasJapanRelations);
 
+    // 日本サイトの商品の新着順(商品番号が大きい順)に並べる。新着が先に出て、重複の整理でも新着が優先される
+    const serial = (entry) => Number(((entry.main.japanUrl || "").match(/(\d+)\/?$/) || [])[1]) || 0;
+    matches.sort((a, b) => serial(b) - serial(a));
+
     // 同じページ内で、先に表示した商品(メイン/候補とも)は後のグループに出さない
     const shown = new Set();
     const uniqueMatches = [];
