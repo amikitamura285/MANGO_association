@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T23:28:53.386Z",
+  "updatedAt": "2026-11-17T02:24:44.095Z",
   "products": [
     {
       "name": "ロングワンピース .-- MILA （ホワイト）",
@@ -1222,12 +1222,12 @@
       "relatedNames": []
     },
     {
-      "name": "ジーンズ .-- EMILY （ホワイト）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW041072_1_l.jpg",
-      "productNumber": "MA1658EW041072",
-      "brandItemNumber": "27027144 1 色 ホワイト（1）",
+      "name": "ジーンズ .-- EMILY （オープンブルー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040901_1_l.jpg",
+      "productNumber": "MA1658EW040901",
+      "brandItemNumber": "27047152 TS 色 オープンブルー（TS）",
       "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041072/",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040901/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "EMILY",
@@ -1814,6 +1814,46 @@
       ]
     },
     {
+      "name": "ジーンズ .-- CLEMENCE （オープンブルー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040507_1_l.jpg",
+      "productNumber": "MA1658EW040507",
+      "brandItemNumber": "27033299 TO 色 オープンブルー（TO）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040507/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "CLEMENCE",
+      "relatedNames": []
+    },
+    {
+      "name": "ジーンズ .-- CLEMENCE （オープンブルー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040560_1_l.jpg",
+      "productNumber": "MA1658EW040560",
+      "brandItemNumber": "27025828 TS 色 オープンブルー（TS）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040560/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "CLEMENCE",
+      "relatedNames": [
+        "ジャケット .-- CLEMENCE （オープンブルー）"
+      ]
+    },
+    {
+      "name": "ジャケット .-- CLEMENCE （オープンブルー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040576_1_l.jpg",
+      "productNumber": "MA1658EW040576",
+      "brandItemNumber": "27097155 TS 色 オープンブルー（TS）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040576/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "CLEMENCE",
+      "relatedNames": [
+        "ジーンズ .-- CLEMENCE （オープンブルー）"
+      ]
+    },
+    {
       "name": "クラッチバッグ P-- CORFU （ダークブラウン）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658AW040530_1_l.jpg",
       "productNumber": "MA1658AW040530",
@@ -1859,30 +1899,6 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "AMELIA",
-      "relatedNames": []
-    },
-    {
-      "name": "トレンチコート .-- NARCISO （ナチュラルホワイト）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040592_1_l.jpg",
-      "productNumber": "MA1658EW040592",
-      "brandItemNumber": "27095829 2 色 ナチュラルホワイト（2）",
-      "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040592/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "NARCISO",
-      "relatedNames": []
-    },
-    {
-      "name": "ジーンズ .-- NARCISO （オープンブルー）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040621_1_l.jpg",
-      "productNumber": "MA1658EW040621",
-      "brandItemNumber": "27035819 TM 色 オープンブルー（TM）",
-      "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040621/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "NARCISO",
       "relatedNames": []
     },
     {
@@ -2627,7 +2643,9 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "ROSE",
-      "relatedNames": []
+      "relatedNames": [
+        "レザーパンプス .-- AURA （ダークブラウン）"
+      ]
     },
     {
       "name": "カーディガン .-- ROSE （チャコール）",
@@ -2763,7 +2781,10 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "LAURA",
-      "relatedNames": []
+      "relatedNames": [
+        "Tシャツ .-- DANTEL （ナチュラルホワイト）",
+        "パンツ .-- NEGRONI （ナチュラルホワイト）"
+      ]
     },
     {
       "name": "ショートパンツ .-- LILO （ミディアムブルー）",
@@ -3532,7 +3553,9 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "JACKIE",
-      "relatedNames": []
+      "relatedNames": [
+        "レザーショートブーツ .-- GIULIA （ダークブラウン）"
+      ]
     },
     {
       "name": "ピアス .-- ADELA （ゴールド）",
@@ -4976,7 +4999,9 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "MARGOT",
-      "relatedNames": []
+      "relatedNames": [
+        "レザーハンドバッグ.-- MANOLA （ダークブラウン）"
+      ]
     },
     {
       "name": "セーター .-- LILI （パステルブルー）",
@@ -5242,7 +5267,9 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "TRUFA",
-      "relatedNames": []
+      "relatedNames": [
+        "レザードライビングシューズ .-- PAZ （パステルブラウン）"
+      ]
     },
     {
       "name": "スカート .-- TRUFA （グレー）",
@@ -5459,7 +5486,9 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "BELT",
-      "relatedNames": []
+      "relatedNames": [
+        "ロングブーツ .-- LORI （ブラック）"
+      ]
     },
     {
       "name": "コート .-- BELT （ミディアムブラウン）",
@@ -5495,7 +5524,9 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "ARUBA",
-      "relatedNames": []
+      "relatedNames": [
+        "レザーショートブーツ .--DIA1 （ダークブラウン）"
+      ]
     },
     {
       "name": "ブラウス .-- TOPI （ブラウン）",
@@ -5585,7 +5616,9 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "VIOLETA",
-      "relatedNames": []
+      "relatedNames": [
+        "ジャケット .-- DITALONG （ライトベージュ）"
+      ]
     },
     {
       "name": "レザーショートブーツ .--BOLA （パステルブラウン）",
@@ -5699,7 +5732,9 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "STONE",
-      "relatedNames": []
+      "relatedNames": [
+        "ジャケット.-- VIENA （グレー）"
+      ]
     },
     {
       "name": "ショートブーツ .--TEA （ブラック）",
@@ -5735,7 +5770,9 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "SIMONE",
-      "relatedNames": []
+      "relatedNames": [
+        "ジャケット .-- SOUFFLE （グレー）"
+      ]
     },
     {
       "name": "ネックレス .-- SIMONE （ゴールド）",
@@ -5826,7 +5863,9 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "JACK",
-      "relatedNames": []
+      "relatedNames": [
+        "スカート .-- BLOCK （ナチュラルホワイト）"
+      ]
     },
     {
       "name": "パンツ .-- JACK （ナチュラルホワイト）",
@@ -6339,38 +6378,8 @@
       "relatedNames": []
     }
   ],
-  "groups": [
-    {
-      "englishKey": "CANDY",
-      "main": {
-        "name": "ミニスカート .-- CANDY （ブラック）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039632_1_l.jpg",
-        "productNumber": "MA1658EW039632",
-        "brandItemNumber": "27081301 99 色 ブラック（99）",
-        "brandItemFirstDigit": "2",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039632/",
-        "brandCode": "MA1658",
-        "brandName": "MANGO",
-        "englishKey": "CANDY",
-        "relatedNames": []
-      },
-      "related": [
-        {
-          "name": "ブラウス .-- CANDY （ブラック）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039707_1_l.jpg",
-          "productNumber": "MA1658EW039707",
-          "brandItemNumber": "27061340 99 色 ブラック（99）",
-          "brandItemFirstDigit": "2",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039707/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "CANDY",
-          "relatedNames": []
-        }
-      ]
-    }
-  ],
-  "newCount": 1,
+  "groups": [],
+  "newCount": 0,
   "displayedMainProductNumbers": [
     "MA1658EW33440",
     "MA3878EC003099",
@@ -8012,5 +8021,5 @@
     "MA1658EW042078",
     "MA1658EW039632"
   ],
-  "scanned": 4202
+  "scanned": 4188
 }
