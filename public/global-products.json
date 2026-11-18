@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17T02:24:49.022Z",
+  "updatedAt": "2026-11-18T01:38:21.710Z",
   "products": [
     {
       "name": "Manteco wool coat with removable fur collar",
@@ -9258,54 +9258,6 @@
     },
     {
       "main": {
-        "name": "Midi quilted anorak with hood",
-        "image": "https://media.mango.com/is/image/punto/37008269-99-002?wid=1024",
-        "productNumber": "37008269",
-        "baseCode": "37008269",
-        "globalCode": "37008269",
-        "colorId": "99",
-        "url": "https://shop.mango.com/gb/en/p/women/coats/plus-sizes/midi-quilted-anorak-with-hood/37008269/99/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "37036336",
-            "colorId": "05"
-          },
-          {
-            "productNumber": "37024078",
-            "colorId": "TM"
-          },
-          {
-            "productNumber": "37005997",
-            "colorId": "99"
-          },
-          {
-            "productNumber": "37022908",
-            "colorId": "99"
-          },
-          {
-            "productNumber": "37067115",
-            "colorId": "70"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043532/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "Leather round-toe heeled ankle boot",
-          "image": "https://media.mango.com/is/image/punto/37005997-99-900?wid=1024",
-          "productNumber": "37005997",
-          "baseCode": "37005997",
-          "globalCode": "37005997",
-          "colorId": "99",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/boots-and-ankle-boots/leather-round-toe-heeled-ankle-boot/37005997/99/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW043297/"
-        }
-      ],
-      "baseCode": "37008269",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
         "name": "Belt puffer coat",
         "image": "https://media.mango.com/is/image/punto/37008273-09-002?wid=1024",
         "productNumber": "37008273",
@@ -9554,50 +9506,6 @@
         }
       ],
       "baseCode": "37016746",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
-        "name": "Leopard print open-back blouse",
-        "image": "https://media.mango.com/is/image/punto/37027940-30-002?wid=1024",
-        "productNumber": "37027940",
-        "baseCode": "37027940",
-        "globalCode": "37027940",
-        "colorId": "30",
-        "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/blouses/leopard-print-open-back-blouse/37027940/30/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "37096722",
-            "colorId": "30"
-          },
-          {
-            "productNumber": "37054094",
-            "colorId": "99"
-          },
-          {
-            "productNumber": "37092536",
-            "colorId": "99"
-          },
-          {
-            "productNumber": "37017804",
-            "colorId": "OR"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043473/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "Leather jacket with detachable fur collar",
-          "image": "https://media.mango.com/is/image/punto/37096722-30-900?wid=1024",
-          "productNumber": "37096722",
-          "baseCode": "37096722",
-          "globalCode": "37096722",
-          "colorId": "30",
-          "url": "https://shop.mango.com/gb/en/p/women/jackets/faux-fur/leather-jacket-with-detachable-fur-collar/37096722/30/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043396/"
-        }
-      ],
-      "baseCode": "37027940",
       "hasJapanRelations": true
     },
     {
@@ -9869,6 +9777,16 @@
           "colorId": "TM",
           "url": "https://shop.mango.com/gb/en/p/women/jeans/plus-sizes/slim-fit-high-waist-jeans/37054780/TM/00",
           "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042839/"
+        },
+        {
+          "name": "Leather round-toe heeled ankle boot",
+          "image": "https://media.mango.com/is/image/punto/37005997-99-900?wid=1024",
+          "productNumber": "37005997",
+          "baseCode": "37005997",
+          "globalCode": "37005997",
+          "colorId": "99",
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/boots-and-ankle-boots/leather-round-toe-heeled-ankle-boot/37005997/99/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW043297/"
         },
         {
           "name": "Contrasting ribbed cardigan",
@@ -10590,58 +10508,6 @@
     },
     {
       "main": {
-        "name": "Marled cable-knit jumper",
-        "image": "https://media.mango.com/is/image/punto/37007822-30-002?wid=1024",
-        "productNumber": "37007822",
-        "baseCode": "37007822",
-        "globalCode": "37007822",
-        "colorId": "30",
-        "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/sweaters/marled-cable-knit-jumper/37007822/30/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "37047781",
-            "colorId": "30"
-          },
-          {
-            "productNumber": "37071466",
-            "colorId": "32"
-          },
-          {
-            "productNumber": "37077783",
-            "colorId": "92"
-          },
-          {
-            "productNumber": "37064420",
-            "colorId": "78"
-          },
-          {
-            "productNumber": "37017804",
-            "colorId": "OR"
-          },
-          {
-            "productNumber": "37001338",
-            "colorId": "99"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043372/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "Jacket with faux fur collar and shirt-style collar",
-          "image": "https://media.mango.com/is/image/punto/37047781-30-900?wid=1024",
-          "productNumber": "37047781",
-          "baseCode": "37047781",
-          "globalCode": "37047781",
-          "colorId": "30",
-          "url": "https://shop.mango.com/gb/en/p/women/jackets/faux-fur/jacket-with-faux-fur-collar-and-shirt-style-collar/37047781/30/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043660/"
-        }
-      ],
-      "baseCode": "37007822",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
         "name": "Cow leather shoulder bag",
         "image": "https://media.mango.com/is/image/punto/37046359-99-052?wid=1024",
         "productNumber": "37046359",
@@ -11068,6 +10934,50 @@
         }
       ],
       "baseCode": "37037942",
+      "hasJapanRelations": true
+    },
+    {
+      "main": {
+        "name": "V-neck alpaca blend jumper - Women",
+        "image": "https://media.mango.com/is/image/punto/37017791-05-002?wid=1024",
+        "productNumber": "37017791",
+        "baseCode": "37017791",
+        "globalCode": "37017791",
+        "colorId": "05",
+        "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/sweaters/v-neck-alpaca-blend-jumper/37017791/05/00",
+        "relatedProductNumbers": [
+          {
+            "productNumber": "37047781",
+            "colorId": "30"
+          },
+          {
+            "productNumber": "37084115",
+            "colorId": "05"
+          },
+          {
+            "productNumber": "37077783",
+            "colorId": "92"
+          },
+          {
+            "productNumber": "37024464",
+            "colorId": "OR"
+          }
+        ],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043288/"
+      },
+      "relatedGlobal": [
+        {
+          "name": "Jacket with faux fur collar and shirt-style collar",
+          "image": "https://media.mango.com/is/image/punto/37047781-30-900?wid=1024",
+          "productNumber": "37047781",
+          "baseCode": "37047781",
+          "globalCode": "37047781",
+          "colorId": "30",
+          "url": "https://shop.mango.com/gb/en/p/women/jackets/faux-fur/jacket-with-faux-fur-collar-and-shirt-style-collar/37047781/30/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043660/"
+        }
+      ],
+      "baseCode": "37017791",
       "hasJapanRelations": true
     },
     {
@@ -11887,16 +11797,6 @@
       },
       "relatedGlobal": [
         {
-          "name": "Suede drawstring bag",
-          "image": "https://media.mango.com/is/image/punto/37067132-32-900?wid=1024",
-          "productNumber": "37067132",
-          "baseCode": "37067132",
-          "globalCode": "37067132",
-          "colorId": "32",
-          "url": "https://shop.mango.com/gb/en/p/women/bags/shoppers/suede-drawstring-bag/37067132/32/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW043486/"
-        },
-        {
           "name": "Combined earring set",
           "image": "https://media.mango.com/is/image/punto/37004453-OR-900?wid=1024",
           "productNumber": "37004453",
@@ -12104,62 +12004,6 @@
         }
       ],
       "baseCode": "37095856",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
-        "name": "Handmade wool coat with belt - Women",
-        "image": "https://media.mango.com/is/image/punto/37096727-99-002?wid=1024",
-        "productNumber": "37096727",
-        "baseCode": "37096727",
-        "globalCode": "37096727",
-        "colorId": "99",
-        "url": "https://shop.mango.com/gb/en/p/women/coats/coats/handmade-wool-coat-with-belt/37096727/99/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "37007797",
-            "colorId": "94"
-          },
-          {
-            "productNumber": "37035856",
-            "colorId": "05"
-          },
-          {
-            "productNumber": "37094428",
-            "colorId": "99"
-          },
-          {
-            "productNumber": "37045980",
-            "colorId": "92"
-          },
-          {
-            "productNumber": "37067132",
-            "colorId": "32"
-          },
-          {
-            "productNumber": "37047906",
-            "colorId": "70"
-          },
-          {
-            "productNumber": "37095153",
-            "colorId": "70"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043081/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "Fitted high-neck T-shirt",
-          "image": "https://media.mango.com/is/image/punto/37035856-05-900?wid=1024",
-          "productNumber": "37035856",
-          "baseCode": "37035856",
-          "globalCode": "37035856",
-          "colorId": "05",
-          "url": "https://shop.mango.com/gb/en/p/women/t-shirts/long-sleeve/fitted-high-neck-t-shirt/37035856/05/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042921/"
-        }
-      ],
-      "baseCode": "37096727",
       "hasJapanRelations": true
     },
     {
@@ -12768,65 +12612,21 @@
     },
     {
       "main": {
-        "name": "V-neck buttoned cardigan",
-        "image": "https://media.mango.com/is/image/punto/37075836-81-002?wid=1024",
-        "productNumber": "37075836",
-        "baseCode": "37075836",
-        "globalCode": "37075836",
-        "colorId": "81",
-        "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/cardigans/v-neck-buttoned-cardigan/37075836/81/00",
+        "name": "Long-sleeved checked dress",
+        "image": "https://media.mango.com/is/image/punto/37055856-30-002?wid=1024",
+        "productNumber": "37055856",
+        "baseCode": "37055856",
+        "globalCode": "37055856",
+        "colorId": "30",
+        "url": "https://shop.mango.com/gb/en/p/women/dresses-and-jumpsuits/dresses/long-sleeved-checked-dress/37055856/30/00",
         "relatedProductNumbers": [
-          {
-            "productNumber": "37055866",
-            "colorId": "30"
-          },
-          {
-            "productNumber": "37061344",
-            "colorId": "07"
-          },
-          {
-            "productNumber": "37026000",
-            "colorId": "32"
-          },
-          {
-            "productNumber": "37022908",
-            "colorId": "32"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042936/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "Suede driving shoes",
-          "image": "https://media.mango.com/is/image/punto/37061344-07-900?wid=1024",
-          "productNumber": "37061344",
-          "baseCode": "37061344",
-          "globalCode": "37061344",
-          "colorId": "07",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/flat-shoes/suede-driving-shoes/37061344/07/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW041676/"
-        }
-      ],
-      "baseCode": "37075836",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
-        "name": "Embroidered puff-sleeve blouse",
-        "image": "https://media.mango.com/is/image/punto/37015852-43-002?wid=1024",
-        "productNumber": "37015852",
-        "baseCode": "37015852",
-        "globalCode": "37015852",
-        "colorId": "43",
-        "url": "https://shop.mango.com/gb/en/p/women/shirts---blouses/blouses/embroidered-puff-sleeve-blouse/37015852/43/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "37075877",
-            "colorId": "30"
-          },
           {
             "productNumber": "37055985",
             "colorId": "78"
+          },
+          {
+            "productNumber": "37094104",
+            "colorId": "30"
           },
           {
             "productNumber": "37094435",
@@ -12837,7 +12637,7 @@
             "colorId": "32"
           }
         ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042934/"
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042924/"
       },
       "relatedGlobal": [
         {
@@ -12851,7 +12651,7 @@
           "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW043366/"
         }
       ],
-      "baseCode": "37015852",
+      "baseCode": "37055856",
       "hasJapanRelations": true
     },
     {
@@ -12896,6 +12696,50 @@
         }
       ],
       "baseCode": "37065864",
+      "hasJapanRelations": true
+    },
+    {
+      "main": {
+        "name": "Long-sleeve dress with side slits - Women",
+        "image": "https://media.mango.com/is/image/punto/37006010-32-002?wid=1024",
+        "productNumber": "37006010",
+        "baseCode": "37006010",
+        "globalCode": "37006010",
+        "colorId": "32",
+        "url": "https://shop.mango.com/gb/en/p/women/dresses-and-jumpsuits/dresses/long-sleeve-dress-with-side-slits/37006010/32/00",
+        "relatedProductNumbers": [
+          {
+            "productNumber": "37077787",
+            "colorId": "99"
+          },
+          {
+            "productNumber": "37092537",
+            "colorId": "99"
+          },
+          {
+            "productNumber": "37067132",
+            "colorId": "32"
+          },
+          {
+            "productNumber": "37001403",
+            "colorId": "OR"
+          }
+        ],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042916/"
+      },
+      "relatedGlobal": [
+        {
+          "name": "Suede drawstring bag",
+          "image": "https://media.mango.com/is/image/punto/37067132-32-900?wid=1024",
+          "productNumber": "37067132",
+          "baseCode": "37067132",
+          "globalCode": "37067132",
+          "colorId": "32",
+          "url": "https://shop.mango.com/gb/en/p/women/bags/shoppers/suede-drawstring-bag/37067132/32/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW043486/"
+        }
+      ],
+      "baseCode": "37006010",
       "hasJapanRelations": true
     },
     {

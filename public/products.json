@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17T02:24:44.095Z",
+  "updatedAt": "2026-11-18T01:38:16.714Z",
   "products": [
     {
       "name": "ロングワンピース .-- MILA （ホワイト）",
@@ -86,32 +86,6 @@
       "brandName": "MANGO",
       "englishKey": "RAMONA",
       "relatedNames": []
-    },
-    {
-      "name": "サンダル .-- CAMILA （グリーン）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658BW037374_1_l.jpg",
-      "productNumber": "MA1658BW037374",
-      "brandItemNumber": "17051127 40 色 グリーン（40）",
-      "brandItemFirstDigit": "1",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW037374/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "CAMILA",
-      "relatedNames": []
-    },
-    {
-      "name": "ブレザー .-- CAMILA （ブラウン）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW039020_1_l.jpg",
-      "productNumber": "MA1658EW039020",
-      "brandItemNumber": "17067911 30 色 ブラウン（30）",
-      "brandItemFirstDigit": "1",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW039020/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "CAMILA",
-      "relatedNames": [
-        "パンツ .-- CAMILA （ブラウン）"
-      ]
     },
     {
       "name": "ブラウス .-- RAIDA （ダークブラウン）",
@@ -1824,20 +1798,6 @@
       "brandName": "MANGO",
       "englishKey": "CLEMENCE",
       "relatedNames": []
-    },
-    {
-      "name": "ジーンズ .-- CLEMENCE （オープンブルー）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040560_1_l.jpg",
-      "productNumber": "MA1658EW040560",
-      "brandItemNumber": "27025828 TS 色 オープンブルー（TS）",
-      "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040560/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "CLEMENCE",
-      "relatedNames": [
-        "ジャケット .-- CLEMENCE （オープンブルー）"
-      ]
     },
     {
       "name": "ジャケット .-- CLEMENCE （オープンブルー）",
@@ -5061,7 +5021,9 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "NEKKON",
-      "relatedNames": []
+      "relatedNames": [
+        "レザードライビングシューズ .-- PAZ （パステルブラウン）"
+      ]
     },
     {
       "name": "セーター .-- NEKKON （ラスト-コッパー）",
@@ -8021,5 +7983,5 @@
     "MA1658EW042078",
     "MA1658EW039632"
   ],
-  "scanned": 4188
+  "scanned": 4186
 }
