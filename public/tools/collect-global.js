@@ -8,6 +8,12 @@
   ];
   // 毎日の自動収集(auto-global.ps1)のときだけ、カテゴリ別の一覧も収集する
   const DAILY = window.__mangoDaily === true;
+  // 毎日の自動収集には、時間の予算がある。遅い日でも、途中までの結果を公開できるよう、時間が来たら残りを打ち切る
+  const softDeadline = Number(window.__mangoSoftDeadline) || 0;
+  const hardDeadline = Number(window.__mangoHardDeadline) || 0;
+  const pastSoft = () => softDeadline > 0 && Date.now() > softDeadline;
+  const pastHard = () => hardDeadline > 0 && Date.now() > hardDeadline;
+  let cutShort = false;
   const CATEGORY_SOURCES = [
     "https://shop.mango.com/gb/en/c/women/coats/d1b967bc",
     "https://shop.mango.com/gb/en/c/women/jeans/164d8c42",
@@ -312,6 +318,7 @@
   let done = 0;
   await pool(urls, 3, async (url) => {
     if (blocked) return;
+    if (pastHard()) { cutShort = true; return; }
     try {
       const urlCode = [...url.matchAll(/\/(\d{8})\b/g)].at(-1)?.[1] || "";
       const urlColor = url.match(/\/\d{8}\/([A-Za-z0-9]{1,4})(?:\/|$)/)?.[1] || "";
@@ -341,6 +348,7 @@
   done = 0;
   await pool(newIds, 3, async (productId) => {
     if (blocked || products.length >= MAX_PRODUCTS) return;
+    if (pastSoft()) { cutShort = true; return; }
     const apiProduct = await fetchApiProduct(productId);
     if (apiProduct) {
       try {
@@ -359,6 +367,7 @@
   log(`[2.5/4] 取得済みの商品のうち、今日が取り直しの日の ${dueKnown.length} 件を、商品ページから取り直します`);
   await pool(dueKnown, 3, async (known) => {
     if (blocked) return;
+    if (pastSoft()) { addProduct(known); cutShort = true; return; }
     try {
       const fresh = parseProduct(known.url, await fetchText(known.url));
       addProduct(fresh || known);
@@ -381,6 +390,7 @@
   done = 0;
   await pool(japanTargets, 3, async (target) => {
     if (blocked || japanAdded >= JAPAN_EXTRA || products.length >= HARD_CAP) return;
+    if (pastSoft()) { cutShort = true; return; }
     const apiProduct = await fetchApiProduct(target.code, String(target.color).padStart(2, "0"));
     if (apiProduct) {
       try {
@@ -410,6 +420,7 @@
       candidates[key] = knownCandidates[key];
       reused += 1;
     } else {
+      if (pastHard()) { cutShort = true; done += 1; return; }
       const candidate = await fetchApiProduct(related.productNumber, related.colorId);
       if (candidate !== undefined) candidates[key] = candidate;
     }
@@ -419,7 +430,7 @@
 
   const raw = { collectedAt: new Date().toISOString(), products, candidates };
   window.__mangoRaw = raw;
-  const summary = `商品 ${products.length} 件(取得できず ${skipped} 件) / 関連候補 ${Object.values(candidates).filter(Boolean).length} 件 / 表示済みの再利用 ${reused} 件 / 取り直し ${refreshed} 件`;
+  const summary = `商品 ${products.length} 件(取得できず ${skipped} 件) / 関連候補 ${Object.values(candidates).filter(Boolean).length} 件 / 表示済みの再利用 ${reused} 件 / 取り直し ${refreshed} 件${cutShort ? " / 時間切れのため、途中まで" : ""}`;
   log(`収集終了: ${summary}`);
   document.title = `【収集完了】${document.title}`;
   banner.style.background = "#1f7a3a";

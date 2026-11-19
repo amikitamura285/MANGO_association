@@ -14,7 +14,7 @@ $SiteBase = "https://amikitamura285.github.io/MANGO_association/"
 $RelayUrl = "https://script.google.com/macros/s/AKfycbxqxYvg2SIIEoEsvY4I0Ehly-eD_B3Thmu5PQvstHRFerVDgUOlievb-AsPgjDjlrCuxQ/exec"
 $StartUrl = "https://shop.mango.com/gb/en/c/women/new-now/56b5c5ed"
 $Port = 9223
-$MaxMinutes = 45
+$MaxMinutes = 60
 
 $Dir = Join-Path $env:LOCALAPPDATA "mango-finder"
 $LogFile = Join-Path $Dir "auto-global.log"
@@ -88,6 +88,8 @@ $StubJs = @'
 (() => {
   const ORIGIN = "https://amikitamura285.github.io";
   window.__mangoDaily = true;
+  window.__mangoSoftDeadline = Date.now() + 28 * 60 * 1000;
+  window.__mangoHardDeadline = Date.now() + 42 * 60 * 1000;
   const state = { raw: null, error: "", progress: "", steps: 0 };
   window.__auto = state;
   function buildContext() {
