@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T01:38:16.714Z",
+  "updatedAt": "2026-11-19T01:08:51.541Z",
   "products": [
     {
       "name": "ロングワンピース .-- MILA （ホワイト）",
@@ -316,6 +316,18 @@
       "brandItemNumber": "27051228 32 色 ダークブラウン（32）",
       "brandItemFirstDigit": "2",
       "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW039377/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "SOL",
+      "relatedNames": []
+    },
+    {
+      "name": "ピアス .-- SOL （ゴールド）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW039525_1_l.jpg",
+      "productNumber": "MA1658DW039525",
+      "brandItemNumber": "27021336 OR 色 ゴールド（OR）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW039525/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "SOL",
@@ -1196,16 +1208,54 @@
       "relatedNames": []
     },
     {
-      "name": "ジーンズ .-- EMILY （オープンブルー）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040901_1_l.jpg",
-      "productNumber": "MA1658EW040901",
-      "brandItemNumber": "27047152 TS 色 オープンブルー（TS）",
+      "name": "ジーンズ .-- EMILY （ホワイト）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW041072_1_l.jpg",
+      "productNumber": "MA1658EW041072",
+      "brandItemNumber": "27027144 1 色 ホワイト（1）",
       "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040901/",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041072/",
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "EMILY",
       "relatedNames": []
+    },
+    {
+      "name": "ジーンズ .-- NEWYORK （オープンブルー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040033_1_l.jpg",
+      "productNumber": "MA1658EW040033",
+      "brandItemNumber": "27073293 TO 色 オープンブルー（TO）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040033/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "NEWYORK",
+      "relatedNames": []
+    },
+    {
+      "name": "ブレザー .-- NEWYORK （ナチュラルホワイト）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW041240_1_l.jpg",
+      "productNumber": "MA1658EW041240",
+      "brandItemNumber": "27037942 5 色 ナチュラルホワイト（5）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041240/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "NEWYORK",
+      "relatedNames": []
+    },
+    {
+      "name": "クロップドジャケット .-- NEWYORK （オープンブルー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040409_1_l.jpg",
+      "productNumber": "MA1658EW040409",
+      "brandItemNumber": "27054073 TS 色 オープンブルー（TS）",
+      "brandItemFirstDigit": "2",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040409/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "NEWYORK",
+      "relatedNames": [
+        "ジーンズ .-- NEWYORK （オープンブルー）"
+      ]
     },
     {
       "name": "ロングワンピース .-- TIMOTHEE （ブラック）",
@@ -2359,46 +2409,6 @@
       ]
     },
     {
-      "name": "ブレザー .-- NEWYORK （ナチュラルホワイト）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW041240_1_l.jpg",
-      "productNumber": "MA1658EW041240",
-      "brandItemNumber": "27037942 5 色 ナチュラルホワイト（5）",
-      "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041240/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "NEWYORK",
-      "relatedNames": []
-    },
-    {
-      "name": "ジーンズ .-- NEWYORK （オープンブルー）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040304_1_l.jpg",
-      "productNumber": "MA1658EW040304",
-      "brandItemNumber": "27074072 TS 色 オープンブルー（TS）",
-      "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040304/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "NEWYORK",
-      "relatedNames": [
-        "クロップドジャケット .-- NEWYORK （オープンブルー）"
-      ]
-    },
-    {
-      "name": "クロップドジャケット .-- NEWYORK （オープンブルー）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040409_1_l.jpg",
-      "productNumber": "MA1658EW040409",
-      "brandItemNumber": "27054073 TS 色 オープンブルー（TS）",
-      "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040409/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "NEWYORK",
-      "relatedNames": [
-        "ジーンズ .-- NEWYORK （オープンブルー）"
-      ]
-    },
-    {
       "name": "ロングワンピース .-- SAFA （ネイビーブルー）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW041280_1_l.jpg",
       "productNumber": "MA1658EW041280",
@@ -3465,7 +3475,9 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "JUNE",
-      "relatedNames": []
+      "relatedNames": [
+        "ジャケット .-- DANTES （ダークブラウン）"
+      ]
     },
     {
       "name": "ロングスカート .-- KNOT （チャコール）",
@@ -4739,7 +4751,9 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "CAROLINE",
-      "relatedNames": []
+      "relatedNames": [
+        "ジャケット .-- DANTES （ダークブラウン）"
+      ]
     },
     {
       "name": "ジーンズ .-- BET （オープンブルー）",
@@ -5049,7 +5063,9 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "EMILY",
-      "relatedNames": []
+      "relatedNames": [
+        "ブラウス .-- MARTITA （ナチュラルホワイト）"
+      ]
     },
     {
       "name": "ジーンズ .-- EMILY （オープンブルー）",
@@ -5931,7 +5947,9 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "LAURI",
-      "relatedNames": []
+      "relatedNames": [
+        "レザーショートブーツ .--LINA （ブラック）"
+      ]
     },
     {
       "name": "ジーンズ.-- CINDY （オープンブルー）",
@@ -7983,5 +8001,5 @@
     "MA1658EW042078",
     "MA1658EW039632"
   ],
-  "scanned": 4186
+  "scanned": 4190
 }
