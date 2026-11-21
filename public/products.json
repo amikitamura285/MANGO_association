@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T01:12:41.964Z",
+  "updatedAt": "2026-11-21T00:45:05.370Z",
   "products": [
     {
       "name": "ロングワンピース .-- MILA （ホワイト）",
@@ -1244,30 +1244,6 @@
       "relatedNames": [
         "ジーンズ .-- NEWYORK （オープンブルー）"
       ]
-    },
-    {
-      "name": "ロングワンピース .-- TIMOTHEE （ブラック）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040071_1_l.jpg",
-      "productNumber": "MA1658EW040071",
-      "brandItemNumber": "27004097 99 色 ブラック（99）",
-      "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040071/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "TIMOTHEE",
-      "relatedNames": []
-    },
-    {
-      "name": "スウェットシャツ .-- TIMOTHEE （ダークブラウン）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW040412_1_l.jpg",
-      "productNumber": "MA1658EW040412",
-      "brandItemNumber": "27065823 32 色 ダークブラウン（32）",
-      "brandItemFirstDigit": "2",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040412/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "TIMOTHEE",
-      "relatedNames": []
     },
     {
       "name": "ピアス .-- ENCARNA （ブラウン）",
@@ -2963,6 +2939,18 @@
       "relatedNames": []
     },
     {
+      "name": "ジャケット .-- GRETA （ブラック）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043907_1_l.jpg",
+      "productNumber": "MA1658EW043907",
+      "brandItemNumber": "37099213 99 色 ブラック（99）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043907/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "GRETA",
+      "relatedNames": []
+    },
+    {
       "name": "ヒールサンダル .-- ANGEL （ダークブラウン）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658BW041724_1_l.jpg",
       "productNumber": "MA1658BW041724",
@@ -4199,6 +4187,30 @@
       "brandCode": "MA1658",
       "brandName": "MANGO",
       "englishKey": "ANNE",
+      "relatedNames": []
+    },
+    {
+      "name": "ジーンズ .-- VIOLETA （オープンブルー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW042458_1_l.jpg",
+      "productNumber": "MA1658EW042458",
+      "brandItemNumber": "37024078 TM 色 オープンブルー（TM）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042458/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "VIOLETA",
+      "relatedNames": []
+    },
+    {
+      "name": "スカーフ .--VIOLETA （ナチュラルホワイト）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW043146_1_l.jpg",
+      "productNumber": "MA1658DW043146",
+      "brandItemNumber": "37016002 5 色 ナチュラルホワイト（5）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW043146/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "VIOLETA",
       "relatedNames": []
     },
     {
@@ -5561,32 +5573,6 @@
       "relatedNames": []
     },
     {
-      "name": "スカーフ .--VIOLETA （ナチュラルホワイト）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW043146_1_l.jpg",
-      "productNumber": "MA1658DW043146",
-      "brandItemNumber": "37016002 5 色 ナチュラルホワイト（5）",
-      "brandItemFirstDigit": "3",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW043146/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "VIOLETA",
-      "relatedNames": []
-    },
-    {
-      "name": "ジーンズ .--VIOLETA （ダークブラウン）",
-      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043208_1_l.jpg",
-      "productNumber": "MA1658EW043208",
-      "brandItemNumber": "37015864 32 色 ダークブラウン（32）",
-      "brandItemFirstDigit": "3",
-      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043208/",
-      "brandCode": "MA1658",
-      "brandName": "MANGO",
-      "englishKey": "VIOLETA",
-      "relatedNames": [
-        "ジャケット .-- DITALONG （ライトベージュ）"
-      ]
-    },
-    {
       "name": "レザーショートブーツ .--BOLA （パステルブラウン）",
       "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658BW043155_1_l.jpg",
       "productNumber": "MA1658BW043155",
@@ -6344,10 +6330,117 @@
       "brandName": "MANGO",
       "englishKey": "PEARL",
       "relatedNames": []
+    },
+    {
+      "name": "コート .-- JIL （ブラウン）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043841_1_l.jpg",
+      "productNumber": "MA1658EW043841",
+      "brandItemNumber": "37038641 30 色 ブラウン（30）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043841/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "JIL",
+      "relatedNames": []
+    },
+    {
+      "name": "コート .-- JIL （グレー）",
+      "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043906_1_l.jpg",
+      "productNumber": "MA1658EW043906",
+      "brandItemNumber": "37048640 92 色 グレー（92）",
+      "brandItemFirstDigit": "3",
+      "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043906/",
+      "brandCode": "MA1658",
+      "brandName": "MANGO",
+      "englishKey": "JIL",
+      "relatedNames": []
     }
   ],
-  "groups": [],
-  "newCount": 0,
+  "groups": [
+    {
+      "englishKey": "GRETA",
+      "main": {
+        "name": "ジャケット .-- GRETA （ブラック）",
+        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043907_1_l.jpg",
+        "productNumber": "MA1658EW043907",
+        "brandItemNumber": "37099213 99 色 ブラック（99）",
+        "brandItemFirstDigit": "3",
+        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043907/",
+        "brandCode": "MA1658",
+        "brandName": "MANGO",
+        "englishKey": "GRETA",
+        "relatedNames": []
+      },
+      "related": [
+        {
+          "name": "ロングワンピース .-- GRETA （オレンジ）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW041719_1_l.jpg",
+          "productNumber": "MA1658EW041719",
+          "brandItemNumber": "37021378 20 色 オレンジ（20）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW041719/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "GRETA",
+          "relatedNames": []
+        },
+        {
+          "name": "レザーローファー .-- GRETA （パステルブラウン）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658BW042620_1_l.jpg",
+          "productNumber": "MA1658BW042620",
+          "brandItemNumber": "37054090 7 色 パステルブラウン（7）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW042620/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "GRETA",
+          "relatedNames": []
+        },
+        {
+          "name": "オールインワン .-- GRETA （ブラック）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043344_1_l.jpg",
+          "productNumber": "MA1658EW043344",
+          "brandItemNumber": "37047809 99 色 ブラック（99）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043344/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "GRETA",
+          "relatedNames": []
+        }
+      ]
+    },
+    {
+      "englishKey": "JIL",
+      "main": {
+        "name": "コート .-- JIL （ブラウン）",
+        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043841_1_l.jpg",
+        "productNumber": "MA1658EW043841",
+        "brandItemNumber": "37038641 30 色 ブラウン（30）",
+        "brandItemFirstDigit": "3",
+        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043841/",
+        "brandCode": "MA1658",
+        "brandName": "MANGO",
+        "englishKey": "JIL",
+        "relatedNames": []
+      },
+      "related": [
+        {
+          "name": "コート .-- JIL （グレー）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW043906_1_l.jpg",
+          "productNumber": "MA1658EW043906",
+          "brandItemNumber": "37048640 92 色 グレー（92）",
+          "brandItemFirstDigit": "3",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043906/",
+          "brandCode": "MA1658",
+          "brandName": "MANGO",
+          "englishKey": "JIL",
+          "relatedNames": []
+        }
+      ]
+    }
+  ],
+  "newCount": 2,
   "displayedMainProductNumbers": [
     "MA1658EW33440",
     "MA3878EC003099",
@@ -7987,7 +8080,9 @@
     "MA1658EW039633",
     "MA1658EW041870",
     "MA1658EW042078",
-    "MA1658EW039632"
+    "MA1658EW039632",
+    "MA1658EW043907",
+    "MA1658EW043841"
   ],
-  "scanned": 4181
+  "scanned": 4170
 }
