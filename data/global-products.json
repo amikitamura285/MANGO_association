@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-21T00:45:10.336Z",
+  "updatedAt": "2026-11-21T23:49:09.445Z",
   "products": [
     {
       "name": "Two-tone faux fur jacket",
@@ -7597,50 +7597,6 @@
     },
     {
       "main": {
-        "name": "Double-breasted wool jacket with faux fur collar",
-        "image": "https://media.mango.com/is/image/punto/37047922-32-002?wid=1024",
-        "productNumber": "37047922",
-        "baseCode": "37047922",
-        "globalCode": "37047922",
-        "colorId": "32",
-        "url": "https://shop.mango.com/gb/en/p/women/jackets/faux-fur/double-breasted-wool-jacket-with-faux-fur-collar/37047922/32/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "37041423",
-            "colorId": "30"
-          },
-          {
-            "productNumber": "37087913",
-            "colorId": "30"
-          },
-          {
-            "productNumber": "37064404",
-            "colorId": "99"
-          },
-          {
-            "productNumber": "37064414",
-            "colorId": "32"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043665/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "Bambi skirt with brushed finish",
-          "image": "https://media.mango.com/is/image/punto/37087913-30-900?wid=1024",
-          "productNumber": "37087913",
-          "baseCode": "37087913",
-          "globalCode": "37087913",
-          "colorId": "30",
-          "url": "https://shop.mango.com/gb/en/p/women/skirts/midi/bambi-skirt-with-brushed-finish/37087913/30/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043436/"
-        }
-      ],
-      "baseCode": "37047922",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
         "name": "Wool blazer with a high collar",
         "image": "https://media.mango.com/is/image/punto/37057913-92-002?wid=1024",
         "productNumber": "37057913",
@@ -12309,50 +12265,6 @@
         }
       ],
       "baseCode": "37085879",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
-        "name": "Fitted high-neck T-shirt",
-        "image": "https://media.mango.com/is/image/punto/37035856-05-002?wid=1024",
-        "productNumber": "37035856",
-        "baseCode": "37035856",
-        "globalCode": "37035856",
-        "colorId": "05",
-        "url": "https://shop.mango.com/gb/en/p/women/t-shirts/long-sleeve/fitted-high-neck-t-shirt/37035856/05/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "37024078",
-            "colorId": "TM"
-          },
-          {
-            "productNumber": "37014099",
-            "colorId": "32"
-          },
-          {
-            "productNumber": "37024462",
-            "colorId": "99"
-          },
-          {
-            "productNumber": "37094435",
-            "colorId": "32"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042921/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "High-waist flared jeans",
-          "image": "https://media.mango.com/is/image/punto/37024078-TM-900?wid=1024",
-          "productNumber": "37024078",
-          "baseCode": "37024078",
-          "globalCode": "37024078",
-          "colorId": "TM",
-          "url": "https://shop.mango.com/gb/en/p/women/jeans/flare/high-waist-flared-jeans/37024078/TM/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042458/"
-        }
-      ],
-      "baseCode": "37035856",
       "hasJapanRelations": true
     },
     {
