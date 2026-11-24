@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T01:35:39.276Z",
+  "updatedAt": "2026-11-24T04:17:50.643Z",
   "products": [
     {
       "name": "Wool-blend knitted skirt",
@@ -6474,16 +6474,6 @@
       },
       "relatedGlobal": [
         {
-          "name": "Straight-fit double-breasted suit jacket",
-          "image": "https://media.mango.com/is/image/punto/37097912-30-900?wid=1024",
-          "productNumber": "37097912",
-          "baseCode": "37097912",
-          "globalCode": "37097912",
-          "colorId": "30",
-          "url": "https://shop.mango.com/gb/en/p/women/blazers/fitted/straight-fit-double-breasted-suit-jacket/37097912/30/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043643/"
-        },
-        {
           "name": "Heeled leather shoes",
           "image": "https://media.mango.com/is/image/punto/37085842-99-900?wid=1024",
           "productNumber": "37085842",
@@ -6835,74 +6825,6 @@
     },
     {
       "main": {
-        "name": "Sequin-detail knitted cardigan",
-        "image": "https://media.mango.com/is/image/punto/37087796-95-002?wid=1024",
-        "productNumber": "37087796",
-        "baseCode": "37087796",
-        "globalCode": "37087796",
-        "colorId": "95",
-        "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/cardigans/sequin-detail-knitted-cardigan/37087796/95/00",
-        "relatedProductNumbers": [
-          {
-            "productNumber": "37087804",
-            "colorId": "99"
-          },
-          {
-            "productNumber": "37077796",
-            "colorId": "95"
-          },
-          {
-            "productNumber": "37012528",
-            "colorId": "TM"
-          },
-          {
-            "productNumber": "37014099",
-            "colorId": "32"
-          },
-          {
-            "productNumber": "37056004",
-            "colorId": "99"
-          }
-        ],
-        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043732/"
-      },
-      "relatedGlobal": [
-        {
-          "name": "Manteco wool coat with belt",
-          "image": "https://media.mango.com/is/image/punto/37087804-99-900?wid=1024",
-          "productNumber": "37087804",
-          "baseCode": "37087804",
-          "globalCode": "37087804",
-          "colorId": "99",
-          "url": "https://shop.mango.com/gb/en/p/women/coats/coats/manteco-wool-coat-with-belt/37087804/99/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043113/"
-        },
-        {
-          "name": "Wide-leg jeans with frayed waistband",
-          "image": "https://media.mango.com/is/image/punto/37012528-TM-900?wid=1024",
-          "productNumber": "37012528",
-          "baseCode": "37012528",
-          "globalCode": "37012528",
-          "colorId": "TM",
-          "url": "https://shop.mango.com/gb/en/p/women/jeans/wide-leg/wide-leg-jeans-with-frayed-waistband/37012528/TM/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042239/"
-        },
-        {
-          "name": "Ballet pump with elastic bow",
-          "image": "https://media.mango.com/is/image/punto/37014099-32-900?wid=1024",
-          "productNumber": "37014099",
-          "baseCode": "37014099",
-          "globalCode": "37014099",
-          "colorId": "32",
-          "url": "https://shop.mango.com/gb/en/p/women/shoes/ballet-flats/ballet-pump-with-elastic-bow/37014099/32/00",
-          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW042538/"
-        }
-      ],
-      "baseCode": "37087796",
-      "hasJapanRelations": true
-    },
-    {
-      "main": {
         "name": "Frayed houndstooth blazer",
         "image": "https://media.mango.com/is/image/punto/37018291-99-002?wid=1024",
         "productNumber": "37018291",
@@ -7037,6 +6959,46 @@
         }
       ],
       "baseCode": "37047787",
+      "hasJapanRelations": true
+    },
+    {
+      "main": {
+        "name": "Polo-neck jumper with pocket",
+        "image": "https://media.mango.com/is/image/punto/37017794-53-002?wid=1024",
+        "productNumber": "37017794",
+        "baseCode": "37017794",
+        "globalCode": "37017794",
+        "colorId": "53",
+        "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/plus-sizes/polo-neck-jumper-with-pocket/37017794/53/00",
+        "relatedProductNumbers": [
+          {
+            "productNumber": "37087804",
+            "colorId": "99"
+          },
+          {
+            "productNumber": "37004099",
+            "colorId": "TO"
+          },
+          {
+            "productNumber": "37064792",
+            "colorId": "99"
+          }
+        ],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043716/"
+      },
+      "relatedGlobal": [
+        {
+          "name": "Manteco wool coat with belt",
+          "image": "https://media.mango.com/is/image/punto/37087804-99-900?wid=1024",
+          "productNumber": "37087804",
+          "baseCode": "37087804",
+          "globalCode": "37087804",
+          "colorId": "99",
+          "url": "https://shop.mango.com/gb/en/p/women/coats/coats/manteco-wool-coat-with-belt/37087804/99/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043113/"
+        }
+      ],
+      "baseCode": "37017794",
       "hasJapanRelations": true
     },
     {
@@ -8090,6 +8052,16 @@
           "colorId": "TS",
           "url": "https://shop.mango.com/gb/en/p/women/jeans/straight/low-rise-jeans-with-tie-detail/37052902/TS/00",
           "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042195/"
+        },
+        {
+          "name": "Ballet pump with elastic bow",
+          "image": "https://media.mango.com/is/image/punto/37014099-32-900?wid=1024",
+          "productNumber": "37014099",
+          "baseCode": "37014099",
+          "globalCode": "37014099",
+          "colorId": "32",
+          "url": "https://shop.mango.com/gb/en/p/women/shoes/ballet-flats/ballet-pump-with-elastic-bow/37014099/32/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658BW042538/"
         },
         {
           "name": "Resin frame sunglasses",
@@ -10118,6 +10090,16 @@
           "colorId": "50",
           "url": "https://shop.mango.com/gb/en/p/women/sweaters-and-cardigans/sweaters/mid-weight-jumper-with-a-high-neck/37007826/50/00",
           "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW043361/"
+        },
+        {
+          "name": "Wide-leg jeans with frayed waistband",
+          "image": "https://media.mango.com/is/image/punto/37012528-TM-900?wid=1024",
+          "productNumber": "37012528",
+          "baseCode": "37012528",
+          "globalCode": "37012528",
+          "colorId": "TM",
+          "url": "https://shop.mango.com/gb/en/p/women/jeans/wide-leg/wide-leg-jeans-with-frayed-waistband/37012528/TM/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW042239/"
         }
       ],
       "baseCode": "37097786",
