@@ -105,6 +105,7 @@ function renderProductCards(containerSelector, groups, compact, scope = "main") 
       <section class="product-group">
         <article class="card card-main">
           ${renderImage(main, false)}
+          ${group.changed ? '<p class="changed-note">確認済でしたが、関連商品が変わったため、戻りました</p>' : ""}
           <label class="check-toggle">
             <input type="checkbox" data-product-number="${escapeHtml(checkKey || "")}" ${isChecked ? "checked" : ""}>
             <span>確認済</span>
@@ -257,6 +258,9 @@ function renderGlobalRows() {
   const rows = state.globalRows;
   const activeRows = rows.filter((row) => !isGlobalRowChecked(row));
   const checkedRows = rows.filter((row) => isGlobalRowChecked(row));
+  // 以前に確認済にした商品で、関連商品の内容が変わって未確認に戻ったものには、印を付ける
+  const checkedCodes = new Set([...state.globalChecked].map((key) => key.split("-")[0]));
+  activeRows.forEach((row) => { row.changed = checkedCodes.has(row.main.productNumber); });
   $("#globalProductCount").textContent = String(activeRows.length).padStart(2, "0");
   renderProductCards("#globalProductGrid", activeRows, true, "global");
   syncCheckedSection("global", "#globalCheckedBody", "#globalCheckedProductGrid", "#globalCheckedToggle", checkedRows, true, "global");

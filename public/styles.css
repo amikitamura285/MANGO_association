@@ -533,3 +533,4 @@ footer {
 .checked-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; }
 .checked-toggle { padding: 10px 16px; border: 1px solid var(--ink); background: var(--white); color: var(--ink); font: 11px 'DM Mono', monospace; cursor: pointer; }
 .checked-toggle:hover { background: var(--ink); color: var(--white); }
+.changed-note { margin: 0; padding: 8px 18px; background: #e8ff67; color: var(--ink); font: 11px/1.5 'DM Mono', monospace; }

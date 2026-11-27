@@ -267,8 +267,8 @@
 
   const pages = [{ html: document.documentElement.outerHTML, newArrivals: location.pathname.includes("/new-now/") }];
   const seenUrls = new Set(extractProductUrls(pages[0].html));
-  async function loadListing(source) {
-    for (let page = 1; page <= 4; page += 1) {
+  async function loadListing(source, maxPage = 4, startPage = 1) {
+    for (let page = startPage; page <= maxPage; page += 1) {
       const url = page === 1 ? source : `${source}${source.includes("?") ? "&" : "?"}page=${page}`;
       let html;
       try {
@@ -296,6 +296,19 @@
   for (const category of categories) {
     if (seenUrls.size >= MAX_PRODUCTS) break;
     await loadListing(category);
+  }
+
+  // 一覧から取れた商品が少ないとき(TOPページが取れなかった場合など)は、ほかのページをたどって、最低でも MIN_LISTING 件にそろえる
+  const MIN_LISTING = Number(window.__mangoMinListing) || 50;
+  if (seenUrls.size < MIN_LISTING) {
+    log(`一覧から商品が${seenUrls.size}件しか取れていません。最低${MIN_LISTING}件になるまで、カテゴリのページをたどります`);
+    const loaded = new Set([...SOURCES, ...categories]);
+    const discovered = pages.flatMap((page) => [...unescapeJson(page.html).matchAll(/\/gb\/en\/c\/women\/[a-z0-9\/-]*\/[0-9a-f]{8}(?![0-9a-z])/gi)].map((match) => SHOP + match[0]));
+    for (const extra of [...new Set([...CATEGORY_SOURCES, ...discovered])].filter((url) => !loaded.has(url))) {
+      if (seenUrls.size >= MIN_LISTING) break;
+      await loadListing(extra);
+    }
+    log(seenUrls.size >= MIN_LISTING ? `一覧の商品が${seenUrls.size}件になりました` : `一覧の商品は${seenUrls.size}件までで、最低${MIN_LISTING}件には届きませんでした`);
   }
 
   const products = [];

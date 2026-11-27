@@ -88,7 +88,7 @@
 
     return {
       updatedAt: now.toISOString(),
-      products: deduped.map(({ relatedUrls, ...product }) => product).slice(0, 200),
+      products: deduped.map(({ relatedUrls, ...product }) => product).slice(0, 700),
       matches: uniqueMatches
     };
   }

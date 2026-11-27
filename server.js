@@ -189,6 +189,29 @@ function representativeProducts(products) {
   return products.filter((product) => keep.has(product.productNumber));
 }
 
+// 日本サイトの新着順の一覧(1ページ120件)から、新しい順に商品のURLを集める
+async function fetchNewArrivalUrls(pages = 5) {
+  const urls = [];
+  const seen = new Set();
+  for (let page = 1; page <= pages; page += 1) {
+    try {
+      const html = await fetchText(`${BASE}/search/?alignmentSequence=news%20from%20date%28text%29%3Adescending&currentPage=${page}`);
+      let fresh = 0;
+      for (const match of html.matchAll(/\/commodity\/([A-Z0-9]+)\/(MA[0-9A-Z]+)/g)) {
+        if (seen.has(match[2])) continue;
+        seen.add(match[2]);
+        urls.push(`${BASE}/commodity/${match[1]}/${match[2]}/`);
+        fresh += 1;
+      }
+      if (!fresh) break;
+    } catch (error) {
+      console.warn(`New-arrival listing page ${page} failed: ${error.message}`);
+      break;
+    }
+  }
+  return urls;
+}
+
 async function fetchVariationProductNumbers(productNumber) {
   try {
     const response = JSON.parse(await fetchText(`${BASE}/commodity/${productNumber}/colors`));
@@ -492,7 +515,7 @@ async function crawlGlobalProducts(japanProducts = []) {
 
   const result = {
     updatedAt: new Date().toISOString(),
-    products: deduped.map(({ relatedUrls, ...product }) => product).slice(0, 200),
+    products: deduped.map(({ relatedUrls, ...product }) => product).slice(0, 700),
     matches
   };
   await writeGlobalProducts(result);
@@ -506,7 +529,13 @@ async function crawl() {
   try {
     const sitemap = await fetchText(SITEMAP);
     const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
-    const urls = CRAWL_LIMIT > 0 ? sitemapUrls.slice(0, CRAWL_LIMIT) : sitemapUrls;
+    // サイトマップには、新商品がまだ載っていないことがあるため、新着順の一覧ページからも商品を集めて足す
+    const newArrivalUrls = await fetchNewArrivalUrls();
+    const sitemapCodes = new Set(sitemapUrls.map((url) => url.match(/\/commodity\/[^/]+\/([^/]+)\/?$/)?.[1]).filter(Boolean));
+    const addedFromListing = newArrivalUrls.filter((url) => !sitemapCodes.has(url.match(/\/commodity\/[^/]+\/([^/]+)\/?$/)?.[1]));
+    console.log(`New arrivals: ${newArrivalUrls.length} found in listing, ${addedFromListing.length} not in the sitemap`);
+    const allUrls = [...addedFromListing, ...sitemapUrls];
+    const urls = CRAWL_LIMIT > 0 ? allUrls.slice(0, CRAWL_LIMIT) : allUrls;
     const previous = await readProducts();
     const previouslySeen = new Set(previous.displayedMainProductNumbers || []);
     const products = (await mapConcurrent(urls, async (url) => {
