@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T08:43:53.310Z",
+  "updatedAt": "2026-11-27T08:54:14.203Z",
   "products": [
     {
       "name": "ハンドバッグ .-- BIBIANA （ブラック）",
@@ -6126,43 +6126,14 @@
   ],
   "groups": [
     {
-      "englishKey": "BIBIANA",
-      "main": {
-        "name": "ハンドバッグ .-- BIBIANA （ミディアムブラウン）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658AW044177_1_l.jpg",
-        "productNumber": "MA1658AW044177",
-        "brandItemNumber": "47021400 35 色 ミディアムブラウン（35）",
-        "brandItemFirstDigit": "4",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW044177/",
-        "brandCode": "MA1658",
-        "brandName": "MANGO",
-        "englishKey": "BIBIANA",
-        "relatedNames": []
-      },
-      "related": [
-        {
-          "name": "ハンドバッグ .-- BIBIANA （ブラック）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658AW044187_1_l.jpg",
-          "productNumber": "MA1658AW044187",
-          "brandItemNumber": "47021399 99 色 ブラック（99）",
-          "brandItemFirstDigit": "4",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW044187/",
-          "brandCode": "MA1658",
-          "brandName": "MANGO",
-          "englishKey": "BIBIANA",
-          "relatedNames": []
-        }
-      ]
-    },
-    {
       "englishKey": "ARES",
       "main": {
-        "name": "トップス .-- ARES （ナチュラルホワイト）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW044130_1_l.jpg",
-        "productNumber": "MA1658EW044130",
-        "brandItemNumber": "47071444 2 色 ナチュラルホワイト（2）",
+        "name": "トップス .-- ARES （ダークブルー）",
+        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW044170_1_l.jpg",
+        "productNumber": "MA1658EW044170",
+        "brandItemNumber": "47071462 57 色 ダークブルー（57）",
         "brandItemFirstDigit": "4",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW044130/",
+        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW044170/",
         "brandCode": "MA1658",
         "brandName": "MANGO",
         "englishKey": "ARES",
@@ -6182,12 +6153,12 @@
           "relatedNames": []
         },
         {
-          "name": "トップス .-- ARES （ダークブルー）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW044170_1_l.jpg",
-          "productNumber": "MA1658EW044170",
-          "brandItemNumber": "47071462 57 色 ダークブルー（57）",
+          "name": "トップス .-- ARES （ナチュラルホワイト）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW044130_1_l.jpg",
+          "productNumber": "MA1658EW044130",
+          "brandItemNumber": "47071444 2 色 ナチュラルホワイト（2）",
           "brandItemFirstDigit": "4",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW044170/",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW044130/",
           "brandCode": "MA1658",
           "brandName": "MANGO",
           "englishKey": "ARES",
@@ -6198,12 +6169,12 @@
     {
       "englishKey": "SOFIA",
       "main": {
-        "name": "シャツ .-- SOFIA （ピンク）",
-        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW044152_1_l.jpg",
-        "productNumber": "MA1658EW044152",
-        "brandItemNumber": "47091421 85 色 ピンク（85）",
+        "name": "ピアス .-- SOFIA （ゴールド）",
+        "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW044094_1_l.jpg",
+        "productNumber": "MA1658DW044094",
+        "brandItemNumber": "47061534 OR 色 ゴールド（OR）",
         "brandItemFirstDigit": "4",
-        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW044152/",
+        "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW044094/",
         "brandCode": "MA1658",
         "brandName": "MANGO",
         "englishKey": "SOFIA",
@@ -6211,12 +6182,12 @@
       },
       "related": [
         {
-          "name": "ピアス .-- SOFIA （ゴールド）",
-          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658DW044094_1_l.jpg",
-          "productNumber": "MA1658DW044094",
-          "brandItemNumber": "47061534 OR 色 ゴールド（OR）",
+          "name": "シャツ .-- SOFIA （ピンク）",
+          "image": "https://sc3.locondo.jp/contents/commodity_image/MA/MA1658EW044152_1_l.jpg",
+          "productNumber": "MA1658EW044152",
+          "brandItemNumber": "47091421 85 色 ピンク（85）",
           "brandItemFirstDigit": "4",
-          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658DW044094/",
+          "url": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW044152/",
           "brandCode": "MA1658",
           "brandName": "MANGO",
           "englishKey": "SOFIA",
@@ -6225,7 +6196,7 @@
       ]
     }
   ],
-  "newCount": 3,
+  "newCount": 2,
   "displayedMainProductNumbers": [
     "MA1658EW33440",
     "MA3878EC003099",
@@ -8476,7 +8447,9 @@
     "MA1658EW044121",
     "MA1658AW044177",
     "MA1658EW044130",
-    "MA1658EW044152"
+    "MA1658EW044152",
+    "MA1658EW044170",
+    "MA1658DW044094"
   ],
   "scanned": 4314
 }
