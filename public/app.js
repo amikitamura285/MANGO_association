@@ -56,17 +56,41 @@ function getJapanUrl(product) {
   return product.japanUrl || "";
 }
 
-// グローバルの確認済は、関連候補の内容(署名)つきで覚える。あとから新しい候補が加わると署名が変わり、未確認に戻る
+// グローバルの確認済は、確認した時点の関連商品(商品ごとの短い印)を一緒に覚える。
+// いまの関連商品が、確認した時点の中に全部入っていれば、確認済のまま。新しい関連商品が加わったときだけ、未確認に戻る(減っただけでは戻らない)
+function candidateToken(item) {
+  const text = `${item.productNumber}:${item.colorId}`;
+  let hash = 0;
+  for (let i = 0; i < text.length; i += 1) hash = (hash * 31 + text.charCodeAt(i)) >>> 0;
+  return hash.toString(36).padStart(4, "0").slice(-4);
+}
+
 function globalCheckKey(row) {
+  const tokens = [...new Set((row.related || []).map(candidateToken))].sort().slice(0, 16);
+  return `${row.main.productNumber}~${tokens.join("")}`;
+}
+
+// 昔の形式(関連商品の内容を1つの印にまとめたもの)。内容がまったく同じときだけ、確認済として扱う
+function legacyGlobalKey(row) {
   const signature = (row.related || []).map((item) => `${item.productNumber}:${item.colorId}`).sort().join(",");
   let hash = 0;
   for (let i = 0; i < signature.length; i += 1) hash = (hash * 31 + signature.charCodeAt(i)) >>> 0;
   return `${row.main.productNumber}-${hash.toString(36).padStart(6, "0").slice(-6)}`;
 }
 
-// 確認済にした時点の関連商品と、いまの関連商品が同じ(署名が合う)ときだけ、確認済として扱う。違っていたら、未確認に戻る
+function globalKeysForMain(code) {
+  return [...state.globalChecked].filter((key) => key.slice(0, 8) === code);
+}
+
 function isGlobalRowChecked(row) {
-  return state.globalChecked.has(globalCheckKey(row));
+  const code = row.main.productNumber;
+  if (state.globalChecked.has(legacyGlobalKey(row))) return true;
+  const now = new Set((row.related || []).map(candidateToken));
+  return globalKeysForMain(code).some((key) => {
+    if (key[8] !== "~") return false;
+    const saved = new Set(key.slice(9).match(/.{4}/g) || []);
+    return [...now].every((token) => saved.has(token));
+  });
 }
 
 function renderProductCards(containerSelector, groups, compact, scope = "main") {
@@ -105,7 +129,7 @@ function renderProductCards(containerSelector, groups, compact, scope = "main") 
       <section class="product-group">
         <article class="card card-main">
           ${renderImage(main, false)}
-          ${group.changed ? '<p class="changed-note">確認済でしたが、関連商品が変わったため、戻りました</p>' : ""}
+          ${group.changed ? '<p class="changed-note">確認済でしたが、新しい関連商品が加わったため、戻りました</p>' : ""}
           <label class="check-toggle">
             <input type="checkbox" data-product-number="${escapeHtml(checkKey || "")}" ${isChecked ? "checked" : ""}>
             <span>確認済</span>
@@ -125,7 +149,10 @@ function renderProductCards(containerSelector, groups, compact, scope = "main") 
       if (!productNumber) return;
       // 関連付けページでは、そのとき並んでいた関連アイテムもまとめて確認済にする(あとから加わったアイテムだけが、再び出るようにするため)
       const group = scope === "global" ? null : groups.find((entry) => entry.main.productNumber === productNumber);
-      const members = [productNumber, ...(group ? group.related.map((item) => item.productNumber).filter(Boolean) : [])];
+      const members = scope === "global"
+        ? (target.checked ? [productNumber] : globalKeysForMain(productNumber.slice(0, 8)))
+        : [productNumber, ...(group ? group.related.map((item) => item.productNumber).filter(Boolean) : [])];
+      if (scope === "global" && target.checked) globalKeysForMain(productNumber.slice(0, 8)).forEach((key) => checkedSet.delete(key));
       members.forEach((code) => { if (target.checked) checkedSet.add(code); else checkedSet.delete(code); });
       if (scope === "global") {
         renderGlobalRows();
@@ -254,18 +281,38 @@ function renderGlobalData(data) {
   renderGlobalRows();
 }
 
+// 昔の形式の確認済を、新しい形式(確認した時点の関連商品つき)に、一度だけ置き換える
+let globalUpgradeDone = false;
+async function upgradeLegacyGlobalChecks() {
+  if (globalUpgradeDone || !state.globalRows.length || !checkedSeq.global.applied) return;
+  globalUpgradeDone = true;
+  const keys = state.globalRows
+    .filter((row) => state.globalChecked.has(legacyGlobalKey(row)) && !globalKeysForMain(row.main.productNumber).some((key) => key[8] === "~"))
+    .map(globalCheckKey);
+  if (!keys.length) return;
+  try {
+    const list = await relayChecked("global", { action: "check", productNumbers: keys, checked: true });
+    state.globalChecked = new Set(list);
+    renderGlobalRows();
+  } catch (error) {
+    // 中継サーバーが新しい版でないときは、何もしない(次の機会にやり直す)
+    globalUpgradeDone = false;
+  }
+}
+
 function renderGlobalRows() {
   const rows = state.globalRows;
   const activeRows = rows.filter((row) => !isGlobalRowChecked(row));
   const checkedRows = rows.filter((row) => isGlobalRowChecked(row));
   // 以前に確認済にした商品で、関連商品の内容が変わって未確認に戻ったものには、印を付ける
-  const checkedCodes = new Set([...state.globalChecked].map((key) => key.split("-")[0]));
+  const checkedCodes = new Set([...state.globalChecked].map((key) => key.slice(0, 8)));
   activeRows.forEach((row) => { row.changed = checkedCodes.has(row.main.productNumber); });
   $("#globalProductCount").textContent = String(activeRows.length).padStart(2, "0");
   renderProductCards("#globalProductGrid", activeRows, true, "global");
   syncCheckedSection("global", "#globalCheckedBody", "#globalCheckedProductGrid", "#globalCheckedToggle", checkedRows, true, "global");
   $("#globalProductEmpty").hidden = rows.length > 0;
   $("#globalCheckedEmpty").hidden = checkedRows.length > 0;
+  upgradeLegacyGlobalChecks();
 }
 
 async function relayChecked(scope, request) {

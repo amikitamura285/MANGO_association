@@ -36,7 +36,7 @@ function checkedKey_(scope) {
 
 function checkedCode_(scope, value) {
   if (scope === "relation") return typeof value === "string" && /^[A-Za-z0-9]{6,20}$/.test(value) ? value : null;
-  return typeof value === "string" && /^\d{8}(?:-[0-9a-z]{6})?$/.test(value) ? value : null;
+  return typeof value === "string" && /^\d{8}(?:-[0-9a-z]{6}|~[0-9a-z]{4,64})?$/.test(value) ? value : null;
 }
 
 function maxChecked_(scope) {
@@ -66,10 +66,11 @@ function readChecked_(scope) {
 
 function writeChecked_(scope, list) {
   var props = PropertiesService.getScriptProperties();
-  var chunks = Math.max(1, Math.ceil(list.length / CHECKED_CHUNK));
+  var size = scope === "relation" ? CHECKED_CHUNK : 200;
+  var chunks = Math.max(1, Math.ceil(list.length / size));
   var values = {};
   for (var i = 0; i < chunks; i += 1) {
-    values[checkedStoreKey_(scope, i)] = JSON.stringify(list.slice(i * CHECKED_CHUNK, (i + 1) * CHECKED_CHUNK));
+    values[checkedStoreKey_(scope, i)] = JSON.stringify(list.slice(i * size, (i + 1) * size));
   }
   props.setProperties(values);
   for (var j = chunks; j < 20; j += 1) props.deleteProperty(checkedStoreKey_(scope, j));
@@ -82,6 +83,12 @@ function setChecked_(parsed) {
   if (!codes.length || codes.some(function (code) { return !code; }) || typeof parsed.checked !== "boolean") fail_("確認済の指定が正しくありません。");
   var list = readChecked_(scope).filter(function (entry) { return codes.indexOf(entry) < 0; });
   if (parsed.checked) list = list.concat(codes);
+  // グローバルは、同じ商品の古い記録(関連商品の内容が違うもの)を、新しい記録に置き換える
+  if (parsed.checked && scope === "global") {
+    var mains = {};
+    codes.forEach(function (code) { mains[code.slice(0, 8)] = true; });
+    list = list.filter(function (entry) { return codes.indexOf(entry) >= 0 || !mains[entry.slice(0, 8)]; });
+  }
   list = list.slice(-maxChecked_(scope));
   writeChecked_(scope, list);
   return { ok: true, checked: list };
