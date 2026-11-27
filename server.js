@@ -229,6 +229,13 @@ async function fetchVariationProductNumbers(productNumber) {
   return null;
 }
 
+const VARIATION_REFRESH_DAYS = 7;
+function variationDueToday(productNumber) {
+  let hash = 0;
+  for (const character of String(productNumber)) hash = (hash * 31 + character.charCodeAt(0)) >>> 0;
+  return hash % VARIATION_REFRESH_DAYS === Math.floor(Date.now() / 86400000) % VARIATION_REFRESH_DAYS;
+}
+
 async function readVariationCache() {
   try {
     return JSON.parse(await fs.readFile(VARIATIONS_FILE, "utf8")).variations || {};
@@ -558,10 +565,13 @@ async function crawl() {
     const products = (await mapConcurrent(urls, async (url) => {
       try {
         const product = parseProduct(url, await fetchText(url));
-        const looked = await fetchVariationProductNumbers(product.productNumber);
+        // 色違いの結果は保存しておき、毎回は取り直さない。商品ごとに決まった曜日(7日で一巡)と、保存のない新しい商品だけ、取りに行く。
+        // 色違いは、お互いを挙げ合うため、新しい色が加わっても、その新しい商品の取得で、古い商品とつながる
+        const cached = variationCache[product.productNumber];
+        const looked = cached && !variationDueToday(product.productNumber) ? cached : await fetchVariationProductNumbers(product.productNumber);
         if (looked) {
           product.variationProductNumbers = looked;
-        } else if (variationCache[product.productNumber]) {
+        } else if (cached) {
           product.variationProductNumbers = variationCache[product.productNumber];
           variationFallback += 1;
         } else {
