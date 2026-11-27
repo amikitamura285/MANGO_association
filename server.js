@@ -6,6 +6,7 @@ const { URL } = require("node:url");
 const ROOT = __dirname;
 const DATA_FILE = path.join(ROOT, "data", "products.json");
 const GLOBAL_DATA_FILE = path.join(ROOT, "data", "global-products.json");
+const VARIATIONS_FILE = path.join(ROOT, "data", "variations.json");
 const PORT = Number(process.env.PORT || 3000);
 const SITEMAP = "https://japan.mango.com/sitemap_commodity.xml";
 const BASE = "https://japan.mango.com";
@@ -212,15 +213,27 @@ async function fetchNewArrivalUrls(pages = 5) {
   return urls;
 }
 
+// 成功したら色違いの品番の一覧(なければ空)、失敗したら null を返す。失敗を「色違いなし」とは扱わない
 async function fetchVariationProductNumbers(productNumber) {
+  for (let attempt = 0; attempt < 4; attempt += 1) {
+    try {
+      const response = JSON.parse(await fetchText(`${BASE}/commodity/${productNumber}/colors`));
+      return (response.relatedCommodityStocks || [])
+        .map((item) => item.commodityCode)
+        .filter((code) => code && code !== productNumber);
+    } catch (error) {
+      if (attempt === 3) console.warn(`Variation lookup failed for ${productNumber}: ${error.message}`);
+      else await new Promise((resolve) => setTimeout(resolve, 1000 * 2 ** attempt));
+    }
+  }
+  return null;
+}
+
+async function readVariationCache() {
   try {
-    const response = JSON.parse(await fetchText(`${BASE}/commodity/${productNumber}/colors`));
-    return (response.relatedCommodityStocks || [])
-      .map((item) => item.commodityCode)
-      .filter((code) => code && code !== productNumber);
+    return JSON.parse(await fs.readFile(VARIATIONS_FILE, "utf8")).variations || {};
   } catch (error) {
-    console.warn(`Variation lookup failed for ${productNumber}: ${error.message}`);
-    return [];
+    return {};
   }
 }
 
@@ -538,10 +551,24 @@ async function crawl() {
     const urls = CRAWL_LIMIT > 0 ? allUrls.slice(0, CRAWL_LIMIT) : allUrls;
     const previous = await readProducts();
     const previouslySeen = new Set(previous.displayedMainProductNumbers || []);
+    const variationCache = await readVariationCache();
+    const variations = {};
+    let variationFallback = 0;
+    let variationUnknown = 0;
     const products = (await mapConcurrent(urls, async (url) => {
       try {
         const product = parseProduct(url, await fetchText(url));
-        product.variationProductNumbers = await fetchVariationProductNumbers(product.productNumber);
+        const looked = await fetchVariationProductNumbers(product.productNumber);
+        if (looked) {
+          product.variationProductNumbers = looked;
+        } else if (variationCache[product.productNumber]) {
+          product.variationProductNumbers = variationCache[product.productNumber];
+          variationFallback += 1;
+        } else {
+          product.variationProductNumbers = [];
+          variationUnknown += 1;
+        }
+        variations[product.productNumber] = product.variationProductNumbers;
         const isMangoBrand = product.brandCode === "MA1658" && product.brandName === "MANGO";
         return product.name && product.englishKey && isMangoBrand ? product : null;
       } catch (error) {
@@ -549,6 +576,12 @@ async function crawl() {
         return null;
       }
     }, CRAWL_CONCURRENCY)).filter(Boolean);
+    console.log(`Variations: ${variationFallback} from cache after a failed lookup, ${variationUnknown} unknown`);
+    // 色違いを調べられなかった商品が多いと、色違いが別々の商品として出てしまうため、データを公開せずに、クロールを失敗として終える(前回のデータを残す)
+    if (variationUnknown > Math.max(5, products.length * 0.01)) {
+      throw new Error(`色違いの取得に失敗した商品が多すぎます(${variationUnknown}件)。前回のデータを残します。`);
+    }
+    await fs.writeFile(VARIATIONS_FILE, JSON.stringify({ updatedAt: new Date().toISOString(), variations }), "utf8");
     const eligibleProducts = representativeProducts(products);
     const eligibleGroups = new Map();
     for (const product of eligibleProducts) {
