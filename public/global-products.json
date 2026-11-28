@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T08:54:19.174Z",
+  "updatedAt": "2026-11-28T01:56:37.371Z",
   "products": [
     {
       "name": "Wool-blend knitted skirt",
@@ -20925,6 +20925,50 @@
         }
       ],
       "baseCode": "37016745",
+      "hasJapanRelations": true
+    },
+    {
+      "main": {
+        "name": "Leather shopper bag",
+        "image": "https://media.mango.com/is/image/punto/37044444-37-052?wid=1024",
+        "productNumber": "37044444",
+        "baseCode": "37044444",
+        "globalCode": "37044444",
+        "colorId": "37",
+        "url": "https://shop.mango.com/gb/en/p/women/bags/leather-bags/leather-shopper-bag/37044444/37/00",
+        "relatedProductNumbers": [
+          {
+            "productNumber": "27044775",
+            "colorId": "35"
+          },
+          {
+            "productNumber": "37045852",
+            "colorId": "TG"
+          },
+          {
+            "productNumber": "37014080",
+            "colorId": "02"
+          },
+          {
+            "productNumber": "37045980",
+            "colorId": "92"
+          }
+        ],
+        "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658AW043394/"
+      },
+      "relatedGlobal": [
+        {
+          "name": "Funnel neck belted trench coat",
+          "image": "https://media.mango.com/is/image/punto/27044775-35-900?wid=1024",
+          "productNumber": "27044775",
+          "baseCode": "27044775",
+          "globalCode": "27044775",
+          "colorId": "35",
+          "url": "https://shop.mango.com/gb/en/p/women/coats/coats/funnel-neck-belted-trench-coat/27044775/35/00",
+          "japanUrl": "https://japan.mango.com/commodity/SPUN0477D/MA1658EW040215/"
+        }
+      ],
+      "baseCode": "37044444",
       "hasJapanRelations": true
     },
     {
